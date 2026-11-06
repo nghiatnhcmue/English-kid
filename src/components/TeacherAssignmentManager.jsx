@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import { getUnit, listUnits } from '../utils/data.js';
 import { store } from '../utils/storage.js';
-import { parseBatchQuestions } from '../utils/questionParser.js';
+import { parseBatchQuestions, parseBatchAny } from '../utils/questionParser.js';
 import { 
   BookOpen,
   Calendar, 
@@ -60,7 +60,7 @@ export default function TeacherAssignmentManager() {
   const [title, setTitle] = useState('');
   const [targetClass, setTargetClass] = useState('all');
   const [unitId, setUnitId] = useState(1);
-  const [scopeType, setScopeType] = useState('full_unit'); // 'full_unit' | 'skill' | 'custom_words' | 'custom_questions'
+  const [scopeType, setScopeType] = useState('full_unit'); // 'full_unit' | 'skill' | 'custom_words' | 'custom_questions' | 'external_quiz'
   const [selectedSkill, setSelectedSkill] = useState('speaking');
   const [selectedWordIds, setSelectedWordIds] = useState([]);
   const [selectedQuestionIndices, setSelectedQuestionIndices] = useState([]);
@@ -72,7 +72,25 @@ export default function TeacherAssignmentManager() {
   });
   const [note, setNote] = useState('Các em hoàn thành trước hạn nộp và cố gắng đạt điểm 10 nhé!');
 
-  const activeUnit = useMemo(() => getUnit(unitId), [unitId]);
+  // Đề bài tập tự do / Đề ngoài SGK (External Quiz)
+  const [externalQuestions, setExternalQuestions] = useState([]);
+  const [externalPassage, setExternalPassage] = useState({ title: '', content: '', translation: '' });
+  const [hasPassage, setHasPassage] = useState(false);
+  const [showExternalQuestionModal, setShowExternalQuestionModal] = useState(false);
+  const [editingExternalIndex, setEditingExternalIndex] = useState(-1);
+  const [externalQuestionForm, setExternalQuestionForm] = useState({
+    type: 'multiple_choice',
+    question: '',
+    prompt: '',
+    blankWord: '',
+    correctSentence: '',
+    correctAnswer: '',
+    options: ['', '', '', ''],
+    answerIndex: 0,
+    explain: '',
+  });
+
+  const activeUnit = useMemo(() => (unitId > 0 ? getUnit(unitId) : null), [unitId]);
   const bankUnit = useMemo(() => getUnit(bankUnitId), [bankUnitId]);
 
   // Lấy câu hỏi hiện tại của Unit đang chọn trong form tạo bài
@@ -80,6 +98,10 @@ export default function TeacherAssignmentManager() {
   const [bankQuestions, setBankQuestions] = useState([]);
 
   const refreshUnitQuestions = (uId = unitId) => {
+    if (!uId || uId <= 0) {
+      setUnitQuestions([]);
+      return;
+    }
     const u = getUnit(uId);
     const baseQuiz = u?.grammar?.quiz || [];
     const qList = store().getUnitQuestions(uId, baseQuiz);
@@ -105,12 +127,22 @@ export default function TeacherAssignmentManager() {
     setAssignments(store().getAssignments());
   };
 
-  const handleOpenCreate = (prefillUnitId = null) => {
-    const targetUnit = prefillUnitId || unitId;
-    if (prefillUnitId) setUnitId(prefillUnitId);
-    setTitle(`Bài tập Tuần ${week}: Ôn tập Unit ${targetUnit}`);
+  const handleOpenCreate = (prefillUnitId = null, prefillScope = null) => {
+    const targetUnit = prefillUnitId !== null ? prefillUnitId : unitId;
+    if (prefillUnitId !== null) setUnitId(prefillUnitId);
+    if (prefillScope) setScopeType(prefillScope);
+
+    if (prefillScope === 'external_quiz' || targetUnit === 0) {
+      setTitle(`Bài tập Tuần ${week}: Đề luyện tập ngoài SGK`);
+    } else {
+      setTitle(`Bài tập Tuần ${week}: Ôn tập Unit ${targetUnit}`);
+    }
+
     setSelectedWordIds([]);
     setSelectedQuestionIndices([]);
+    setExternalQuestions([]);
+    setExternalPassage({ title: '', content: '', translation: '' });
+    setHasPassage(false);
     refreshUnitQuestions(targetUnit);
     setShowCreateModal(true);
   };
@@ -143,6 +175,124 @@ export default function TeacherAssignmentManager() {
     }
   };
 
+  // ---- Quản lý câu hỏi Đề ngoài SGK (External Quiz Questions) ----
+  const handleOpenAddExternalQuestion = (type = 'multiple_choice') => {
+    setEditingExternalIndex(-1);
+    setExternalQuestionForm({
+      type,
+      question: '',
+      prompt: '',
+      blankWord: '',
+      correctSentence: '',
+      correctAnswer: '',
+      options: ['', '', '', ''],
+      answerIndex: 0,
+      explain: '',
+    });
+    setShowExternalQuestionModal(true);
+  };
+
+  const handleOpenEditExternalQuestion = (q, idx) => {
+    setEditingExternalIndex(idx);
+    const opts = Array.isArray(q.options) ? [...q.options] : [];
+    while (opts.length < 4) opts.push('');
+    setExternalQuestionForm({
+      type: q.type || (q.question?.includes('_') ? 'fill_blank' : 'multiple_choice'),
+      question: q.question || '',
+      prompt: q.prompt || '',
+      blankWord: q.blankWord || '',
+      correctSentence: q.correctSentence || '',
+      correctAnswer: q.correctAnswer || '',
+      options: opts,
+      answerIndex: Number(q.answerIndex) || 0,
+      explain: q.explain || '',
+    });
+    setShowExternalQuestionModal(true);
+  };
+
+  const handleSaveExternalQuestion = (e) => {
+    e.preventDefault();
+    const qType = externalQuestionForm.type || 'multiple_choice';
+
+    let qText = externalQuestionForm.question.trim();
+    if (qType === 'unscramble') {
+      if (!externalQuestionForm.correctSentence.trim()) {
+        alert('Vui lòng nhập câu hoàn chỉnh để hệ thống xáo trộn từ!');
+        return;
+      }
+      if (!qText) {
+        qText = externalQuestionForm.prompt.trim() || 'Sắp xếp các từ sau thành câu đúng ngữ pháp:';
+      }
+    } else if (qType === 'sentence_completion') {
+      if (!externalQuestionForm.prompt.trim() && !qText) {
+        alert('Vui lòng nhập vế đầu câu hoặc câu hỏi!');
+        return;
+      }
+      if (!qText) {
+        qText = externalQuestionForm.prompt.trim();
+      }
+      if (!externalQuestionForm.correctAnswer.trim() && !externalQuestionForm.options.some((o) => o.trim())) {
+        alert('Vui lòng nhập vế hoàn thành đúng cho câu!');
+        return;
+      }
+    } else if (qType === 'fill_blank') {
+      if (!qText) {
+        alert('Vui lòng nhập câu chứa chỗ trống!');
+        return;
+      }
+      if (!externalQuestionForm.blankWord.trim() && !externalQuestionForm.options.some((o) => o.trim())) {
+        alert('Vui lòng nhập từ cần điền đúng vào chỗ trống!');
+        return;
+      }
+    } else {
+      if (!qText) {
+        alert('Vui lòng nhập nội dung câu hỏi!');
+        return;
+      }
+      const filteredOptions = externalQuestionForm.options.map((o) => o.trim()).filter(Boolean);
+      if (filteredOptions.length < 2) {
+        alert('Vui lòng nhập ít nhất 2 phương án trả lời trắc nghiệm!');
+        return;
+      }
+    }
+
+    const filteredOptions = externalQuestionForm.options.map((o) => o.trim()).filter(Boolean);
+    const blankWord = externalQuestionForm.blankWord.trim() || (filteredOptions[externalQuestionForm.answerIndex] || '');
+    const correctSentence = externalQuestionForm.correctSentence.trim() || qText;
+    const correctAnswer = externalQuestionForm.correctAnswer.trim() || blankWord;
+
+    const newQuestion = {
+      id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+      type: qType,
+      question: qText,
+      prompt: externalQuestionForm.prompt.trim() || qText,
+      blankWord,
+      correctSentence,
+      correctAnswer,
+      scrambledWords: correctSentence ? correctSentence.split(/\s+/).filter(Boolean) : [],
+      options: filteredOptions,
+      answerIndex: Number(externalQuestionForm.answerIndex) || 0,
+      explain: externalQuestionForm.explain.trim(),
+      isCustom: true,
+    };
+
+    if (editingExternalIndex >= 0) {
+      setExternalQuestions((prev) => {
+        const copy = [...prev];
+        copy[editingExternalIndex] = newQuestion;
+        return copy;
+      });
+    } else {
+      setExternalQuestions((prev) => [...prev, newQuestion]);
+    }
+
+    setShowExternalQuestionModal(false);
+  };
+
+  const handleDeleteExternalQuestion = (idx) => {
+    setExternalQuestions((prev) => prev.filter((_, i) => i !== idx));
+  };
+
   // ================= TẠO BÀI TẬP =================
   const handleCreateAssignment = (e) => {
     e.preventDefault();
@@ -161,21 +311,32 @@ export default function TeacherAssignmentManager() {
       return;
     }
 
+    if (scopeType === 'external_quiz' && externalQuestions.length === 0) {
+      alert('Vui lòng soạn hoặc dán ít nhất 1 câu hỏi vào đề ngoài SGK.');
+      return;
+    }
+
     // Trích xuất các câu hỏi đã chọn thành mảng câu hỏi trọn vẹn
-    const chosenQuestions = selectedQuestionIndices
-      .map((idx) => unitQuestions[idx])
-      .filter(Boolean);
+    let chosenQuestions = [];
+    if (scopeType === 'external_quiz') {
+      chosenQuestions = externalQuestions;
+    } else if (scopeType === 'custom_questions') {
+      chosenQuestions = selectedQuestionIndices
+        .map((idx) => unitQuestions[idx])
+        .filter(Boolean);
+    }
 
     const created = store().saveAssignment({
       week: Number(week),
       title: title.trim(),
       targetClass,
       scopeType,
-      unitId: Number(unitId),
+      unitId: scopeType === 'external_quiz' && unitId === 0 ? 0 : Number(unitId),
       selectedSkill,
       selectedWordIds,
       selectedQuestions: selectedQuestionIndices,
       questions: chosenQuestions, // Lưu trực tiếp danh sách câu hỏi
+      passage: scopeType === 'external_quiz' && hasPassage && externalPassage.content.trim() ? externalPassage : null,
       deadline,
       note: note.trim(),
     });
@@ -317,13 +478,25 @@ export default function TeacherAssignmentManager() {
 
   const handleBatchTextChange = (text) => {
     setBatchRawText(text);
-    const parsed = parseBatchQuestions(text);
-    setBatchPreviewList(parsed);
+    if (batchModalUnitId === 0 || scopeType === 'external_quiz') {
+      const parsed = parseBatchAny(text);
+      setBatchPreviewList(parsed);
+    } else {
+      const parsed = parseBatchQuestions(text);
+      setBatchPreviewList(parsed);
+    }
   };
 
   const handleImportBatchQuestions = () => {
     if (batchPreviewList.length === 0) {
       alert('Chưa có câu hỏi hợp lệ nào được nhận diện từ văn bản.');
+      return;
+    }
+
+    if (batchModalUnitId === 0 || scopeType === 'external_quiz') {
+      setExternalQuestions((prev) => [...prev, ...batchPreviewList]);
+      setShowBatchModal(false);
+      alert(`🎉 Đã nhận diện và thêm thành công ${batchPreviewList.length} câu hỏi vào đề ngoài SGK!`);
       return;
     }
 
@@ -467,6 +640,7 @@ export default function TeacherAssignmentManager() {
                           {assign.scopeType === 'skill' && `Kỹ năng: ${assign.selectedSkill?.toUpperCase()} (Unit ${assign.unitId})`}
                           {assign.scopeType === 'custom_words' && `${assign.selectedWordIds?.length || 0} từ vựng chỉ định (Unit ${assign.unitId})`}
                           {assign.scopeType === 'custom_questions' && `${assign.questions?.length || assign.selectedQuestions?.length || 0} câu hỏi trắc nghiệm đã giao (Unit ${assign.unitId})`}
+                          {assign.scopeType === 'external_quiz' && `🚀 Đề tự soạn ngoài SGK (${assign.questions?.length || 0} câu${assign.passage ? ' + Đoạn văn đọc hiểu' : ''})`}
                         </p>
                         <p>
                           ⏰ <strong>Hạn nộp:</strong> {assign.deadline || 'Không giới hạn'}
@@ -704,11 +878,17 @@ export default function TeacherAssignmentManager() {
                       setUnitId(newUId);
                       setSelectedWordIds([]);
                       setSelectedQuestionIndices([]);
-                      setTitle(`Bài tập Tuần ${week}: Ôn tập Unit ${newUId}`);
+                      if (newUId === 0) {
+                        setScopeType('external_quiz');
+                        setTitle(`Bài tập Tuần ${week}: Đề luyện tập ngoài SGK`);
+                      } else {
+                        setTitle(`Bài tập Tuần ${week}: Ôn tập Unit ${newUId}`);
+                      }
                       refreshUnitQuestions(newUId);
                     }}
                     className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
                   >
+                    <option value={0}>🌐 Đề tự do ngoài SGK (Không theo Unit)</option>
                     {units.map((u) => (
                       <option key={u.unitId} value={u.unitId}>
                         Unit {u.unitId}: {u.title}
@@ -732,17 +912,23 @@ export default function TeacherAssignmentManager() {
               {/* LỰA CHỌN PHẠM VI GIAO BÀI */}
               <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft">
                 <label className="block text-xs font-black text-ink mb-2">Hình thức giao bài tập:</label>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
                   {[
                     { id: 'full_unit', label: '🌟 Trọn bộ Unit', desc: 'Đủ 7 trạm + Test' },
                     { id: 'skill', label: '🎯 Theo kỹ năng', desc: 'Chỉ định 1 kỹ năng' },
                     { id: 'custom_words', label: '📝 Chọn từ vựng', desc: 'Tích chọn vài từ' },
-                    { id: 'custom_questions', label: '📐 Chọn câu hỏi', desc: 'Tích chọn & soạn mới' },
+                    { id: 'custom_questions', label: '📐 Chọn câu hỏi', desc: 'Câu hỏi của Unit' },
+                    { id: 'external_quiz', label: '🚀 Đề ngoài SGK', desc: 'Đề riêng, Word, đọc hiểu' },
                   ].map((s) => (
                     <button
                       key={s.id}
                       type="button"
-                      onClick={() => setScopeType(s.id)}
+                      onClick={() => {
+                        setScopeType(s.id);
+                        if (s.id === 'external_quiz' && !title.includes('ngoài SGK')) {
+                          setTitle(`Bài tập Tuần ${week}: Đề luyện tập ngoài SGK`);
+                        }
+                      }}
                       className={`flex flex-col items-center justify-center p-2.5 rounded-xl text-center transition-all cursor-pointer border ${
                         scopeType === s.id
                           ? 'bg-peach text-white border-peach-dark shadow-sm font-black'
@@ -970,6 +1156,250 @@ export default function TeacherAssignmentManager() {
                             </div>
                           );
                         })
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* ================= NẾU CHỌN ĐỀ TỰ SOẠN NGOÀI SGK ================= */}
+                {scopeType === 'external_quiz' && (
+                  <div className="mt-3 pt-3 border-t border-banana-soft flex flex-col gap-4">
+                    {/* Phần 1: Tùy chọn đoạn văn đọc hiểu ngoài */}
+                    <div className="rounded-2xl bg-white p-3.5 border border-banana-soft flex flex-col gap-2.5">
+                      <div className="flex items-center justify-between">
+                        <label className="flex items-center gap-2 cursor-pointer select-none">
+                          <input
+                            type="checkbox"
+                            checked={hasPassage}
+                            onChange={(e) => setHasPassage(e.target.checked)}
+                            className="rounded accent-peach h-4 w-4"
+                          />
+                          <span className="text-xs font-black text-ink">
+                            📖 Đề bài có kèm theo Đoạn văn Đọc hiểu riêng (Passage ngoài)
+                          </span>
+                        </label>
+                        <span className="text-[11px] font-bold text-ink-soft">
+                          (Dành cho đề đọc hiểu 5 - 10 câu)
+                        </span>
+                      </div>
+
+                      {hasPassage && (
+                        <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60 animate-in fade-in">
+                          <div>
+                            <label className="block text-[11px] font-black text-ink mb-1">
+                              Tiêu đề đoạn văn đọc hiểu:
+                            </label>
+                            <input
+                              type="text"
+                              value={externalPassage.title}
+                              onChange={(e) =>
+                                setExternalPassage({ ...externalPassage, title: e.target.value })
+                              }
+                              placeholder="Ví dụ: A Visit to Cuc Phuong National Park"
+                              className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-[11px] font-black text-ink mb-1">
+                              Nội dung đoạn văn tiếng Anh (*):
+                            </label>
+                            <textarea
+                              rows={3}
+                              value={externalPassage.content}
+                              onChange={(e) =>
+                                setExternalPassage({ ...externalPassage, content: e.target.value })
+                              }
+                              placeholder="Dán hoặc nhập đoạn văn đọc hiểu tiếng Anh vào đây..."
+                              className="w-full rounded-xl bg-cream px-3 py-2 text-xs font-bold border border-banana-soft resize-none"
+                            />
+                          </div>
+
+                          <div>
+                            <label className="block text-[11px] font-black text-ink mb-1">
+                              Bản dịch tiếng Việt tham khảo (Tùy chọn):
+                            </label>
+                            <textarea
+                              rows={2}
+                              value={externalPassage.translation}
+                              onChange={(e) =>
+                                setExternalPassage({ ...externalPassage, translation: e.target.value })
+                              }
+                              placeholder="Bản dịch tiếng Việt để hỗ trợ học sinh khi cần..."
+                              className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft resize-none"
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Phần 2: Quản lý danh sách câu hỏi của Đề ngoài */}
+                    <div className="flex flex-col gap-3">
+                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white p-3 rounded-2xl border border-banana-soft">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-black text-ink">
+                            Câu hỏi trong đề: <strong className="text-peach-dark">{externalQuestions.length}</strong> câu
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-1.5 flex-wrap">
+                          <button
+                            type="button"
+                            onClick={() => handleOpenAddExternalQuestion('multiple_choice')}
+                            className="inline-flex items-center gap-1 rounded-xl bg-mint px-2.5 py-1.5 text-xs font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-xs"
+                          >
+                            <Plus className="h-3.5 w-3.5" />
+                            <span>Trắc nghiệm</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleOpenAddExternalQuestion('fill_blank')}
+                            className="inline-flex items-center gap-1 rounded-xl bg-sky px-2.5 py-1.5 text-xs font-black text-ink hover:bg-sky-dark transition-all cursor-pointer shadow-xs"
+                          >
+                            <Plus className="h-3.5 w-3.5" />
+                            <span>Điền khuyết</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleOpenAddExternalQuestion('unscramble')}
+                            className="inline-flex items-center gap-1 rounded-xl bg-peach px-2.5 py-1.5 text-xs font-black text-white hover:bg-peach-dark transition-all cursor-pointer shadow-xs"
+                          >
+                            <Plus className="h-3.5 w-3.5" />
+                            <span>Sắp xếp từ</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleOpenAddExternalQuestion('sentence_completion')}
+                            className="inline-flex items-center gap-1 rounded-xl bg-purple-600 px-2.5 py-1.5 text-xs font-black text-white hover:bg-purple-700 transition-all cursor-pointer shadow-xs"
+                          >
+                            <Plus className="h-3.5 w-3.5" />
+                            <span>Viết tiếp</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleOpenBatchModal(0)}
+                            className="inline-flex items-center gap-1 rounded-xl bg-banana px-2.5 py-1.5 text-xs font-black text-ink hover:bg-banana-dark transition-all cursor-pointer shadow-xs"
+                          >
+                            <Sparkles className="h-3.5 w-3.5" />
+                            <span>Dán từ Word</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Danh sách câu hỏi */}
+                      {externalQuestions.length === 0 ? (
+                        <div className="rounded-2xl bg-white p-6 text-center border-2 border-dashed border-banana-soft flex flex-col items-center gap-2">
+                          <span className="text-3xl">📝</span>
+                          <p className="text-xs font-black text-ink">Đề ngoài SGK này chưa có câu hỏi nào</p>
+                          <p className="text-[11px] font-bold text-ink-soft max-w-sm">
+                            Thầy cô hãy bấm các nút bên trên để tạo câu hỏi trắc nghiệm, điền khuyết, sắp xếp từ hoặc dán nhanh đề bài từ Word/PDF.
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="space-y-2 max-h-60 overflow-y-auto p-1">
+                          {externalQuestions.map((q, idx) => {
+                            const itemType = q.type || (q.question?.includes('_') ? 'fill_blank' : 'multiple_choice');
+                            return (
+                              <div
+                                key={idx}
+                                className="rounded-2xl bg-white p-3 border-2 border-banana-soft flex flex-col gap-2 hover:border-banana transition-all"
+                              >
+                                <div className="flex items-start justify-between gap-2">
+                                  <div className="flex items-start gap-2 flex-1">
+                                    <span className="rounded-lg bg-peach text-white px-2 py-0.5 text-xs font-black shrink-0">
+                                      Câu {idx + 1}
+                                    </span>
+                                    <span
+                                      className={`rounded-lg px-2 py-0.5 text-[11px] font-black shrink-0 ${
+                                        itemType === 'multiple_choice'
+                                          ? 'bg-mint-soft text-mint-dark'
+                                          : itemType === 'fill_blank'
+                                          ? 'bg-sky-soft text-sky-dark'
+                                          : itemType === 'unscramble'
+                                          ? 'bg-peach-soft text-peach-dark'
+                                          : 'bg-purple-100 text-purple-700'
+                                      }`}
+                                    >
+                                      {itemType === 'multiple_choice'
+                                        ? '🏷️ Trắc nghiệm'
+                                        : itemType === 'fill_blank'
+                                        ? '✏️ Điền khuyết'
+                                        : itemType === 'unscramble'
+                                        ? '🧩 Sắp xếp từ'
+                                        : '✍️ Viết tiếp câu'}
+                                    </span>
+                                    <p className="text-xs font-black text-ink mt-0.5 leading-snug">
+                                      {q.question}
+                                    </p>
+                                  </div>
+
+                                  <div className="flex items-center gap-1 shrink-0">
+                                    <button
+                                      type="button"
+                                      onClick={() => handleOpenEditExternalQuestion(q, idx)}
+                                      className="rounded-lg p-1 text-ink-soft hover:bg-banana-soft hover:text-ink cursor-pointer"
+                                      title="Sửa câu hỏi này"
+                                    >
+                                      <Edit className="h-3.5 w-3.5" />
+                                    </button>
+                                    <button
+                                      type="button"
+                                      onClick={() => handleDeleteExternalQuestion(idx)}
+                                      className="rounded-lg p-1 text-peach-dark hover:bg-peach-soft cursor-pointer"
+                                      title="Xóa câu hỏi này"
+                                    >
+                                      <Trash2 className="h-3.5 w-3.5" />
+                                    </button>
+                                  </div>
+                                </div>
+
+                                {itemType === 'multiple_choice' && Array.isArray(q.options) && q.options.length > 0 && (
+                                  <div className="grid grid-cols-2 gap-1 pl-4 text-[11px] font-bold text-ink-soft">
+                                    {q.options.map((opt, oIdx) => (
+                                      <span
+                                        key={oIdx}
+                                        className={`truncate px-2 py-0.5 rounded-lg border ${
+                                          oIdx === q.answerIndex
+                                            ? 'bg-mint-soft text-mint-dark border-mint font-black'
+                                            : 'bg-cream/50 border-banana-soft/60'
+                                        }`}
+                                      >
+                                        {String.fromCharCode(65 + oIdx)}. {opt}
+                                      </span>
+                                    ))}
+                                  </div>
+                                )}
+
+                                {itemType === 'fill_blank' && (
+                                  <div className="text-[11px] font-bold text-ink pl-4 flex items-center gap-1.5">
+                                    <span className="text-ink-soft">Từ điền đúng:</span>
+                                    <span className="rounded bg-sky-soft text-sky-dark px-2 py-0.5 font-black">
+                                      {q.blankWord || (q.options ? q.options[q.answerIndex] : 'Chưa nhập')}
+                                    </span>
+                                  </div>
+                                )}
+
+                                {itemType === 'unscramble' && (
+                                  <div className="text-[11px] font-bold text-ink pl-4 flex items-center gap-1.5">
+                                    <span className="text-ink-soft">Câu hoàn chỉnh:</span>
+                                    <span className="text-peach-dark font-black">
+                                      {q.correctSentence || q.question}
+                                    </span>
+                                  </div>
+                                )}
+
+                                {itemType === 'sentence_completion' && (
+                                  <div className="text-[11px] font-bold text-ink pl-4 flex items-center gap-1.5">
+                                    <span className="text-ink-soft">Vế hoàn thành:</span>
+                                    <span className="rounded bg-purple-100 text-purple-700 px-2 py-0.5 font-black">
+                                      {q.correctAnswer || q.blankWord || (q.options ? q.options[q.answerIndex] : 'Chưa nhập')}
+                                    </span>
+                                  </div>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -1336,6 +1766,309 @@ export default function TeacherAssignmentManager() {
                 Đóng ↵
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* ================= MODAL SOẠN / SỬA CÂU HỎI ĐỀ NGOÀI SGK ================= */}
+      {showExternalQuestionModal && (
+        <div className="fixed inset-0 z-60 flex items-center justify-center bg-ink/70 p-3 sm:p-4 backdrop-blur-xs">
+          <div className="w-full max-w-xl rounded-3xl bg-white p-5 sm:p-6 shadow-2xl border-4 border-peach flex flex-col gap-4 animate-in fade-in zoom-in-95 max-h-[92vh] overflow-hidden">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+              <div>
+                <h3 className="text-xl font-black text-ink">
+                  {editingExternalIndex >= 0 ? '✏️ Chỉnh Sửa Câu Hỏi Đề Ngoài' : '➕ Thêm Câu Hỏi Đề Ngoài'}
+                </h3>
+                <p className="text-xs font-bold text-ink-soft">
+                  Soạn câu hỏi tự do hoặc bài tập đọc hiểu không phụ thuộc vào SGK
+                </p>
+              </div>
+              <button
+                onClick={() => setShowExternalQuestionModal(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-cream font-black text-ink hover:bg-peach hover:text-white transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Thanh chuyển đổi 4 loại câu hỏi */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 rounded-2xl bg-cream border border-banana-soft">
+              <button
+                type="button"
+                onClick={() => setExternalQuestionForm((prev) => ({ ...prev, type: 'multiple_choice' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  (externalQuestionForm.type || 'multiple_choice') === 'multiple_choice'
+                    ? 'bg-mint text-white shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                🏷️ Trắc nghiệm
+              </button>
+              <button
+                type="button"
+                onClick={() => setExternalQuestionForm((prev) => ({ ...prev, type: 'fill_blank' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  externalQuestionForm.type === 'fill_blank'
+                    ? 'bg-sky text-ink shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                ✏️ Điền khuyết
+              </button>
+              <button
+                type="button"
+                onClick={() => setExternalQuestionForm((prev) => ({ ...prev, type: 'unscramble' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  externalQuestionForm.type === 'unscramble'
+                    ? 'bg-peach text-white shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                🧩 Sắp xếp từ
+              </button>
+              <button
+                type="button"
+                onClick={() => setExternalQuestionForm((prev) => ({ ...prev, type: 'sentence_completion' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  externalQuestionForm.type === 'sentence_completion'
+                    ? 'bg-purple-600 text-white shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                ✍️ Viết tiếp câu
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveExternalQuestion} className="flex flex-col gap-3 overflow-y-auto pr-1">
+              {/* DẠNG 1: TRẮC NGHIỆM */}
+              {(!externalQuestionForm.type || externalQuestionForm.type === 'multiple_choice') && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Nội dung câu hỏi (*):
+                    </label>
+                    <textarea
+                      rows={2}
+                      required
+                      value={externalQuestionForm.question}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, question: e.target.value })}
+                      placeholder="Ví dụ: Which country is famous for the Eiffel Tower?"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft focus:outline-none"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2">
+                    {externalQuestionForm.options.map((opt, i) => (
+                      <div key={i}>
+                        <label className="block text-[11px] font-black text-ink mb-0.5">
+                          Đáp án {String.fromCharCode(65 + i)}:
+                        </label>
+                        <input
+                          type="text"
+                          required={i < 2}
+                          value={opt}
+                          onChange={(e) => {
+                            const next = [...externalQuestionForm.options];
+                            next[i] = e.target.value;
+                            setExternalQuestionForm({ ...externalQuestionForm, options: next });
+                          }}
+                          placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                          className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">Đáp án đúng (*):</label>
+                    <select
+                      value={externalQuestionForm.answerIndex}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, answerIndex: Number(e.target.value) })}
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
+                    >
+                      {externalQuestionForm.options.map((opt, i) => (
+                        <option key={i} value={i}>
+                          {String.fromCharCode(65 + i)}: {opt || `Đáp án ${String.fromCharCode(65 + i)}`}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </>
+              )}
+
+              {/* DẠNG 2: ĐIỀN KHUYẾT */}
+              {externalQuestionForm.type === 'fill_blank' && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Câu chứa chỗ trống (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={externalQuestionForm.question}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, question: e.target.value })}
+                      placeholder="Ví dụ: Mount Everest is the ______ mountain in the world."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Từ cần điền đúng vào chỗ trống (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={externalQuestionForm.blankWord}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, blankWord: e.target.value })}
+                      placeholder="Ví dụ: highest"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-black text-ink mb-1">
+                      Các lựa chọn gợi ý (Tùy chọn - nếu để trống học sinh sẽ gõ trực tiếp):
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {externalQuestionForm.options.map((opt, i) => (
+                        <input
+                          key={i}
+                          type="text"
+                          value={opt}
+                          onChange={(e) => {
+                            const next = [...externalQuestionForm.options];
+                            next[i] = e.target.value;
+                            setExternalQuestionForm({ ...externalQuestionForm, options: next });
+                          }}
+                          placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                          className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* DẠNG 3: SẮP XẾP TỪ */}
+              {externalQuestionForm.type === 'unscramble' && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Yêu cầu / Gợi ý tiếng Việt:
+                    </label>
+                    <input
+                      type="text"
+                      value={externalQuestionForm.prompt}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, prompt: e.target.value })}
+                      placeholder="Ví dụ: Sắp xếp các từ để hoàn chỉnh câu:"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Câu hoàn chỉnh đúng ngữ pháp (*):
+                    </label>
+                    <textarea
+                      rows={2}
+                      required
+                      value={externalQuestionForm.correctSentence}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, correctSentence: e.target.value })}
+                      placeholder="Ví dụ: We visited our grandparents last weekend."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft resize-none"
+                    />
+                    <p className="text-[11px] font-bold text-peach-dark mt-1">
+                      🧩 Hệ thống sẽ tự động tách các từ và xáo trộn để học sinh chạm ghép lại.
+                    </p>
+                  </div>
+                </>
+              )}
+
+              {/* DẠNG 4: VIẾT TIẾP HOÀN THÀNH CÂU */}
+              {externalQuestionForm.type === 'sentence_completion' && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Vế đầu câu / Câu mồi (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={externalQuestionForm.prompt}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, prompt: e.target.value })}
+                      placeholder="Ví dụ: If it rains tomorrow, we..."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Vế hoàn thành đúng (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={externalQuestionForm.correctAnswer}
+                      onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, correctAnswer: e.target.value })}
+                      placeholder="Ví dụ: will stay at home"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-black text-ink mb-1">
+                      Các lựa chọn gợi ý (Tùy chọn):
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {externalQuestionForm.options.map((opt, i) => (
+                        <input
+                          key={i}
+                          type="text"
+                          value={opt}
+                          onChange={(e) => {
+                            const next = [...externalQuestionForm.options];
+                            next[i] = e.target.value;
+                            setExternalQuestionForm({ ...externalQuestionForm, options: next });
+                          }}
+                          placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                          className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* GIẢI THÍCH CHUNG */}
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Giải thích / Căn cứ:</label>
+                <input
+                  type="text"
+                  value={externalQuestionForm.explain}
+                  onChange={(e) => setExternalQuestionForm({ ...externalQuestionForm, explain: e.target.value })}
+                  placeholder="Ví dụ: Kiến thức thì hiện tại đơn / Dựa vào đoạn văn..."
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                />
+              </div>
+
+              <div className="mt-2 flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
+                <button
+                  type="button"
+                  onClick={() => setShowExternalQuestionModal(false)}
+                  className="rounded-xl px-4 py-2 text-xs font-bold text-ink-soft hover:bg-cream cursor-pointer"
+                >
+                  Hủy bỏ
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-xl bg-peach px-5 py-2 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+                >
+                  {editingExternalIndex >= 0 ? '✓ Lưu thay đổi' : '+ Thêm vào đề'}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}

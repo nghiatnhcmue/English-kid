@@ -48,6 +48,24 @@ export default function HomePage() {
     return activeAssignments[0] || null;
   }, [activeAssignments]);
 
+  // Tự động mở bài tập nếu học sinh mở link chia sẻ từ Thầy/Cô (?assign=CODE)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const hash = window.location.hash || '';
+    const queryPart = hash.includes('?') ? hash.split('?')[1] : window.location.search.replace('?', '');
+    const params = new URLSearchParams(queryPart);
+    const assignCode = params.get('assign');
+    if (assignCode && assignedItem) {
+      if (
+        assignedItem.scopeType === 'external_quiz' ||
+        assignedItem.scopeType === 'custom_questions' ||
+        (Array.isArray(assignedItem.questions) && assignedItem.questions.length > 0)
+      ) {
+        setQuizAssignmentModal(assignedItem);
+      }
+    }
+  }, [assignedItem]);
+
   const assignmentTargetLink = useMemo(() => {
     if (!assignedItem) return '/';
     if (assignedItem.scopeType === 'skill') {
@@ -160,7 +178,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {assignedItem.scopeType === 'custom_questions' ? (
+            {assignedItem.scopeType === 'custom_questions' ||
+            assignedItem.scopeType === 'external_quiz' ||
+            (Array.isArray(assignedItem.questions) && assignedItem.questions.length > 0) ? (
               <button
                 type="button"
                 onClick={() => {
@@ -169,7 +189,7 @@ export default function HomePage() {
                 }}
                 className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-base font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 transition-all cursor-pointer whitespace-nowrap text-center"
               >
-                <span>Làm bài trắc nghiệm ngay 🚀</span>
+                <span>Làm bài tập ngay 🚀</span>
               </button>
             ) : (
               <Link

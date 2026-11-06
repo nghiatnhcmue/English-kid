@@ -261,3 +261,58 @@ function createSingleWritingItem(sentence, meaningVi = '') {
   };
 }
 
+/**
+ * Tiện ích phân tích bài tập tổng hợp ngoài SGK (Trắc nghiệm, Điền khuyết, Sắp xếp từ)
+ */
+export function parseBatchAny(rawText) {
+  if (!rawText || !rawText.trim()) return [];
+
+  // 1. Thử nhận diện dạng trắc nghiệm 4 đáp án A, B, C, D trước
+  const qList = parseBatchQuestions(rawText);
+  if (qList.length > 0) {
+    return qList.map((q) => {
+      const isFill = q.question.includes('_');
+      return {
+        id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+        type: isFill ? 'fill_blank' : 'multiple_choice',
+        question: q.question,
+        prompt: q.question,
+        options: q.options || [],
+        answerIndex: q.answerIndex ?? 0,
+        blankWord: isFill ? (q.options[q.answerIndex] || '') : '',
+        correctSentence: isFill
+          ? q.question.replace(/_{2,}/g, q.options[q.answerIndex] || '').replace(/\s+/g, ' ').trim()
+          : '',
+        explain: q.explain || '',
+        isCustom: true,
+      };
+    });
+  }
+
+  // 2. Thử nhận diện dạng câu ghép / câu điền khuyết / viết lại câu
+  const writingList = parseBatchWriting(rawText);
+  if (writingList.length > 0) {
+    return writingList.map((w) => ({
+      id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+      type: w.type || 'unscramble',
+      question:
+        w.type === 'unscramble'
+          ? w.meaningVi
+            ? `Sắp xếp các từ sau thành câu đúng (${w.meaningVi}):`
+            : 'Sắp xếp các từ sau thành câu hoàn chỉnh đúng ngữ pháp:'
+          : w.sentence || '',
+      prompt: w.meaningVi || '',
+      blankWord: w.blankWord || '',
+      correctSentence: w.correctSentence || w.sentence || '',
+      scrambledWords: w.scrambledWords || [],
+      options: w.options || [],
+      answerIndex: 0,
+      explain: w.meaningVi ? `Nghĩa tiếng Việt: ${w.meaningVi}` : '',
+      isCustom: true,
+    }));
+  }
+
+  return [];
+}
+
+

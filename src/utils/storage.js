@@ -789,8 +789,9 @@ export function createStore(storage = globalThis.localStorage) {
         title: assignment.title || `Bài tập Tuần ${assignment.week || 1}`,
         week: Number(assignment.week) || 1,
         targetClass: assignment.targetClass || 'all',
-        scopeType: assignment.scopeType || 'full_unit', // 'full_unit' | 'skill' | 'custom_words' | 'custom_questions'
-        unitId: Number(assignment.unitId) || 1,
+        scopeType: assignment.scopeType || 'full_unit', // 'full_unit' | 'skill' | 'custom_words' | 'custom_questions' | 'external_quiz'
+        unitId: assignment.unitId !== undefined && assignment.unitId !== null ? Number(assignment.unitId) : 1,
+        passage: assignment.passage || null,
         selectedSkill: assignment.selectedSkill || 'all', // 'vocab' | 'pronunciation' | 'grammar' | 'listening' | 'speaking' | 'reading' | 'writing' | 'mastery'
         selectedWordIds: Array.isArray(assignment.selectedWordIds)
           ? assignment.selectedWordIds

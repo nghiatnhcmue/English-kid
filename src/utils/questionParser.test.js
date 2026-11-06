@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseBatchQuestions } from './questionParser.js';
+import { parseBatchQuestions, parseBatchAny } from './questionParser.js';
 
 describe('parseBatchQuestions', () => {
   it('parses standard multiline questions with asterisk mark', () => {
@@ -77,4 +77,44 @@ A. good*  B. well  C. badly  D. better
     expect(parseBatchQuestions('Just some random text without options')).toEqual([]);
   });
 });
+
+describe('parseBatchAny for external exercises', () => {
+  it('parses multiple choice questions and fill-in-the-blank automatically', () => {
+    const raw = `
+1. My brother ______ English every day.
+A. study
+B. studies*
+C. studying
+D. to study
+
+2. Where are you from?
+A. I am from Vietnam*
+B. I am fine
+C. Yes, please
+D. At 6 o'clock
+    `;
+
+    const result = parseBatchAny(raw);
+    expect(result).toHaveLength(2);
+    expect(result[0].type).toBe('fill_blank');
+    expect(result[0].blankWord).toBe('studies');
+    expect(result[1].type).toBe('multiple_choice');
+    expect(result[1].answerIndex).toBe(0);
+  });
+
+  it('parses unscramble sentence items', () => {
+    const raw = `
+This / is / my / new / calculator -> Đây là máy tính mới của tôi
+We / love / learning / English -> Chúng tôi yêu thích học tiếng Anh
+    `;
+
+    const result = parseBatchAny(raw);
+    expect(result).toHaveLength(2);
+    expect(result[0].type).toBe('unscramble');
+    expect(result[0].correctSentence).toBe('This is my new calculator');
+    expect(result[1].type).toBe('unscramble');
+    expect(result[1].correctSentence).toBe('We love learning English');
+  });
+});
+
 
