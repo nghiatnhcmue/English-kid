@@ -9,6 +9,7 @@ import { Button3D } from '../components/ui.jsx';
 import { t } from '../i18n/vi.js';
 
 import StudentProfileModal from '../components/StudentProfileModal.jsx';
+import AssignmentQuizModal from '../components/AssignmentQuizModal.jsx';
 
 export default function HomePage() {
   const units = listUnits();
@@ -18,6 +19,7 @@ export default function HomePage() {
   const totalStars = totalStarsOf(progress);
   const [student, setStudent] = useState(() => store().getStudentInfo());
   const [showProfile, setShowProfile] = useState(false);
+  const [quizAssignmentModal, setQuizAssignmentModal] = useState(null);
 
   // Tìm bài học tiếp theo em nên học (bài đầu tiên chưa đạt đủ 12 sao hoặc bài 1)
   const nextUnit = useMemo(() => {
@@ -158,15 +160,40 @@ export default function HomePage() {
               </div>
             </div>
 
-            <Link
-              to={assignmentTargetLink}
-              onClick={() => playSfx('click')}
-              className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-base font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 transition-all cursor-pointer whitespace-nowrap text-center"
-            >
-              <span>Làm bài ngay 🚀</span>
-            </Link>
+            {assignedItem.scopeType === 'custom_questions' ? (
+              <button
+                type="button"
+                onClick={() => {
+                  playSfx('click');
+                  setQuizAssignmentModal(assignedItem);
+                }}
+                className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-base font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 transition-all cursor-pointer whitespace-nowrap text-center"
+              >
+                <span>Làm bài trắc nghiệm ngay 🚀</span>
+              </button>
+            ) : (
+              <Link
+                to={assignmentTargetLink}
+                onClick={() => playSfx('click')}
+                className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-base font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 transition-all cursor-pointer whitespace-nowrap text-center"
+              >
+                <span>Làm bài ngay 🚀</span>
+              </Link>
+            )}
           </div>
         </section>
+      )}
+
+      {/* Modal làm bài tập trắc nghiệm trực tiếp */}
+      {quizAssignmentModal && (
+        <AssignmentQuizModal
+          assignment={quizAssignmentModal}
+          isOpen={!!quizAssignmentModal}
+          onClose={() => setQuizAssignmentModal(null)}
+          onCompleted={() => {
+            // Đã nộp bài xong
+          }}
+        />
       )}
 
       {/* Thẻ Hero: HỌC TIẾP NGAY - Cực kỳ rõ ràng, học sinh không cần suy nghĩ */}

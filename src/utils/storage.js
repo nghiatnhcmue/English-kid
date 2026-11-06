@@ -16,6 +16,7 @@ export const KEYS = {
   STUDENTS: `${PREFIX}students_list`,
   CURRENT_STUDENT_ID: `${PREFIX}current_student_id`,
   STUDENT_PROGRESS: `${PREFIX}student_progress_map`,
+  CUSTOM_QUESTIONS: `${PREFIX}custom_questions`,
 };
 
 export const DEFAULT_STUDENTS = [
@@ -382,6 +383,70 @@ export function createStore(storage = globalThis.localStorage) {
       return true;
     },
 
+    // ---- Ngân hàng Câu hỏi Trắc nghiệm của Unit ----
+    getUnitQuestions(unitId, baseQuiz = []) {
+      const customUnit = api.getCustomUnit(unitId);
+      if (customUnit?.grammar?.quiz && Array.isArray(customUnit.grammar.quiz)) {
+        return customUnit.grammar.quiz;
+      }
+      return Array.isArray(baseQuiz) ? baseQuiz : [];
+    },
+    saveUnitQuestion(unitId, questionData, indexToUpdate = -1, baseQuiz = []) {
+      const currentList = [...api.getUnitQuestions(unitId, baseQuiz)];
+      const cleanQ = {
+        question: questionData.question.trim(),
+        options: Array.isArray(questionData.options)
+          ? questionData.options.map((o) => String(o).trim())
+          : [],
+        answerIndex: Number(questionData.answerIndex) || 0,
+        explain: questionData.explain
+          ? String(questionData.explain).trim()
+          : 'Áp dụng quy tắc ngữ pháp bài học.',
+        isCustom: true,
+      };
+      if (indexToUpdate >= 0 && indexToUpdate < currentList.length) {
+        currentList[indexToUpdate] = cleanQ;
+      } else {
+        currentList.push(cleanQ);
+      }
+      const customUnit = api.getCustomUnit(unitId) || {};
+      const currentGrammar = { ...(customUnit.grammar || {}) };
+      currentGrammar.quiz = currentList;
+      api.saveCustomUnit(unitId, { grammar: currentGrammar });
+      return currentList;
+    },
+    deleteUnitQuestion(unitId, index, baseQuiz = []) {
+      const currentList = [...api.getUnitQuestions(unitId, baseQuiz)];
+      if (index >= 0 && index < currentList.length) {
+        currentList.splice(index, 1);
+        const customUnit = api.getCustomUnit(unitId) || {};
+        const currentGrammar = { ...(customUnit.grammar || {}) };
+        currentGrammar.quiz = currentList;
+        api.saveCustomUnit(unitId, { grammar: currentGrammar });
+      }
+      return currentList;
+    },
+    batchAddUnitQuestions(unitId, questionsArray = [], baseQuiz = []) {
+      const currentList = [...api.getUnitQuestions(unitId, baseQuiz)];
+      const cleaned = (questionsArray || []).map((q) => ({
+        question: q.question.trim(),
+        options: Array.isArray(q.options)
+          ? q.options.map((o) => String(o).trim())
+          : [],
+        answerIndex: Number(q.answerIndex) || 0,
+        explain: q.explain
+          ? String(q.explain).trim()
+          : 'Áp dụng quy tắc ngữ pháp bài học.',
+        isCustom: true,
+      }));
+      const nextList = [...currentList, ...cleaned];
+      const customUnit = api.getCustomUnit(unitId) || {};
+      const currentGrammar = { ...(customUnit.grammar || {}) };
+      currentGrammar.quiz = nextList;
+      api.saveCustomUnit(unitId, { grammar: currentGrammar });
+      return nextList;
+    },
+
     // ---- Quản lý Giao bài tập theo tuần (Assignments) ----
     getAssignments() {
       const list = read(KEYS.ASSIGNMENTS, []);
@@ -425,6 +490,7 @@ export function createStore(storage = globalThis.localStorage) {
         selectedQuestions: Array.isArray(assignment.selectedQuestions)
           ? assignment.selectedQuestions
           : [],
+        questions: Array.isArray(assignment.questions) ? assignment.questions : [],
         deadline: assignment.deadline || '',
         note: assignment.note || '',
         status: assignment.status || 'active',

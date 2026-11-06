@@ -443,3 +443,4 @@ export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forc
     </div>
   );
 }
+
