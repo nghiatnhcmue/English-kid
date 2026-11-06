@@ -108,9 +108,6 @@ export default function UnitPage() {
               <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
                 Thử Thách Toàn Diện Unit {unit.unitId}
               </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Bài tập kiểm tra tích hợp gom đủ: Từ vựng, Cặp âm phát âm, Ngữ pháp, Nghe hiểu, Đọc hiểu và Viết câu!
-              </p>
             </div>
           </div>
           <Button3D
@@ -130,9 +127,6 @@ export default function UnitPage() {
             <span className="text-2xl" aria-hidden>🗺️</span>
             <h2 className="text-2xl font-black text-ink">Lộ Trình Học Tập Toàn Diện (4 Kỹ Năng + Từ Vựng + Ngữ Pháp)</h2>
           </div>
-          <p className="text-sm sm:text-base font-bold text-ink-soft">
-            Chu trình 7 trạm chuẩn SGK: Từ vựng & 3D ➔ Phát âm ➔ Ngữ pháp ➔ Nghe ➔ Nói ➔ Đọc ➔ Viết
-          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
@@ -140,21 +134,16 @@ export default function UnitPage() {
           <Button3D
             tone="banana"
             to={`/unit/${unit.unitId}/flashcard`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
               Trạm 1 · Từ vựng & 3D
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>🔤</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-ink">
-                  {unit.vocabularies.length} Từ vựng & Thẻ 3D
-                </h3>
-                <p className="text-xs sm:text-sm font-bold opacity-85 mt-0.5">
-                  Xoay 360°, đổi màu và 4 bước ôn tập
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-ink">
+                {unit.vocabularies.length} Từ vựng & Thẻ 3D
+              </h3>
             </div>
           </Button3D>
 
@@ -162,21 +151,16 @@ export default function UnitPage() {
           <Button3D
             tone="peach"
             to={`/unit/${unit.unitId}/pronunciation`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">
               Trạm 2 · Phát âm & Ngữ âm
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>🗣️</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-white">
-                  Cặp âm {unit.pronunciation?.pair || 'chuẩn SGK'}
-                </h3>
-                <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
-                  Khẩu hình tiếng Việt & game phân biệt âm
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-white">
+                Cặp âm {unit.pronunciation?.pair || 'chuẩn SGK'}
+              </h3>
             </div>
           </Button3D>
 
@@ -184,21 +168,16 @@ export default function UnitPage() {
           <Button3D
             tone="banana"
             to={`/unit/${unit.unitId}/grammar`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
               Trạm 3 · Ngữ pháp cốt lõi
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>📐</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-ink">
-                  {unit.grammar?.title || 'Quy tắc ngữ pháp'}
-                </h3>
-                <p className="text-xs sm:text-sm font-bold opacity-85 mt-0.5">
-                  Công thức đóng khung & bài tập trắc nghiệm
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-ink">
+                {unit.grammar?.title || 'Quy tắc ngữ pháp'}
+              </h3>
             </div>
           </Button3D>
 
@@ -206,21 +185,16 @@ export default function UnitPage() {
           <Button3D
             tone="sky"
             to={`/unit/${unit.unitId}/listenstation`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
               Trạm 4 · Kỹ năng Nghe
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>👂</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-ink">
-                  Hội thoại học đường SGK
-                </h3>
-                <p className="text-xs sm:text-sm font-bold opacity-85 mt-0.5">
-                  Nghe bản xứ chuẩn, nghe chậm & trắc nghiệm
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-ink">
+                Hội thoại học đường SGK
+              </h3>
             </div>
           </Button3D>
 
@@ -228,21 +202,16 @@ export default function UnitPage() {
           <Button3D
             tone="peach"
             to={`/unit/${unit.unitId}/speaking`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">
               Trạm 5 · Kỹ năng Nói
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>🎙️</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-white">
-                  Luyện Nói & Chấm Điểm AI
-                </h3>
-                <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
-                  4 cấp độ câu, thu âm & nghe lại giọng mình
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-white">
+                Luyện Nói & Chấm Điểm AI
+              </h3>
             </div>
           </Button3D>
 
@@ -250,21 +219,16 @@ export default function UnitPage() {
           <Button3D
             tone="sky"
             to={`/unit/${unit.unitId}/reading`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
               Trạm 6 · Kỹ năng Đọc hiểu
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>📖</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-ink">
-                  Đoạn văn đọc hiểu A1
-                </h3>
-                <p className="text-xs sm:text-sm font-bold opacity-85 mt-0.5">
-                  Loa đọc toàn bài & câu hỏi trắc nghiệm
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-ink">
+                Đoạn văn đọc hiểu A1
+              </h3>
             </div>
           </Button3D>
 
@@ -272,21 +236,16 @@ export default function UnitPage() {
           <Button3D
             tone="mint"
             to={`/unit/${unit.unitId}/writing`}
-            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left sm:col-span-2 lg:col-span-3"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left sm:col-span-2 lg:col-span-3"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">
               Trạm 7 · Kỹ năng Viết
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>✍️</span>
-              <div>
-                <h3 className="text-lg font-black leading-tight text-white">
-                  Luyện Viết Câu (Guided Writing)
-                </h3>
-                <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
-                  Sắp xếp các khối từ xáo trộn thành câu hoàn chỉnh đúng ngữ pháp
-                </p>
-              </div>
+              <h3 className="text-lg font-black leading-tight text-white">
+                Luyện Viết Câu (Guided Writing)
+              </h3>
             </div>
           </Button3D>
         </div>
@@ -296,7 +255,6 @@ export default function UnitPage() {
       <section aria-label={t.unit.practice}>
         <div className="mb-3">
           <h2 className="text-2xl font-black text-ink">{t.unit.practice}</h2>
-          <p className="text-sm sm:text-base font-bold text-ink-soft">{t.unit.practiceSub}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
@@ -308,7 +266,7 @@ export default function UnitPage() {
                 key={m}
                 tone={conf.tone}
                 to={`/unit/${unit.unitId}/${m}`}
-                className="min-h-36 flex-col items-start justify-center gap-1.5! p-5 text-left"
+                className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
               >
                 <div className="flex w-full items-center justify-between">
                   <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
@@ -320,10 +278,7 @@ export default function UnitPage() {
                   <span className="text-4xl shrink-0" aria-hidden>
                     {t.modes[m].icon}
                   </span>
-                  <div>
-                    <h3 className="text-xl font-black leading-tight">{t.modes[m].name}</h3>
-                    <p className="text-sm font-bold opacity-85 leading-snug mt-0.5">{t.modes[m].desc}</p>
-                  </div>
+                  <h3 className="text-xl font-black leading-tight">{t.modes[m].name}</h3>
                 </div>
               </Button3D>
             );
