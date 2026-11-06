@@ -1,14 +1,14 @@
 [
-  { "unitId": 1, "titleEn": "My New School", "titleVi": "Trường học mới của em", "emoji": "🏫", "color": "#FFC83D", "available": true },
-  { "unitId": 2, "titleEn": "My House", "titleVi": "Ngôi nhà của em", "emoji": "🏠", "color": "#7ED6B5", "available": true },
-  { "unitId": 3, "titleEn": "My Friends", "titleVi": "Bạn bè của em", "emoji": "🧑‍🤝‍🧑", "color": "#8EC5FF", "available": true },
-  { "unitId": 4, "titleEn": "My Neighbourhood", "titleVi": "Khu phố nơi em sống", "emoji": "🏘️", "color": "#FFB38A", "available": true },
-  { "unitId": 5, "titleEn": "Natural Wonders of Viet Nam", "titleVi": "Kỳ quan thiên nhiên Việt Nam", "emoji": "🏞️", "color": "#7ED6B5", "available": true },
-  { "unitId": 6, "titleEn": "Our Tet Holiday", "titleVi": "Kỳ nghỉ Tết của chúng em", "emoji": "🧧", "color": "#FF9A9A", "available": true },
-  { "unitId": 7, "titleEn": "Television", "titleVi": "Truyền hình", "emoji": "📺", "color": "#C3A6FF", "available": true },
-  { "unitId": 8, "titleEn": "Sports and Games", "titleVi": "Thể thao và trò chơi", "emoji": "🏸", "color": "#FFC83D", "available": true },
-  { "unitId": 9, "titleEn": "Cities of the World", "titleVi": "Các thành phố trên thế giới", "emoji": "🗼", "color": "#8EC5FF", "available": true },
-  { "unitId": 10, "titleEn": "Our Houses in the Future", "titleVi": "Ngôi nhà trong tương lai", "emoji": "🤖", "color": "#FFB38A", "available": true },
-  { "unitId": 11, "titleEn": "Our Greener World", "titleVi": "Thế giới xanh hơn", "emoji": "♻️", "color": "#7ED6B5", "available": true },
-  { "unitId": 12, "titleEn": "Robots", "titleVi": "Người máy", "emoji": "🦾", "color": "#C3A6FF", "available": true }
+  { "unitId": 1, "titleEn": "My New School", "titleVi": "Trường học mới của em", "emoji": "🏫", "color": "#FFC83D", "available": true, "bookVolume": 1, "bookPages": "Trang 6 – 15" },
+  { "unitId": 2, "titleEn": "My House", "titleVi": "Ngôi nhà của em", "emoji": "🏠", "color": "#7ED6B5", "available": true, "bookVolume": 1, "bookPages": "Trang 16 – 25" },
+  { "unitId": 3, "titleEn": "My Friends", "titleVi": "Bạn bè của em", "emoji": "🧑‍🤝‍🧑", "color": "#8EC5FF", "available": true, "bookVolume": 1, "bookPages": "Trang 26 – 35" },
+  { "unitId": 4, "titleEn": "My Neighbourhood", "titleVi": "Khu phố nơi em sống", "emoji": "🏘️", "color": "#FFB38A", "available": true, "bookVolume": 1, "bookPages": "Trang 38 – 47" },
+  { "unitId": 5, "titleEn": "Natural Wonders of Viet Nam", "titleVi": "Kỳ quan thiên nhiên Việt Nam", "emoji": "🏞️", "color": "#7ED6B5", "available": true, "bookVolume": 1, "bookPages": "Trang 48 – 57" },
+  { "unitId": 6, "titleEn": "Our Tet Holiday", "titleVi": "Kỳ nghỉ Tết của chúng em", "emoji": "🧧", "color": "#FF9A9A", "available": true, "bookVolume": 1, "bookPages": "Trang 58 – 67" },
+  { "unitId": 7, "titleEn": "Television", "titleVi": "Truyền hình", "emoji": "📺", "color": "#C3A6FF", "available": true, "bookVolume": 2, "bookPages": "Trang 6 – 15" },
+  { "unitId": 8, "titleEn": "Sports and Games", "titleVi": "Thể thao và trò chơi", "emoji": "🏸", "color": "#FFC83D", "available": true, "bookVolume": 2, "bookPages": "Trang 16 – 25" },
+  { "unitId": 9, "titleEn": "Cities of the World", "titleVi": "Các thành phố trên thế giới", "emoji": "🗼", "color": "#8EC5FF", "available": true, "bookVolume": 2, "bookPages": "Trang 26 – 35" },
+  { "unitId": 10, "titleEn": "Our Houses in the Future", "titleVi": "Ngôi nhà trong tương lai", "emoji": "🤖", "color": "#FFB38A", "available": true, "bookVolume": 2, "bookPages": "Trang 38 – 47" },
+  { "unitId": 11, "titleEn": "Our Greener World", "titleVi": "Thế giới xanh hơn", "emoji": "♻️", "color": "#7ED6B5", "available": true, "bookVolume": 2, "bookPages": "Trang 48 – 57" },
+  { "unitId": 12, "titleEn": "Robots", "titleVi": "Người máy", "emoji": "🦾", "color": "#C3A6FF", "available": true, "bookVolume": 2, "bookPages": "Trang 58 – 67" }
 ]

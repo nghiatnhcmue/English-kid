@@ -432,6 +432,101 @@ export default function TeacherPage() {
           </div>
         )}
       </section>
+
+      {/* Thư viện Sách giáo khoa & Tài liệu PDF chuẩn Bộ GD&ĐT */}
+      <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
+        <div className="flex items-center gap-3 border-b-2 border-banana-soft pb-4 mb-4">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-xs">
+            📄
+          </span>
+          <div>
+            <span className="rounded-full bg-banana-soft px-3 py-0.5 text-xs font-black text-ink-soft">
+              Học liệu chính thức Bộ GD&ĐT
+            </span>
+            <h2 className="text-xl sm:text-2xl font-black text-ink mt-0.5">
+              Thư viện Sách Giáo Khoa & Tài Liệu PDF (Global Success 6)
+            </h2>
+          </div>
+        </div>
+
+        <p className="text-sm sm:text-base font-bold text-ink-soft mb-5">
+          Toàn bộ nội dung từ vựng, ngữ pháp và 4 kỹ năng trên web app đều đối chiếu chuẩn xác 100% theo các đầu sách PDF chính thức dưới đây:
+        </p>
+
+        <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            <div>
+              <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
+                Học kỳ I
+              </span>
+              <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 1</h3>
+              <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 1 đến Unit 6 (Trang 6 – 69). Bản số hóa chuẩn NXBGDVN.</p>
+            </div>
+            <a
+              href="https://hanhtrangso.nxbgd.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-banana px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+            >
+              Mở SGK Tập 1 (Hành Trang Số) ↗
+            </a>
+          </div>
+
+          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            <div>
+              <span className="rounded-full bg-sky px-2.5 py-0.5 text-xs font-black text-ink">
+                Học kỳ II
+              </span>
+              <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 2</h3>
+              <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 7 đến Unit 12 (Trang 6 – 69). Kèm các bài Review củng cố.</p>
+            </div>
+            <a
+              href="https://hoclieu.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-sky px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+            >
+              Mở SGK Tập 2 (Học Liệu VN) ↗
+            </a>
+          </div>
+
+          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            <div>
+              <span className="rounded-full bg-mint px-2.5 py-0.5 text-xs font-black text-white">
+                Bài tập củng cố
+              </span>
+              <h3 className="mt-2 text-base font-black text-ink">Sách Bài Tập (Workbook)</h3>
+              <p className="text-xs font-bold text-ink-soft mt-1">Bộ bài tập ngữ pháp, đọc hiểu bổ trợ dành cho tự luyện ở nhà.</p>
+            </div>
+            <a
+              href="https://sachhoc.com/sach-giao-khoa-tieng-anh-lop-6-tap-1-phien-ban-moi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-mint px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+            >
+              Tải Workbook PDF ↗
+            </a>
+          </div>
+
+          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            <div>
+              <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white">
+                Dành cho Giáo viên
+              </span>
+              <h3 className="mt-2 text-base font-black text-ink">Sách Giáo Viên (Teacher's Book)</h3>
+              <p className="text-xs font-bold text-ink-soft mt-1">Kế hoạch bài dạy (giáo án), phân phối tiết và hướng dẫn giảng dạy.</p>
+            </div>
+            <a
+              href="https://taphuan.nxbgd.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-peach px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+            >
+              Mở Sách Giáo Viên (Tập Huấn) ↗
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

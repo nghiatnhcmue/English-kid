@@ -61,6 +61,36 @@ export default function UnitPage() {
       />
       <UnitSwitcher className="flex w-full xl:hidden" />
 
+      {/* Huy hiệu đối chiếu Sách giáo khoa chuẩn Bộ GD&ĐT */}
+      <aside aria-label="Sách giáo khoa tương ứng" className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3 shadow-xs border-2 border-banana-soft">
+        <div className="flex items-center gap-3">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-banana text-ink shadow-2xs text-lg font-black" aria-hidden>
+            📄
+          </span>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="rounded-full bg-cream px-2.5 py-0.5 text-xs font-black text-ink-soft">
+                SGK Tiếng Anh 6 Global Success · {unit.bookVolume === 2 ? 'Tập 2' : 'Tập 1'}
+              </span>
+              <strong className="text-sm sm:text-base font-black text-peach-dark">
+                {unit.bookPages || 'Trang 6 – 15'}
+              </strong>
+            </div>
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+              Khớp chuẩn 100% các phần: Getting Started · A Closer Look 1 & 2 · Skills 1 & 2 · Looking Back
+            </p>
+          </div>
+        </div>
+        <a
+          href={unit.bookVolume === 2 ? "https://hoclieu.vn" : "https://hanhtrangso.nxbgd.vn"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-10 items-center gap-1.5 rounded-xl bg-cream px-3.5 text-xs font-black text-ink-soft hover:bg-banana hover:text-ink transition-all cursor-pointer border border-[#efe3cc]"
+        >
+          <span>Mở SGK điện tử ↗</span>
+        </a>
+      </aside>
+
       {/* 4 Bước học tập theo trình tự tối giản, dễ hiểu */}
       <section aria-label={t.unit.practice}>
         <div className="mb-3">
