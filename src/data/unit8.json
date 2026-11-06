@@ -150,40 +150,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Thì Quá khứ đơn (Past Simple) & Câu mệnh lệnh",
-    "ruleVi": "Dùng để kể lại các sự kiện thể thao đã kết thúc trong quá khứ hoặc dùng câu mệnh lệnh để hướng dẫn luật chơi.",
-    "formula": "S + V-ed / V2 | Phủ định: S + didn't + V (nguyên mẫu)",
-    "quickTip": "Dấu hiệu nhận biết: yesterday (hôm qua), last week, ago. Động từ quy tắc thêm -ed (played, watched).",
+    "title": "Thì Quá khứ đơn & Câu mệnh lệnh (Past Simple & Imperatives)",
+    "ruleVi": "Thì Quá khứ đơn diễn tả sự việc đã bắt đầu và kết thúc hoàn toàn trong quá khứ. Câu mệnh lệnh dùng để yêu cầu, ra lệnh hoặc hướng dẫn ai làm/không làm việc gì.",
+    "formula": "Quá khứ: S + V2/ed | Phủ định: S + didn't + V_inf | Mệnh lệnh: V_inf! / Don't + V_inf!",
+    "quickTip": "Động từ bất quy tắc phổ biến: take -> took, win -> won, do -> did, go -> went, see -> saw, buy -> bought. Câu mệnh lệnh không có chủ ngữ, bắt đầu thẳng bằng động từ nguyên mẫu.",
     "quiz": [
       {
-        "question": "Yesterday, our class ______ a football match against class 6B.",
+        "question": "The first Olympic Games ______ place in Greece in 776 BC.",
         "options": [
+          "took",
+          "takes",
+          "take",
+          "taking"
+        ],
+        "answerIndex": 0,
+        "explain": "Năm 776 trước Công nguyên là quá khứ, động từ take chuyển thành 'took'."
+      },
+      {
+        "question": "In 1958, Pelé ______ his first World Cup with Brazil.",
+        "options": [
+          "won",
+          "win",
+          "winned",
+          "wins"
+        ],
+        "answerIndex": 0,
+        "explain": "Năm 1958 trong quá khứ, động từ win đổi thành 'won'."
+      },
+      {
+        "question": "My brother ______ to play sports when he was small.",
+        "options": [
+          "didn't like",
+          "not liked",
+          "doesn't like",
+          "wasn't like"
+        ],
+        "answerIndex": 0,
+        "explain": "Phủ định thì quá khứ đơn dùng trợ động từ 'didn't' + động từ nguyên mẫu 'like'."
+      },
+      {
+        "question": "Your friends are making too much noise. -> Please, ______!",
+        "options": [
+          "be quiet",
+          "are quiet",
+          "being quiet",
+          "to be quiet"
+        ],
+        "answerIndex": 0,
+        "explain": "Câu mệnh lệnh lịch sự dùng 'Please, be quiet' (Xin hãy giữ trật tự)."
+      },
+      {
+        "question": "Don't ______ the animals at the zoo! It's not allowed.",
+        "options": [
+          "feed",
+          "fed",
+          "feeding",
+          "feeds"
+        ],
+        "answerIndex": 0,
+        "explain": "Câu mệnh lệnh phủ định: Don't + động từ nguyên mẫu 'feed'."
+      },
+      {
+        "question": "Duy isn't reading now. He ______ table tennis with his friend.",
+        "options": [
+          "is playing",
+          "plays",
           "played",
-          "play",
-          "plays"
+          "playing"
         ],
         "answerIndex": 0,
-        "explain": "Có 'Yesterday' (hôm qua), chia động từ ở quá khứ đơn 'played'."
-      },
-      {
-        "question": "She didn't ______ to the karate club last Sunday.",
-        "options": [
-          "go",
-          "went",
-          "goes"
-        ],
-        "answerIndex": 0,
-        "explain": "Sau trợ động từ phủ định 'didn't', động từ trở về nguyên mẫu 'go'."
-      },
-      {
-        "question": "______ your goggles before jumping into the swimming pool!",
-        "options": [
-          "Put on",
-          "Puts on",
-          "Putting on"
-        ],
-        "answerIndex": 0,
-        "explain": "Câu mệnh lệnh bắt đầu bằng động từ nguyên mẫu 'Put on'."
+        "explain": "Có 'now' chỉ hành động đang diễn ra nên dùng hiện tại tiếp diễn 'is playing'."
       }
     ]
   },
@@ -248,42 +284,162 @@
     "audio": "/assets/audio/unit8/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Sports and games play an important role in our lives. Doing aerobics or playing football keeps us healthy and fit. Last month, our school organized a marathon, and hundreds of students took part in it.",
+    "title": "Pelé: The King of Football",
+    "passage": "Teacher: Today we're going to talk about Pelé. Do you know him?\nNick: Yes, I think he's the best footballer of all time.\nTeacher: Right. He was born in 1940 in Brazil. His father taught him to play football at a very young age.\nSusan: Oh. When did he begin his career in football?\nTeacher: At 15, when he started playing for Santos Football Club. In 1958, he won his first World Cup.\nNick: How many goals did he score in his career?\nTeacher: 1,281 goals in total, I think.\nNick and Susan: Wow! Amazing!\nTeacher: And he became 'Football Player of the Century' in 1999.\nMichael: Surely Pelé's a national hero in Brazil.\nTeacher: Yes, and he's known around the world as 'The King of Football'.",
+    "translation": "Cô giáo: Hôm nay chúng ta sẽ tìm hiểu về Pelé. Các em có biết ông ấy không?\nNick: Có ạ, em nghĩ ông ấy là cầu thủ bóng đá xuất sắc nhất mọi thời đại.\nCô giáo: Đúng vậy. Ông sinh năm 1940 tại Brazil. Bố ông đã dạy ông đá bóng từ khi còn rất nhỏ.\nSusan: Ồ, vậy ông bắt đầu sự nghiệp bóng đá khi nào ạ?\nCô giáo: Vào năm 15 tuổi, khi ông bắt đầu thi đấu cho Câu lạc bộ Santos. Năm 1958, ông đã giành cúp vô địch World Cup đầu tiên.\nNick: Trong suốt sự nghiệp, ông đã ghi được bao nhiêu bàn thắng ạ?\nCô giáo: Tổng cộng là 1.281 bàn thắng, cô nhớ là vậy.\nNick và Susan: Oa! Thật đáng kinh ngạc!\nCô giáo: Và ông đã trở thành 'Cầu thủ bóng đá của Thế kỷ' vào năm 1999.\nMichael: Chắc chắn Pelé là người anh hùng dân tộc của đất nước Brazil.\nCô giáo: Đúng thế, và khắp thế giới mọi người đều biết đến ông với danh xưng 'Vua bóng đá'.",
     "questions": [
       {
-        "question": "What did the school organize last month?",
+        "id": "u8_r1",
+        "type": "multiple_choice",
+        "question": "When and where was Pelé born?",
         "options": [
-          "A marathon",
-          "A dance contest",
-          "A chess match"
+          "In 1940 in Brazil",
+          "In 1958 in England",
+          "In 1999 in France",
+          "In 1978 in Viet Nam"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Cô giáo nói: 'He was born in 1940 in Brazil.'"
       },
       {
-        "question": "Why are sports important?",
+        "id": "u8_r2",
+        "type": "multiple_choice",
+        "question": "Who first taught Pelé to play football at a very young age?",
         "options": [
-          "They keep us healthy and fit",
-          "They make us tired",
-          "They cost too much"
+          "His father",
+          "His PE teacher",
+          "His brother",
+          "His coach"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Cô giáo nói: 'His father taught him to play football at a very young age.'"
+      },
+      {
+        "id": "u8_r3",
+        "type": "multiple_choice",
+        "question": "How old was Pelé when he began his career playing for Santos Football Club?",
+        "options": [
+          "At 15 years old",
+          "At 18 years old",
+          "At 20 years old",
+          "At 10 years old"
+        ],
+        "answerIndex": 0,
+        "explain": "Cô giáo trả lời: 'At 15, when he started playing for Santos Football Club.'"
+      },
+      {
+        "id": "u8_r4",
+        "type": "multiple_choice",
+        "question": "How many goals did Pelé score in total during his career?",
+        "options": [
+          "1,281 goals",
+          "500 goals",
+          "850 goals",
+          "2,000 goals"
+        ],
+        "answerIndex": 0,
+        "explain": "Cô giáo: '1,281 goals in total, I think.'"
+      },
+      {
+        "id": "u8_r5",
+        "type": "fill_blank",
+        "question": "Pelé is known around the world as 'The ______ of Football'.",
+        "blankWord": "King",
+        "options": [
+          "King",
+          "Prince",
+          "Hero",
+          "Master"
+        ],
+        "explain": "Câu cuối bài: 'he's known around the world as The King of Football'."
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "We",
-      "played",
-      "table",
-      "tennis",
-      "in",
-      "the",
-      "school",
-      "gym."
+    "items": [
+      {
+        "id": "u8_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Pelé",
+          "is",
+          "known",
+          "around",
+          "the",
+          "world",
+          "as",
+          "The",
+          "King",
+          "of",
+          "Football"
+        ],
+        "correctSentence": "Pelé is known around the world as The King of Football",
+        "meaningVi": "Pelé được khắp thế giới biết đến với danh hiệu Vua bóng đá.",
+        "hint": "Bắt đầu bằng 'Pelé is known...'"
+      },
+      {
+        "id": "u8_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Please",
+          "stand",
+          "in",
+          "line",
+          "and",
+          "do",
+          "not",
+          "push",
+          "each",
+          "other"
+        ],
+        "correctSentence": "Please stand in line and do not push each other",
+        "meaningVi": "Xin vui lòng xếp hàng và không xô đẩy nhau.",
+        "hint": "Câu mệnh lệnh: 'Please stand in line...'"
+      },
+      {
+        "id": "u8_w3",
+        "type": "fill_blank",
+        "sentence": "You need a pair of ______ when you go swimming.",
+        "blankWord": "goggles",
+        "correctSentence": "You need a pair of goggles when you go swimming.",
+        "options": [
+          "goggles",
+          "rackets",
+          "skateboards",
+          "balls"
+        ],
+        "meaningVi": "Bạn cần một chiếc kính bơi khi đi bơi lội."
+      },
+      {
+        "id": "u8_w4",
+        "type": "fill_blank",
+        "sentence": "Duong can do ______ very well.",
+        "blankWord": "karate",
+        "correctSentence": "Duong can do karate very well.",
+        "options": [
+          "karate",
+          "football",
+          "swimming",
+          "aerobics"
+        ],
+        "meaningVi": "Dương có thể tập võ karate rất cừ."
+      }
     ],
-    "correctSentence": "We played table tennis in the school gym.",
-    "meaningVi": "Chúng em đã chơi bóng bàn trong nhà thể chất của trường."
+    "correctSentence": "Pelé is known around the world as The King of Football",
+    "scrambledWords": [
+      "Pelé",
+      "is",
+      "known",
+      "around",
+      "the",
+      "world",
+      "as",
+      "The",
+      "King",
+      "of",
+      "Football"
+    ],
+    "meaningVi": "Pelé được khắp thế giới biết đến với danh xưng Vua bóng đá."
   },
   "video": {
     "title": "Thể thao học đường: At the Gym (Rèn luyện thân thể khỏe mạnh)",

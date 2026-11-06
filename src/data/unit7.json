@@ -150,40 +150,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Từ để hỏi (Wh-questions) & Liên từ (Conjunctions)",
-    "ruleVi": "Dùng từ để hỏi (What, Where, When, Who, Why, How) và các từ nối câu (and, but, although, because, so).",
-    "formula": "Wh-word + do/does/is/are + S + V...? | Mệnh đề 1 + [and/but/so/because] + Mệnh đề 2",
-    "quickTip": "Because: giải thích lý do; So: kết quả; But: trái ngược; What: cái gì; When: khi nào; Who: ai.",
+    "title": "Từ để hỏi Wh-questions & Liên từ kết hợp (Conjunctions: and, but, so)",
+    "ruleVi": "Các từ để hỏi: What (cái gì), Where (ở đâu), When (khi nào), Who (ai), Why (tại sao), How many (bao nhiêu). Liên từ kết hợp: and (nối ý tương đồng), but (nối ý đối lập), so (nêu kết quả).",
+    "formula": "Từ để hỏi: Wh-word + do/does/did/be + S + V...? | Liên từ: Mệnh đề 1, and/but/so + Mệnh đề 2",
+    "quickTip": "'Why' hỏi lý do thì câu trả lời thường bắt đầu bằng 'Because...'. 'So' đứng trước mệnh đề chỉ kết quả (vì vậy, cho nên).",
     "quiz": [
       {
-        "question": "______ do you watch cartoons? - Because they are funny.",
+        "question": "______ did you watch on TV last night? - I watched The Fox Teacher.",
+        "options": [
+          "What",
+          "Where",
+          "When",
+          "Who"
+        ],
+        "answerIndex": 0,
+        "explain": "Hỏi xem 'cái gì' trên TV tối qua, dùng 'What'."
+      },
+      {
+        "question": "______ do you like the Wildlife programme? - Because I love animals.",
         "options": [
           "Why",
-          "When",
-          "Where"
-        ],
-        "answerIndex": 0,
-        "explain": "Hỏi lý do dùng 'Why', trả lời bằng 'Because'."
-      },
-      {
-        "question": "I like documentaries, ______ my brother prefers animated films.",
-        "options": [
-          "but",
-          "because",
-          "so"
-        ],
-        "answerIndex": 0,
-        "explain": "Hai sở thích đối lập nhau, dùng liên từ 'but' (nhưng)."
-      },
-      {
-        "question": "______ is the MC of this game show? - That is Mr. Tran.",
-        "options": [
-          "Who",
+          "How",
           "What",
           "When"
         ],
         "answerIndex": 0,
-        "explain": "Hỏi về người (MC) dùng từ để hỏi 'Who'."
+        "explain": "Câu trả lời có 'Because' chỉ lý do nên từ để hỏi là 'Why'."
+      },
+      {
+        "question": "______ is your favourite MC on TV? - I like Minh Phong.",
+        "options": [
+          "Who",
+          "What",
+          "Where",
+          "Which"
+        ],
+        "answerIndex": 0,
+        "explain": "Hỏi 'ai' là người dẫn chương trình yêu thích, dùng 'Who'."
+      },
+      {
+        "question": "I like The Seven Kitties very much, ______ I watch it every day.",
+        "options": [
+          "so",
+          "but",
+          "although",
+          "because"
+        ],
+        "answerIndex": 0,
+        "explain": "Chỉ kết quả: rất thích 'cho nên' xem mỗi ngày, dùng liên từ 'so'."
+      },
+      {
+        "question": "BBC One is a British channel, ______ VTV6 is a Vietnamese channel.",
+        "options": [
+          "but",
+          "so",
+          "and",
+          "because"
+        ],
+        "answerIndex": 0,
+        "explain": "Hai ý tương phản giữa kênh của Anh và kênh của Việt Nam, dùng 'but'."
+      },
+      {
+        "question": "Ocean Life is on at 7.30, ______ Laughing out Loud comes next at 8.00.",
+        "options": [
+          "and",
+          "but",
+          "so",
+          "although"
+        ],
+        "answerIndex": 0,
+        "explain": "Hai sự việc bổ sung tiếp nối cho nhau, dùng 'and'."
       }
     ]
   },
@@ -248,42 +284,160 @@
     "audio": "/assets/audio/unit7/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Television is a popular source of entertainment and education. Viewers can watch many different channels from around the world. Educational programmes teach kids about animals, science, and history.",
+    "title": "A Day's TV Guide",
+    "passage": "8.00 - Wildlife: Cuc Phuong Forest - Watch the colourful world of plants, flowers, and animals in their real life.\n\n9.00 - Comedy: The Fox Teacher - Have a lot of fun with a fox teacher and his students on their first day at school.\n\n10.30 - Sports: The Pig Race - Watch the cute pigs compete in the most exciting races. Who wins?\n\n11.00 - Game show: Children are Always Right - Join this game show today and try to answer interesting questions about pets.\n\n12.15 - Science: The Dolphins - Watch funny and interesting clips of intelligent dolphins in their natural life - the sea.",
+    "translation": "8:00 - Thế giới hoang dã: Rừng Cúc Phương - Chiêm ngưỡng thế giới đầy màu sắc của cây cối, hoa lá và các loài động vật trong môi trường tự nhiên.\n\n9:00 - Phim hài: Thầy giáo Cáo - Cùng cười sảng khoái với thầy giáo cáo và các cô cậu học trò trong ngày đầu tiên đến trường.\n\n10:30 - Thể thao: Cuộc đua heo - Xem những chú heo đáng yêu so tài trong những cuộc đua hấp dẫn nhất. Ai sẽ giành chiến thắng?\n\n11:00 - Trò chơi truyền hình: Trẻ em luôn đúng - Hãy tham gia trò chơi hôm nay và thử trả lời những câu hỏi thú vị về các loài thú cưng.\n\n12:15 - Khoa học: Những chú cá heo - Xem những thước phim hài hước và kỳ thú về loài cá heo thông minh trong môi trường biển cả tự nhiên.",
     "questions": [
       {
-        "question": "What do educational programmes teach kids about?",
+        "id": "u7_r1",
+        "type": "multiple_choice",
+        "question": "What can viewers watch on the Wildlife programme at 8.00?",
         "options": [
-          "Animals, science, and history",
-          "Cooking only",
-          "Football only"
+          "The colourful world of plants, flowers, and animals in Cuc Phuong Forest",
+          "Cute pigs competing in a race",
+          "A fox teacher and his students",
+          "Questions about pets"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Chương trình lúc 8.00 giới thiệu thế giới cây cối, hoa lá và động vật ở Rừng Cúc Phương."
       },
       {
-        "question": "Who watches television channels?",
+        "id": "u7_r2",
+        "type": "multiple_choice",
+        "question": "Is 'The Fox Teacher' at 9.00 a comedy?",
         "options": [
-          "Viewers",
-          "Actors only",
-          "Singers only"
+          "Yes, it is a funny comedy",
+          "No, it is a sports match",
+          "No, it is a news programme",
+          "No, it is a game show"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Lịch phát sóng ghi rõ: '9.00 - Comedy: The Fox Teacher'."
+      },
+      {
+        "id": "u7_r3",
+        "type": "multiple_choice",
+        "question": "What time is the sports programme 'The Pig Race' on?",
+        "options": [
+          "At 10.30",
+          "At 8.00",
+          "At 9.00",
+          "At 12.15"
+        ],
+        "answerIndex": 0,
+        "explain": "Lịch phát sóng: '10.30 - Sports: The Pig Race'."
+      },
+      {
+        "id": "u7_r4",
+        "type": "multiple_choice",
+        "question": "What is the topic of the Science programme at 12.15?",
+        "options": [
+          "Intelligent dolphins in their natural sea life",
+          "Lions and tigers in the jungle",
+          "Space travel",
+          "Weather forecast"
+        ],
+        "answerIndex": 0,
+        "explain": "Chương trình 12.15 chiếu các clip hài hước về loài cá heo thông minh ngoài biển khơi."
+      },
+      {
+        "id": "u7_r5",
+        "type": "fill_blank",
+        "question": "Phong wants to know more about dogs and cats. He should watch ______ at 11.00.",
+        "blankWord": "Children are Always Right",
+        "options": [
+          "Children are Always Right",
+          "The Fox Teacher",
+          "The Pig Race",
+          "Cuc Phuong Forest"
+        ],
+        "explain": "Chương trình lúc 11.00 là trò chơi hỏi đáp thú vị về các loài thú cưng."
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "This",
-      "educational",
-      "channel",
-      "is",
-      "very",
-      "popular",
-      "with",
-      "kids."
+    "items": [
+      {
+        "id": "u7_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "VTV1",
+          "is",
+          "a",
+          "popular",
+          "TV",
+          "channel",
+          "in",
+          "Viet",
+          "Nam"
+        ],
+        "correctSentence": "VTV1 is a popular TV channel in Viet Nam",
+        "meaningVi": "VTV1 là một kênh truyền hình phổ biến ở Việt Nam.",
+        "hint": "Bắt đầu bằng 'VTV1 is...'"
+      },
+      {
+        "id": "u7_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "I",
+          "have",
+          "a",
+          "lot",
+          "of",
+          "homework",
+          "tonight",
+          "so",
+          "I",
+          "can't",
+          "watch",
+          "TV"
+        ],
+        "correctSentence": "I have a lot of homework tonight so I can't watch TV",
+        "meaningVi": "Tối nay mình có nhiều bài tập nên không thể xem tivi.",
+        "hint": "Nối hai vế bằng liên từ 'so'."
+      },
+      {
+        "id": "u7_w3",
+        "type": "fill_blank",
+        "sentence": "Comedies make people laugh because they are very ______.",
+        "blankWord": "funny",
+        "correctSentence": "Comedies make people laugh because they are very funny.",
+        "options": [
+          "funny",
+          "boring",
+          "sad",
+          "difficult"
+        ],
+        "meaningVi": "Phim hài làm mọi người bật cười vì chúng rất buồn cười và ngộ nghĩnh."
+      },
+      {
+        "id": "u7_w4",
+        "type": "fill_blank",
+        "sentence": "Game shows on TV are both fun and ______.",
+        "blankWord": "educational",
+        "correctSentence": "Game shows on TV are both fun and educational.",
+        "options": [
+          "educational",
+          "tired",
+          "polluted",
+          "historic"
+        ],
+        "meaningVi": "Các trò chơi truyền hình trên TV vừa vui nhộn lại vừa có tính giáo dục."
+      }
     ],
-    "correctSentence": "This educational channel is very popular with kids.",
-    "meaningVi": "Kênh truyền hình giáo dục này rất phổ biến với trẻ em."
+    "correctSentence": "VTV1 is a popular TV channel in Viet Nam",
+    "scrambledWords": [
+      "VTV1",
+      "is",
+      "a",
+      "popular",
+      "TV",
+      "channel",
+      "in",
+      "Viet",
+      "Nam"
+    ],
+    "meaningVi": "VTV1 là một kênh truyền hình phổ biến ở Việt Nam."
   },
   "video": {
     "title": "Hội thoại truyền hình: What's on TV today? (Chương trình TV yêu thích)",

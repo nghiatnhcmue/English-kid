@@ -245,6 +245,36 @@ export default function TeacherPage() {
         }
       />
 
+      {/* Banner Nút Hướng Dẫn Giáo Viên Cực Kỳ Nổi Bật & Dễ Thấy Nhất */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 rounded-3xl bg-gradient-to-r from-mint/20 via-banana/25 to-sky/20 p-4 sm:p-5 border-2 border-mint/50 shadow-sm">
+        <div className="flex items-center gap-3.5 min-w-0">
+          <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-2xl bg-mint text-white text-2xl sm:text-3xl shadow-sm">
+            💡
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h3 className="text-base sm:text-lg font-black text-ink">
+                Cẩm Nang & Mẹo Hướng Dẫn Dành Cho Thầy Cô
+              </h3>
+              <span className="rounded-full bg-peach px-2.5 py-0.5 text-[11px] font-black text-white">
+                Mới
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+              Cách giao đề ngoài SGK, tải ảnh từ vựng, tự thêm Unit, thu bài học sinh qua Zalo và đọc sách PDF.
+            </p>
+          </div>
+        </div>
+        <button
+          type="button"
+          onClick={() => setShowGuideModal(true)}
+          className="inline-flex shrink-0 items-center gap-2 rounded-2xl bg-mint px-5 py-3 text-sm sm:text-base font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer ring-2 ring-white"
+        >
+          <BookOpen className="h-5 w-5" />
+          <span>📖 Mở Hướng Dẫn Thầy Cô</span>
+        </button>
+      </div>
+
       {/* Thanh 6 Tab Điều Hướng Giáo Viên */}
       <nav aria-label="Tab quản lý giáo viên" className="flex gap-2 rounded-2xl bg-white p-1.5 shadow-xs border-2 border-banana-soft overflow-x-auto">
         <button
@@ -926,69 +956,6 @@ export default function TeacherPage() {
           </div>
         </section>
       )}
-
-      {/* Nút Hướng Dẫn Nổi Cố Định Ở Góc Dưới - Luôn hiển thị dù thầy cô cuộn trang tới đâu */}
-      <button
-        type="button"
-        onClick={() => setShowGuideModal(true)}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-mint px-5 py-3 text-sm font-black text-white shadow-xl shadow-mint-dark/30 hover:-translate-y-1 hover:shadow-2xl active:translate-y-0.5 transition-all cursor-pointer border-2 border-white/60"
-        title="Bấm để mở cẩm nang hướng dẫn cho Thầy Cô"
-      >
-        <BookOpen className="h-5 w-5" />
-        <span className="hidden sm:inline">📖 Hướng Dẫn Thầy Cô</span>
-        <span className="sm:hidden">📖 Hướng dẫn</span>
-      </button>
-
-      {/* Modal Hướng Dẫn Thầy Cô Toàn Diện */}
-      {showGuideModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/70 p-3 sm:p-4 backdrop-blur-xs animate-in fade-in">
-          <div className="relative flex w-full max-w-4xl max-h-[92vh] flex-col rounded-[2.5rem] bg-white p-5 sm:p-7 shadow-2xl border-4 border-mint overflow-hidden">
-            <div className="flex items-center justify-between border-b border-banana-soft pb-3 pr-2">
-              <div className="flex items-center gap-2.5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-mint text-white text-xl shadow-xs">
-                  📖
-                </div>
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-black text-ink">
-                    Cẩm Nang Hướng Dẫn Dành Cho Thầy Cô
-                  </h3>
-                  <p className="text-xs font-bold text-ink-soft">
-                    Hướng dẫn chi tiết từ A - Z: Giao bài, dán từ Word, tải ảnh từ vựng và quản lý lớp.
-                  </p>
-                </div>
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowGuideModal(false)}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-cream text-ink hover:bg-peach hover:text-white transition-all cursor-pointer font-black"
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="flex-1 overflow-y-auto py-3 pr-1">
-              <TeacherGuide />
-            </div>
-
-            <div className="flex justify-end pt-3 border-t border-banana-soft">
-              <button
-                type="button"
-                onClick={() => setShowGuideModal(false)}
-                className="rounded-2xl bg-mint px-6 py-2.5 text-sm font-black text-white shadow-[0_3px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
-              >
-                Đã hiểu & Tiếp tục làm việc ↵
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Trình Đọc Sách PDF Tích Hợp Sẵn */}
-      <PdfReaderModal
-        isOpen={showPdfReaderModal}
-        onClose={() => setShowPdfReaderModal(false)}
-        initialBookId={selectedBookForReader}
-      />
 
       {/* Nút Hướng Dẫn Nổi Cố Định Ở Góc Dưới - Luôn hiển thị dù thầy cô cuộn trang tới đâu */}
       <button

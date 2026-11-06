@@ -137,40 +137,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Thì Tương lai đơn (Future Simple with Will) & Might",
-    "ruleVi": "Dùng để đưa ra lời dự đoán về cuộc sống, nhà ở và robot trong tương lai (will/won't) hoặc khả năng có thể xảy ra (might).",
-    "formula": "S + will / won't + V (nguyên mẫu) | S + might + V",
-    "quickTip": "Sau will, won't, might luôn là động từ nguyên thể không chia.",
+    "title": "Thì Tương lai đơn & Khả năng với Might (Future Simple with Will & Might)",
+    "ruleVi": "Will / Won't dùng để diễn đạt dự đoán hoặc kế hoạch trong tương lai (sẽ / sẽ không). Might / Might not dùng khi nói về một khả năng có thể xảy ra nhưng chưa chắc chắn (có thể, có lẽ).",
+    "formula": "Tương lai: S + will ('ll) / won't + V_inf | Khả năng: S + might / might not + V_inf",
+    "quickTip": "Cả will và might đều là động từ khuyết thiếu, đi với động từ nguyên thể không chia. 'Won't' là viết tắt của 'will not'.",
     "quiz": [
       {
-        "question": "In the future, our smart house ______ solar energy for heating.",
+        "question": "Tomorrow is Sunday, so I ______ have to get up early.",
         "options": [
-          "will use",
-          "used",
-          "uses"
+          "won't",
+          "will",
+          "might",
+          "don't"
         ],
         "answerIndex": 0,
-        "explain": "Dự đoán tương lai có 'In the future' dùng 'will use'."
+        "explain": "Chủ nhật được nghỉ học nên chắc chắn 'sẽ không' phải dậy sớm, dùng 'won't'."
       },
       {
-        "question": "We ______ live on the Moon because it might be too cold.",
+        "question": "When I see Tom tomorrow, I ______ invite him to our party.",
+        "options": [
+          "will",
+          "won't",
+          "might",
+          "am"
+        ],
+        "answerIndex": 0,
+        "explain": "Ý định chắc chắn trong tương lai, dùng 'will'."
+      },
+      {
+        "question": "I am still not sure where to go for my holiday. I ______ go to Da Lat.",
+        "options": [
+          "might",
+          "will",
+          "must",
+          "won't"
+        ],
+        "answerIndex": 0,
+        "explain": "Có 'not sure' (chưa chắc chắn) nên dùng 'might' (có thể/có lẽ)."
+      },
+      {
+        "question": "The sky is very dark. It ______ rain this afternoon.",
+        "options": [
+          "might",
+          "won't",
+          "must",
+          "shall"
+        ],
+        "answerIndex": 0,
+        "explain": "Khả năng thời tiết có thể xảy ra, dùng 'might'."
+      },
+      {
+        "question": "Ann has a lot of homework tonight, so she ______ come to the party.",
         "options": [
           "might not",
+          "might",
           "will",
-          "are"
+          "won't be"
         ],
         "answerIndex": 0,
-        "explain": "Khả năng không chắc chắn trong tương lai dùng 'might not'."
+        "explain": "Có khả năng không đến được vì bận bài tập, dùng 'might not'."
       },
       {
-        "question": "Robot helpers ______ do all the housework for us.",
+        "question": "In the future, robots ______ do all the difficult housework for humans.",
         "options": [
           "will",
-          "shall to",
+          "might not",
+          "won't",
           "are"
         ],
         "answerIndex": 0,
-        "explain": "Dự đoán việc robot sẽ làm trong tương lai dùng 'will + V'."
+        "explain": "Dự đoán tương lai chắc chắn công nghệ phát triển, dùng 'will'."
       }
     ]
   },
@@ -235,41 +271,157 @@
     "audio": "/assets/audio/unit10/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Future houses will be very eco-friendly. Many people might live in floating houses on the ocean or in underground smart homes. Solar panels on the roof will provide clean electricity for wireless appliances.",
+    "title": "My Future Dream House",
+    "passage": "My future house will be on an island. It will be surrounded by tall trees and the blue sea. There will be a swimming pool in front of the house. There will be a helicopter on the roof. I can fly to school in it.\n\nThere will be some robots in the house. They will help me to clean the floors, cook meals, wash clothes and water the flowers. They will also help me to feed the dogs and cats.\n\nThere will be a super smart TV. It will help me to send and receive emails, and contact my friends on other planets. It will also help me to buy food from the supermarket.",
+    "translation": "Ngôi nhà tương lai của mình sẽ tọa lạc trên một hòn đảo. Ngôi nhà sẽ được bao quanh bởi những hàng cây cao vút và biển xanh biếc. Sẽ có một bể bơi lớn ở ngay phía trước nhà. Trên mái nhà sẽ có một chiếc trực thăng để mình bay đi học mỗi ngày.\n\nTrong nhà sẽ có một vài chú người máy robot. Chúng sẽ giúp mình lau dọn sàn nhà, nấu những bữa ăn ngon, giặt quần áo và tưới hoa. Chúng cũng sẽ giúp mình cho chó mèo ăn.\n\nTrong phòng sẽ có một chiếc TV siêu thông minh. Chiếc TV này sẽ giúp mình gửi và nhận email, liên lạc với bạn bè ở các hành tinh khác. Nó còn có thể tự động đặt mua thức ăn từ siêu thị về nhà.",
     "questions": [
       {
-        "question": "What will provide clean electricity?",
+        "id": "u10_r1",
+        "type": "multiple_choice",
+        "question": "Where will the author's future dream house be located?",
         "options": [
-          "Solar panels on the roof",
-          "Petrol engines",
-          "Gas tanks"
+          "On an island surrounded by tall trees and blue sea",
+          "In the cold mountains",
+          "Under the ocean",
+          "On the Moon"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1 nêu: 'My future house will be on an island. It will be surrounded by tall trees and the blue sea.'"
       },
       {
-        "question": "Where might some future houses float?",
+        "id": "u10_r2",
+        "type": "multiple_choice",
+        "question": "How will the author travel to school from the future house?",
         "options": [
-          "On the ocean",
-          "In the clouds",
-          "Inside volcanoes"
+          "In a helicopter on the roof",
+          "By a school bus",
+          "By bicycle",
+          "By a speed boat"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1: 'There will be a helicopter on the roof. I can fly to school in it.'"
+      },
+      {
+        "id": "u10_r3",
+        "type": "multiple_choice",
+        "question": "What tasks will the robots do in the house?",
+        "options": [
+          "Clean floors, cook meals, wash clothes, water flowers and feed pets",
+          "Only play computer games",
+          "Fly the helicopter",
+          "Build the swimming pool"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'clean the floors, cook meals, wash clothes and water the flowers. They will also help me to feed the dogs and cats.'"
+      },
+      {
+        "id": "u10_r4",
+        "type": "multiple_choice",
+        "question": "What can the super smart TV do in the future house?",
+        "options": [
+          "Send and receive emails, contact friends on other planets and buy food",
+          "Wash clothes and dishes",
+          "Water the garden",
+          "Fly to school"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 3: 'send and receive emails, and contact my friends on other planets. It will also help me to buy food from the supermarket.'"
+      },
+      {
+        "id": "u10_r5",
+        "type": "fill_blank",
+        "question": "There will be a swimming pool ______ the future house.",
+        "blankWord": "in front of",
+        "options": [
+          "in front of",
+          "behind",
+          "under",
+          "next to"
+        ],
+        "explain": "Đoạn 1: 'There will be a swimming pool in front of the house.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
+    "items": [
+      {
+        "id": "u10_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "My",
+          "future",
+          "house",
+          "will",
+          "be",
+          "on",
+          "a",
+          "beautiful",
+          "island"
+        ],
+        "correctSentence": "My future house will be on a beautiful island",
+        "meaningVi": "Ngôi nhà tương lai của mình sẽ tọa lạc trên một hòn đảo xinh đẹp.",
+        "hint": "Cấu trúc tương lai đơn: S + will be on..."
+      },
+      {
+        "id": "u10_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Robots",
+          "will",
+          "help",
+          "us",
+          "cook",
+          "meals",
+          "and",
+          "wash",
+          "clothes"
+        ],
+        "correctSentence": "Robots will help us cook meals and wash clothes",
+        "meaningVi": "Người máy sẽ giúp chúng ta nấu nướng và giặt giũ quần áo.",
+        "hint": "Cấu trúc: Robots will help us..."
+      },
+      {
+        "id": "u10_w3",
+        "type": "fill_blank",
+        "sentence": "We will use ______ energy to protect our environment.",
+        "blankWord": "solar",
+        "correctSentence": "We will use solar energy to protect our environment.",
+        "options": [
+          "solar",
+          "windy",
+          "cold",
+          "dirty"
+        ],
+        "meaningVi": "Chúng ta sẽ sử dụng năng lượng mặt trời để bảo vệ môi trường."
+      },
+      {
+        "id": "u10_w4",
+        "type": "fill_blank",
+        "sentence": "A smart ______ will wash all the dirty dishes automatically.",
+        "blankWord": "dishwasher",
+        "correctSentence": "A smart dishwasher will wash all the dirty dishes automatically.",
+        "options": [
+          "dishwasher",
+          "clock",
+          "television",
+          "fridge"
+        ],
+        "meaningVi": "Chiếc máy rửa bát thông minh sẽ tự động rửa sạch toàn bộ bát đĩa bẩn."
+      }
+    ],
+    "correctSentence": "My future house will be on a beautiful island",
     "scrambledWords": [
-      "Our",
-      "smart",
+      "My",
+      "future",
       "house",
       "will",
-      "use",
-      "solar",
-      "energy."
+      "be",
+      "on",
+      "a",
+      "beautiful",
+      "island"
     ],
-    "correctSentence": "Our smart house will use solar energy.",
-    "meaningVi": "Ngôi nhà thông minh của chúng em sẽ sử dụng năng lượng mặt trời."
+    "meaningVi": "Ngôi nhà tương lai của mình sẽ tọa lạc trên một hòn đảo xinh đẹp."
   },
   "video": {
     "title": "Công nghệ tương lai: Houses in the Year 2050 (Ngôi nhà thông minh tương lai)",

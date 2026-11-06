@@ -137,40 +137,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Diễn tả khả năng với Can, Could, Will be able to",
-    "ruleVi": "Dùng 'can' để nói về khả năng ở hiện tại, 'could' cho quá khứ và 'will be able to' cho tương lai.",
-    "formula": "Hiện tại: S + can + V | Quá khứ: S + could + V | Tương lai: S + will be able to + V",
-    "quickTip": "Khả năng bây giờ: CAN. Khả năng ngày xưa: COULD. Khả năng sau này: WILL BE ABLE TO.",
+    "title": "So sánh nhất của tính từ ngắn (Superlative Adjectives)",
+    "ruleVi": "So sánh nhất dùng để so sánh một người hoặc một vật với toàn bộ tập hợp nhóm (từ 3 đối tượng trở lên). Với tính từ ngắn, ta thêm 'the' phía trước và thêm đuôi '-est' vào sau tính từ.",
+    "formula": "S + be + the + adj-est (+ N trong nhóm)",
+    "quickTip": "Tính từ kết thúc bằng -e chỉ cần thêm -st (large -> the largest). Tính từ 1 âm tiết có 1 nguyên âm kẹp giữa 2 phụ âm gấp đôi phụ âm cuối (hot -> the hottest, big -> the biggest).",
     "quiz": [
       {
-        "question": "In the future, smart robots ______ recognise human feelings.",
+        "question": "What is the ______ mountain in the world? - Mount Everest.",
         "options": [
-          "will be able to",
-          "could",
-          "can to"
+          "highest",
+          "higher",
+          "most high",
+          "high"
         ],
         "answerIndex": 0,
-        "explain": "Khả năng trong tương lai có 'In the future' dùng 'will be able to'."
+        "explain": "Đỉnh núi cao 'nhất' thế giới dùng so sánh nhất 'the highest'."
       },
       {
-        "question": "Ten years ago, robots ______ only do very simple tasks.",
+        "question": "Ba Be Lake is the ______ natural freshwater lake in Viet Nam.",
         "options": [
-          "could",
-          "will be able to",
-          "can"
+          "largest",
+          "larger",
+          "most large",
+          "large"
         ],
         "answerIndex": 0,
-        "explain": "Khả năng trong quá khứ có 'Ten years ago' dùng 'could'."
+        "explain": "Hồ nước ngọt tự nhiên lớn 'nhất' dùng 'the largest'."
       },
       {
-        "question": "Today, home robots ______ clean the floor and cook meals.",
+        "question": "Tra Co is the ______ beach in Viet Nam with over 17 km.",
         "options": [
-          "can",
-          "could",
-          "will able"
+          "longest",
+          "longer",
+          "most long",
+          "long"
         ],
         "answerIndex": 0,
-        "explain": "Khả năng ở hiện tại có 'Today' dùng 'can'."
+        "explain": "Bãi biển dài 'nhất' dùng 'the longest'."
+      },
+      {
+        "question": "The Sahara is the ______ desert in the world.",
+        "options": [
+          "hottest",
+          "hotter",
+          "most hot",
+          "hot"
+        ],
+        "answerIndex": 0,
+        "explain": "Gấp đôi chữ t rồi thêm -est: 'the hottest'."
+      },
+      {
+        "question": "This tiny machine is the ______ robot in our laboratory.",
+        "options": [
+          "smartest",
+          "smarter",
+          "most smart",
+          "smart"
+        ],
+        "answerIndex": 0,
+        "explain": "Robot thông minh 'nhất' dùng 'the smartest'."
+      },
+      {
+        "question": "The Amazon is the ______ river in the world.",
+        "options": [
+          "widest",
+          "wider",
+          "most wide",
+          "wide"
+        ],
+        "answerIndex": 0,
+        "explain": "Con sông rộng 'nhất' dùng 'the widest'."
       }
     ]
   },
@@ -235,41 +271,159 @@
     "audio": "/assets/audio/unit12/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Robots are becoming more helpful in our daily lives. Doctor robots can help examine patients, while teacher robots can teach English to young children. In the future, robots will be able to do heavy and dangerous work for humans.",
+    "title": "The International Robot Show in Ha Noi",
+    "passage": "Today there is an international robot show in Ha Noi. People can see many types of robots there.\n\nHome robots are useful for housework. They can do most of the housework: cook meals, clean the house, do the washing, and iron clothes.\n\nTeacher robots are the best choice for children. They can help them to study. They can teach them English, literature, maths and other subjects. They can also help children to improve their English pronunciation.\n\nPeople are also interested in other types of robots at the show. Worker robots can build houses and move heavy things; doctor robots can look after sick people and space robots can build space stations on the Moon and on planets.",
+    "translation": "Hôm nay, một triển lãm người máy quốc tế đang diễn ra tại Hà Nội. Khách tham quan có thể tận mắt chiêm ngưỡng rất nhiều loại robot hiện đại.\n\nRobot gia đình rất hữu ích cho các công việc nội trợ. Chúng có thể làm hầu hết việc nhà: nấu ăn, lau dọn nhà cửa, giặt giũ quần áo và là ủi đồ.\n\nRobot giáo viên là sự lựa chọn tuyệt vời nhất cho trẻ em. Chúng có thể hỗ trợ các em học tập, dạy các môn tiếng Anh, ngữ văn, toán và các môn học khác. Chúng còn có thể giúp trẻ em cải thiện phát âm tiếng Anh chuẩn xác.\n\nMọi người cũng đặc biệt quan tâm đến các loại robot khác tại triển lãm: Robot công nhân có thể xây nhà và vận chuyển những đồ vật nặng; robot bác sĩ chăm sóc người bệnh, còn robot vũ trụ có thể xây dựng các trạm không gian trên Mặt Trăng và các hành tinh xa xôi.",
     "questions": [
       {
-        "question": "What can teacher robots do?",
+        "id": "u12_r1",
+        "type": "multiple_choice",
+        "question": "What international event is taking place in Ha Noi today?",
         "options": [
-          "Teach English to young children",
-          "Drive buses",
-          "Build bridges"
+          "An international robot show",
+          "A sports marathon",
+          "A science book fair",
+          "A fashion exhibition"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1 nêu rõ: 'Today there is an international robot show in Ha Noi.'"
       },
       {
-        "question": "What will robots be able to do in the future?",
+        "id": "u12_r2",
+        "type": "multiple_choice",
+        "question": "Which type of robots is the best choice to help children in their study?",
         "options": [
-          "Heavy and dangerous work",
-          "Sleep all day",
-          "Nothing new"
+          "Teacher robots",
+          "Home robots",
+          "Worker robots",
+          "Space robots"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 3: 'Teacher robots are the best choice for children. They can help them to study.'"
+      },
+      {
+        "id": "u12_r3",
+        "type": "multiple_choice",
+        "question": "What can home robots do to help families with housework?",
+        "options": [
+          "Cook meals, clean the house, do the washing and iron clothes",
+          "Build houses and roads",
+          "Fly into deep space",
+          "Drive cars"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'cook meals, clean the house, do the washing, and iron clothes.'"
+      },
+      {
+        "id": "u12_r4",
+        "type": "multiple_choice",
+        "question": "What can doctor robots do at hospitals?",
+        "options": [
+          "Look after sick people",
+          "Do the dishes",
+          "Play sports with kids",
+          "Fix broken clocks"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 4: 'doctor robots can look after sick people.'"
+      },
+      {
+        "id": "u12_r5",
+        "type": "fill_blank",
+        "question": "Worker robots can build houses and move ______ things.",
+        "blankWord": "heavy",
+        "options": [
+          "heavy",
+          "tiny",
+          "broken",
+          "light"
+        ],
+        "explain": "Đoạn 4: 'Worker robots can build houses and move heavy things.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "This",
-      "smart",
-      "robot",
-      "can",
-      "guard",
-      "our",
-      "house."
+    "items": [
+      {
+        "id": "u12_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Home",
+          "robots",
+          "can",
+          "do",
+          "the",
+          "washing",
+          "and",
+          "iron",
+          "the",
+          "clothes"
+        ],
+        "correctSentence": "Home robots can do the washing and iron the clothes",
+        "meaningVi": "Robot gia đình có thể giặt giũ và là ủi quần áo.",
+        "hint": "Bắt đầu bằng 'Home robots can do...'"
+      },
+      {
+        "id": "u12_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Teacher",
+          "robots",
+          "can",
+          "help",
+          "children",
+          "to",
+          "improve",
+          "English",
+          "pronunciation"
+        ],
+        "correctSentence": "Teacher robots can help children to improve English pronunciation",
+        "meaningVi": "Robot giáo viên có thể giúp các em cải thiện phát âm tiếng Anh.",
+        "hint": "Cấu trúc: Teacher robots can help..."
+      },
+      {
+        "id": "u12_w3",
+        "type": "fill_blank",
+        "sentence": "Space robots can build space stations on the ______.",
+        "blankWord": "Moon",
+        "correctSentence": "Space robots can build space stations on the Moon.",
+        "options": [
+          "Moon",
+          "river",
+          "beach",
+          "forest"
+        ],
+        "meaningVi": "Robot vũ trụ có thể xây dựng các trạm không gian trên Mặt Trăng."
+      },
+      {
+        "id": "u12_w4",
+        "type": "fill_blank",
+        "sentence": "Doctor robots can look ______ sick people in hospitals.",
+        "blankWord": "after",
+        "correctSentence": "Doctor robots can look after sick people in hospitals.",
+        "options": [
+          "after",
+          "for",
+          "at",
+          "in"
+        ],
+        "meaningVi": "Robot bác sĩ có thể chăm sóc bệnh nhân trong các bệnh viện."
+      }
     ],
-    "correctSentence": "This smart robot can guard our house.",
-    "meaningVi": "Chú robot thông minh này có thể trông coi nhà của chúng em."
+    "correctSentence": "Home robots can do the washing and iron the clothes",
+    "scrambledWords": [
+      "Home",
+      "robots",
+      "can",
+      "do",
+      "the",
+      "washing",
+      "and",
+      "iron",
+      "the",
+      "clothes"
+    ],
+    "meaningVi": "Robot gia đình có thể giặt giũ và là ủi quần áo."
   },
   "video": {
     "title": "Triển lãm công nghệ: International Robot Show (Người máy thông minh)",

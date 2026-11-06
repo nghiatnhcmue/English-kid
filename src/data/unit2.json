@@ -218,40 +218,76 @@
   ],
   "extraQuestions": [],
   "grammar": {
-    "title": "Giới từ chỉ nơi chốn (Prepositions of Place)",
-    "ruleVi": "Dùng để miêu tả vị trí của các đồ vật và phòng ốc trong ngôi nhà.",
-    "formula": "There is / There are + [vật] + [in, on, behind, under, next to, between] + [nơi chốn]",
-    "quickTip": "'in' là ở trong, 'on' là ở trên bề mặt, 'under' là ở dưới, 'next to' là ở ngay bên cạnh.",
+    "title": "Sở hữu cách & Giới từ chỉ nơi chốn (Possessive Case & Prepositions of Place)",
+    "ruleVi": "Sở hữu cách ('s) dùng để chỉ sự sở hữu của một người. Giới từ chỉ nơi chốn (in, on, under, behind, in front of, next to, between) mô tả vị trí của đồ vật và người.",
+    "formula": "Sở hữu cách: Tên/Danh từ số ít + 's + Danh từ | Giới từ: in / on / under / behind / next to / in front of / between A and B",
+    "quickTip": "Nếu danh từ số nhiều có đuôi -s (students) thì chỉ thêm dấu phẩy (students'). Giới từ 'between' luôn đi kèm với liên từ 'and' (between A and B).",
     "quiz": [
       {
-        "question": "The cat is sleeping ______ the sofa.",
+        "question": "Our house is next to my ______ house.",
         "options": [
-          "on",
-          "in",
-          "between"
+          "teacher's",
+          "teachers",
+          "teacher",
+          "teachers's"
         ],
         "answerIndex": 0,
-        "explain": "Con mèo đang ngủ trên bề mặt ghế sô-pha, dùng giới từ 'on'."
+        "explain": "Sở hữu cách của 'teacher' là 'teacher's' (nhà của giáo viên)."
       },
       {
-        "question": "There is a microwave ______ the kitchen.",
+        "question": "There's a big bookshelf in ______ bedroom.",
         "options": [
-          "at",
-          "on",
-          "in"
+          "Elena's",
+          "Elena",
+          "Elenas",
+          "Elenas'"
         ],
-        "answerIndex": 2,
-        "explain": "Ở bên trong phòng bếp, dùng giới từ 'in'."
+        "answerIndex": 0,
+        "explain": "Tên riêng Elena thêm 's thành Elena's (phòng ngủ của Elena)."
       },
       {
-        "question": "The bathroom is ______ to my bedroom.",
+        "question": "The cat is sleeping ______ the table.",
         "options": [
+          "on",
+          "between",
+          "behind of",
+          "in front"
+        ],
+        "answerIndex": 0,
+        "explain": "Con mèo đang ngủ 'trên' bàn, dùng giới từ 'on'."
+      },
+      {
+        "question": "The dog is standing ______ the doghouse.",
+        "options": [
+          "in front of",
+          "between",
+          "under to",
+          "next"
+        ],
+        "answerIndex": 0,
+        "explain": "Cụm giới từ đúng chỉ phía trước là 'in front of'."
+      },
+      {
+        "question": "The lamp is ______ the sofa and the armchair.",
+        "options": [
+          "between",
+          "among",
           "next",
-          "under",
-          "behind"
+          "in front"
         ],
         "answerIndex": 0,
-        "explain": "Cụm 'next to' có nghĩa là ở ngay bên cạnh."
+        "explain": "Ở giữa 2 vật có từ 'and' nên dùng giới từ 'between'."
+      },
+      {
+        "question": "The kitchen is my ______ favourite room.",
+        "options": [
+          "grandfather's",
+          "grandfathers",
+          "grandfather",
+          "grandfathers's"
+        ],
+        "answerIndex": 0,
+        "explain": "Sở hữu cách của danh từ chỉ người 'grandfather' là 'grandfather's'."
       }
     ]
   },
@@ -316,40 +352,154 @@
     "audio": "/assets/audio/unit2/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Nam lives in a town house in the city. His house is tall with three floors. His bedroom is on the second floor with a cozy balcony.",
+    "title": "A Room at the Crazy House Hotel, Da Lat",
+    "passage": "Hi Phong and Mi,\n\nHow are you? I'm in Da Lat with my parents. We're staying at the Crazy House Hotel. Wow! It really is crazy.\n\nThere are ten rooms in the hotel. There's a Kangaroo Room, an Eagle Room, and even an Ant Room. I'm staying in the Tiger Room. It's called the Tiger Room because there's a big tiger on the wall.\n\nThe tiger is between the bathroom door and the window. The bed is next to the window, but the window is a strange shape. I put my bag under the bed. There's a lamp, a wardrobe and a desk.\n\nYou should stay here when you visit Da Lat. It's great.\n\nSee you soon!\nNick",
+    "translation": "Chào Phong và Mi,\n\nCác bạn khỏe không? Mình đang ở Đà Lạt cùng bố mẹ. Nhà mình đang ở khách sạn Crazy House. Oa! Khách sạn này thật sự kì lạ và độc đáo.\n\nKhách sạn có 10 phòng. Có phòng Chuột túi, phòng Đại bàng và cả phòng Kiến. Mình đang ở phòng Hổ. Phòng được gọi là phòng Hổ vì có một bức tượng con hổ lớn trên tường.\n\nCon hổ nằm ở giữa cửa phòng tắm và cửa sổ. Chiếc giường ở cạnh cửa sổ, nhưng cửa sổ có hình dáng rất kỳ lạ. Mình để cặp dưới gầm giường. Trong phòng có đèn, tủ quần áo và bàn học.\n\nCác bạn nên đến ở đây khi ghé thăm Đà Lạt nhé. Tuyệt vời lắm.\n\nHẹn sớm gặp lại!\nNick",
     "questions": [
       {
-        "question": "Nam sống ở kiểu nhà nào?",
+        "id": "u2_r1",
+        "type": "multiple_choice",
+        "question": "Who is Nick in Da Lat with?",
         "options": [
-          "Nhà ở quê",
-          "Căn hộ chung cư",
-          "Nhà phố trong thành phố"
+          "His parents",
+          "His classmates Phong and Mi",
+          "His teacher",
+          "His grandparents"
         ],
-        "answerIndex": 2
+        "answerIndex": 0,
+        "explain": "Đoạn 1 nêu rõ: 'I'm in Da Lat with my parents.' (Nick đi Đà Lạt cùng bố mẹ)."
       },
       {
-        "question": "Phòng ngủ của Nam nằm ở tầng mấy?",
+        "id": "u2_r2",
+        "type": "multiple_choice",
+        "question": "How many rooms are there in the Crazy House Hotel?",
         "options": [
-          "Tầng 1",
-          "Tầng 2",
-          "Tầng 3"
+          "Ten rooms",
+          "Eight rooms",
+          "Twelve rooms",
+          "Twenty rooms"
         ],
-        "answerIndex": 1
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'There are ten rooms in the hotel.' (Có 10 phòng trong khách sạn)."
+      },
+      {
+        "id": "u2_r3",
+        "type": "multiple_choice",
+        "question": "Why is Nick's room called the Tiger Room?",
+        "options": [
+          "Because there's a big tiger on the wall",
+          "Because Nick has a pet tiger",
+          "Because the bed looks like a tiger",
+          "Because there is a tiger outside"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'It's called the Tiger Room because there's a big tiger on the wall.'"
+      },
+      {
+        "id": "u2_r4",
+        "type": "multiple_choice",
+        "question": "Where did Nick put his bag in the room?",
+        "options": [
+          "Under the bed",
+          "On the desk",
+          "In the wardrobe",
+          "Next to the door"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 3: 'I put my bag under the bed.' (Nick đặt cặp dưới gầm giường)."
+      },
+      {
+        "id": "u2_r5",
+        "type": "fill_blank",
+        "question": "The tiger is ______ the bathroom door and the window.",
+        "blankWord": "between",
+        "options": [
+          "between",
+          "behind",
+          "under",
+          "in front of"
+        ],
+        "explain": "Đoạn 3: 'The tiger is between the bathroom door and the window.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "The",
-      "fridge",
-      "is",
-      "in",
-      "the",
-      "kitchen"
+    "items": [
+      {
+        "id": "u2_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "There",
+          "is",
+          "a",
+          "big",
+          "bed",
+          "next",
+          "to",
+          "the",
+          "door"
+        ],
+        "correctSentence": "There is a big bed next to the door",
+        "meaningVi": "Có một chiếc giường lớn ở bên cạnh cửa ra vào.",
+        "hint": "Bắt đầu bằng 'There is...'"
+      },
+      {
+        "id": "u2_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "This",
+          "is",
+          "my",
+          "brother's",
+          "new",
+          "TV"
+        ],
+        "correctSentence": "This is my brother's new TV",
+        "meaningVi": "Đây là chiếc tivi mới của anh trai mình.",
+        "hint": "Chú ý sở hữu cách 'brother's'."
+      },
+      {
+        "id": "u2_w3",
+        "type": "fill_blank",
+        "sentence": "My house has four rooms: a living room, a kitchen and two ______.",
+        "blankWord": "bedrooms",
+        "correctSentence": "My house has four rooms: a living room, a kitchen and two bedrooms.",
+        "options": [
+          "bedrooms",
+          "fridges",
+          "attics",
+          "sinks"
+        ],
+        "meaningVi": "Nhà mình có 4 phòng: 1 phòng khách, 1 phòng bếp và 2 phòng ngủ."
+      },
+      {
+        "id": "u2_w4",
+        "type": "fill_blank",
+        "sentence": "Nick put his school bag ______ the bed.",
+        "blankWord": "under",
+        "correctSentence": "Nick put his school bag under the bed.",
+        "options": [
+          "under",
+          "between",
+          "next",
+          "in front"
+        ],
+        "meaningVi": "Nick đặt chiếc cặp đi học của bạn ấy ở dưới gầm giường."
+      }
     ],
-    "correctSentence": "The fridge is in the kitchen",
-    "meaningVi": "Chiếc tủ lạnh ở trong phòng bếp."
+    "correctSentence": "There is a big bed next to the door",
+    "scrambledWords": [
+      "There",
+      "is",
+      "a",
+      "big",
+      "bed",
+      "next",
+      "to",
+      "the",
+      "door"
+    ],
+    "meaningVi": "Có một chiếc giường lớn ở bên cạnh cửa ra vào."
   },
   "scenes": [
     {

@@ -137,40 +137,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Động từ khuyết thiếu Must / Mustn't",
-    "ruleVi": "Dùng 'must' khi bắt buộc phải làm việc gì đó (quy tắc an toàn) và 'mustn't' khi tuyệt đối không được phép làm.",
-    "formula": "S + must / mustn't + V (nguyên mẫu)",
-    "quickTip": "Sau must và mustn't luôn là động từ nguyên thể, không thêm -s, -ed hay -ing.",
+    "title": "Danh từ đếm được / Không đếm được & Động từ khuyết thiếu Must / Mustn't",
+    "ruleVi": "Danh từ đếm được có thể đếm bằng số và có dạng số nhiều (islands, caves, bottles). Danh từ không đếm được không có dạng số nhiều (water, milk, luggage, snow). Must dùng để diễn tả điều bắt buộc phải làm; Mustn't dùng để chỉ điều cấm đoán, không được phép làm.",
+    "formula": "Bắt buộc: S + must + V_inf | Cấm đoán: S + mustn't + V_inf",
+    "quickTip": "Must và Mustn't luôn đi với động từ nguyên mẫu không chia. Không dùng 'many' hay số đếm với danh từ không đếm được (dùng 'much water', không nói 'many waters').",
     "quiz": [
       {
-        "question": "You ______ stay with your group when exploring the forest.",
+        "question": "It's dangerous to go hiking alone. You ______ tell someone where you are going.",
         "options": [
           "must",
           "mustn't",
+          "can't",
+          "needn't"
+        ],
+        "answerIndex": 0,
+        "explain": "Việc nguy hiểm nên bắt buộc 'phải' báo cho ai đó biết, dùng 'must'."
+      },
+      {
+        "question": "It's very cold on the mountain summit. You ______ take a warm coat.",
+        "options": [
+          "must",
+          "mustn't",
+          "can",
           "shouldn't"
         ],
         "answerIndex": 0,
-        "explain": "Quy tắc an toàn trong rừng: bạn 'phải' đi cùng nhóm."
+        "explain": "Rất lạnh nên bắt buộc phải mang áo ấm, dùng 'must'."
       },
       {
-        "question": "Visitors ______ litter in the national park.",
+        "question": "The cliff path is narrow. You ______ run or push others.",
         "options": [
           "mustn't",
           "must",
+          "can",
+          "should"
+        ],
+        "answerIndex": 0,
+        "explain": "Đường hẹp nguy hiểm nên 'cấm' chạy nhảy xô đẩy, dùng 'mustn't'."
+      },
+      {
+        "question": "You ______ forget to bring a compass and suncream for your desert trip.",
+        "options": [
+          "mustn't",
+          "must",
+          "may",
           "can"
         ],
         "answerIndex": 0,
-        "explain": "Bảo vệ thiên nhiên: du khách 'tuyệt đối không được' xả rác."
+        "explain": "Cấm không được quên mang đồ thiết yếu, dùng 'mustn't'."
       },
       {
-        "question": "We ______ bring a torch because the cave is very dark.",
+        "question": "There is not much ______ left in the fridge.",
         "options": [
-          "must",
-          "mustn't",
-          "haven't"
+          "milk",
+          "apples",
+          "bananas",
+          "bottles"
         ],
         "answerIndex": 0,
-        "explain": "Hang động rất tối nên bắt buộc 'phải' mang theo đèn pin."
+        "explain": "'Much' đi với danh từ không đếm được là 'milk'."
+      },
+      {
+        "question": "Don't take too much ______ on your backpacking trip.",
+        "options": [
+          "luggage",
+          "luggages",
+          "bags luggage",
+          "items luggage"
+        ],
+        "answerIndex": 0,
+        "explain": "'Luggage' (hành lý) là danh từ không đếm được, không có đuôi số nhiều -s."
       }
     ]
   },
@@ -235,41 +271,157 @@
     "audio": "/assets/audio/unit5/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Ha Long Bay is one of the most famous natural wonders of Viet Nam. It has thousands of limestone islands and beautiful caves. When you visit Ha Long Bay, you must wear a life jacket on the boat.",
+    "title": "Natural Wonders of Viet Nam: Ha Long Bay and Mui Ne",
+    "passage": "Ha Long Bay is in Quang Ninh. It has many islands and caves. Tuan Chau, with its beautiful beaches, is a popular tourist attraction in Ha Long Bay. There you can enjoy great seafood. And you can join in exciting activities. Ha Long Bay is Viet Nam's best natural wonder.\n\nMui Ne is popular for its amazing landscapes. The sand has different colours: white, yellow, red ... It's like a desert here. You can ride a bike down the slopes. You can also fly kites, or have a picnic by the beach. The best time to visit the Mui Ne Sand Dunes is early morning or late afternoon. Remember to wear suncream and bring water.",
+    "translation": "Vịnh Hạ Long thuộc tỉnh Quảng Ninh. Nơi đây có rất nhiều hòn đảo và hang động kỳ vĩ. Tuần Châu, với những bãi biển tuyệt đẹp, là một điểm thu hút khách du lịch nổi tiếng tại Vịnh Hạ Long. Đến đây bạn có thể thưởng thức hải sản tươi ngon và tham gia các hoạt động thú vị. Vịnh Hạ Long là kỳ quan thiên nhiên số một của Việt Nam.\n\nMũi Né nổi tiếng với những cảnh quan thiên nhiên kỳ thú. Cát ở đây có nhiều màu sắc khác nhau: trắng, vàng, đỏ... Nơi này trông giống như một sa mạc vậy. Bạn có thể đạp xe trượt xuống những triền cát, thả diều hoặc cắm trại bên bờ biển. Thời điểm lý tưởng nhất để tham quan Đồi cát Mũi Né là sáng sớm hoặc xế chiều. Đừng quên thoa kem chống nắng và mang theo nước uống nhé.",
     "questions": [
       {
-        "question": "What must visitors wear on the boat?",
+        "id": "u5_r1",
+        "type": "multiple_choice",
+        "question": "Where is Ha Long Bay located?",
         "options": [
-          "A life jacket",
-          "A raincoat",
-          "A warm hat"
+          "In Quang Ninh",
+          "In Da Nang",
+          "In Binh Thuan",
+          "In Ha Noi"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1 nêu rõ: 'Ha Long Bay is in Quang Ninh.'"
       },
       {
-        "question": "What does Ha Long Bay have?",
+        "id": "u5_r2",
+        "type": "fill_blank",
+        "question": "Ha Long Bay is famous for its beautiful ______.",
+        "blankWord": "islands and caves",
         "options": [
-          "Thousands of limestone islands",
-          "A huge desert",
-          "A tall volcano"
+          "islands and caves",
+          "tall towers",
+          "modern airports",
+          "shopping centres"
         ],
-        "answerIndex": 0
+        "explain": "Đoạn 1: 'It has many islands and caves.'"
+      },
+      {
+        "id": "u5_r3",
+        "type": "multiple_choice",
+        "question": "What is like a desert in Mui Ne?",
+        "options": [
+          "The sand dunes with different colours of sand",
+          "The deep ocean",
+          "The big waterfall",
+          "The pine forest"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'The sand has different colours: white, yellow, red ... It's like a desert here.'"
+      },
+      {
+        "id": "u5_r4",
+        "type": "multiple_choice",
+        "question": "When is the best time to visit the Mui Ne Sand Dunes?",
+        "options": [
+          "Early morning or late afternoon",
+          "At midday in hot sun",
+          "At midnight",
+          "Only in winter"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'The best time to visit the Mui Ne Sand Dunes is early morning or late afternoon.'"
+      },
+      {
+        "id": "u5_r5",
+        "type": "multiple_choice",
+        "question": "What should you remember to bring when visiting the sand dunes?",
+        "options": [
+          "Suncream and water",
+          "A heavy coat and boots",
+          "An umbrella and computer",
+          "Books and pencils"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2 câu cuối: 'Remember to wear suncream and bring water.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "You",
-      "must",
-      "carry",
-      "a",
-      "heavy",
-      "backpack",
-      "carefully."
+    "items": [
+      {
+        "id": "u5_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Ha",
+          "Long",
+          "Bay",
+          "is",
+          "Viet",
+          "Nam's",
+          "best",
+          "natural",
+          "wonder"
+        ],
+        "correctSentence": "Ha Long Bay is Viet Nam's best natural wonder",
+        "meaningVi": "Vịnh Hạ Long là kỳ quan thiên nhiên số một của Việt Nam.",
+        "hint": "Bắt đầu bằng 'Ha Long Bay...'"
+      },
+      {
+        "id": "u5_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "You",
+          "must",
+          "bring",
+          "suncream",
+          "and",
+          "water",
+          "for",
+          "the",
+          "trip"
+        ],
+        "correctSentence": "You must bring suncream and water for the trip",
+        "meaningVi": "Bạn phải mang theo kem chống nắng và nước uống cho chuyến đi.",
+        "hint": "Cấu trúc với must: S + must + V_inf..."
+      },
+      {
+        "id": "u5_w3",
+        "type": "fill_blank",
+        "sentence": "A ______ is a large area of land with very little water.",
+        "blankWord": "desert",
+        "correctSentence": "A desert is a large area of land with very little water.",
+        "options": [
+          "desert",
+          "waterfall",
+          "island",
+          "forest"
+        ],
+        "meaningVi": "Sa mạc là một vùng đất rộng lớn với rất ít nước."
+      },
+      {
+        "id": "u5_w4",
+        "type": "fill_blank",
+        "sentence": "Ban Gioc is a famous ______ in Cao Bang.",
+        "blankWord": "waterfall",
+        "correctSentence": "Ban Gioc is a famous waterfall in Cao Bang.",
+        "options": [
+          "waterfall",
+          "desert",
+          "beach",
+          "island"
+        ],
+        "meaningVi": "Bản Giốc là một thác nước nổi tiếng ở Cao Bằng."
+      }
     ],
-    "correctSentence": "You must carry a heavy backpack carefully.",
-    "meaningVi": "Em phải đeo chiếc ba lô nặng thật cẩn thận."
+    "correctSentence": "Ha Long Bay is Viet Nam's best natural wonder",
+    "scrambledWords": [
+      "Ha",
+      "Long",
+      "Bay",
+      "is",
+      "Viet",
+      "Nam's",
+      "best",
+      "natural",
+      "wonder"
+    ],
+    "meaningVi": "Vịnh Hạ Long là kỳ quan thiên nhiên số một của Việt Nam."
   },
   "video": {
     "title": "Khám phá thiên nhiên: Geography Club - Wonders of Viet Nam (Kỳ quan Việt Nam)",

@@ -137,40 +137,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Tính từ so sánh nhất (Superlative Adjectives)",
-    "ruleVi": "Dùng để so sánh một thành phố, một công trình kiến trúc nổi bật nhất trong tất cả các đối tượng được xét.",
-    "formula": "Tính từ ngắn: the + adj + -est | Tính từ dài: the + most + adj",
-    "quickTip": "Luôn có chữ 'the' phía trước tính từ so sánh nhất (the tallest, the most modern).",
+    "title": "Tính từ sở hữu & Đại từ sở hữu (Possessive Adjectives & Possessive Pronouns)",
+    "ruleVi": "Tính từ sở hữu (my, your, his, her, its, our, their) luôn đứng trước danh từ. Đại từ sở hữu (mine, yours, his, hers, ours, theirs) đứng một mình thay thế cho cụm tính từ sở hữu + danh từ để tránh lặp từ.",
+    "formula": "my + N = mine | your + N = yours | his + N = his | her + N = hers | our + N = ours | their + N = theirs",
+    "quickTip": "Đại từ sở hữu không bao giờ có danh từ đứng sau. Ví dụ: 'This is my bike' -> 'This bike is mine'.",
     "quiz": [
       {
-        "question": "Tokyo is one of ______ modern cities in the world.",
+        "question": "Hey Phong. You're wearing my hat. It's not ______.",
         "options": [
-          "the most",
-          "most",
-          "more"
+          "yours",
+          "your",
+          "you",
+          "mine"
         ],
         "answerIndex": 0,
-        "explain": "So sánh nhất của tính từ dài 'modern' dùng 'the most modern'."
+        "explain": "Đứng cuối câu thay thế cho 'your hat' nên dùng đại từ sở hữu 'yours'."
       },
       {
-        "question": "Landmark 81 is ______ building in Viet Nam.",
+        "question": "This is my drawing. It's ______.",
         "options": [
-          "the tallest",
-          "taller",
-          "tallest"
+          "mine",
+          "my",
+          "me",
+          "myself"
         ],
         "answerIndex": 0,
-        "explain": "So sánh nhất của tính từ ngắn 'tall' dùng 'the tallest'."
+        "explain": "Thay thế cho 'my drawing' ở cuối câu dùng đại từ sở hữu 'mine'."
       },
       {
-        "question": "London is famous for ______ historic bridges.",
+        "question": "This is your room. ______ is next door.",
+        "options": [
+          "Ours",
+          "Our",
+          "We",
+          "Us"
+        ],
+        "answerIndex": 0,
+        "explain": "Làm chủ ngữ thay thế cho 'Our room', dùng đại từ sở hữu 'Ours'."
+      },
+      {
+        "question": "Sue doesn't need to borrow my pen. She's got ______.",
+        "options": [
+          "hers",
+          "her",
+          "she",
+          "herself"
+        ],
+        "answerIndex": 0,
+        "explain": "Thay thế cho 'her pen' dùng đại từ sở hữu 'hers'."
+      },
+      {
+        "question": "Bangkok is an exciting city. I love ______ street food.",
         "options": [
           "its",
+          "it's",
           "it",
-          "they"
+          "theirs"
         ],
         "answerIndex": 0,
-        "explain": "Tính từ sở hữu 'its' (của nó) bổ nghĩa cho danh từ 'bridges'."
+        "explain": "Tính từ sở hữu của 'Bangkok' (đồ vật/nơi chốn) là 'its' (không có dấu phẩy)."
+      },
+      {
+        "question": "We are watching the sunset with ______ local friends.",
+        "options": [
+          "our",
+          "ours",
+          "we",
+          "us"
+        ],
+        "answerIndex": 0,
+        "explain": "Đứng trước danh từ 'local friends' phải dùng tính từ sở hữu 'our'."
       }
     ]
   },
@@ -235,43 +271,159 @@
     "audio": "/assets/audio/unit9/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Sydney is an exciting city in Australia. It has the famous Sydney Opera House with its unique architectural design. The weather is sunny in summer, and millions of tourists visit its beautiful beaches every year.",
+    "title": "Love from Sweden: Mai's Postcard from Stockholm",
+    "passage": "September 6\nDear Grandpa and Grandma,\n\nStockholm is fantastic!\n\nIts weather is perfect, sunny all the time! Our hotel is good. It has a swimming pool and a gym. It offers delicious breakfast. Yesterday Mum, Dad and I rented three bikes and cycled to the Old Town. My parents wore their helmets and I wore mine. We visited the Royal Palace first. What a beautiful place! Mum loved it. She said, 'Swedish art is amazing.' After that, we had 'fika', a coffee break, in a traditional café. Everything is so wonderful!\n\nWish you were here!\nLove,\nMai",
+    "translation": "Ngày 6 tháng 9\nKính gửi Ông Bà yêu quý,\n\nThành phố Stockholm thật là tuyệt vời ạ!\n\nThời tiết ở đây hoàn hảo, trời luôn ngập tràn ánh nắng! Khách sạn của gia đình cháu rất tốt, có hồ bơi và phòng tập thể dục, lại phục vụ bữa sáng rất ngon miệng. Hôm qua, bố mẹ và cháu đã thuê 3 chiếc xe đạp để đạp vào Khu Phố Cổ. Bố mẹ đội mũ bảo hiểm của bố mẹ còn cháu đội mũ bảo hiểm của cháu. Điểm đến đầu tiên của nhà cháu là Cung điện Hoàng gia. Nơi này đẹp tuyệt vời! Mẹ cháu mê tít và bảo: 'Nghệ thuật Thụy Điển thật kỳ diệu.' Sau đó, cả nhà cháu thưởng thức 'fika' - một giờ nghỉ uống cà phê thư giãn trong một quán cà phê truyền thống. Mọi thứ đều vô cùng tuyệt diệu ạ!\n\nƯớc gì ông bà cũng ở đây cùng gia đình cháu!\nYêu ông bà,\nMai",
     "questions": [
       {
-        "question": "Where is Sydney located?",
+        "id": "u9_r1",
+        "type": "multiple_choice",
+        "question": "What is Mai's postcard about?",
         "options": [
-          "In Australia",
-          "In England",
-          "In Viet Nam"
+          "A family holiday in Stockholm, Sweden",
+          "A school sports competition",
+          "A visit to a zoo in Ha Noi",
+          "A shopping trip"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Bưu thiếp của Mai gửi ông bà kể về kỳ nghỉ tuyệt vời của gia đình tại thủ đô Stockholm, Thụy Điển."
       },
       {
-        "question": "What is the famous building in Sydney?",
+        "id": "u9_r2",
+        "type": "multiple_choice",
+        "question": "What facilities can guests use in Mai's hotel?",
         "options": [
-          "Sydney Opera House",
-          "Eiffel Tower",
-          "Statue of Liberty"
+          "A swimming pool and a gym",
+          "A big library and theatre",
+          "A horse race track",
+          "A cinema"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'It has a swimming pool and a gym.'"
+      },
+      {
+        "id": "u9_r3",
+        "type": "multiple_choice",
+        "question": "How did Mai and her parents travel to the Old Town?",
+        "options": [
+          "They rented three bikes and cycled",
+          "They went by bus",
+          "They took an underground train",
+          "They drove a car"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'Yesterday Mum, Dad and I rented three bikes and cycled to the Old Town.'"
+      },
+      {
+        "id": "u9_r4",
+        "type": "multiple_choice",
+        "question": "What landmark did they visit first in the Old Town?",
+        "options": [
+          "The Royal Palace",
+          "The night market",
+          "A tall bridge",
+          "A modern museum"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'We visited the Royal Palace first. What a beautiful place!'"
+      },
+      {
+        "id": "u9_r5",
+        "type": "fill_blank",
+        "question": "What is 'fika' in Swedish tradition?",
+        "blankWord": "a coffee break",
+        "options": [
+          "a coffee break",
+          "a traditional dance",
+          "a sports game",
+          "a flower festival"
+        ],
+        "explain": "Đoạn 2: 'we had fika, a coffee break, in a traditional café.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "This",
-      "is",
-      "the",
-      "most",
-      "famous",
-      "palace",
-      "in",
-      "the",
-      "city."
+    "items": [
+      {
+        "id": "u9_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Stockholm",
+          "is",
+          "famous",
+          "for",
+          "the",
+          "Royal",
+          "Palace",
+          "and",
+          "Swedish",
+          "art"
+        ],
+        "correctSentence": "Stockholm is famous for the Royal Palace and Swedish art",
+        "meaningVi": "Stockholm nổi tiếng với Cung điện Hoàng gia và nghệ thuật Thụy Điển.",
+        "hint": "Bắt đầu bằng 'Stockholm is famous...'"
+      },
+      {
+        "id": "u9_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "We",
+          "rented",
+          "bikes",
+          "and",
+          "cycled",
+          "around",
+          "the",
+          "Old",
+          "Town"
+        ],
+        "correctSentence": "We rented bikes and cycled around the Old Town",
+        "meaningVi": "Chúng mình đã thuê xe đạp và dạo quanh Khu Phố Cổ.",
+        "hint": "Thì quá khứ đơn: 'We rented bikes...'"
+      },
+      {
+        "id": "u9_w3",
+        "type": "fill_blank",
+        "sentence": "The weather in Stockholm is sunny and the food is ______.",
+        "blankWord": "delicious",
+        "correctSentence": "The weather in Stockholm is sunny and the food is delicious.",
+        "options": [
+          "delicious",
+          "bad",
+          "terrible",
+          "rainy"
+        ],
+        "meaningVi": "Thời tiết ở Stockholm ngập nắng và đồ ăn thì rất ngon miệng."
+      },
+      {
+        "id": "u9_w4",
+        "type": "fill_blank",
+        "sentence": "Big Ben is a famous ______ in London.",
+        "blankWord": "landmark",
+        "correctSentence": "Big Ben is a famous landmark in London.",
+        "options": [
+          "landmark",
+          "postcard",
+          "market",
+          "stall"
+        ],
+        "meaningVi": "Tháp Big Ben là một địa danh mang tính biểu tượng nổi tiếng ở Luân Đôn."
+      }
     ],
-    "correctSentence": "This is the most famous palace in the city.",
-    "meaningVi": "Đây là cung điện nổi tiếng nhất trong thành phố."
+    "correctSentence": "Stockholm is famous for the Royal Palace and Swedish art",
+    "scrambledWords": [
+      "Stockholm",
+      "is",
+      "famous",
+      "for",
+      "the",
+      "Royal",
+      "Palace",
+      "and",
+      "Swedish",
+      "art"
+    ],
+    "meaningVi": "Stockholm nổi tiếng với Cung điện Hoàng gia và nghệ thuật Thụy Điển."
   },
   "video": {
     "title": "Du lịch thế giới: Cities Around the Globe (Những thành phố kỳ thú)",

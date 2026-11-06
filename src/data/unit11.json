@@ -137,40 +137,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Câu điều kiện loại 1 (First Conditional: If)",
-    "ruleVi": "Dùng để diễn tả một điều kiện có thể xảy ra và kết quả thực tế của nó (Đặc biệt dùng cho các hành động bảo vệ môi trường).",
-    "formula": "If + S + V(hiện tại đơn), S + will / won't + V(nguyên mẫu)",
-    "quickTip": "Vế có 'If' chia hiện tại đơn. Vế kết quả dùng 'will/won't' + động từ nguyên mẫu.",
+    "title": "Mạo từ A / An / The & Câu điều kiện loại 1 (Articles & First Conditional)",
+    "ruleVi": "A/An dùng trước danh từ đếm được số ít khi được nhắc tới lần đầu. 'An' đứng trước danh từ bắt đầu bằng nguyên âm (u, e, o, a, i). 'The' dùng cho vật đã xác định hoặc vật duy nhất (The Moon, The Sun). Câu điều kiện loại 1 diễn tả một điều kiện có thật ở hiện tại hoặc tương lai.",
+    "formula": "Mạo từ: a/an/the + N | Câu điều kiện 1: If + S + V(hiện tại đơn), S + will + V_inf",
+    "quickTip": "Mệnh đề chứa 'If' dùng thì hiện tại đơn (không dùng will). Mệnh đề chính dùng 'will + V_inf'.",
     "quiz": [
       {
-        "question": "If we recycle plastic bottles, we ______ the environment.",
+        "question": "If they ______ an airport here, it will be very noisy.",
         "options": [
-          "will protect",
-          "protected",
-          "protects"
+          "build",
+          "will build",
+          "builds",
+          "building"
         ],
         "answerIndex": 0,
-        "explain": "Vế 'If' ở hiện tại đơn (recycle), vế sau dùng 'will protect'."
+        "explain": "Mệnh đề 'If' với chủ ngữ 'they' chia thì hiện tại đơn là 'build'."
       },
       {
-        "question": "If you ______ reusable bags, you will reduce plastic waste.",
+        "question": "People will save the environment if they ______ old items.",
         "options": [
-          "use",
-          "used",
-          "will use"
+          "reuse",
+          "will reuse",
+          "reuses",
+          "reusing"
         ],
         "answerIndex": 0,
-        "explain": "Vế 'If' của câu điều kiện loại 1 chia động từ ở hiện tại đơn 'use'."
+        "explain": "Mệnh đề 'if' với chủ ngữ 'they' chia hiện tại đơn là 'reuse'."
       },
       {
-        "question": "The river ______ polluted if factories dump rubbish into it.",
+        "question": "If we grow more trees, our school ______ greener.",
         "options": [
           "will be",
+          "is",
           "was",
-          "is being"
+          "are"
         ],
         "answerIndex": 0,
-        "explain": "Vế kết quả của câu điều kiện loại 1 dùng 'will be'."
+        "explain": "Mệnh đề chính của câu điều kiện loại 1 dùng 'will be'."
+      },
+      {
+        "question": "If you walk or cycle to school, you ______ healthy.",
+        "options": [
+          "will be",
+          "are",
+          "were",
+          "being"
+        ],
+        "answerIndex": 0,
+        "explain": "Mệnh đề chính câu điều kiện 1 dùng 'will be'."
+      },
+      {
+        "question": "Does your town have ______ art gallery?",
+        "options": [
+          "an",
+          "a",
+          "the",
+          "some"
+        ],
+        "answerIndex": 0,
+        "explain": "'Art gallery' bắt đầu bằng nguyên âm 'a', số ít đếm được dùng 'an'."
+      },
+      {
+        "question": "______ Moon is very bright tonight.",
+        "options": [
+          "The",
+          "A",
+          "An",
+          "Some"
+        ],
+        "answerIndex": 0,
+        "explain": "Mặt Trăng là thiên thể duy nhất nên dùng mạo từ 'The'."
       }
     ]
   },
@@ -235,42 +271,158 @@
     "audio": "/assets/audio/unit11/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Our planet is facing serious pollution. If we don't save energy, natural resources will run out quickly. Everyone can help by turning off the lights, picking up litter, and planting green trees.",
+    "title": "Tips for a Greener School: Interview with 3Rs Club",
+    "passage": "Reporter: Can you share with us some tips to make your school greener?\nNam: Sure. Firstly, we put recycling bins in every classroom.\nReporter: What about old books and uniforms?\nNam: We exchange them with our friends or give them to charity. We don't throw them away.\nReporter: Anything else?\nNam: We borrow books from the school library instead of buying new ones.\nReporter: Great! You can save much paper.\nNam: And there's another tip. We bring reusable water bottles to school.\nReporter: I see lots of trees in your school. Is planting trees a good tip?\nNam: Yeah. It makes our school greener.\nReporter: Thanks for sharing. Do you want to add anything?\nNam: Finally, we usually find creative ways to reuse old items before throwing them away.",
+    "translation": "Phóng viên: Bạn có thể chia sẻ cho chúng mình một vài mẹo để làm cho trường học xanh hơn không?\nNam: Chắc chắn rồi. Đầu tiên, chúng mình đặt thùng phân loại rác tái chế ở tất cả các lớp học.\nPhóng viên: Thế còn sách giáo khoa và đồng phục cũ thì sao?\nNam: Chúng mình trao đổi với bạn bè hoặc quyên góp cho các tổ chức từ thiện. Tụi mình không vứt chúng đi đâu.\nPhóng viên: Còn gì nữa không bạn?\nNam: Chúng mình mượn sách từ thư viện trường thay vì mua sách mới.\nPhóng viên: Tuyệt quá! Các bạn có thể tiết kiệm được rất nhiều giấy đấy.\nNam: Và còn một mẹo nữa. Chúng mình mang theo bình đựng nước có thể tái sử dụng đến trường.\nPhóng viên: Mình thấy trường bạn có rất nhiều cây xanh. Trồng cây có phải là một mẹo hay không?\nNam: Đúng vậy ạ. Cây xanh giúp ngôi trường của chúng mình thêm xanh tươi và trong lành.\nPhóng viên: Cảm ơn bạn đã chia sẻ. Bạn có muốn nhắn nhủ thêm điều gì không?\nNam: Cuối cùng, chúng mình luôn tìm những cách sáng tạo để tái sử dụng đồ cũ trước khi vứt chúng đi.",
     "questions": [
       {
-        "question": "What can everyone do to help?",
+        "id": "u11_r1",
+        "type": "multiple_choice",
+        "question": "What is Nam's 3Rs Club sharing in the interview?",
         "options": [
-          "Turn off lights and plant trees",
-          "Burn more plastic",
-          "Use more cars"
+          "Tips to make their school greener",
+          "How to play football",
+          "How to build a robot",
+          "Plans for summer camp"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1: Phóng viên hỏi 'Can you share with us some tips to make your school greener?'."
       },
       {
-        "question": "What happens if we don't save energy?",
+        "id": "u11_r2",
+        "type": "multiple_choice",
+        "question": "What do students put in every classroom to protect the environment?",
         "options": [
-          "Natural resources will run out",
-          "The air becomes cleaner",
-          "Rivers become clearer"
+          "Recycling bins",
+          "Air conditioners",
+          "Big sofas",
+          "New televisions"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Nam trả lời: 'Firstly, we put recycling bins in every classroom.'"
+      },
+      {
+        "id": "u11_r3",
+        "type": "multiple_choice",
+        "question": "What do students do with their old books and uniforms?",
+        "options": [
+          "Exchange them with friends or give to charity",
+          "Throw them away into the river",
+          "Burn them",
+          "Sell them at high prices"
+        ],
+        "answerIndex": 0,
+        "explain": "Nam: 'We exchange them with our friends or give them to charity. We don't throw them away.'"
+      },
+      {
+        "id": "u11_r4",
+        "type": "multiple_choice",
+        "question": "What do they do instead of buying new books to save paper?",
+        "options": [
+          "Borrow books from the school library",
+          "Stop reading books",
+          "Copy books by hand",
+          "Buy comics"
+        ],
+        "answerIndex": 0,
+        "explain": "Nam: 'We borrow books from the school library instead of buying new ones.'"
+      },
+      {
+        "id": "u11_r5",
+        "type": "fill_blank",
+        "question": "Students bring ______ water bottles to school to reduce plastic waste.",
+        "blankWord": "reusable",
+        "options": [
+          "reusable",
+          "single-use",
+          "broken",
+          "dirty"
+        ],
+        "explain": "Nam: 'We bring reusable water bottles to school.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
+    "items": [
+      {
+        "id": "u11_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "If",
+          "we",
+          "plant",
+          "more",
+          "trees",
+          "our",
+          "school",
+          "will",
+          "be",
+          "greener"
+        ],
+        "correctSentence": "If we plant more trees our school will be greener",
+        "meaningVi": "Nếu chúng ta trồng nhiều cây hơn thì trường học của chúng ta sẽ xanh hơn.",
+        "hint": "Cấu trúc câu điều kiện loại 1: If we plant..."
+      },
+      {
+        "id": "u11_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "If",
+          "you",
+          "reuse",
+          "paper",
+          "you",
+          "will",
+          "save",
+          "trees"
+        ],
+        "correctSentence": "If you reuse paper you will save trees",
+        "meaningVi": "Nếu bạn tái sử dụng giấy thì bạn sẽ cứu được cây rừng.",
+        "hint": "Bắt đầu bằng 'If you reuse paper...'"
+      },
+      {
+        "id": "u11_w3",
+        "type": "fill_blank",
+        "sentence": "We should put plastic bottles into the ______ bin.",
+        "blankWord": "recycling",
+        "correctSentence": "We should put plastic bottles into the recycling bin.",
+        "options": [
+          "recycling",
+          "rubbish",
+          "dirty",
+          "old"
+        ],
+        "meaningVi": "Chúng ta nên bỏ chai nhựa vào thùng rác tái chế."
+      },
+      {
+        "id": "u11_w4",
+        "type": "fill_blank",
+        "sentence": "We borrow books from the library ______ of buying new ones.",
+        "blankWord": "instead",
+        "correctSentence": "We borrow books from the library instead of buying new ones.",
+        "options": [
+          "instead",
+          "because",
+          "although",
+          "without"
+        ],
+        "meaningVi": "Chúng mình mượn sách từ thư viện thay vì mua sách mới."
+      }
+    ],
+    "correctSentence": "If we plant more trees our school will be greener",
     "scrambledWords": [
       "If",
       "we",
-      "reuse",
-      "bottles,",
-      "we",
+      "plant",
+      "more",
+      "trees",
+      "our",
+      "school",
       "will",
-      "save",
-      "money."
+      "be",
+      "greener"
     ],
-    "correctSentence": "If we reuse bottles, we will save money.",
-    "meaningVi": "Nếu chúng ta tái sử dụng chai lọ, chúng ta sẽ tiết kiệm được tiền."
+    "meaningVi": "Nếu chúng ta trồng nhiều cây hơn thì trường học của chúng ta sẽ xanh hơn."
   },
   "video": {
     "title": "Hành tinh xanh: The 3R Project (Dự án giảm thiểu, tái sử dụng, tái chế)",

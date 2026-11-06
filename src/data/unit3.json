@@ -150,40 +150,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Thì Hiện tại tiếp diễn (Present Continuous) & Have got",
-    "ruleVi": "Dùng để miêu tả hành động đang diễn ra tại thời điểm nói hoặc miêu tả ngoại hình của bạn bè.",
-    "formula": "S + am/is/are + V-ing | S + have/has got + N",
-    "quickTip": "Thấy 'now, look, at the moment' -> chọn am/is/are + V-ing. Nói về tóc, mắt -> dùng have/has got.",
+    "title": "Thì Hiện tại tiếp diễn (Present Continuous)",
+    "ruleVi": "Dùng để diễn tả hành động đang diễn ra ngay tại thời điểm nói hoặc xung quanh thời điểm nói. Dấu hiệu nhận biết: now, right now, at the moment, at present, Look!, Listen!...",
+    "formula": "Khẳng định: S + am/is/are + V-ing | Phủ định: S + am/is/are not + V-ing | Nghi vấn: Am/Is/Are + S + V-ing?",
+    "quickTip": "I đi với am; He/She/It danh từ số ít đi với is; You/We/They danh từ số nhiều đi với are. Động từ tận cùng bằng -e bỏ -e thêm -ing (write -> writing). Gấp đôi phụ âm cuối với từ 1 âm tiết có 1 nguyên âm kẹp giữa 2 phụ âm (run -> running).",
     "quiz": [
       {
-        "question": "Look! The children ______ football in the playground.",
+        "question": "Nick is very ______. He makes everyone laugh!",
         "options": [
-          "are playing",
-          "play",
-          "plays"
+          "funny",
+          "confident",
+          "active",
+          "shy"
         ],
         "answerIndex": 0,
-        "explain": "Có 'Look!' báo hiệu hành động đang diễn ra, chủ ngữ 'The children' số nhiều dùng 'are playing'."
+        "explain": "Làm mọi người cười thì người đó có tính cách hài hước (funny)."
       },
       {
-        "question": "My best friend, Lan, ______ long black hair.",
+        "question": "My sister always does her homework before class. She's very ______.",
         "options": [
-          "has got",
-          "have got",
-          "is having"
+          "hard-working",
+          "creative",
+          "careful",
+          "sporty"
         ],
         "answerIndex": 0,
-        "explain": "Lan là ngôi thứ ba số ít, dùng 'has got' để miêu tả đặc điểm ngoại hình."
+        "explain": "Luôn làm bài tập trước khi đến lớp thể hiện tính chăm chỉ (hard-working)."
       },
       {
-        "question": "What ______ you doing right now?",
+        "question": "Some boys ______ around the classroom right now.",
         "options": [
-          "are",
-          "is",
-          "do"
+          "are running",
+          "is running",
+          "run",
+          "runs"
         ],
         "answerIndex": 0,
-        "explain": "Chủ ngữ 'you' đi với trợ động từ 'are' trong thì hiện tại tiếp diễn."
+        "explain": "Có 'right now' và chủ ngữ 'Some boys' số nhiều, dùng 'are running'."
+      },
+      {
+        "question": "Mi and Mai ______ to each other happily.",
+        "options": [
+          "are talking",
+          "is talking",
+          "talk",
+          "talks"
+        ],
+        "answerIndex": 0,
+        "explain": "Chủ ngữ 2 người (Mi and Mai) số nhiều, dùng 'are talking'."
+      },
+      {
+        "question": "My teacher is in the classroom too. She ______ a book.",
+        "options": [
+          "is reading",
+          "reads",
+          "are reading",
+          "reading"
+        ],
+        "answerIndex": 0,
+        "explain": "Chủ ngữ 'She' số ít, hành động đang diễn ra dùng 'is reading'."
+      },
+      {
+        "question": "What are you doing? - I ______ an email to my friend.",
+        "options": [
+          "am writing",
+          "write",
+          "writing",
+          "is writing"
+        ],
+        "answerIndex": 0,
+        "explain": "Trả lời câu hỏi 'What are you doing?' dùng 'I am writing'."
       }
     ]
   },
@@ -248,41 +284,152 @@
     "audio": "/assets/audio/unit3/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Minh is my new classmate. He is twelve years old. He is very friendly and confident. Minh has chubby cheeks and short black hair. In his free time, he likes reading books and drawing pictures.",
+    "title": "First Day at the Superb Summer Camp",
+    "passage": "Hi Mum and Dad,\n\nHere I am at the Superb Summer Camp. Mr Black asked us to write emails in English! Wow, everything here is in English!\n\nI have some new friends: Jimmy, Phong, and Nhung. They're in the photo. Jimmy has blonde hair and blue eyes. He's clever and creative. He likes taking photos. Phong is the tall boy. He's sporty and plays basketball very well. Nhung has curly black hair. She's kind. She shared her lunch with me today.\n\nWe're having fun. Jimmy's taking photos of me. Phong's reading a comic book, and Nhung's playing the violin. I must go now.\n\nPlease write soon.\nLove,\nNam",
+    "translation": "Con chào bố mẹ,\n\nCon đang ở Trại hè Tuyệt vời (Superb Summer Camp). Thầy Black yêu cầu chúng con viết email bằng tiếng Anh! Oa, mọi thứ ở đây đều bằng tiếng Anh ạ!\n\nCon có thêm một số bạn mới: Jimmy, Phong và Nhung. Các bạn ấy ở trong ảnh đấy ạ. Jimmy có mái tóc vàng và đôi mắt xanh. Bạn ấy rất thông minh và sáng tạo. Bạn ấy thích chụp ảnh. Phong là bạn nam cao ráo. Bạn ấy rất yêu thể thao và chơi bóng rổ rất cừ. Nhung có mái tóc đen xoăn. Bạn ấy tốt bụng lắm. Hôm nay bạn ấy đã chia sẻ bữa trưa với con.\n\nChúng con đang rất vui. Jimmy đang chụp ảnh con. Phong đang đọc truyện tranh, còn Nhung đang chơi đàn vĩ cầm. Con phải đi rồi ạ.\n\nBố mẹ sớm viết thư lại cho con nhé.\nYêu bố mẹ,\nNam",
     "questions": [
       {
-        "question": "How old is Minh?",
+        "id": "u3_r1",
+        "type": "multiple_choice",
+        "question": "Can the children speak Vietnamese at the camp?",
         "options": [
-          "Twelve",
-          "Ten",
-          "Eleven"
+          "No, everything here is in English",
+          "Yes, anytime they like",
+          "Only in the morning",
+          "Only when calling parents"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1: 'Mr Black asked us to write emails in English! Wow, everything here is in English!'"
       },
       {
-        "question": "What does Minh look like?",
+        "id": "u3_r2",
+        "type": "multiple_choice",
+        "question": "How many new friends does Nam have at the summer camp?",
         "options": [
-          "He has chubby cheeks and short black hair",
-          "He is very tall and thin",
-          "He has curly blonde hair"
+          "Three new friends (Jimmy, Phong, Nhung)",
+          "Four new friends",
+          "Two new friends",
+          "Five new friends"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'I have some new friends: Jimmy, Phong, and Nhung.' (Có 3 người bạn mới)."
+      },
+      {
+        "id": "u3_r3",
+        "type": "multiple_choice",
+        "question": "Who likes taking photos and has blonde hair with blue eyes?",
+        "options": [
+          "Jimmy",
+          "Phong",
+          "Nhung",
+          "Nam"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'Jimmy has blonde hair and blue eyes. He's clever and creative. He likes taking photos.'"
+      },
+      {
+        "id": "u3_r4",
+        "type": "multiple_choice",
+        "question": "What is Phong doing during break time?",
+        "options": [
+          "He is reading a comic book",
+          "He is taking photos",
+          "He is playing the violin",
+          "He is playing basketball"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 3: 'Phong's reading a comic book, and Nhung's playing the violin.'"
+      },
+      {
+        "id": "u3_r5",
+        "type": "fill_blank",
+        "question": "Nhung has curly black hair and she is very ______ because she shared her lunch with Nam.",
+        "blankWord": "kind",
+        "options": [
+          "kind",
+          "sporty",
+          "shy",
+          "confident"
+        ],
+        "explain": "Đoạn 2: 'Nhung has curly black hair. She's kind. She shared her lunch with me today.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "friend",
-      "is",
-      "My",
-      "very",
-      "kind",
-      "and",
-      "creative."
+    "items": [
+      {
+        "id": "u3_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Jimmy",
+          "has",
+          "blonde",
+          "hair",
+          "and",
+          "blue",
+          "eyes"
+        ],
+        "correctSentence": "Jimmy has blonde hair and blue eyes",
+        "meaningVi": "Jimmy có mái tóc vàng hoe và đôi mắt màu xanh lam.",
+        "hint": "Miêu tả ngoại hình: S + have/has + tính từ + danh từ."
+      },
+      {
+        "id": "u3_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Nhung",
+          "is",
+          "playing",
+          "the",
+          "violin",
+          "in",
+          "the",
+          "room"
+        ],
+        "correctSentence": "Nhung is playing the violin in the room",
+        "meaningVi": "Nhung đang kéo đàn vĩ cầm ở trong phòng.",
+        "hint": "Cấu trúc hiện tại tiếp diễn: S + is playing..."
+      },
+      {
+        "id": "u3_w3",
+        "type": "fill_blank",
+        "sentence": "Phong is tall and he plays ______ very well.",
+        "blankWord": "basketball",
+        "correctSentence": "Phong is tall and he plays basketball very well.",
+        "options": [
+          "basketball",
+          "football",
+          "tennis",
+          "swimming"
+        ],
+        "meaningVi": "Phong cao ráo và bạn ấy chơi bóng rổ rất giỏi."
+      },
+      {
+        "id": "u3_w4",
+        "type": "fill_blank",
+        "sentence": "My best friend is very ______ because she likes doing activities.",
+        "blankWord": "active",
+        "correctSentence": "My best friend is very active because she likes doing activities.",
+        "options": [
+          "active",
+          "shy",
+          "lazy",
+          "funny"
+        ],
+        "meaningVi": "Bạn thân của mình rất năng động vì bạn ấy thích tham gia các hoạt động."
+      }
     ],
-    "correctSentence": "My friend is very kind and creative.",
-    "meaningVi": "Bạn của em rất tốt bụng và sáng tạo."
+    "correctSentence": "Jimmy has blonde hair and blue eyes",
+    "scrambledWords": [
+      "Jimmy",
+      "has",
+      "blonde",
+      "hair",
+      "and",
+      "blue",
+      "eyes"
+    ],
+    "meaningVi": "Jimmy có mái tóc vàng hoe và đôi mắt màu xanh lam."
   },
   "video": {
     "title": "Hội thoại hoạt hình: Super Summer Camp (Trại hè kết bạn bốn phương)",

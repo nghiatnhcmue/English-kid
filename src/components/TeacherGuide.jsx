@@ -97,7 +97,7 @@ export default function TeacherGuide() {
                 <span>Âm thanh phát âm chuẩn</span>
               </div>
               <p className="text-xs font-bold text-ink-soft leading-relaxed">
-                Hệ thống <strong>tự động nhận dạng và phát giọng đọc Anh - Anh chuẩn bản xứ</strong> từ Oxford/Cambridge qua Cloud TTS. Thầy cô cũng có thể chèn link file MP3 riêng nếu có.
+                Hệ thống <strong>tự động nhận dạng và phát giọng đọc Anh - Anh chuẩn bản xứ</strong> từ Oxford/Cambridge qua Cloud TTS. Thầy cô cũng có thể <strong>tải trực tiếp file âm thanh (MP3, M4A)</strong> từ máy tính hoặc bấm <strong>Microphone để ghi âm trực tiếp giọng đọc</strong> của mình!
               </p>
             </div>
 
@@ -159,12 +159,13 @@ export default function TeacherGuide() {
           </div>
 
           <div className="rounded-2xl bg-sky-soft/40 p-4 border border-sky/30 text-xs font-bold text-ink-soft">
-            <p className="font-black text-sky-dark text-sm mb-1">🎯 4 hình thức giao bài tập linh hoạt:</p>
+            <p className="font-black text-sky-dark text-sm mb-1">🎯 5 hình thức giao bài tập linh hoạt:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>Trọn bộ Unit:</strong> Học sinh luyện đủ 7 trạm và làm bài Test Thử thách tổng hợp.</li>
               <li><strong>Theo kỹ năng:</strong> Chỉ định riêng luyện Nói AI, Luyện Nghe, hoặc Ngữ pháp.</li>
               <li><strong>Tự chọn từ vựng:</strong> Tích chọn 3 - 5 từ vựng cần học sinh luyện lại.</li>
               <li><strong>Tự chọn câu hỏi:</strong> Giao đúng các câu hỏi trắc nghiệm thầy cô đã chọn hoặc tự biên soạn.</li>
+              <li><strong>🚀 Đề ngoài SGK:</strong> Giao đề thi tự do bên ngoài chương trình SGK, hỗ trợ kèm đoạn văn đọc hiểu 5-10 câu hỏi, điền khuyết, sắp xếp từ và viết lại câu!</li>
             </ul>
           </div>
         </div>

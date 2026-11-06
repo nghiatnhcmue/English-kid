@@ -229,40 +229,76 @@
   ],
   "extraQuestions": [],
   "grammar": {
-    "title": "Thì Hiện tại đơn (Present Simple)",
-    "ruleVi": "Dùng để nói về thói quen hàng ngày và các sự thật hiển nhiên ở trường học.",
-    "formula": "S + V(s/es) / S + don't/doesn't + V",
-    "quickTip": "Đi với He/She/It hoặc tên một người thì động từ thêm -s hoặc -es.",
+    "title": "Thì Hiện tại đơn & Trạng từ chỉ tần suất (Present Simple & Adverbs of Frequency)",
+    "ruleVi": "Dùng để diễn tả thói quen, hành động lặp đi lặp lại hàng ngày hoặc sự thật hiển nhiên. Trạng từ chỉ tần suất (always, usually, often, sometimes, rarely, never) đứng trước động từ thường và đứng sau động từ to be.",
+    "formula": "Khẳng định: S + V(s/es) | Phủ định: S + don't/doesn't + V | Nghi vấn: Do/Does + S + V?",
+    "quickTip": "Chủ ngữ số ít (He, She, It, Nam) thì động từ thêm -s hoặc -es. Đi với động từ tận cùng -o, -ch, -sh, -ss, -x thêm -es (watches, teaches, does).",
     "quiz": [
       {
-        "question": "Nam ______ his school uniform every Monday.",
+        "question": "He ______ from Da Nang.",
         "options": [
-          "wear",
-          "wears",
-          "wearing"
+          "comes",
+          "come",
+          "coming",
+          "is come"
         ],
-        "answerIndex": 1,
-        "explain": "Nam là ngôi thứ ba số ít (he), động từ wear thêm -s thành wears."
+        "answerIndex": 0,
+        "explain": "Chủ ngữ 'He' ngôi thứ 3 số ít, động từ come thêm -s thành 'comes'."
       },
       {
-        "question": "I ______ my maths homework after dinner.",
+        "question": "Do you learn Russian? - No, I ______.",
+        "options": [
+          "don't",
+          "doesn't",
+          "am not",
+          "not do"
+        ],
+        "answerIndex": 0,
+        "explain": "Câu hỏi bắt đầu bằng 'Do you...', câu trả lời phủ định là 'No, I don't'."
+      },
+      {
+        "question": "She always ______ to school with her friends.",
+        "options": [
+          "walks",
+          "walk",
+          "is walking",
+          "walked"
+        ],
+        "answerIndex": 0,
+        "explain": "Có trạng từ 'always' diễn tả thói quen, chủ ngữ 'She' số ít nên động từ chia 'walks'."
+      },
+      {
+        "question": "I often ______ my homework after dinner.",
         "options": [
           "do",
           "does",
-          "doing"
+          "doing",
+          "am do"
         ],
         "answerIndex": 0,
-        "explain": "Chủ ngữ là 'I', động từ nguyên mẫu là 'do'."
+        "explain": "Chủ ngữ là 'I', cụm từ 'do homework' chia theo thì hiện tại đơn là 'do'."
       },
       {
-        "question": "They ______ football in the school yard.",
+        "question": "Mr Nam ______ history at my school.",
         "options": [
-          "plays",
-          "play",
-          "playing"
+          "teaches",
+          "teach",
+          "is teaching",
+          "teaching"
         ],
-        "answerIndex": 1,
-        "explain": "Chủ ngữ 'They' số nhiều, dùng động từ nguyên mẫu 'play'."
+        "answerIndex": 0,
+        "explain": "Mr Nam là ngôi thứ 3 số ít, động từ 'teach' tận cùng là -ch nên thêm -es thành 'teaches'."
+      },
+      {
+        "question": "Nick gets good marks in exams. (usually) -> Nick ______ gets good marks in exams.",
+        "options": [
+          "usually",
+          "is usually",
+          "usually is",
+          "gets usually"
+        ],
+        "answerIndex": 0,
+        "explain": "Trạng từ tần suất 'usually' đứng trước động từ thường 'gets'."
       }
     ]
   },
@@ -327,39 +363,149 @@
     "audio": "/assets/audio/unit1/speaking-target.mp3"
   },
   "reading": {
-    "passage": "My name is Mai. I go to a boarding school in Da Nang. My school has a big library and a computer room. I like studying maths and art.",
+    "title": "Schools in Viet Nam and Around the World",
+    "passage": "Sunrise is a boarding school in Sydney. Students study and live there. About 1,200 boys and girls go to Sunrise. It has students from all over Australia. They study subjects like maths, science and English.\n\nAn Son is a lower secondary school in Bac Giang. It has only 8 classes. There are mountains and green fields around the school. There is a computer room and a library. There is also a school garden and a playground.\n\nDream is an international school. Here students learn English with English-speaking teachers. In the afternoon, they join many interesting clubs. They play sports and games. Some students do paintings in the art club.",
+    "translation": "Sunrise là một trường nội trú ở Sydney. Học sinh học tập và sinh hoạt tại trường. Khoảng 1.200 bạn nam và nữ theo học tại Sunrise. Trường có học sinh đến từ khắp nước Úc. Các bạn học các môn như toán, khoa học và tiếng Anh.\n\nAn Sơn là một trường trung học cơ sở ở Bắc Giang. Trường chỉ có 8 lớp học. Xung quanh trường có núi non và những cánh đồng xanh mướt. Trường có một phòng máy tính và một thư viện. Ngoài ra còn có vườn trường và sân chơi.\n\nDream là một trường quốc tế. Tại đây học sinh học tiếng Anh cùng các giáo viên bản ngữ. Vào buổi chiều, các em tham gia nhiều câu lạc bộ thú vị. Các em chơi thể thao và trò chơi. Một số học sinh vẽ tranh trong câu lạc bộ mỹ thuật.",
     "questions": [
       {
-        "question": "Trường nội trú của Mai ở đâu?",
+        "id": "u1_r1",
+        "type": "fill_blank",
+        "question": "Students live and study in a ______ school. They only go home at weekends.",
+        "blankWord": "boarding",
         "options": [
-          "Hà Nội",
-          "Đà Nẵng",
-          "TP. Hồ Chí Minh"
+          "boarding",
+          "international",
+          "secondary",
+          "primary"
         ],
-        "answerIndex": 1
+        "explain": "Đoạn 1: 'Sunrise is a boarding school in Sydney. Students study and live there.' (Trường nội trú là nơi học sinh học và ở lại)."
       },
       {
-        "question": "Trường của Mai có những phòng chức năng nào?",
+        "id": "u1_r2",
+        "type": "multiple_choice",
+        "question": "Where is Sunrise School located?",
         "options": [
-          "Thư viện lớn và phòng máy tính",
-          "Hồ bơi và sân bóng",
-          "Vườn hoa và rạp hát"
+          "In Sydney, Australia",
+          "In Bac Giang, Viet Nam",
+          "In London, England",
+          "In New York, USA"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1 nêu rõ: 'Sunrise is a boarding school in Sydney... from all over Australia'."
+      },
+      {
+        "id": "u1_r3",
+        "type": "multiple_choice",
+        "question": "What is around An Son Lower Secondary School in Bac Giang?",
+        "options": [
+          "Mountains and green fields",
+          "Tall modern office buildings",
+          "Busy shopping centres",
+          "A huge seaport"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'There are mountains and green fields around the school.'"
+      },
+      {
+        "id": "u1_r4",
+        "type": "multiple_choice",
+        "question": "Which school has an art club where students do paintings in the afternoon?",
+        "options": [
+          "Dream School",
+          "Sunrise School",
+          "An Son School",
+          "Palmer School"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 3: 'Dream is an international school... Some students do paintings in the art club.'"
+      },
+      {
+        "id": "u1_r5",
+        "type": "fill_blank",
+        "question": "At Dream School, students learn English with ______ teachers.",
+        "blankWord": "English-speaking",
+        "options": [
+          "English-speaking",
+          "Vietnamese",
+          "robot",
+          "online"
+        ],
+        "explain": "Đoạn 3: 'Here students learn English with English-speaking teachers.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "This",
-      "is",
-      "my",
-      "new",
-      "calculator"
+    "items": [
+      {
+        "id": "u1_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Our",
+          "new",
+          "uniform",
+          "is",
+          "very",
+          "nice"
+        ],
+        "correctSentence": "Our new uniform is very nice",
+        "meaningVi": "Bộ đồng phục mới của chúng mình rất đẹp.",
+        "hint": "Bắt đầu bằng 'Our new...'"
+      },
+      {
+        "id": "u1_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "I",
+          "always",
+          "remember",
+          "to",
+          "do",
+          "my",
+          "homework"
+        ],
+        "correctSentence": "I always remember to do my homework",
+        "meaningVi": "Mình luôn luôn nhớ làm bài tập về nhà.",
+        "hint": "Trạng từ 'always' đứng trước động từ 'remember'."
+      },
+      {
+        "id": "u1_w3",
+        "type": "fill_blank",
+        "sentence": "We often use a ______ in a maths class.",
+        "blankWord": "compass",
+        "correctSentence": "We often use a compass in a maths class.",
+        "options": [
+          "compass",
+          "rubber",
+          "sharpener",
+          "calculator"
+        ],
+        "meaningVi": "Chúng mình thường dùng com-pa trong giờ học toán."
+      },
+      {
+        "id": "u1_w4",
+        "type": "fill_blank",
+        "sentence": "Can you lend me your ______ for a minute?",
+        "blankWord": "calculator",
+        "correctSentence": "Can you lend me your calculator for a minute?",
+        "options": [
+          "calculator",
+          "pencil",
+          "school bag",
+          "notebook"
+        ],
+        "meaningVi": "Bạn có thể cho mình mượn máy tính cầm tay một lát được không?"
+      }
     ],
-    "correctSentence": "This is my new calculator",
-    "meaningVi": "Đây là chiếc máy tính cầm tay mới của mình."
+    "correctSentence": "Our new uniform is very nice",
+    "scrambledWords": [
+      "Our",
+      "new",
+      "uniform",
+      "is",
+      "very",
+      "nice"
+    ],
+    "meaningVi": "Bộ đồng phục mới của chúng mình rất đẹp."
   },
   "scenes": [
     {

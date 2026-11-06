@@ -137,40 +137,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "So sánh hơn của tính từ (Comparative Adjectives)",
-    "ruleVi": "Dùng để so sánh đặc điểm giữa hai khu phố, hai đồ vật hoặc hai địa điểm.",
-    "formula": "Tính từ ngắn: adj + -er + than | Tính từ dài: more + adj + than",
-    "quickTip": "Từ 1 âm tiết (short) thêm -er (cleaner, noisier). Từ 2 âm tiết trở lên thêm 'more' phía trước (more peaceful than).",
+    "title": "Tính từ so sánh hơn (Comparative Adjectives)",
+    "ruleVi": "Dùng để so sánh giữa hai người hoặc hai vật với nhau. Tính từ ngắn (1 âm tiết) thêm đuôi -er + than. Tính từ dài (2 âm tiết trở lên) dùng more + tính từ + than.",
+    "formula": "Tính từ ngắn: S1 + be + adj-er + than + S2 | Tính từ dài: S1 + be + more + adj + than + S2",
+    "quickTip": "Tính từ 2 âm tiết kết thúc bằng -y (noisy, happy, busy) đổi -y thành -i rồi thêm -er (noisier, happier, busier). Một số tính từ bất quy tắc: good -> better, bad -> worse.",
     "quiz": [
       {
-        "question": "The streets in the city centre are ______ than those in the countryside.",
+        "question": "This street is ______ than that one.",
         "options": [
-          "crowded",
-          "more crowded",
-          "crowdeder"
-        ],
-        "answerIndex": 1,
-        "explain": "'crowded' là tính từ dài 2 âm tiết, so sánh hơn dùng 'more crowded than'."
-      },
-      {
-        "question": "Living in a quiet neighbourhood is ______ than living near a railway station.",
-        "options": [
-          "better",
-          "gooder",
-          "more good"
+          "noisier",
+          "more noisy",
+          "noisiest",
+          "noisy"
         ],
         "answerIndex": 0,
-        "explain": "'good' là tính từ bất quy tắc, so sánh hơn đổi thành 'better'."
+        "explain": "Noisy đổi -y thành -i rồi thêm -er thành 'noisier'."
       },
       {
-        "question": "My new house is ______ than my old flat.",
+        "question": "A city house is ______ than a country house.",
+        "options": [
+          "more modern",
+          "moderner",
+          "modernest",
+          "most modern"
+        ],
+        "answerIndex": 0,
+        "explain": "Modern là tính từ dài 2 âm tiết, so sánh hơn là 'more modern'."
+      },
+      {
+        "question": "Things at a corner shop are ______ than things at a village market.",
+        "options": [
+          "more expensive",
+          "expensiver",
+          "most expensive",
+          "expensive"
+        ],
+        "answerIndex": 0,
+        "explain": "Expensive là tính từ dài 3 âm tiết, dùng 'more expensive'."
+      },
+      {
+        "question": "Life in the countryside is ______ than life in the city.",
+        "options": [
+          "more peaceful",
+          "peacefuler",
+          "peacefulest",
+          "peaceful"
+        ],
+        "answerIndex": 0,
+        "explain": "Peaceful là tính từ dài 2 âm tiết, dùng 'more peaceful'."
+      },
+      {
+        "question": "A plane is ______ than a train.",
+        "options": [
+          "faster",
+          "more fast",
+          "fastest",
+          "fast"
+        ],
+        "answerIndex": 0,
+        "explain": "Fast là tính từ ngắn 1 âm tiết, thêm -er thành 'faster'."
+      },
+      {
+        "question": "My new school is ______ than my old school.",
         "options": [
           "larger",
           "more large",
-          "largerer"
+          "largest",
+          "large"
         ],
         "answerIndex": 0,
-        "explain": "'large' là tính từ ngắn kết thúc bằng 'e', chỉ cần thêm '-r' thành 'larger'."
+        "explain": "Large có tận cùng là -e, chỉ thêm -r thành 'larger'."
       }
     ]
   },
@@ -235,42 +271,158 @@
     "audio": "/assets/audio/unit4/speaking-target.mp3"
   },
   "reading": {
-    "passage": "I live in a quiet suburb of Da Nang. The air here is cleaner and fresher than in the city centre. There are many convenient shops, a railway station, and a green park. People in my neighbourhood are very friendly.",
+    "title": "Khang's Blog: My Neighbourhood",
+    "passage": "I live in the suburbs of Da Nang City. There are many things I like about my neighbourhood.\n\nIt's great for outdoor activities because it has beautiful parks, sandy beaches and fine weather. There's almost everything I need here: shops, restaurants, and markets. The people here are friendlier, and the food is better than in other places.\n\nHowever, there are two things I dislike about it: there are many modern buildings and offices; and the streets are busy and crowded.",
+    "translation": "Mình sống ở khu vực ngoại ô của thành phố Đà Nẵng. Có rất nhiều điều mình yêu thích về khu phố nơi mình sinh sống.\n\nNơi đây rất tuyệt vời cho các hoạt động ngoài trời bởi vì có những công viên xinh đẹp, bãi biển cát trắng mịn và thời tiết dễ chịu. Ở đây có hầu như mọi thứ mình cần: cửa hàng, quán ăn và các khu chợ. Con người ở đây thân thiện hơn và thức ăn ngon hơn những nơi khác.\n\nTuy nhiên, có hai điều mình không thích: có quá nhiều tòa nhà và văn phòng hiện đại; cùng với đường phố luôn bận rộn và đông đúc.",
     "questions": [
       {
-        "question": "Where does the writer live?",
+        "id": "u4_r1",
+        "type": "multiple_choice",
+        "question": "Where does Khang live?",
         "options": [
-          "In a quiet suburb of Da Nang",
-          "In the noisy centre of Ha Noi",
-          "Near a desert"
+          "In the suburbs of Da Nang City",
+          "In the centre of Ha Noi",
+          "In a small village in Da Lat",
+          "In Sydney"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 1: 'I live in the suburbs of Da Nang City.'"
       },
       {
-        "question": "How is the air in the suburb?",
+        "id": "u4_r2",
+        "type": "multiple_choice",
+        "question": "Why is Khang's neighbourhood great for outdoor activities?",
         "options": [
-          "Cleaner and fresher",
-          "Hot and dusty",
-          "Very polluted"
+          "Because it has beautiful parks, sandy beaches and fine weather",
+          "Because there are no cars",
+          "Because it is very quiet",
+          "Because it has huge shopping malls"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'It's great for outdoor activities because it has beautiful parks, sandy beaches and fine weather.'"
+      },
+      {
+        "id": "u4_r3",
+        "type": "multiple_choice",
+        "question": "What are the people in his neighbourhood like?",
+        "options": [
+          "They are friendlier than in other places",
+          "They are very busy and quiet",
+          "They are noisy",
+          "They are shy"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 2: 'The people here are friendlier, and the food is better than in other places.'"
+      },
+      {
+        "id": "u4_r4",
+        "type": "multiple_choice",
+        "question": "What are the two things Khang dislikes about his neighbourhood?",
+        "options": [
+          "Many modern buildings and busy, crowded streets",
+          "Bad food and unfriendly people",
+          "No parks and bad weather",
+          "Small schools and no markets"
+        ],
+        "answerIndex": 0,
+        "explain": "Đoạn 3: 'there are many modern buildings and offices; and the streets are busy and crowded.'"
+      },
+      {
+        "id": "u4_r5",
+        "type": "fill_blank",
+        "question": "The food in Khang's neighbourhood is ______ than in other places.",
+        "blankWord": "better",
+        "options": [
+          "better",
+          "worse",
+          "cheaper",
+          "more expensive"
+        ],
+        "explain": "Đoạn 2: 'and the food is better than in other places.' (So sánh hơn của good là better)."
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
-    "scrambledWords": [
-      "This",
-      "railway",
-      "station",
-      "is",
-      "larger",
-      "than",
-      "that",
-      "one."
+    "items": [
+      {
+        "id": "u4_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "The",
+          "streets",
+          "in",
+          "the",
+          "city",
+          "are",
+          "busy",
+          "and",
+          "crowded"
+        ],
+        "correctSentence": "The streets in the city are busy and crowded",
+        "meaningVi": "Đường phố ở thành phố rất nhộn nhịp và đông đúc.",
+        "hint": "Bắt đầu bằng 'The streets...'"
+      },
+      {
+        "id": "u4_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Life",
+          "in",
+          "the",
+          "countryside",
+          "is",
+          "more",
+          "peaceful",
+          "than",
+          "city",
+          "life"
+        ],
+        "correctSentence": "Life in the countryside is more peaceful than city life",
+        "meaningVi": "Cuộc sống ở vùng nông thôn yên bình hơn cuộc sống thành thị.",
+        "hint": "So sánh hơn của peaceful: 'more peaceful than'."
+      },
+      {
+        "id": "u4_w3",
+        "type": "fill_blank",
+        "sentence": "My neighbourhood is great because it has beautiful parks and sandy ______.",
+        "blankWord": "beaches",
+        "correctSentence": "My neighbourhood is great because it has beautiful parks and sandy beaches.",
+        "options": [
+          "beaches",
+          "offices",
+          "traffic",
+          "buildings"
+        ],
+        "meaningVi": "Khu phố của mình rất tuyệt vời vì có nhiều công viên đẹp và bãi biển cát mịn."
+      },
+      {
+        "id": "u4_w4",
+        "type": "fill_blank",
+        "sentence": "There is an art ______ and a cathedral in my town.",
+        "blankWord": "gallery",
+        "correctSentence": "There is an art gallery and a cathedral in my town.",
+        "options": [
+          "gallery",
+          "station",
+          "suburb",
+          "turning"
+        ],
+        "meaningVi": "Thị trấn của mình có một phòng trưng bày nghệ thuật và một nhà thờ lớn."
+      }
     ],
-    "correctSentence": "This railway station is larger than that one.",
-    "meaningVi": "Nhà ga xe lửa này lớn hơn nhà ga kia."
+    "correctSentence": "The streets in the city are busy and crowded",
+    "scrambledWords": [
+      "The",
+      "streets",
+      "in",
+      "the",
+      "city",
+      "are",
+      "busy",
+      "and",
+      "crowded"
+    ],
+    "meaningVi": "Đường phố ở thành phố rất nhộn nhịp và đông đúc."
   },
   "video": {
     "title": "Hội thoại hoạt hình: Lost in the Neighbourhood (Hỏi đường trong khu phố)",

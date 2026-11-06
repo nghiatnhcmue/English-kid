@@ -150,40 +150,76 @@
   "extraQuestions": [],
   "scenes": [],
   "grammar": {
-    "title": "Lời khuyên với Should / Shouldn't",
-    "ruleVi": "Dùng để khuyên ai đó nên làm (should) hoặc không nên làm (shouldn't) những điều tốt lành vào dịp Tết.",
-    "formula": "S + should / shouldn't + V (nguyên mẫu)",
-    "quickTip": "Should = nên làm (chúc Tết ông bà, mặc áo mới). Shouldn't = không nên (vòi tiền mừng tuổi, làm vỡ đồ).",
+    "title": "Lời khuyên Should / Shouldn't & Lượng từ Some / Any",
+    "ruleVi": "Dùng Should khi khuyên ai NÊN làm gì; Shouldn't khi khuyên ai KHÔNG NÊN làm gì. Some (một vài/một ít) dùng trong câu khẳng định. Any dùng trong câu phủ định và câu hỏi.",
+    "formula": "Khuyên nên: S + should + V_inf | Khuyên không nên: S + shouldn't + V_inf | Some + N (khẳng định) | Any + N (phủ định/nghi vấn)",
+    "quickTip": "Should/shouldn't luôn đi với động từ nguyên mẫu không 'to'. Sau 'don't have' hoặc 'isn't' luôn dùng 'any', không dùng 'some'.",
     "quiz": [
       {
-        "question": "Children ______ help their parents decorate the house before Tet.",
+        "question": "Children ______ ask for permission before entering a room.",
         "options": [
           "should",
           "shouldn't",
-          "mustn't"
+          "mustn't",
+          "can't"
         ],
         "answerIndex": 0,
-        "explain": "Con cái 'nên' giúp bố mẹ trang trí nhà cửa đón Tết."
+        "explain": "Lời khuyên lễ phép: trẻ em 'nên' xin phép trước khi vào phòng, dùng 'should'."
       },
       {
-        "question": "You ______ break things on the first day of the new year.",
+        "question": "You ______ make a lot of noise when others are resting.",
         "options": [
           "shouldn't",
           "should",
-          "must"
+          "must",
+          "can"
         ],
         "answerIndex": 0,
-        "explain": "Không nên làm vỡ đồ đạc vào ngày đầu năm mới."
+        "explain": "Lời khuyên không nên làm ồn, dùng 'shouldn't'."
       },
       {
-        "question": "We ______ wish our grandparents good health and happiness.",
+        "question": "We should ______ trees in spring to make our town greener.",
         "options": [
-          "should",
-          "shouldn't",
-          "don't"
+          "plant",
+          "plants",
+          "planting",
+          "planted"
         ],
         "answerIndex": 0,
-        "explain": "Chúng em 'nên' chúc ông bà dồi dào sức khỏe và hạnh phúc."
+        "explain": "Sau should dùng động từ nguyên mẫu không chia là 'plant'."
+      },
+      {
+        "question": "At Tet, my mother puts ______ lucky money into red envelopes.",
+        "options": [
+          "some",
+          "any",
+          "an",
+          "a"
+        ],
+        "answerIndex": 0,
+        "explain": "Câu khẳng định dùng 'some' với danh từ không đếm được 'money'."
+      },
+      {
+        "question": "I love flowers, but I don't have ______ peach blossoms yet.",
+        "options": [
+          "any",
+          "some",
+          "a",
+          "much"
+        ],
+        "answerIndex": 0,
+        "explain": "Câu phủ định 'don't have' đi với 'any'."
+      },
+      {
+        "question": "You ______ break things at Tet because it brings bad luck.",
+        "options": [
+          "shouldn't",
+          "should",
+          "must",
+          "are"
+        ],
+        "answerIndex": 0,
+        "explain": "Khuyên không nên làm vỡ đồ đạc ngày Tết, dùng 'shouldn't'."
       }
     ]
   },
@@ -248,40 +284,158 @@
     "audio": "/assets/audio/unit6/speaking-target.mp3"
   },
   "reading": {
-    "passage": "Tet is coming soon. In Viet Nam, people clean their houses to wash away bad luck. Children receive lucky money in red envelopes. Families gather together and enjoy special meals.",
+    "title": "New Year Celebrations Around the World",
+    "passage": "A. Russ (the USA): I often go to Times Square with my parents to welcome the New Year. When the clock strikes midnight, colourful fireworks light up the sky. Everybody cheers and sings.\n\nB. Wu (China): On New Year's Day, we dress beautifully and go to our grandparents' houses. We wish them Happy New Year and they give us lucky money. Then we go out and have a day full of fun.\n\nC. Mai (Viet Nam): I learn some customs about Tet from my parents. People give rice to wish for enough food and buy salt to wish for good luck. Dogs are lucky animals but cats are not. A cat's cry sounds like 'poor' in Vietnamese.",
+    "translation": "A. Russ (Mỹ): Mình thường cùng bố mẹ đến Quảng trường Thời đại để đón chào Năm Mới. Khi đồng hồ điểm đúng nửa đêm, những chùm pháo hoa rực rỡ thắp sáng cả bầu trời. Mọi người cùng reo hò và ca hát.\n\nB. Wu (Trung Quốc): Vào ngày mồng một Tết, chúng mình mặc những bộ quần áo đẹp nhất và đến chúc Tết ông bà. Chúng mình chúc ông bà Năm Mới hạnh phúc và được ông bà mừng tiền lì xì. Sau đó cả nhà cùng đi chơi và có một ngày tràn ngập niềm vui.\n\nC. Mai (Việt Nam): Mình học được nhiều phong tục ngày Tết từ bố mẹ. Mọi người biếu gạo để chúc nhau no ấm quanh năm và mua muối đầu năm để cầu may mắn. Chó là loài vật mang lại may mắn, nhưng mèo thì không, vì tiếng mèo kêu 'meo meo' nghe gần giống từ 'nghèo'.",
     "questions": [
       {
-        "question": "Why do people clean their houses before Tet?",
+        "id": "u6_r1",
+        "type": "multiple_choice",
+        "question": "Who goes to Times Square to watch colourful fireworks at midnight?",
         "options": [
-          "To wash away bad luck",
-          "To invite strangers",
-          "To play games"
+          "Russ (the USA)",
+          "Wu (China)",
+          "Mai (Viet Nam)",
+          "Nam"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Phần A: 'Russ (the USA): I often go to Times Square with my parents to welcome the New Year.'"
       },
       {
-        "question": "What do children receive?",
+        "id": "u6_r2",
+        "type": "multiple_choice",
+        "question": "What do children in China receive after wishing their grandparents Happy New Year?",
         "options": [
-          "Lucky money in red envelopes",
-          "School books",
-          "New shoes"
+          "Lucky money",
+          "A pet cat",
+          "A calendar",
+          "School bags"
         ],
-        "answerIndex": 0
+        "answerIndex": 0,
+        "explain": "Phần B: 'We wish them Happy New Year and they give us lucky money.'"
+      },
+      {
+        "id": "u6_r3",
+        "type": "multiple_choice",
+        "question": "According to Vietnamese custom, why do people buy salt at Tet?",
+        "options": [
+          "To wish for good luck",
+          "To cook special rice",
+          "To give to dogs",
+          "To decorate the room"
+        ],
+        "answerIndex": 0,
+        "explain": "Phần C: 'and buy salt to wish for good luck.'"
+      },
+      {
+        "id": "u6_r4",
+        "type": "multiple_choice",
+        "question": "Why do people in Viet Nam consider dogs as lucky animals but cats as not?",
+        "options": [
+          "Because a cat's cry sounds like 'poor' in Vietnamese",
+          "Because dogs are bigger than cats",
+          "Because cats run around the house",
+          "Because dogs eat rice"
+        ],
+        "answerIndex": 0,
+        "explain": "Phần C: 'Dogs are lucky animals but cats are not. A cat's cry sounds like 'poor' in Vietnamese.'"
+      },
+      {
+        "id": "u6_r5",
+        "type": "fill_blank",
+        "question": "On New Year's Day, children dress ______ and visit their grandparents.",
+        "blankWord": "beautifully",
+        "options": [
+          "beautifully",
+          "badly",
+          "loudly",
+          "slowly"
+        ],
+        "explain": "Phần B: 'On New Year's Day, we dress beautifully and go to our grandparents' houses.'"
       }
     ]
   },
   "writing": {
-    "type": "unscramble",
+    "items": [
+      {
+        "id": "u6_w1",
+        "type": "unscramble",
+        "scrambledWords": [
+          "At",
+          "Tet",
+          "my",
+          "mother",
+          "puts",
+          "lucky",
+          "money",
+          "into",
+          "red",
+          "envelopes"
+        ],
+        "correctSentence": "At Tet my mother puts lucky money into red envelopes",
+        "meaningVi": "Vào dịp Tết, mẹ mình bỏ tiền lì xì vào các phong bao đỏ.",
+        "hint": "Bắt đầu bằng 'At Tet...'"
+      },
+      {
+        "id": "u6_w2",
+        "type": "unscramble",
+        "scrambledWords": [
+          "Children",
+          "should",
+          "behave",
+          "well",
+          "and",
+          "visit",
+          "their",
+          "grandparents"
+        ],
+        "correctSentence": "Children should behave well and visit their grandparents",
+        "meaningVi": "Trẻ em nên ngoan ngoãn và đi thăm ông bà vào dịp Tết.",
+        "hint": "Cấu trúc với should: S + should + V_inf..."
+      },
+      {
+        "id": "u6_w3",
+        "type": "fill_blank",
+        "sentence": "When everybody is at home together, we call it a family ______.",
+        "blankWord": "gathering",
+        "correctSentence": "When everybody is at home together, we call it a family gathering.",
+        "options": [
+          "gathering",
+          "firework",
+          "blossom",
+          "relative"
+        ],
+        "meaningVi": "Khi mọi người cùng sum họp tại nhà, chúng ta gọi đó là buổi họp mặt gia đình."
+      },
+      {
+        "id": "u6_w4",
+        "type": "fill_blank",
+        "sentence": "Banh chung is a special ______ for Tet in Viet Nam.",
+        "blankWord": "food",
+        "correctSentence": "Banh chung is a special food for Tet in Viet Nam.",
+        "options": [
+          "food",
+          "drink",
+          "tree",
+          "animal"
+        ],
+        "meaningVi": "Bánh chưng là một món ăn đặc biệt trong dịp Tết ở Việt Nam."
+      }
+    ],
+    "correctSentence": "At Tet my mother puts lucky money into red envelopes",
     "scrambledWords": [
-      "Children",
-      "receive",
+      "At",
+      "Tet",
+      "my",
+      "mother",
+      "puts",
       "lucky",
       "money",
-      "at",
-      "Tet."
+      "into",
+      "red",
+      "envelopes"
     ],
-    "correctSentence": "Children receive lucky money at Tet.",
-    "meaningVi": "Trẻ em được nhận tiền lì xì vào dịp Tết."
+    "meaningVi": "Vào dịp Tết, mẹ mình bỏ tiền lì xì vào các phong bao đỏ."
   },
   "video": {
     "title": "Văn hóa ngày Tết: Happy New Year! (Phong tục Tết cổ truyền)",
