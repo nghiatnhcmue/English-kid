@@ -1,5 +1,21 @@
 import { useState } from 'react';
-import { BookOpen, CheckCircle2, ChevronRight, Copy, HelpCircle, Layers, Lightbulb, Play, Send, Sparkles, UploadCloud } from 'lucide-react';
+import { 
+  BookOpen, 
+  CheckCircle2, 
+  ChevronRight, 
+  Copy, 
+  FileText, 
+  HelpCircle, 
+  Image as ImageIcon, 
+  Layers, 
+  Lightbulb, 
+  Play, 
+  Send, 
+  Sparkles, 
+  Upload, 
+  UserCheck, 
+  Users 
+} from 'lucide-react';
 
 export default function TeacherGuide() {
   const [activeSection, setActiveSection] = useState('customize');
@@ -14,19 +30,20 @@ export default function TeacherGuide() {
   };
 
   return (
-    <div className="flex flex-col gap-6">
-      {/* Thanh chuyển các mục hướng dẫn */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-2">
+    <div className="flex flex-col gap-5">
+      {/* Thanh 5 chuyển các mục hướng dẫn */}
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
         {[
-          { id: 'customize', label: '1. Thêm từ & bài tập', icon: '✏️' },
-          { id: 'assign', label: '2. Cách giao bài tuần', icon: '📅' },
-          { id: 'share', label: '3. Gửi bài qua Zalo', icon: '📱' },
-          { id: 'json', label: '4. Tùy biến sâu JSON', icon: '💻' },
+          { id: 'customize', label: '1. Thêm từ & tải ảnh', icon: '✏️' },
+          { id: 'assign', label: '2. Giao bài & Dán Word', icon: '📅' },
+          { id: 'students', label: '3. Quản lý học sinh', icon: '👥' },
+          { id: 'share', label: '4. Gửi bài qua Zalo', icon: '📱' },
+          { id: 'json', label: '5. Tùy biến sâu JSON', icon: '💻' },
         ].map((sec) => (
           <button
             key={sec.id}
             onClick={() => setActiveSection(sec.id)}
-            className={`flex items-center justify-center gap-2 rounded-2xl p-3.5 text-sm font-black transition-all cursor-pointer ${
+            className={`flex items-center justify-center gap-1.5 rounded-2xl p-3 text-xs sm:text-sm font-black transition-all cursor-pointer ${
               activeSection === sec.id
                 ? 'bg-peach text-white shadow-[0_4px_0_var(--color-peach-dark)] scale-[1.02]'
                 : 'bg-white text-ink-soft hover:bg-cream border border-banana-soft/60'
@@ -38,17 +55,17 @@ export default function TeacherGuide() {
         ))}
       </div>
 
-      {/* Mục 1: Cách chỉnh sửa và thêm từ vựng, audio, video */}
+      {/* Mục 1: Thêm từ vựng & tải ảnh */}
       {activeSection === 'customize' && (
         <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-5">
           <div className="border-b border-banana-soft pb-4">
             <span className="rounded-full bg-peach-soft px-3 py-1 text-xs font-black text-peach-dark">
               Dành cho Giáo viên bộ môn
             </span>
-            <h2 className="text-2xl font-black text-ink mt-2">
-              📝 Hướng dẫn Thêm Từ vựng, Âm thanh & Video bài giảng
+            <h2 className="text-xl sm:text-2xl font-black text-ink mt-2">
+              📝 Hướng dẫn Thêm Từ Vựng, Tải Ảnh & Video bài giảng
             </h2>
-            <p className="text-sm font-bold text-ink-soft mt-1">
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1">
               Thầy cô có thể toàn quyền tùy biến bài học phù hợp với từng đối tượng học sinh của lớp mình.
             </p>
           </div>
@@ -57,10 +74,10 @@ export default function TeacherGuide() {
             <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
               <div className="flex items-center gap-2 text-peach font-black text-base">
                 <span className="flex h-7 w-7 items-center justify-center rounded-full bg-peach text-white text-xs">1</span>
-                <span>Thêm Từ vựng & Câu ví dụ</span>
+                <span>Tải ảnh từ máy tính</span>
               </div>
               <p className="text-xs font-bold text-ink-soft leading-relaxed">
-                Vào tab <strong>"Tùy biến Data"</strong> ➔ Chọn Unit cần sửa ➔ Bấm <strong>"+ Thêm từ vựng mới"</strong>. Thầy cô chỉ cần nhập từ tiếng Anh, loại từ, nghĩa tiếng Việt và câu ví dụ.
+                Vào tab <strong>"Tùy biến Data"</strong> ➔ Bấm <strong>"+ Thêm từ vựng mới"</strong>. Bấm nút <strong>"📁 Tải ảnh từ máy tính"</strong> hoặc dán link ảnh. <em>Nếu không có ảnh thì từ vựng sẽ để trống ảnh, không cần tìm biểu tượng/emoji.</em>
               </p>
             </div>
 
@@ -90,83 +107,114 @@ export default function TeacherGuide() {
               <Lightbulb className="h-4 w-4 text-peach" /> Mẹo hay cho Thầy Cô:
             </h4>
             <p className="text-xs font-bold text-ink-soft leading-relaxed">
-              Mọi thay đổi thầy cô lưu lại sẽ <strong>hiển thị ngay tức thì</strong> trên thiết bị. Thầy cô cũng có thể bấm nút <strong>"Khôi phục bài học gốc"</strong> bất kỳ lúc nào nếu muốn trở về bộ dữ liệu SGK ban đầu.
+              Mọi thay đổi thầy cô lưu lại sẽ <strong>hiển thị ngay tức thì</strong> trên thiết bị của học sinh. Thầy cô cũng có thể bấm nút <strong>"Khôi phục bài học gốc"</strong> bất kỳ lúc nào nếu muốn trở về bộ dữ liệu SGK ban đầu.
             </p>
           </div>
         </div>
       )}
 
-      {/* Mục 2: Hướng dẫn giao bài tập theo tuần */}
+      {/* Mục 2: Hướng dẫn giao bài tập theo tuần & dán từ Word */}
       {activeSection === 'assign' && (
         <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-5">
           <div className="border-b border-banana-soft pb-4">
             <span className="rounded-full bg-mint-soft px-3 py-1 text-xs font-black text-mint-dark">
-              Linh hoạt theo trình độ
+              Linh hoạt theo tuần học
             </span>
-            <h2 className="text-2xl font-black text-ink mt-2">
-              📅 Cách Giao bài tập theo Tuần & Phân hóa học sinh
+            <h2 className="text-xl sm:text-2xl font-black text-ink mt-2">
+              📅 Cách Giao Bài Tập Tuần & Dán Nhanh Từ Word
             </h2>
-            <p className="text-sm font-bold text-ink-soft mt-1">
-              Thầy cô có thể giao bài theo 4 hình thức linh hoạt tùy theo tiến độ trên lớp.
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1">
+              Giao bài trọn bộ Unit, theo từng kỹ năng, hoặc tự soạn câu hỏi trắc nghiệm cực nhanh bằng Word.
             </p>
           </div>
 
-          <div className="space-y-3">
-            <div className="rounded-2xl bg-cream p-4 border border-banana-soft flex items-start gap-3">
-              <span className="text-2xl">🌟</span>
-              <div>
-                <h3 className="text-base font-black text-ink">Hình thức 1: Giao trọn bộ Unit (Full Unit)</h3>
-                <p className="text-xs font-bold text-ink-soft mt-0.5 leading-relaxed">
-                  Học sinh sẽ được giao trải nghiệm đủ 7 trạm của Unit: Từ vựng 3D, Phát âm, Ngữ pháp, Nghe, Nói, Đọc, Viết và làm bài Test Thử thách tổng hợp.
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="rounded-2xl bg-cream p-4 border border-banana-soft flex flex-col gap-2">
+              <h3 className="text-sm font-black text-ink flex items-center gap-2">
+                <span>⚡ Dán nhanh câu hỏi từ Word (Hàng loạt)</span>
+              </h3>
+              <p className="text-xs font-bold text-ink-soft leading-relaxed">
+                Trong modal giao bài, chọn <strong>"📐 Chọn câu hỏi"</strong> ➔ Bấm <strong>"⚡ Dán từ Word"</strong>. Dán toàn bộ đề trắc nghiệm vào, thêm dấu <strong>*</strong> sau đáp án đúng (ví dụ: <code>B. wears*</code>) hoặc có dòng <code>Đáp án: B</code> ở cuối câu. Hệ thống tự nhận diện 10 - 20 câu chỉ trong 2 giây!
+              </p>
             </div>
 
-            <div className="rounded-2xl bg-cream p-4 border border-banana-soft flex items-start gap-3">
-              <span className="text-2xl">🎙️</span>
-              <div>
-                <h3 className="text-base font-black text-ink">Hình thức 2: Giao theo kỹ năng cụ thể</h3>
-                <p className="text-xs font-bold text-ink-soft mt-0.5 leading-relaxed">
-                  Thầy cô có thể chỉ định riêng: <strong>Chỉ luyện Nói (Speaking Studio)</strong>, <strong>Chỉ luyện Nghe (Listening)</strong>, hoặc <strong>Chỉ làm trắc nghiệm Ngữ pháp</strong> khi lớp cần củng cố kỹ năng còn yếu.
-                </p>
-              </div>
+            <div className="rounded-2xl bg-cream p-4 border border-banana-soft flex flex-col gap-2">
+              <h3 className="text-sm font-black text-ink flex items-center gap-2">
+                <span>➕ Soạn từng câu hỏi trắc nghiệm</span>
+              </h3>
+              <p className="text-xs font-bold text-ink-soft leading-relaxed">
+                Bấm <strong>"+ Soạn câu mới"</strong>: Nhập câu hỏi, 4 đáp án A, B, C, D. Bấm trực tiếp vào chữ cái [A] [B] [C] [D] để chọn đáp án đúng. Bấm <strong>"Lưu & Soạn câu tiếp theo"</strong> để nhập liên tục mà không bị đóng form.
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-sky-soft/40 p-4 border border-sky/30 text-xs font-bold text-ink-soft">
+            <p className="font-black text-sky-dark text-sm mb-1">🎯 4 hình thức giao bài tập linh hoạt:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><strong>Trọn bộ Unit:</strong> Học sinh luyện đủ 7 trạm và làm bài Test Thử thách tổng hợp.</li>
+              <li><strong>Theo kỹ năng:</strong> Chỉ định riêng luyện Nói AI, Luyện Nghe, hoặc Ngữ pháp.</li>
+              <li><strong>Tự chọn từ vựng:</strong> Tích chọn 3 - 5 từ vựng cần học sinh luyện lại.</li>
+              <li><strong>Tự chọn câu hỏi:</strong> Giao đúng các câu hỏi trắc nghiệm thầy cô đã chọn hoặc tự biên soạn.</li>
+            </ul>
+          </div>
+        </div>
+      )}
+
+      {/* Mục 3: Quản lý học sinh */}
+      {activeSection === 'students' && (
+        <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-5">
+          <div className="border-b border-banana-soft pb-4">
+            <span className="rounded-full bg-peach-soft px-3 py-1 text-xs font-black text-peach-dark">
+              Đơn giản hóa tuyệt đối
+            </span>
+            <h2 className="text-xl sm:text-2xl font-black text-ink mt-2">
+              👥 Hướng Dẫn Quản Lý Tài Khoản Học Sinh (Mã PIN 4 số)
+            </h2>
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1">
+              Học sinh lớp 6 yếu tin học chỉ cần bấm vào hình Avatar và gõ 4 số PIN là đăng nhập được ngay!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
+              <span className="text-2xl">👤</span>
+              <h4 className="text-sm font-black text-ink">1. Thêm & Cấp mã PIN cho học sinh</h4>
+              <p className="text-xs font-bold text-ink-soft leading-relaxed">
+                Vào tab <strong>"Tài Khoản Học Sinh"</strong> ➔ Bấm <strong>"+ Thêm học sinh"</strong> hoặc <strong>"⚡ Nhập danh sách cả lớp"</strong> (dán từ Excel). Mỗi em sẽ có 1 mã PIN 4 số dễ nhớ (ví dụ: 1234, 0001).
+              </p>
             </div>
 
-            <div className="rounded-2xl bg-cream p-4 border border-banana-soft flex items-start gap-3">
-              <span className="text-2xl">🎯</span>
-              <div>
-                <h3 className="text-base font-black text-ink">Hình thức 3: Tự chọn danh sách từ vựng cụ thể</h3>
-                <p className="text-xs font-bold text-ink-soft mt-0.5 leading-relaxed">
-                  Tích chọn 3 đến 5 từ vựng mà học sinh thường hay phát âm sai hoặc viết sai chính tả trên lớp để giao bài tập trọng tâm.
-                </p>
-              </div>
+            <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
+              <span className="text-2xl">🖨️</span>
+              <h4 className="text-sm font-black text-ink">2. In thẻ tài khoản phát cho học sinh</h4>
+              <p className="text-xs font-bold text-ink-soft leading-relaxed">
+                Bấm nút <strong>"🖨️ In Thẻ Cả Lớp"</strong> để in thẻ đăng nhập nhỏ gọn (có họ tên, lớp, mã PIN). Phát cho học sinh dán vào bìa sách tiếng Anh để không bao giờ quên.
+              </p>
             </div>
 
-            <div className="rounded-2xl bg-cream p-4 border border-banana-soft flex items-start gap-3">
-              <span className="text-2xl">✍️</span>
-              <div>
-                <h3 className="text-base font-black text-ink">Hình thức 4: Tự chọn các câu hỏi bài tập</h3>
-                <p className="text-xs font-bold text-ink-soft mt-0.5 leading-relaxed">
-                  Chọn lọc đúng các câu hỏi trắc nghiệm hoặc viết câu của Unit để giao bài kiểm tra 15 phút hoặc ôn tập trước kỳ thi.
-                </p>
-              </div>
+            <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
+              <span className="text-2xl">🚀</span>
+              <h4 className="text-sm font-black text-ink">3. Tự động đăng nhập từ lần sau</h4>
+              <p className="text-xs font-bold text-ink-soft leading-relaxed">
+                Lần đầu vào thiết bị, học sinh gõ PIN một lần. Từ lần thứ 2 trở đi, hệ thống <strong>tự động ghi nhớ tài khoản</strong>, học sinh mở web là vào học ngay mà không cần làm gì thêm!
+              </p>
             </div>
           </div>
         </div>
       )}
 
-      {/* Mục 3: Gửi bài qua Zalo cho phụ huynh và học sinh */}
+      {/* Mục 4: Gửi bài qua Zalo */}
       {activeSection === 'share' && (
         <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-5">
           <div className="border-b border-banana-soft pb-4">
             <span className="rounded-full bg-sky-soft px-3 py-1 text-xs font-black text-sky-dark">
               1-Click Chia sẻ
             </span>
-            <h2 className="text-2xl font-black text-ink mt-2">
-              📱 Cách Gửi bài tập qua Zalo / Facebook cho Phụ huynh
+            <h2 className="text-xl sm:text-2xl font-black text-ink mt-2">
+              📱 Cách Gửi Bài Tập Qua Zalo / Facebook Cho Phụ Huynh
             </h2>
-            <p className="text-sm font-bold text-ink-soft mt-1">
-              Sau khi tạo bài tập, mỗi bài sẽ có một **Mã bài tập** và **Đường link trực tiếp**.
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1">
+              Mỗi bài tập tạo ra đều có nút sao chép link và tin nhắn mẫu để thầy cô gửi nhanh vào nhóm lớp.
             </p>
           </div>
 
@@ -201,17 +249,17 @@ export default function TeacherGuide() {
         </div>
       )}
 
-      {/* Mục 4: Tùy biến sâu JSON (Chế độ Chuyên gia) */}
+      {/* Mục 5: Tùy biến sâu JSON */}
       {activeSection === 'json' && (
         <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-5">
           <div className="border-b border-banana-soft pb-4">
             <span className="rounded-full bg-peach-soft px-3 py-1 text-xs font-black text-peach-dark">
               Dành cho Giáo viên Chuyên nghiệp
             </span>
-            <h2 className="text-2xl font-black text-ink mt-2">
-              💻 Hướng dẫn Tùy biến sâu vào Dữ liệu JSON
+            <h2 className="text-xl sm:text-2xl font-black text-ink mt-2">
+              💻 Hướng dẫn Tùy biến sâu vào Dữ liệu JSON & Sao lưu
             </h2>
-            <p className="text-sm font-bold text-ink-soft mt-1">
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1">
               Thầy cô am hiểu công nghệ có thể xuất toàn bộ giáo trình ra file JSON để lưu trữ hoặc chia sẻ cho các đồng nghiệp khác.
             </p>
           </div>
@@ -243,4 +291,3 @@ export default function TeacherGuide() {
     </div>
   );
 }
-
