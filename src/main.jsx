@@ -5,6 +5,17 @@ import App from './App.jsx';
 import ErrorBoundary from './components/ErrorBoundary.jsx';
 import './index.css';
 
+// Tự động reload trang ngay khi Service Worker bản mới claims clients (F5 / cập nhật code)
+if ('serviceWorker' in navigator) {
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!refreshing) {
+      refreshing = true;
+      window.location.reload();
+    }
+  });
+}
+
 const updateSW = registerSW({
   immediate: true,
   onNeedRefresh() {
@@ -12,6 +23,18 @@ const updateSW = registerSW({
   },
   onOfflineReady() {
     console.log('App ready offline');
+  },
+  onRegisteredSW(swUrl, r) {
+    if (r) {
+      // Kiểm tra bản mới ngay lập tức và mỗi khi học sinh focus lại tab
+      r.update().catch(() => {});
+      window.addEventListener('focus', () => {
+        r.update().catch(() => {});
+      });
+      setInterval(() => {
+        r.update().catch(() => {});
+      }, 60000);
+    }
   },
 });
 

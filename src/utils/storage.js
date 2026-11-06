@@ -13,7 +13,23 @@ export const KEYS = {
   CUSTOM_UNITS: `${PREFIX}custom_units`,
   ASSIGNMENTS: `${PREFIX}assignments`,
   ASSIGNMENT_SUBMISSIONS: `${PREFIX}assignment_submissions`,
+  STUDENTS: `${PREFIX}students_list`,
+  CURRENT_STUDENT_ID: `${PREFIX}current_student_id`,
+  STUDENT_PROGRESS: `${PREFIX}student_progress_map`,
 };
+
+export const DEFAULT_STUDENTS = [
+  { id: 'stu_1', username: 'an6a1', name: 'Nguyễn Văn An', class: '6A1', password: '123', avatar: '🦁' },
+  { id: 'stu_2', username: 'binh6a1', name: 'Trần Thị Bình', class: '6A1', password: '123', avatar: '🦊' },
+  { id: 'stu_3', username: 'duy6a1', name: 'Lê Hoàng Duy', class: '6A1', password: '123', avatar: '🐱' },
+  { id: 'stu_4', username: 'chi6a1', name: 'Phạm Quỳnh Chi', class: '6A1', password: '123', avatar: '🐼' },
+  { id: 'stu_5', username: 'huy6a1', name: 'Đỗ Gia Huy', class: '6A1', password: '123', avatar: '🚀' },
+  { id: 'stu_6', username: 'linh6a1', name: 'Hoàng Mai Linh', class: '6A1', password: '123', avatar: '🦄' },
+  { id: 'stu_7', username: 'nam6a1', name: 'Vũ Minh Nam', class: '6A1', password: '123', avatar: '⚽' },
+  { id: 'stu_8', username: 'nhi6a1', name: 'Bùi Yến Nhi', class: '6A1', password: '123', avatar: '🎨' },
+  { id: 'stu_9', username: 'phong6a1', name: 'Đinh Quốc Phong', class: '6A1', password: '123', avatar: '📚' },
+  { id: 'stu_10', username: 'tu6a1', name: 'Trịnh Cẩm Tú', class: '6A1', password: '123', avatar: '🎒' },
+];
 
 export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true };
 
@@ -39,9 +55,136 @@ export function createStore(storage = globalThis.localStorage) {
   };
 
   const api = {
+    // ---- Quản lý Tài khoản Học sinh ----
+    getStudents() {
+      const list = read(KEYS.STUDENTS, null);
+      if (Array.isArray(list) && list.length > 0) return list;
+      write(KEYS.STUDENTS, DEFAULT_STUDENTS);
+      return DEFAULT_STUDENTS;
+    },
+
+    getCurrentStudent() {
+      const curId = read(KEYS.CURRENT_STUDENT_ID, null);
+      if (!curId) return null;
+      const all = api.getStudents();
+      const found = all.find((s) => s.id === curId);
+      return found || null;
+    },
+
+    setCurrentStudent(studentId) {
+      if (!studentId) {
+        write(KEYS.CURRENT_STUDENT_ID, null);
+        return null;
+      }
+      const all = api.getStudents();
+      const found = all.find((s) => s.id === studentId);
+      if (found) {
+        write(KEYS.CURRENT_STUDENT_ID, found.id);
+        write(KEYS.STUDENT, { name: found.name, class: found.class, avatar: found.avatar });
+        return found;
+      }
+      return null;
+    },
+
+    loginStudent(identifier, password = '') {
+      const all = api.getStudents();
+      const cleanId = String(identifier || '').trim().toLowerCase();
+      const found = all.find(
+        (s) =>
+          s.id === identifier ||
+          (s.username && s.username.toLowerCase() === cleanId) ||
+          s.name.toLowerCase() === cleanId
+      );
+      if (!found) {
+        return { success: false, error: 'Không tìm thấy tài khoản học sinh này.' };
+      }
+      if (found.password && String(found.password).trim() !== String(password || '').trim()) {
+        return { success: false, error: 'Mật khẩu chưa chính xác. Hãy hỏi lại thầy cô nhé!' };
+      }
+      api.setCurrentStudent(found.id);
+      return { success: true, student: found };
+    },
+
+    logoutStudent() {
+      write(KEYS.CURRENT_STUDENT_ID, null);
+      write(KEYS.STUDENT, { name: '', class: '', avatar: '👤' });
+    },
+
+    saveStudent(student) {
+      const all = api.getStudents();
+      const id = student.id || `stu_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`;
+      const clean = {
+        id,
+        username: String(student.username || id).trim().toLowerCase(),
+        name: String(student.name || 'Học sinh').trim(),
+        class: String(student.class || '6A1').trim(),
+        password: String(student.password || '123').trim(),
+        avatar: String(student.avatar || '🦁'),
+        createdAt: student.createdAt || new Date().toISOString(),
+      };
+      const idx = all.findIndex((s) => s.id === id);
+      let updated;
+      if (idx >= 0) {
+        updated = [...all];
+        updated[idx] = { ...updated[idx], ...clean };
+      } else {
+        updated = [...all, clean];
+      }
+      write(KEYS.STUDENTS, updated);
+      if (api.getCurrentStudent()?.id === id) {
+        api.setCurrentStudent(id);
+      }
+      return clean;
+    },
+
+    deleteStudent(studentId) {
+      const all = api.getStudents();
+      const next = all.filter((s) => s.id !== studentId);
+      write(KEYS.STUDENTS, next);
+      if (read(KEYS.CURRENT_STUDENT_ID, null) === studentId) {
+        api.logoutStudent();
+      }
+      return true;
+    },
+
+    batchImportStudents(nameListText, className = '6A1', defaultPassword = '123') {
+      const lines = String(nameListText || '').split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+      if (!lines.length) return [];
+      const avatars = ['🦁', '🦊', '🐱', '🐼', '🚀', '🦄', '⚽', '🎨', '📚', '🎒', '⭐', '🐬'];
+      const added = [];
+      lines.forEach((name, idx) => {
+        const cleanName = name.replace(/^\d+[\.\-\s]+/, '').trim();
+        if (!cleanName) return;
+        const slug = cleanName
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .replace(/[^a-z0-9]/g, '');
+        const username = `${slug || 'hs'}${String(className).toLowerCase().replace(/[^a-z0-9]/g, '')}${idx + 1}`;
+        const newStu = {
+          id: `stu_${Date.now()}_${idx}_${Math.random().toString(36).slice(2, 5)}`,
+          username,
+          name: cleanName,
+          class: className,
+          password: defaultPassword,
+          avatar: avatars[idx % avatars.length],
+          createdAt: new Date().toISOString(),
+        };
+        added.push(newStu);
+      });
+      const all = api.getStudents();
+      const combined = [...all, ...added];
+      write(KEYS.STUDENTS, combined);
+      return added;
+    },
+
     getStudentInfo() {
-      const info = read(KEYS.STUDENT, { name: '', class: '', avatar: '🦊' });
-      return info && typeof info === 'object' ? info : { name: '', class: '', avatar: '🦊' };
+      const cur = api.getCurrentStudent();
+      if (cur) {
+        return { id: cur.id, name: cur.name, class: cur.class, avatar: cur.avatar };
+      }
+      const info = read(KEYS.STUDENT, { name: '', class: '', avatar: '👤' });
+      return info && typeof info === 'object' ? info : { name: '', class: '', avatar: '👤' };
     },
     saveStudentInfo({ name = '', class: className = '', avatar = '🦊' }) {
       const clean = {
@@ -99,16 +242,42 @@ export function createStore(storage = globalThis.localStorage) {
     },
 
     getProgress() {
+      const cur = api.getCurrentStudent();
+      if (cur) {
+        const map = read(KEYS.STUDENT_PROGRESS, {});
+        const stuP = map[cur.id];
+        if (stuP && typeof stuP === 'object') {
+          return { units: stuP.units ?? {}, studyDays: Array.isArray(stuP.studyDays) ? stuP.studyDays : [] };
+        }
+      }
       const p = read(KEYS.PROGRESS, {});
       return { units: p.units ?? {}, studyDays: Array.isArray(p.studyDays) ? p.studyDays : [] };
     },
     /** Lưu số sao tốt nhất của một chế độ ôn trong Unit. */
     saveModeResult(unitId, mode, stars, now = new Date()) {
       const p = api.getProgress();
-      const unit = p.units[unitId] ?? { modes: {} };
+      const numUnit = Number(unitId);
+      const unit = p.units[numUnit] ?? { modes: {} };
       unit.modes = { ...unit.modes, [mode]: Math.max(unit.modes?.[mode] ?? 0, stars) };
-      p.units = { ...p.units, [unitId]: unit };
+      p.units = { ...p.units, [numUnit]: unit };
       write(KEYS.PROGRESS, p);
+
+      // Lưu song song vào tiến độ học sinh nếu đang đăng nhập
+      const cur = api.getCurrentStudent();
+      if (cur) {
+        const map = read(KEYS.STUDENT_PROGRESS, {});
+        const stuP = map[cur.id] || { units: {}, studyDays: [] };
+        const stuUnit = stuP.units[numUnit] || { modes: {} };
+        stuUnit.modes = { ...stuUnit.modes, [mode]: Math.max(stuUnit.modes?.[mode] ?? 0, stars) };
+        stuP.units[numUnit] = stuUnit;
+        const day = localDay(now);
+        if (!stuP.studyDays.includes(day)) {
+          stuP.studyDays = [...stuP.studyDays, day].slice(-400);
+        }
+        map[cur.id] = stuP;
+        write(KEYS.STUDENT_PROGRESS, map);
+      }
+
       api.markStudyDay(now);
     },
     markStudyDay(now = new Date()) {
@@ -117,6 +286,53 @@ export function createStore(storage = globalThis.localStorage) {
       if (!p.studyDays.includes(day)) {
         p.studyDays = [...p.studyDays, day].slice(-400);
         write(KEYS.PROGRESS, p);
+      }
+    },
+
+    getStudentProgress(studentId) {
+      const targetId = studentId || api.getCurrentStudent()?.id;
+      if (!targetId) return api.getProgress();
+      const map = read(KEYS.STUDENT_PROGRESS, {});
+      const p = map[targetId] || { units: {}, studyDays: [] };
+      return { units: p.units ?? {}, studyDays: Array.isArray(p.studyDays) ? p.studyDays : [] };
+    },
+
+    getAllStudentsProgress() {
+      return read(KEYS.STUDENT_PROGRESS, {});
+    },
+
+    recordStationProgress(unitId, stationKey, data = {}) {
+      const student = api.getCurrentStudent();
+      const now = new Date();
+      const numUnit = Number(unitId);
+      const stars = Number(data.stars ?? (data.correct ? 3 : 1));
+
+      // 1. Cập nhật tiến độ
+      api.saveModeResult(numUnit, stationKey, stars, now);
+
+      // 2. Đồng bộ kết quả lên Cloudflare D1
+      if (student) {
+        try {
+          if (typeof window !== 'undefined' && window.fetch) {
+            fetch('/api/scores', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                id: `stn_${now.getTime()}_${Math.random().toString(36).slice(2, 6)}`,
+                studentName: student.name,
+                studentClass: student.class,
+                score: data.score != null ? Number(data.score) : stars * 3.33,
+                stars,
+                correct: data.correct != null ? (data.correct ? 1 : 0) : 1,
+                total: 1,
+                unitIds: [numUnit],
+                wrongWords: [],
+                answers: [{ station: stationKey, unitId: numUnit, data }],
+                createdAt: now.toISOString(),
+              }),
+            }).catch(() => {});
+          }
+        } catch {}
       }
     },
 

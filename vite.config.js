@@ -27,11 +27,20 @@ export default defineConfig({
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
-        // Khung app + JSON + ảnh được cache sẵn; model 3D (.glb) không cache sẵn vì nặng.
-        globPatterns: ['**/*.{js,css,html,svg,webp,woff2,json}'],
+        // Khung app + JSON + ảnh được cache sẵn; index.html KHÔNG cache cứng để F5 luôn cập nhật bản mới.
+        globPatterns: ['**/*.{js,css,svg,webp,woff2,json}'],
         // Thư viện 3D (~1MB) và font chữ Kirin không cache sẵn; 3D sẽ được cache khi mở lần đầu.
         globIgnores: ['**/model-viewer-*.js', '**/*cyrillic*'],
         runtimeCaching: [
+          {
+            // Yêu cầu điều hướng trang (F5, gõ URL) luôn ưu tiên tải từ mạng (NetworkFirst)
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'html-cache',
+              networkTimeoutSeconds: 3,
+            },
+          },
           {
             urlPattern: ({ url }) => /model-viewer-.*\.js$/.test(url.pathname),
             handler: 'CacheFirst',

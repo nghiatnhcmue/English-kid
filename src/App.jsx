@@ -19,7 +19,7 @@ import ReadingPage from './pages/ReadingPage.jsx';
 import WritingPage from './pages/WritingPage.jsx';
 import SearchPage from './pages/SearchPage.jsx';
 import PronunciationPage from './pages/PronunciationPage.jsx';
-import StudentProfileModal from './components/StudentProfileModal.jsx';
+import StudentAuthModal from './components/StudentAuthModal.jsx';
 
 const NAV = [
   { to: '/', label: '12 Bài học', icon: '📚', end: true },
@@ -29,14 +29,8 @@ const NAV = [
   { to: '/settings', label: t.nav.settings, icon: '⚙️' },
 ];
 
-function TopNavBar() {
+function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
   const { settings, update } = useSettings();
-  const progress = store().getProgress();
-  const streak = streakOf(progress.studyDays);
-  const totalStars = totalStarsOf(progress);
-  const [studentInfo, setStudentInfo] = useState(() => store().getStudentInfo());
-  const [showProfileModal, setShowProfileModal] = useState(false);
-  useLocation(); // vẽ lại khi đổi trang để số sao/streak luôn mới
 
   const toggleSound = () => {
     const next = !settings.sound;
@@ -45,131 +39,152 @@ function TopNavBar() {
   };
 
   return (
-    <>
-      <header className="no-print sticky top-0 z-40 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 gap-3">
-          {/* Logo / Tên Ứng Dụng */}
-          <NavLink
-            to="/"
-            className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
-          >
-            <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
-              <span>📚</span>
-            </div>
-            <div className="flex flex-col leading-tight">
-              <span className="text-xl font-black tracking-tight text-ink">
-                {t.appName}
-              </span>
-              <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
-                Global Success 6
-              </span>
-            </div>
-          </NavLink>
+    <header className="no-print sticky top-0 z-40 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 gap-3">
+        {/* Logo / Tên Ứng Dụng */}
+        <NavLink
+          to="/"
+          className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
+        >
+          <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
+            <span>📚</span>
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="text-xl font-black tracking-tight text-ink">
+              {t.appName}
+            </span>
+            <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
+              Global Success 6
+            </span>
+          </div>
+        </NavLink>
 
-          {/* Thanh Menu Điều Hướng Trung Tâm */}
-          <nav aria-label="Điều hướng chính" className="flex items-center">
-            <ul className="flex items-center gap-1 lg:gap-1.5 rounded-2xl bg-cream/70 p-1 border border-banana-soft/60">
-              {NAV.map((item) => (
-                <li key={item.to}>
-                  <NavLink
-                    to={item.to}
-                    end={item.end}
-                    onClick={() => playSfx('click')}
-                    className={({ isActive }) =>
-                      `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3.5 lg:py-2 text-xs lg:text-sm font-extrabold whitespace-nowrap transition-all select-none ${
-                        isActive
-                          ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)] scale-[1.02]'
-                          : 'text-ink-soft hover:bg-white hover:text-ink'
-                      }`
-                    }
-                  >
-                    <span className="text-base lg:text-lg leading-none" aria-hidden>
-                      {item.icon}
-                    </span>
-                    <span className="whitespace-nowrap">{item.label}</span>
-                  </NavLink>
-                </li>
-              ))}
-
-              {/* Vạch ngăn cách tinh tế */}
-              <li className="h-5 w-px bg-banana-dark/20 mx-0.5" aria-hidden />
-
-              {/* Mục dành cho Giáo viên */}
-              <li>
+        {/* Thanh Menu Điều Hướng Trung Tâm */}
+        <nav aria-label="Điều hướng chính" className="flex items-center">
+          <ul className="flex items-center gap-1 lg:gap-1.5 rounded-2xl bg-cream/70 p-1 border border-banana-soft/60">
+            {NAV.map((item) => (
+              <li key={item.to}>
                 <NavLink
-                  to="/teacher"
+                  to={item.to}
+                  end={item.end}
                   onClick={() => playSfx('click')}
                   className={({ isActive }) =>
-                    `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs lg:text-sm font-black whitespace-nowrap transition-all select-none ${
+                    `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3.5 lg:py-2 text-xs lg:text-sm font-extrabold whitespace-nowrap transition-all select-none ${
                       isActive
-                        ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
-                        : 'text-peach-dark hover:bg-peach/15'
+                        ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)] scale-[1.02]'
+                        : 'text-ink-soft hover:bg-white hover:text-ink'
                     }`
                   }
                 >
-                  <span className="text-base leading-none">👨‍🏫</span>
-                  <span className="whitespace-nowrap">Góc Giáo Viên</span>
+                  <span className="text-base lg:text-lg leading-none" aria-hidden>
+                    {item.icon}
+                  </span>
+                  <span className="whitespace-nowrap">{item.label}</span>
                 </NavLink>
               </li>
-            </ul>
-          </nav>
+            ))}
 
-          {/* Cụm Tiện Ích: Đăng nhập học sinh + Đổi bài + Số sao + Streak + Âm thanh */}
-          <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
-            {/* Nút Hồ sơ / Đăng nhập học sinh */}
-            <button
-              type="button"
-              onClick={() => {
-                playSfx('click');
-                setShowProfileModal(true);
-              }}
-              title="Bấm để đăng nhập hoặc đổi tên học sinh"
-              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:bg-cream hover:scale-105 transition-all cursor-pointer"
-            >
-              <span className="text-sm lg:text-base leading-none" aria-hidden>{studentInfo.avatar || '👤'}</span>
-              <span className="max-w-32 truncate">{studentInfo.name ? `${studentInfo.name} (${studentInfo.class || '6'})` : 'Học sinh đăng nhập'}</span>
-            </button>
+            {/* Vạch ngăn cách tinh tế */}
+            <li className="h-5 w-px bg-banana-dark/20 mx-0.5" aria-hidden />
 
-            {/* Huy hiệu Sao ⭐ */}
-            <div
-              title={`Em đã tích lũy được ${totalStars} ngôi sao`}
-              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
-            >
-              <span className="text-sm lg:text-base leading-none" aria-hidden>⭐</span>
-              <span>{totalStars}</span>
-            </div>
+            {/* Mục dành cho Giáo viên */}
+            <li>
+              <NavLink
+                to="/teacher"
+                onClick={() => playSfx('click')}
+                className={({ isActive }) =>
+                  `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs lg:text-sm font-black whitespace-nowrap transition-all select-none ${
+                    isActive
+                      ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
+                      : 'text-peach-dark hover:bg-peach/15'
+                  }`
+                }
+              >
+                <span className="text-base leading-none">👨‍🏫</span>
+                <span className="whitespace-nowrap">Góc Giáo Viên</span>
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
 
-            {/* Huy hiệu Chuỗi ngày học 🔥 */}
-            <div
-              title={streak > 0 ? `Chuỗi học liên tiếp ${streak} ngày` : 'Học mỗi ngày để giữ ngọn lửa!'}
-              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-peach-dark shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
-            >
-              <span className="text-sm lg:text-base leading-none" aria-hidden>🔥</span>
-              <span>{streak}</span>
-            </div>
+        {/* Cụm Tiện Ích: Đăng nhập học sinh + Số sao + Streak + Âm thanh */}
+        <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
+          {/* Nút Hồ sơ / Đăng nhập học sinh */}
+          <button
+            type="button"
+            onClick={() => {
+              playSfx('click');
+              onOpenAuthModal();
+            }}
+            title={currentStudent ? `Học sinh: ${currentStudent.name} (${currentStudent.class}) - Bấm để xem hoặc đăng xuất` : 'Bấm để đăng nhập'}
+            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:bg-cream hover:scale-105 transition-all cursor-pointer"
+          >
+            <span className="text-sm lg:text-base leading-none" aria-hidden>
+              {currentStudent ? (currentStudent.avatar || '🦁') : '👤'}
+            </span>
+            <span className="max-w-36 truncate">
+              {currentStudent ? `${currentStudent.name} (${currentStudent.class})` : 'Đăng nhập học sinh'}
+            </span>
+          </button>
 
-            {/* Nút bật / tắt âm thanh */}
-            <button
-              type="button"
-              onClick={toggleSound}
-              aria-label={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
-              title={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-base font-bold shadow-[0_2px_0_#e9dcc4] hover:bg-cream active:translate-y-0.5 active:shadow-none cursor-pointer border border-[#ece0cc] transition-all hover:scale-105"
-            >
-              {settings.sound ? '🔊' : '🔇'}
-            </button>
+          {/* Huy hiệu Sao ⭐ */}
+          <div
+            title={`Em đã tích lũy được ${totalStars} ngôi sao`}
+            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
+          >
+            <span className="text-sm lg:text-base leading-none" aria-hidden>⭐</span>
+            <span>{totalStars}</span>
           </div>
-        </div>
-      </header>
 
-      {/* Modal đăng nhập / đổi thông tin học sinh */}
-      {showProfileModal && (
-        <StudentProfileModal
-          onClose={() => setShowProfileModal(false)}
-          onSave={(info) => setStudentInfo(info)}
-        />
-      )}
-    </>
+          {/* Huy hiệu Chuỗi ngày học 🔥 */}
+          <div
+            title={streak > 0 ? `Chuỗi học liên tiếp ${streak} ngày` : 'Học mỗi ngày để giữ ngọn lửa!'}
+            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-peach-dark shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
+          >
+            <span className="text-sm lg:text-base leading-none" aria-hidden>🔥</span>
+            <span>{streak}</span>
+          </div>
+
+          {/* Nút bật / tắt âm thanh */}
+          <button
+            type="button"
+            onClick={toggleSound}
+            aria-label={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
+            title={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-base font-bold shadow-[0_2px_0_#e9dcc4] hover:bg-cream active:translate-y-0.5 active:shadow-none cursor-pointer border border-[#ece0cc] transition-all hover:scale-105"
+          >
+            {settings.sound ? '🔊' : '🔇'}
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function MobileTopBar({ currentStudent, onOpenAuthModal, totalStars }) {
+  return (
+    <header className="no-print md:hidden sticky top-0 z-40 bg-white/95 border-b-2 border-banana-soft px-3 py-2 flex items-center justify-between shadow-xs backdrop-blur-md">
+      <NavLink to="/" className="flex items-center gap-2">
+        <span className="text-2xl leading-none">📚</span>
+        <span className="text-base font-black text-ink">{t.appName}</span>
+      </NavLink>
+      <div className="flex items-center gap-2">
+        <button
+          type="button"
+          onClick={() => {
+            playSfx('click');
+            onOpenAuthModal();
+          }}
+          className="flex items-center gap-1.5 rounded-xl bg-cream px-2.5 py-1 text-xs font-black text-ink border border-banana-soft max-w-[150px] truncate shadow-2xs"
+        >
+          <span>{currentStudent ? (currentStudent.avatar || '🦁') : '👤'}</span>
+          <span className="truncate">{currentStudent ? currentStudent.name : 'Đăng nhập'}</span>
+        </button>
+        <span className="flex items-center gap-1 rounded-xl bg-white px-2 py-1 text-xs font-black text-ink border border-banana-soft shadow-2xs">
+          ⭐ {totalStars}
+        </span>
+      </div>
+    </header>
   );
 }
 
@@ -218,34 +233,74 @@ function Fresh({ component: Component, ...props }) {
   return <Component key={location.key} {...props} />;
 }
 
+function AppContent() {
+  const location = useLocation();
+  const [currentStudent, setCurrentStudent] = useState(() => store().getCurrentStudent());
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const progress = store().getProgress();
+  const streak = streakOf(progress.studyDays);
+  const totalStars = totalStarsOf(progress);
+
+  // Nếu chưa đăng nhập học sinh nào VÀ không phải đang ở trang Giáo viên -> Bắt buộc mở modal đăng nhập
+  const isTeacherPage = location.pathname.startsWith('/teacher');
+  const mustLogin = !currentStudent && !isTeacherPage;
+
+  const handleLoginSuccess = (stu) => {
+    setCurrentStudent(stu);
+    setShowAuthModal(false);
+  };
+
+  return (
+    <div className="min-h-dvh flex flex-col bg-cream text-ink">
+      <TopNavBar
+        currentStudent={currentStudent}
+        onOpenAuthModal={() => setShowAuthModal(true)}
+        totalStars={totalStars}
+        streak={streak}
+      />
+      <MobileTopBar
+        currentStudent={currentStudent}
+        onOpenAuthModal={() => setShowAuthModal(true)}
+        totalStars={totalStars}
+      />
+      <main className="mx-auto w-full max-w-4xl flex-1 px-4 pt-4 pb-28 md:pb-12 md:pt-6">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<Fresh component={SearchPage} />} />
+          <Route path="/pronunciation" element={<Fresh component={PronunciationPage} />} />
+          <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
+          <Route path="/listening" element={<Fresh component={ListeningPage} />} />
+          <Route path="/speaking" element={<Fresh component={SpeakingPage} />} />
+          <Route path="/reading" element={<Fresh component={ReadingPage} />} />
+          <Route path="/writing" element={<Fresh component={WritingPage} />} />
+          <Route path="/unit/:unitId" element={<UnitPage />} />
+          <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />
+          <Route path="/review/:mode" element={<Fresh component={PracticePage} review />} />
+          <Route path="/test" element={<Fresh component={TestPage} />} />
+          <Route path="/journal" element={<JournalPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/teacher" element={<TeacherPage />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </main>
+      <BottomNav />
+
+      {/* Modal đăng nhập đơn giản cho học sinh yếu máy tính */}
+      <StudentAuthModal
+        isOpen={mustLogin || showAuthModal}
+        forceLogin={mustLogin}
+        onClose={() => setShowAuthModal(false)}
+        onLoginSuccess={handleLoginSuccess}
+      />
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <SettingsProvider>
       <HashRouter>
-        <div className="min-h-dvh flex flex-col bg-cream text-ink">
-          <TopNavBar />
-          <main className="mx-auto w-full max-w-4xl flex-1 px-4 pt-4 pb-28 md:pb-12 md:pt-6">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/search" element={<Fresh component={SearchPage} />} />
-              <Route path="/pronunciation" element={<Fresh component={PronunciationPage} />} />
-              <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
-              <Route path="/listening" element={<Fresh component={ListeningPage} />} />
-              <Route path="/speaking" element={<Fresh component={SpeakingPage} />} />
-              <Route path="/reading" element={<Fresh component={ReadingPage} />} />
-              <Route path="/writing" element={<Fresh component={WritingPage} />} />
-              <Route path="/unit/:unitId" element={<UnitPage />} />
-              <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />
-              <Route path="/review/:mode" element={<Fresh component={PracticePage} review />} />
-              <Route path="/test" element={<Fresh component={TestPage} />} />
-              <Route path="/journal" element={<JournalPage />} />
-              <Route path="/settings" element={<SettingsPage />} />
-              <Route path="/teacher" element={<TeacherPage />} />
-              <Route path="*" element={<HomePage />} />
-            </Routes>
-          </main>
-          <BottomNav />
-        </div>
+        <AppContent />
       </HashRouter>
     </SettingsProvider>
   );

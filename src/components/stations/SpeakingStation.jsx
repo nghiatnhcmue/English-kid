@@ -7,6 +7,7 @@ import { isSttSupported, recognizeOnce, speak } from '../../utils/speech.js';
 import { similarity, speakingLevel } from '../../utils/scene.js';
 import { playSfx } from '../../utils/sfx.js';
 import { useSettings } from '../../settings.jsx';
+import { store } from '../../utils/storage.js';
 
 /**
  * Hàm so sánh từng từ giữa câu mẫu và câu máy nghe được
@@ -150,6 +151,11 @@ export default function SpeakingStation({ unit, onFinish }) {
           setStars(3);
           setFeedback('Đã thu âm giọng nói của em! Bấm nghe lại để so sánh với bản xứ nhé!');
           playSfx('correct');
+          store().recordStationProgress(unit.unitId, 'speaking', {
+            score: 85,
+            stars: 3,
+            correct: true,
+          });
         }
       }, 5000);
     }
@@ -177,6 +183,11 @@ export default function SpeakingStation({ unit, onFinish }) {
       setStars(1);
       setFeedback('Chưa nghe rõ giọng em. Đừng nản nhé, hãy nghe lại loa và thử lại!');
       playSfx('wrong');
+      store().recordStationProgress(unit.unitId, 'speaking', {
+        score: 40,
+        stars: 1,
+        correct: false,
+      });
       return;
     }
 
@@ -207,6 +218,12 @@ export default function SpeakingStation({ unit, onFinish }) {
       setFeedback('💪 Cố gắng lên nhé! Nghe lại giọng bản xứ đọc chậm rồi thử lại nào!');
       playSfx('click');
     }
+    const earnedStars = percent >= 80 ? 3 : percent >= 50 ? 2 : 1;
+    store().recordStationProgress(unit.unitId, 'speaking', {
+      score: percent,
+      stars: earnedStars,
+      correct: percent >= 50,
+    });
   };
 
   // Phân tích từng từ khi đã có recognizedText

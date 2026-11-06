@@ -29,7 +29,29 @@ export default {
     }
 
     if (env.ASSETS) {
-      return env.ASSETS.fetch(request);
+      const response = await env.ASSETS.fetch(request);
+      const contentType = response.headers.get('content-type') || '';
+      
+      // Chống lưu cache cứng cho HTML, manifest và service worker để F5/Ctrl+F5 luôn tải bản mới nhất
+      if (
+        url.pathname === '/' ||
+        url.pathname.endsWith('.html') ||
+        url.pathname.endsWith('sw.js') ||
+        url.pathname.endsWith('.webmanifest') ||
+        contentType.includes('text/html')
+      ) {
+        const newHeaders = new Headers(response.headers);
+        newHeaders.set('Cache-Control', 'no-cache, no-store, must-revalidate, max-age=0');
+        newHeaders.set('Pragma', 'no-cache');
+        newHeaders.set('Expires', '0');
+        return new Response(response.body, {
+          status: response.status,
+          statusText: response.statusText,
+          headers: newHeaders,
+        });
+      }
+
+      return response;
     }
 
     return new Response('Not Found', { status: 404 });

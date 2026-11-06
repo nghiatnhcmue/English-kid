@@ -10,6 +10,8 @@ import { Award, BookOpen, CheckCircle2, ChevronRight, Clock, FileText, Lock, Spa
 import TeacherAssignmentManager from '../components/TeacherAssignmentManager.jsx';
 import TeacherDataEditor from '../components/TeacherDataEditor.jsx';
 import TeacherGuide from '../components/TeacherGuide.jsx';
+import TeacherStudentManager from '../components/TeacherStudentManager.jsx';
+import TeacherClassProgress from '../components/TeacherClassProgress.jsx';
 
 export default function TeacherPage() {
   const [pin, setPin] = useState('');
@@ -243,6 +245,32 @@ export default function TeacherPage() {
         >
           <span>📊</span>
           <span>Bảng Điểm ({filteredScores.length})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('students')}
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'students'
+              ? 'bg-peach text-white shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>👥</span>
+          <span>Tài Khoản Học Sinh</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('progress_matrix')}
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'progress_matrix'
+              ? 'bg-peach text-white shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>📈</span>
+          <span>Tiến Độ Cả Lớp</span>
         </button>
 
         <button
@@ -544,6 +572,12 @@ export default function TeacherPage() {
 
       {/* TAB GIAO BÀI TẬP THEO TUẦN */}
       {activeTab === 'assignments' && <TeacherAssignmentManager />}
+
+      {/* TAB QUẢN LÝ TÀI KHOẢN HỌC SINH */}
+      {activeTab === 'students' && <TeacherStudentManager />}
+
+      {/* TAB MA TRẬN TIẾN ĐỘ CẢ LỚP */}
+      {activeTab === 'progress_matrix' && <TeacherClassProgress />}
 
       {/* TAB TÙY BIẾN SÂU DATA */}
       {activeTab === 'editor' && <TeacherDataEditor />}

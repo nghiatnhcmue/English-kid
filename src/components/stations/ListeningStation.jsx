@@ -5,6 +5,7 @@ import { Button3D, SpeakerButton } from '../ui.jsx';
 import { speak } from '../../utils/speech.js';
 import { playSfx } from '../../utils/sfx.js';
 import { useSettings } from '../../settings.jsx';
+import { store } from '../../utils/storage.js';
 
 /**
  * Trạm Luyện Nghe (Skills 2 / Listening Comprehension):
@@ -51,6 +52,12 @@ export default function ListeningStation({ unit, onFinish }) {
     } else {
       playSfx('wrong');
     }
+    // Ghi nhận tiến độ làm bài nghe của học sinh và đồng bộ cho giáo viên
+    store().recordStationProgress(unit.unitId, 'listenstation', {
+      correct: isCorrect,
+      score: isCorrect ? 10 : 5,
+      stars: isCorrect ? 3 : 1,
+    });
   };
 
   const handleReset = () => {
