@@ -1,0 +1,24 @@
+{
+  "unitId": 1,
+  "unitTitle": "Unit 1: My New School",
+  "unitNameVi": "Trường học mới của em",
+  "vocabularies": [
+    { "id": "u1_01", "word": "school bag", "phonetic": "/ˈskuːl bæɡ/", "wordType": "Danh từ", "meaning": "Cặp sách", "hint": "Túi đeo sau lưng để đựng sách vở khi đi học", "exampleEn": "My school bag is very heavy today.", "exampleVi": "Hôm nay cặp sách của em rất nặng.", "emoji": "🎒" },
+    { "id": "u1_02", "word": "pencil case", "phonetic": "/ˈpensl keɪs/", "wordType": "Danh từ", "meaning": "Hộp bút", "hint": "Hộp hoặc túi nhỏ đựng bút, thước, tẩy", "exampleEn": "I keep my pens in my pencil case.", "exampleVi": "Em để bút trong hộp bút.", "emoji": "👝" },
+    { "id": "u1_03", "word": "pencil sharpener", "phonetic": "/ˈpensl ʃɑːpnə/", "wordType": "Danh từ", "meaning": "Cái gọt bút chì", "hint": "Dụng cụ làm nhọn đầu bút chì khi bị cùn", "exampleEn": "Can I borrow your pencil sharpener?", "exampleVi": "Tớ mượn cái gọt bút chì của bạn được không?", "emoji": "✏️" },
+    { "id": "u1_04", "word": "rubber", "phonetic": "/ˈrʌbə/", "wordType": "Danh từ", "meaning": "Cục tẩy", "hint": "Dùng để xóa nét bút chì (Anh–Mỹ gọi là eraser)", "exampleEn": "I use a rubber to fix my mistakes.", "exampleVi": "Em dùng cục tẩy để xóa lỗi sai.", "emoji": "🧽" },
+    { "id": "u1_05", "word": "calculator", "phonetic": "/ˈkælkjuleɪtə/", "wordType": "Danh từ", "meaning": "Máy tính cầm tay", "hint": "Dụng cụ dùng để tính toán nhanh trong giờ Toán", "exampleEn": "I use a calculator in maths lessons.", "exampleVi": "Em dùng máy tính cầm tay trong tiết Toán.", "emoji": "🧮" },
+    { "id": "u1_06", "word": "compass", "phonetic": "/ˈkʌmpəs/", "wordType": "Danh từ", "meaning": "Com-pa", "hint": "Dụng cụ dùng để vẽ hình tròn", "exampleEn": "We draw a circle with a compass.", "exampleVi": "Chúng em vẽ hình tròn bằng com-pa.", "emoji": "🧭" },
+    { "id": "u1_07", "word": "ruler", "phonetic": "/ˈruːlə/", "wordType": "Danh từ", "meaning": "Thước kẻ", "hint": "Dùng để kẻ đường thẳng và đo độ dài", "exampleEn": "Draw a line with your ruler.", "exampleVi": "Hãy kẻ một đường thẳng bằng thước kẻ.", "emoji": "📏" },
+    { "id": "u1_08", "word": "textbook", "phonetic": "/ˈtekstbʊk/", "wordType": "Danh từ", "meaning": "Sách giáo khoa", "hint": "Sách thầy cô dùng để dạy trên lớp", "exampleEn": "Open your textbook at page ten.", "exampleVi": "Các em mở sách giáo khoa trang mười.", "emoji": "📘" },
+    { "id": "u1_09", "word": "notebook", "phonetic": "/ˈnəʊtbʊk/", "wordType": "Danh từ", "meaning": "Vở ghi", "hint": "Cuốn vở để em ghi bài", "exampleEn": "I write new words in my notebook.", "exampleVi": "Em viết từ mới vào vở ghi.", "emoji": "📓" },
+    { "id": "u1_10", "word": "uniform", "phonetic": "/ˈjuːnɪfɔːm/", "wordType": "Danh từ", "meaning": "Đồng phục", "hint": "Quần áo học sinh mặc giống nhau khi đến trường", "exampleEn": "We wear our uniform on Mondays.", "exampleVi": "Chúng em mặc đồng phục vào các ngày thứ Hai.", "emoji": "👔" },
+    { "id": "u1_11", "word": "classmate", "phonetic": "/ˈklɑːsmeɪt/", "wordType": "Danh từ", "meaning": "Bạn cùng lớp", "hint": "Người học chung lớp với em", "exampleEn": "Lan is my new classmate.", "exampleVi": "Lan là bạn cùng lớp mới của em.", "emoji": "🧑‍🤝‍🧑" },
+    { "id": "u1_12", "word": "boarding school", "phonetic": "/ˈbɔːdɪŋ skuːl/", "wordType": "Danh từ", "meaning": "Trường nội trú", "hint": "Trường mà học sinh ăn, ở và học luôn tại trường", "exampleEn": "Students live and study at a boarding school.", "exampleVi": "Học sinh sống và học tập ở trường nội trú.", "emoji": "🏫" },
+    { "id": "u1_13", "word": "homework", "phonetic": "/ˈhəʊmwɜːk/", "wordType": "Danh từ", "meaning": "Bài tập về nhà", "hint": "Bài thầy cô giao để em làm ở nhà", "exampleEn": "I do my homework after dinner.", "exampleVi": "Em làm bài tập về nhà sau bữa tối.", "emoji": "📝" },
+    { "id": "u1_14", "word": "science", "phonetic": "/ˈsaɪəns/", "wordType": "Danh từ", "meaning": "Môn Khoa học", "hint": "Môn học về thế giới tự nhiên, có làm thí nghiệm", "exampleEn": "We have science on Tuesday.", "exampleVi": "Chúng em có môn Khoa học vào thứ Ba.", "emoji": "🔬" },
+    { "id": "u1_15", "word": "history", "phonetic": "/ˈhɪstri/", "wordType": "Danh từ", "meaning": "Môn Lịch sử", "hint": "Môn học về những sự kiện trong quá khứ", "exampleEn": "I love history lessons.", "exampleVi": "Em rất thích các tiết Lịch sử.", "emoji": "📜" },
+    { "id": "u1_16", "word": "creative", "phonetic": "/kriˈeɪtɪv/", "wordType": "Tính từ", "meaning": "Sáng tạo", "hint": "Có nhiều ý tưởng mới lạ", "exampleEn": "My art teacher is very creative.", "exampleVi": "Cô giáo dạy Mĩ thuật của em rất sáng tạo.", "emoji": "🎨" }
+  ],
+  "extraQuestions": []
+}

@@ -1,0 +1,109 @@
+@import '@fontsource-variable/nunito';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Nunito Variable', 'Nunito', system-ui, sans-serif;
+  --color-cream: #fff9ed;
+  --color-ink: #3a2e25;
+  --color-ink-soft: #6f6157;
+  --color-banana: #ffc83d;
+  --color-banana-dark: #e0a400;
+  --color-banana-soft: #fff1c7;
+  --color-mint: #3bb78f;
+  --color-mint-dark: #2a8f6e;
+  --color-mint-soft: #d8f5ea;
+  --color-sky: #8ec5ff;
+  --color-sky-dark: #4f95e0;
+  --color-sky-soft: #e3f0ff;
+  --color-peach: #f26b3a;
+  --color-peach-dark: #c94f22;
+  --color-peach-soft: #ffe4d6;
+  --color-rose-soft: #ffe1e1;
+
+  --animate-shake: shake 0.45s ease-in-out;
+  --animate-pop: pop 0.35s ease-out;
+  --animate-float: float 2.4s ease-in-out infinite;
+  --animate-pulse-ring: pulse-ring 1s ease-out infinite;
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+  }
+  @keyframes pop {
+    0% { transform: scale(0.85); opacity: 0.4; }
+    70% { transform: scale(1.06); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgb(242 107 58 / 0.45); }
+    100% { box-shadow: 0 0 0 16px rgb(242 107 58 / 0); }
+  }
+}
+
+html,
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-sans);
+}
+
+body {
+  min-height: 100dvh;
+  overscroll-behavior-y: none;
+}
+
+/* Định dạng viền nét khi điều hướng bằng bàn phím (tránh học sinh bị lạc) */
+:focus-visible {
+  outline: 3px solid #ffc83d;
+  outline-offset: 3px;
+  border-radius: 1rem;
+}
+
+/* Thẻ lật 3D */
+.flip-scene { perspective: 1200px; }
+.flip-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.flip-card.is-flipped { transform: rotateY(180deg); }
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flip-back { transform: rotateY(180deg); }
+
+/* Pháo hoa ngôi sao */
+.confetti-piece {
+  position: absolute;
+  top: -10%;
+  animation: confetti-fall 1.6s ease-in forwards;
+}
+@keyframes confetti-fall {
+  to { transform: translateY(110vh) rotate(540deg); opacity: 0.2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .print-only { display: block !important; }
+  .print-card { box-shadow: none !important; border: 1px solid #ddd; break-inside: avoid; }
+}
+.print-only { display: none; }
