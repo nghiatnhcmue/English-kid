@@ -17,14 +17,14 @@ export default function UnitSwitcher({ className = 'flex' }) {
   return (
     <label className={`relative items-center ${className}`}>
       <span className="sr-only">{t.stage.chooseUnit}</span>
-      <BookOpen className="pointer-events-none absolute left-3 h-5 w-5 text-ink-soft" aria-hidden />
+      <BookOpen className="pointer-events-none absolute left-3 h-4 w-4 text-ink-soft shrink-0" aria-hidden />
       <select
         value={current}
         onChange={(e) => {
           playSfx('click');
           if (e.target.value) navigate(`/unit/${e.target.value}`);
         }}
-        className="min-h-12 w-full cursor-pointer appearance-none rounded-2xl border-2 border-banana-soft bg-white py-2 pr-9 pl-10 text-base font-black text-ink shadow-[0_3px_0_#e9dcc4] focus-visible:ring-4 focus-visible:ring-banana focus-visible:outline-none"
+        className="h-10 w-full cursor-pointer appearance-none rounded-2xl border border-banana-soft bg-white py-1.5 pr-8 pl-9 text-xs lg:text-sm font-extrabold text-ink shadow-[0_2px_0_#e9dcc4] hover:border-banana-dark/40 focus-visible:ring-3 focus-visible:ring-banana focus-visible:outline-none transition-all truncate"
       >
         <option value="">📚 {t.stage.chooseUnit}…</option>
         {units.map((u) => (
@@ -33,7 +33,7 @@ export default function UnitSwitcher({ className = 'flex' }) {
           </option>
         ))}
       </select>
-      <span className="pointer-events-none absolute right-3 text-sm text-ink-soft" aria-hidden>
+      <span className="pointer-events-none absolute right-3 text-xs text-ink-soft" aria-hidden>
         ▼
       </span>
     </label>

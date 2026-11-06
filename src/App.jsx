@@ -36,22 +36,29 @@ function TopNavBar() {
   };
 
   return (
-    <header className="no-print sticky top-0 z-30 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-2.5">
-        {/* Logo / App Name */}
+    <header className="no-print sticky top-0 z-40 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 gap-3">
+        {/* Logo / Tên Ứng Dụng */}
         <NavLink
           to="/"
-          className="flex items-center gap-2.5 text-xl font-black text-ink hover:opacity-85 transition-opacity"
+          className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-banana text-2xl shadow-[0_3px_0_var(--color-banana-dark)]">
-            📚
-          </span>
-          <span className="tracking-tight">{t.appName}</span>
+          <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
+            <span>📚</span>
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="text-xl font-black tracking-tight text-ink">
+              {t.appName}
+            </span>
+            <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
+              Global Success 6
+            </span>
+          </div>
         </NavLink>
 
-        {/* Desktop Navigation Links */}
-        <nav aria-label="Điều hướng chính">
-          <ul className="flex items-center gap-1.5">
+        {/* Thanh Menu Điều Hướng Trung Tâm */}
+        <nav aria-label="Điều hướng chính" className="flex items-center">
+          <ul className="flex items-center gap-1 lg:gap-1.5 rounded-2xl bg-cream/70 p-1 border border-banana-soft/60">
             {NAV.map((item) => (
               <li key={item.to}>
                 <NavLink
@@ -59,20 +66,23 @@ function TopNavBar() {
                   end={item.end}
                   onClick={() => playSfx('click')}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 rounded-2xl px-4 py-2 text-base font-extrabold transition-all ${
+                    `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3.5 lg:py-2 text-xs lg:text-sm font-extrabold whitespace-nowrap transition-all select-none ${
                       isActive
-                        ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)]'
-                        : 'text-ink-soft hover:bg-cream hover:text-ink'
+                        ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)] scale-[1.02]'
+                        : 'text-ink-soft hover:bg-white hover:text-ink'
                     }`
                   }
                 >
-                  <span className="text-xl" aria-hidden>
+                  <span className="text-base lg:text-lg leading-none" aria-hidden>
                     {item.icon}
                   </span>
-                  <span>{item.label}</span>
+                  <span className="whitespace-nowrap">{item.label}</span>
                 </NavLink>
               </li>
             ))}
+
+            {/* Vạch ngăn cách tinh tế */}
+            <li className="h-5 w-px bg-banana-dark/20 mx-0.5" aria-hidden />
 
             {/* Mục dành cho Giáo viên */}
             <li>
@@ -80,37 +90,49 @@ function TopNavBar() {
                 to="/teacher"
                 onClick={() => playSfx('click')}
                 className={({ isActive }) =>
-                  `flex items-center gap-1.5 rounded-2xl px-3.5 py-2 text-sm font-black transition-all ${
+                  `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs lg:text-sm font-black whitespace-nowrap transition-all select-none ${
                     isActive
                       ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
-                      : 'text-peach-dark hover:bg-rose-soft/50'
+                      : 'text-peach-dark hover:bg-peach/15'
                   }`
                 }
               >
-                <span>👨‍🏫</span>
-                <span>Góc Giáo Viên</span>
+                <span className="text-base leading-none">👨‍🏫</span>
+                <span className="whitespace-nowrap">Góc Giáo Viên</span>
               </NavLink>
             </li>
           </ul>
         </nav>
 
-        {/* Quick Stats & Audio Toggle */}
-        <div className="flex items-center gap-2">
-          <UnitSwitcher className="hidden w-48 lg:flex" />
-          <div className="flex items-center gap-1 rounded-2xl bg-cream px-3 py-1.5 text-sm font-black text-ink shadow-xs border border-banana-soft">
-            <span aria-hidden>⭐</span>
+        {/* Cụm Tiện Ích: Đổi bài + Số sao + Chuỗi streak + Âm thanh */}
+        <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
+          <UnitSwitcher className="hidden xl:flex w-52" />
+
+          {/* Huy hiệu Sao ⭐ */}
+          <div
+            title={`Em đã tích lũy được ${totalStars} ngôi sao`}
+            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
+          >
+            <span className="text-sm lg:text-base leading-none" aria-hidden>⭐</span>
             <span>{totalStars}</span>
           </div>
-          <div className="flex items-center gap-1 rounded-2xl bg-cream px-3 py-1.5 text-sm font-black text-ink shadow-xs border border-banana-soft">
-            <span aria-hidden>🔥</span>
+
+          {/* Huy hiệu Chuỗi ngày học 🔥 */}
+          <div
+            title={streak > 0 ? `Chuỗi học liên tiếp ${streak} ngày` : 'Học mỗi ngày để giữ ngọn lửa!'}
+            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-peach-dark shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
+          >
+            <span className="text-sm lg:text-base leading-none" aria-hidden>🔥</span>
             <span>{streak}</span>
           </div>
+
+          {/* Nút bật / tắt âm thanh */}
           <button
             type="button"
             onClick={toggleSound}
             aria-label={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
             title={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-lg font-bold shadow-[0_3px_0_#e9dcc4] hover:bg-cream active:translate-y-0.5 active:shadow-none cursor-pointer border border-[#ece0cc]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-base font-bold shadow-[0_2px_0_#e9dcc4] hover:bg-cream active:translate-y-0.5 active:shadow-none cursor-pointer border border-[#ece0cc] transition-all hover:scale-105"
           >
             {settings.sound ? '🔊' : '🔇'}
           </button>
@@ -142,7 +164,7 @@ function BottomNav() {
               <span className="text-2xl leading-none" aria-hidden>
                 {item.icon}
               </span>
-              <span>{item.label}</span>
+              <span className="whitespace-nowrap">{item.label}</span>
             </NavLink>
           </li>
         ))}
