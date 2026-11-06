@@ -22,14 +22,8 @@ import PronunciationPage from './pages/PronunciationPage.jsx';
 import StudentProfileModal from './components/StudentProfileModal.jsx';
 
 const NAV = [
-  { to: '/', label: t.nav.home, icon: '🏠', end: true },
+  { to: '/', label: '12 Bài học', icon: '📚', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
-  { to: '/pronunciation', label: 'Phát âm', icon: '🗣️' },
-  { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
-  { to: '/listening', label: 'Nghe', icon: '👂' },
-  { to: '/speaking', label: 'Nói', icon: '🎙️' },
-  { to: '/reading', label: 'Đọc', icon: '📖' },
-  { to: '/writing', label: 'Viết', icon: '✍️' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
   { to: '/settings', label: t.nav.settings, icon: '⚙️' },
@@ -180,13 +174,11 @@ function TopNavBar() {
 }
 
 const MOBILE_NAV = [
-  { to: '/', label: 'Trang chủ', icon: '🏠', end: true },
+  { to: '/', label: '12 Bài học', icon: '📚', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
-  { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
-  { to: '/listening', label: 'Nghe', icon: '👂' },
-  { to: '/speaking', label: 'Nói', icon: '🎙️' },
-  { to: '/reading', label: 'Đọc', icon: '📖' },
-  { to: '/writing', label: 'Viết', icon: '✍️' },
+  { to: '/test', label: 'Test tuần', icon: '📝' },
+  { to: '/journal', label: 'Nhật ký', icon: '📒' },
+  { to: '/teacher', label: 'Giáo viên', icon: '👨‍🏫' },
 ];
 
 function BottomNav() {
@@ -195,7 +187,7 @@ function BottomNav() {
       className="no-print md:hidden fixed inset-x-0 bottom-0 z-30 border-t-2 border-banana-soft bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-lg backdrop-blur"
       aria-label="Điều hướng điện thoại"
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-7">
+      <ul className="mx-auto grid max-w-lg grid-cols-5">
         {MOBILE_NAV.map((item) => (
           <li key={item.to}>
             <NavLink

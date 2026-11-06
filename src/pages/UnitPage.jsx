@@ -227,7 +227,7 @@ export default function UnitPage() {
           {/* Trạm 5: Kỹ năng Nói & Shadowing (Skills 1) */}
           <Button3D
             tone="peach"
-            to={`/speaking?unit=${unit.unitId}`}
+            to={`/unit/${unit.unitId}/speaking`}
             className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">

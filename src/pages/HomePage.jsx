@@ -198,220 +198,11 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* Khối Banner: Sổ tay Ngữ pháp cốt lõi 12 Unit */}
-      <section aria-label="Sổ tay Ngữ pháp" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-banana-soft via-cream to-mint-soft p-6 sm:p-7 shadow-[0_6px_0_#efe3cc] border-2 border-banana-dark/20">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
-              📐
-            </span>
-            <div>
-              <span className="rounded-full bg-banana px-3 py-1 text-xs font-black text-ink shadow-xs">
-                Chuyên biệt cho người mất gốc
-              </span>
-              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
-                Sổ tay Ngữ pháp 12 Unit
-              </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Công thức cốt lõi đóng khung, mẹo nhận biết nhanh và 36 câu trắc nghiệm có lời giải chi tiết
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/grammar"
-            onClick={() => playSfx('click')}
-            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-banana px-6 text-lg font-black text-ink shadow-[0_4px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
-          >
-            <span>Học Ngữ pháp →</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Khối Banner: Phòng Luyện Nghe & Nói chuẩn bản ngữ */}
-      <section aria-label="Phòng Luyện Nghe" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-peach-soft via-cream to-sky-soft p-6 sm:p-7 shadow-[0_6px_0_#ffd2bf] border-2 border-peach/30">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
-              👂
-            </span>
-            <div>
-              <span className="rounded-full bg-peach text-white px-3 py-1 text-xs font-black shadow-xs">
-                Âm thanh bản xứ chuẩn US/UK
-              </span>
-              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
-                Phòng Luyện Nghe & Nói 12 Unit
-              </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Nghe đối thoại học đường, trắc nghiệm nghe hiểu, chế độ nghe chậm 0.65x và luyện nói nhại giọng (Shadowing)
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/listening"
-            onClick={() => playSfx('click')}
-            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
-          >
-            <span>Vào Luyện Nghe →</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Khối Banner: Phòng Luyện Nói & Chấm điểm phát âm AI */}
-      <section aria-label="Phòng Luyện Nói" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-mint-soft via-cream to-peach-soft p-6 sm:p-7 shadow-[0_6px_0_#bfe6d6] border-2 border-mint-dark/20">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
-              🎙️
-            </span>
-            <div>
-              <span className="rounded-full bg-mint text-white px-3 py-1 text-xs font-black shadow-xs">
-                Chấm điểm phát âm AI
-              </span>
-              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
-                Phòng Luyện Nói & Shadowing
-              </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Luyện nhại giọng câu giao tiếp SGK, bấm micro thu âm, nhận diện giọng nói và nghe lại chính mình
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/speaking"
-            onClick={() => playSfx('click')}
-            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-mint px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
-          >
-            <span>Vào Luyện Nói →</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Khối Banner: Phòng Luyện Phát Âm & Ngữ Âm 12 Unit */}
-      <section aria-label="Phòng Luyện Phát Âm" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-peach-soft via-cream to-banana-soft p-6 sm:p-7 shadow-[0_6px_0_#ffd2bf] border-2 border-peach/30">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
-              🗣️
-            </span>
-            <div>
-              <span className="rounded-full bg-peach text-white px-3 py-1 text-xs font-black shadow-xs">
-                A Closer Look 1 · 12 Cặp Âm Chuẩn SGK
-              </span>
-              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
-                Phòng Luyện Phát Âm 12 Unit
-              </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Khẩu hình tiếng Việt, từ ví dụ có highlight, trắc nghiệm phân biệt âm và vè luyện cơ miệng
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/pronunciation"
-            onClick={() => playSfx('click')}
-            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
-          >
-            <span>Luyện Phát Âm →</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Khối Banner: Phòng Luyện Đọc hiểu trực quan */}
-      <section aria-label="Phòng Luyện Đọc hiểu" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-sky-soft via-cream to-mint-soft p-6 sm:p-7 shadow-[0_6px_0_#c4dcf7] border-2 border-sky/30">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
-              📖
-            </span>
-            <div>
-              <span className="rounded-full bg-sky text-ink px-3 py-1 text-xs font-black shadow-xs">
-                Đoạn văn A1 chuẩn SGK Global Success
-              </span>
-              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
-                Phòng Luyện Đọc hiểu 12 Unit
-              </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Đoạn văn ngắn có loa đọc toàn văn, câu hỏi trắc nghiệm kiểm tra nắm ý và bài tập sắp xếp câu
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/reading"
-            onClick={() => playSfx('click')}
-            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-sky px-6 text-lg font-black text-ink shadow-[0_4px_0_var(--color-sky-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
-          >
-            <span>Vào Luyện Đọc →</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* Khối Banner: Phòng Luyện Viết & Sắp xếp câu */}
-      <section aria-label="Phòng Luyện Viết" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-mint-soft via-cream to-banana-soft p-6 sm:p-7 shadow-[0_6px_0_#bfe6d6] border-2 border-mint-dark/20">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-          <div className="flex items-center gap-4">
-            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
-              ✍️
-            </span>
-            <div>
-              <span className="rounded-full bg-mint text-white px-3 py-1 text-xs font-black shadow-xs">
-                Guided Writing · Xếp khối từ
-              </span>
-              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
-                Phòng Luyện Viết 12 Unit
-              </h2>
-              <p className="text-sm sm:text-base font-bold text-ink-soft">
-                Sắp xếp các khối từ xáo trộn thành câu hoàn chỉnh đúng ngữ pháp, có dịch nghĩa và chấm điểm tức thì
-              </p>
-            </div>
-          </div>
-          <Link
-            to="/writing"
-            onClick={() => playSfx('click')}
-            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-mint px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
-          >
-            <span>Vào Luyện Viết →</span>
-          </Link>
-        </div>
-      </section>
-
       {/* Chuỗi ngày học liên tiếp */}
       <div className="flex items-center justify-center gap-2 rounded-2xl bg-white/90 border border-banana-soft px-4 py-3 text-center text-base sm:text-lg font-black text-ink shadow-xs">
         <span className="text-2xl" aria-hidden>🔥</span>
         <span>{t.home.streak(streak)}</span>
       </div>
-
-      {/* 2 Khối: Test tuần & Ôn từ khó */}
-      <section aria-label={t.home.practiceArea}>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Button3D
-            tone="peach"
-            to="/test"
-            className="min-h-24 flex-col items-start justify-center gap-1! p-5 text-left"
-          >
-            <span className="flex items-center gap-2 text-xl font-black">
-              <span className="text-2xl" aria-hidden>📝</span>
-              <span>{t.home.weeklyTest}</span>
-            </span>
-            <span className="text-sm font-bold opacity-90">{t.home.weeklyTestSub}</span>
-          </Button3D>
-
-          {hardCount > 0 ? (
-            <Button3D
-              tone="sky"
-              to="/review/flashcard"
-              className="min-h-24 flex-col items-start justify-center gap-1! p-5 text-left"
-            >
-              <span className="flex items-center gap-2 text-xl font-black">
-                <span className="text-2xl" aria-hidden>🔴</span>
-                <span>{t.home.hardWords(hardCount)}</span>
-              </span>
-              <span className="text-sm font-bold opacity-90">{t.home.hardWordsSub}</span>
-            </Button3D>
-          ) : (
-            <div className="flex min-h-24 items-center justify-center rounded-3xl border-3 border-dashed border-banana/50 bg-white/70 px-5 text-center font-bold text-ink-soft">
-              <span className="text-base sm:text-lg">🌱 {t.home.noHardWords}</span>
-            </div>
-          )}
-        </div>
-      </section>
 
       {/* 12 Bài học Unit */}
       <section>
@@ -474,6 +265,41 @@ export default function HomePage() {
             );
           })}
         </ul>
+      </section>
+
+      {/* 2 Khối: Test tuần & Ôn từ khó */}
+      <section aria-label={t.home.practiceArea}>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Button3D
+            tone="peach"
+            to="/test"
+            className="min-h-24 flex-col items-start justify-center gap-1! p-5 text-left"
+          >
+            <span className="flex items-center gap-2 text-xl font-black">
+              <span className="text-2xl" aria-hidden>📝</span>
+              <span>{t.home.weeklyTest}</span>
+            </span>
+            <span className="text-sm font-bold opacity-90">{t.home.weeklyTestSub}</span>
+          </Button3D>
+
+          {hardCount > 0 ? (
+            <Button3D
+              tone="sky"
+              to="/review/flashcard"
+              className="min-h-24 flex-col items-start justify-center gap-1! p-5 text-left"
+            >
+              <span className="flex items-center gap-2 text-xl font-black">
+                <span className="text-2xl" aria-hidden>🔴</span>
+                <span>{t.home.hardWords(hardCount)}</span>
+              </span>
+              <span className="text-sm font-bold opacity-90">{t.home.hardWordsSub}</span>
+            </Button3D>
+          ) : (
+            <div className="flex min-h-24 items-center justify-center rounded-3xl border-3 border-dashed border-banana/50 bg-white/70 px-5 text-center font-bold text-ink-soft">
+              <span className="text-base sm:text-lg">🌱 {t.home.noHardWords}</span>
+            </div>
+          )}
+        </div>
       </section>
     </div>
   );
