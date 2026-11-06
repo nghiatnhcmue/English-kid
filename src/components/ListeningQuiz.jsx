@@ -84,7 +84,7 @@ function Round({ word, pool, onDone }) {
         </p>
       )}
 
-      {/* 4 Lựa chọn hình vẽ với số thứ tự 1, 2, 3, 4 */}
+      {/* 4 Lựa chọn hình vẽ kèm nghĩa tiếng Việt với số thứ tự 1, 2, 3, 4 */}
       <div className="grid w-full grid-cols-2 gap-3 sm:gap-5">
         {options.map((opt, idx) => {
           const isRight = correct && opt.id === word.id;
@@ -94,8 +94,8 @@ function Round({ word, pool, onDone }) {
               key={opt.id}
               type="button"
               onClick={() => choose(opt)}
-              aria-label={`Lựa chọn ${idx + 1}`}
-              className={`relative flex aspect-square flex-col items-center justify-center rounded-[2rem] transition-all cursor-pointer p-4 ${
+              aria-label={`Lựa chọn ${idx + 1}: ${opt.meaning}`}
+              className={`relative flex min-h-[11rem] sm:min-h-[13rem] flex-col items-center justify-between rounded-[2rem] transition-all cursor-pointer p-3 sm:p-4 ${
                 isRight
                   ? 'animate-pop bg-mint-soft ring-6 ring-mint shadow-md'
                   : isWrong
@@ -103,10 +103,15 @@ function Round({ word, pool, onDone }) {
                     : 'bg-white shadow-[0_6px_0_#efe3cc] border-2 border-[#efe3cc] hover:-translate-y-1 hover:shadow-[0_8px_0_#efe3cc] active:translate-y-1 active:shadow-none'
               } ${shakeId === opt.id ? 'animate-shake' : ''}`}
             >
-              <span className="absolute top-3 left-4 flex h-8 w-8 items-center justify-center rounded-full bg-cream text-sm font-black text-ink shadow-xs">
+              <span className="absolute top-3 left-3 sm:top-3.5 sm:left-4 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-cream text-xs sm:text-sm font-black text-ink shadow-xs">
                 {idx + 1}
               </span>
-              <WordImage word={opt} size="lg" />
+              <div className="flex-1 flex items-center justify-center w-full my-1">
+                <WordImage word={opt} size="lg" />
+              </div>
+              <span className="mt-1 flex w-full items-center justify-center rounded-xl bg-cream/70 px-2 py-1 text-center text-sm sm:text-base font-black text-ink shadow-2xs border border-[#efe3cc]/80 line-clamp-1">
+                {opt.meaning}
+              </span>
             </button>
           );
         })}

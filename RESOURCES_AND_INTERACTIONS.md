@@ -85,3 +85,4 @@ if (SpeechRecognition) {
 ### 4. Phản hồi tức thì không gây nản chí (Positive Feedback Loop)
 - **Khi làm đúng:** Kích hoạt hiệu ứng tung pháo hoa giấy (`canvas-confetti`), âm thanh ting ting ngắn (`correct.mp3`), tăng sao tích lũy và cập nhật tiến độ bài học.
 - **Khi làm sai:** Vật thể chỉ lắc lư nhẹ (*shake animation* 0.3 giây), phát âm thanh gõ nhẹ (`wrong.mp3`). Tuyệt đối không dùng dấu gạch chéo đỏ lớn hay âm thanh còi báo động để tránh gây tâm lý sợ sai cho học sinh mất gốc.
+

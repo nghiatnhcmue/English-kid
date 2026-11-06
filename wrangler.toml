@@ -6,3 +6,4 @@ pages_build_output_dir = "dist"
 binding = "DB"
 database_name = "english-kid-db"
 database_id = "4ed23c12-dbf9-4372-9d06-adb610404b5b"
+

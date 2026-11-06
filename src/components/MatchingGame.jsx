@@ -190,12 +190,22 @@ export default function MatchingGame({ words, onFinish }) {
                   } ${shakeId === w.id ? 'animate-shake !bg-rose-soft ring-4 ring-peach' : ''}`}
                 >
                   {done ? (
-                    <span className="flex items-center gap-2">
+                    <span className="flex items-center justify-center gap-2">
                       <span className="text-xl">✓</span>
-                      {target === 'image' ? <WordImage word={w} size="sm" /> : <span>{w.meaning}</span>}
+                      {target === 'image' ? (
+                        <div className="flex items-center gap-2">
+                          <WordImage word={w} size="sm" />
+                          <span className="text-base font-black text-ink">{w.meaning}</span>
+                        </div>
+                      ) : (
+                        <span>{w.meaning}</span>
+                      )}
                     </span>
                   ) : target === 'image' ? (
-                    <WordImage word={w} size="sm" />
+                    <div className="flex flex-col items-center gap-1">
+                      <WordImage word={w} size="sm" />
+                      <span className="text-xs sm:text-sm font-black text-ink line-clamp-1">{w.meaning}</span>
+                    </div>
                   ) : (
                     <span>{w.meaning}</span>
                   )}

@@ -170,3 +170,4 @@ export default function WritingStation({ unit, onFinish }) {
     </div>
   );
 }
+

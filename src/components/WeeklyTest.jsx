@@ -176,9 +176,12 @@ function QuestionBody({ q, response, onAnswer }) {
   switch (q.type) {
     case 'image_to_word':
       return (
-        <div className="flex flex-col gap-5">
-          <div className="flex justify-center my-2">
-            <WordImage word={{ word: '?', emoji: q.emoji, image: q.image }} size="xl" />
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col items-center justify-center my-2 gap-2">
+            <WordImage word={{ word: q.meaning, emoji: q.emoji, image: q.image }} size="xl" />
+            <span className="rounded-full bg-cream px-4 py-1 text-base sm:text-lg font-black text-ink border border-[#efe3cc] shadow-2xs">
+              {q.meaning}
+            </span>
           </div>
           <ChoiceOptions q={q} picked={response} onPick={onAnswer} />
         </div>
