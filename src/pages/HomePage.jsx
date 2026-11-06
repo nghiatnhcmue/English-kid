@@ -190,6 +190,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Khối Banner: Phòng Luyện Đọc hiểu trực quan */}
+      <section aria-label="Phòng Luyện Đọc hiểu" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-sky-soft via-cream to-mint-soft p-6 sm:p-7 shadow-[0_6px_0_#c4dcf7] border-2 border-sky/30">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              📖
+            </span>
+            <div>
+              <span className="rounded-full bg-sky text-ink px-3 py-1 text-xs font-black shadow-xs">
+                Đoạn văn A1 chuẩn SGK Global Success
+              </span>
+              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
+                Phòng Luyện Đọc hiểu 12 Unit
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Đoạn văn ngắn có loa đọc toàn văn, câu hỏi trắc nghiệm kiểm tra nắm ý và bài tập sắp xếp câu
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/reading"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-sky px-6 text-lg font-black text-ink shadow-[0_4px_0_var(--color-sky-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Vào Luyện Đọc →</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Chuỗi ngày học liên tiếp */}
       <div className="flex items-center justify-center gap-2 rounded-2xl bg-white/90 border border-banana-soft px-4 py-3 text-center text-base sm:text-lg font-black text-ink shadow-xs">
         <span className="text-2xl" aria-hidden>🔥</span>
