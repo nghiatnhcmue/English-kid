@@ -14,7 +14,9 @@ export default function LessonVideo({ video, unitTitle }) {
 
   if (!video) return null;
 
-  const youtubeSearchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(video.searchQuery || video.title)}`;
+  const youtubeWatchUrl = video.youtubeId
+    ? `https://www.youtube.com/watch?v=${video.youtubeId}`
+    : `https://www.youtube.com/results?search_query=${encodeURIComponent(video.searchQuery || video.title)}`;
 
   return (
     <section aria-label="Video bài học" className="overflow-hidden rounded-[2.5rem] bg-white p-5 sm:p-7 shadow-[0_6px_0_#efe3cc] border-3 border-banana-soft">
@@ -54,7 +56,7 @@ export default function LessonVideo({ video, unitTitle }) {
             )}
           </button>
           <a
-            href={youtubeSearchUrl}
+            href={youtubeWatchUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => playSfx('click')}
