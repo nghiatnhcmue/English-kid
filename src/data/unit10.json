@@ -1,0 +1,97 @@
+{
+  "unitId": 10,
+  "unitTitle": "Unit 10: Our Houses in the Future",
+  "unitNameVi": "Ngôi nhà trong tương lai",
+  "vocabularies": [
+    {
+      "id": "u10_01",
+      "word": "smart house",
+      "phonetic": "/ˌsmɑːt ˈhaʊs/",
+      "wordType": "Danh từ",
+      "meaning": "Ngôi nhà thông minh",
+      "hint": "Nhà được trang bị các thiết bị tự động điều khiển bằng giọng nói",
+      "exampleEn": "In the future I will live in a smart house.",
+      "exampleVi": "Trong tương lai em sẽ sống trong một ngôi nhà thông minh.",
+      "emoji": "🏠"
+    },
+    {
+      "id": "u10_02",
+      "word": "solar energy",
+      "phonetic": "/ˌsəʊlə ˈenədʒi/",
+      "wordType": "Danh từ",
+      "meaning": "Năng lượng mặt trời",
+      "hint": "Nguồn năng lượng sạch thu từ ánh sáng mặt trời qua các tấm pin",
+      "exampleEn": "Our future home will run on solar energy.",
+      "exampleVi": "Ngôi nhà tương lai của chúng em sẽ chạy bằng năng lượng mặt trời.",
+      "emoji": "☀️"
+    },
+    {
+      "id": "u10_03",
+      "word": "space houseboat",
+      "phonetic": "/ˌspeɪs ˈhaʊsbəʊt/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà thuyền không gian",
+      "hint": "Ngôi nhà nổi đặc biệt có thể bay vào vũ trụ hoặc trôi trên biển",
+      "exampleEn": "Astronauts might live in a space houseboat.",
+      "exampleVi": "Các phi hành gia có thể sẽ sống trong một ngôi nhà thuyền không gian.",
+      "emoji": "🛸"
+    },
+    {
+      "id": "u10_04",
+      "word": "super smart TV",
+      "phonetic": "/ˌsuːpə smɑːt ˌtiː ˈviː/",
+      "wordType": "Danh từ",
+      "meaning": "Tivi siêu thông minh",
+      "hint": "Tivi tương lai có thể nói chuyện, lướt web và đặt hàng tự động",
+      "exampleEn": "We will order food via our super smart TV.",
+      "exampleVi": "Chúng em sẽ đặt đồ ăn qua chiếc tivi siêu thông minh.",
+      "emoji": "📺"
+    },
+    {
+      "id": "u10_05",
+      "word": "wireless",
+      "phonetic": "/ˈwaɪələs/",
+      "wordType": "Tính từ",
+      "meaning": "Không dây",
+      "hint": "Kết nối qua sóng vô tuyến, không cần cắm dây cáp rườm rà",
+      "exampleEn": "All appliances will connect via wireless networks.",
+      "exampleVi": "Tất cả thiết bị sẽ kết nối qua mạng không dây.",
+      "emoji": "📶"
+    },
+    {
+      "id": "u10_06",
+      "word": "appliances",
+      "phonetic": "/əˈplaɪənsɪz/",
+      "wordType": "Danh từ",
+      "meaning": "Thiết bị gia dụng",
+      "hint": "Đồ điện trong nhà như tủ lạnh, máy giặt, nồi cơm điện",
+      "exampleEn": "Modern appliances make our housework much easier.",
+      "exampleVi": "Các thiết bị gia dụng hiện đại giúp việc nhà dễ dàng hơn nhiều.",
+      "emoji": "🔌"
+    },
+    {
+      "id": "u10_07",
+      "word": "ocean",
+      "phonetic": "/ˈəʊʃn/",
+      "wordType": "Danh từ",
+      "meaning": "Đại dương",
+      "hint": "Biển sâu bao la, nơi có thể xây nhà nổi dưới đáy biển",
+      "exampleEn": "Some people might build houses under the ocean.",
+      "exampleVi": "Một số người có thể sẽ xây nhà dưới đáy đại dương.",
+      "emoji": "🌊"
+    },
+    {
+      "id": "u10_08",
+      "word": "robot helper",
+      "phonetic": "/ˈrəʊbɒt ˈhelpə/",
+      "wordType": "Danh từ",
+      "meaning": "Người máy phụ giúp việc nhà",
+      "hint": "Robot quét nhà, nấu cơm, rửa bát thay con người",
+      "exampleEn": "A robot helper will clean the room every morning.",
+      "exampleVi": "Một người máy phụ việc sẽ lau dọn phòng vào mỗi buổi sáng.",
+      "emoji": "🤖"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

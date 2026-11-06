@@ -78,3 +78,4 @@ Schema từ vựng chuẩn hóa (`src/data/unit1.json` và `unit2.json`):
 - Phân tích Top từ học sinh hay sai nhất để giáo viên giảng lại trên lớp.
 - Xuất báo cáo điểm bảng tính Excel/CSV chỉ với 1 click.
 - Kết nối tự động Cloudflare D1 Database khi triển khai online.
+

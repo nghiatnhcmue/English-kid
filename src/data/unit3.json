@@ -1,0 +1,130 @@
+{
+  "unitId": 3,
+  "unitTitle": "Unit 3: My Friends",
+  "unitNameVi": "Bạn bè của em",
+  "vocabularies": [
+    {
+      "id": "u3_01",
+      "word": "confident",
+      "phonetic": "/ˈkɒnfɪdənt/",
+      "wordType": "Tính từ",
+      "meaning": "Tự tin",
+      "hint": "Tin tưởng vào khả năng của bản thân khi nói chuyện hoặc làm việc",
+      "exampleEn": "She is confident when speaking in English.",
+      "exampleVi": "Bạn ấy rất tự tin khi nói tiếng Anh.",
+      "emoji": "😎"
+    },
+    {
+      "id": "u3_02",
+      "word": "creative",
+      "phonetic": "/kriˈeɪtɪv/",
+      "wordType": "Tính từ",
+      "meaning": "Sáng tạo",
+      "hint": "Có nhiều ý tưởng mới lạ và độc đáo",
+      "exampleEn": "My creative friend draws amazing pictures.",
+      "exampleVi": "Người bạn sáng tạo của em vẽ những bức tranh tuyệt đẹp.",
+      "emoji": "🎨"
+    },
+    {
+      "id": "u3_03",
+      "word": "curious",
+      "phonetic": "/ˈkjʊə.ri.əs/",
+      "wordType": "Tính từ",
+      "meaning": "Tò mò, ham học hỏi",
+      "hint": "Luôn muốn tìm hiểu và khám phá những điều mới",
+      "exampleEn": "He is curious about the natural world.",
+      "exampleVi": "Bạn ấy rất tò mò về thế giới tự nhiên.",
+      "emoji": "🧐"
+    },
+    {
+      "id": "u3_04",
+      "word": "hard-working",
+      "phonetic": "/ˌhɑːd ˈwɜːkɪŋ/",
+      "wordType": "Tính từ",
+      "meaning": "Chăm chỉ",
+      "hint": "Làm việc, học tập siêng năng và cần cù",
+      "exampleEn": "Nam is a hard-working student in my class.",
+      "exampleVi": "Nam là một học sinh chăm chỉ trong lớp em.",
+      "emoji": "🐝"
+    },
+    {
+      "id": "u3_05",
+      "word": "patient",
+      "phonetic": "/ˈpeɪʃnt/",
+      "wordType": "Tính từ",
+      "meaning": "Kiên nhẫn",
+      "hint": "Bình tĩnh, không nản lòng khi gặp khó khăn hay phải chờ đợi",
+      "exampleEn": "Our teacher is very patient with us.",
+      "exampleVi": "Thầy giáo rất kiên nhẫn với chúng em.",
+      "emoji": "⏳"
+    },
+    {
+      "id": "u3_06",
+      "word": "reliable",
+      "phonetic": "/rɪˈlaɪəbl/",
+      "wordType": "Tính từ",
+      "meaning": "Đáng tin cậy",
+      "hint": "Người luôn giữ lời hứa và hoàn thành tốt việc được giao",
+      "exampleEn": "Mai is a reliable friend whom I can trust.",
+      "exampleVi": "Mai là người bạn đáng tin cậy mà em có thể tin tưởng.",
+      "emoji": "🤝"
+    },
+    {
+      "id": "u3_07",
+      "word": "friendly",
+      "phonetic": "/ˈfrendli/",
+      "wordType": "Tính từ",
+      "meaning": "Thân thiện",
+      "hint": "Vui vẻ, cởi mở và hòa đồng với mọi người xung quanh",
+      "exampleEn": "The new classmate is very friendly to everyone.",
+      "exampleVi": "Bạn cùng lớp mới rất thân thiện với mọi người.",
+      "emoji": "😊"
+    },
+    {
+      "id": "u3_08",
+      "word": "kind",
+      "phonetic": "/kaɪnd/",
+      "wordType": "Tính từ",
+      "meaning": "Tốt bụng",
+      "hint": "Hay giúp đỡ người khác với tấm lòng nhân ái",
+      "exampleEn": "She is kind and always helps other students.",
+      "exampleVi": "Bạn ấy rất tốt bụng và luôn giúp đỡ các bạn khác.",
+      "emoji": "❤️"
+    },
+    {
+      "id": "u3_09",
+      "word": "funny",
+      "phonetic": "/ˈfʌni/",
+      "wordType": "Tính từ",
+      "meaning": "Hài hước",
+      "hint": "Biết cách làm cho mọi người cười vui vẻ",
+      "exampleEn": "He tells funny jokes in break time.",
+      "exampleVi": "Bạn ấy kể những câu chuyện cười hài hước vào giờ giải lao.",
+      "emoji": "😂"
+    },
+    {
+      "id": "u3_10",
+      "word": "chubby cheeks",
+      "phonetic": "/ˌtʃʌbi ˈtʃiːks/",
+      "wordType": "Cụm từ",
+      "meaning": "Đôi má phúng phính",
+      "hint": "Má tròn tròn, bầu bĩnh rất dễ thương của trẻ con",
+      "exampleEn": "The baby has lovely chubby cheeks.",
+      "exampleVi": "Em bé có đôi má phúng phính đáng yêu.",
+      "emoji": "👶"
+    },
+    {
+      "id": "u3_11",
+      "word": "curly hair",
+      "phonetic": "/ˌkɜːli ˈheə/",
+      "wordType": "Cụm từ",
+      "meaning": "Mái tóc xoăn",
+      "hint": "Tóc uốn lượn hình sóng bồng bềnh",
+      "exampleEn": "Lan has black curly hair and big brown eyes.",
+      "exampleVi": "Lan có mái tóc xoăn màu đen và đôi mắt to nâu.",
+      "emoji": "💇"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

@@ -1,0 +1,108 @@
+{
+  "unitId": 6,
+  "unitTitle": "Unit 6: Our Tet Holiday",
+  "unitNameVi": "Kỳ nghỉ Tết của chúng em",
+  "vocabularies": [
+    {
+      "id": "u6_01",
+      "word": "blossom",
+      "phonetic": "/ˈblɒsəm/",
+      "wordType": "Danh từ",
+      "meaning": "Hoa (đào/mai)",
+      "hint": "Hoa đào hồng rực hoặc hoa mai vàng nở rộ đón mùa xuân",
+      "exampleEn": "Peach blossom blooms everywhere at Tet.",
+      "exampleVi": "Hoa đào nở rộ khắp nơi vào dịp Tết.",
+      "emoji": "🌸"
+    },
+    {
+      "id": "u6_02",
+      "word": "firework",
+      "phonetic": "/ˈfaɪəwɜːk/",
+      "wordType": "Danh từ",
+      "meaning": "Pháo hoa",
+      "hint": "Pháo bắn rực rỡ trên bầu trời đêm giao thừa",
+      "exampleEn": "We watched the firework display on New Year's Eve.",
+      "exampleVi": "Cả nhà em đã xem màn bắn pháo hoa vào đêm giao thừa.",
+      "emoji": "🎆"
+    },
+    {
+      "id": "u6_03",
+      "word": "lucky money",
+      "phonetic": "/ˌlʌki ˈmʌni/",
+      "wordType": "Danh từ",
+      "meaning": "Tiền lì xì",
+      "hint": "Tiền mừng tuổi đựng trong phong bao đỏ chúc may mắn",
+      "exampleEn": "Children receive lucky money from their grandparents.",
+      "exampleVi": "Trẻ em nhận tiền lì xì từ ông bà.",
+      "emoji": "🧧"
+    },
+    {
+      "id": "u6_04",
+      "word": "relative",
+      "phonetic": "/ˈrelətɪv/",
+      "wordType": "Danh từ",
+      "meaning": "Họ hàng, bà con",
+      "hint": "Cô dì, chú bác, anh chị em họ trong gia đình",
+      "exampleEn": "We visit our relative during the Tet holidays.",
+      "exampleVi": "Chúng em đi thăm người bà con họ hàng trong dịp nghỉ Tết.",
+      "emoji": "👨‍👩‍👧‍👦"
+    },
+    {
+      "id": "u6_05",
+      "word": "calendar",
+      "phonetic": "/ˈkælɪndə/",
+      "wordType": "Danh từ",
+      "meaning": "Quyển lịch",
+      "hint": "Tập giấy ghi ngày tháng năm mới treo trên tường",
+      "exampleEn": "My mum bought a new calendar for the spring.",
+      "exampleVi": "Mẹ em đã mua một quyển lịch mới cho mùa xuân.",
+      "emoji": "📅"
+    },
+    {
+      "id": "u6_06",
+      "word": "pagoda",
+      "phonetic": "/pəˈɡəʊdə/",
+      "wordType": "Danh từ",
+      "meaning": "Ngôi chùa",
+      "hint": "Nơi thờ Phật, mọi người đến cầu bình an đầu năm",
+      "exampleEn": "People go to the pagoda to pray for good luck.",
+      "exampleVi": "Mọi người đi lễ chùa để cầu may mắn.",
+      "emoji": "🛕"
+    },
+    {
+      "id": "u6_07",
+      "word": "wish",
+      "phonetic": "/wɪʃ/",
+      "wordType": "Danh từ",
+      "meaning": "Lời chúc",
+      "hint": "Những lời tốt đẹp gửi gắm cho nhau vào năm mới",
+      "exampleEn": "I send my best wish to my beloved family.",
+      "exampleVi": "Em gửi lời chúc tốt đẹp nhất tới gia đình thân yêu.",
+      "emoji": "✨"
+    },
+    {
+      "id": "u6_08",
+      "word": "special food",
+      "phonetic": "/ˌspeʃl ˈfuːd/",
+      "wordType": "Danh từ",
+      "meaning": "Món ăn đặc biệt",
+      "hint": "Bánh chưng, bánh tét, dưa hành ngày Tết",
+      "exampleEn": "Banh chung is a special food for Vietnamese Tet.",
+      "exampleVi": "Bánh chưng là một món ăn đặc biệt cho ngày Tết Việt Nam.",
+      "emoji": "🍲"
+    },
+    {
+      "id": "u6_09",
+      "word": "decorate",
+      "phonetic": "/ˈdekə.reɪt/",
+      "wordType": "Động từ",
+      "meaning": "Trang trí",
+      "hint": "Treo đèn lồng, hoa tươi làm đẹp nhà cửa đón Tết",
+      "exampleEn": "We decorate our house with yellow flowers.",
+      "exampleVi": "Chúng em trang trí nhà cửa bằng những bông hoa vàng.",
+      "emoji": "🏮"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

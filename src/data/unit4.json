@@ -1,0 +1,119 @@
+{
+  "unitId": 4,
+  "unitTitle": "Unit 4: My Neighbourhood",
+  "unitNameVi": "Khu phố nơi em sống",
+  "vocabularies": [
+    {
+      "id": "u4_01",
+      "word": "art gallery",
+      "phonetic": "/ˈɑːt ˈɡælə.ri/",
+      "wordType": "Danh từ",
+      "meaning": "Phòng trưng bày nghệ thuật",
+      "hint": "Nơi trưng bày các bức tranh và tác phẩm nghệ thuật",
+      "exampleEn": "We visited an art gallery at the weekend.",
+      "exampleVi": "Chúng em đã đến thăm một phòng trưng bày nghệ thuật vào cuối tuần.",
+      "emoji": "🖼️"
+    },
+    {
+      "id": "u4_02",
+      "word": "cathedral",
+      "phonetic": "/kəˈθiːdrəl/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà thờ lớn",
+      "hint": "Nhà thờ cổ kính, nguy nga của đạo Công giáo",
+      "exampleEn": "The old cathedral is in the centre of the town.",
+      "exampleVi": "Nhà thờ lớn cổ kính nằm ở trung tâm thị trấn.",
+      "emoji": "⛪"
+    },
+    {
+      "id": "u4_03",
+      "word": "railway station",
+      "phonetic": "/ˈreɪlweɪ steɪʃn/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà ga xe lửa",
+      "hint": "Nơi đón và trả khách đi tàu hỏa",
+      "exampleEn": "My father took a train at the railway station.",
+      "exampleVi": "Bố em đã đón tàu hỏa tại nhà ga xe lửa.",
+      "emoji": "🚉"
+    },
+    {
+      "id": "u4_04",
+      "word": "square",
+      "phonetic": "/skweə/",
+      "wordType": "Danh từ",
+      "meaning": "Quảng trường",
+      "hint": "Khoảng sân rộng lớn ngoài trời ở trung tâm thành phố",
+      "exampleEn": "People gather in the public square in the evening.",
+      "exampleVi": "Mọi người tụ tập tại quảng trường công cộng vào buổi tối.",
+      "emoji": "⛲"
+    },
+    {
+      "id": "u4_05",
+      "word": "suburb",
+      "phonetic": "/ˈsʌbɜːb/",
+      "wordType": "Danh từ",
+      "meaning": "Khu ngoại ô",
+      "hint": "Khu vực dân cư nằm ở vùng ven, rìa thành phố",
+      "exampleEn": "We live in a quiet suburb outside Ha Noi.",
+      "exampleVi": "Gia đình em sống ở một khu ngoại ô yên tĩnh ven Hà Nội.",
+      "emoji": "🏡"
+    },
+    {
+      "id": "u4_06",
+      "word": "neighbourhood",
+      "phonetic": "/ˈneɪbəhʊd/",
+      "wordType": "Danh từ",
+      "meaning": "Khu xóm, vùng lân cận",
+      "hint": "Khu vực xung quanh nơi gia đình em đang sống",
+      "exampleEn": "There are many trees in my neighbourhood.",
+      "exampleVi": "Có rất nhiều cây xanh trong khu xóm của em.",
+      "emoji": "🏘️"
+    },
+    {
+      "id": "u4_07",
+      "word": "crowded",
+      "phonetic": "/ˈkraʊdɪd/",
+      "wordType": "Tính từ",
+      "meaning": "Đông đúc",
+      "hint": "Có rất nhiều người chen chúc",
+      "exampleEn": "The market is very crowded on Sundays.",
+      "exampleVi": "Khu chợ rất đông đúc vào các ngày Chủ nhật.",
+      "emoji": "👥"
+    },
+    {
+      "id": "u4_08",
+      "word": "peaceful",
+      "phonetic": "/ˈpiːsfl/",
+      "wordType": "Tính từ",
+      "meaning": "Yên bình",
+      "hint": "Thanh tịnh, êm ả, không ồn ào khói bụi",
+      "exampleEn": "Life in the countryside is calm and peaceful.",
+      "exampleVi": "Cuộc sống ở vùng quê thật êm đềm và yên bình.",
+      "emoji": "🌾"
+    },
+    {
+      "id": "u4_09",
+      "word": "historic",
+      "phonetic": "/hɪˈstɒrɪk/",
+      "wordType": "Tính từ",
+      "meaning": "Cổ kính, mang tính lịch sử",
+      "hint": "Đã có từ lâu đời trong quá khứ",
+      "exampleEn": "Hoi An is a famous historic town in Viet Nam.",
+      "exampleVi": "Hội An là một thị trấn cổ kính nổi tiếng ở Việt Nam.",
+      "emoji": "🏛️"
+    },
+    {
+      "id": "u4_10",
+      "word": "convenient",
+      "phonetic": "/kənˈviːniənt/",
+      "wordType": "Tính từ",
+      "meaning": "Tiện lợi",
+      "hint": "Gần các cửa hàng, trường học, đi lại dễ dàng",
+      "exampleEn": "It is convenient to live near a supermarket.",
+      "exampleVi": "Sống gần siêu thị rất tiện lợi.",
+      "emoji": "🛒"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

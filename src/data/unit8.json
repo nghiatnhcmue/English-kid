@@ -1,0 +1,108 @@
+{
+  "unitId": 8,
+  "unitTitle": "Unit 8: Sports and Games",
+  "unitNameVi": "Thể thao và trò chơi",
+  "vocabularies": [
+    {
+      "id": "u8_01",
+      "word": "badminton",
+      "phonetic": "/ˈbædmɪntən/",
+      "wordType": "Danh từ",
+      "meaning": "Môn cầu lông",
+      "hint": "Môn thể thao dùng vợt đánh quả cầu lông qua lưới",
+      "exampleEn": "We play badminton in the school yard.",
+      "exampleVi": "Chúng em chơi cầu lông ở sân trường.",
+      "emoji": "🏸"
+    },
+    {
+      "id": "u8_02",
+      "word": "aerobics",
+      "phonetic": "/eəˈrəʊbɪks/",
+      "wordType": "Danh từ",
+      "meaning": "Thể dục nhịp điệu",
+      "hint": "Môn tập nhảy thể dục theo điệu nhạc sôi động",
+      "exampleEn": "The girls do aerobics every morning.",
+      "exampleVi": "Các bạn nữ tập thể dục nhịp điệu mỗi sáng.",
+      "emoji": "🤸"
+    },
+    {
+      "id": "u8_03",
+      "word": "karate",
+      "phonetic": "/kəˈrɑːti/",
+      "wordType": "Danh từ",
+      "meaning": "Võ karate",
+      "hint": "Môn võ thuật truyền thống nổi tiếng của Nhật Bản",
+      "exampleEn": "Phong does karate twice a week.",
+      "exampleVi": "Phong tập võ karate hai lần một tuần.",
+      "emoji": "🥋"
+    },
+    {
+      "id": "u8_04",
+      "word": "table tennis",
+      "phonetic": "/ˈteɪbl tenɪs/",
+      "wordType": "Danh từ",
+      "meaning": "Môn bóng bàn",
+      "hint": "Môn thể thao đánh quả bóng nhựa nhỏ trên mặt bàn có lưới",
+      "exampleEn": "Can you play table tennis with me?",
+      "exampleVi": "Bạn chơi bóng bàn với mình được không?",
+      "emoji": "🏓"
+    },
+    {
+      "id": "u8_05",
+      "word": "goggles",
+      "phonetic": "/ˈɡɒɡlz/",
+      "wordType": "Danh từ",
+      "meaning": "Kính bơi",
+      "hint": "Kính đeo bảo vệ mắt không bị nước vào khi bơi lội",
+      "exampleEn": "Remember to wear your goggles when swimming.",
+      "exampleVi": "Nhớ đeo kính bơi khi đi bơi nhé.",
+      "emoji": "🥽"
+    },
+    {
+      "id": "u8_06",
+      "word": "racket",
+      "phonetic": "/ˈrækɪt/",
+      "wordType": "Danh từ",
+      "meaning": "Cây vợt",
+      "hint": "Vợt dùng để đánh bóng trong môn cầu lông, quần vợt",
+      "exampleEn": "I got a new tennis racket on my birthday.",
+      "exampleVi": "Em được tặng một cây vợt tennis mới vào ngày sinh nhật.",
+      "emoji": "🎾"
+    },
+    {
+      "id": "u8_07",
+      "word": "skateboard",
+      "phonetic": "/ˈskeɪtbɔːd/",
+      "wordType": "Danh từ",
+      "meaning": "Ván trượt",
+      "hint": "Tấm ván có 4 bánh xe nhỏ để trượt trên đường",
+      "exampleEn": "He rides his skateboard in the park.",
+      "exampleVi": "Bạn ấy trượt ván trượt trong công viên.",
+      "emoji": "🛹"
+    },
+    {
+      "id": "u8_08",
+      "word": "equipment",
+      "phonetic": "/ɪˈkwɪpmənt/",
+      "wordType": "Danh từ",
+      "meaning": "Thiết bị, dụng cụ",
+      "hint": "Dụng cụ cần thiết phục vụ cho việc tập luyện thể thao",
+      "exampleEn": "The school gym has modern sports equipment.",
+      "exampleVi": "Phòng tập của trường có đầy đủ thiết bị thể thao hiện đại.",
+      "emoji": "🥊"
+    },
+    {
+      "id": "u8_09",
+      "word": "football",
+      "phonetic": "/ˈfʊtbɔːl/",
+      "wordType": "Danh từ",
+      "meaning": "Môn bóng đá",
+      "hint": "Môn thể thao vua 11 người thi đấu sút bóng vào khung thành",
+      "exampleEn": "Boys love playing football after school.",
+      "exampleVi": "Các bạn nam rất thích chơi bóng đá sau giờ học.",
+      "emoji": "⚽"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

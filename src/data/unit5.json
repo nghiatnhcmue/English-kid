@@ -1,0 +1,119 @@
+{
+  "unitId": 5,
+  "unitTitle": "Unit 5: Natural Wonders of Viet Nam",
+  "unitNameVi": "Kỳ quan thiên nhiên Việt Nam",
+  "vocabularies": [
+    {
+      "id": "u5_01",
+      "word": "waterfall",
+      "phonetic": "/ˈwɔːtəfɔːl/",
+      "wordType": "Danh từ",
+      "meaning": "Thác nước",
+      "hint": "Dòng nước đổ từ trên vách núi cao xuống",
+      "exampleEn": "Ban Gioc is a stunning waterfall in Cao Bang.",
+      "exampleVi": "Bản Giốc là một thác nước tuyệt đẹp ở Cao Bằng.",
+      "emoji": "🌊"
+    },
+    {
+      "id": "u5_02",
+      "word": "cave",
+      "phonetic": "/keɪv/",
+      "wordType": "Danh từ",
+      "meaning": "Hang động",
+      "hint": "Khoang rỗng tự nhiên lớn bên trong lòng núi đá",
+      "exampleEn": "Son Doong is the largest cave in the world.",
+      "exampleVi": "Sơn Đoòng là hang động lớn nhất thế giới.",
+      "emoji": "🪨"
+    },
+    {
+      "id": "u5_03",
+      "word": "desert",
+      "phonetic": "/ˈdezət/",
+      "wordType": "Danh từ",
+      "meaning": "Sa mạc",
+      "hint": "Vùng đất rộng lớn toàn cát, rất khô hạn và ít mưa",
+      "exampleEn": "Mui Ne has white sand dunes like a mini desert.",
+      "exampleVi": "Mũi Né có những đồi cát trắng như một sa mạc thu nhỏ.",
+      "emoji": "🏜️"
+    },
+    {
+      "id": "u5_04",
+      "word": "island",
+      "phonetic": "/ˈaɪlənd/",
+      "wordType": "Danh từ",
+      "meaning": "Hòn đảo",
+      "hint": "Vùng đất được bao bọc bốn bề bởi nước biển (chú ý chữ s câm)",
+      "exampleEn": "Phu Quoc is a beautiful tropical island.",
+      "exampleVi": "Phú Quốc là một hòn đảo nhiệt đới xinh đẹp.",
+      "emoji": "🏝️"
+    },
+    {
+      "id": "u5_05",
+      "word": "forest",
+      "phonetic": "/ˈfɒrɪst/",
+      "wordType": "Danh từ",
+      "meaning": "Khu rừng",
+      "hint": "Vùng đất rộng có bạt ngàn cây cối và muông thú",
+      "exampleEn": "Cuc Phuong is an ancient rain forest in Viet Nam.",
+      "exampleVi": "Cúc Phương là một khu rừng mưa cổ đại ở Việt Nam.",
+      "emoji": "🌲"
+    },
+    {
+      "id": "u5_06",
+      "word": "mountain",
+      "phonetic": "/ˈmaʊntən/",
+      "wordType": "Danh từ",
+      "meaning": "Ngọn núi",
+      "hint": "Vùng đất nhô cao hùng vĩ so với mặt đất",
+      "exampleEn": "Fansipan is the highest mountain in Viet Nam.",
+      "exampleVi": "Phan-xi-păng là ngọn núi cao nhất Việt Nam.",
+      "emoji": "⛰️"
+    },
+    {
+      "id": "u5_07",
+      "word": "sleeping bag",
+      "phonetic": "/ˈsliːpɪŋ bæɡ/",
+      "wordType": "Danh từ",
+      "meaning": "Túi ngủ",
+      "hint": "Túi vải dày ấm áp dùng để ngủ khi đi cắm trại ngoài trời",
+      "exampleEn": "Bring a warm sleeping bag for the camping trip.",
+      "exampleVi": "Hãy mang theo một chiếc túi ngủ ấm cho chuyến cắm trại.",
+      "emoji": "🛌"
+    },
+    {
+      "id": "u5_08",
+      "word": "backpack",
+      "phonetic": "/ˈbækpæk/",
+      "wordType": "Danh từ",
+      "meaning": "Ba lô dã ngoại",
+      "hint": "Balo đeo vai đựng quần áo, nước uống khi đi leo núi",
+      "exampleEn": "Pack all your supplies in your backpack.",
+      "exampleVi": "Hãy xếp tất cả đồ dùng vào ba lô dã ngoại của em.",
+      "emoji": "🎒"
+    },
+    {
+      "id": "u5_09",
+      "word": "plaster",
+      "phonetic": "/ˈplɑːstə/",
+      "wordType": "Danh từ",
+      "meaning": "Băng cá nhân",
+      "hint": "Băng dán nhỏ dùng để bảo vệ vết xước trên da",
+      "exampleEn": "Put a plaster on your cut finger.",
+      "exampleVi": "Dán một miếng băng cá nhân lên ngón tay bị xước nhé.",
+      "emoji": "🩹"
+    },
+    {
+      "id": "u5_10",
+      "word": "sun cream",
+      "phonetic": "/ˈsʌn kriːm/",
+      "wordType": "Danh từ",
+      "meaning": "Kem chống nắng",
+      "hint": "Kem thoa bảo vệ da khi đi ra ngoài trời nắng gắt",
+      "exampleEn": "You must wear sun cream at the beach.",
+      "exampleVi": "Em phải thoa kem chống nắng khi ở bãi biển.",
+      "emoji": "🧴"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

@@ -1,0 +1,108 @@
+{
+  "unitId": 7,
+  "unitTitle": "Unit 7: Television",
+  "unitNameVi": "Truyền hình",
+  "vocabularies": [
+    {
+      "id": "u7_01",
+      "word": "animated film",
+      "phonetic": "/ˌænɪmeɪtɪd ˈfɪlm/",
+      "wordType": "Danh từ",
+      "meaning": "Phim hoạt hình",
+      "hint": "Phim được vẽ bằng tranh hoặc đồ họa máy tính như Tom & Jerry",
+      "exampleEn": "The Lion King is my favourite animated film.",
+      "exampleVi": "Vua Sư Tử là bộ phim hoạt hình yêu thích của em.",
+      "emoji": "🦁"
+    },
+    {
+      "id": "u7_02",
+      "word": "documentary",
+      "phonetic": "/ˌdɒkjuˈmentri/",
+      "wordType": "Danh từ",
+      "meaning": "Phim tài liệu",
+      "hint": "Phim ghi lại sự thật về động vật hoang dã, lịch sử, khoa học",
+      "exampleEn": "I watched an interesting documentary about oceans.",
+      "exampleVi": "Em đã xem một bộ phim tài liệu thú vị về các đại dương.",
+      "emoji": "🐬"
+    },
+    {
+      "id": "u7_03",
+      "word": "game show",
+      "phonetic": "/ˈɡeɪm ʃəʊ/",
+      "wordType": "Danh từ",
+      "meaning": "Trò chơi truyền hình",
+      "hint": "Chương trình thi đấu đố vui có giải thưởng trên tivi",
+      "exampleEn": "My whole family enjoys that funny game show.",
+      "exampleVi": "Cả gia đình em đều thích trò chơi truyền hình vui nhộn đó.",
+      "emoji": "🎮"
+    },
+    {
+      "id": "u7_04",
+      "word": "news programme",
+      "phonetic": "/ˈnjuːz prəʊɡræm/",
+      "wordType": "Danh từ",
+      "meaning": "Bản tin thời sự",
+      "hint": "Chương trình thời sự 19h cập nhật tin tức mỗi ngày",
+      "exampleEn": "My parents watch the evening news programme at seven.",
+      "exampleVi": "Bố mẹ em xem bản tin thời sự lúc 7 giờ tối.",
+      "emoji": "📰"
+    },
+    {
+      "id": "u7_05",
+      "word": "comedian",
+      "phonetic": "/kəˈmiːdiən/",
+      "wordType": "Danh từ",
+      "meaning": "Diễn viên hài",
+      "hint": "Người biểu diễn mang lại tiếng cười sảng khoái cho khán giả",
+      "exampleEn": "That talented comedian makes everybody laugh.",
+      "exampleVi": "Diễn viên hài tài năng đó làm mọi người cười nghiêng ngả.",
+      "emoji": "🎭"
+    },
+    {
+      "id": "u7_06",
+      "word": "channel",
+      "phonetic": "/ˈtʃænl/",
+      "wordType": "Danh từ",
+      "meaning": "Kênh truyền hình",
+      "hint": "Kênh phát sóng như VTV1, VTV3, VTV7",
+      "exampleEn": "VTV7 is an educational channel for students.",
+      "exampleVi": "VTV7 là một kênh truyền hình giáo dục dành cho học sinh.",
+      "emoji": "📡"
+    },
+    {
+      "id": "u7_07",
+      "word": "educational",
+      "phonetic": "/ˌedʒuˈkeɪʃənl/",
+      "wordType": "Tính từ",
+      "meaning": "Mang tính giáo dục",
+      "hint": "Giúp học hỏi thêm nhiều kiến thức bổ ích",
+      "exampleEn": "This television programme is fun and educational.",
+      "exampleVi": "Chương trình truyền hình này vừa vui vừa mang tính giáo dục.",
+      "emoji": "💡"
+    },
+    {
+      "id": "u7_08",
+      "word": "viewer",
+      "phonetic": "/ˈvjuːə/",
+      "wordType": "Danh từ",
+      "meaning": "Khán giả xem truyền hình",
+      "hint": "Người ngồi trước màn hình tivi theo dõi chương trình",
+      "exampleEn": "Millions of viewer watch the live football match.",
+      "exampleVi": "Hàng triệu khán giả theo dõi trận bóng đá trực tiếp.",
+      "emoji": "👀"
+    },
+    {
+      "id": "u7_09",
+      "word": "remote control",
+      "phonetic": "/rɪˌməʊt kənˈtrəʊl/",
+      "wordType": "Danh từ",
+      "meaning": "Cái điều khiển từ xa",
+      "hint": "Chiếc điều khiển cầm tay bấm chuyển kênh tivi",
+      "exampleEn": "Can you pass me the TV remote control please?",
+      "exampleVi": "Bạn chuyển giúp em cái điều khiển từ xa của tivi nhé?",
+      "emoji": "📺"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

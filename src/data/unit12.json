@@ -1,0 +1,97 @@
+{
+  "unitId": 12,
+  "unitTitle": "Unit 12: Robots",
+  "unitNameVi": "Người máy",
+  "vocabularies": [
+    {
+      "id": "u12_01",
+      "word": "guard the house",
+      "phonetic": "/ˌɡɑːd ðə ˈhaʊs/",
+      "wordType": "Cụm động từ",
+      "meaning": "Canh giữ nhà cửa",
+      "hint": "Bảo vệ an ninh nhà cửa chống trộm cắp",
+      "exampleEn": "The smart robot will guard the house when we go away.",
+      "exampleVi": "Người máy thông minh sẽ canh giữ nhà cửa khi chúng ta đi vắng.",
+      "emoji": "🛡️"
+    },
+    {
+      "id": "u12_02",
+      "word": "lift heavy things",
+      "phonetic": "/ˌlɪft ˈhevi θɪŋz/",
+      "wordType": "Cụm động từ",
+      "meaning": "Nâng các vật nặng",
+      "hint": "Khuân vác đồ đạc to lớn cồng kềnh với sức mạnh cơ bắp máy",
+      "exampleEn": "Robots with strong arms can lift heavy things easily.",
+      "exampleVi": "Robot với cánh tay khỏe có thể nâng các vật nặng một cách dễ dàng.",
+      "emoji": "🏋️"
+    },
+    {
+      "id": "u12_03",
+      "word": "make the bed",
+      "phonetic": "/ˌmeɪk ðə ˈbed/",
+      "wordType": "Cụm động từ",
+      "meaning": "Dọn dẹp giường ngủ",
+      "hint": "Gấp chăn màn, chỉnh lại gối đệm phẳng phiu sau khi ngủ dậy",
+      "exampleEn": "My home robot will make the bed every morning.",
+      "exampleVi": "Người máy gia đình sẽ dọn dẹp giường ngủ vào mỗi sáng.",
+      "emoji": "🛏️"
+    },
+    {
+      "id": "u12_04",
+      "word": "iron clothes",
+      "phonetic": "/ˌaɪən ˈkləʊðz/",
+      "wordType": "Cụm động từ",
+      "meaning": "Ủi, là quần áo",
+      "hint": "Dùng bàn ủi làm thẳng các nếp nhăn trên áo quần",
+      "exampleEn": "Can your robot iron clothes neatly?",
+      "exampleVi": "Người máy của bạn có thể ủi quần áo phẳng phiu không?",
+      "emoji": "👔"
+    },
+    {
+      "id": "u12_05",
+      "word": "recognise voice",
+      "phonetic": "/ˌrekəɡnaɪz ˈvɔɪs/",
+      "wordType": "Cụm động từ",
+      "meaning": "Nhận diện giọng nói",
+      "hint": "Nghe và phân biệt được tiếng của chủ nhân để làm theo lệnh",
+      "exampleEn": "The AI assistant can recognise voice commands quickly.",
+      "exampleVi": "Trợ lý AI có thể nhận diện giọng nói và khẩu lệnh rất nhanh.",
+      "emoji": "🎙️"
+    },
+    {
+      "id": "u12_06",
+      "word": "clean the floor",
+      "phonetic": "/ˌkliːn ðə ˈflɔː/",
+      "wordType": "Cụm động từ",
+      "meaning": "Lau dọn sàn nhà",
+      "hint": "Hút bụi và lau sạch bóng nền nhà",
+      "exampleEn": "The vacuum robot can clean the floor automatically.",
+      "exampleVi": "Robot hút bụi có thể lau dọn sàn nhà một cách tự động.",
+      "emoji": "🧹"
+    },
+    {
+      "id": "u12_07",
+      "word": "cook meals",
+      "phonetic": "/ˌkʊk ˈmiːlz/",
+      "wordType": "Cụm động từ",
+      "meaning": "Nấu các bữa ăn",
+      "hint": "Chế biến đồ ăn sáng, trưa, tối thơm ngon",
+      "exampleEn": "A chef robot will cook meals for the whole family.",
+      "exampleVi": "Một người máy đầu bếp sẽ nấu các bữa ăn cho cả gia đình.",
+      "emoji": "🍳"
+    },
+    {
+      "id": "u12_08",
+      "word": "water flowers",
+      "phonetic": "/ˌwɔːtə ˈflaʊəz/",
+      "wordType": "Cụm động từ",
+      "meaning": "Tưới hoa",
+      "hint": "Tưới nước cho chậu hoa, cây cảnh trong vườn tươi tốt",
+      "exampleEn": "The garden robot can water flowers every afternoon.",
+      "exampleVi": "Người máy làm vườn có thể tưới hoa vào mỗi buổi chiều.",
+      "emoji": "🌻"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

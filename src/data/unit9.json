@@ -1,0 +1,97 @@
+{
+  "unitId": 9,
+  "unitTitle": "Unit 9: Cities of the World",
+  "unitNameVi": "Các thành phố trên thế giới",
+  "vocabularies": [
+    {
+      "id": "u9_01",
+      "word": "landmark",
+      "phonetic": "/ˈlændmɑːk/",
+      "wordType": "Danh từ",
+      "meaning": "Công trình điểm nhấn, thắng cảnh nổi tiếng",
+      "hint": "Công trình kiến trúc đặc trưng nhận diện một thành phố (như tháp Eiffel)",
+      "exampleEn": "The Eiffel Tower is a famous landmark in Paris.",
+      "exampleVi": "Tháp Eiffel là công trình điểm nhấn nổi tiếng ở Paris.",
+      "emoji": "🗼"
+    },
+    {
+      "id": "u9_02",
+      "word": "palace",
+      "phonetic": "/ˈpæləs/",
+      "wordType": "Danh từ",
+      "meaning": "Cung điện",
+      "hint": "Dinh thự nguy nga lộng lẫy nơi vua chúa, hoàng gia từng ở",
+      "exampleEn": "Buckingham is the royal palace in London.",
+      "exampleVi": "Buckingham là cung điện hoàng gia ở London.",
+      "emoji": "🏰"
+    },
+    {
+      "id": "u9_03",
+      "word": "postcard",
+      "phonetic": "/ˈpəʊstkɑːd/",
+      "wordType": "Danh từ",
+      "meaning": "Tấm bưu thiếp",
+      "hint": "Tấm thiệp in hình phong cảnh gửi qua đường bưu điện",
+      "exampleEn": "I sent a postcard to my friend from Da Nang.",
+      "exampleVi": "Em đã gửi một tấm bưu thiếp cho bạn từ Đà Nẵng.",
+      "emoji": "💌"
+    },
+    {
+      "id": "u9_04",
+      "word": "symbol",
+      "phonetic": "/ˈsɪmbl/",
+      "wordType": "Danh từ",
+      "meaning": "Biểu tượng",
+      "hint": "Hình ảnh đại diện tiêu biểu cho một quốc gia hay thành phố",
+      "exampleEn": "The Merlion is a famous symbol of Singapore.",
+      "exampleVi": "Tượng Sư tử biển là biểu tượng nổi tiếng của Singapore.",
+      "emoji": "🦁"
+    },
+    {
+      "id": "u9_05",
+      "word": "tower",
+      "phonetic": "/ˈtaʊə/",
+      "wordType": "Danh từ",
+      "meaning": "Tòa tháp",
+      "hint": "Công trình xây dựng vươn cao vút lên bầu trời",
+      "exampleEn": "Big Ben is a historic clock tower in England.",
+      "exampleVi": "Big Ben là một tòa tháp đồng hồ lịch sử ở nước Anh.",
+      "emoji": "🏙️"
+    },
+    {
+      "id": "u9_06",
+      "word": "architectural",
+      "phonetic": "/ˌɑːkɪˈtektʃrəl/",
+      "wordType": "Tính từ",
+      "meaning": "Thuộc về kiến trúc",
+      "hint": "Liên quan đến thiết kế và xây dựng các công trình nhà cửa",
+      "exampleEn": "Ha Noi has unique architectural beauty.",
+      "exampleVi": "Hà Nội có vẻ đẹp kiến trúc vô cùng độc đáo.",
+      "emoji": "🏛️"
+    },
+    {
+      "id": "u9_07",
+      "word": "bridge",
+      "phonetic": "/brɪdʒ/",
+      "wordType": "Danh từ",
+      "meaning": "Cây cầu",
+      "hint": "Công trình bắc ngang qua sông để người và xe cộ đi lại",
+      "exampleEn": "The Golden Gate bridge is famous worldwide.",
+      "exampleVi": "Cây cầu Cổng Vàng nổi tiếng trên toàn thế giới.",
+      "emoji": "🌉"
+    },
+    {
+      "id": "u9_08",
+      "word": "delicious",
+      "phonetic": "/dɪˈlɪʃəs/",
+      "wordType": "Tính từ",
+      "meaning": "Ngon miệng",
+      "hint": "Món ăn có hương vị thơm ngon hấp dẫn",
+      "exampleEn": "Vietnamese street food is cheap and delicious.",
+      "exampleVi": "Ẩm thực đường phố Việt Nam vừa rẻ vừa ngon miệng.",
+      "emoji": "😋"
+    }
+  ],
+  "extraQuestions": [],
+  "scenes": []
+}

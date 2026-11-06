@@ -23,3 +23,4 @@ CREATE TABLE IF NOT EXISTS test_results (
 
 CREATE INDEX IF NOT EXISTS idx_student_class ON test_results(student_class);
 CREATE INDEX IF NOT EXISTS idx_created_at ON test_results(created_at);
+
