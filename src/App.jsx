@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { SettingsProvider, useSettings } from './settings.jsx';
 import { store, totalStarsOf } from './utils/storage.js';
