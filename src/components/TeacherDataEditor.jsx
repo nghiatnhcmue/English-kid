@@ -52,6 +52,10 @@ export default function TeacherDataEditor() {
     emoji: '📝',
     audio: '',
   });
+  const [audioFileName, setAudioFileName] = useState('');
+  const [isRecordingAudio, setIsRecordingAudio] = useState(false);
+  const [audioRecorder, setAudioRecorder] = useState(null);
+  const [recordingSeconds, setRecordingSeconds] = useState(0);
 
   // Video form states
   const [showAddVideoModal, setShowAddVideoModal] = useState(false);
@@ -503,6 +507,8 @@ export default function TeacherDataEditor() {
       emoji: '',
       audio: '',
     });
+    setAudioFileName('');
+    setIsRecordingAudio(false);
     setEditingWord(null);
     setShowAddWordModal(true);
   };
@@ -514,7 +520,92 @@ export default function TeacherDataEditor() {
       image: w.image || '',
       emoji: w.emoji || '',
     });
+    setAudioFileName(w.audio && !w.audio.includes('dictvoice') ? (w.audio.startsWith('data:') ? 'File âm thanh đã chèn' : w.audio) : '');
+    setIsRecordingAudio(false);
     setShowAddWordModal(true);
+  };
+
+  // Đồng hồ đếm giây khi thu âm
+  useEffect(() => {
+    let interval = null;
+    if (isRecordingAudio) {
+      interval = setInterval(() => {
+        setRecordingSeconds((prev) => prev + 1);
+      }, 1000);
+    } else {
+      setRecordingSeconds(0);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isRecordingAudio]);
+
+  const handleAudioUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (file.size > 5 * 1024 * 1024) {
+      alert('File âm thanh quá lớn (tối đa 5MB). Vui lòng chọn file ngắn hơn.');
+      return;
+    }
+
+    setAudioFileName(file.name);
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const dataUrl = event.target?.result;
+      if (dataUrl) {
+        setWordForm((prev) => ({
+          ...prev,
+          audio: dataUrl,
+        }));
+        showNotification(`Đã tải file âm thanh "${file.name}"!`, 'mint');
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleStartRecording = async () => {
+    try {
+      if (!navigator.mediaDevices?.getUserMedia) {
+        alert('Trình duyệt của thầy/cô chưa hỗ trợ micro thu âm trực tiếp.');
+        return;
+      }
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      const chunks = [];
+
+      mediaRecorder.ondataavailable = (e) => {
+        if (e.data.size > 0) chunks.push(e.data);
+      };
+
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'audio/webm' });
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          const base64data = reader.result;
+          setWordForm((prev) => ({ ...prev, audio: base64data }));
+          setAudioFileName('Bản thu âm trực tiếp');
+          showNotification('Đã thu âm giọng đọc thành công!', 'mint');
+        };
+        reader.readAsDataURL(blob);
+        stream.getTracks().forEach((track) => track.stop());
+      };
+
+      mediaRecorder.start();
+      setAudioRecorder(mediaRecorder);
+      setIsRecordingAudio(true);
+      setRecordingSeconds(0);
+    } catch (err) {
+      alert('Không thể mở micro. Thầy/Cô vui lòng cấp quyền cho phép truy cập micro trên trình duyệt nhé!');
+    }
+  };
+
+  const handleStopRecording = () => {
+    if (audioRecorder && isRecordingAudio) {
+      audioRecorder.stop();
+      setIsRecordingAudio(false);
+      setAudioRecorder(null);
+    }
   };
 
   const handleImageUpload = (e) => {
@@ -1896,17 +1987,107 @@ export default function TeacherDataEditor() {
                 />
               </div>
 
-              <div>
-                <label className="block text-xs font-black text-ink mb-1">
-                  Đường dẫn Audio (Để trống để tự dùng Cloud TTS chuẩn Anh - Anh):
-                </label>
-                <input
-                  type="text"
-                  value={wordForm.audio}
-                  onChange={(e) => setWordForm({ ...wordForm, audio: e.target.value })}
-                  placeholder="Tự động phát hiện hoặc nhập link /assets/audio/..."
-                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
-                />
+              {/* KHỐI CHÈN FILE ÂM THANH HOẶC THU ÂM */}
+              <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-3">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-base">🎙️</span>
+                    <label className="text-xs font-black text-ink">
+                      Âm thanh phát âm của từ:
+                    </label>
+                  </div>
+                  {wordForm.audio && (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setWordForm({ ...wordForm, audio: '' });
+                        setAudioFileName('');
+                      }}
+                      className="text-[11px] font-black text-peach-dark hover:underline cursor-pointer"
+                    >
+                      ✕ Xóa file (Dùng giọng AI tự động)
+                    </button>
+                  )}
+                </div>
+
+                {/* Trạng thái file âm thanh hiện tại */}
+                <div className="flex items-center justify-between gap-2 p-3 rounded-xl bg-white border border-banana-soft">
+                  <div className="flex items-center gap-2.5 overflow-hidden">
+                    <span className="text-2xl shrink-0">
+                      {wordForm.audio ? '🔊' : '🤖'}
+                    </span>
+                    <div className="overflow-hidden">
+                      <p className="text-xs font-black text-ink truncate">
+                        {wordForm.audio
+                          ? (audioFileName || (wordForm.audio.startsWith('data:') ? 'File âm thanh riêng của từ' : 'Đã có file âm thanh'))
+                          : 'Giọng đọc AI chuẩn bản ngữ Anh - Anh (Oxford/Cambridge)'}
+                      </p>
+                      <p className="text-[11px] font-bold text-ink-soft">
+                        {wordForm.audio
+                          ? 'Đã chèn file âm thanh riêng cho từ vựng này'
+                          : 'Tự động phát âm chuẩn bản ngữ khi học sinh bấm loa'}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Nút nghe thử âm thanh */}
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (wordForm.audio) {
+                        speak(wordForm.word.trim() || 'preview', { audio: wordForm.audio });
+                      } else if (wordForm.word.trim()) {
+                        speak(wordForm.word.trim(), { lang: 'en-GB' });
+                      } else {
+                        alert('Vui lòng nhập từ tiếng Anh trước để nghe thử.');
+                      }
+                    }}
+                    className="shrink-0 inline-flex items-center gap-1.5 rounded-xl bg-banana px-3 py-2 text-xs font-black text-ink shadow-[0_2px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                    title="Nghe thử âm thanh"
+                  >
+                    <Volume2 className="h-4 w-4" />
+                    <span>Nghe thử</span>
+                  </button>
+                </div>
+
+                {/* Các nút tải file và thu âm */}
+                <div className="flex items-center gap-2 flex-wrap">
+                  {/* Nút 1: Tải file âm thanh từ máy tính */}
+                  <label className="inline-flex items-center justify-center gap-2 rounded-xl bg-mint px-3.5 py-2 text-xs font-black text-white shadow-[0_2px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer">
+                    <Upload className="h-3.5 w-3.5" />
+                    <span>📁 Tải file âm thanh từ máy (MP3, WAV, M4A)</span>
+                    <input
+                      type="file"
+                      accept="audio/*,.mp3,.wav,.m4a,.ogg,.aac"
+                      onChange={handleAudioUpload}
+                      className="hidden"
+                    />
+                  </label>
+
+                  {/* Nút 2: Thu âm trực tiếp bằng micro */}
+                  {!isRecordingAudio ? (
+                    <button
+                      type="button"
+                      onClick={handleStartRecording}
+                      className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-white px-3.5 py-2 text-xs font-black text-peach-dark border border-peach shadow-2xs hover:bg-peach hover:text-white transition-all cursor-pointer"
+                    >
+                      <span>🎙️ Thu âm micro</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={handleStopRecording}
+                      className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-rose-500 px-3.5 py-2 text-xs font-black text-white shadow-2xs animate-pulse cursor-pointer"
+                    >
+                      <span className="h-2 w-2 rounded-full bg-white animate-ping" />
+                      <span>⏹️ Dừng thu ({recordingSeconds}s)</span>
+                    </button>
+                  )}
+                </div>
+
+                <div className="text-[11px] font-bold text-ink-soft opacity-85">
+                  💡 Thầy cô có thể <strong>chèn file âm thanh có sẵn</strong> hoặc <strong>thu âm trực tiếp</strong>. Nếu không chèn file, ứng dụng sẽ tự động đọc chuẩn bản ngữ Oxford/Cambridge!
+                </div>
               </div>
 
               <div className="mt-2 flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
