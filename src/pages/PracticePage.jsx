@@ -10,6 +10,7 @@ import SpellingQuiz from '../components/SpellingQuiz.jsx';
 import ListeningQuiz from '../components/ListeningQuiz.jsx';
 import GrammarStation from '../components/stations/GrammarStation.jsx';
 import ShadowingStation from '../components/stations/ShadowingStation.jsx';
+import SpeakingStation from '../components/stations/SpeakingStation.jsx';
 import ReadingStation from '../components/stations/ReadingStation.jsx';
 import WritingStation from '../components/stations/WritingStation.jsx';
 import { MODES } from './UnitPage.jsx';
@@ -22,6 +23,7 @@ const COMPONENTS = {
   spelling: SpellingQuiz,
   grammar: GrammarStation,
   shadowing: ShadowingStation,
+  speaking: SpeakingStation,
   reading: ReadingStation,
   writing: WritingStation,
 };

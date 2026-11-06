@@ -161,7 +161,46 @@
   "speaking": {
     "targetSentence": "This historic tower is very famous.",
     "phonetic": "/ðɪs hɪˈstɒrɪk ˈtaʊə ɪz ˈveri ˈfeɪməs/",
-    "meaningVi": "Tòa tháp lịch sử này rất nổi tiếng."
+    "meaningVi": "Tòa tháp lịch sử này rất nổi tiếng.",
+    "situationalTopic": "Everyday English: Bày tỏ ngạc nhiên & Danh lam thế giới",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "What a beautiful and crowded city!",
+        "phonetic": "/wɒt ə ˈbjuːtɪfl ænd ˈkraʊdɪd ˈsɪti/",
+        "meaningVi": "Thật là một thành phố xinh đẹp và náo nhiệt!",
+        "tipsVi": "Lên giọng ở cuối câu cảm thán \"city!\"."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "Big Ben is the most famous historic clock in London.",
+        "phonetic": "/bɪɡ ben ɪz ðə məʊst ˈfeɪməs hɪˈstɒrɪk klɒk ɪn ˈlʌndən/",
+        "meaningVi": "Big Ben là chiếc đồng hồ lịch sử nổi tiếng nhất ở Luân Đôn.",
+        "tipsVi": "\"historic\" nhấn trọng âm vào âm thứ hai: his-TO-ric."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "The street food here is delicious and very cheap.",
+        "phonetic": "/ðə striːt fuːd hɪər ɪz dɪˈlɪʃəs ænd ˈveri tʃiːp/",
+        "meaningVi": "Đồ ăn đường phố ở đây vừa ngon vừa rất rẻ.",
+        "tipsVi": "\"delicious\" phát âm âm /ʃ/ tròn môi: de-LI-shus."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Have you ever visited Sydney Opera House?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "Yes, I have visited it with my family.",
+        "phonetic": "/jes aɪ hæv ˈvɪzɪtɪd ɪt wɪð maɪ ˈfæməli/",
+        "meaningVi": "Vâng, em đã từng ghé thăm nơi đó cùng gia đình rồi.",
+        "tipsVi": "\"visited\" phát âm đuôi là /-ɪd/."
+      }
+    ]
   },
   "reading": {
     "passage": "Sydney is an exciting city in Australia. It has the famous Sydney Opera House with its unique architectural design. The weather is sunny in summer, and millions of tourists visit its beautiful beaches every year.",

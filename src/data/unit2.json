@@ -268,7 +268,46 @@
   "speaking": {
     "targetSentence": "There is a sofa in the living room.",
     "phonetic": "/ðeər ɪz ə ˈsəʊfə ɪn ðə ˈlɪvɪŋ ruːm/",
-    "meaningVi": "Có một chiếc ghế sô-pha trong phòng khách."
+    "meaningVi": "Có một chiếc ghế sô-pha trong phòng khách.",
+    "situationalTopic": "Everyday English: Khen ngợi ngôi nhà & Mô tả phòng ốc",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "There is a sofa in the living room.",
+        "phonetic": "/ðeər ɪz ə ˈsəʊfə ɪn ðə ˈlɪvɪŋ ruːm/",
+        "meaningVi": "Có một chiếc ghế sô-pha trong phòng khách.",
+        "tipsVi": "Nối âm nhẹ giữa \"There is\" thành /ðeər ɪz/."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "Wow, you have a lovely bedroom!",
+        "phonetic": "/waʊ juː hæv ə ˈlʌvli ˈbedruːm/",
+        "meaningVi": "Oa, bạn có một phòng ngủ thật đáng yêu!",
+        "tipsVi": "Lên giọng ở từ \"Wow\" và nhấn mạnh vào \"lovely\"."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "My family often cooks dinner in the kitchen.",
+        "phonetic": "/maɪ ˈfæməli ˈɒfn kʊks ˈdɪnər ɪn ðə ˈkɪtʃɪn/",
+        "meaningVi": "Gia đình em thường cùng nhau nấu bữa tối trong bếp.",
+        "tipsVi": "Nhớ phát âm âm /s/ ở đuôi từ \"cooks\" nhé."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Where is your lovely cat?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "It is sleeping under the table.",
+        "phonetic": "/ɪt ɪz ˈsliːpɪŋ ˈʌndə ðə ˈteɪbl/",
+        "meaningVi": "Nó đang ngủ dưới gầm bàn.",
+        "tipsVi": "Kéo dài âm /iː/ trong từ \"sleeping\"."
+      }
+    ]
   },
   "reading": {
     "passage": "Nam lives in a town house in the city. His house is tall with three floors. His bedroom is on the second floor with a cozy balcony.",

@@ -187,7 +187,46 @@
   "speaking": {
     "targetSentence": "You must bring sun cream and a torch.",
     "phonetic": "/juː mʌst brɪŋ sʌn kriːm ænd ə tɔːtʃ/",
-    "meaningVi": "Bạn bắt buộc phải mang kem chống nắng và đèn pin."
+    "meaningVi": "Bạn bắt buộc phải mang kem chống nắng và đèn pin.",
+    "situationalTopic": "Everyday English: Khuyên nhủ & Chuẩn bị chuyến dã ngoại",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "You should visit Ha Long Bay.",
+        "phonetic": "/juː ʃʊd ˈvɪzɪt hɑː lɒŋ beɪ/",
+        "meaningVi": "Bạn nên ghé thăm Vịnh Hạ Long.",
+        "tipsVi": "\"should\" có âm /ʃ/ tròn môi và âm /d/ nhẹ ở cuối."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "You must bring sun cream and a torch.",
+        "phonetic": "/juː mʌst brɪŋ sʌn kriːm ænd ə tɔːtʃ/",
+        "meaningVi": "Bạn bắt buộc phải mang kem chống nắng và đèn pin.",
+        "tipsVi": "Nhấn mạnh từ \"must\" để thể hiện quy tắc bắt buộc."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "Mount Fansipan is the highest mountain in Viet Nam.",
+        "phonetic": "/maʊnt fænˈsɪpæn ɪz ðə ˈhaɪɪst ˈmaʊntɪn ɪn vjet næm/",
+        "meaningVi": "Đỉnh Fansipan là ngọn núi cao nhất Việt Nam.",
+        "tipsVi": "\"highest\" phát âm /haɪ-ɪst/ với âm đuôi /st/."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Can we swim in this deep stream?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "No, you mustn't. It is dangerous!",
+        "phonetic": "/nəʊ juː ˈmʌsnt ɪt ɪz ˈdeɪndʒərəs/",
+        "meaningVi": "Không, không được bơi đâu. Nguy hiểm lắm!",
+        "tipsVi": "\"mustn't\" không phát âm chữ t ở giữa: đọc là /ˈmʌsnt/."
+      }
+    ]
   },
   "reading": {
     "passage": "Ha Long Bay is one of the most famous natural wonders of Viet Nam. It has thousands of limestone islands and beautiful caves. When you visit Ha Long Bay, you must wear a life jacket on the boat.",

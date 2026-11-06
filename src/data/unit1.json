@@ -279,7 +279,46 @@
   "speaking": {
     "targetSentence": "I love my new school.",
     "phonetic": "/aɪ lʌv maɪ njuː skuːl/",
-    "meaningVi": "Em yêu ngôi trường mới của mình."
+    "meaningVi": "Em yêu ngôi trường mới của mình.",
+    "situationalTopic": "Everyday English: Giới thiệu bản thân và trường học mới",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "I go to school by bicycle.",
+        "phonetic": "/aɪ ɡəʊ tuː skuːl baɪ ˈbaɪsɪkl/",
+        "meaningVi": "Em đi học bằng xe đạp.",
+        "tipsVi": "Phát âm rõ âm cuối /l/ trong \"bicycle\" nhé."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "This is Duy, my new friend.",
+        "phonetic": "/ðɪs ɪz duːi maɪ njuː frend/",
+        "meaningVi": "Đây là Duy, bạn mới của mình.",
+        "tipsVi": "Kẹp nhẹ đầu lưỡi giữa hai hàm răng khi phát âm \"This\" (/ðɪs/)."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "I love my new school because teachers are nice.",
+        "phonetic": "/aɪ lʌv maɪ njuː skuːl bɪˈkɒz ˈtiːtʃəz ɑː naɪs/",
+        "meaningVi": "Em yêu ngôi trường mới vì thầy cô rất tốt bụng.",
+        "tipsVi": "Nhấn giọng vào \"love\", \"school\" và \"nice\" để biểu cảm tự nhiên."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Are you ready for school?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "Yes, I am always ready!",
+        "phonetic": "/jes aɪ æm ˈɔːlweɪz ˈredi/",
+        "meaningVi": "Vâng, em luôn sẵn sàng!",
+        "tipsVi": "Nói với ngữ điệu vui tươi, tự tin và hào hứng."
+      }
+    ]
   },
   "reading": {
     "passage": "My name is Mai. I go to a boarding school in Da Nang. My school has a big library and a computer room. I like studying maths and art.",

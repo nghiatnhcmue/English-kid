@@ -174,7 +174,46 @@
   "speaking": {
     "targetSentence": "I watch news programmes every evening.",
     "phonetic": "/aɪ wɒtʃ njuːz ˈprəʊɡræmz ˈevri ˈiːvnɪŋ/",
-    "meaningVi": "Em xem các chương trình thời sự vào mỗi buổi tối."
+    "meaningVi": "Em xem các chương trình thời sự vào mỗi buổi tối.",
+    "situationalTopic": "Everyday English: Hỏi thói quen xem TV & Kênh yêu thích",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "What is your favourite TV programme?",
+        "phonetic": "/wɒt ɪz jɔː ˈfeɪvərɪt ˌtiː ˈviː ˈprəʊɡræm/",
+        "meaningVi": "Chương trình tivi yêu thích của bạn là gì?",
+        "tipsVi": "\"favourite\" nhấn trọng âm ở đầu: FAY-vuh-rit."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "I watch educational channels to learn English.",
+        "phonetic": "/aɪ wɒtʃ ˌedʒuˈkeɪʃənl ˈtʃænlz tuː lɜːn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Em xem các kênh giáo dục để học tiếng Anh.",
+        "tipsVi": "\"educational\" nhấn trọng âm vào âm \"ca\": e-ju-CA-tion-al."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "I watch news programmes every evening.",
+        "phonetic": "/aɪ wɒtʃ njuːz ˈprəʊɡræmz ˈevri ˈiːvnɪŋ/",
+        "meaningVi": "Em xem các chương trình thời sự vào mỗi buổi tối.",
+        "tipsVi": "\"news\" phát âm có âm đuôi /z/: /njuːz/."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Why do you like this documentary?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "Because it is very interesting and full of knowledge.",
+        "phonetic": "/bɪˈkɒz ɪt ɪz ˈveri ˈɪntrəstɪŋ ænd fʊl əv ˈnɒlɪdʒ/",
+        "meaningVi": "Vì nó rất thú vị và ngập tràn kiến thức bổ ích.",
+        "tipsVi": "\"interesting\" đọc 3 âm tiết gọn: IN-tre-sting."
+      }
+    ]
   },
   "reading": {
     "passage": "Television is a popular source of entertainment and education. Viewers can watch many different channels from around the world. Educational programmes teach kids about animals, science, and history.",

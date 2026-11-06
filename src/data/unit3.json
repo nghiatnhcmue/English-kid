@@ -200,7 +200,46 @@
   "speaking": {
     "targetSentence": "My best friend is very hard-working and kind.",
     "phonetic": "/maɪ best frend ɪz ˈveri ˌhɑːd ˈwɜːkɪŋ ænd kaɪnd/",
-    "meaningVi": "Bạn thân nhất của em rất chăm chỉ và tốt bụng."
+    "meaningVi": "Bạn thân nhất của em rất chăm chỉ và tốt bụng.",
+    "situationalTopic": "Everyday English: Mô tả ngoại hình & Tính cách bạn bè",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "She has long black hair and brown eyes.",
+        "phonetic": "/ʃiː hæz lɒŋ blæk heər ænd braʊn aɪz/",
+        "meaningVi": "Bạn ấy có mái tóc đen dài và đôi mắt nâu.",
+        "tipsVi": "Phát âm tròn môi với âm /ʃ/ trong \"She\"."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "My best friend is very hard-working and kind.",
+        "phonetic": "/maɪ best frend ɪz ˈveri ˌhɑːd ˈwɜːkɪŋ ænd kaɪnd/",
+        "meaningVi": "Bạn thân nhất của em rất chăm chỉ và tốt bụng.",
+        "tipsVi": "Nhấn rõ trọng âm của từ ghép \"hard-working\"."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "He is tall and sporty with a bright smile.",
+        "phonetic": "/hiː ɪz tɔːl ænd ˈspɔːti wɪð ə braɪt smaɪl/",
+        "meaningVi": "Cậu ấy cao ráo và yêu thể thao với nụ cười rạng rỡ.",
+        "tipsVi": "Bật âm đuôi /t/ trong từ \"bright\"."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Would you like to join our picnic this Sunday?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "I would love to join your picnic!",
+        "phonetic": "/aɪ wʊd lʌv tuː dʒɔɪn jɔː ˈpɪknɪk/",
+        "meaningVi": "Mình rất muốn tham gia buổi dã ngoại cùng các bạn!",
+        "tipsVi": "Âm /dʒ/ trong \"join\" bật hơi mạnh và dứt khoát."
+      }
+    ]
   },
   "reading": {
     "passage": "Minh is my new classmate. He is twelve years old. He is very friendly and confident. Minh has chubby cheeks and short black hair. In his free time, he likes reading books and drawing pictures.",

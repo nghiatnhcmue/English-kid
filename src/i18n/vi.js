@@ -43,6 +43,7 @@ export const t = {
     spelling: { name: 'Thử tài điền chữ', desc: 'Điền các chữ cái còn thiếu để nhớ cách viết', icon: '🔤', step: 4 },
     grammar: { name: 'Ngữ pháp cốt lõi', desc: 'Công thức tinh gọn, mẹo nhận biết và bài tập củng cố', icon: '📐', step: 2 },
     shadowing: { name: 'Luyện Nghe & Nói', desc: 'Nghe đối thoại học đường và thu âm nhại lại giọng chuẩn', icon: '🎙️', step: 3 },
+    speaking: { name: 'Luyện Nói & Chấm Điểm AI', desc: 'Luyện nhại giọng (Shadowing), thu âm và nghe lại giọng mình', icon: '🎙️', step: 3 },
     reading: { name: 'Đọc hiểu trực quan', desc: 'Đoạn văn ngắn có hình ảnh và câu hỏi trắc nghiệm', icon: '📖', step: 4 },
     writing: { name: 'Viết câu sắp xếp', desc: 'Xếp các khối từ xáo trộn thành câu hoàn chỉnh', icon: '✍️', step: 5 },
   },

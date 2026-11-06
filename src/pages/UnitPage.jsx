@@ -165,23 +165,23 @@ export default function UnitPage() {
             </div>
           </Button3D>
 
-          {/* Trạm 3: Nghe & Nói */}
+          {/* Trạm 3: Luyện Nói & Chấm điểm AI */}
           <Button3D
             tone="peach"
-            to={`/unit/${unit.unitId}/shadowing`}
+            to={`/speaking?unit=${unit.unitId}`}
             className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">
-              Trạm 3 · Nghe & Nói (Shadowing)
+              Trạm 3 · Luyện Nói & Chấm Điểm AI
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>🎙️</span>
               <div>
                 <h3 className="text-lg font-black leading-tight text-white">
-                  Luyện Nghe & Nhại giọng nói
+                  Luyện Nói & Nhại Giọng Bản Xứ
                 </h3>
                 <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
-                  Nghe đối thoại học đường & thu âm so sánh giọng mình
+                  Giao tiếp SGK, bấm micro thu âm, máy phân tích từng từ và nghe lại giọng mình
                 </p>
               </div>
             </div>

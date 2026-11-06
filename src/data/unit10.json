@@ -161,7 +161,46 @@
   "speaking": {
     "targetSentence": "My future house will have super smart appliances.",
     "phonetic": "/maɪ ˈfjuːtʃə haʊs wɪl hæv ˈsuːpə smɑːt əˈplaɪənsɪz/",
-    "meaningVi": "Ngôi nhà tương lai của em sẽ có các thiết bị siêu thông minh."
+    "meaningVi": "Ngôi nhà tương lai của em sẽ có các thiết bị siêu thông minh.",
+    "situationalTopic": "Everyday English: Miêu tả ngôi nhà & Thiết bị tương lai",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "In the future, my dream house will be on the ocean.",
+        "phonetic": "/ɪn ðə ˈfjuːtʃə maɪ driːm haʊs wɪl biː ɒn ði ˈəʊʃn/",
+        "meaningVi": "Trong tương lai, ngôi nhà mơ ước của em sẽ ở trên đại dương.",
+        "tipsVi": "\"ocean\" phát âm là /ˈəʊʃn/ với âm /ʃ/."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "My future house will have super smart appliances.",
+        "phonetic": "/maɪ ˈfjuːtʃə haʊs wɪl hæv ˈsuːpə smɑːt əˈplaɪənsɪz/",
+        "meaningVi": "Ngôi nhà tương lai của em sẽ có các thiết bị siêu thông minh.",
+        "tipsVi": "\"appliances\" phát âm là /əˈplaɪənsɪz/ có 4 âm tiết."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "Solar panels will provide free green energy for the house.",
+        "phonetic": "/ˈsəʊlə ˈpænlz wɪl prəˈvaɪd friː ɡriːn ˈenədʒi fɔː ðə haʊs/",
+        "meaningVi": "Các tấm pin mặt trời sẽ cung cấp năng lượng xanh miễn phí cho ngôi nhà.",
+        "tipsVi": "\"energy\" nhấn trọng âm đầu: E-ner-gy."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "Will a smart robot cook meals for you?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "Yes, it will cook delicious meals and clean floors.",
+        "phonetic": "/jes ɪt wɪl kʊk dɪˈlɪʃəs miːlz ænd kliːn flɔːz/",
+        "meaningVi": "Vâng, nó sẽ nấu các bữa ăn ngon và lau dọn sàn nhà.",
+        "tipsVi": "Nói liền mạch, tự nhiên như lời khẳng định."
+      }
+    ]
   },
   "reading": {
     "passage": "Future houses will be very eco-friendly. Many people might live in floating houses on the ocean or in underground smart homes. Solar panels on the roof will provide clean electricity for wireless appliances.",

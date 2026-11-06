@@ -174,7 +174,46 @@
   "speaking": {
     "targetSentence": "I played badminton with my father yesterday.",
     "phonetic": "/aɪ pleɪd ˈbædmɪntən wɪð maɪ ˈfɑːðə ˈjestədeɪ/",
-    "meaningVi": "Hôm qua em đã chơi cầu lông với bố."
+    "meaningVi": "Hôm qua em đã chơi cầu lông với bố.",
+    "situationalTopic": "Everyday English: Chúc mừng chiến thắng & Thể thao học đường",
+    "challenges": [
+      {
+        "id": "spk-1",
+        "level": "Khởi động (Câu ngắn)",
+        "sentenceEn": "Congratulations! You played so well today!",
+        "phonetic": "/kənˌɡrætʃuˈleɪʃnz juː pleɪd səʊ wel təˈdeɪ/",
+        "meaningVi": "Xin chúc mừng! Hôm nay bạn thi đấu hay lắm!",
+        "tipsVi": "Nói với giọng hào hứng, chúc mừng bạn."
+      },
+      {
+        "id": "spk-2",
+        "level": "Giao tiếp hàng ngày",
+        "sentenceEn": "I played badminton with my father yesterday.",
+        "phonetic": "/aɪ pleɪd ˈbædmɪntən wɪð maɪ ˈfɑːðə ˈjestədeɪ/",
+        "meaningVi": "Hôm qua em đã chơi cầu lông với bố.",
+        "tipsVi": "\"played\" phát âm âm đuôi /d/, không đọc thành \"play-id\"."
+      },
+      {
+        "id": "spk-3",
+        "level": "Mô tả & Cảm nghĩ",
+        "sentenceEn": "Playing sports helps us keep fit and healthy.",
+        "phonetic": "/ˈpleɪɪŋ spɔːts helps ʌs kiːp fɪt ænd ˈhelθi/",
+        "meaningVi": "Chơi thể thao giúp chúng em giữ dáng và khỏe mạnh.",
+        "tipsVi": "\"sports\" có âm /s/ ở đuôi, phát âm rõ."
+      },
+      {
+        "id": "spk-4",
+        "level": "Hội thoại đối đáp",
+        "dialogue": {
+          "prompt": "How often do you go swimming?",
+          "speaker": "Bạn"
+        },
+        "sentenceEn": "I go swimming twice a week with my brother.",
+        "phonetic": "/aɪ ɡəʊ ˈswɪmɪŋ twaɪs ə wiːk wɪð maɪ ˈbrʌðə/",
+        "meaningVi": "Em đi bơi hai lần một tuần cùng anh trai.",
+        "tipsVi": "\"twice\" phát âm đuôi có âm gió /s/."
+      }
+    ]
   },
   "reading": {
     "passage": "Sports and games play an important role in our lives. Doing aerobics or playing football keeps us healthy and fit. Last month, our school organized a marathon, and hundreds of students took part in it.",
