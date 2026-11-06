@@ -171,7 +171,7 @@ export default function TeacherPage() {
               maxLength={8}
               value={pin}
               onChange={(e) => setPin(e.target.value)}
-              placeholder="Nhập mã PIN (Mặc định: 1234)"
+              placeholder="Nhập mã PIN bảo mật"
               className="w-full rounded-2xl bg-cream px-4 py-3 text-center text-2xl font-black tracking-widest text-ink border-2 border-banana-soft focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
               autoFocus
             />
@@ -188,7 +188,7 @@ export default function TeacherPage() {
           </form>
 
           <p className="text-xs font-bold text-ink-soft">
-            💡 Gợi ý: Mã PIN mặc định ban đầu là <strong className="text-ink">1234</strong>
+            🔒 Khu vực bảo mật dành riêng cho Giáo viên
           </p>
         </div>
       </div>
