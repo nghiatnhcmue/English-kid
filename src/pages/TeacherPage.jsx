@@ -356,7 +356,7 @@ export default function TeacherPage() {
                 <p className="font-black text-peach mb-1">👉 2 bước nhanh để bật D1 trên Cloudflare Dashboard (mất 1 phút):</p>
                 <ol className="list-decimal list-inside space-y-1">
                   <li>Vào Cloudflare Dashboard → <strong>Storage & Databases</strong> → <strong>D1 SQL Database</strong> → Bấm <strong>Create</strong> đặt tên là <code>english-kid-db</code>.</li>
-                  <li>Vào <strong>Workers & Pages</strong> → chọn dự án <strong>English-kid</strong> → <strong>Settings</strong> → <strong>Functions</strong> → cuộn xuống <strong>D1 Database Bindings</strong> → Bấm <strong>Add binding</strong>: Variable name đặt là <code>DB</code>, Database chọn <code>english-kid-db</code> vừa tạo. Xong!</li>
+                  <li>Vào <strong>Workers & Pages</strong> → chọn Worker <strong>english-kid</strong> → <strong>Settings</strong> → <strong>Bindings</strong> (hoặc cuộn xuống <strong>D1 Database Bindings</strong>) → Bấm <strong>Add</strong>: Variable name đặt là <code>DB</code>, Database chọn <code>english-kid-db</code>. Xong!</li>
                 </ol>
               </div>
             )}
