@@ -98,53 +98,53 @@ function playAudioFile(src, rate = 1) {
   });
 }
 
-/** Tạo link âm thanh trực tuyến chuẩn bản xứ chất lượng cao */
-function getCloudTtsUrl(text, lang = 'en-GB') {
-  const clean = text.trim();
-  const isUS = (lang || '').toLowerCase().includes('us');
-
-  // Nếu là từ đơn hoặc cụm từ ngắn dưới 4 từ: dùng Youdao giọng chuẩn từ điển Oxford/Cambridge
-  const words = clean.split(/\s+/);
-  if (words.length <= 4) {
-    return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=${isUS ? '2' : '1'}`;
-  }
-
-  // Nếu là cả câu dài: dùng Google TTS giọng Anh hoặc Mỹ
-  return `https://translate.google.com/translate_tts?ie=UTF-8&tl=${isUS ? 'en-US' : 'en-GB'}&client=tw-ob&q=${encodeURIComponent(clean)}`;
-}
-
-/** Đọc văn bản/câu nói (Ưu tiên file âm thanh -> Online Cloud TTS -> Trình duyệt) */
+/** Đọc văn bản/câu nói (Ưu tiên file âm thanh -> Online Cloud TTS cho từ vựng -> Web Speech API cho câu dài) */
 export async function speak(text, { lang = 'en-GB', rate = 0.85, audio = null } = {}) {
   if (!text) return false;
   stopSpeaking();
 
-  // 1. Nếu có file âm thanh sẵn (ví dụ câu ví dụ)
+  // 1. Nếu có file âm thanh sẵn (ví dụ câu ví dụ trong dữ liệu)
   if (audio) {
     const ok = await playAudioFile(audio, rate);
     if (ok) return true;
   }
 
-  // 2. Thử phát từ Cloud TTS chất lượng cao
-  try {
-    const cloudUrl = getCloudTtsUrl(text, lang);
-    const ok = await playAudioFile(cloudUrl, rate);
-    if (ok) return true;
-  } catch {}
+  const clean = text.trim();
+  const wordCount = clean.split(/\s+/).length;
 
-  // 3. Fallback sang Web Speech API của trình duyệt nếu offline
+  // 2. Với từ đơn hoặc cụm từ ngắn (1-2 từ): Thử phát online Youdao Oxford/Cambridge
+  if (wordCount <= 2) {
+    try {
+      const isUS = (lang || '').toLowerCase().includes('us');
+      const cloudUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=${isUS ? '2' : '1'}`;
+      const ok = await playAudioFile(cloudUrl, rate);
+      if (ok) return true;
+    } catch {
+      /* bỏ qua sang fallback */
+    }
+  }
+
+  // 3. Với câu văn dài, đoạn văn hoặc khi không có file âm thanh:
+  // Dùng trực tiếp Web Speech API tích hợp của trình duyệt (tránh gọi URL bị CORS chặn)
   if (isTtsSupported()) {
-    const voices = await loadVoices();
-    return new Promise((resolve) => {
-      const u = new SpeechSynthesisUtterance(text);
-      const voice = pickVoice(voices, lang);
-      if (voice) u.voice = voice;
-      u.lang = voice?.lang ?? lang;
-      u.rate = rate;
-      u.onend = () => resolve(true);
-      u.onerror = () => resolve(false);
-      synth.speak(u);
-      setTimeout(() => resolve(true), Math.max(2500, text.length * 180));
-    });
+    try {
+      synth.cancel();
+      if (synth.paused) synth.resume();
+      const voices = await loadVoices();
+      return new Promise((resolve) => {
+        const u = new SpeechSynthesisUtterance(clean);
+        const voice = pickVoice(voices, lang);
+        if (voice) u.voice = voice;
+        u.lang = voice?.lang ?? lang;
+        u.rate = Math.min(1.5, Math.max(0.6, rate));
+        u.onend = () => resolve(true);
+        u.onerror = () => resolve(false);
+        synth.speak(u);
+        setTimeout(() => resolve(true), Math.max(3000, clean.length * 180));
+      });
+    } catch {
+      return false;
+    }
   }
 
   return false;

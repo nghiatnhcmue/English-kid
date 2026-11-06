@@ -130,7 +130,7 @@ export default function ObjectInspector({ word, onClose }) {
           <div className="rounded-2xl bg-cream p-4">
             <div className="flex items-center gap-3">
               <p className="flex-1 text-lg font-extrabold">{word.exampleEn}</p>
-              <SpeakerButton text={word.exampleEn} size="sm" />
+              <SpeakerButton text={word.exampleEn} audio={word.audioExample} size="sm" />
             </div>
             <p className="text-ink-soft">{word.exampleVi}</p>
           </div>
