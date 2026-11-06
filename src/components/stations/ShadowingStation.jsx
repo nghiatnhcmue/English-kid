@@ -7,12 +7,12 @@ import { similarity, speakingLevel } from '../../utils/scene.js';
 import { playSfx } from '../../utils/sfx.js';
 import { useSettings } from '../../settings.jsx';
 
-export default function ShadowingStation({ unit, onFinish }) {
+export default function ShadowingStation({ unit, initialTab = 'listening', onFinish }) {
   const { settings } = useSettings();
   const listening = unit?.listening;
   const speaking = unit?.speaking;
 
-  const [activeTab, setActiveTab] = useState('listening'); // 'listening' | 'speaking'
+  const [activeTab, setActiveTab] = useState(initialTab); // 'listening' | 'speaking'
   const [listenAnswered, setListenAnswered] = useState(false);
   const [listenSelected, setListenSelected] = useState(null);
 

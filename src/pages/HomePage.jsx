@@ -161,6 +161,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Khối Banner: Phòng Luyện Nói & Chấm điểm phát âm AI */}
+      <section aria-label="Phòng Luyện Nói" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-mint-soft via-cream to-peach-soft p-6 sm:p-7 shadow-[0_6px_0_#bfe6d6] border-2 border-mint-dark/20">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              🎙️
+            </span>
+            <div>
+              <span className="rounded-full bg-mint text-white px-3 py-1 text-xs font-black shadow-xs">
+                Chấm điểm phát âm AI
+              </span>
+              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
+                Phòng Luyện Nói & Shadowing
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Luyện nhại giọng câu giao tiếp SGK, bấm micro thu âm, nhận diện giọng nói và nghe lại chính mình
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/speaking"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-mint px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Vào Luyện Nói →</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Chuỗi ngày học liên tiếp */}
       <div className="flex items-center justify-center gap-2 rounded-2xl bg-white/90 border border-banana-soft px-4 py-3 text-center text-base sm:text-lg font-black text-ink shadow-xs">
         <span className="text-2xl" aria-hidden>🔥</span>

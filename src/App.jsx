@@ -15,11 +15,13 @@ import SettingsPage from './pages/SettingsPage.jsx';
 import TeacherPage from './pages/TeacherPage.jsx';
 import GrammarPage from './pages/GrammarPage.jsx';
 import ListeningPage from './pages/ListeningPage.jsx';
+import SpeakingPage from './pages/SpeakingPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
   { to: '/listening', label: 'Luyện Nghe', icon: '👂' },
+  { to: '/speaking', label: 'Luyện Nói', icon: '🎙️' },
   { to: '/unit/1/stage', label: t.nav.stage, icon: '🎭' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
@@ -146,26 +148,34 @@ function TopNavBar() {
   );
 }
 
+const MOBILE_NAV = [
+  { to: '/', label: 'Trang chủ', icon: '🏠', end: true },
+  { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
+  { to: '/listening', label: 'Nghe', icon: '👂' },
+  { to: '/speaking', label: 'Nói', icon: '🎙️' },
+  { to: '/test', label: 'Test tuần', icon: '📝' },
+];
+
 function BottomNav() {
   return (
     <nav
       className="no-print md:hidden fixed inset-x-0 bottom-0 z-30 border-t-2 border-banana-soft bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-lg backdrop-blur"
       aria-label="Điều hướng điện thoại"
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-6">
-        {NAV.map((item) => (
+      <ul className="mx-auto grid max-w-lg grid-cols-5">
+        {MOBILE_NAV.map((item) => (
           <li key={item.to}>
             <NavLink
               to={item.to}
               end={item.end}
               onClick={() => playSfx('click')}
               className={({ isActive }) =>
-                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-[11px] font-black transition-colors ${
+                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-xs font-black transition-colors ${
                   isActive ? 'text-peach' : 'text-ink-soft'
                 }`
               }
             >
-              <span className="text-xl leading-none" aria-hidden>
+              <span className="text-2xl leading-none" aria-hidden>
                 {item.icon}
               </span>
               <span className="whitespace-nowrap">{item.label}</span>
@@ -194,6 +204,7 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
               <Route path="/listening" element={<Fresh component={ListeningPage} />} />
+              <Route path="/speaking" element={<Fresh component={SpeakingPage} />} />
               <Route path="/unit/:unitId" element={<UnitPage />} />
               <Route path="/unit/:unitId/stage/:sceneId?" element={<Fresh component={StagePage} />} />
               <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />
