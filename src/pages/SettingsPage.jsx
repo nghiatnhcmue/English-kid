@@ -10,6 +10,7 @@ import credits from '../data/credits.json';
 export default function SettingsPage() {
   const { settings, update } = useSettings();
   const [voiceOk, setVoiceOk] = useState(null);
+  const [testingVoice, setTestingVoice] = useState(false);
 
   const savedStudent = store().getStudentInfo();
   const [studentName, setStudentName] = useState(savedStudent.name || '');
@@ -20,6 +21,21 @@ export default function SettingsPage() {
     if (!isTtsSupported()) return setVoiceOk(false);
     hasEnglishVoice().then(setVoiceOk);
   }, []);
+
+  const handleTestVoice = async () => {
+    if (testingVoice) return;
+    setTestingVoice(true);
+    try {
+      const isUS = (settings.lang || '').toLowerCase().includes('us');
+      const audioFile = isUS ? '/assets/audio/test-voice-us.mp3' : '/assets/audio/test-voice-uk.mp3';
+      await speak('Hello! Welcome to English 6. Have fun learning!', {
+        ...settings,
+        audio: audioFile,
+      });
+    } finally {
+      setTestingVoice(false);
+    }
+  };
 
   const handleSaveStudent = (e) => {
     e.preventDefault();
@@ -157,10 +173,12 @@ export default function SettingsPage() {
 
         <Button3D
           tone="peach"
-          onClick={() => speak('Hello! Welcome to English 6. Have fun learning!', settings)}
-          className="w-full py-4 text-lg"
+          sound={false}
+          disabled={testingVoice}
+          onClick={handleTestVoice}
+          className={`w-full py-4 text-lg ${testingVoice ? 'animate-pulse' : ''}`}
         >
-          🔊 {t.settings.testVoice}
+          {testingVoice ? '🔊 Đang đọc thử...' : `🔊 ${t.settings.testVoice}`}
         </Button3D>
 
         {voiceOk === false && (

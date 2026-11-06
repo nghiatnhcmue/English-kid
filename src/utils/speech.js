@@ -8,6 +8,7 @@ const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined
 export const isTtsSupported = () => !!synth && typeof SpeechSynthesisUtterance !== 'undefined';
 
 let currentAudio = null;
+let activeUtterance = null; // Giữ tham chiếu toàn cục tránh bị V8 Garbage Collection hủy giữa chừng
 
 export function stopSpeaking() {
   if (currentAudio) {
@@ -20,10 +21,19 @@ export function stopSpeaking() {
     currentAudio = null;
   }
   try {
-    synth?.cancel();
+    if (synth && (synth.speaking || synth.pending)) {
+      synth.cancel();
+    }
   } catch {
     /* bỏ qua */
   }
+}
+
+/** Tạo link audio từ điển Youdao chất lượng cao cho từ vựng */
+export function getCloudTtsUrl(text, lang = 'en-GB') {
+  const clean = (text || '').trim();
+  const isUS = (lang || '').toLowerCase().includes('us');
+  return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=${isUS ? '2' : '1'}`;
 }
 
 let voicesPromise;
@@ -128,19 +138,45 @@ export async function speak(text, { lang = 'en-GB', rate = 0.85, audio = null } 
   // Dùng trực tiếp Web Speech API tích hợp của trình duyệt (tránh gọi URL bị CORS chặn)
   if (isTtsSupported()) {
     try {
-      synth.cancel();
       if (synth.paused) synth.resume();
-      const voices = await loadVoices();
+      let voices = synth.getVoices();
+      if (!voices.length) {
+        voices = await loadVoices();
+      }
       return new Promise((resolve) => {
         const u = new SpeechSynthesisUtterance(clean);
+        activeUtterance = u;
+        if (typeof window !== 'undefined') window.__activeUtterance = u;
+
         const voice = pickVoice(voices, lang);
         if (voice) u.voice = voice;
         u.lang = voice?.lang ?? lang;
         u.rate = Math.min(1.5, Math.max(0.6, rate));
-        u.onend = () => resolve(true);
-        u.onerror = () => resolve(false);
+        u.pitch = 1;
+        u.volume = 1;
+
+        let finished = false;
+        const cleanup = () => {
+          if (finished) return;
+          finished = true;
+          activeUtterance = null;
+          if (typeof window !== 'undefined') window.__activeUtterance = null;
+        };
+
+        u.onend = () => {
+          cleanup();
+          resolve(true);
+        };
+        u.onerror = () => {
+          cleanup();
+          resolve(false);
+        };
+
         synth.speak(u);
-        setTimeout(() => resolve(true), Math.max(3000, clean.length * 180));
+        setTimeout(() => {
+          cleanup();
+          resolve(true);
+        }, Math.max(3000, clean.length * 150));
       });
     } catch {
       return false;
