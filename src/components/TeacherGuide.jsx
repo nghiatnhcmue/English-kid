@@ -5,7 +5,7 @@ export default function TeacherGuide() {
   const [activeSection, setActiveSection] = useState('customize');
   const [copiedSample, setCopiedSample] = useState(false);
 
-  const sampleZaloMsg = `Kính gửi Quý Phụ huynh và các em học sinh lớp 6,\nThầy/Cô gửi bài tập ôn luyện tuần này trên ứng dụng Tiếng Anh 6:\n📌 Bài tập: Ôn luyện từ vựng & Luyện phát âm chuẩn\n⏰ Hạn hoàn thành: 21:00 Chủ Nhật tuần này\n👉 Link làm bài trực tiếp: https://english-kid.nghiaedu.workers.dev/#/?assign=TA6-W01-825\n(Các em học sinh bấm vào link là vào thẳng bài làm, không cần cài đặt phần mềm phức tạp).\nChúc các em học tập vui vẻ và đạt nhiều điểm 10!`;
+  const sampleZaloMsg = `Kính gửi Quý Phụ huynh và các em học sinh lớp 6,\nThầy/Cô gửi bài tập ôn luyện tuần này trên ứng dụng English-Kid:\n📌 Bài tập: Ôn luyện từ vựng & Luyện phát âm chuẩn\n⏰ Hạn hoàn thành: 21:00 Chủ Nhật tuần này\n👉 Link làm bài trực tiếp: https://english-kid.nghiaedu.workers.dev/#/?assign=TA6-W01-825\n(Các em học sinh bấm vào link là vào thẳng bài làm, không cần cài đặt phần mềm phức tạp).\nChúc các em học tập vui vẻ và đạt nhiều điểm 10!`;
 
   const copySampleMsg = () => {
     navigator.clipboard?.writeText(sampleZaloMsg);

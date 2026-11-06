@@ -132,7 +132,7 @@ export default function TeacherAssignmentManager() {
 
   const copyZaloMessage = (assign) => {
     const url = getAssignmentUrl(assign.code);
-    const msg = `Kính gửi Quý Phụ huynh và các em học sinh lớp ${assign.targetClass === 'all' ? '6' : assign.targetClass},\nThầy/Cô gửi bài tập tuần này trên ứng dụng Tiếng Anh 6:\n📌 Bài: ${assign.title}\n⏰ Hạn nộp: ${assign.deadline || 'Chủ Nhật tuần này'}\n📝 Lời dặn: ${assign.note || 'Các em cố gắng hoàn thành tốt nhé!'}\n👉 Link làm bài trực tiếp: ${url}\n(Bấm vào link là làm được ngay, không cần đăng nhập phức tạp).\nChúc các em học tập vui vẻ!`;
+    const msg = `Kính gửi Quý Phụ huynh và các em học sinh lớp ${assign.targetClass === 'all' ? '6' : assign.targetClass},\nThầy/Cô gửi bài tập tuần này trên ứng dụng English-Kid:\n📌 Bài: ${assign.title}\n⏰ Hạn nộp: ${assign.deadline || 'Chủ Nhật tuần này'}\n📝 Lời dặn: ${assign.note || 'Các em cố gắng hoàn thành tốt nhé!'}\n👉 Link làm bài trực tiếp: ${url}\n(Bấm vào link là làm được ngay, không cần đăng nhập phức tạp).\nChúc các em học tập vui vẻ!`;
     navigator.clipboard?.writeText(msg);
     setCopiedZaloId(assign.code);
     setTimeout(() => setCopiedZaloId(null), 2500);

@@ -11,9 +11,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'assets/images/**/*.webp'],
       manifest: {
-        name: 'Tiếng Anh 6 – Học từ vựng',
-        short_name: 'Tiếng Anh 6',
-        description: 'Học từ vựng Tiếng Anh 6 (Global Success) cho bạn mới bắt đầu',
+        name: 'English-Kid – Học Tiếng Anh 6',
+        short_name: 'English-Kid',
+        description: 'English-Kid – Học tiếng Anh 6 (Global Success) 4 kỹ năng',
         lang: 'vi',
         start_url: '/',
         display: 'standalone',

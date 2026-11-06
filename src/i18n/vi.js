@@ -1,6 +1,6 @@
 // Toàn bộ chữ trên giao diện. Muốn thêm ngôn ngữ khác chỉ cần tạo file tương tự.
 export const t = {
-  appName: 'Tiếng Anh 6',
+  appName: 'English-Kid',
   nav: { home: 'Trang chủ', test: 'Test tuần', journal: 'Nhật ký', settings: 'Cài đặt' },
   common: {
     back: 'Quay lại',
@@ -140,7 +140,7 @@ export const t = {
     print: 'In bảng điểm / Lưu PDF',
     exportTitle: 'Xuất báo cáo kết quả',
     week: 'Tuần',
-    reportFor: 'Báo cáo kết quả học tập Tiếng Anh 6',
+    reportFor: 'Báo cáo kết quả học tập English-Kid (Tiếng Anh 6)',
     printedAt: 'Ngày in',
     modesDone: 'Số chế độ ôn đã hoàn thành',
     wordsMastered: 'Từ vựng đã ghi nhớ',
@@ -185,6 +185,6 @@ export const t = {
     resetConfirm: 'Em có chắc muốn xóa hết điểm số và bắt đầu lại từ đầu không? Thao tác này không thể hoàn tác.',
     about: 'Giới thiệu về ứng dụng',
     aboutText:
-      'Ứng dụng học từ vựng Tiếng Anh 6 (chương trình mới Global Success) được thiết kế tối giản, trực quan, đặc biệt thân thiện cho học sinh mới làm quen với máy tính. Toàn bộ tiến độ học tập được lưu an toàn trực tiếp trên máy của em.',
+      'Ứng dụng English-Kid (học tiếng Anh 6 chương trình Global Success) được thiết kế tối giản, trực quan, đặc biệt thân thiện cho học sinh mới làm quen với máy tính. Toàn bộ tiến độ học tập được lưu an toàn trực tiếp trên máy của em.',
   },
 };
