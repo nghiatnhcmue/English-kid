@@ -12,6 +12,7 @@ import TeacherDataEditor from '../components/TeacherDataEditor.jsx';
 import TeacherGuide from '../components/TeacherGuide.jsx';
 import TeacherStudentManager from '../components/TeacherStudentManager.jsx';
 import TeacherClassProgress from '../components/TeacherClassProgress.jsx';
+import PdfReaderModal from '../components/PdfReaderModal.jsx';
 
 export default function TeacherPage() {
   const [pin, setPin] = useState('');
@@ -20,6 +21,8 @@ export default function TeacherPage() {
   const [newPin, setNewPin] = useState('');
   const [showSettings, setShowSettings] = useState(false);
   const [showGuideModal, setShowGuideModal] = useState(false);
+  const [showPdfReaderModal, setShowPdfReaderModal] = useState(false);
+  const [selectedBookForReader, setSelectedBookForReader] = useState('tap1');
 
   const [activeTab, setActiveTab] = useState('scores'); // 'scores' | 'roadmap' | 'library'
   const [loading, setLoading] = useState(false);
@@ -724,96 +727,201 @@ export default function TeacherPage() {
 
       {/* TAB 3: THƯ VIỆN SGK & PHÂN PHỐI */}
       {activeTab === 'library' && (
-        <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
-          <div className="flex items-center gap-3 border-b-2 border-banana-soft pb-4 mb-4">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-xs">
-              📄
-            </span>
-            <div>
-              <span className="rounded-full bg-banana-soft px-3 py-0.5 text-xs font-black text-ink-soft">
-                Học liệu chính thức Bộ GD&ĐT
+        <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b-2 border-banana-soft pb-4">
+            <div className="flex items-center gap-3">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-xs">
+                📄
               </span>
-              <h2 className="text-xl sm:text-2xl font-black text-ink mt-0.5">
-                Thư viện Sách Giáo Khoa & Tài Liệu PDF (Global Success 6)
-              </h2>
+              <div>
+                <span className="rounded-full bg-banana-soft px-3 py-0.5 text-xs font-black text-ink-soft">
+                  Học liệu chính thức Bộ GD&ĐT
+                </span>
+                <h2 className="text-xl sm:text-2xl font-black text-ink mt-0.5">
+                  Thư viện Sách Giáo Khoa & Trình Đọc PDF (Global Success 6)
+                </h2>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedBookForReader('tap1');
+                setShowPdfReaderModal(true);
+              }}
+              className="inline-flex items-center gap-2 rounded-2xl bg-peach px-5 py-2.5 text-sm font-black text-white shadow-[0_3px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap self-start sm:self-auto"
+            >
+              <BookOpen className="h-4 w-4" />
+              <span>📖 Mở Trình Đọc PDF Toàn Màn Hình</span>
+            </button>
+          </div>
+
+          <div className="rounded-2xl bg-gradient-to-r from-banana-soft via-cream to-mint-soft/50 p-4 border border-banana-soft flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <p className="text-sm font-black text-ink">
+                ✨ Trình đọc PDF đã tích hợp sẵn trọn bộ SGK Tiếng Anh 6 Tập 1 & Tập 2!
+              </p>
+              <p className="text-xs font-bold text-ink-soft mt-0.5">
+                Thầy/Cô bấm "Đọc sách trực tiếp" là xem được ngay trong ứng dụng, hoặc bấm "Tải PDF" để lưu offline về máy tính.
+              </p>
             </div>
           </div>
 
-          <p className="text-sm sm:text-base font-bold text-ink-soft mb-5">
-            Toàn bộ nội dung từ vựng, ngữ pháp và 4 kỹ năng trên web app đều đối chiếu chuẩn xác 100% theo các đầu sách PDF chính thức dưới đây:
-          </p>
-
-          <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {/* SGK TẬP 1 */}
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
               <div>
-                <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
-                  Học kỳ I
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
+                    Học kỳ I
+                  </span>
+                  <span className="text-[11px] font-mono font-bold text-ink-soft bg-white px-2 py-0.5 rounded-md border border-banana-soft">
+                    16.8 MB
+                  </span>
+                </div>
                 <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 1</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 1 đến Unit 6 (Trang 6 – 69). Bản số hóa chuẩn NXBGDVN.</p>
+                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 1 đến Unit 6 (Trang 6 – 69). Bản số hóa chuẩn NXB Giáo Dục Việt Nam.</p>
               </div>
-              <a
-                href="https://hanhtrangso.nxbgd.vn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-banana px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-              >
-                Mở SGK Tập 1 (Hành Trang Số) ↗
-              </a>
+
+              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedBookForReader('tap1');
+                    setShowPdfReaderModal(true);
+                  }}
+                  className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                >
+                  <BookOpen className="h-4 w-4" />
+                  <span>Đọc Sách Trực Tiếp 📖</span>
+                </button>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="/pdf/sgk-tieng-anh-6-tap-1.pdf"
+                    download="SGK-Tieng-Anh-6-Tap-1-Global-Success.pdf"
+                    className="flex items-center justify-center gap-1 rounded-xl bg-banana px-2.5 py-1.5 text-xs font-black text-ink shadow-2xs hover:bg-banana-dark transition-all"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    <span>Tải PDF</span>
+                  </a>
+                  <a
+                    href="/pdf/sgk-tieng-anh-6-tap-1.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1 rounded-xl bg-white px-2.5 py-1.5 text-xs font-black text-ink border border-banana-soft hover:bg-cream transition-all"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    <span>Tab mới</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            {/* SGK TẬP 2 */}
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
               <div>
-                <span className="rounded-full bg-sky px-2.5 py-0.5 text-xs font-black text-ink">
-                  Học kỳ II
-                </span>
+                <div className="flex items-center justify-between">
+                  <span className="rounded-full bg-sky px-2.5 py-0.5 text-xs font-black text-ink">
+                    Học kỳ II
+                  </span>
+                  <span className="text-[11px] font-mono font-bold text-ink-soft bg-white px-2 py-0.5 rounded-md border border-banana-soft">
+                    16.5 MB
+                  </span>
+                </div>
                 <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 2</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 7 đến Unit 12 (Trang 6 – 69). Kèm các bài Review củng cố.</p>
+                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 7 đến Unit 12 (Trang 6 – 69) kèm các bài Review củng cố.</p>
               </div>
-              <a
-                href="https://hoclieu.vn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-sky px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-              >
-                Mở SGK Tập 2 (Học Liệu VN) ↗
-              </a>
+
+              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedBookForReader('tap2');
+                    setShowPdfReaderModal(true);
+                  }}
+                  className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                >
+                  <BookOpen className="h-4 w-4" />
+                  <span>Đọc Sách Trực Tiếp 📖</span>
+                </button>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="/pdf/sgk-tieng-anh-6-tap-2.pdf"
+                    download="SGK-Tieng-Anh-6-Tap-2-Global-Success.pdf"
+                    className="flex items-center justify-center gap-1 rounded-xl bg-sky px-2.5 py-1.5 text-xs font-black text-ink shadow-2xs hover:bg-sky-dark transition-all"
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    <span>Tải PDF</span>
+                  </a>
+                  <a
+                    href="/pdf/sgk-tieng-anh-6-tap-2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1 rounded-xl bg-white px-2.5 py-1.5 text-xs font-black text-ink border border-banana-soft hover:bg-cream transition-all"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" />
+                    <span>Tab mới</span>
+                  </a>
+                </div>
+              </div>
             </div>
 
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            {/* SÁCH BÀI TẬP (WORKBOOK) */}
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
               <div>
                 <span className="rounded-full bg-mint px-2.5 py-0.5 text-xs font-black text-white">
                   Bài tập củng cố
                 </span>
                 <h3 className="mt-2 text-base font-black text-ink">Sách Bài Tập (Workbook)</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Bộ bài tập ngữ pháp, đọc hiểu bổ trợ dành cho tự luyện ở nhà.</p>
+                <p className="text-xs font-bold text-ink-soft mt-1">Bài tập bổ trợ 4 kỹ năng. Thầy/Cô có thể tải file PDF từ máy để đọc trực tiếp.</p>
               </div>
-              <a
-                href="https://sachhoc.com/sach-giao-khoa-tieng-anh-lop-6-tap-1-phien-ban-moi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-mint px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-              >
-                Tải Workbook PDF ↗
-              </a>
+
+              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedBookForReader('tap1');
+                    setShowPdfReaderModal(true);
+                  }}
+                  className="flex items-center justify-center gap-1.5 rounded-xl bg-mint px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                >
+                  <Upload className="h-4 w-4" />
+                  <span>Mở PDF từ máy tính 📁</span>
+                </button>
+                <p className="text-[11px] font-bold text-center text-ink-soft">
+                  Hỗ trợ mở mọi file PDF bài tập
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+            {/* SÁCH GIÁO VIÊN */}
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
               <div>
                 <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white">
                   Dành cho Giáo viên
                 </span>
                 <h3 className="mt-2 text-base font-black text-ink">Sách Giáo Viên (Teacher's Book)</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Kế hoạch bài dạy (giáo án), phân phối tiết và hướng dẫn giảng dạy.</p>
+                <p className="text-xs font-bold text-ink-soft mt-1">Kế hoạch bài dạy (giáo án), phân phối tiết và tài liệu bồi dưỡng.</p>
               </div>
-              <a
-                href="https://taphuan.nxbgd.vn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-peach px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-              >
-                Mở Sách Giáo Viên (Tập Huấn) ↗
-              </a>
+
+              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedBookForReader('tap1');
+                    setShowPdfReaderModal(true);
+                  }}
+                  className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                >
+                  <Upload className="h-4 w-4" />
+                  <span>Mở PDF Giáo Án / SGV 📁</span>
+                </button>
+                <p className="text-[11px] font-bold text-center text-ink-soft">
+                  Đọc trực tiếp mọi giáo án PDF
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -874,6 +982,13 @@ export default function TeacherPage() {
           </div>
         </div>
       )}
+
+      {/* Trình Đọc Sách PDF Tích Hợp Sẵn */}
+      <PdfReaderModal
+        isOpen={showPdfReaderModal}
+        onClose={() => setShowPdfReaderModal(false)}
+        initialBookId={selectedBookForReader}
+      />
     </div>
   );
 }
