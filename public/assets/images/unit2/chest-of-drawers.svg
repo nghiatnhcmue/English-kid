@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="chestBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="100%" stop-color="#FEF3C7" stop-opacity="0.4" />
+    </radialGradient>
+    <linearGradient id="cWoodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="cShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity="0.2" flood-color="#451A03" />
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="94" fill="url(#chestBg)" />
+
+  <g filter="url(#cShadow)">
+    <!-- Little potted succulent on top of the chest -->
+    <polygon points="126,50 134,50 132,62 128,62" fill="#EA580C" stroke="#C2410C" stroke-width="0.8" />
+    <circle cx="130" cy="46" r="4.5" fill="#22C55E" />
+    <circle cx="127" cy="48" r="3.5" fill="#16A34A" />
+    <circle cx="133" cy="48" r="3.5" fill="#15803D" />
+
+    <!-- Wooden Chest Feet -->
+    <rect x="46" y="166" width="12" height="10" rx="3" fill="#78350F" />
+    <rect x="142" y="166" width="12" height="10" rx="3" fill="#78350F" />
+
+    <!-- Top Surface Board (overhanging) -->
+    <rect x="36" y="60" width="128" height="12" rx="4" fill="#92400E" stroke="#78350F" stroke-width="1.5" />
+
+    <!-- Main Cabinet Frame -->
+    <rect x="42" y="70" width="116" height="98" rx="4" fill="#B45309" stroke="#78350F" stroke-width="1.5" />
+
+    <!-- Drawer 1 (Top) -->
+    <rect x="46" y="74" width="108" height="26" rx="3" fill="url(#cWoodGrad)" stroke="#92400E" stroke-width="1" />
+    <circle cx="75" cy="87" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+    <circle cx="125" cy="87" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+
+    <!-- Drawer 2 (Middle) -->
+    <rect x="46" y="104" width="108" height="26" rx="3" fill="url(#cWoodGrad)" stroke="#92400E" stroke-width="1" />
+    <circle cx="75" cy="117" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+    <circle cx="125" cy="117" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+
+    <!-- Drawer 3 (Bottom) -->
+    <rect x="46" y="134" width="108" height="26" rx="3" fill="url(#cWoodGrad)" stroke="#92400E" stroke-width="1" />
+    <circle cx="75" cy="147" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+    <circle cx="125" cy="147" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+  </g>
+</svg>

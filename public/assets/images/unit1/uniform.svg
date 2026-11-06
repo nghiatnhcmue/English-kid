@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="uniBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F0FDF4" />
+      <stop offset="100%" stop-color="#DCFCE7" stop-opacity="0.4" />
+    </radialGradient>
+    <filter id="uniShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-opacity="0.18" flood-color="#0F172A" />
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="94" fill="url(#uniBg)" />
+
+  <g filter="url(#uniShadow)">
+    <!-- White shirt sleeves -->
+    <!-- Left Sleeve -->
+    <polygon points="65,58 30,86 42,108 72,82" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" />
+    <line x1="30" y1="86" x2="42" y2="108" stroke="#0284C7" stroke-width="3.5" /> <!-- Sleeve navy cuff -->
+    <!-- Right Sleeve -->
+    <polygon points="135,58 170,86 158,108 128,82" fill="#F8FAFC" stroke="#94A3B8" stroke-width="1.5" />
+    <line x1="170" y1="86" x2="158" y2="108" stroke="#0284C7" stroke-width="3.5" /> <!-- Sleeve navy cuff -->
+
+    <!-- Shirt Main Body -->
+    <path d="M 64 60 L 136 60 L 138 162 L 62 162 Z" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5" />
+    
+    <!-- Chest pocket with student school crest badge -->
+    <rect x="70" y="90" width="22" height="26" rx="2" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2" />
+    <circle cx="81" cy="103" r="6" fill="#0284C7" />
+    <path d="M 78 103 L 81 100 L 84 103 L 81 106 Z" fill="#FDE047" />
+
+    <!-- Center button placket -->
+    <line x1="100" y1="60" x2="100" y2="162" stroke="#E2E8F0" stroke-width="2" />
+    <circle cx="100" cy="100" r="2.5" fill="#94A3B8" />
+    <circle cx="100" cy="120" r="2.5" fill="#94A3B8" />
+    <circle cx="100" cy="140" r="2.5" fill="#94A3B8" />
+
+    <!-- Blue School Tie -->
+    <polygon points="96,62 104,62 106,70 100,75 94,70" fill="#0369A1" stroke="#075985" stroke-width="1" />
+    <polygon points="97,75 103,75 106,128 100,136 94,128" fill="#0284C7" stroke="#0369A1" stroke-width="1" />
+    <!-- Tie diagonal gold stripes -->
+    <line x1="97" y1="85" x2="103" y2="90" stroke="#FDE047" stroke-width="1.5" />
+    <line x1="96" y1="100" x2="104" y2="106" stroke="#FDE047" stroke-width="1.5" />
+    <line x1="95" y1="115" x2="105" y2="122" stroke="#FDE047" stroke-width="1.5" />
+
+    <!-- Crisp Shirt Collars -->
+    <!-- Left Collar -->
+    <polygon points="100,60 76,46 64,68 96,66" fill="#F8FAFC" stroke="#0369A1" stroke-width="1.5" />
+    <!-- Right Collar -->
+    <polygon points="100,60 124,46 136,68 104,66" fill="#F8FAFC" stroke="#0369A1" stroke-width="1.5" />
+  </g>
+</svg>

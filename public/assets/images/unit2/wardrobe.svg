@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="wardBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#FDE68A" stop-opacity="0.4" />
+    </radialGradient>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <linearGradient id="doorWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="wShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="7" stdDeviation="4" flood-opacity="0.2" flood-color="#451A03" />
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="94" fill="url(#wardBg)" />
+
+  <g filter="url(#wShadow)">
+    <!-- Wardrobe Feet -->
+    <rect x="52" y="172" width="12" height="10" rx="3" fill="#78350F" />
+    <rect x="136" y="172" width="12" height="10" rx="3" fill="#78350F" />
+
+    <!-- Top Crown Molding -->
+    <rect x="42" y="18" width="116" height="12" rx="4" fill="#92400E" stroke="#78350F" stroke-width="1.5" />
+    <rect x="46" y="26" width="108" height="6" fill="#B45309" />
+
+    <!-- Main Wardrobe Frame -->
+    <rect x="48" y="28" width="104" height="146" rx="4" fill="url(#woodGrad)" stroke="#78350F" stroke-width="2" />
+
+    <!-- Left Door -->
+    <rect x="52" y="32" width="46" height="106" rx="3" fill="url(#doorWood)" stroke="#92400E" stroke-width="1.2" />
+    <!-- Left Door Inset Panel -->
+    <rect x="58" y="40" width="34" height="90" rx="3" fill="none" stroke="#92400E" stroke-width="1.2" opacity="0.6" />
+    <!-- Left Handle -->
+    <circle cx="92" cy="85" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+
+    <!-- Right Door -->
+    <rect x="102" y="32" width="46" height="106" rx="3" fill="url(#doorWood)" stroke="#92400E" stroke-width="1.2" />
+    <!-- Right Door Inset Panel -->
+    <rect x="108" y="40" width="34" height="90" rx="3" fill="none" stroke="#92400E" stroke-width="1.2" opacity="0.6" />
+    <!-- Right Handle -->
+    <circle cx="108" cy="85" r="3.5" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+
+    <!-- Bottom Drawer -->
+    <rect x="52" y="142" width="96" height="28" rx="3" fill="url(#doorWood)" stroke="#92400E" stroke-width="1.2" />
+    <!-- Drawer Pull Knobs -->
+    <circle cx="80" cy="156" r="3" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+    <circle cx="120" cy="156" r="3" fill="#FEF08A" stroke="#B45309" stroke-width="1" />
+  </g>
+</svg>

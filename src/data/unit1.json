@@ -27,6 +27,7 @@
       "exampleEn": "I keep my pens in my pencil case.",
       "exampleVi": "Em để bút trong hộp bút.",
       "emoji": "👝",
+      "image": "/assets/images/unit1/pencil-case.svg",
       "audio": "/assets/audio/unit1/pencil-case.mp3",
       "audioExample": "/assets/audio/unit1/pencil-case-example.mp3"
     },
@@ -40,6 +41,7 @@
       "exampleEn": "Can I borrow your pencil sharpener?",
       "exampleVi": "Tớ mượn cái gọt bút chì của bạn được không?",
       "emoji": "✏️",
+      "image": "/assets/images/unit1/pencil-sharpener.svg",
       "model3d": "/assets/models/unit1/pencil-sharpener.glb",
       "audio": "/assets/audio/unit1/pencil-sharpener.mp3",
       "audioExample": "/assets/audio/unit1/pencil-sharpener-example.mp3"
@@ -54,6 +56,7 @@
       "exampleEn": "I use a rubber to fix my mistakes.",
       "exampleVi": "Em dùng cục tẩy để xóa lỗi sai.",
       "emoji": "🧽",
+      "image": "/assets/images/unit1/rubber.svg",
       "model3d": "/assets/models/unit1/rubber.glb",
       "audio": "/assets/audio/unit1/rubber.mp3",
       "audioExample": "/assets/audio/unit1/rubber-example.mp3"
@@ -64,11 +67,11 @@
       "phonetic": "/ˈkælkjuleɪtə/",
       "wordType": "Danh từ",
       "meaning": "Máy tính cầm tay",
-      "hint": "Dụng cụ dùng để tính toán nhanh trong giờ Toán",
+      "hint": "Máy tính bỏ túi điện tử cầm tay dùng để tính toán nhanh trong giờ Toán",
       "exampleEn": "I use a calculator in maths lessons.",
       "exampleVi": "Em dùng máy tính cầm tay trong tiết Toán.",
-      "emoji": "🧮",
-      "model3d": "/assets/models/unit1/calculator.glb",
+      "emoji": "🖩",
+      "image": "/assets/images/unit1/calculator.svg",
       "audio": "/assets/audio/unit1/calculator.mp3",
       "audioExample": "/assets/audio/unit1/calculator-example.mp3"
     },
@@ -78,10 +81,11 @@
       "phonetic": "/ˈkʌmpəs/",
       "wordType": "Danh từ",
       "meaning": "Com-pa",
-      "hint": "Dụng cụ dùng để vẽ hình tròn",
+      "hint": "Dụng cụ học tập có hai chân dùng để quay và vẽ hình tròn trong môn Toán",
       "exampleEn": "We draw a circle with a compass.",
       "exampleVi": "Chúng em vẽ hình tròn bằng com-pa.",
-      "emoji": "🧭",
+      "emoji": "📐",
+      "image": "/assets/images/unit1/compass.svg",
       "audio": "/assets/audio/unit1/compass.mp3",
       "audioExample": "/assets/audio/unit1/compass-example.mp3"
     },
@@ -137,6 +141,7 @@
       "exampleEn": "We wear our uniform on Mondays.",
       "exampleVi": "Chúng em mặc đồng phục vào các ngày thứ Hai.",
       "emoji": "👔",
+      "image": "/assets/images/unit1/uniform.svg",
       "audio": "/assets/audio/unit1/uniform.mp3",
       "audioExample": "/assets/audio/unit1/uniform-example.mp3"
     },

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <radialGradient id="dishBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F0FDF4" />
+      <stop offset="100%" stop-color="#DCFCE7" stop-opacity="0.4" />
+    </radialGradient>
+    <linearGradient id="bodySilver" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+    <linearGradient id="doorWindow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <filter id="dShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-opacity="0.2" flood-color="#0F172A" />
+    </filter>
+  </defs>
+
+  <circle cx="100" cy="100" r="94" fill="url(#dishBg)" />
+
+  <g filter="url(#dShadow)">
+    <!-- Base feet -->
+    <rect x="52" y="172" width="12" height="6" rx="2" fill="#334155" />
+    <rect x="136" y="172" width="12" height="6" rx="2" fill="#334155" />
+
+    <!-- Main Outer Body -->
+    <rect x="42" y="24" width="116" height="150" rx="10" fill="url(#bodySilver)" stroke="#64748B" stroke-width="2" />
+
+    <!-- Top Digital Control Panel -->
+    <rect x="46" y="28" width="108" height="28" rx="6" fill="#1E293B" stroke="#0F172A" stroke-width="1.2" />
+    <!-- LED Time Display -->
+    <rect x="54" y="34" width="30" height="16" rx="3" fill="#022C22" stroke="#064E3B" stroke-width="0.8" />
+    <text x="69" y="46" font-family="monospace" font-size="9" font-weight="900" fill="#34D399" text-anchor="middle">38m</text>
+    <!-- Control Buttons & Indicators -->
+    <circle cx="96" cy="42" r="3.5" fill="#38BDF8" />
+    <circle cx="108" cy="42" r="3.5" fill="#94A3B8" />
+    <circle cx="120" cy="42" r="3.5" fill="#94A3B8" />
+    <circle cx="138" cy="42" r="5" fill="#EF4444" /> <!-- Power Button -->
+
+    <!-- Door Handle Bar -->
+    <rect x="60" y="60" width="80" height="7" rx="3.5" fill="#94A3B8" stroke="#475569" stroke-width="1" />
+
+    <!-- Transparent Window into Dishwasher Interior -->
+    <rect x="52" y="72" width="96" height="94" rx="8" fill="url(#doorWindow)" stroke="#0369A1" stroke-width="1.5" />
+    
+    <!-- Dish Racks inside (Wire grates) -->
+    <!-- Top Rack: Cups & Glasses -->
+    <line x1="58" y1="102" x2="142" y2="102" stroke="#FFFFFF" stroke-width="2" opacity="0.8" />
+    <!-- Glass 1 & 2 -->
+    <rect x="66" y="86" width="12" height="15" rx="2" fill="#FFFFFF" opacity="0.75" />
+    <rect x="84" y="86" width="12" height="15" rx="2" fill="#FFFFFF" opacity="0.75" />
+    <rect x="102" y="86" width="12" height="15" rx="2" fill="#FFFFFF" opacity="0.75" />
+    <rect x="120" y="86" width="12" height="15" rx="2" fill="#FFFFFF" opacity="0.75" />
+
+    <!-- Bottom Rack: Plates & Bowls -->
+    <line x1="58" y1="146" x2="142" y2="146" stroke="#FFFFFF" stroke-width="2" opacity="0.8" />
+    <!-- Clean white plates lined up -->
+    <ellipse cx="72" cy="130" rx="6" ry="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.9" />
+    <ellipse cx="84" cy="130" rx="6" ry="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.9" />
+    <ellipse cx="96" cy="130" rx="6" ry="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.9" />
+    <ellipse cx="108" cy="130" rx="6" ry="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.9" />
+    <ellipse cx="120" cy="130" rx="6" ry="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" opacity="0.9" />
+
+    <!-- Sparkles of cleanliness -->
+    <path d="M 66 114 L 68 110 L 70 114 L 74 116 L 70 118 L 68 122 L 66 118 L 62 116 Z" fill="#FEF08A" />
+    <path d="M 130 112 L 132 108 L 134 112 L 138 114 L 134 116 L 132 120 L 130 116 L 126 114 Z" fill="#FEF08A" />
+  </g>
+</svg>

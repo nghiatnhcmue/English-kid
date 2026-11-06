@@ -42,6 +42,7 @@ function ModelView({ word }) {
 export default function Flashcard3D({ words, onFinish }) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [show3dMode, setShow3dMode] = useState(false);
   const word = words[index];
   const isLast = index === words.length - 1;
 
@@ -53,6 +54,7 @@ export default function Flashcard3D({ words, onFinish }) {
   const go = useCallback(
     (delta) => {
       setFlipped(false);
+      setShow3dMode(false);
       setIndex((i) => Math.min(words.length - 1, Math.max(0, i + delta)));
     },
     [words.length],
@@ -107,10 +109,22 @@ export default function Flashcard3D({ words, onFinish }) {
             </span>
 
             <div className="flex flex-col items-center gap-2">
-              {word.model3d ? (
+              {word.model3d && (!word.image || show3dMode) ? (
                 <ModelView word={word} />
               ) : (
                 <WordImage word={word} size="xl" className="animate-float" />
+              )}
+              {word.image && word.model3d && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShow3dMode((v) => !v);
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-cream px-3 py-1 text-xs font-black text-ink-soft hover:bg-banana-light border border-[#efe3cc] transition-all cursor-pointer shadow-sm active:translate-y-0.5"
+                >
+                  <span>{show3dMode ? '🖼️ Xem hình vẽ' : '🔄 Xoay mô hình 3D'}</span>
+                </button>
               )}
               <h2 className="text-center text-4xl sm:text-5xl font-black text-ink">{word.word}</h2>
               <p className="text-xl sm:text-2xl font-black text-sky-dark">{word.phonetic}</p>

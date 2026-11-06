@@ -65,6 +65,7 @@
       "exampleEn": "There are old toys in the attic.",
       "exampleVi": "Có đồ chơi cũ trên gác mái.",
       "emoji": "🪜",
+      "image": "/assets/images/unit2/attic.svg",
       "audio": "/assets/audio/unit2/attic.mp3",
       "audioExample": "/assets/audio/unit2/attic-example.mp3"
     },
@@ -78,6 +79,7 @@
       "exampleEn": "The milk is in the fridge.",
       "exampleVi": "Sữa ở trong tủ lạnh.",
       "emoji": "🧊",
+      "image": "/assets/images/unit2/fridge.svg",
       "model3d": "/assets/models/unit2/fridge.glb",
       "audio": "/assets/audio/unit2/fridge.mp3",
       "audioExample": "/assets/audio/unit2/fridge-example.mp3"
@@ -92,6 +94,7 @@
       "exampleEn": "My clothes are in the wardrobe.",
       "exampleVi": "Quần áo của em ở trong tủ quần áo.",
       "emoji": "👗",
+      "image": "/assets/images/unit2/wardrobe.svg",
       "model3d": "/assets/models/unit2/wardrobe.glb",
       "audio": "/assets/audio/unit2/wardrobe.mp3",
       "audioExample": "/assets/audio/unit2/wardrobe-example.mp3"
@@ -106,6 +109,7 @@
       "exampleEn": "My socks are in the chest of drawers.",
       "exampleVi": "Tất của em ở trong tủ ngăn kéo.",
       "emoji": "🗄️",
+      "image": "/assets/images/unit2/chest-of-drawers.svg",
       "model3d": "/assets/models/unit2/chest-of-drawers.glb",
       "audio": "/assets/audio/unit2/chest-of-drawers.mp3",
       "audioExample": "/assets/audio/unit2/chest-of-drawers-example.mp3"
@@ -120,6 +124,7 @@
       "exampleEn": "There is a lamp on my desk.",
       "exampleVi": "Có một cái đèn trên bàn học của em.",
       "emoji": "💡",
+      "image": "/assets/images/unit2/lamp.svg",
       "model3d": "/assets/models/unit2/lamp.glb",
       "audio": "/assets/audio/unit2/lamp.mp3",
       "audioExample": "/assets/audio/unit2/lamp-example.mp3"
@@ -148,6 +153,7 @@
       "exampleEn": "Please put the plates in the dishwasher.",
       "exampleVi": "Con cho đĩa vào máy rửa bát nhé.",
       "emoji": "🍽️",
+      "image": "/assets/images/unit2/dishwasher.svg",
       "model3d": "/assets/models/unit2/dishwasher.glb",
       "audio": "/assets/audio/unit2/dishwasher.mp3",
       "audioExample": "/assets/audio/unit2/dishwasher-example.mp3"
@@ -162,6 +168,7 @@
       "exampleEn": "Heat the rice in the microwave.",
       "exampleVi": "Hâm nóng cơm bằng lò vi sóng.",
       "emoji": "♨️",
+      "image": "/assets/images/unit2/microwave.svg",
       "model3d": "/assets/models/unit2/microwave.glb",
       "audio": "/assets/audio/unit2/microwave.mp3",
       "audioExample": "/assets/audio/unit2/microwave-example.mp3"

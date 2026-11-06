@@ -178,5 +178,122 @@
     "license": "CC0 1.0",
     "source": "https://poly.pizza/m/dtVrmnnCZn",
     "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/images/unit1/compass.svg",
+    "wordId": "u1_06",
+    "title": "Geometric Drawing Compass",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original geometric drafting compass vector illustration"
+  },
+  {
+    "file": "/assets/images/unit1/calculator.svg",
+    "wordId": "u1_05",
+    "title": "Modern Scientific Pocket Calculator",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original handheld electronic student calculator vector illustration"
+  },
+  {
+    "file": "/assets/images/unit1/rubber.svg",
+    "wordId": "u1_04",
+    "title": "School Eraser",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original school eraser block vector illustration"
+  },
+  {
+    "file": "/assets/images/unit1/pencil-sharpener.svg",
+    "wordId": "u1_03",
+    "title": "Handheld Pencil Sharpener",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original wedge pencil sharpener vector illustration"
+  },
+  {
+    "file": "/assets/images/unit1/pencil-case.svg",
+    "wordId": "u1_02",
+    "title": "School Pencil Case",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original stationery pencil case pouch vector illustration"
+  },
+  {
+    "file": "/assets/images/unit1/uniform.svg",
+    "wordId": "u1_10",
+    "title": "School Uniform Shirt",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original student uniform shirt with tie vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/fridge.svg",
+    "wordId": "u2_06",
+    "title": "Modern Refrigerator",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original two-door modern refrigerator vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/wardrobe.svg",
+    "wordId": "u2_07",
+    "title": "Wooden Clothes Wardrobe",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original wooden wardrobe closet vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/chest-of-drawers.svg",
+    "wordId": "u2_08",
+    "title": "Chest of Drawers",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original wooden chest of drawers vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/dishwasher.svg",
+    "wordId": "u2_11",
+    "title": "Modern Kitchen Dishwasher",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original modern kitchen dishwasher vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/microwave.svg",
+    "wordId": "u2_12",
+    "title": "Countertop Microwave Oven",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original countertop microwave oven vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/attic.svg",
+    "wordId": "u2_05",
+    "title": "Attic Room",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original cozy attic room vector illustration"
+  },
+  {
+    "file": "/assets/images/unit2/lamp.svg",
+    "wordId": "u2_09",
+    "title": "Desk Study Lamp",
+    "author": "English-Kid Vector Studio",
+    "license": "CC-BY 4.0",
+    "source": "https://github.com/nghiatnhcmue/English-kid",
+    "modified": "Original desk study lamp vector illustration"
   }
 ]
