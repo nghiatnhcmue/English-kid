@@ -93,5 +93,97 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Tính từ so sánh nhất (Superlative Adjectives)",
+    "ruleVi": "Dùng để so sánh một thành phố, một công trình kiến trúc nổi bật nhất trong tất cả các đối tượng được xét.",
+    "formula": "Tính từ ngắn: the + adj + -est | Tính từ dài: the + most + adj",
+    "quickTip": "Luôn có chữ 'the' phía trước tính từ so sánh nhất (the tallest, the most modern).",
+    "quiz": [
+      {
+        "question": "Tokyo is one of ______ modern cities in the world.",
+        "options": [
+          "the most",
+          "most",
+          "more"
+        ],
+        "answerIndex": 0,
+        "explain": "So sánh nhất của tính từ dài 'modern' dùng 'the most modern'."
+      },
+      {
+        "question": "Landmark 81 is ______ building in Viet Nam.",
+        "options": [
+          "the tallest",
+          "taller",
+          "tallest"
+        ],
+        "answerIndex": 0,
+        "explain": "So sánh nhất của tính từ ngắn 'tall' dùng 'the tallest'."
+      },
+      {
+        "question": "London is famous for ______ historic bridges.",
+        "options": [
+          "its",
+          "it",
+          "they"
+        ],
+        "answerIndex": 0,
+        "explain": "Tính từ sở hữu 'its' (của nó) bổ nghĩa cho danh từ 'bridges'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Welcome to London! You can see famous landmarks such as Big Ben, the Tower Bridge, and Buckingham Palace.",
+    "question": "What famous tower is mentioned?",
+    "options": [
+      "The Tower Bridge",
+      "Eiffel Tower",
+      "Tokyo Tower"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "This historic tower is very famous.",
+    "phonetic": "/ðɪs hɪˈstɒrɪk ˈtaʊə ɪz ˈveri ˈfeɪməs/",
+    "meaningVi": "Tòa tháp lịch sử này rất nổi tiếng."
+  },
+  "reading": {
+    "passage": "Sydney is an exciting city in Australia. It has the famous Sydney Opera House with its unique architectural design. The weather is sunny in summer, and millions of tourists visit its beautiful beaches every year.",
+    "questions": [
+      {
+        "question": "Where is Sydney located?",
+        "options": [
+          "In Australia",
+          "In England",
+          "In Viet Nam"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What is the famous building in Sydney?",
+        "options": [
+          "Sydney Opera House",
+          "Eiffel Tower",
+          "Statue of Liberty"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "This",
+      "is",
+      "the",
+      "most",
+      "famous",
+      "palace",
+      "in",
+      "the",
+      "city."
+    ],
+    "correctSentence": "This is the most famous palace in the city.",
+    "meaningVi": "Đây là cung điện nổi tiếng nhất trong thành phố."
+  }
 }

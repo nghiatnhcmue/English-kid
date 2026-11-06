@@ -93,5 +93,96 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Câu điều kiện loại 1 (First Conditional: If)",
+    "ruleVi": "Dùng để diễn tả một điều kiện có thể xảy ra và kết quả thực tế của nó (Đặc biệt dùng cho các hành động bảo vệ môi trường).",
+    "formula": "If + S + V(hiện tại đơn), S + will / won't + V(nguyên mẫu)",
+    "quickTip": "Vế có 'If' chia hiện tại đơn. Vế kết quả dùng 'will/won't' + động từ nguyên mẫu.",
+    "quiz": [
+      {
+        "question": "If we recycle plastic bottles, we ______ the environment.",
+        "options": [
+          "will protect",
+          "protected",
+          "protects"
+        ],
+        "answerIndex": 0,
+        "explain": "Vế 'If' ở hiện tại đơn (recycle), vế sau dùng 'will protect'."
+      },
+      {
+        "question": "If you ______ reusable bags, you will reduce plastic waste.",
+        "options": [
+          "use",
+          "used",
+          "will use"
+        ],
+        "answerIndex": 0,
+        "explain": "Vế 'If' của câu điều kiện loại 1 chia động từ ở hiện tại đơn 'use'."
+      },
+      {
+        "question": "The river ______ polluted if factories dump rubbish into it.",
+        "options": [
+          "will be",
+          "was",
+          "is being"
+        ],
+        "answerIndex": 0,
+        "explain": "Vế kết quả của câu điều kiện loại 1 dùng 'will be'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "We should follow the 3Rs rule: reduce our rubbish, reuse old containers, and recycle plastic bags.",
+    "question": "What does the 3Rs rule stand for?",
+    "options": [
+      "Reduce, reuse, and recycle",
+      "Run, read, and write",
+      "Rest, relax, and recover"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "We should reduce plastic waste to protect our planet.",
+    "phonetic": "/wiː ʃʊd rɪˈdjuːs ˈplæstɪk weɪst tuː prəˈtekt ˈaʊə ˈplænɪt/",
+    "meaningVi": "Chúng ta nên giảm rác thải nhựa để bảo vệ hành tinh."
+  },
+  "reading": {
+    "passage": "Our planet is facing serious pollution. If we don't save energy, natural resources will run out quickly. Everyone can help by turning off the lights, picking up litter, and planting green trees.",
+    "questions": [
+      {
+        "question": "What can everyone do to help?",
+        "options": [
+          "Turn off lights and plant trees",
+          "Burn more plastic",
+          "Use more cars"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What happens if we don't save energy?",
+        "options": [
+          "Natural resources will run out",
+          "The air becomes cleaner",
+          "Rivers become clearer"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "If",
+      "we",
+      "reuse",
+      "bottles,",
+      "we",
+      "will",
+      "save",
+      "money."
+    ],
+    "correctSentence": "If we reuse bottles, we will save money.",
+    "meaningVi": "Nếu chúng ta tái sử dụng chai lọ, chúng ta sẽ tiết kiệm được tiền."
+  }
 }

@@ -93,5 +93,95 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Thì Tương lai đơn (Future Simple with Will) & Might",
+    "ruleVi": "Dùng để đưa ra lời dự đoán về cuộc sống, nhà ở và robot trong tương lai (will/won't) hoặc khả năng có thể xảy ra (might).",
+    "formula": "S + will / won't + V (nguyên mẫu) | S + might + V",
+    "quickTip": "Sau will, won't, might luôn là động từ nguyên thể không chia.",
+    "quiz": [
+      {
+        "question": "In the future, our smart house ______ solar energy for heating.",
+        "options": [
+          "will use",
+          "used",
+          "uses"
+        ],
+        "answerIndex": 0,
+        "explain": "Dự đoán tương lai có 'In the future' dùng 'will use'."
+      },
+      {
+        "question": "We ______ live on the Moon because it might be too cold.",
+        "options": [
+          "might not",
+          "will",
+          "are"
+        ],
+        "answerIndex": 0,
+        "explain": "Khả năng không chắc chắn trong tương lai dùng 'might not'."
+      },
+      {
+        "question": "Robot helpers ______ do all the housework for us.",
+        "options": [
+          "will",
+          "shall to",
+          "are"
+        ],
+        "answerIndex": 0,
+        "explain": "Dự đoán việc robot sẽ làm trong tương lai dùng 'will + V'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "My dream house will be a smart space houseboat. It will have solar energy and automatic appliances.",
+    "question": "What kind of energy will the house use?",
+    "options": [
+      "Solar energy",
+      "Coal energy",
+      "Wind only"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "My future house will have super smart appliances.",
+    "phonetic": "/maɪ ˈfjuːtʃə haʊs wɪl hæv ˈsuːpə smɑːt əˈplaɪənsɪz/",
+    "meaningVi": "Ngôi nhà tương lai của em sẽ có các thiết bị siêu thông minh."
+  },
+  "reading": {
+    "passage": "Future houses will be very eco-friendly. Many people might live in floating houses on the ocean or in underground smart homes. Solar panels on the roof will provide clean electricity for wireless appliances.",
+    "questions": [
+      {
+        "question": "What will provide clean electricity?",
+        "options": [
+          "Solar panels on the roof",
+          "Petrol engines",
+          "Gas tanks"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Where might some future houses float?",
+        "options": [
+          "On the ocean",
+          "In the clouds",
+          "Inside volcanoes"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "Our",
+      "smart",
+      "house",
+      "will",
+      "use",
+      "solar",
+      "energy."
+    ],
+    "correctSentence": "Our smart house will use solar energy.",
+    "meaningVi": "Ngôi nhà thông minh của chúng em sẽ sử dụng năng lượng mặt trời."
+  }
 }

@@ -126,5 +126,95 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Thì Hiện tại tiếp diễn (Present Continuous) & Have got",
+    "ruleVi": "Dùng để miêu tả hành động đang diễn ra tại thời điểm nói hoặc miêu tả ngoại hình của bạn bè.",
+    "formula": "S + am/is/are + V-ing | S + have/has got + N",
+    "quickTip": "Thấy 'now, look, at the moment' -> chọn am/is/are + V-ing. Nói về tóc, mắt -> dùng have/has got.",
+    "quiz": [
+      {
+        "question": "Look! The children ______ football in the playground.",
+        "options": [
+          "are playing",
+          "play",
+          "plays"
+        ],
+        "answerIndex": 0,
+        "explain": "Có 'Look!' báo hiệu hành động đang diễn ra, chủ ngữ 'The children' số nhiều dùng 'are playing'."
+      },
+      {
+        "question": "My best friend, Lan, ______ long black hair.",
+        "options": [
+          "has got",
+          "have got",
+          "is having"
+        ],
+        "answerIndex": 0,
+        "explain": "Lan là ngôi thứ ba số ít, dùng 'has got' để miêu tả đặc điểm ngoại hình."
+      },
+      {
+        "question": "What ______ you doing right now?",
+        "options": [
+          "are",
+          "is",
+          "do"
+        ],
+        "answerIndex": 0,
+        "explain": "Chủ ngữ 'you' đi với trợ động từ 'are' trong thì hiện tại tiếp diễn."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Hello, my name is Phong. My best friend is Duy. He is very creative and sporty. He has curly hair.",
+    "question": "What is Duy like?",
+    "options": [
+      "Creative and sporty",
+      "Lazy and shy",
+      "Quiet and sad"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "My best friend is very hard-working and kind.",
+    "phonetic": "/maɪ best frend ɪz ˈveri ˌhɑːd ˈwɜːkɪŋ ænd kaɪnd/",
+    "meaningVi": "Bạn thân nhất của em rất chăm chỉ và tốt bụng."
+  },
+  "reading": {
+    "passage": "Minh is my new classmate. He is twelve years old. He is very friendly and confident. Minh has chubby cheeks and short black hair. In his free time, he likes reading books and drawing pictures.",
+    "questions": [
+      {
+        "question": "How old is Minh?",
+        "options": [
+          "Twelve",
+          "Ten",
+          "Eleven"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What does Minh look like?",
+        "options": [
+          "He has chubby cheeks and short black hair",
+          "He is very tall and thin",
+          "He has curly blonde hair"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "friend",
+      "is",
+      "My",
+      "very",
+      "kind",
+      "and",
+      "creative."
+    ],
+    "correctSentence": "My friend is very kind and creative.",
+    "meaningVi": "Bạn của em rất tốt bụng và sáng tạo."
+  }
 }

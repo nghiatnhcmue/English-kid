@@ -13,9 +13,11 @@ import TestPage from './pages/TestPage.jsx';
 import JournalPage from './pages/JournalPage.jsx';
 import SettingsPage from './pages/SettingsPage.jsx';
 import TeacherPage from './pages/TeacherPage.jsx';
+import GrammarPage from './pages/GrammarPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
+  { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
   { to: '/unit/1/stage', label: t.nav.stage, icon: '🎭' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
@@ -148,7 +150,7 @@ function BottomNav() {
       className="no-print md:hidden fixed inset-x-0 bottom-0 z-30 border-t-2 border-banana-soft bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-lg backdrop-blur"
       aria-label="Điều hướng điện thoại"
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-5">
+      <ul className="mx-auto grid max-w-lg grid-cols-6">
         {NAV.map((item) => (
           <li key={item.to}>
             <NavLink
@@ -156,12 +158,12 @@ function BottomNav() {
               end={item.end}
               onClick={() => playSfx('click')}
               className={({ isActive }) =>
-                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-xs font-black transition-colors ${
+                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-[11px] font-black transition-colors ${
                   isActive ? 'text-peach' : 'text-ink-soft'
                 }`
               }
             >
-              <span className="text-2xl leading-none" aria-hidden>
+              <span className="text-xl leading-none" aria-hidden>
                 {item.icon}
               </span>
               <span className="whitespace-nowrap">{item.label}</span>
@@ -188,6 +190,7 @@ export default function App() {
           <main className="mx-auto w-full max-w-4xl flex-1 px-4 pt-4 pb-28 md:pb-12 md:pt-6">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
               <Route path="/unit/:unitId" element={<UnitPage />} />
               <Route path="/unit/:unitId/stage/:sceneId?" element={<Fresh component={StagePage} />} />
               <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />

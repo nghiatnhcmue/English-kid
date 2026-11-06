@@ -104,5 +104,94 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Lời khuyên với Should / Shouldn't",
+    "ruleVi": "Dùng để khuyên ai đó nên làm (should) hoặc không nên làm (shouldn't) những điều tốt lành vào dịp Tết.",
+    "formula": "S + should / shouldn't + V (nguyên mẫu)",
+    "quickTip": "Should = nên làm (chúc Tết ông bà, mặc áo mới). Shouldn't = không nên (vòi tiền mừng tuổi, làm vỡ đồ).",
+    "quiz": [
+      {
+        "question": "Children ______ help their parents decorate the house before Tet.",
+        "options": [
+          "should",
+          "shouldn't",
+          "mustn't"
+        ],
+        "answerIndex": 0,
+        "explain": "Con cái 'nên' giúp bố mẹ trang trí nhà cửa đón Tết."
+      },
+      {
+        "question": "You ______ break things on the first day of the new year.",
+        "options": [
+          "shouldn't",
+          "should",
+          "must"
+        ],
+        "answerIndex": 0,
+        "explain": "Không nên làm vỡ đồ đạc vào ngày đầu năm mới."
+      },
+      {
+        "question": "We ______ wish our grandparents good health and happiness.",
+        "options": [
+          "should",
+          "shouldn't",
+          "don't"
+        ],
+        "answerIndex": 0,
+        "explain": "Chúng em 'nên' chúc ông bà dồi dào sức khỏe và hạnh phúc."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Tet is our biggest festival. We decorate our house with peach blossoms and eat special food like chung cake.",
+    "question": "What flowers do they decorate their house with?",
+    "options": [
+      "Peach blossoms",
+      "Sunflowers",
+      "Lotus flowers"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "We should visit our relatives during Tet.",
+    "phonetic": "/wiː ʃʊd ˈvɪzɪt ˈaʊə ˈrelətɪvz ˈdjʊərɪŋ tet/",
+    "meaningVi": "Chúng em nên đi thăm họ hàng vào dịp Tết."
+  },
+  "reading": {
+    "passage": "Tet is coming soon. In Viet Nam, people clean their houses to wash away bad luck. Children receive lucky money in red envelopes. Families gather together and enjoy special meals.",
+    "questions": [
+      {
+        "question": "Why do people clean their houses before Tet?",
+        "options": [
+          "To wash away bad luck",
+          "To invite strangers",
+          "To play games"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What do children receive?",
+        "options": [
+          "Lucky money in red envelopes",
+          "School books",
+          "New shoes"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "Children",
+      "receive",
+      "lucky",
+      "money",
+      "at",
+      "Tet."
+    ],
+    "correctSentence": "Children receive lucky money at Tet.",
+    "meaningVi": "Trẻ em được nhận tiền lì xì vào dịp Tết."
+  }
 }

@@ -103,6 +103,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Khối Banner: Sổ tay Ngữ pháp cốt lõi 12 Unit */}
+      <section aria-label="Sổ tay Ngữ pháp" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-banana-soft via-cream to-mint-soft p-6 sm:p-7 shadow-[0_6px_0_#efe3cc] border-2 border-banana-dark/20">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              📐
+            </span>
+            <div>
+              <span className="rounded-full bg-banana px-3 py-1 text-xs font-black text-ink shadow-xs">
+                Chuyên biệt cho người mất gốc
+              </span>
+              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
+                Sổ tay Ngữ pháp 12 Unit
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Công thức cốt lõi đóng khung, mẹo nhận biết nhanh và 36 câu trắc nghiệm có lời giải chi tiết
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/grammar"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-banana px-6 text-lg font-black text-ink shadow-[0_4px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Học Ngữ pháp →</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Chuỗi ngày học liên tiếp */}
       <div className="flex items-center justify-center gap-2 rounded-2xl bg-white/90 border border-banana-soft px-4 py-3 text-center text-base sm:text-lg font-black text-ink shadow-xs">
         <span className="text-2xl" aria-hidden>🔥</span>

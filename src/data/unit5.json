@@ -115,5 +115,95 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Động từ khuyết thiếu Must / Mustn't",
+    "ruleVi": "Dùng 'must' khi bắt buộc phải làm việc gì đó (quy tắc an toàn) và 'mustn't' khi tuyệt đối không được phép làm.",
+    "formula": "S + must / mustn't + V (nguyên mẫu)",
+    "quickTip": "Sau must và mustn't luôn là động từ nguyên thể, không thêm -s, -ed hay -ing.",
+    "quiz": [
+      {
+        "question": "You ______ stay with your group when exploring the forest.",
+        "options": [
+          "must",
+          "mustn't",
+          "shouldn't"
+        ],
+        "answerIndex": 0,
+        "explain": "Quy tắc an toàn trong rừng: bạn 'phải' đi cùng nhóm."
+      },
+      {
+        "question": "Visitors ______ litter in the national park.",
+        "options": [
+          "mustn't",
+          "must",
+          "can"
+        ],
+        "answerIndex": 0,
+        "explain": "Bảo vệ thiên nhiên: du khách 'tuyệt đối không được' xả rác."
+      },
+      {
+        "question": "We ______ bring a torch because the cave is very dark.",
+        "options": [
+          "must",
+          "mustn't",
+          "haven't"
+        ],
+        "answerIndex": 0,
+        "explain": "Hang động rất tối nên bắt buộc 'phải' mang theo đèn pin."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "We are packing for our trip to Fansipan mountain. We must bring a sleeping bag, a backpack, and warm clothes.",
+    "question": "Where are they going?",
+    "options": [
+      "Fansipan mountain",
+      "Ha Long bay",
+      "Phu Quoc island"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "You must bring sun cream and a torch.",
+    "phonetic": "/juː mʌst brɪŋ sʌn kriːm ænd ə tɔːtʃ/",
+    "meaningVi": "Bạn bắt buộc phải mang kem chống nắng và đèn pin."
+  },
+  "reading": {
+    "passage": "Ha Long Bay is one of the most famous natural wonders of Viet Nam. It has thousands of limestone islands and beautiful caves. When you visit Ha Long Bay, you must wear a life jacket on the boat.",
+    "questions": [
+      {
+        "question": "What must visitors wear on the boat?",
+        "options": [
+          "A life jacket",
+          "A raincoat",
+          "A warm hat"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What does Ha Long Bay have?",
+        "options": [
+          "Thousands of limestone islands",
+          "A huge desert",
+          "A tall volcano"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "You",
+      "must",
+      "carry",
+      "a",
+      "heavy",
+      "backpack",
+      "carefully."
+    ],
+    "correctSentence": "You must carry a heavy backpack carefully.",
+    "meaningVi": "Em phải đeo chiếc ba lô nặng thật cẩn thận."
+  }
 }

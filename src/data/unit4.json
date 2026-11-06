@@ -115,5 +115,96 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "So sánh hơn của tính từ (Comparative Adjectives)",
+    "ruleVi": "Dùng để so sánh đặc điểm giữa hai khu phố, hai đồ vật hoặc hai địa điểm.",
+    "formula": "Tính từ ngắn: adj + -er + than | Tính từ dài: more + adj + than",
+    "quickTip": "Từ 1 âm tiết (short) thêm -er (cleaner, noisier). Từ 2 âm tiết trở lên thêm 'more' phía trước (more peaceful than).",
+    "quiz": [
+      {
+        "question": "The streets in the city centre are ______ than those in the countryside.",
+        "options": [
+          "crowded",
+          "more crowded",
+          "crowdeder"
+        ],
+        "answerIndex": 1,
+        "explain": "'crowded' là tính từ dài 2 âm tiết, so sánh hơn dùng 'more crowded than'."
+      },
+      {
+        "question": "Living in a quiet neighbourhood is ______ than living near a railway station.",
+        "options": [
+          "better",
+          "gooder",
+          "more good"
+        ],
+        "answerIndex": 0,
+        "explain": "'good' là tính từ bất quy tắc, so sánh hơn đổi thành 'better'."
+      },
+      {
+        "question": "My new house is ______ than my old flat.",
+        "options": [
+          "larger",
+          "more large",
+          "largerer"
+        ],
+        "answerIndex": 0,
+        "explain": "'large' là tính từ ngắn kết thúc bằng 'e', chỉ cần thêm '-r' thành 'larger'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Welcome to my neighbourhood! There is a historic cathedral, a modern square, and an art gallery near my house.",
+    "question": "What historic place is near the house?",
+    "options": [
+      "A historic cathedral",
+      "A noisy market",
+      "A busy airport"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "My neighbourhood is very peaceful and convenient.",
+    "phonetic": "/maɪ ˈneɪbəhʊd ɪz ˈveri ˈpiːsfəl ænd kənˈviːniənt/",
+    "meaningVi": "Khu phố nơi em sống rất yên bình và tiện lợi."
+  },
+  "reading": {
+    "passage": "I live in a quiet suburb of Da Nang. The air here is cleaner and fresher than in the city centre. There are many convenient shops, a railway station, and a green park. People in my neighbourhood are very friendly.",
+    "questions": [
+      {
+        "question": "Where does the writer live?",
+        "options": [
+          "In a quiet suburb of Da Nang",
+          "In the noisy centre of Ha Noi",
+          "Near a desert"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "How is the air in the suburb?",
+        "options": [
+          "Cleaner and fresher",
+          "Hot and dusty",
+          "Very polluted"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "This",
+      "railway",
+      "station",
+      "is",
+      "larger",
+      "than",
+      "that",
+      "one."
+    ],
+    "correctSentence": "This railway station is larger than that one.",
+    "meaningVi": "Nhà ga xe lửa này lớn hơn nhà ga kia."
+  }
 }

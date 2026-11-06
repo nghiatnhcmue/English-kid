@@ -104,5 +104,96 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Thì Quá khứ đơn (Past Simple) & Câu mệnh lệnh",
+    "ruleVi": "Dùng để kể lại các sự kiện thể thao đã kết thúc trong quá khứ hoặc dùng câu mệnh lệnh để hướng dẫn luật chơi.",
+    "formula": "S + V-ed / V2 | Phủ định: S + didn't + V (nguyên mẫu)",
+    "quickTip": "Dấu hiệu nhận biết: yesterday (hôm qua), last week, ago. Động từ quy tắc thêm -ed (played, watched).",
+    "quiz": [
+      {
+        "question": "Yesterday, our class ______ a football match against class 6B.",
+        "options": [
+          "played",
+          "play",
+          "plays"
+        ],
+        "answerIndex": 0,
+        "explain": "Có 'Yesterday' (hôm qua), chia động từ ở quá khứ đơn 'played'."
+      },
+      {
+        "question": "She didn't ______ to the karate club last Sunday.",
+        "options": [
+          "go",
+          "went",
+          "goes"
+        ],
+        "answerIndex": 0,
+        "explain": "Sau trợ động từ phủ định 'didn't', động từ trở về nguyên mẫu 'go'."
+      },
+      {
+        "question": "______ your goggles before jumping into the swimming pool!",
+        "options": [
+          "Put on",
+          "Puts on",
+          "Putting on"
+        ],
+        "answerIndex": 0,
+        "explain": "Câu mệnh lệnh bắt đầu bằng động từ nguyên mẫu 'Put on'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Nam plays table tennis every Saturday. Last weekend, he won a gold medal in the city tournament.",
+    "question": "What did Nam win last weekend?",
+    "options": [
+      "A gold medal",
+      "A new racket",
+      "A football"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "I played badminton with my father yesterday.",
+    "phonetic": "/aɪ pleɪd ˈbædmɪntən wɪð maɪ ˈfɑːðə ˈjestədeɪ/",
+    "meaningVi": "Hôm qua em đã chơi cầu lông với bố."
+  },
+  "reading": {
+    "passage": "Sports and games play an important role in our lives. Doing aerobics or playing football keeps us healthy and fit. Last month, our school organized a marathon, and hundreds of students took part in it.",
+    "questions": [
+      {
+        "question": "What did the school organize last month?",
+        "options": [
+          "A marathon",
+          "A dance contest",
+          "A chess match"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Why are sports important?",
+        "options": [
+          "They keep us healthy and fit",
+          "They make us tired",
+          "They cost too much"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "We",
+      "played",
+      "table",
+      "tennis",
+      "in",
+      "the",
+      "school",
+      "gym."
+    ],
+    "correctSentence": "We played table tennis in the school gym.",
+    "meaningVi": "Chúng em đã chơi bóng bàn trong nhà thể chất của trường."
+  }
 }

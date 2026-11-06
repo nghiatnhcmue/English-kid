@@ -104,5 +104,96 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Từ để hỏi (Wh-questions) & Liên từ (Conjunctions)",
+    "ruleVi": "Dùng từ để hỏi (What, Where, When, Who, Why, How) và các từ nối câu (and, but, although, because, so).",
+    "formula": "Wh-word + do/does/is/are + S + V...? | Mệnh đề 1 + [and/but/so/because] + Mệnh đề 2",
+    "quickTip": "Because: giải thích lý do; So: kết quả; But: trái ngược; What: cái gì; When: khi nào; Who: ai.",
+    "quiz": [
+      {
+        "question": "______ do you watch cartoons? - Because they are funny.",
+        "options": [
+          "Why",
+          "When",
+          "Where"
+        ],
+        "answerIndex": 0,
+        "explain": "Hỏi lý do dùng 'Why', trả lời bằng 'Because'."
+      },
+      {
+        "question": "I like documentaries, ______ my brother prefers animated films.",
+        "options": [
+          "but",
+          "because",
+          "so"
+        ],
+        "answerIndex": 0,
+        "explain": "Hai sở thích đối lập nhau, dùng liên từ 'but' (nhưng)."
+      },
+      {
+        "question": "______ is the MC of this game show? - That is Mr. Tran.",
+        "options": [
+          "Who",
+          "What",
+          "When"
+        ],
+        "answerIndex": 0,
+        "explain": "Hỏi về người (MC) dùng từ để hỏi 'Who'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "My favourite television channel is the discovery channel. It has educational programmes and funny animated films.",
+    "question": "What channel does the speaker like?",
+    "options": [
+      "The discovery channel",
+      "The music channel",
+      "The news channel"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "I watch news programmes every evening.",
+    "phonetic": "/aɪ wɒtʃ njuːz ˈprəʊɡræmz ˈevri ˈiːvnɪŋ/",
+    "meaningVi": "Em xem các chương trình thời sự vào mỗi buổi tối."
+  },
+  "reading": {
+    "passage": "Television is a popular source of entertainment and education. Viewers can watch many different channels from around the world. Educational programmes teach kids about animals, science, and history.",
+    "questions": [
+      {
+        "question": "What do educational programmes teach kids about?",
+        "options": [
+          "Animals, science, and history",
+          "Cooking only",
+          "Football only"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "Who watches television channels?",
+        "options": [
+          "Viewers",
+          "Actors only",
+          "Singers only"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "This",
+      "educational",
+      "channel",
+      "is",
+      "very",
+      "popular",
+      "with",
+      "kids."
+    ],
+    "correctSentence": "This educational channel is very popular with kids.",
+    "meaningVi": "Kênh truyền hình giáo dục này rất phổ biến với trẻ em."
+  }
 }

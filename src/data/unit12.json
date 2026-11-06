@@ -93,5 +93,95 @@
     }
   ],
   "extraQuestions": [],
-  "scenes": []
+  "scenes": [],
+  "grammar": {
+    "title": "Diễn tả khả năng với Can, Could, Will be able to",
+    "ruleVi": "Dùng 'can' để nói về khả năng ở hiện tại, 'could' cho quá khứ và 'will be able to' cho tương lai.",
+    "formula": "Hiện tại: S + can + V | Quá khứ: S + could + V | Tương lai: S + will be able to + V",
+    "quickTip": "Khả năng bây giờ: CAN. Khả năng ngày xưa: COULD. Khả năng sau này: WILL BE ABLE TO.",
+    "quiz": [
+      {
+        "question": "In the future, smart robots ______ recognise human feelings.",
+        "options": [
+          "will be able to",
+          "could",
+          "can to"
+        ],
+        "answerIndex": 0,
+        "explain": "Khả năng trong tương lai có 'In the future' dùng 'will be able to'."
+      },
+      {
+        "question": "Ten years ago, robots ______ only do very simple tasks.",
+        "options": [
+          "could",
+          "will be able to",
+          "can"
+        ],
+        "answerIndex": 0,
+        "explain": "Khả năng trong quá khứ có 'Ten years ago' dùng 'could'."
+      },
+      {
+        "question": "Today, home robots ______ clean the floor and cook meals.",
+        "options": [
+          "can",
+          "could",
+          "will able"
+        ],
+        "answerIndex": 0,
+        "explain": "Khả năng ở hiện tại có 'Today' dùng 'can'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "My smart home robot can guard the house, iron clothes, and water flowers in the garden.",
+    "question": "What can the robot do in the garden?",
+    "options": [
+      "Water flowers",
+      "Dig holes",
+      "Cut trees"
+    ],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "This smart robot can recognise human voice.",
+    "phonetic": "/ðɪs smɑːt ˈrəʊbɒt kæn ˈrekəɡnaɪz ˈhjuːmən vɔɪs/",
+    "meaningVi": "Chú robot thông minh này có thể nhận diện giọng nói con người."
+  },
+  "reading": {
+    "passage": "Robots are becoming more helpful in our daily lives. Doctor robots can help examine patients, while teacher robots can teach English to young children. In the future, robots will be able to do heavy and dangerous work for humans.",
+    "questions": [
+      {
+        "question": "What can teacher robots do?",
+        "options": [
+          "Teach English to young children",
+          "Drive buses",
+          "Build bridges"
+        ],
+        "answerIndex": 0
+      },
+      {
+        "question": "What will robots be able to do in the future?",
+        "options": [
+          "Heavy and dangerous work",
+          "Sleep all day",
+          "Nothing new"
+        ],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": [
+      "This",
+      "smart",
+      "robot",
+      "can",
+      "guard",
+      "our",
+      "house."
+    ],
+    "correctSentence": "This smart robot can guard our house.",
+    "meaningVi": "Chú robot thông minh này có thể trông coi nhà của chúng em."
+  }
 }
