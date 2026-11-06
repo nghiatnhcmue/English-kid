@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { SettingsProvider, useSettings } from './settings.jsx';
 import { store, totalStarsOf } from './utils/storage.js';
-import UnitSwitcher from './components/UnitSwitcher.jsx';
 import { streakOf } from './utils/dates.js';
 import { playSfx } from './utils/sfx.js';
 import { t } from './i18n/vi.js';
@@ -136,8 +135,6 @@ function TopNavBar() {
               <span className="text-sm lg:text-base leading-none" aria-hidden>{studentInfo.avatar || '👤'}</span>
               <span className="max-w-32 truncate">{studentInfo.name ? `${studentInfo.name} (${studentInfo.class || '6'})` : 'Học sinh đăng nhập'}</span>
             </button>
-
-            <UnitSwitcher className="hidden xl:flex w-52" />
 
             {/* Huy hiệu Sao ⭐ */}
             <div

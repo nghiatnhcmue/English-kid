@@ -2,7 +2,6 @@ import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getUnit } from '../utils/data.js';
 import { store } from '../utils/storage.js';
-import UnitSwitcher from '../components/UnitSwitcher.jsx';
 import { statusOf } from '../utils/mastery.js';
 import { playSfx } from '../utils/sfx.js';
 import { PageHeader, Stars, Button3D } from '../components/ui.jsx';
@@ -59,7 +58,6 @@ export default function UnitPage() {
         backTo="/"
         backLabel={t.nav.home}
       />
-      <UnitSwitcher className="flex w-full xl:hidden" />
 
       {/* Huy hiệu đối chiếu Sách giáo khoa chuẩn Bộ GD&ĐT */}
       <aside aria-label="Sách giáo khoa tương ứng" className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white px-4 py-3 shadow-xs border-2 border-banana-soft">
