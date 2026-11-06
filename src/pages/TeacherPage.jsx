@@ -7,6 +7,9 @@ import { listUnits } from '../utils/data.js';
 import { wordsByStatus } from '../utils/mastery.js';
 import { Button3D, PageHeader, Stars } from '../components/ui.jsx';
 import { Award, BookOpen, CheckCircle2, ChevronRight, Clock, FileText, Lock, Sparkles, User, Users } from 'lucide-react';
+import TeacherAssignmentManager from '../components/TeacherAssignmentManager.jsx';
+import TeacherDataEditor from '../components/TeacherDataEditor.jsx';
+import TeacherGuide from '../components/TeacherGuide.jsx';
 
 export default function TeacherPage() {
   const [pin, setPin] = useState('');
@@ -227,45 +230,84 @@ export default function TeacherPage() {
         }
       />
 
-      {/* Thanh 3 Tab Điều Hướng Giáo Viên */}
+      {/* Thanh 6 Tab Điều Hướng Giáo Viên */}
       <nav aria-label="Tab quản lý giáo viên" className="flex gap-2 rounded-2xl bg-white p-1.5 shadow-xs border-2 border-banana-soft overflow-x-auto">
         <button
           type="button"
           onClick={() => setActiveTab('scores')}
-          className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer whitespace-nowrap ${
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
             activeTab === 'scores'
               ? 'bg-peach text-white shadow-xs'
               : 'text-ink-soft hover:bg-cream hover:text-ink'
           }`}
         >
           <span>📊</span>
-          <span>Bảng Điểm & Bài Test ({filteredScores.length})</span>
+          <span>Bảng Điểm ({filteredScores.length})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('assignments')}
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'assignments'
+              ? 'bg-peach text-white shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>📅</span>
+          <span>Giao Bài Tập Tuần</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('editor')}
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'editor'
+              ? 'bg-peach text-white shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>✏️</span>
+          <span>Tùy Biến Sâu Data</span>
         </button>
 
         <button
           type="button"
           onClick={() => setActiveTab('roadmap')}
-          className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer whitespace-nowrap ${
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
             activeTab === 'roadmap'
               ? 'bg-banana text-ink shadow-xs'
               : 'text-ink-soft hover:bg-cream hover:text-ink'
           }`}
         >
           <span>🗺️</span>
-          <span>Theo Dõi Lộ Trình 12 Unit</span>
+          <span>Lộ Trình 12 Unit</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('guide')}
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'guide'
+              ? 'bg-mint text-white shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>📖</span>
+          <span>Hướng Dẫn Thầy Cô</span>
         </button>
 
         <button
           type="button"
           onClick={() => setActiveTab('library')}
-          className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer whitespace-nowrap ${
+          className={`flex items-center gap-1.5 rounded-xl px-3.5 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer whitespace-nowrap ${
             activeTab === 'library'
               ? 'bg-sky text-ink shadow-xs'
               : 'text-ink-soft hover:bg-cream hover:text-ink'
           }`}
         >
           <span>📚</span>
-          <span>Thư Viện SGK & Phân Phối</span>
+          <span>Thư Viện SGK & PDF</span>
         </button>
       </nav>
 
@@ -499,6 +541,15 @@ export default function TeacherPage() {
           </section>
         </div>
       )}
+
+      {/* TAB GIAO BÀI TẬP THEO TUẦN */}
+      {activeTab === 'assignments' && <TeacherAssignmentManager />}
+
+      {/* TAB TÙY BIẾN SÂU DATA */}
+      {activeTab === 'editor' && <TeacherDataEditor />}
+
+      {/* TAB HƯỚNG DẪN THẦY CÔ */}
+      {activeTab === 'guide' && <TeacherGuide />}
 
       {/* TAB 2: THEO DÕI LỘ TRÌNH 12 UNIT CỦA HỌC SINH */}
       {activeTab === 'roadmap' && (

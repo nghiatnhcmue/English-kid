@@ -10,6 +10,9 @@ export const KEYS = {
   SETTINGS: `${PREFIX}settings`,
   STUDENT: `${PREFIX}student_info`,
   TEACHER_PIN: `${PREFIX}teacher_pin`,
+  CUSTOM_UNITS: `${PREFIX}custom_units`,
+  ASSIGNMENTS: `${PREFIX}assignments`,
+  ASSIGNMENT_SUBMISSIONS: `${PREFIX}assignment_submissions`,
 };
 
 export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true };
@@ -134,6 +137,150 @@ export function createStore(storage = globalThis.localStorage) {
       const next = { ...api.getSettings(), ...patch };
       write(KEYS.SETTINGS, next);
       return next;
+    },
+
+    // ---- Dữ liệu bài học tùy biến của Giáo viên (Custom Units) ----
+    getCustomUnits() {
+      const units = read(KEYS.CUSTOM_UNITS, {});
+      return units && typeof units === 'object' && !Array.isArray(units) ? units : {};
+    },
+    getCustomUnit(unitId) {
+      const all = api.getCustomUnits();
+      return all[Number(unitId)] || null;
+    },
+    saveCustomUnit(unitId, data) {
+      const all = api.getCustomUnits();
+      const numId = Number(unitId);
+      all[numId] = { ...(all[numId] || {}), ...data };
+      write(KEYS.CUSTOM_UNITS, all);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('curriculum-updated', { detail: { unitId: numId } }));
+      }
+      return all[numId];
+    },
+    resetUnit(unitId) {
+      const all = api.getCustomUnits();
+      const numId = Number(unitId);
+      delete all[numId];
+      write(KEYS.CUSTOM_UNITS, all);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('curriculum-updated', { detail: { unitId: numId } }));
+      }
+      return true;
+    },
+    resetAllUnits() {
+      write(KEYS.CUSTOM_UNITS, {});
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('curriculum-updated', { detail: { all: true } }));
+      }
+      return true;
+    },
+
+    // ---- Quản lý Giao bài tập theo tuần (Assignments) ----
+    getAssignments() {
+      const list = read(KEYS.ASSIGNMENTS, []);
+      return Array.isArray(list) ? list : [];
+    },
+    getAssignmentById(idOrCode) {
+      if (!idOrCode) return null;
+      const clean = String(idOrCode).trim().toLowerCase();
+      const list = api.getAssignments();
+      return (
+        list.find(
+          (a) =>
+            String(a.id).toLowerCase() === clean ||
+            String(a.code).toLowerCase() === clean
+        ) || null
+      );
+    },
+    saveAssignment(assignment) {
+      const list = api.getAssignments();
+      const now = new Date();
+      const id = assignment.id || `assign_${now.getTime()}`;
+      const code =
+        assignment.code ||
+        `TA6-W${String(assignment.week || 1).padStart(2, '0')}-${Math.floor(
+          100 + Math.random() * 900
+        )}`;
+      const entry = {
+        id,
+        code,
+        createdAt: assignment.createdAt || now.toISOString(),
+        updatedAt: now.toISOString(),
+        title: assignment.title || `Bài tập Tuần ${assignment.week || 1}`,
+        week: Number(assignment.week) || 1,
+        targetClass: assignment.targetClass || 'all',
+        scopeType: assignment.scopeType || 'full_unit', // 'full_unit' | 'skill' | 'custom_words' | 'custom_questions'
+        unitId: Number(assignment.unitId) || 1,
+        selectedSkill: assignment.selectedSkill || 'all', // 'vocab' | 'pronunciation' | 'grammar' | 'listening' | 'speaking' | 'reading' | 'writing' | 'mastery'
+        selectedWordIds: Array.isArray(assignment.selectedWordIds)
+          ? assignment.selectedWordIds
+          : [],
+        selectedQuestions: Array.isArray(assignment.selectedQuestions)
+          ? assignment.selectedQuestions
+          : [],
+        deadline: assignment.deadline || '',
+        note: assignment.note || '',
+        status: assignment.status || 'active',
+      };
+
+      const existingIdx = list.findIndex((a) => a.id === id);
+      let nextList;
+      if (existingIdx >= 0) {
+        nextList = [...list];
+        nextList[existingIdx] = entry;
+      } else {
+        nextList = [entry, ...list];
+      }
+      write(KEYS.ASSIGNMENTS, nextList);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(
+          new CustomEvent('assignment-updated', { detail: { id } })
+        );
+      }
+      return entry;
+    },
+    deleteAssignment(id) {
+      const list = api
+        .getAssignments()
+        .filter((a) => a.id !== id && a.code !== id);
+      write(KEYS.ASSIGNMENTS, list);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(
+          new CustomEvent('assignment-updated', { detail: { id, deleted: true } })
+        );
+      }
+      return true;
+    },
+
+    // ---- Lịch sử nộp bài tập của học sinh (Assignment Submissions) ----
+    getAssignmentSubmissions(assignmentId) {
+      const all = read(KEYS.ASSIGNMENT_SUBMISSIONS, []);
+      if (!Array.isArray(all)) return [];
+      if (!assignmentId) return all;
+      return all.filter(
+        (s) => s.assignmentId === assignmentId || s.assignmentCode === assignmentId
+      );
+    },
+    submitAssignment(assignmentId, submission = {}) {
+      const all = api.getAssignmentSubmissions();
+      const student = api.getStudentInfo();
+      const now = new Date();
+      const entry = {
+        id: `sub_${now.getTime()}_${Math.random().toString(36).substring(2, 6)}`,
+        assignmentId,
+        assignmentCode: submission.assignmentCode || '',
+        studentName: submission.studentName || student.name || 'Học sinh',
+        studentClass: submission.studentClass || student.class || '6',
+        submittedAt: now.toISOString(),
+        score: submission.score ?? 10,
+        stars: submission.stars ?? 3,
+        total: submission.total ?? 10,
+        correct: submission.correct ?? 10,
+        detail: submission.detail || null,
+      };
+      write(KEYS.ASSIGNMENT_SUBMISSIONS, [entry, ...all]);
+      return entry;
     },
 
     clearAll() {
