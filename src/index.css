@@ -53,11 +53,23 @@ body {
   color: var(--color-ink);
   -webkit-tap-highlight-color: transparent;
   font-family: var(--font-sans);
+  overscroll-behavior: none;
+  touch-action: manipulation;
 }
 
 body {
   min-height: 100dvh;
-  overscroll-behavior-y: none;
+}
+
+/* Touch Targets cho trẻ em & TV tương tác lớn (>= 52px) */
+.touch-target {
+  min-width: clamp(52px, 7vw, 76px);
+  min-height: clamp(52px, 7vw, 76px);
+}
+
+/* Tiêu đề tự co giãn theo tỷ lệ màn hình (clamp) */
+.fluid-heading {
+  font-size: clamp(1.5rem, 3.5vw + 0.5rem, 3rem);
 }
 
 /* Định dạng viền nét khi điều hướng bằng bàn phím (tránh học sinh bị lạc) */

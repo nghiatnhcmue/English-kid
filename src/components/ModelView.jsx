@@ -70,6 +70,7 @@ const ModelView = forwardRef(function ModelView(
       camera-orbit="30deg 70deg auto"
       shadow-intensity="1"
       exposure="1.05"
+      bounds="tight"
       interaction-prompt="none"
       {...(interactive ? { 'camera-controls': true, 'touch-action': 'pan-y' } : {})}
       {...(autoRotate ? { 'auto-rotate': true, 'rotation-per-second': '20deg' } : {})}
