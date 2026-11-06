@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getUnit } from '../utils/data.js';
-import { store, stageStarsOf } from '../utils/storage.js';
+import { store } from '../utils/storage.js';
 import UnitSwitcher from '../components/UnitSwitcher.jsx';
 import { statusOf } from '../utils/mastery.js';
 import { playSfx } from '../utils/sfx.js';
@@ -25,7 +25,6 @@ export default function UnitPage() {
 
   const unitProgress = store().getProgress().units[unit?.unitId];
   const modeStars = unitProgress?.modes ?? {};
-  const stageProgress = unitProgress?.stage ?? {};
   const mastery = store().getMastery();
 
   const filteredWords = useMemo(() => {
@@ -58,42 +57,6 @@ export default function UnitPage() {
         backLabel={t.nav.home}
       />
       <UnitSwitcher className="flex w-full xl:hidden" />
-
-      {/* Sân khấu 3D theo bối cảnh */}
-      {unit.scenes?.length > 0 && (
-        <section
-          aria-label={t.stage.title}
-          className="overflow-hidden rounded-[2rem] border-4 border-white bg-gradient-to-br from-sky-soft via-white to-banana-soft p-5 shadow-md"
-        >
-          <h2 className="text-2xl font-black">{t.stage.cardTitle}</h2>
-          <p className="mb-4 text-sm font-bold text-ink-soft sm:text-base">{t.stage.cardSub}</p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {unit.scenes.map((s) => {
-              const earned = stageStarsOf({ stage: Object.fromEntries(Object.entries(stageProgress).filter(([k]) => k.startsWith(`${s.id}:`))) });
-              return (
-                <Link
-                  key={s.id}
-                  to={`/unit/${unit.unitId}/stage/${s.id}`}
-                  onClick={() => playSfx('click')}
-                  className="flex min-h-24 items-center gap-4 rounded-3xl p-4 shadow-[0_6px_0_rgb(0_0_0/0.08)] transition-all hover:-translate-y-0.5 active:translate-y-1 active:shadow-none"
-                  style={{ background: s.bg }}
-                >
-                  <span className="text-5xl" aria-hidden>
-                    {s.emoji}
-                  </span>
-                  <span className="flex-1">
-                    <span className="block text-xl leading-tight font-black">{s.titleVi}</span>
-                    <span className="block text-sm font-bold text-ink-soft">
-                      {s.titleEn} · {s.objects.length} đồ vật · {s.challenges.length} thử thách
-                    </span>
-                  </span>
-                  <span className="shrink-0 rounded-full bg-white/80 px-3 py-1 text-sm font-black">⭐ {earned}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      )}
 
       {/* 4 Bước học tập theo trình tự tối giản, dễ hiểu */}
       <section aria-label={t.unit.practice}>

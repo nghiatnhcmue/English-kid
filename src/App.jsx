@@ -2,7 +2,6 @@ import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-do
 import { SettingsProvider, useSettings } from './settings.jsx';
 import { store, totalStarsOf } from './utils/storage.js';
 import UnitSwitcher from './components/UnitSwitcher.jsx';
-import StagePage from './pages/StagePage.jsx';
 import { streakOf } from './utils/dates.js';
 import { playSfx } from './utils/sfx.js';
 import { t } from './i18n/vi.js';
@@ -28,7 +27,6 @@ const NAV = [
   { to: '/speaking', label: 'Nói', icon: '🎙️' },
   { to: '/reading', label: 'Đọc', icon: '📖' },
   { to: '/writing', label: 'Viết', icon: '✍️' },
-  { to: '/unit/1/stage', label: '3D Stage', icon: '🎭' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
   { to: '/settings', label: t.nav.settings, icon: '⚙️' },
@@ -217,7 +215,6 @@ export default function App() {
               <Route path="/reading" element={<Fresh component={ReadingPage} />} />
               <Route path="/writing" element={<Fresh component={WritingPage} />} />
               <Route path="/unit/:unitId" element={<UnitPage />} />
-              <Route path="/unit/:unitId/stage/:sceneId?" element={<Fresh component={StagePage} />} />
               <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />
               <Route path="/review/:mode" element={<Fresh component={PracticePage} review />} />
               <Route path="/test" element={<Fresh component={TestPage} />} />

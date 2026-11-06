@@ -74,13 +74,6 @@ export default function SpeakingPage() {
                 Luyện câu: &quot;{currentUnit.speaking?.targetSentence}&quot;
               </h2>
             </div>
-            <Button3D
-              tone="mint"
-              to={`/unit/${currentUnit.unitId}/stage`}
-              className="px-4 py-2 text-sm sm:text-base"
-            >
-              <span>🎭 Nói cùng Sân khấu 3D →</span>
-            </Button3D>
           </div>
 
           <ShadowingStation unit={currentUnit} initialTab="speaking" onFinish={() => {}} />
