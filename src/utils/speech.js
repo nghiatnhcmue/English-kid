@@ -88,3 +88,46 @@ export async function sayWord(word, settings = {}, { slowToo = false } = {}) {
   }
   return ok;
 }
+
+// ---- Nhận dạng giọng nói (chấm nói nhẹ nhàng). Safari/iOS thường không hỗ trợ → trả null. ----
+const Recognition = typeof window !== 'undefined' ? window.SpeechRecognition || window.webkitSpeechRecognition : undefined;
+
+export const isSttSupported = () => !!Recognition;
+
+/**
+ * Nghe 1 câu. Trả về { transcripts: string[] } hoặc null nếu không hỗ trợ / lỗi / hết giờ.
+ * Không bao giờ ném lỗi, để giao diện luôn có đường lui (tự đánh giá).
+ */
+export function recognizeOnce({ lang = 'en-GB', timeoutMs = 8000 } = {}) {
+  if (!Recognition) return Promise.resolve(null);
+  return new Promise((resolve) => {
+    let done = false;
+    const finish = (value) => {
+      if (done) return;
+      done = true;
+      clearTimeout(timer);
+      try {
+        rec.abort();
+      } catch {
+        /* bỏ qua */
+      }
+      resolve(value);
+    };
+    const rec = new Recognition();
+    rec.lang = lang;
+    rec.interimResults = false;
+    rec.maxAlternatives = 5;
+    rec.onresult = (e) => {
+      const alts = [...(e.results?.[0] ?? [])].map((r) => r.transcript);
+      finish(alts.length ? { transcripts: alts } : null);
+    };
+    rec.onerror = () => finish(null);
+    rec.onend = () => finish(null);
+    const timer = setTimeout(() => finish(null), timeoutMs);
+    try {
+      rec.start();
+    } catch {
+      finish(null);
+    }
+  });
+}

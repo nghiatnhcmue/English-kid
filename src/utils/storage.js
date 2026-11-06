@@ -104,6 +104,16 @@ export function createStore(storage = globalThis.localStorage) {
       write(KEYS.PROGRESS, p);
       api.markStudyDay(now);
     },
+    /** Lưu số sao tốt nhất của một thử thách trên Sân khấu 3D (tách riêng khỏi modes). */
+    saveStageResult(unitId, sceneId, challengeId, stars, now = new Date()) {
+      const p = api.getProgress();
+      const unit = p.units[unitId] ?? { modes: {} };
+      const key = `${sceneId}:${challengeId}`;
+      unit.stage = { ...unit.stage, [key]: Math.max(unit.stage?.[key] ?? 0, stars) };
+      p.units = { ...p.units, [unitId]: unit };
+      write(KEYS.PROGRESS, p);
+      api.markStudyDay(now);
+    },
     markStudyDay(now = new Date()) {
       const p = api.getProgress();
       const day = localDay(now);
@@ -134,6 +144,16 @@ export function createStore(storage = globalThis.localStorage) {
   };
   return api;
 }
+
+const sum = (obj) => Object.values(obj ?? {}).reduce((a, b) => a + (Number(b) || 0), 0);
+
+/** Sao của 4 chế độ ôn trong một Unit (tối đa 12). */
+export const modeStarsOf = (unitProgress) => sum(unitProgress?.modes);
+/** Sao từ các thử thách Sân khấu 3D của một Unit. */
+export const stageStarsOf = (unitProgress) => sum(unitProgress?.stage);
+/** Tổng sao toàn bộ app (chế độ ôn + sân khấu). */
+export const totalStarsOf = (progress) =>
+  Object.values(progress?.units ?? {}).reduce((acc, u) => acc + modeStarsOf(u) + stageStarsOf(u), 0);
 
 let defaultStore;
 export function store() {

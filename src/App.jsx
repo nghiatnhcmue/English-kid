@@ -1,6 +1,8 @@
-import { HashRouter, NavLink, Route, Routes, Link } from 'react-router-dom';
+import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { SettingsProvider, useSettings } from './settings.jsx';
-import { store } from './utils/storage.js';
+import { store, totalStarsOf } from './utils/storage.js';
+import UnitSwitcher from './components/UnitSwitcher.jsx';
+import StagePage from './pages/StagePage.jsx';
 import { streakOf } from './utils/dates.js';
 import { playSfx } from './utils/sfx.js';
 import { t } from './i18n/vi.js';
@@ -23,10 +25,8 @@ function TopNavBar() {
   const { settings, update } = useSettings();
   const progress = store().getProgress();
   const streak = streakOf(progress.studyDays);
-  const totalStars = Object.values(progress.units).reduce(
-    (sum, u) => sum + Object.values(u.modes ?? {}).reduce((a, b) => a + b, 0),
-    0,
-  );
+  const totalStars = totalStarsOf(progress);
+  useLocation(); // vẽ lại khi đổi trang để số sao/streak luôn mới
 
   const toggleSound = () => {
     const next = !settings.sound;
@@ -95,6 +95,7 @@ function TopNavBar() {
 
         {/* Quick Stats & Audio Toggle */}
         <div className="flex items-center gap-2">
+          <UnitSwitcher className="hidden w-52 xl:flex" />
           <div className="flex items-center gap-1 rounded-2xl bg-cream px-3 py-1.5 text-sm font-black text-ink shadow-xs border border-banana-soft">
             <span aria-hidden>⭐</span>
             <span>{totalStars}</span>
@@ -149,6 +150,12 @@ function BottomNav() {
   );
 }
 
+/** Mỗi lần điều hướng (kể cả bấm lại cùng trang) là một phiên mới, trạng thái được reset. */
+function Fresh({ component: Component, ...props }) {
+  const location = useLocation();
+  return <Component key={location.key} {...props} />;
+}
+
 export default function App() {
   return (
     <SettingsProvider>
@@ -159,9 +166,10 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/unit/:unitId" element={<UnitPage />} />
-              <Route path="/unit/:unitId/:mode" element={<PracticePage />} />
-              <Route path="/review/:mode" element={<PracticePage review />} />
-              <Route path="/test" element={<TestPage />} />
+              <Route path="/unit/:unitId/stage/:sceneId?" element={<Fresh component={StagePage} />} />
+              <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />
+              <Route path="/review/:mode" element={<Fresh component={PracticePage} review />} />
+              <Route path="/test" element={<Fresh component={TestPage} />} />
               <Route path="/journal" element={<JournalPage />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="/teacher" element={<TeacherPage />} />

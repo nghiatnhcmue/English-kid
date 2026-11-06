@@ -1,0 +1,182 @@
+[
+  {
+    "file": "/assets/models/unit1/school-bag.glb",
+    "wordId": "u1_01",
+    "title": "Backpack",
+    "author": "jeremy",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/cJFKpOZzl8s",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/pencil-sharpener.glb",
+    "wordId": "u1_03",
+    "title": "Pencil sharpener",
+    "author": "jeremy",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/9s3K7Tpjfb8",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/rubber.glb",
+    "wordId": "u1_04",
+    "title": "Eraser",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/dexMJlf51a8",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/calculator.glb",
+    "wordId": "u1_05",
+    "title": "Calculator",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/0yU6BDQRVYw",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/ruler.glb",
+    "wordId": "u1_07",
+    "title": "Ruler",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/3CqPcG3ATQs",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/textbook.glb",
+    "wordId": "u1_08",
+    "title": "Book",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/4S1nr7WmUxm",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/notebook.glb",
+    "wordId": "u1_09",
+    "title": "Notebook",
+    "author": "jeremy",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/9Ptsg_xZt6B",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/science.glb",
+    "wordId": "u1_14",
+    "title": "Microscope",
+    "author": "Colonel Cthulu",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/05VXLT8kN4k",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/history.glb",
+    "wordId": "u1_15",
+    "title": "Scroll",
+    "author": "Quaternius",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/MWGB9nxMIc",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit1/creative.glb",
+    "wordId": "u1_16",
+    "title": "Palette",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/9QVrdl0i2c3",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/fridge.glb",
+    "wordId": "u2_06",
+    "title": "Kitchen Fridge",
+    "author": "Quaternius",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/8sjRm8fnHh",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/wardrobe.glb",
+    "wordId": "u2_07",
+    "title": "Closet",
+    "author": "Quaternius",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/BHEVb1DIuH",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/chest-of-drawers.glb",
+    "wordId": "u2_08",
+    "title": "Drawer",
+    "author": "Quaternius",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/T4uDbyP90C",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/lamp.glb",
+    "wordId": "u2_09",
+    "title": "Lamp",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/23XivszLV11",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/sofa.glb",
+    "wordId": "u2_10",
+    "title": "Sofa",
+    "author": "Quaternius",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/X5kQPKzAWp",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/dishwasher.glb",
+    "wordId": "u2_11",
+    "title": "Dishwasher",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/4yl2TMOWhrH",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/microwave.glb",
+    "wordId": "u2_12",
+    "title": "Microwave",
+    "author": "MilkAndBanana",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/uL1OgB3EJu",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/apartment.glb",
+    "wordId": "u2_13",
+    "title": "Apartment building",
+    "author": "Poly by Google",
+    "license": "CC-BY 3.0",
+    "source": "https://poly.pizza/m/01lqee-dZAr",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/country-house.glb",
+    "wordId": "u2_14",
+    "title": "Cottage",
+    "author": "CreativeTrio",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/YDGLLT0emC",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  },
+  {
+    "file": "/assets/models/unit2/town-house.glb",
+    "wordId": "u2_15",
+    "title": "Town House",
+    "author": "Quaternius",
+    "license": "CC0 1.0",
+    "source": "https://poly.pizza/m/dtVrmnnCZn",
+    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+  }
+]

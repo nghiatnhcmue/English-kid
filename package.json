@@ -13,11 +13,14 @@
   "dependencies": {
     "@fontsource-variable/nunito": "^5.2.6",
     "@google/model-viewer": "^4.1.0",
+    "canvas-confetti": "^1.9.4",
+    "lucide-react": "^0.468.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
+    "@gltf-transform/cli": "^4.5.1",
     "@tailwindcss/vite": "^4.1.10",
     "@vitejs/plugin-react": "^4.5.2",
     "tailwindcss": "^4.1.10",

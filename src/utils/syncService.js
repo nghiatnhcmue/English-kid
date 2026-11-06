@@ -146,3 +146,4 @@ function getLocalFallbackScores(classFilter) {
 
   return list;
 }
+

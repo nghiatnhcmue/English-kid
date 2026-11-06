@@ -5,6 +5,7 @@ import { hasEnglishVoice, speak, isTtsSupported } from '../utils/speech.js';
 import { store } from '../utils/storage.js';
 import { Button3D, PageHeader } from '../components/ui.jsx';
 import { t } from '../i18n/vi.js';
+import credits from '../data/credits.json';
 
 export default function SettingsPage() {
   const { settings, update } = useSettings();
@@ -203,6 +204,28 @@ export default function SettingsPage() {
       <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
         <h2 className="mb-2 text-2xl font-black text-ink">ℹ️ {t.settings.about}</h2>
         <p className="text-base font-bold text-ink-soft leading-relaxed">{t.settings.aboutText}</p>
+        <details className="mt-4 rounded-2xl bg-cream p-4">
+          <summary className="cursor-pointer font-black text-ink">🧊 {t.credits.title} ({credits.length})</summary>
+          <p className="mt-2 text-sm font-bold text-ink-soft">{t.credits.intro}</p>
+          <ul className="mt-2 flex flex-col gap-1 text-sm">
+            {credits.map((c) => (
+              <li key={c.file}>
+                <a href={c.source} target="_blank" rel="noopener noreferrer" className="font-black text-sky-dark underline">
+                  {c.title}
+                </a>{' '}
+                – {c.author} ·{' '}
+                <a
+                  href={c.license.startsWith('CC0') ? 'https://creativecommons.org/publicdomain/zero/1.0/' : 'https://creativecommons.org/licenses/by/3.0/'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  {c.license}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
       </section>
 
       {/* Xóa dữ liệu học tập */}

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { listUnits } from '../utils/data.js';
-import { store } from '../utils/storage.js';
+import { store, totalStarsOf } from '../utils/storage.js';
 import { streakOf } from '../utils/dates.js';
 import { wordsByStatus } from '../utils/mastery.js';
 import { playSfx } from '../utils/sfx.js';
@@ -13,10 +13,7 @@ export default function HomePage() {
   const progress = store().getProgress();
   const hardCount = wordsByStatus(store().getMastery(), 'review').length;
   const streak = streakOf(progress.studyDays);
-  const totalStars = Object.values(progress.units).reduce(
-    (sum, u) => sum + Object.values(u.modes ?? {}).reduce((a, b) => a + b, 0),
-    0,
-  );
+  const totalStars = totalStarsOf(progress);
 
   // Tìm bài học tiếp theo em nên học (bài đầu tiên chưa đạt đủ 12 sao hoặc bài 1)
   const nextUnit = useMemo(() => {

@@ -79,7 +79,7 @@ function UnitPicker({ onStart }) {
         <p className="text-sm sm:text-base font-bold text-ink-soft mt-0.5">{t.test.chooseUnitsSub}</p>
       </div>
 
-      <ul className="grid gap-3.5 sm:grid-cols-2">
+      <ul className="grid grid-cols-1 gap-3.5 sm:grid-cols-2">
         {units.map((u) => {
           const on = chosen.has(u.unitId);
           return (

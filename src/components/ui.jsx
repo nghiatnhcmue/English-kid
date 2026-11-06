@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import confetti from 'canvas-confetti';
 import { playSfx } from '../utils/sfx.js';
 import { sayWord, speak } from '../utils/speech.js';
 import { useSettings } from '../settings.jsx';
@@ -255,23 +256,25 @@ export function KeyboardBadge({ keyName, label }) {
   );
 }
 
-/** Ngôi sao rơi chúc mừng */
-export function Confetti({ show }) {
-  if (!show) return null;
-  const pieces = Array.from({ length: 28 }, (_, i) => i);
-  return (
-    <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden" aria-hidden>
-      {pieces.map((i) => (
-        <span
-          key={i}
-          className="confetti-piece text-4xl"
-          style={{ left: `${(i * 37) % 100}%`, animationDelay: `${(i % 7) * 0.09}s` }}
-        >
-          {['⭐', '🌟', '✨', '🎉', '🏆'][i % 5]}
-        </span>
-      ))}
-    </div>
-  );
+const CONFETTI_COLORS = ['#FFC83D', '#3BB78F', '#8EC5FF', '#F26B3A', '#C3A6FF'];
+
+/** Bắn pháo hoa giấy (canvas-confetti). Tự tắt khi máy bật "giảm chuyển động". */
+export function fireConfetti(power = 1) {
+  const shoot = (opts) =>
+    confetti({ disableForReducedMotion: true, colors: CONFETTI_COLORS, zIndex: 60, ...opts });
+  shoot({ particleCount: Math.round(90 * power), spread: 75, startVelocity: 42, origin: { y: 0.65 } });
+  setTimeout(() => {
+    shoot({ particleCount: Math.round(45 * power), angle: 60, spread: 60, origin: { x: 0, y: 0.75 } });
+    shoot({ particleCount: Math.round(45 * power), angle: 120, spread: 60, origin: { x: 1, y: 0.75 } });
+  }, 220);
+}
+
+/** Pháo hoa chúc mừng khi component hiện ra (giữ API cũ: <Confetti show />). */
+export function Confetti({ show, power = 1 }) {
+  useEffect(() => {
+    if (show) fireConfetti(power);
+  }, [show, power]);
+  return null;
 }
 
 /** Màn hình kết thúc một chế độ ôn */

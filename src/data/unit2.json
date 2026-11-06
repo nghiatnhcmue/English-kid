@@ -3,21 +3,312 @@
   "unitTitle": "Unit 2: My House",
   "unitNameVi": "Ngôi nhà của em",
   "vocabularies": [
-    { "id": "u2_01", "word": "living room", "phonetic": "/ˈlɪvɪŋ ruːm/", "wordType": "Danh từ", "meaning": "Phòng khách", "hint": "Phòng cả nhà ngồi xem TV, tiếp khách", "exampleEn": "We watch TV in the living room.", "exampleVi": "Cả nhà em xem TV trong phòng khách.", "emoji": "📺" },
-    { "id": "u2_02", "word": "bedroom", "phonetic": "/ˈbedruːm/", "wordType": "Danh từ", "meaning": "Phòng ngủ", "hint": "Phòng có giường để ngủ", "exampleEn": "My bedroom is small but nice.", "exampleVi": "Phòng ngủ của em nhỏ nhưng đẹp.", "emoji": "🛏️" },
-    { "id": "u2_03", "word": "kitchen", "phonetic": "/ˈkɪtʃɪn/", "wordType": "Danh từ", "meaning": "Nhà bếp", "hint": "Nơi nấu ăn", "exampleEn": "My mum is cooking in the kitchen.", "exampleVi": "Mẹ em đang nấu ăn trong bếp.", "emoji": "🍳" },
-    { "id": "u2_04", "word": "bathroom", "phonetic": "/ˈbɑːθruːm/", "wordType": "Danh từ", "meaning": "Phòng tắm", "hint": "Phòng để tắm rửa, đánh răng", "exampleEn": "The bathroom is next to my bedroom.", "exampleVi": "Phòng tắm ở bên cạnh phòng ngủ của em.", "emoji": "🛁" },
-    { "id": "u2_05", "word": "attic", "phonetic": "/ˈætɪk/", "wordType": "Danh từ", "meaning": "Gác mái", "hint": "Căn phòng ngay dưới mái nhà, thường phải leo thang lên", "exampleEn": "There are old toys in the attic.", "exampleVi": "Có đồ chơi cũ trên gác mái.", "emoji": "🪜" },
-    { "id": "u2_06", "word": "fridge", "phonetic": "/frɪdʒ/", "wordType": "Danh từ", "meaning": "Tủ lạnh", "hint": "Tủ giữ lạnh thức ăn, đồ uống", "exampleEn": "The milk is in the fridge.", "exampleVi": "Sữa ở trong tủ lạnh.", "emoji": "🧊" },
-    { "id": "u2_07", "word": "wardrobe", "phonetic": "/ˈwɔːdrəʊb/", "wordType": "Danh từ", "meaning": "Tủ quần áo", "hint": "Tủ cao để treo quần áo", "exampleEn": "My clothes are in the wardrobe.", "exampleVi": "Quần áo của em ở trong tủ quần áo.", "emoji": "👗" },
-    { "id": "u2_08", "word": "chest of drawers", "phonetic": "/ˌtʃest əv ˈdrɔːz/", "wordType": "Danh từ", "meaning": "Tủ ngăn kéo", "hint": "Tủ thấp có nhiều ngăn kéo", "exampleEn": "My socks are in the chest of drawers.", "exampleVi": "Tất của em ở trong tủ ngăn kéo.", "emoji": "🗄️" },
-    { "id": "u2_09", "word": "lamp", "phonetic": "/læmp/", "wordType": "Danh từ", "meaning": "Cái đèn", "hint": "Đồ dùng để chiếu sáng, hay để trên bàn học", "exampleEn": "There is a lamp on my desk.", "exampleVi": "Có một cái đèn trên bàn học của em.", "emoji": "💡" },
-    { "id": "u2_10", "word": "sofa", "phonetic": "/ˈsəʊfə/", "wordType": "Danh từ", "meaning": "Ghế sô-pha", "hint": "Ghế dài và êm, thường đặt ở phòng khách", "exampleEn": "The cat is sleeping on the sofa.", "exampleVi": "Con mèo đang ngủ trên ghế sô-pha.", "emoji": "🛋️" },
-    { "id": "u2_11", "word": "dishwasher", "phonetic": "/ˈdɪʃwɒʃə/", "wordType": "Danh từ", "meaning": "Máy rửa bát", "hint": "Máy tự động rửa bát đĩa", "exampleEn": "Please put the plates in the dishwasher.", "exampleVi": "Con cho đĩa vào máy rửa bát nhé.", "emoji": "🍽️" },
-    { "id": "u2_12", "word": "microwave", "phonetic": "/ˈmaɪkrəweɪv/", "wordType": "Danh từ", "meaning": "Lò vi sóng", "hint": "Máy hâm nóng thức ăn thật nhanh", "exampleEn": "Heat the rice in the microwave.", "exampleVi": "Hâm nóng cơm bằng lò vi sóng.", "emoji": "♨️" },
-    { "id": "u2_13", "word": "apartment", "phonetic": "/əˈpɑːtmənt/", "wordType": "Danh từ", "meaning": "Căn hộ", "hint": "Nhà ở trong một tòa nhà cao tầng", "exampleEn": "We live in an apartment in the city.", "exampleVi": "Nhà em sống trong một căn hộ ở thành phố.", "emoji": "🏢" },
-    { "id": "u2_14", "word": "country house", "phonetic": "/ˈkʌntri haʊs/", "wordType": "Danh từ", "meaning": "Nhà ở nông thôn", "hint": "Ngôi nhà ở vùng quê, thường có vườn", "exampleEn": "My grandparents live in a country house.", "exampleVi": "Ông bà em sống trong một ngôi nhà ở quê.", "emoji": "🏡" },
-    { "id": "u2_15", "word": "town house", "phonetic": "/ˈtaʊn haʊs/", "wordType": "Danh từ", "meaning": "Nhà phố", "hint": "Nhà nhiều tầng, xây sát nhau trong phố", "exampleEn": "Nam lives in a town house.", "exampleVi": "Nam sống trong một ngôi nhà phố.", "emoji": "🏘️" }
+    {
+      "id": "u2_01",
+      "word": "living room",
+      "phonetic": "/ˈlɪvɪŋ ruːm/",
+      "wordType": "Danh từ",
+      "meaning": "Phòng khách",
+      "hint": "Phòng cả nhà ngồi xem TV, tiếp khách",
+      "exampleEn": "We watch TV in the living room.",
+      "exampleVi": "Cả nhà em xem TV trong phòng khách.",
+      "emoji": "📺"
+    },
+    {
+      "id": "u2_02",
+      "word": "bedroom",
+      "phonetic": "/ˈbedruːm/",
+      "wordType": "Danh từ",
+      "meaning": "Phòng ngủ",
+      "hint": "Phòng có giường để ngủ",
+      "exampleEn": "My bedroom is small but nice.",
+      "exampleVi": "Phòng ngủ của em nhỏ nhưng đẹp.",
+      "emoji": "🛏️"
+    },
+    {
+      "id": "u2_03",
+      "word": "kitchen",
+      "phonetic": "/ˈkɪtʃɪn/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà bếp",
+      "hint": "Nơi nấu ăn",
+      "exampleEn": "My mum is cooking in the kitchen.",
+      "exampleVi": "Mẹ em đang nấu ăn trong bếp.",
+      "emoji": "🍳"
+    },
+    {
+      "id": "u2_04",
+      "word": "bathroom",
+      "phonetic": "/ˈbɑːθruːm/",
+      "wordType": "Danh từ",
+      "meaning": "Phòng tắm",
+      "hint": "Phòng để tắm rửa, đánh răng",
+      "exampleEn": "The bathroom is next to my bedroom.",
+      "exampleVi": "Phòng tắm ở bên cạnh phòng ngủ của em.",
+      "emoji": "🛁"
+    },
+    {
+      "id": "u2_05",
+      "word": "attic",
+      "phonetic": "/ˈætɪk/",
+      "wordType": "Danh từ",
+      "meaning": "Gác mái",
+      "hint": "Căn phòng ngay dưới mái nhà, thường phải leo thang lên",
+      "exampleEn": "There are old toys in the attic.",
+      "exampleVi": "Có đồ chơi cũ trên gác mái.",
+      "emoji": "🪜"
+    },
+    {
+      "id": "u2_06",
+      "word": "fridge",
+      "phonetic": "/frɪdʒ/",
+      "wordType": "Danh từ",
+      "meaning": "Tủ lạnh",
+      "hint": "Tủ giữ lạnh thức ăn, đồ uống",
+      "exampleEn": "The milk is in the fridge.",
+      "exampleVi": "Sữa ở trong tủ lạnh.",
+      "emoji": "🧊",
+      "model3d": "/assets/models/unit2/fridge.glb"
+    },
+    {
+      "id": "u2_07",
+      "word": "wardrobe",
+      "phonetic": "/ˈwɔːdrəʊb/",
+      "wordType": "Danh từ",
+      "meaning": "Tủ quần áo",
+      "hint": "Tủ cao để treo quần áo",
+      "exampleEn": "My clothes are in the wardrobe.",
+      "exampleVi": "Quần áo của em ở trong tủ quần áo.",
+      "emoji": "👗",
+      "model3d": "/assets/models/unit2/wardrobe.glb"
+    },
+    {
+      "id": "u2_08",
+      "word": "chest of drawers",
+      "phonetic": "/ˌtʃest əv ˈdrɔːz/",
+      "wordType": "Danh từ",
+      "meaning": "Tủ ngăn kéo",
+      "hint": "Tủ thấp có nhiều ngăn kéo",
+      "exampleEn": "My socks are in the chest of drawers.",
+      "exampleVi": "Tất của em ở trong tủ ngăn kéo.",
+      "emoji": "🗄️",
+      "model3d": "/assets/models/unit2/chest-of-drawers.glb"
+    },
+    {
+      "id": "u2_09",
+      "word": "lamp",
+      "phonetic": "/læmp/",
+      "wordType": "Danh từ",
+      "meaning": "Cái đèn",
+      "hint": "Đồ dùng để chiếu sáng, hay để trên bàn học",
+      "exampleEn": "There is a lamp on my desk.",
+      "exampleVi": "Có một cái đèn trên bàn học của em.",
+      "emoji": "💡",
+      "model3d": "/assets/models/unit2/lamp.glb"
+    },
+    {
+      "id": "u2_10",
+      "word": "sofa",
+      "phonetic": "/ˈsəʊfə/",
+      "wordType": "Danh từ",
+      "meaning": "Ghế sô-pha",
+      "hint": "Ghế dài và êm, thường đặt ở phòng khách",
+      "exampleEn": "The cat is sleeping on the sofa.",
+      "exampleVi": "Con mèo đang ngủ trên ghế sô-pha.",
+      "emoji": "🛋️",
+      "model3d": "/assets/models/unit2/sofa.glb"
+    },
+    {
+      "id": "u2_11",
+      "word": "dishwasher",
+      "phonetic": "/ˈdɪʃwɒʃə/",
+      "wordType": "Danh từ",
+      "meaning": "Máy rửa bát",
+      "hint": "Máy tự động rửa bát đĩa",
+      "exampleEn": "Please put the plates in the dishwasher.",
+      "exampleVi": "Con cho đĩa vào máy rửa bát nhé.",
+      "emoji": "🍽️",
+      "model3d": "/assets/models/unit2/dishwasher.glb"
+    },
+    {
+      "id": "u2_12",
+      "word": "microwave",
+      "phonetic": "/ˈmaɪkrəweɪv/",
+      "wordType": "Danh từ",
+      "meaning": "Lò vi sóng",
+      "hint": "Máy hâm nóng thức ăn thật nhanh",
+      "exampleEn": "Heat the rice in the microwave.",
+      "exampleVi": "Hâm nóng cơm bằng lò vi sóng.",
+      "emoji": "♨️",
+      "model3d": "/assets/models/unit2/microwave.glb"
+    },
+    {
+      "id": "u2_13",
+      "word": "apartment",
+      "phonetic": "/əˈpɑːtmənt/",
+      "wordType": "Danh từ",
+      "meaning": "Căn hộ",
+      "hint": "Nhà ở trong một tòa nhà cao tầng",
+      "exampleEn": "We live in an apartment in the city.",
+      "exampleVi": "Nhà em sống trong một căn hộ ở thành phố.",
+      "emoji": "🏢",
+      "model3d": "/assets/models/unit2/apartment.glb"
+    },
+    {
+      "id": "u2_14",
+      "word": "country house",
+      "phonetic": "/ˈkʌntri haʊs/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà ở nông thôn",
+      "hint": "Ngôi nhà ở vùng quê, thường có vườn",
+      "exampleEn": "My grandparents live in a country house.",
+      "exampleVi": "Ông bà em sống trong một ngôi nhà ở quê.",
+      "emoji": "🏡",
+      "model3d": "/assets/models/unit2/country-house.glb"
+    },
+    {
+      "id": "u2_15",
+      "word": "town house",
+      "phonetic": "/ˈtaʊn haʊs/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà phố",
+      "hint": "Nhà nhiều tầng, xây sát nhau trong phố",
+      "exampleEn": "Nam lives in a town house.",
+      "exampleVi": "Nam sống trong một ngôi nhà phố.",
+      "emoji": "🏘️",
+      "model3d": "/assets/models/unit2/town-house.glb"
+    }
   ],
-  "extraQuestions": []
+  "extraQuestions": [],
+  "scenes": [
+    {
+      "id": "rooms",
+      "titleVi": "Đồ đạc trong nhà",
+      "titleEn": "Things in my house",
+      "emoji": "🛋️",
+      "bg": "#E3F0FF",
+      "floor": "#C4DCF7",
+      "objects": [
+        "u2_06",
+        "u2_07",
+        "u2_08",
+        "u2_09",
+        "u2_10",
+        "u2_11",
+        "u2_12"
+      ],
+      "speakingPatterns": [
+        {
+          "en": "There is a {0} in my house.",
+          "vi": "Nhà em có {0}."
+        },
+        {
+          "en": "Is there a {0} in your house?",
+          "vi": "Nhà bạn có {0} không?"
+        },
+        {
+          "en": "There is a {0} and a {1} in my house.",
+          "vi": "Nhà em có {0} và {1}."
+        }
+      ],
+      "challenges": [
+        {
+          "id": "kitchen",
+          "icon": "🍳",
+          "promptVi": "Những đồ nào thường ở trong nhà bếp?",
+          "promptEn": "What is in the kitchen?",
+          "required": [
+            "u2_06",
+            "u2_11",
+            "u2_12"
+          ],
+          "allowed": []
+        },
+        {
+          "id": "bedroom",
+          "icon": "🛏️",
+          "promptVi": "Những đồ nào thường ở trong phòng ngủ của em?",
+          "promptEn": "What is in your bedroom?",
+          "required": [
+            "u2_07",
+            "u2_08",
+            "u2_09"
+          ],
+          "allowed": []
+        },
+        {
+          "id": "living",
+          "icon": "📺",
+          "promptVi": "Phòng khách nhà em có ghế để ngồi xem TV và đèn cho sáng. Đó là gì?",
+          "promptEn": "What is in the living room?",
+          "required": [
+            "u2_10",
+            "u2_09"
+          ],
+          "allowed": []
+        },
+        {
+          "id": "clothes",
+          "icon": "🧦",
+          "promptVi": "Em cất quần áo và tất vào đâu?",
+          "promptEn": "Where do you keep your clothes and socks?",
+          "required": [
+            "u2_07",
+            "u2_08"
+          ],
+          "allowed": []
+        }
+      ]
+    },
+    {
+      "id": "houses",
+      "titleVi": "Các kiểu nhà",
+      "titleEn": "Types of houses",
+      "emoji": "🏘️",
+      "bg": "#FFE4D6",
+      "floor": "#FBC7AE",
+      "objects": [
+        "u2_13",
+        "u2_14",
+        "u2_15"
+      ],
+      "speakingPatterns": [
+        {
+          "en": "I live in a {0}.",
+          "vi": "Em sống trong {0}."
+        },
+        {
+          "en": "My grandparents live in a {0}.",
+          "vi": "Ông bà em sống trong {0}."
+        },
+        {
+          "en": "Do you live in a {0}?",
+          "vi": "Bạn có sống trong {0} không?"
+        }
+      ],
+      "challenges": [
+        {
+          "id": "city",
+          "icon": "🌆",
+          "promptVi": "Ở thành phố đông đúc, nhà xây cao và sát nhau. Gia đình em có thể sống ở kiểu nhà nào?",
+          "promptEn": "Where can you live in the city?",
+          "required": [
+            "u2_13",
+            "u2_15"
+          ],
+          "allowed": []
+        },
+        {
+          "id": "village",
+          "icon": "🌾",
+          "promptVi": "Ông bà sống ở quê, nhà có vườn rộng. Đó là kiểu nhà nào?",
+          "promptEn": "Where do your grandparents live?",
+          "required": [
+            "u2_14"
+          ],
+          "allowed": []
+        }
+      ]
+    }
+  ]
 }
