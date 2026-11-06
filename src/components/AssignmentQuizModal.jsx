@@ -368,3 +368,4 @@ export default function AssignmentQuizModal({ assignment, isOpen, onClose, onCom
     </div>
   );
 }
+

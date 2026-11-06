@@ -12,16 +12,18 @@ export default function VocabCard({ word, status, compact = false, onInspect }) 
   return (
     <article className="print-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 rounded-3xl bg-white p-4 sm:p-5 shadow-[0_4px_0_#efe3cc] border border-[#f0e7d5] transition-all hover:shadow-[0_6px_0_#efe3cc]">
       <div className="flex items-center gap-4 min-w-0 flex-1">
-        <button
-          type="button"
-          onClick={() => onInspect?.(word)}
-          className={`flex h-16 w-16 sm:h-20 sm:w-20 shrink-0 items-center justify-center rounded-2xl bg-cream cursor-pointer transition-transform hover:scale-105 active:scale-95 ${
-            word.model3d ? 'ring-3 ring-banana ring-offset-2' : ''
-          }`}
-          title={word.model3d ? 'Bấm để xoay mô hình 3D 360°' : 'Xem chi tiết từ vựng'}
-        >
-          <WordImage word={word} size={compact ? 'sm' : 'md'} className="shrink-0" />
-        </button>
+        {(word.image || word.emoji || word.model3d) && (
+          <button
+            type="button"
+            onClick={() => onInspect?.(word)}
+            className={`flex h-16 w-16 sm:h-20 sm:w-20 shrink-0 items-center justify-center rounded-2xl bg-cream cursor-pointer transition-transform hover:scale-105 active:scale-95 ${
+              word.model3d ? 'ring-3 ring-banana ring-offset-2' : ''
+            }`}
+            title={word.model3d ? 'Bấm để xoay mô hình 3D 360°' : 'Xem chi tiết từ vựng'}
+          >
+            <WordImage word={word} size={compact ? 'sm' : 'md'} className="shrink-0" />
+          </button>
+        )}
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-2.5">

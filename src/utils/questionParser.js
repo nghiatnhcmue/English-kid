@@ -167,3 +167,4 @@ function parseSingleBlock(block) {
     explain: explain || 'Áp dụng kiến thức ngữ pháp và từ vựng bài học.',
   };
 }
+

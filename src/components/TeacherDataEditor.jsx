@@ -88,7 +88,6 @@ export default function TeacherDataEditor() {
 
   // ---- TỪ VỰNG ----
   const handleOpenAddWord = () => {
-    const nextNum = (currentUnit?.vocabularies?.length || 0) + 1;
     setWordForm({
       id: `u${selectedUnitId}_custom_${Date.now().toString().slice(-4)}`,
       word: '',
@@ -98,7 +97,8 @@ export default function TeacherDataEditor() {
       hint: '',
       exampleEn: '',
       exampleVi: '',
-      emoji: '📝',
+      image: '',
+      emoji: '',
       audio: '',
     });
     setEditingWord(null);
@@ -107,8 +107,51 @@ export default function TeacherDataEditor() {
 
   const handleEditWord = (w) => {
     setEditingWord(w);
-    setWordForm({ ...w });
+    setWordForm({
+      ...w,
+      image: w.image || '',
+      emoji: w.emoji || '',
+    });
     setShowAddWordModal(true);
+  };
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const img = new globalThis.Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        const maxDim = 400;
+        let width = img.width;
+        let height = img.height;
+
+        if (width > maxDim || height > maxDim) {
+          if (width > height) {
+            height = Math.round((height * maxDim) / width);
+            width = maxDim;
+          } else {
+            width = Math.round((width * maxDim) / height);
+            height = maxDim;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, width, height);
+        const compressed = canvas.toDataURL('image/webp', 0.85);
+        setWordForm((prev) => ({
+          ...prev,
+          image: compressed,
+          emoji: '',
+        }));
+      };
+      img.src = event.target?.result;
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleSaveWord = (e) => {
@@ -128,6 +171,8 @@ export default function TeacherDataEditor() {
           : `/${wordForm.phonetic.trim()}/`
         : `/${wordForm.word.trim().toLowerCase()}/`,
       meaning: wordForm.meaning.trim(),
+      image: wordForm.image?.trim() || '',
+      emoji: wordForm.emoji?.trim() || '',
       exampleEn: wordForm.exampleEn.trim() || `${wordForm.word.trim()} is very interesting.`,
       exampleVi: wordForm.exampleVi.trim() || `${wordForm.meaning.trim()} rất thú vị.`,
       audio: wordForm.audio.trim() || getCloudTtsUrl(wordForm.word.trim(), 'en-GB'),
@@ -404,8 +449,18 @@ export default function TeacherDataEditor() {
               >
                 <div>
                   <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">{v.emoji || '📝'}</span>
+                    <div className="flex items-center gap-2.5">
+                      {v.image ? (
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1 border border-banana-soft shadow-xs">
+                          <img
+                            src={v.image}
+                            alt={v.word}
+                            className="h-full w-full object-contain rounded-lg"
+                          />
+                        </div>
+                      ) : v.emoji ? (
+                        <span className="text-2xl">{v.emoji}</span>
+                      ) : null}
                       <div>
                         <h4 className="text-lg font-black text-ink">{v.word}</h4>
                         <span className="text-xs font-bold text-peach-dark">{v.phonetic}</span>
@@ -773,30 +828,85 @@ export default function TeacherDataEditor() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-xs font-black text-ink mb-1">Loại từ:</label>
-                  <select
-                    value={wordForm.wordType}
-                    onChange={(e) => setWordForm({ ...wordForm, wordType: e.target.value })}
-                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
-                  >
-                    <option value="Danh từ">Danh từ (Noun)</option>
-                    <option value="Động từ">Động từ (Verb)</option>
-                    <option value="Tính từ">Tính từ (Adjective)</option>
-                    <option value="Trạng từ">Trạng từ (Adverb)</option>
-                    <option value="Cụm từ">Cụm từ (Phrase)</option>
-                  </select>
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Loại từ:</label>
+                <select
+                  value={wordForm.wordType}
+                  onChange={(e) => setWordForm({ ...wordForm, wordType: e.target.value })}
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
+                >
+                  <option value="Danh từ">Danh từ (Noun)</option>
+                  <option value="Động từ">Động từ (Verb)</option>
+                  <option value="Tính từ">Tính từ (Adjective)</option>
+                  <option value="Trạng từ">Trạng từ (Adverb)</option>
+                  <option value="Cụm từ">Cụm từ (Phrase)</option>
+                </select>
+              </div>
+
+              {/* KHU VỰC TẢI ẢNH MINH HỌA (HOẶC ĐỂ TRỐNG NẾU KHÔNG CÓ) */}
+              <div className="rounded-2xl bg-cream/70 p-3.5 border-2 border-banana-soft flex flex-col gap-2.5">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <label className="block text-xs font-black text-ink">
+                      🖼️ Ảnh minh họa từ vựng:
+                    </label>
+                    <p className="text-[11px] font-bold text-ink-soft">
+                      (Không bắt buộc - Nếu không tải ảnh thì từ này sẽ để trống ảnh, không cần biểu tượng)
+                    </p>
+                  </div>
+                  {wordForm.image && (
+                    <button
+                      type="button"
+                      onClick={() => setWordForm({ ...wordForm, image: '', emoji: '' })}
+                      className="text-[11px] font-black text-peach-dark hover:underline cursor-pointer"
+                    >
+                      ✕ Xóa ảnh (để trống)
+                    </button>
+                  )}
                 </div>
-                <div>
-                  <label className="block text-xs font-black text-ink mb-1">Biểu tượng (Emoji):</label>
-                  <input
-                    type="text"
-                    value={wordForm.emoji}
-                    onChange={(e) => setWordForm({ ...wordForm, emoji: e.target.value })}
-                    placeholder="Ví dụ: 🔭"
-                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
-                  />
+
+                <div className="flex flex-col sm:flex-row items-center gap-3">
+                  {/* Xem trước ảnh */}
+                  {wordForm.image ? (
+                    <div className="relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white p-1 border-2 border-banana shadow-sm">
+                      <img
+                        src={wordForm.image}
+                        alt="Xem trước"
+                        className="h-full w-full object-contain rounded-xl"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-white/70 border-2 border-dashed border-banana-soft text-ink-soft/60 text-center p-1">
+                      <span className="text-xl">🖼️</span>
+                      <span className="text-[10px] font-bold">Để trống ảnh</span>
+                    </div>
+                  )}
+
+                  <div className="flex-1 w-full space-y-2">
+                    {/* Nút tải ảnh từ máy tính */}
+                    <label className="inline-flex items-center justify-center gap-2 rounded-xl bg-banana px-4 py-2 text-xs font-black text-ink shadow-[0_2px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer">
+                      <Upload className="h-3.5 w-3.5" />
+                      <span>📁 Tải ảnh từ máy tính / điện thoại</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                        className="hidden"
+                      />
+                    </label>
+
+                    {/* Hoặc dán link ảnh */}
+                    <input
+                      type="text"
+                      value={wordForm.image?.startsWith('data:') ? '(Ảnh đã tải từ máy tính)' : (wordForm.image || '')}
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        setWordForm({ ...wordForm, image: val, emoji: '' });
+                      }}
+                      placeholder="Hoặc dán đường link ảnh mạng (https://...)"
+                      className="w-full rounded-xl bg-white px-3 py-1.5 text-xs font-bold border border-banana-soft placeholder:text-ink-soft/50"
+                    />
+                  </div>
                 </div>
               </div>
 

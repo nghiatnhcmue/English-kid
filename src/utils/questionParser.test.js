@@ -77,3 +77,4 @@ A. good*  B. well  C. badly  D. better
     expect(parseBatchQuestions('Just some random text without options')).toEqual([]);
   });
 });
+

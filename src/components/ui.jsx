@@ -172,13 +172,16 @@ export function WordImage({ word, size = 'lg', className = '' }) {
       />
     );
   }
+  if (!word?.emoji) {
+    return null;
+  }
   return (
     <span
       role="img"
       aria-label={word?.word || 'hình'}
       className={`inline-flex items-center justify-center leading-none select-none drop-shadow-sm ${px} ${className}`}
     >
-      {word?.emoji ?? '❓'}
+      {word.emoji}
     </span>
   );
 }

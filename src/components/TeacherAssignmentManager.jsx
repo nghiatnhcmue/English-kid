@@ -806,7 +806,16 @@ export default function TeacherAssignmentManager() {
                               onChange={() => handleToggleWord(v.id)}
                               className="rounded accent-mint"
                             />
-                            <span>{v.emoji} {v.word}</span>
+                            {v.image ? (
+                              <img
+                                src={v.image}
+                                alt={v.word}
+                                className="h-5 w-5 shrink-0 object-contain rounded-sm"
+                              />
+                            ) : v.emoji ? (
+                              <span>{v.emoji}</span>
+                            ) : null}
+                            <span>{v.word}</span>
                           </label>
                         );
                       })}
