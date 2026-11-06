@@ -134,8 +134,18 @@ export async function speak(text, { lang = 'en-GB', rate = 0.85, audio = null } 
     }
   }
 
-  // 3. Với câu văn dài, đoạn văn hoặc khi không có file âm thanh:
-  // Dùng trực tiếp Web Speech API tích hợp của trình duyệt (tránh gọi URL bị CORS chặn)
+  // 2b. Thử phát Google TTS trực tuyến chuẩn giọng bản xứ UK/US
+  try {
+    const isUS = (lang || '').toLowerCase().includes('us');
+    const googleTtsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${isUS ? 'en-US' : 'en-GB'}&client=tw-ob&q=${encodeURIComponent(clean)}`;
+    const ok = await playAudioFile(googleTtsUrl, rate);
+    if (ok) return true;
+  } catch {
+    /* bỏ qua sang Web Speech API */
+  }
+
+  // 3. Với câu văn dài hoặc khi ngoại tuyến hoàn toàn:
+  // Dùng trực tiếp Web Speech API tích hợp của trình duyệt
   if (isTtsSupported()) {
     try {
       if (synth.paused) synth.resume();
