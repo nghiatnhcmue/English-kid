@@ -41,6 +41,10 @@ export const t = {
     listening: { name: 'Nghe chọn hình', desc: 'Nghe máy đọc từ rồi chọn đúng bức hình', icon: '👂', step: 2 },
     matching: { name: 'Nối từ & nghĩa', desc: 'Nối từ tiếng Anh với hình vẽ hoặc nghĩa', icon: '🔗', step: 3 },
     spelling: { name: 'Thử tài điền chữ', desc: 'Điền các chữ cái còn thiếu để nhớ cách viết', icon: '🔤', step: 4 },
+    grammar: { name: 'Ngữ pháp cốt lõi', desc: 'Công thức tinh gọn, mẹo nhận biết và bài tập củng cố', icon: '📐', step: 2 },
+    shadowing: { name: 'Luyện Nghe & Nói', desc: 'Nghe đối thoại học đường và thu âm nhại lại giọng chuẩn', icon: '🎙️', step: 3 },
+    reading: { name: 'Đọc hiểu trực quan', desc: 'Đoạn văn ngắn có hình ảnh và câu hỏi trắc nghiệm', icon: '📖', step: 4 },
+    writing: { name: 'Viết câu sắp xếp', desc: 'Xếp các khối từ xáo trộn thành câu hoàn chỉnh', icon: '✍️', step: 5 },
   },
   unit: {
     practice: '4 bước ôn tập từ vựng',

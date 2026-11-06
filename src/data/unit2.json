@@ -217,6 +217,64 @@
     }
   ],
   "extraQuestions": [],
+  "grammar": {
+    "title": "Giới từ chỉ nơi chốn (Prepositions of Place)",
+    "ruleVi": "Dùng để miêu tả vị trí của các đồ vật và phòng ốc trong ngôi nhà.",
+    "formula": "There is / There are + [vật] + [in, on, behind, under, next to, between] + [nơi chốn]",
+    "quickTip": "'in' là ở trong, 'on' là ở trên bề mặt, 'under' là ở dưới, 'next to' là ở ngay bên cạnh.",
+    "quiz": [
+      {
+        "question": "The cat is sleeping ______ the sofa.",
+        "options": ["on", "in", "between"],
+        "answerIndex": 0,
+        "explain": "Con mèo đang ngủ trên bề mặt ghế sô-pha, dùng giới từ 'on'."
+      },
+      {
+        "question": "There is a microwave ______ the kitchen.",
+        "options": ["at", "on", "in"],
+        "answerIndex": 2,
+        "explain": "Ở bên trong phòng bếp, dùng giới từ 'in'."
+      },
+      {
+        "question": "The bathroom is ______ to my bedroom.",
+        "options": ["next", "under", "behind"],
+        "answerIndex": 0,
+        "explain": "Cụm 'next to' có nghĩa là ở ngay bên cạnh."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Welcome to my home. There is a living room, a kitchen and two bedrooms.",
+    "question": "Ngôi nhà có bao nhiêu phòng ngủ?",
+    "options": ["Một phòng", "Hai phòng", "Ba phòng"],
+    "answerIndex": 1
+  },
+  "speaking": {
+    "targetSentence": "There is a sofa in the living room.",
+    "phonetic": "/ðeər ɪz ə ˈsəʊfə ɪn ðə ˈlɪvɪŋ ruːm/",
+    "meaningVi": "Có một chiếc ghế sô-pha trong phòng khách."
+  },
+  "reading": {
+    "passage": "Nam lives in a town house in the city. His house is tall with three floors. His bedroom is on the second floor with a cozy balcony.",
+    "questions": [
+      {
+        "question": "Nam sống ở kiểu nhà nào?",
+        "options": ["Nhà ở quê", "Căn hộ chung cư", "Nhà phố trong thành phố"],
+        "answerIndex": 2
+      },
+      {
+        "question": "Phòng ngủ của Nam nằm ở tầng mấy?",
+        "options": ["Tầng 1", "Tầng 2", "Tầng 3"],
+        "answerIndex": 1
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": ["The", "fridge", "is", "in", "the", "kitchen"],
+    "correctSentence": "The fridge is in the kitchen",
+    "meaningVi": "Chiếc tủ lạnh ở trong phòng bếp."
+  },
   "scenes": [
     {
       "id": "rooms",

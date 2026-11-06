@@ -8,6 +8,10 @@ import Flashcard3D from '../components/Flashcard3D.jsx';
 import MatchingGame from '../components/MatchingGame.jsx';
 import SpellingQuiz from '../components/SpellingQuiz.jsx';
 import ListeningQuiz from '../components/ListeningQuiz.jsx';
+import GrammarStation from '../components/stations/GrammarStation.jsx';
+import ShadowingStation from '../components/stations/ShadowingStation.jsx';
+import ReadingStation from '../components/stations/ReadingStation.jsx';
+import WritingStation from '../components/stations/WritingStation.jsx';
 import { MODES } from './UnitPage.jsx';
 import { t } from '../i18n/vi.js';
 
@@ -16,6 +20,10 @@ const COMPONENTS = {
   listening: ListeningQuiz,
   matching: MatchingGame,
   spelling: SpellingQuiz,
+  grammar: GrammarStation,
+  shadowing: ShadowingStation,
+  reading: ReadingStation,
+  writing: WritingStation,
 };
 
 /** Chạy 1 chế độ ôn cho 1 Unit, hoặc cho danh sách "Từ khó" (review). */
@@ -102,7 +110,7 @@ export default function PracticePage({ review = false }) {
           }}
         />
       ) : (
-        <Mode key={`${mode}-${round}`} words={words} pool={pool} onFinish={finish} />
+        <Mode key={`${mode}-${round}`} words={words} pool={pool} unit={unit} onFinish={finish} />
       )}
     </div>
   );

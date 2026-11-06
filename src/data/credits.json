@@ -27,13 +27,13 @@
     "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
   },
   {
-    "file": "/assets/models/unit1/calculator.glb",
+    "file": "/assets/images/unit1/calculator.svg",
     "wordId": "u1_05",
-    "title": "Calculator",
-    "author": "Poly by Google",
-    "license": "CC-BY 3.0",
-    "source": "https://poly.pizza/m/0yU6BDQRVYw",
-    "modified": "Tối ưu kích thước (texture 512px webp, quantize) bằng glTF-Transform"
+    "title": "Modern Scientific Calculator Vector",
+    "author": "English-Kid Team",
+    "license": "MIT",
+    "source": "Local SVG Vector Asset",
+    "modified": "Designed modern handheld electronic Casio calculator with LCD display and keypad"
   },
   {
     "file": "/assets/models/unit1/ruler.glb",

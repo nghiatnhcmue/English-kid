@@ -134,6 +134,109 @@ export default function UnitPage() {
         </div>
       </section>
 
+      {/* Lộ trình 5 trạm học tập toàn diện 4 kỹ năng & Ngữ pháp */}
+      <section aria-label="Lộ trình 5 trạm học tập toàn diện" className="flex flex-col gap-3">
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl" aria-hidden>🚉</span>
+            <h2 className="text-2xl font-black text-ink">Lộ trình học toàn diện 4 Kỹ năng</h2>
+          </div>
+          <p className="text-sm sm:text-base font-bold text-ink-soft">
+            Chu trình 5 trạm tiếp thu tự nhiên: Từ vựng & 3D ➔ Ngữ pháp ➔ Nghe & Nói ➔ Đọc ➔ Viết
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          {/* Trạm 2: Ngữ pháp cốt lõi */}
+          <Button3D
+            tone="banana"
+            to={`/unit/${unit.unitId}/grammar`}
+            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+          >
+            <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
+              Trạm 2 · Ngữ pháp cốt lõi
+            </span>
+            <div className="flex items-center gap-3 mt-1">
+              <span className="text-3xl shrink-0" aria-hidden>📐</span>
+              <div>
+                <h3 className="text-lg font-black leading-tight text-ink">
+                  {unit.grammar?.title || 'Quy tắc ngữ pháp trọng tâm'}
+                </h3>
+                <p className="text-xs sm:text-sm font-bold opacity-85 mt-0.5">
+                  Công thức cốt lõi, mẹo nhận biết & bài tập củng cố
+                </p>
+              </div>
+            </div>
+          </Button3D>
+
+          {/* Trạm 3: Nghe & Nói */}
+          <Button3D
+            tone="peach"
+            to={`/unit/${unit.unitId}/shadowing`}
+            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+          >
+            <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">
+              Trạm 3 · Nghe & Nói (Shadowing)
+            </span>
+            <div className="flex items-center gap-3 mt-1">
+              <span className="text-3xl shrink-0" aria-hidden>🎙️</span>
+              <div>
+                <h3 className="text-lg font-black leading-tight text-white">
+                  Luyện Nghe & Nhại giọng nói
+                </h3>
+                <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
+                  Nghe đối thoại học đường & thu âm so sánh giọng mình
+                </p>
+              </div>
+            </div>
+          </Button3D>
+
+          {/* Trạm 4: Đọc hiểu trực quan */}
+          <Button3D
+            tone="sky"
+            to={`/unit/${unit.unitId}/reading`}
+            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+          >
+            <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
+              Trạm 4 · Đọc hiểu trực quan
+            </span>
+            <div className="flex items-center gap-3 mt-1">
+              <span className="text-3xl shrink-0" aria-hidden>📖</span>
+              <div>
+                <h3 className="text-lg font-black leading-tight text-ink">
+                  Đọc hiểu đoạn văn A1
+                </h3>
+                <p className="text-xs sm:text-sm font-bold opacity-85 mt-0.5">
+                  Đoạn văn ngắn 3-4 câu kèm loa đọc và câu hỏi trắc nghiệm
+                </p>
+              </div>
+            </div>
+          </Button3D>
+
+          {/* Trạm 5: Viết câu có gợi ý */}
+          <Button3D
+            tone="mint"
+            to={`/unit/${unit.unitId}/writing`}
+            className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left"
+          >
+            <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-white">
+              Trạm 5 · Viết câu có gợi ý
+            </span>
+            <div className="flex items-center gap-3 mt-1">
+              <span className="text-3xl shrink-0" aria-hidden>✍️</span>
+              <div>
+                <h3 className="text-lg font-black leading-tight text-white">
+                  Sắp xếp khối từ thành câu
+                </h3>
+                <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
+                  Chạm xếp các khối từ thành câu đúng ngữ pháp
+                </p>
+              </div>
+            </div>
+          </Button3D>
+        </div>
+      </section>
+
       {/* Danh sách từ vựng trong bài + Ô tìm kiếm từ */}
       <section aria-label={t.unit.vocabList} className="flex flex-col gap-3">
         <div className="flex flex-wrap items-center justify-between gap-3">

@@ -228,6 +228,64 @@
     }
   ],
   "extraQuestions": [],
+  "grammar": {
+    "title": "Thì Hiện tại đơn (Present Simple)",
+    "ruleVi": "Dùng để nói về thói quen hàng ngày và các sự thật hiển nhiên ở trường học.",
+    "formula": "S + V(s/es) / S + don't/doesn't + V",
+    "quickTip": "Đi với He/She/It hoặc tên một người thì động từ thêm -s hoặc -es.",
+    "quiz": [
+      {
+        "question": "Nam ______ his school uniform every Monday.",
+        "options": ["wear", "wears", "wearing"],
+        "answerIndex": 1,
+        "explain": "Nam là ngôi thứ ba số ít (he), động từ wear thêm -s thành wears."
+      },
+      {
+        "question": "I ______ my maths homework after dinner.",
+        "options": ["do", "does", "doing"],
+        "answerIndex": 0,
+        "explain": "Chủ ngữ là 'I', động từ nguyên mẫu là 'do'."
+      },
+      {
+        "question": "They ______ football in the school yard.",
+        "options": ["plays", "play", "playing"],
+        "answerIndex": 1,
+        "explain": "Chủ ngữ 'They' số nhiều, dùng động từ nguyên mẫu 'play'."
+      }
+    ]
+  },
+  "listening": {
+    "transcript": "Hello, my name is Phong. I have a new school bag and a calculator.",
+    "question": "Phong có những đồ dùng học tập gì mới?",
+    "options": ["Cặp sách và máy tính", "Hộp bút và thước kẻ", "Bộ đồng phục"],
+    "answerIndex": 0
+  },
+  "speaking": {
+    "targetSentence": "I love my new school.",
+    "phonetic": "/aɪ lʌv maɪ njuː skuːl/",
+    "meaningVi": "Em yêu ngôi trường mới của mình."
+  },
+  "reading": {
+    "passage": "My name is Mai. I go to a boarding school in Da Nang. My school has a big library and a computer room. I like studying maths and art.",
+    "questions": [
+      {
+        "question": "Trường nội trú của Mai ở đâu?",
+        "options": ["Hà Nội", "Đà Nẵng", "TP. Hồ Chí Minh"],
+        "answerIndex": 1
+      },
+      {
+        "question": "Trường của Mai có những phòng chức năng nào?",
+        "options": ["Thư viện lớn và phòng máy tính", "Hồ bơi và sân bóng", "Vườn hoa và rạp hát"],
+        "answerIndex": 0
+      }
+    ]
+  },
+  "writing": {
+    "type": "unscramble",
+    "scrambledWords": ["This", "is", "my", "new", "calculator"],
+    "correctSentence": "This is my new calculator",
+    "meaningVi": "Đây là chiếc máy tính cầm tay mới của mình."
+  },
   "scenes": [
     {
       "id": "desk",
