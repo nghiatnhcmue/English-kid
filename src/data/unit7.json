@@ -237,5 +237,123 @@
     "reflectionQuestion": "Kênh truyền hình nào chuyên dành cho học sinh Việt Nam?"
   },
   "bookVolume": 2,
-  "bookPages": "Trang 6 – 15"
+  "bookPages": "Trang 6 – 15",
+  "pronunciation": {
+    "pair": "/θ/ & /ð/",
+    "title": "Phân biệt cặp âm th kẹp lưỡi: /θ/ (Thổi gió) & /ð/ (Rung thanh)",
+    "sound1": {
+      "symbol": "/θ/",
+      "name": "Âm /θ/ (Vô thanh)",
+      "guideVi": "Đặt nhẹ đầu lưỡi kẹp giữa hai hàm răng, đẩy luồng hơi nhẹ qua khe lưỡi (không rung cổ họng).",
+      "words": [
+        {
+          "word": "theatre",
+          "highlight": "th",
+          "meaning": "nhà hát"
+        },
+        {
+          "word": "thank",
+          "highlight": "th",
+          "meaning": "cảm ơn"
+        },
+        {
+          "word": "through",
+          "highlight": "th",
+          "meaning": "xuyên qua"
+        },
+        {
+          "word": "think",
+          "highlight": "th",
+          "meaning": "suy nghĩ"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/ð/",
+      "name": "Âm /ð/ (Hữu thanh)",
+      "guideVi": "Khẩu hình đặt lưỡi kẹp giữa hai răng giống /θ/ nhưng làm rung dây thanh quản (nghe như âm \"dờ\").",
+      "words": [
+        {
+          "word": "there",
+          "highlight": "th",
+          "meaning": "ở đằng kia"
+        },
+        {
+          "word": "weather",
+          "highlight": "th",
+          "meaning": "thời tiết"
+        },
+        {
+          "word": "together",
+          "highlight": "th",
+          "meaning": "cùng nhau"
+        },
+        {
+          "word": "brother",
+          "highlight": "th",
+          "meaning": "anh em trai"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "theatre",
+        "meaning": "nhà hát",
+        "correctSound": "/θ/",
+        "options": [
+          "/θ/",
+          "/ð/"
+        ]
+      },
+      {
+        "word": "weather",
+        "meaning": "thời tiết",
+        "correctSound": "/ð/",
+        "options": [
+          "/θ/",
+          "/ð/"
+        ]
+      },
+      {
+        "word": "thank",
+        "meaning": "cảm ơn",
+        "correctSound": "/θ/",
+        "options": [
+          "/θ/",
+          "/ð/"
+        ]
+      },
+      {
+        "word": "together",
+        "meaning": "cùng nhau",
+        "correctSound": "/ð/",
+        "options": [
+          "/θ/",
+          "/ð/"
+        ]
+      },
+      {
+        "word": "think",
+        "meaning": "suy nghĩ",
+        "correctSound": "/θ/",
+        "options": [
+          "/θ/",
+          "/ð/"
+        ]
+      },
+      {
+        "word": "brother",
+        "meaning": "anh em trai",
+        "correctSound": "/ð/",
+        "options": [
+          "/θ/",
+          "/ð/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "My brother and I go to the theatre together in fine weather.",
+      "vi": "Tôi và anh trai cùng nhau đến rạp hát trong tiết trời đẹp."
+    }
+  }
 }

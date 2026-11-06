@@ -225,5 +225,123 @@
     "reflectionQuestion": "Biểu tượng nổi tiếng nhất của thành phố Luân Đôn là gì?"
   },
   "bookVolume": 2,
-  "bookPages": "Trang 26 – 35"
+  "bookPages": "Trang 26 – 35",
+  "pronunciation": {
+    "pair": "/əʊ/ & /aʊ/",
+    "title": "Phân biệt cặp nguyên âm đôi: /əʊ/ (Âu) & /aʊ/ (Ao)",
+    "sound1": {
+      "symbol": "/əʊ/",
+      "name": "Âm /əʊ/",
+      "guideVi": "Bắt đầu từ âm /ə/ rồi chu tròn môi lướt sang âm /ʊ/, tạo thành âm \"âu\" trầm ấm.",
+      "words": [
+        {
+          "word": "boat",
+          "highlight": "oa",
+          "meaning": "con thuyền"
+        },
+        {
+          "word": "postcard",
+          "highlight": "o",
+          "meaning": "bưu thiếp"
+        },
+        {
+          "word": "photo",
+          "highlight": "o",
+          "meaning": "bức ảnh"
+        },
+        {
+          "word": "cold",
+          "highlight": "o",
+          "meaning": "lạnh giá"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/aʊ/",
+      "name": "Âm /aʊ/",
+      "guideVi": "Mở rộng miệng phát âm /a/ rồi thu nhỏ môi lại lướt sang /ʊ/, tương tự âm \"ao\".",
+      "words": [
+        {
+          "word": "tower",
+          "highlight": "ow",
+          "meaning": "tòa tháp"
+        },
+        {
+          "word": "crowded",
+          "highlight": "ow",
+          "meaning": "đông đúc"
+        },
+        {
+          "word": "house",
+          "highlight": "ou",
+          "meaning": "ngôi nhà"
+        },
+        {
+          "word": "south",
+          "highlight": "ou",
+          "meaning": "phía nam"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "boat",
+        "meaning": "con thuyền",
+        "correctSound": "/əʊ/",
+        "options": [
+          "/əʊ/",
+          "/aʊ/"
+        ]
+      },
+      {
+        "word": "tower",
+        "meaning": "tòa tháp",
+        "correctSound": "/aʊ/",
+        "options": [
+          "/əʊ/",
+          "/aʊ/"
+        ]
+      },
+      {
+        "word": "postcard",
+        "meaning": "bưu thiếp",
+        "correctSound": "/əʊ/",
+        "options": [
+          "/əʊ/",
+          "/aʊ/"
+        ]
+      },
+      {
+        "word": "crowded",
+        "meaning": "đông đúc",
+        "correctSound": "/aʊ/",
+        "options": [
+          "/əʊ/",
+          "/aʊ/"
+        ]
+      },
+      {
+        "word": "photo",
+        "meaning": "bức ảnh",
+        "correctSound": "/əʊ/",
+        "options": [
+          "/əʊ/",
+          "/aʊ/"
+        ]
+      },
+      {
+        "word": "house",
+        "meaning": "ngôi nhà",
+        "correctSound": "/aʊ/",
+        "options": [
+          "/əʊ/",
+          "/aʊ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "Send a postcard of that old tower near the cold boat.",
+      "vi": "Gửi một tấm bưu thiếp về tòa tháp cổ gần chiếc thuyền trong giá lạnh."
+    }
+  }
 }

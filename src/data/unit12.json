@@ -223,5 +223,123 @@
     "reflectionQuestion": "Người máy gia đình có thể giúp bạn những công việc gì?"
   },
   "bookVolume": 2,
-  "bookPages": "Trang 58 – 67"
+  "bookPages": "Trang 58 – 67",
+  "pronunciation": {
+    "pair": "/ɔɪ/ & /aɪ/",
+    "title": "Phân biệt cặp nguyên âm đôi: /ɔɪ/ (Oi) & /aɪ/ (Ai)",
+    "sound1": {
+      "symbol": "/ɔɪ/",
+      "name": "Âm /ɔɪ/",
+      "guideVi": "Bắt đầu từ âm /ɔ/ chu tròn môi rồi trượt mỉm cười sang âm /ɪ/, tương tự âm \"oi\".",
+      "words": [
+        {
+          "word": "voice",
+          "highlight": "oi",
+          "meaning": "giọng nói"
+        },
+        {
+          "word": "boy",
+          "highlight": "oy",
+          "meaning": "cậu bé"
+        },
+        {
+          "word": "toy",
+          "highlight": "oy",
+          "meaning": "đồ chơi"
+        },
+        {
+          "word": "noise",
+          "highlight": "oi",
+          "meaning": "tiếng ồn"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/aɪ/",
+      "name": "Âm /aɪ/",
+      "guideVi": "Mở rộng miệng phát âm /a/ rồi mỉm cười lướt nhanh sang /ɪ/, tương tự âm \"ai\".",
+      "words": [
+        {
+          "word": "like",
+          "highlight": "i",
+          "meaning": "yêu thích"
+        },
+        {
+          "word": "high",
+          "highlight": "igh",
+          "meaning": "trên cao"
+        },
+        {
+          "word": "climb",
+          "highlight": "i",
+          "meaning": "leo trèo"
+        },
+        {
+          "word": "right",
+          "highlight": "igh",
+          "meaning": "chính xác"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "voice",
+        "meaning": "giọng nói",
+        "correctSound": "/ɔɪ/",
+        "options": [
+          "/ɔɪ/",
+          "/aɪ/"
+        ]
+      },
+      {
+        "word": "like",
+        "meaning": "thích",
+        "correctSound": "/aɪ/",
+        "options": [
+          "/ɔɪ/",
+          "/aɪ/"
+        ]
+      },
+      {
+        "word": "boy",
+        "meaning": "cậu bé",
+        "correctSound": "/ɔɪ/",
+        "options": [
+          "/ɔɪ/",
+          "/aɪ/"
+        ]
+      },
+      {
+        "word": "high",
+        "meaning": "cao",
+        "correctSound": "/aɪ/",
+        "options": [
+          "/ɔɪ/",
+          "/aɪ/"
+        ]
+      },
+      {
+        "word": "toy",
+        "meaning": "đồ chơi",
+        "correctSound": "/ɔɪ/",
+        "options": [
+          "/ɔɪ/",
+          "/aɪ/"
+        ]
+      },
+      {
+        "word": "climb",
+        "meaning": "leo trèo",
+        "correctSound": "/aɪ/",
+        "options": [
+          "/ɔɪ/",
+          "/aɪ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "The robot with a soft voice likes to climb high.",
+      "vi": "Chú robot có giọng nói ấm áp thích leo lên những nơi cao."
+    }
+  }
 }

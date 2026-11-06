@@ -224,5 +224,123 @@
     "reflectionQuestion": "3 chữ R trong dự án bảo vệ môi trường là gì?"
   },
   "bookVolume": 2,
-  "bookPages": "Trang 48 – 57"
+  "bookPages": "Trang 48 – 57",
+  "pronunciation": {
+    "pair": "/ɑː/ & /æ/",
+    "title": "Phân biệt cặp nguyên âm: /ɑː/ (A sâu dài) & /æ/ (E bẹt rộng)",
+    "sound1": {
+      "symbol": "/ɑː/",
+      "name": "Âm A sâu dài",
+      "guideVi": "Hạ hàm mở rộng khoang miệng, âm phát ra trầm sâu từ cuống họng.",
+      "words": [
+        {
+          "word": "plant",
+          "highlight": "a",
+          "meaning": "trồng cây"
+        },
+        {
+          "word": "fast",
+          "highlight": "a",
+          "meaning": "nhanh nhẹn"
+        },
+        {
+          "word": "father",
+          "highlight": "a",
+          "meaning": "người cha"
+        },
+        {
+          "word": "park",
+          "highlight": "ar",
+          "meaning": "công viên"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/æ/",
+      "name": "Âm E bẹt",
+      "guideVi": "Kéo khóe miệng sang hai bên và hạ cằm hết cỡ, âm lai giữa a và e.",
+      "words": [
+        {
+          "word": "plastic",
+          "highlight": "a",
+          "meaning": "nhựa"
+        },
+        {
+          "word": "bag",
+          "highlight": "a",
+          "meaning": "túi xách"
+        },
+        {
+          "word": "environment",
+          "highlight": "a",
+          "meaning": "môi trường"
+        },
+        {
+          "word": "recycle",
+          "highlight": "a",
+          "meaning": "tái chế"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "plant",
+        "meaning": "trồng cây",
+        "correctSound": "/ɑː/",
+        "options": [
+          "/ɑː/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "plastic",
+        "meaning": "chất nhựa",
+        "correctSound": "/æ/",
+        "options": [
+          "/ɑː/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "fast",
+        "meaning": "nhanh",
+        "correctSound": "/ɑː/",
+        "options": [
+          "/ɑː/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "bag",
+        "meaning": "túi xách",
+        "correctSound": "/æ/",
+        "options": [
+          "/ɑː/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "park",
+        "meaning": "công viên",
+        "correctSound": "/ɑː/",
+        "options": [
+          "/ɑː/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "recycle",
+        "meaning": "tái chế",
+        "correctSound": "/æ/",
+        "options": [
+          "/ɑː/",
+          "/æ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "Do not throw plastic bags in the park, plant green trees fast!",
+      "vi": "Đừng vứt túi nhựa trong công viên, hãy nhanh chóng trồng thêm cây xanh!"
+    }
+  }
 }

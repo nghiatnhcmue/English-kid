@@ -249,5 +249,123 @@
     "reflectionQuestion": "Tại sao khi đi thám hiểm hang động chúng ta phải mang theo đèn pin?"
   },
   "bookVolume": 1,
-  "bookPages": "Trang 48 – 57"
+  "bookPages": "Trang 48 – 57",
+  "pronunciation": {
+    "pair": "/t/ & /d/",
+    "title": "Phân biệt cặp phụ âm đầu lưỡi: /t/ (Vô thanh) & /d/ (Hữu thanh)",
+    "sound1": {
+      "symbol": "/t/",
+      "name": "Phụ âm /t/ (Bật gió)",
+      "guideVi": "Đặt đầu lưỡi chạm vào nướu răng hàm trên, nén hơi rồi hạ lưỡi bật luồng hơi gió ra.",
+      "words": [
+        {
+          "word": "desert",
+          "highlight": "t",
+          "meaning": "sa mạc"
+        },
+        {
+          "word": "mountain",
+          "highlight": "t",
+          "meaning": "núi non"
+        },
+        {
+          "word": "boat",
+          "highlight": "t",
+          "meaning": "con thuyền"
+        },
+        {
+          "word": "forest",
+          "highlight": "t",
+          "meaning": "rừng rậm"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/d/",
+      "name": "Phụ âm /d/ (Rung thanh)",
+      "guideVi": "Vị trí lưỡi giống âm /t/ nhưng tạo độ rung trong cổ họng khi phát âm.",
+      "words": [
+        {
+          "word": "island",
+          "highlight": "d",
+          "meaning": "hòn đảo"
+        },
+        {
+          "word": "sand",
+          "highlight": "d",
+          "meaning": "cát"
+        },
+        {
+          "word": "wonder",
+          "highlight": "d",
+          "meaning": "kỳ quan"
+        },
+        {
+          "word": "guide",
+          "highlight": "d",
+          "meaning": "hướng dẫn"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "desert",
+        "meaning": "sa mạc",
+        "correctSound": "/t/",
+        "options": [
+          "/t/",
+          "/d/"
+        ]
+      },
+      {
+        "word": "island",
+        "meaning": "hòn đảo",
+        "correctSound": "/d/",
+        "options": [
+          "/t/",
+          "/d/"
+        ]
+      },
+      {
+        "word": "mountain",
+        "meaning": "núi",
+        "correctSound": "/t/",
+        "options": [
+          "/t/",
+          "/d/"
+        ]
+      },
+      {
+        "word": "wonder",
+        "meaning": "kỳ quan",
+        "correctSound": "/d/",
+        "options": [
+          "/t/",
+          "/d/"
+        ]
+      },
+      {
+        "word": "boat",
+        "meaning": "con thuyền",
+        "correctSound": "/t/",
+        "options": [
+          "/t/",
+          "/d/"
+        ]
+      },
+      {
+        "word": "sand",
+        "meaning": "bãi cát",
+        "correctSound": "/d/",
+        "options": [
+          "/t/",
+          "/d/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "The guide took a boat to explore the island of wonders.",
+      "vi": "Người hướng dẫn đã đi thuyền để thám hiểm hòn đảo của những kỳ quan."
+    }
+  }
 }

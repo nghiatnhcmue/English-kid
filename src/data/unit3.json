@@ -262,5 +262,123 @@
     "reflectionQuestion": "Làm thế nào để miêu tả một người bạn tốt bụng bằng tiếng Anh?"
   },
   "bookVolume": 1,
-  "bookPages": "Trang 26 – 35"
+  "bookPages": "Trang 26 – 35",
+  "pronunciation": {
+    "pair": "/b/ & /p/",
+    "title": "Phân biệt cặp phụ âm bật môi: /b/ (Hữu thanh) & /p/ (Vô thanh)",
+    "sound1": {
+      "symbol": "/b/",
+      "name": "Phụ âm /b/ (Rung thanh)",
+      "guideVi": "Mím chặt hai môi lại rồi bật mở nhanh, đồng thời làm rung dây thanh quản trong cổ.",
+      "words": [
+        {
+          "word": "boy",
+          "highlight": "b",
+          "meaning": "cậu bé"
+        },
+        {
+          "word": "blonde",
+          "highlight": "bl",
+          "meaning": "tóc vàng hoe"
+        },
+        {
+          "word": "bag",
+          "highlight": "b",
+          "meaning": "chiếc túi"
+        },
+        {
+          "word": "book",
+          "highlight": "b",
+          "meaning": "cuốn sách"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/p/",
+      "name": "Phụ âm /p/ (Bật gió)",
+      "guideVi": "Mím chặt hai môi giữ hơi lại rồi bật mạnh hơi ra ngoài (để tờ giấy trước miệng sẽ thấy giấy bay).",
+      "words": [
+        {
+          "word": "patient",
+          "highlight": "p",
+          "meaning": "kiên nhẫn"
+        },
+        {
+          "word": "picnic",
+          "highlight": "p",
+          "meaning": "dã ngoại"
+        },
+        {
+          "word": "pencil",
+          "highlight": "p",
+          "meaning": "bút chì"
+        },
+        {
+          "word": "pet",
+          "highlight": "p",
+          "meaning": "thú cưng"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "boy",
+        "meaning": "cậu bé",
+        "correctSound": "/b/",
+        "options": [
+          "/b/",
+          "/p/"
+        ]
+      },
+      {
+        "word": "patient",
+        "meaning": "kiên nhẫn",
+        "correctSound": "/p/",
+        "options": [
+          "/b/",
+          "/p/"
+        ]
+      },
+      {
+        "word": "blonde",
+        "meaning": "tóc vàng",
+        "correctSound": "/b/",
+        "options": [
+          "/b/",
+          "/p/"
+        ]
+      },
+      {
+        "word": "picnic",
+        "meaning": "dã ngoại",
+        "correctSound": "/p/",
+        "options": [
+          "/b/",
+          "/p/"
+        ]
+      },
+      {
+        "word": "bag",
+        "meaning": "chiếc túi",
+        "correctSound": "/b/",
+        "options": [
+          "/b/",
+          "/p/"
+        ]
+      },
+      {
+        "word": "pencil",
+        "meaning": "bút chì",
+        "correctSound": "/p/",
+        "options": [
+          "/b/",
+          "/p/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "The patient boy packed a big bag for the picnic.",
+      "vi": "Cậu bé kiên nhẫn đã chuẩn bị một chiếc túi to cho chuyến dã ngoại."
+    }
+  }
 }

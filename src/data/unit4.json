@@ -250,5 +250,123 @@
     "reflectionQuestion": "Cụm từ tiếng Anh nào dùng để xin phép hỏi đường một cách lịch sự?"
   },
   "bookVolume": 1,
-  "bookPages": "Trang 38 – 47"
+  "bookPages": "Trang 38 – 47",
+  "pronunciation": {
+    "pair": "/iː/ & /ɪ/",
+    "title": "Phân biệt cặp nguyên âm: /iː/ (I dài) & /ɪ/ (I ngắn)",
+    "sound1": {
+      "symbol": "/iː/",
+      "name": "Âm I dài",
+      "guideVi": "Môi mỉm cười kéo sang hai bên, phát âm âm \"i\" kéo dài hơi một chút.",
+      "words": [
+        {
+          "word": "peaceful",
+          "highlight": "ea",
+          "meaning": "yên bình"
+        },
+        {
+          "word": "clean",
+          "highlight": "ea",
+          "meaning": "sạch sẽ"
+        },
+        {
+          "word": "street",
+          "highlight": "ee",
+          "meaning": "đường phố"
+        },
+        {
+          "word": "convenient",
+          "highlight": "ie",
+          "meaning": "tiện lợi"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/ɪ/",
+      "name": "Âm I ngắn",
+      "guideVi": "Mở miệng hơi hé, phát âm âm \"i\" cực nhanh, dứt khoát, âm thoang thoảng giữa \"i\" và \"ê\".",
+      "words": [
+        {
+          "word": "busy",
+          "highlight": "u",
+          "meaning": "bận rộn"
+        },
+        {
+          "word": "city",
+          "highlight": "i",
+          "meaning": "thành phố"
+        },
+        {
+          "word": "historic",
+          "highlight": "i",
+          "meaning": "cổ kính"
+        },
+        {
+          "word": "building",
+          "highlight": "ui",
+          "meaning": "tòa nhà"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "peaceful",
+        "meaning": "yên bình",
+        "correctSound": "/iː/",
+        "options": [
+          "/iː/",
+          "/ɪ/"
+        ]
+      },
+      {
+        "word": "busy",
+        "meaning": "bận rộn",
+        "correctSound": "/ɪ/",
+        "options": [
+          "/iː/",
+          "/ɪ/"
+        ]
+      },
+      {
+        "word": "clean",
+        "meaning": "sạch sẽ",
+        "correctSound": "/iː/",
+        "options": [
+          "/iː/",
+          "/ɪ/"
+        ]
+      },
+      {
+        "word": "city",
+        "meaning": "thành phố",
+        "correctSound": "/ɪ/",
+        "options": [
+          "/iː/",
+          "/ɪ/"
+        ]
+      },
+      {
+        "word": "street",
+        "meaning": "con phố",
+        "correctSound": "/iː/",
+        "options": [
+          "/iː/",
+          "/ɪ/"
+        ]
+      },
+      {
+        "word": "historic",
+        "meaning": "cổ kính",
+        "correctSound": "/ɪ/",
+        "options": [
+          "/iː/",
+          "/ɪ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "This peaceful city has clean streets and big buildings.",
+      "vi": "Thành phố yên bình này có những con đường sạch sẽ và những tòa nhà lớn."
+    }
+  }
 }

@@ -237,5 +237,123 @@
     "reflectionQuestion": "Môn thể thao nào cần dùng vợt và quả cầu lông?"
   },
   "bookVolume": 2,
-  "bookPages": "Trang 16 – 25"
+  "bookPages": "Trang 16 – 25",
+  "pronunciation": {
+    "pair": "/e/ & /æ/",
+    "title": "Phân biệt cặp nguyên âm: /e/ (E ngắn) & /æ/ (E bẹt)",
+    "sound1": {
+      "symbol": "/e/",
+      "name": "Âm E ngắn",
+      "guideVi": "Miệng mở tự nhiên vừa phải, phát âm âm \"e\" dứt khoát giống âm \"e\" tiếng Việt.",
+      "words": [
+        {
+          "word": "chess",
+          "highlight": "e",
+          "meaning": "cờ vua"
+        },
+        {
+          "word": "tennis",
+          "highlight": "e",
+          "meaning": "quần vợt"
+        },
+        {
+          "word": "racket",
+          "highlight": "e",
+          "meaning": "chiếc vợt"
+        },
+        {
+          "word": "member",
+          "highlight": "e",
+          "meaning": "thành viên"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/æ/",
+      "name": "Âm E bẹt (A bẹt)",
+      "guideVi": "Hạ hàm mở rộng miệng hết cỡ theo chiều dọc và ngang, phát âm lai giữa \"a\" và \"e\".",
+      "words": [
+        {
+          "word": "match",
+          "highlight": "a",
+          "meaning": "trận đấu"
+        },
+        {
+          "word": "badminton",
+          "highlight": "a",
+          "meaning": "cầu lông"
+        },
+        {
+          "word": "champion",
+          "highlight": "a",
+          "meaning": "quán quân"
+        },
+        {
+          "word": "athlete",
+          "highlight": "a",
+          "meaning": "vận động viên"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "chess",
+        "meaning": "cờ vua",
+        "correctSound": "/e/",
+        "options": [
+          "/e/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "badminton",
+        "meaning": "cầu lông",
+        "correctSound": "/æ/",
+        "options": [
+          "/e/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "tennis",
+        "meaning": "quần vợt",
+        "correctSound": "/e/",
+        "options": [
+          "/e/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "match",
+        "meaning": "trận đấu",
+        "correctSound": "/æ/",
+        "options": [
+          "/e/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "racket",
+        "meaning": "chiếc vợt",
+        "correctSound": "/e/",
+        "options": [
+          "/e/",
+          "/æ/"
+        ]
+      },
+      {
+        "word": "champion",
+        "meaning": "quán quân",
+        "correctSound": "/æ/",
+        "options": [
+          "/e/",
+          "/æ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "The champion won the badminton match with a new racket.",
+      "vi": "Nhà vô địch đã thắng trận cầu lông với một cây vợt mới."
+    }
+  }
 }

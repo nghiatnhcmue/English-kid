@@ -223,5 +223,123 @@
     "reflectionQuestion": "Nguồn năng lượng sạch nào sẽ được dùng phổ biến trong tương lai?"
   },
   "bookVolume": 2,
-  "bookPages": "Trang 38 – 47"
+  "bookPages": "Trang 38 – 47",
+  "pronunciation": {
+    "pair": "/dr/ & /tr/",
+    "title": "Phân biệt cặp phụ âm đôi: /dr/ (Đờ-rờ) & /tr/ (Tờ-rờ)",
+    "sound1": {
+      "symbol": "/dr/",
+      "name": "Cụm âm /dr/",
+      "guideVi": "Đầu lưỡi chạm nướu phát âm /d/ rồi cong lưỡi lướt nhanh sang /r/ có rung thanh.",
+      "words": [
+        {
+          "word": "draw",
+          "highlight": "dr",
+          "meaning": "vẽ tranh"
+        },
+        {
+          "word": "dream",
+          "highlight": "dr",
+          "meaning": "giấc mơ"
+        },
+        {
+          "word": "drive",
+          "highlight": "dr",
+          "meaning": "lái xe"
+        },
+        {
+          "word": "drink",
+          "highlight": "dr",
+          "meaning": "đồ uống"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/tr/",
+      "name": "Cụm âm /tr/",
+      "guideVi": "Đầu lưỡi chạm nướu phát âm /t/ rồi bật nhanh sang /r/ tống luồng hơi gió mạnh.",
+      "words": [
+        {
+          "word": "travel",
+          "highlight": "tr",
+          "meaning": "du lịch"
+        },
+        {
+          "word": "tree",
+          "highlight": "tr",
+          "meaning": "cái cây"
+        },
+        {
+          "word": "traffic",
+          "highlight": "tr",
+          "meaning": "giao thông"
+        },
+        {
+          "word": "train",
+          "highlight": "tr",
+          "meaning": "xe lửa"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "draw",
+        "meaning": "vẽ",
+        "correctSound": "/dr/",
+        "options": [
+          "/dr/",
+          "/tr/"
+        ]
+      },
+      {
+        "word": "travel",
+        "meaning": "du lịch",
+        "correctSound": "/tr/",
+        "options": [
+          "/dr/",
+          "/tr/"
+        ]
+      },
+      {
+        "word": "dream",
+        "meaning": "giấc mơ",
+        "correctSound": "/dr/",
+        "options": [
+          "/dr/",
+          "/tr/"
+        ]
+      },
+      {
+        "word": "tree",
+        "meaning": "cái cây",
+        "correctSound": "/tr/",
+        "options": [
+          "/dr/",
+          "/tr/"
+        ]
+      },
+      {
+        "word": "drive",
+        "meaning": "lái xe",
+        "correctSound": "/dr/",
+        "options": [
+          "/dr/",
+          "/tr/"
+        ]
+      },
+      {
+        "word": "train",
+        "meaning": "xe lửa",
+        "correctSound": "/tr/",
+        "options": [
+          "/dr/",
+          "/tr/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "Children dream to travel by train and draw green trees.",
+      "vi": "Trẻ em mơ ước được đi du lịch bằng tàu hỏa và vẽ những hàng cây xanh."
+    }
+  }
 }

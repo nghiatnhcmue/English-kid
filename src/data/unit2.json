@@ -460,5 +460,123 @@
     "reflectionQuestion": "Trong phòng khách của bạn Mi có những đồ đạc nào?"
   },
   "bookVolume": 1,
-  "bookPages": "Trang 16 – 25"
+  "bookPages": "Trang 16 – 25",
+  "pronunciation": {
+    "pair": "/s/ & /z/",
+    "title": "Phát âm âm đuôi số nhiều: /s/ (Âm gió vô thanh) & /z/ (Âm rung hữu thanh)",
+    "sound1": {
+      "symbol": "/s/",
+      "name": "Âm đuôi /s/ (Vô thanh)",
+      "guideVi": "Hai hàm răng khép nhẹ, đẩy luồng hơi xì qua kẽ răng, dây thanh quản không rung (đi sau âm p, t, k, f).",
+      "words": [
+        {
+          "word": "lamps",
+          "highlight": "s",
+          "meaning": "những chiếc đèn"
+        },
+        {
+          "word": "sinks",
+          "highlight": "s",
+          "meaning": "những bồn rửa"
+        },
+        {
+          "word": "books",
+          "highlight": "s",
+          "meaning": "những cuốn sách"
+        },
+        {
+          "word": "flats",
+          "highlight": "s",
+          "meaning": "những căn hộ"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/z/",
+      "name": "Âm đuôi /z/ (Hữu thanh)",
+      "guideVi": "Khẩu hình giống âm /s/ nhưng rung dây thanh quản trong cổ họng tạo âm zzz như tiếng ong vo ve.",
+      "words": [
+        {
+          "word": "beds",
+          "highlight": "s",
+          "meaning": "những chiếc giường"
+        },
+        {
+          "word": "tables",
+          "highlight": "s",
+          "meaning": "những cái bàn"
+        },
+        {
+          "word": "chairs",
+          "highlight": "s",
+          "meaning": "những chiếc ghế"
+        },
+        {
+          "word": "rooms",
+          "highlight": "s",
+          "meaning": "những căn phòng"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "lamps",
+        "meaning": "những chiếc đèn",
+        "correctSound": "/s/",
+        "options": [
+          "/s/",
+          "/z/"
+        ]
+      },
+      {
+        "word": "beds",
+        "meaning": "những chiếc giường",
+        "correctSound": "/z/",
+        "options": [
+          "/s/",
+          "/z/"
+        ]
+      },
+      {
+        "word": "sinks",
+        "meaning": "những bồn rửa",
+        "correctSound": "/s/",
+        "options": [
+          "/s/",
+          "/z/"
+        ]
+      },
+      {
+        "word": "tables",
+        "meaning": "những cái bàn",
+        "correctSound": "/z/",
+        "options": [
+          "/s/",
+          "/z/"
+        ]
+      },
+      {
+        "word": "books",
+        "meaning": "những cuốn sách",
+        "correctSound": "/s/",
+        "options": [
+          "/s/",
+          "/z/"
+        ]
+      },
+      {
+        "word": "chairs",
+        "meaning": "những chiếc ghế",
+        "correctSound": "/z/",
+        "options": [
+          "/s/",
+          "/z/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "Four lamps and six beds in these big rooms.",
+      "vi": "Bốn chiếc đèn và sáu chiếc giường trong những căn phòng lớn này."
+    }
+  }
 }

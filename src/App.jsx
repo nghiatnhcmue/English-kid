@@ -18,10 +18,12 @@ import SpeakingPage from './pages/SpeakingPage.jsx';
 import ReadingPage from './pages/ReadingPage.jsx';
 import WritingPage from './pages/WritingPage.jsx';
 import SearchPage from './pages/SearchPage.jsx';
+import PronunciationPage from './pages/PronunciationPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
+  { to: '/pronunciation', label: 'Phát âm', icon: '🗣️' },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
   { to: '/listening', label: 'Nghe', icon: '👂' },
   { to: '/speaking', label: 'Nói', icon: '🎙️' },
@@ -155,6 +157,7 @@ function TopNavBar() {
 const MOBILE_NAV = [
   { to: '/', label: 'Trang chủ', icon: '🏠', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
+  { to: '/pronunciation', label: 'Phát âm', icon: '🗣️' },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
   { to: '/listening', label: 'Nghe', icon: '👂' },
   { to: '/speaking', label: 'Nói', icon: '🎙️' },
@@ -168,7 +171,7 @@ function BottomNav() {
       className="no-print md:hidden fixed inset-x-0 bottom-0 z-30 border-t-2 border-banana-soft bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-lg backdrop-blur"
       aria-label="Điều hướng điện thoại"
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-7">
+      <ul className="mx-auto grid max-w-lg grid-cols-8">
         {MOBILE_NAV.map((item) => (
           <li key={item.to}>
             <NavLink
@@ -176,12 +179,12 @@ function BottomNav() {
               end={item.end}
               onClick={() => playSfx('click')}
               className={({ isActive }) =>
-                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-[10px] font-black transition-colors ${
+                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-[9px] font-black transition-colors ${
                   isActive ? 'text-peach' : 'text-ink-soft'
                 }`
               }
             >
-              <span className="text-xl leading-none" aria-hidden>
+              <span className="text-lg leading-none" aria-hidden>
                 {item.icon}
               </span>
               <span className="whitespace-nowrap">{item.label}</span>
@@ -209,6 +212,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/search" element={<Fresh component={SearchPage} />} />
+              <Route path="/pronunciation" element={<Fresh component={PronunciationPage} />} />
               <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
               <Route path="/listening" element={<Fresh component={ListeningPage} />} />
               <Route path="/speaking" element={<Fresh component={SpeakingPage} />} />

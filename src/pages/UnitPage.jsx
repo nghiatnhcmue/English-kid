@@ -230,6 +230,35 @@ export default function UnitPage() {
               </div>
             </div>
           </Button3D>
+
+          {/* Trạm Phát âm: Cặp âm chuẩn SGK (A Closer Look 1) */}
+          {unit.pronunciation && (
+            <Button3D
+              tone="peach"
+              to={`/pronunciation?unit=${unit.unitId}`}
+              className="min-h-32 flex-col items-start justify-center gap-1.5! p-5 text-left sm:col-span-2"
+            >
+              <div className="flex w-full items-center justify-between">
+                <span className="rounded-full bg-white/90 px-3 py-0.5 text-xs font-black uppercase text-peach-dark">
+                  A Closer Look 1 · Ngữ âm chuẩn SGK
+                </span>
+                <span className="rounded-full bg-banana px-3 py-0.5 font-mono text-xs font-black text-ink shadow-2xs">
+                  Cặp âm {unit.pronunciation.pair}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mt-1">
+                <span className="text-3xl shrink-0" aria-hidden>🗣️</span>
+                <div>
+                  <h3 className="text-lg sm:text-xl font-black leading-tight text-white">
+                    {unit.pronunciation.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm font-bold text-white/90 mt-0.5">
+                    Khẩu hình tiếng Việt, từ ví dụ có highlight và game trắc nghiệm phân biệt âm {unit.pronunciation.pair}
+                  </p>
+                </div>
+              </div>
+            </Button3D>
+          )}
         </div>
       </section>
 

@@ -511,5 +511,123 @@
     "reflectionQuestion": "Bạn Phong và bạn Duy học chung trường gì trong video?"
   },
   "bookVolume": 1,
-  "bookPages": "Trang 6 – 15"
+  "bookPages": "Trang 6 – 15",
+  "pronunciation": {
+    "pair": "/ɑː/ & /ʌ/",
+    "title": "Phân biệt cặp âm /ɑː/ (A dài) và /ʌ/ (Á ngắn)",
+    "sound1": {
+      "symbol": "/ɑː/",
+      "name": "Âm A dài",
+      "guideVi": "Hạ hàm thấp, mở rộng miệng tự nhiên, kéo dài âm hơi sâu trong cuống họng.",
+      "words": [
+        {
+          "word": "smart",
+          "highlight": "ar",
+          "meaning": "thông minh"
+        },
+        {
+          "word": "sharpener",
+          "highlight": "ar",
+          "meaning": "cái gọt bút chì"
+        },
+        {
+          "word": "star",
+          "highlight": "ar",
+          "meaning": "ngôi sao"
+        },
+        {
+          "word": "park",
+          "highlight": "ar",
+          "meaning": "công viên"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/ʌ/",
+      "name": "Âm Á ngắn",
+      "guideVi": "Mở miệng vừa phải, thả lỏng môi và lưỡi, phát âm dứt khoát và ngắn gần giống âm \"á\" tiếng Việt.",
+      "words": [
+        {
+          "word": "study",
+          "highlight": "u",
+          "meaning": "học tập"
+        },
+        {
+          "word": "subject",
+          "highlight": "u",
+          "meaning": "môn học"
+        },
+        {
+          "word": "club",
+          "highlight": "u",
+          "meaning": "câu lạc bộ"
+        },
+        {
+          "word": "lunch",
+          "highlight": "u",
+          "meaning": "bữa trưa"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "smart",
+        "meaning": "thông minh",
+        "correctSound": "/ɑː/",
+        "options": [
+          "/ɑː/",
+          "/ʌ/"
+        ]
+      },
+      {
+        "word": "study",
+        "meaning": "học tập",
+        "correctSound": "/ʌ/",
+        "options": [
+          "/ɑː/",
+          "/ʌ/"
+        ]
+      },
+      {
+        "word": "sharpener",
+        "meaning": "cái gọt bút chì",
+        "correctSound": "/ɑː/",
+        "options": [
+          "/ɑː/",
+          "/ʌ/"
+        ]
+      },
+      {
+        "word": "subject",
+        "meaning": "môn học",
+        "correctSound": "/ʌ/",
+        "options": [
+          "/ɑː/",
+          "/ʌ/"
+        ]
+      },
+      {
+        "word": "park",
+        "meaning": "công viên",
+        "correctSound": "/ɑː/",
+        "options": [
+          "/ɑː/",
+          "/ʌ/"
+        ]
+      },
+      {
+        "word": "lunch",
+        "meaning": "bữa trưa",
+        "correctSound": "/ʌ/",
+        "options": [
+          "/ɑː/",
+          "/ʌ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "Smart students study subjects at the school club.",
+      "vi": "Những học sinh thông minh học các môn học tại câu lạc bộ trường."
+    }
+  }
 }

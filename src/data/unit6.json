@@ -235,5 +235,123 @@
     "reflectionQuestion": "Những món ăn đặc trưng nào thường có trong mâm cỗ Tết?"
   },
   "bookVolume": 1,
-  "bookPages": "Trang 58 – 67"
+  "bookPages": "Trang 58 – 67",
+  "pronunciation": {
+    "pair": "/s/ & /ʃ/",
+    "title": "Phân biệt cặp âm xì và sờ nặng: /s/ (Răng khép) & /ʃ/ (Chu môi)",
+    "sound1": {
+      "symbol": "/s/",
+      "name": "Âm /s/ (Xì nhẹ)",
+      "guideVi": "Hai khóe miệng kéo bè sang hai bên, răng khép hờ xì hơi nhẹ.",
+      "words": [
+        {
+          "word": "celebrate",
+          "highlight": "c",
+          "meaning": "kỷ niệm, ăn mừng"
+        },
+        {
+          "word": "school",
+          "highlight": "s",
+          "meaning": "trường học"
+        },
+        {
+          "word": "spring",
+          "highlight": "s",
+          "meaning": "mùa xuân"
+        },
+        {
+          "word": "see",
+          "highlight": "s",
+          "meaning": "nhìn thấy"
+        }
+      ]
+    },
+    "sound2": {
+      "symbol": "/ʃ/",
+      "name": "Âm /ʃ/ (Chu môi sờ nặng)",
+      "guideVi": "Môi hơi chu tròn về phía trước, thân lưỡi nâng lên chạm vòm họng đẩy hơi xì mạnh như khi ra hiệu \"suỵt\".",
+      "words": [
+        {
+          "word": "wish",
+          "highlight": "sh",
+          "meaning": "lời chúc"
+        },
+        {
+          "word": "special",
+          "highlight": "ci",
+          "meaning": "đặc biệt"
+        },
+        {
+          "word": "shopping",
+          "highlight": "sh",
+          "meaning": "mua sắm"
+        },
+        {
+          "word": "should",
+          "highlight": "sh",
+          "meaning": "nên làm"
+        }
+      ]
+    },
+    "practiceQuiz": [
+      {
+        "word": "celebrate",
+        "meaning": "ăn mừng",
+        "correctSound": "/s/",
+        "options": [
+          "/s/",
+          "/ʃ/"
+        ]
+      },
+      {
+        "word": "wish",
+        "meaning": "lời chúc",
+        "correctSound": "/ʃ/",
+        "options": [
+          "/s/",
+          "/ʃ/"
+        ]
+      },
+      {
+        "word": "spring",
+        "meaning": "mùa xuân",
+        "correctSound": "/s/",
+        "options": [
+          "/s/",
+          "/ʃ/"
+        ]
+      },
+      {
+        "word": "special",
+        "meaning": "đặc biệt",
+        "correctSound": "/ʃ/",
+        "options": [
+          "/s/",
+          "/ʃ/"
+        ]
+      },
+      {
+        "word": "school",
+        "meaning": "trường học",
+        "correctSound": "/s/",
+        "options": [
+          "/s/",
+          "/ʃ/"
+        ]
+      },
+      {
+        "word": "shopping",
+        "meaning": "mua sắm",
+        "correctSound": "/ʃ/",
+        "options": [
+          "/s/",
+          "/ʃ/"
+        ]
+      }
+    ],
+    "tongueTwister": {
+      "en": "We send special wishes when we celebrate spring.",
+      "vi": "Chúng ta gửi những lời chúc đặc biệt khi cùng nhau đón mừng mùa xuân."
+    }
+  }
 }
