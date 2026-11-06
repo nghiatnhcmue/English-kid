@@ -48,6 +48,7 @@ export function SpeakerIcon({ className = 'h-8 w-8' }) {
 export function SpeakerButton({
   word,
   text,
+  audio,
   slow = false,
   slowToo = false,
   size = 'lg',
@@ -63,10 +64,17 @@ export function SpeakerButton({
     if (!target) return;
     setPlaying(true);
     if (slow) {
-      const phrase = typeof target === 'string' ? target : target.word;
-      await speak(phrase, { ...settings, rate: Math.max(0.5, (settings.rate || 0.85) * 0.7) });
+      if (typeof target === 'object') {
+        await sayWord(target, settings, { slow: true });
+      } else {
+        await speak(target, { ...settings, rate: 0.65, audio });
+      }
     } else {
-      await sayWord(target, settings, { slowToo });
+      if (typeof target === 'object') {
+        await sayWord(target, settings, { slowToo });
+      } else {
+        await speak(target, { ...settings, audio });
+      }
     }
     setPlaying(false);
   };
@@ -109,7 +117,7 @@ export function SpeakerButton({
 }
 
 /** Nút phát âm chậm hình chú rùa 🐢 */
-export function SlowSpeakerButton({ word, text, size = 'sm', className = '' }) {
+export function SlowSpeakerButton({ word, text, audio, size = 'sm', className = '' }) {
   const { settings } = useSettings();
   const [playing, setPlaying] = useState(false);
   const target = word ?? text;
@@ -118,8 +126,11 @@ export function SlowSpeakerButton({ word, text, size = 'sm', className = '' }) {
     e.stopPropagation();
     if (!target) return;
     setPlaying(true);
-    const phrase = typeof target === 'string' ? target : target.word;
-    await speak(phrase, { ...settings, rate: 0.6 });
+    if (typeof target === 'object') {
+      await sayWord(target, settings, { slow: true });
+    } else {
+      await speak(target, { ...settings, rate: 0.65, audio });
+    }
     setPlaying(false);
   };
 

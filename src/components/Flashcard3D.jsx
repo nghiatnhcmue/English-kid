@@ -144,7 +144,7 @@ export default function Flashcard3D({ words, onFinish }) {
               </p>
               <div className="mt-1 flex items-center justify-between gap-3">
                 <p className="text-lg sm:text-xl font-black text-ink">{word.exampleEn}</p>
-                <SpeakerButton text={word.exampleEn} size="sm" />
+                <SpeakerButton text={word.exampleEn} audio={word.audioExample} size="sm" />
               </div>
               <p className="mt-1 text-base sm:text-lg font-bold text-ink-soft">{word.exampleVi}</p>
             </div>

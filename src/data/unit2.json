@@ -12,7 +12,9 @@
       "hint": "Phòng cả nhà ngồi xem TV, tiếp khách",
       "exampleEn": "We watch TV in the living room.",
       "exampleVi": "Cả nhà em xem TV trong phòng khách.",
-      "emoji": "📺"
+      "emoji": "📺",
+      "audio": "/assets/audio/unit2/living-room.mp3",
+      "audioExample": "/assets/audio/unit2/living-room-example.mp3"
     },
     {
       "id": "u2_02",
@@ -23,7 +25,9 @@
       "hint": "Phòng có giường để ngủ",
       "exampleEn": "My bedroom is small but nice.",
       "exampleVi": "Phòng ngủ của em nhỏ nhưng đẹp.",
-      "emoji": "🛏️"
+      "emoji": "🛏️",
+      "audio": "/assets/audio/unit2/bedroom.mp3",
+      "audioExample": "/assets/audio/unit2/bedroom-example.mp3"
     },
     {
       "id": "u2_03",
@@ -34,7 +38,9 @@
       "hint": "Nơi nấu ăn",
       "exampleEn": "My mum is cooking in the kitchen.",
       "exampleVi": "Mẹ em đang nấu ăn trong bếp.",
-      "emoji": "🍳"
+      "emoji": "🍳",
+      "audio": "/assets/audio/unit2/kitchen.mp3",
+      "audioExample": "/assets/audio/unit2/kitchen-example.mp3"
     },
     {
       "id": "u2_04",
@@ -45,7 +51,9 @@
       "hint": "Phòng để tắm rửa, đánh răng",
       "exampleEn": "The bathroom is next to my bedroom.",
       "exampleVi": "Phòng tắm ở bên cạnh phòng ngủ của em.",
-      "emoji": "🛁"
+      "emoji": "🛁",
+      "audio": "/assets/audio/unit2/bathroom.mp3",
+      "audioExample": "/assets/audio/unit2/bathroom-example.mp3"
     },
     {
       "id": "u2_05",
@@ -56,7 +64,9 @@
       "hint": "Căn phòng ngay dưới mái nhà, thường phải leo thang lên",
       "exampleEn": "There are old toys in the attic.",
       "exampleVi": "Có đồ chơi cũ trên gác mái.",
-      "emoji": "🪜"
+      "emoji": "🪜",
+      "audio": "/assets/audio/unit2/attic.mp3",
+      "audioExample": "/assets/audio/unit2/attic-example.mp3"
     },
     {
       "id": "u2_06",
@@ -68,7 +78,9 @@
       "exampleEn": "The milk is in the fridge.",
       "exampleVi": "Sữa ở trong tủ lạnh.",
       "emoji": "🧊",
-      "model3d": "/assets/models/unit2/fridge.glb"
+      "model3d": "/assets/models/unit2/fridge.glb",
+      "audio": "/assets/audio/unit2/fridge.mp3",
+      "audioExample": "/assets/audio/unit2/fridge-example.mp3"
     },
     {
       "id": "u2_07",
@@ -80,7 +92,9 @@
       "exampleEn": "My clothes are in the wardrobe.",
       "exampleVi": "Quần áo của em ở trong tủ quần áo.",
       "emoji": "👗",
-      "model3d": "/assets/models/unit2/wardrobe.glb"
+      "model3d": "/assets/models/unit2/wardrobe.glb",
+      "audio": "/assets/audio/unit2/wardrobe.mp3",
+      "audioExample": "/assets/audio/unit2/wardrobe-example.mp3"
     },
     {
       "id": "u2_08",
@@ -92,7 +106,9 @@
       "exampleEn": "My socks are in the chest of drawers.",
       "exampleVi": "Tất của em ở trong tủ ngăn kéo.",
       "emoji": "🗄️",
-      "model3d": "/assets/models/unit2/chest-of-drawers.glb"
+      "model3d": "/assets/models/unit2/chest-of-drawers.glb",
+      "audio": "/assets/audio/unit2/chest-of-drawers.mp3",
+      "audioExample": "/assets/audio/unit2/chest-of-drawers-example.mp3"
     },
     {
       "id": "u2_09",
@@ -104,7 +120,9 @@
       "exampleEn": "There is a lamp on my desk.",
       "exampleVi": "Có một cái đèn trên bàn học của em.",
       "emoji": "💡",
-      "model3d": "/assets/models/unit2/lamp.glb"
+      "model3d": "/assets/models/unit2/lamp.glb",
+      "audio": "/assets/audio/unit2/lamp.mp3",
+      "audioExample": "/assets/audio/unit2/lamp-example.mp3"
     },
     {
       "id": "u2_10",
@@ -116,7 +134,9 @@
       "exampleEn": "The cat is sleeping on the sofa.",
       "exampleVi": "Con mèo đang ngủ trên ghế sô-pha.",
       "emoji": "🛋️",
-      "model3d": "/assets/models/unit2/sofa.glb"
+      "model3d": "/assets/models/unit2/sofa.glb",
+      "audio": "/assets/audio/unit2/sofa.mp3",
+      "audioExample": "/assets/audio/unit2/sofa-example.mp3"
     },
     {
       "id": "u2_11",
@@ -128,7 +148,9 @@
       "exampleEn": "Please put the plates in the dishwasher.",
       "exampleVi": "Con cho đĩa vào máy rửa bát nhé.",
       "emoji": "🍽️",
-      "model3d": "/assets/models/unit2/dishwasher.glb"
+      "model3d": "/assets/models/unit2/dishwasher.glb",
+      "audio": "/assets/audio/unit2/dishwasher.mp3",
+      "audioExample": "/assets/audio/unit2/dishwasher-example.mp3"
     },
     {
       "id": "u2_12",
@@ -140,7 +162,9 @@
       "exampleEn": "Heat the rice in the microwave.",
       "exampleVi": "Hâm nóng cơm bằng lò vi sóng.",
       "emoji": "♨️",
-      "model3d": "/assets/models/unit2/microwave.glb"
+      "model3d": "/assets/models/unit2/microwave.glb",
+      "audio": "/assets/audio/unit2/microwave.mp3",
+      "audioExample": "/assets/audio/unit2/microwave-example.mp3"
     },
     {
       "id": "u2_13",
@@ -152,7 +176,9 @@
       "exampleEn": "We live in an apartment in the city.",
       "exampleVi": "Nhà em sống trong một căn hộ ở thành phố.",
       "emoji": "🏢",
-      "model3d": "/assets/models/unit2/apartment.glb"
+      "model3d": "/assets/models/unit2/apartment.glb",
+      "audio": "/assets/audio/unit2/apartment.mp3",
+      "audioExample": "/assets/audio/unit2/apartment-example.mp3"
     },
     {
       "id": "u2_14",
@@ -164,7 +190,9 @@
       "exampleEn": "My grandparents live in a country house.",
       "exampleVi": "Ông bà em sống trong một ngôi nhà ở quê.",
       "emoji": "🏡",
-      "model3d": "/assets/models/unit2/country-house.glb"
+      "model3d": "/assets/models/unit2/country-house.glb",
+      "audio": "/assets/audio/unit2/country-house.mp3",
+      "audioExample": "/assets/audio/unit2/country-house-example.mp3"
     },
     {
       "id": "u2_15",
@@ -176,7 +204,9 @@
       "exampleEn": "Nam lives in a town house.",
       "exampleVi": "Nam sống trong một ngôi nhà phố.",
       "emoji": "🏘️",
-      "model3d": "/assets/models/unit2/town-house.glb"
+      "model3d": "/assets/models/unit2/town-house.glb",
+      "audio": "/assets/audio/unit2/town-house.mp3",
+      "audioExample": "/assets/audio/unit2/town-house-example.mp3"
     }
   ],
   "extraQuestions": [],

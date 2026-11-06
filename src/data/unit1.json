@@ -13,7 +13,9 @@
       "exampleEn": "My school bag is very heavy today.",
       "exampleVi": "Hôm nay cặp sách của em rất nặng.",
       "emoji": "🎒",
-      "model3d": "/assets/models/unit1/school-bag.glb"
+      "model3d": "/assets/models/unit1/school-bag.glb",
+      "audio": "/assets/audio/unit1/school-bag.mp3",
+      "audioExample": "/assets/audio/unit1/school-bag-example.mp3"
     },
     {
       "id": "u1_02",
@@ -24,7 +26,9 @@
       "hint": "Hộp hoặc túi nhỏ đựng bút, thước, tẩy",
       "exampleEn": "I keep my pens in my pencil case.",
       "exampleVi": "Em để bút trong hộp bút.",
-      "emoji": "👝"
+      "emoji": "👝",
+      "audio": "/assets/audio/unit1/pencil-case.mp3",
+      "audioExample": "/assets/audio/unit1/pencil-case-example.mp3"
     },
     {
       "id": "u1_03",
@@ -36,7 +40,9 @@
       "exampleEn": "Can I borrow your pencil sharpener?",
       "exampleVi": "Tớ mượn cái gọt bút chì của bạn được không?",
       "emoji": "✏️",
-      "model3d": "/assets/models/unit1/pencil-sharpener.glb"
+      "model3d": "/assets/models/unit1/pencil-sharpener.glb",
+      "audio": "/assets/audio/unit1/pencil-sharpener.mp3",
+      "audioExample": "/assets/audio/unit1/pencil-sharpener-example.mp3"
     },
     {
       "id": "u1_04",
@@ -48,7 +54,9 @@
       "exampleEn": "I use a rubber to fix my mistakes.",
       "exampleVi": "Em dùng cục tẩy để xóa lỗi sai.",
       "emoji": "🧽",
-      "model3d": "/assets/models/unit1/rubber.glb"
+      "model3d": "/assets/models/unit1/rubber.glb",
+      "audio": "/assets/audio/unit1/rubber.mp3",
+      "audioExample": "/assets/audio/unit1/rubber-example.mp3"
     },
     {
       "id": "u1_05",
@@ -60,7 +68,9 @@
       "exampleEn": "I use a calculator in maths lessons.",
       "exampleVi": "Em dùng máy tính cầm tay trong tiết Toán.",
       "emoji": "🧮",
-      "model3d": "/assets/models/unit1/calculator.glb"
+      "model3d": "/assets/models/unit1/calculator.glb",
+      "audio": "/assets/audio/unit1/calculator.mp3",
+      "audioExample": "/assets/audio/unit1/calculator-example.mp3"
     },
     {
       "id": "u1_06",
@@ -71,7 +81,9 @@
       "hint": "Dụng cụ dùng để vẽ hình tròn",
       "exampleEn": "We draw a circle with a compass.",
       "exampleVi": "Chúng em vẽ hình tròn bằng com-pa.",
-      "emoji": "🧭"
+      "emoji": "🧭",
+      "audio": "/assets/audio/unit1/compass.mp3",
+      "audioExample": "/assets/audio/unit1/compass-example.mp3"
     },
     {
       "id": "u1_07",
@@ -83,7 +95,9 @@
       "exampleEn": "Draw a line with your ruler.",
       "exampleVi": "Hãy kẻ một đường thẳng bằng thước kẻ.",
       "emoji": "📏",
-      "model3d": "/assets/models/unit1/ruler.glb"
+      "model3d": "/assets/models/unit1/ruler.glb",
+      "audio": "/assets/audio/unit1/ruler.mp3",
+      "audioExample": "/assets/audio/unit1/ruler-example.mp3"
     },
     {
       "id": "u1_08",
@@ -95,7 +109,9 @@
       "exampleEn": "Open your textbook at page ten.",
       "exampleVi": "Các em mở sách giáo khoa trang mười.",
       "emoji": "📘",
-      "model3d": "/assets/models/unit1/textbook.glb"
+      "model3d": "/assets/models/unit1/textbook.glb",
+      "audio": "/assets/audio/unit1/textbook.mp3",
+      "audioExample": "/assets/audio/unit1/textbook-example.mp3"
     },
     {
       "id": "u1_09",
@@ -107,7 +123,9 @@
       "exampleEn": "I write new words in my notebook.",
       "exampleVi": "Em viết từ mới vào vở ghi.",
       "emoji": "📓",
-      "model3d": "/assets/models/unit1/notebook.glb"
+      "model3d": "/assets/models/unit1/notebook.glb",
+      "audio": "/assets/audio/unit1/notebook.mp3",
+      "audioExample": "/assets/audio/unit1/notebook-example.mp3"
     },
     {
       "id": "u1_10",
@@ -118,7 +136,9 @@
       "hint": "Quần áo học sinh mặc giống nhau khi đến trường",
       "exampleEn": "We wear our uniform on Mondays.",
       "exampleVi": "Chúng em mặc đồng phục vào các ngày thứ Hai.",
-      "emoji": "👔"
+      "emoji": "👔",
+      "audio": "/assets/audio/unit1/uniform.mp3",
+      "audioExample": "/assets/audio/unit1/uniform-example.mp3"
     },
     {
       "id": "u1_11",
@@ -129,7 +149,9 @@
       "hint": "Người học chung lớp với em",
       "exampleEn": "Lan is my new classmate.",
       "exampleVi": "Lan là bạn cùng lớp mới của em.",
-      "emoji": "🧑‍🤝‍🧑"
+      "emoji": "🧑‍🤝‍🧑",
+      "audio": "/assets/audio/unit1/classmate.mp3",
+      "audioExample": "/assets/audio/unit1/classmate-example.mp3"
     },
     {
       "id": "u1_12",
@@ -140,7 +162,9 @@
       "hint": "Trường mà học sinh ăn, ở và học luôn tại trường",
       "exampleEn": "Students live and study at a boarding school.",
       "exampleVi": "Học sinh sống và học tập ở trường nội trú.",
-      "emoji": "🏫"
+      "emoji": "🏫",
+      "audio": "/assets/audio/unit1/boarding-school.mp3",
+      "audioExample": "/assets/audio/unit1/boarding-school-example.mp3"
     },
     {
       "id": "u1_13",
@@ -151,7 +175,9 @@
       "hint": "Bài thầy cô giao để em làm ở nhà",
       "exampleEn": "I do my homework after dinner.",
       "exampleVi": "Em làm bài tập về nhà sau bữa tối.",
-      "emoji": "📝"
+      "emoji": "📝",
+      "audio": "/assets/audio/unit1/homework.mp3",
+      "audioExample": "/assets/audio/unit1/homework-example.mp3"
     },
     {
       "id": "u1_14",
@@ -163,7 +189,9 @@
       "exampleEn": "We have science on Tuesday.",
       "exampleVi": "Chúng em có môn Khoa học vào thứ Ba.",
       "emoji": "🔬",
-      "model3d": "/assets/models/unit1/science.glb"
+      "model3d": "/assets/models/unit1/science.glb",
+      "audio": "/assets/audio/unit1/science.mp3",
+      "audioExample": "/assets/audio/unit1/science-example.mp3"
     },
     {
       "id": "u1_15",
@@ -175,7 +203,9 @@
       "exampleEn": "I love history lessons.",
       "exampleVi": "Em rất thích các tiết Lịch sử.",
       "emoji": "📜",
-      "model3d": "/assets/models/unit1/history.glb"
+      "model3d": "/assets/models/unit1/history.glb",
+      "audio": "/assets/audio/unit1/history.mp3",
+      "audioExample": "/assets/audio/unit1/history-example.mp3"
     },
     {
       "id": "u1_16",
@@ -187,7 +217,9 @@
       "exampleEn": "My art teacher is very creative.",
       "exampleVi": "Cô giáo dạy Mĩ thuật của em rất sáng tạo.",
       "emoji": "🎨",
-      "model3d": "/assets/models/unit1/creative.glb"
+      "model3d": "/assets/models/unit1/creative.glb",
+      "audio": "/assets/audio/unit1/creative.mp3",
+      "audioExample": "/assets/audio/unit1/creative-example.mp3"
     }
   ],
   "extraQuestions": [],

@@ -183,37 +183,46 @@ function QuestionBody({ q, response, onAnswer }) {
           <ChoiceOptions q={q} picked={response} onPick={onAnswer} />
         </div>
       );
-    case 'word_to_meaning':
+    case 'word_to_meaning': {
+      const wordObj = getWord(q.wordId);
       return (
         <div className="flex flex-col gap-5">
           <div className="flex items-center justify-center gap-3 my-2">
             <p className="text-4xl sm:text-5xl font-black text-ink">{q.word}</p>
-            <SpeakerButton text={q.word} size="md" />
-            <SlowSpeakerButton text={q.word} size="sm" />
+            <SpeakerButton word={wordObj} text={q.word} size="md" />
+            <SlowSpeakerButton word={wordObj} text={q.word} size="sm" />
           </div>
           <ChoiceOptions q={q} picked={response} onPick={onAnswer} big />
         </div>
       );
-    case 'listen_to_word':
+    }
+    case 'listen_to_word': {
+      const wordObj = getWord(q.wordId);
       return (
         <div className="flex flex-col gap-5">
           <div className="flex flex-col items-center justify-center gap-2 my-2">
-            <SpeakerButton key={q.id} text={q.speak} autoPlay size="xl" />
+            <SpeakerButton key={q.id} word={wordObj} text={q.speak} autoPlay size="xl" />
             <span className="text-sm font-bold text-ink-soft">{t.listening.pressToListen}</span>
           </div>
           <ChoiceOptions q={q} picked={response} onPick={onAnswer} />
         </div>
       );
-    case 'context':
+    }
+    case 'context': {
+      const wordObj = getWord(q.wordId);
       return (
         <div className="flex flex-col gap-5">
           <div className="rounded-3xl bg-white p-6 text-center shadow-xs border-2 border-banana-soft my-2">
-            <p className="text-2xl sm:text-3xl font-black text-ink leading-relaxed">{q.sentence}</p>
+            <div className="flex items-center justify-center gap-3">
+              <p className="text-2xl sm:text-3xl font-black text-ink leading-relaxed">{q.sentence}</p>
+              {wordObj?.audioExample && <SpeakerButton audio={wordObj.audioExample} text={wordObj.exampleEn} size="sm" />}
+            </div>
             <p className="mt-2 text-lg sm:text-xl font-bold text-ink-soft">({q.sentenceVi})</p>
           </div>
           <ChoiceOptions q={q} picked={response} onPick={onAnswer} />
         </div>
       );
+    }
     case 'spelling':
       return (
         <div className="flex flex-col gap-5">
