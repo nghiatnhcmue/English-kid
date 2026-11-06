@@ -31,7 +31,30 @@ export default function VocabCard({ word, status, compact = false, onInspect }) 
 
           <p className="text-lg sm:text-xl font-bold text-ink mt-0.5">{word.meaning}</p>
 
-          <div className="mt-1.5 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-bold">
+          {/* Câu ví dụ kèm nút nghe phát âm câu ví dụ */}
+          {word.exampleEn && (
+            <div className="mt-2.5 flex items-center justify-between gap-2 rounded-2xl bg-cream/70 p-2.5 sm:px-3 sm:py-2 border border-banana-soft/60">
+              <div className="min-w-0 flex-1">
+                <p className="text-sm sm:text-base font-extrabold text-ink leading-snug">
+                  "{word.exampleEn}"
+                </p>
+                {word.exampleVi && (
+                  <p className="text-xs font-bold text-ink-soft mt-0.5">
+                    ({word.exampleVi})
+                  </p>
+                )}
+              </div>
+              <SpeakerButton
+                text={word.exampleEn}
+                audio={word.audioExample}
+                size="sm"
+                title="Nghe phát âm câu ví dụ"
+                className="shrink-0"
+              />
+            </div>
+          )}
+
+          <div className="mt-2 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-bold">
             <span className="rounded-full bg-banana-soft px-3 py-0.5 text-ink-soft">
               {word.wordType}
             </span>

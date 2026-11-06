@@ -122,11 +122,18 @@ export default function TeacherDataEditor() {
     const cleanWord = {
       ...wordForm,
       word: wordForm.word.trim(),
-      phonetic: wordForm.phonetic.trim() ? (wordForm.phonetic.startsWith('/') ? wordForm.phonetic.trim() : `/${wordForm.phonetic.trim()}/`) : `/${wordForm.word.trim().toLowerCase()}/`,
+      phonetic: wordForm.phonetic.trim()
+        ? wordForm.phonetic.startsWith('/')
+          ? wordForm.phonetic.trim()
+          : `/${wordForm.phonetic.trim()}/`
+        : `/${wordForm.word.trim().toLowerCase()}/`,
       meaning: wordForm.meaning.trim(),
       exampleEn: wordForm.exampleEn.trim() || `${wordForm.word.trim()} is very interesting.`,
       exampleVi: wordForm.exampleVi.trim() || `${wordForm.meaning.trim()} rất thú vị.`,
       audio: wordForm.audio.trim() || getCloudTtsUrl(wordForm.word.trim(), 'en-GB'),
+      audioExample: `https://translate.google.com/translate_tts?ie=UTF-8&tl=en-GB&client=tw-ob&q=${encodeURIComponent(
+        wordForm.exampleEn.trim() || `${wordForm.word.trim()} is very interesting.`
+      )}`,
     };
 
     if (editingWord) {
@@ -421,8 +428,24 @@ export default function TeacherDataEditor() {
                       </span>
                       {v.meaning}
                     </p>
-                    <p className="text-xs font-bold text-ink-soft italic">"{v.exampleEn}"</p>
-                    <p className="text-[11px] font-bold text-ink-soft/80">({v.exampleVi})</p>
+                    {v.exampleEn && (
+                      <div className="flex items-center justify-between gap-2 mt-1 rounded-xl bg-white p-2 border border-banana-soft/60">
+                        <div className="min-w-0 flex-1">
+                          <p className="text-xs font-bold text-ink-soft italic">"{v.exampleEn}"</p>
+                          {v.exampleVi && (
+                            <p className="text-[11px] font-bold text-ink-soft/80">({v.exampleVi})</p>
+                          )}
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => speak(v.exampleEn, { audio: v.audioExample })}
+                          className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-peach text-white hover:bg-peach-dark transition-all cursor-pointer shadow-xs"
+                          title="Bấm nghe phát âm câu ví dụ"
+                        >
+                          <Volume2 className="h-3.5 w-3.5" />
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -717,7 +740,18 @@ export default function TeacherDataEditor() {
             <form onSubmit={handleSaveWord} className="flex flex-col gap-3 max-h-[75vh] overflow-y-auto pr-1">
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-xs font-black text-ink mb-1">Từ tiếng Anh (*):</label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="text-xs font-black text-ink">Từ tiếng Anh (*):</label>
+                    {wordForm.word.trim() && (
+                      <button
+                        type="button"
+                        onClick={() => speak(wordForm.word.trim(), { audio: wordForm.audio })}
+                        className="inline-flex items-center gap-1 text-[11px] font-black text-peach hover:underline cursor-pointer"
+                      >
+                        <Volume2 className="h-3 w-3" /> Nghe thử từ
+                      </button>
+                    )}
+                  </div>
                   <input
                     type="text"
                     required
@@ -790,7 +824,18 @@ export default function TeacherDataEditor() {
               </div>
 
               <div>
-                <label className="block text-xs font-black text-ink mb-1">Câu ví dụ tiếng Anh:</label>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="text-xs font-black text-ink">Câu ví dụ tiếng Anh:</label>
+                  {wordForm.exampleEn.trim() && (
+                    <button
+                      type="button"
+                      onClick={() => speak(wordForm.exampleEn.trim())}
+                      className="inline-flex items-center gap-1 text-[11px] font-black text-peach hover:underline cursor-pointer"
+                    >
+                      <Volume2 className="h-3 w-3" /> Nghe thử câu ví dụ
+                    </button>
+                  )}
+                </div>
                 <input
                   type="text"
                   value={wordForm.exampleEn}

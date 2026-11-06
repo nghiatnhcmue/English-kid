@@ -74,6 +74,9 @@ function playAudioFile(src, rate = 1) {
     stopSpeaking();
     if (!src) return resolve(false);
 
+    let finished = false;
+    let timer = null;
+
     const a = new Audio(src);
     currentAudio = a;
     try {
@@ -81,30 +84,38 @@ function playAudioFile(src, rate = 1) {
     } catch {}
 
     const cleanup = () => {
+      if (timer) clearTimeout(timer);
       if (currentAudio === a) currentAudio = null;
     };
 
     a.onended = () => {
+      if (finished) return;
+      finished = true;
       cleanup();
       resolve(true);
     };
+
     a.onerror = () => {
+      if (finished) return;
+      finished = true;
       cleanup();
       resolve(false);
     };
 
     a.play().catch(() => {
+      if (finished) return;
+      finished = true;
       cleanup();
       resolve(false);
     });
 
-    // Timeout an toàn phòng trường hợp audio bị kẹt mạng
-    setTimeout(() => {
-      if (currentAudio === a) {
-        cleanup();
-        resolve(true);
-      }
-    }, 15000);
+    // Timeout an toàn phòng trường hợp audio bị kẹt mạng (4 giây)
+    timer = setTimeout(() => {
+      if (finished) return;
+      finished = true;
+      cleanup();
+      resolve(false);
+    }, 4000);
   });
 }
 
