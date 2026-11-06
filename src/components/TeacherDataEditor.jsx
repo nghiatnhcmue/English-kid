@@ -69,6 +69,19 @@ export default function TeacherDataEditor() {
     explain: '',
   });
 
+  // Unit modal states (Tạo / Sửa Unit mới)
+  const [showUnitModal, setShowUnitModal] = useState(false);
+  const [isEditingUnit, setIsEditingUnit] = useState(false);
+  const [unitForm, setUnitForm] = useState({
+    unitId: 13,
+    titleEn: '',
+    titleVi: '',
+    topic: '',
+    emoji: '🤖',
+    color: '#FFC83D',
+    description: '',
+  });
+
   // Raw JSON state
   const [rawJsonText, setRawJsonText] = useState('');
   const [jsonError, setJsonError] = useState(null);
@@ -84,6 +97,72 @@ export default function TeacherDataEditor() {
 
   const reloadData = () => {
     setRefreshKey((k) => k + 1);
+  };
+
+  // ---- THÊM / SỬA / XÓA UNIT ----
+  const handleOpenCreateUnit = () => {
+    const existingIds = units.map((u) => u.unitId);
+    const nextId = existingIds.length > 0 ? Math.max(...existingIds) + 1 : 13;
+    setUnitForm({
+      unitId: nextId,
+      titleEn: '',
+      titleVi: '',
+      topic: '',
+      emoji: '🤖',
+      color: '#FFC83D',
+      description: '',
+    });
+    setIsEditingUnit(false);
+    setShowUnitModal(true);
+  };
+
+  const handleOpenEditUnit = (unit) => {
+    setUnitForm({
+      unitId: unit.unitId,
+      titleEn: unit.titleEn || unit.title || '',
+      titleVi: unit.titleVi || '',
+      topic: unit.topic || '',
+      emoji: unit.emoji || '📘',
+      color: unit.color || '#FFC83D',
+      description: unit.description || '',
+    });
+    setIsEditingUnit(true);
+    setShowUnitModal(true);
+  };
+
+  const handleSaveUnit = (e) => {
+    e.preventDefault();
+    if (!unitForm.titleEn.trim() || !unitForm.titleVi.trim()) {
+      showNotification('Vui lòng nhập đầy đủ tiêu đề Tiếng Anh và Tiếng Việt cho Unit!', 'peach');
+      return;
+    }
+    const saved = store().saveCreatedUnit({
+      ...unitForm,
+      unitId: Number(unitForm.unitId),
+    });
+    setSelectedUnitId(saved.unitId);
+    setShowUnitModal(false);
+    reloadData();
+    showNotification(
+      isEditingUnit
+        ? `✅ Đã cập nhật thành công thông tin Unit ${saved.unitId}!`
+        : `🎉 Đã tạo thành công Unit ${saved.unitId}: ${saved.titleEn}! Thầy cô có thể thêm từ vựng, video và bài tập ngay bây giờ.`,
+      'mint'
+    );
+  };
+
+  const handleDeleteCustomUnit = (unitId, unitTitle) => {
+    if (
+      window.confirm(
+        `Thầy cô có chắc chắn muốn xóa vĩnh viễn Unit ${unitId} (${unitTitle || 'Tự tạo'}) không?\n\nToàn bộ từ vựng, video bài giảng và câu hỏi trắc nghiệm của Unit này sẽ bị xóa.`
+      )
+    ) {
+      store().deleteCreatedUnit(unitId);
+      const remaining = listUnits();
+      setSelectedUnitId(remaining[0]?.unitId || 1);
+      reloadData();
+      showNotification(`🗑️ Đã xóa thành công Unit ${unitId}!`, 'mint');
+    }
   };
 
   // ---- TỪ VỰNG ----
@@ -341,37 +420,80 @@ export default function TeacherDataEditor() {
       )}
 
       {/* Thanh chọn Unit & Trạng thái tùy biến */}
-      <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-          <label className="text-base font-black text-ink whitespace-nowrap">Chọn Unit cần chỉnh sửa:</label>
-          <select
-            value={selectedUnitId}
-            onChange={(e) => {
-              setSelectedUnitId(Number(e.target.value));
-              setJsonError(null);
-            }}
-            className="rounded-2xl bg-cream px-4 py-2.5 text-base font-black text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana cursor-pointer"
-          >
-            {units.map((u) => (
-              <option key={u.unitId} value={u.unitId}>
-                Unit {u.unitId}: {u.title} ({u.titleVi})
-              </option>
-            ))}
-          </select>
+      <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center gap-3 flex-wrap">
+          <div className="flex items-center gap-2 flex-wrap">
+            <label className="text-base font-black text-ink whitespace-nowrap">Chọn Unit cần chỉnh sửa:</label>
+            <select
+              value={selectedUnitId}
+              onChange={(e) => {
+                setSelectedUnitId(Number(e.target.value));
+                setJsonError(null);
+              }}
+              className="rounded-2xl bg-cream px-4 py-2.5 text-base font-black text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana cursor-pointer"
+            >
+              {units.map((u) => (
+                <option key={u.unitId} value={u.unitId}>
+                  Unit {u.unitId}: {u.title || u.titleEn} ({u.titleVi}) {u.isCustomUnit ? '🌟 [Tự tạo]' : ''}
+                </option>
+              ))}
+            </select>
+          </div>
 
           <span
             className={`rounded-full px-3 py-1 text-xs font-black uppercase tracking-wider ${
-              isCustomized
+              currentUnit?.isCustomUnit
+                ? 'bg-purple-100 text-purple-700 border border-purple-200'
+                : isCustomized
                 ? 'bg-peach text-white shadow-xs'
                 : 'bg-mint-soft text-mint-dark'
             }`}
           >
-            {isCustomized ? '✏️ Đã có dữ liệu tùy biến riêng' : '📖 Dữ liệu gốc SGK'}
+            {currentUnit?.isCustomUnit
+              ? '🌟 Unit Thầy Cô tự tạo'
+              : isCustomized
+              ? '✏️ Đã có dữ liệu tùy biến riêng'
+              : '📖 Dữ liệu gốc SGK'}
           </span>
+
+          {/* Các nút thao tác với Unit: Thêm / Sửa / Xóa */}
+          <div className="flex items-center gap-2 flex-wrap">
+            <button
+              type="button"
+              onClick={handleOpenCreateUnit}
+              className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-3.5 py-2 text-xs sm:text-sm font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none"
+            >
+              <Plus className="h-4 w-4" />
+              <span>Thêm Unit Mới</span>
+            </button>
+
+            {currentUnit?.isCustomUnit && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => handleOpenEditUnit(currentUnit)}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-banana px-3 py-2 text-xs sm:text-sm font-black text-ink hover:bg-banana-dark transition-all cursor-pointer shadow-xs"
+                  title="Sửa tên, biểu tượng, mô tả của Unit này"
+                >
+                  <FileEdit className="h-4 w-4" />
+                  <span>Sửa Unit</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => handleDeleteCustomUnit(currentUnit.unitId, currentUnit.titleEn || currentUnit.title)}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-rose-soft px-3 py-2 text-xs sm:text-sm font-black text-rose-700 hover:bg-rose-500 hover:text-white transition-all cursor-pointer border border-rose-200"
+                  title="Xóa Unit tự tạo này"
+                >
+                  <Trash2 className="h-4 w-4" />
+                  <span>Xóa Unit</span>
+                </button>
+              </>
+            )}
+          </div>
         </div>
 
         {/* Các nút thao tác nhanh: Tải JSON / Khôi phục */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <button
             onClick={handleExportUnitJson}
             className="inline-flex items-center gap-1.5 rounded-2xl bg-cream px-3.5 py-2 text-xs font-black text-ink hover:bg-banana-soft transition-all cursor-pointer border border-banana-soft"
@@ -380,7 +502,7 @@ export default function TeacherDataEditor() {
             <span>Tải JSON Unit</span>
           </button>
 
-          {isCustomized && (
+          {!currentUnit?.isCustomUnit && isCustomized && (
             <button
               onClick={handleResetUnit}
               className="inline-flex items-center gap-1.5 rounded-2xl bg-peach-soft px-3.5 py-2 text-xs font-black text-peach-dark hover:bg-peach hover:text-white transition-all cursor-pointer"
@@ -1184,6 +1306,175 @@ export default function TeacherDataEditor() {
                   className="rounded-2xl bg-banana px-6 py-2.5 text-sm font-black text-ink shadow-[0_3px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
                 >
                   Lưu câu hỏi
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL THÊM / SỬA UNIT */}
+      {showUnitModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xs overflow-y-auto">
+          <div className="w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl border-4 border-mint flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">{isEditingUnit ? '✏️' : '🚀'}</span>
+                <div>
+                  <h3 className="text-xl font-black text-ink">
+                    {isEditingUnit ? `Chỉnh sửa Unit ${unitForm.unitId}` : 'Tạo thêm Unit học mới'}
+                  </h3>
+                  <p className="text-xs font-bold text-ink-soft">
+                    {isEditingUnit
+                      ? 'Cập nhật tên bài học, emoji hoặc chủ đề'
+                      : 'Mở rộng chương trình học theo nhu cầu riêng của lớp'}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowUnitModal(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-cream font-black text-ink hover:bg-peach hover:text-white transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveUnit} className="flex flex-col gap-4">
+              <div className="grid grid-cols-3 gap-3">
+                <div>
+                  <label className="block text-xs font-black text-ink mb-1">Số thứ tự Unit (*):</label>
+                  <input
+                    type="number"
+                    required
+                    min={1}
+                    max={99}
+                    disabled={isEditingUnit}
+                    value={unitForm.unitId}
+                    onChange={(e) => setUnitForm({ ...unitForm, unitId: Number(e.target.value) })}
+                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-black border border-banana-soft disabled:opacity-60"
+                  />
+                </div>
+                <div className="col-span-2">
+                  <label className="block text-xs font-black text-ink mb-1">Chủ đề (Topic):</label>
+                  <input
+                    type="text"
+                    value={unitForm.topic}
+                    onChange={(e) => setUnitForm({ ...unitForm, topic: e.target.value })}
+                    placeholder="Ví dụ: Future Technology, Robots..."
+                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Tiêu đề Tiếng Anh (*):</label>
+                <input
+                  type="text"
+                  required
+                  value={unitForm.titleEn}
+                  onChange={(e) => setUnitForm({ ...unitForm, titleEn: e.target.value })}
+                  placeholder="Ví dụ: Robots in the Future"
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-black border border-banana-soft"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Tiêu đề Tiếng Việt (*):</label>
+                <input
+                  type="text"
+                  required
+                  value={unitForm.titleVi}
+                  onChange={(e) => setUnitForm({ ...unitForm, titleVi: e.target.value })}
+                  placeholder="Ví dụ: Robot trong tương lai"
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                />
+              </div>
+
+              {/* Chọn Biểu tượng Emoji */}
+              <div>
+                <label className="block text-xs font-black text-ink mb-1.5 flex items-center justify-between">
+                  <span>Biểu tượng Unit (Emoji):</span>
+                  <span className="text-xl">{unitForm.emoji || '📘'}</span>
+                </label>
+                <div className="flex flex-wrap gap-1.5 p-2 rounded-2xl bg-cream border border-banana-soft mb-2">
+                  {['🤖', '🚀', '📚', '⚽', '🎨', '🎵', '🏥', '🔬', '🌍', '💡', '🏫', '🐾', '🍕', '🏕️', '💻', '🛸', '⭐', '🧩'].map((em) => (
+                    <button
+                      key={em}
+                      type="button"
+                      onClick={() => setUnitForm({ ...unitForm, emoji: em })}
+                      className={`h-9 w-9 rounded-xl flex items-center justify-center text-lg transition-transform hover:scale-110 cursor-pointer ${
+                        unitForm.emoji === em ? 'bg-banana shadow-xs ring-2 ring-banana-dark' : 'bg-white'
+                      }`}
+                    >
+                      {em}
+                    </button>
+                  ))}
+                </div>
+                <input
+                  type="text"
+                  value={unitForm.emoji}
+                  onChange={(e) => setUnitForm({ ...unitForm, emoji: e.target.value })}
+                  placeholder="Hoặc tự gõ emoji tùy ý..."
+                  className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                />
+              </div>
+
+              {/* Màu sắc thẻ bài học */}
+              <div>
+                <label className="block text-xs font-black text-ink mb-1.5">Màu sắc thẻ bài học:</label>
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+                  {[
+                    { label: 'Vàng', hex: '#FFC83D' },
+                    { label: 'Xanh ngọc', hex: '#7ED6B5' },
+                    { label: 'Da trời', hex: '#8EC5FF' },
+                    { label: 'Cam đào', hex: '#FFB38A' },
+                    { label: 'Hồng', hex: '#FF9A9A' },
+                    { label: 'Tím', hex: '#C3A6FF' },
+                  ].map((c) => (
+                    <button
+                      key={c.hex}
+                      type="button"
+                      onClick={() => setUnitForm({ ...unitForm, color: c.hex })}
+                      className={`h-9 rounded-xl font-black text-xs flex items-center justify-center gap-1 border-2 transition-all cursor-pointer ${
+                        unitForm.color === c.hex
+                          ? 'border-ink scale-105 shadow-xs'
+                          : 'border-transparent opacity-80 hover:opacity-100'
+                      }`}
+                      style={{ backgroundColor: c.hex, color: '#2B231D' }}
+                    >
+                      {unitForm.color === c.hex && <span>✓</span>}
+                      <span>{c.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Mô tả tóm tắt nội dung bài học:</label>
+                <textarea
+                  rows={2}
+                  value={unitForm.description}
+                  onChange={(e) => setUnitForm({ ...unitForm, description: e.target.value })}
+                  placeholder="Ví dụ: Từ vựng và cấu trúc về các công nghệ thông minh, robot hỗ trợ con người..."
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-xs font-bold border border-banana-soft resize-none"
+                />
+              </div>
+
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
+                <button
+                  type="button"
+                  onClick={() => setShowUnitModal(false)}
+                  className="rounded-2xl px-5 py-2.5 text-sm font-bold text-ink-soft hover:bg-cream cursor-pointer"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 rounded-2xl bg-mint px-6 py-2.5 text-sm font-black text-white shadow-[0_3px_0_#58b292] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+                >
+                  <Check className="h-4 w-4" />
+                  <span>{isEditingUnit ? 'Lưu thay đổi' : 'Tạo Unit ngay'}</span>
                 </button>
               </div>
             </form>

@@ -70,21 +70,31 @@ export default function TeacherGuide() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-peach font-black text-base">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-peach text-white text-xs">1</span>
-                <span>Tải ảnh từ máy tính</span>
+              <div className="flex items-center gap-2 text-mint-dark font-black text-base">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-mint text-white text-xs">1</span>
+                <span>Thêm Unit học mới</span>
               </div>
               <p className="text-xs font-bold text-ink-soft leading-relaxed">
-                Vào tab <strong>"Tùy biến Data"</strong> ➔ Bấm <strong>"+ Thêm từ vựng mới"</strong>. Bấm nút <strong>"📁 Tải ảnh từ máy tính"</strong> hoặc dán link ảnh. <em>Nếu không có ảnh thì từ vựng sẽ để trống ảnh, không cần tìm biểu tượng/emoji.</em>
+                Bấm nút <strong>"+ Thêm Unit Mới"</strong> cạnh ô chọn Unit. Thầy cô có thể tạo thêm Unit 13, 14... hoặc các chuyên đề ôn tập riêng. Unit mới sẽ hiển thị ngay trên Trang chủ và giao bài cho học sinh!
               </p>
             </div>
 
             <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-mint-dark font-black text-base">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-mint text-white text-xs">2</span>
-                <span>Âm thanh phát âm tự động</span>
+              <div className="flex items-center gap-2 text-peach font-black text-base">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-peach text-white text-xs">2</span>
+                <span>Tải ảnh từ máy tính</span>
+              </div>
+              <p className="text-xs font-bold text-ink-soft leading-relaxed">
+                Vào tab <strong>"Tùy biến Data"</strong> ➔ Bấm <strong>"+ Thêm từ vựng mới"</strong>. Bấm nút <strong>"📁 Tải ảnh từ máy tính"</strong> hoặc dán link ảnh. <em>Nếu không có ảnh thì từ vựng sẽ để trống ảnh, không cần tìm emoji.</em>
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-sky-dark font-black text-base">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sky text-ink text-xs">3</span>
+                <span>Âm thanh phát âm chuẩn</span>
               </div>
               <p className="text-xs font-bold text-ink-soft leading-relaxed">
                 Hệ thống <strong>tự động nhận dạng và phát giọng đọc Anh - Anh chuẩn bản xứ</strong> từ Oxford/Cambridge qua Cloud TTS. Thầy cô cũng có thể chèn link file MP3 riêng nếu có.
@@ -92,12 +102,12 @@ export default function TeacherGuide() {
             </div>
 
             <div className="rounded-2xl bg-cream/70 p-4 border border-banana-soft flex flex-col gap-2">
-              <div className="flex items-center gap-2 text-sky-dark font-black text-base">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sky text-ink text-xs">3</span>
+              <div className="flex items-center gap-2 text-purple-700 font-black text-base">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-600 text-white text-xs">4</span>
                 <span>Nhúng Video YouTube</span>
               </div>
               <p className="text-xs font-bold text-ink-soft leading-relaxed">
-                Thầy cô có bài giảng YouTube hay? Chỉ cần copy đường link (URL) YouTube dán vào tab <strong>"Video bài giảng"</strong>, học sinh sẽ xem trực tiếp ngay trong trạm học của Unit.
+                Thầy cô có bài giảng YouTube hay? Chỉ cần copy đường link YouTube dán vào tab <strong>"Video bài giảng"</strong>, học sinh sẽ xem trực tiếp ngay trong trạm học của Unit.
               </p>
             </div>
           </div>

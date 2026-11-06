@@ -27,7 +27,7 @@ export const t = {
     continuePrompt: 'Bấm vào đây để vào học bài ngay nhé!',
     startNow: 'Vào học ngay →',
     streak: (n) => (n > 0 ? `Chuỗi ${n} ngày học liên tiếp` : 'Bắt đầu chuỗi ngày học hôm nay nhé!'),
-    units: '12 bài học theo sách giáo khoa (Unit)',
+    units: 'Các bài học theo chương trình (Unit)',
     unitsSub: 'Em bấm vào bài học để bắt đầu học từ mới',
     practiceArea: 'Luyện tập & Đánh giá năng lực',
     weeklyTest: 'Làm bài test tuần',

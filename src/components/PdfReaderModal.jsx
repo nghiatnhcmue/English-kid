@@ -196,3 +196,4 @@ export default function PdfReaderModal({ isOpen, onClose, initialBookId = 'tap1'
     </div>
   );
 }
+

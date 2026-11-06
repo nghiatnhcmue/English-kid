@@ -22,7 +22,7 @@ import PronunciationPage from './pages/PronunciationPage.jsx';
 import StudentAuthModal from './components/StudentAuthModal.jsx';
 
 const NAV = [
-  { to: '/', label: '12 Bài học', icon: '📚', end: true },
+  { to: '/', label: 'Bài học', icon: '📚', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
@@ -189,7 +189,7 @@ function MobileTopBar({ currentStudent, onOpenAuthModal, totalStars }) {
 }
 
 const MOBILE_NAV = [
-  { to: '/', label: '12 Bài học', icon: '📚', end: true },
+  { to: '/', label: 'Bài học', icon: '📚', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
   { to: '/test', label: 'Test tuần', icon: '📝' },
   { to: '/journal', label: 'Nhật ký', icon: '📒' },

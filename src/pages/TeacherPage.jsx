@@ -322,7 +322,7 @@ export default function TeacherPage() {
           }`}
         >
           <span>🗺️</span>
-          <span>Lộ Trình 12 Unit</span>
+          <span>Lộ Trình Bài Học ({allUnits.length} Unit)</span>
         </button>
 
         <button
@@ -642,7 +642,7 @@ export default function TeacherPage() {
           <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
             <div>
               <h3 className="text-xl sm:text-2xl font-black text-ink">
-                Tiến Độ Chi Tiết 12 Unit (Global Success 6)
+                Tiến Độ Chi Tiết Các Unit ({allUnits.length} Bài học)
               </h3>
               <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
                 Theo dõi học sinh đã hoàn thành những trạm kỹ năng nào trong từng bài học
@@ -926,6 +926,69 @@ export default function TeacherPage() {
           </div>
         </section>
       )}
+
+      {/* Nút Hướng Dẫn Nổi Cố Định Ở Góc Dưới - Luôn hiển thị dù thầy cô cuộn trang tới đâu */}
+      <button
+        type="button"
+        onClick={() => setShowGuideModal(true)}
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-mint px-5 py-3 text-sm font-black text-white shadow-xl shadow-mint-dark/30 hover:-translate-y-1 hover:shadow-2xl active:translate-y-0.5 transition-all cursor-pointer border-2 border-white/60"
+        title="Bấm để mở cẩm nang hướng dẫn cho Thầy Cô"
+      >
+        <BookOpen className="h-5 w-5" />
+        <span className="hidden sm:inline">📖 Hướng Dẫn Thầy Cô</span>
+        <span className="sm:hidden">📖 Hướng dẫn</span>
+      </button>
+
+      {/* Modal Hướng Dẫn Thầy Cô Toàn Diện */}
+      {showGuideModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/70 p-3 sm:p-4 backdrop-blur-xs animate-in fade-in">
+          <div className="relative flex w-full max-w-4xl max-h-[92vh] flex-col rounded-[2.5rem] bg-white p-5 sm:p-7 shadow-2xl border-4 border-mint overflow-hidden">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3 pr-2">
+              <div className="flex items-center gap-2.5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-mint text-white text-xl shadow-xs">
+                  📖
+                </div>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-black text-ink">
+                    Cẩm Nang Hướng Dẫn Dành Cho Thầy Cô
+                  </h3>
+                  <p className="text-xs font-bold text-ink-soft">
+                    Hướng dẫn chi tiết từ A - Z: Giao bài, dán từ Word, tải ảnh từ vựng và quản lý lớp.
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowGuideModal(false)}
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-cream text-ink hover:bg-peach hover:text-white transition-all cursor-pointer font-black"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto py-3 pr-1">
+              <TeacherGuide />
+            </div>
+
+            <div className="flex justify-end pt-3 border-t border-banana-soft">
+              <button
+                type="button"
+                onClick={() => setShowGuideModal(false)}
+                className="rounded-2xl bg-mint px-6 py-2.5 text-sm font-black text-white shadow-[0_3px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+              >
+                Đã hiểu & Tiếp tục làm việc ↵
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Trình Đọc Sách PDF Tích Hợp Sẵn */}
+      <PdfReaderModal
+        isOpen={showPdfReaderModal}
+        onClose={() => setShowPdfReaderModal(false)}
+        initialBookId={selectedBookForReader}
+      />
 
       {/* Nút Hướng Dẫn Nổi Cố Định Ở Góc Dưới - Luôn hiển thị dù thầy cô cuộn trang tới đâu */}
       <button

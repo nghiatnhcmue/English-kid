@@ -11,26 +11,82 @@ for (const mod of Object.values(modules)) {
 
 function getMergedData(numId) {
   const base = baseUnitData[numId];
-  if (!base) return null;
   try {
     const custom = store().getCustomUnit(numId);
-    if (!custom) return base;
-    return { ...base, ...custom };
+    if (base) {
+      if (!custom) return base;
+      return { ...base, ...custom };
+    }
+    // Nếu không nằm trong baseUnitData, tìm trong createdUnits do giáo viên tạo
+    const createdUnits = store().getCreatedUnits() || [];
+    const createdMeta = createdUnits.find((u) => u.unitId === numId);
+    if (!createdMeta && !custom) return null;
+    const defaultTemplate = {
+      unitId: numId,
+      title: createdMeta?.titleEn || createdMeta?.title || `Unit ${numId}`,
+      titleVi: createdMeta?.titleVi || '',
+      vocabularies: [],
+      grammar: { points: [], quiz: [] },
+      pronunciation: { sounds: [], explanation: '' },
+      listenPractice: { questions: [] },
+      conversation: [],
+      reading: { passage: '', translation: '', questions: [] },
+      writing: { task: '', guide: '', hints: [] },
+      videos: [],
+      isCustomUnit: true,
+    };
+    return { ...defaultTemplate, ...(custom || {}) };
   } catch {
-    return base;
+    return base || null;
   }
 }
 
 export function listUnits() {
-  return units.map((u) => ({ ...u, available: u.available && !!baseUnitData[u.unitId] }));
+  let customList = [];
+  try {
+    customList = store().getCreatedUnits() || [];
+  } catch {
+    customList = [];
+  }
+
+  const baseList = units.map((u) => ({
+    ...u,
+    title: u.titleEn || u.title,
+    available: u.available && !!baseUnitData[u.unitId],
+  }));
+
+  const combined = [...baseList];
+  for (const cu of customList) {
+    if (!combined.some((u) => u.unitId === cu.unitId)) {
+      combined.push({
+        ...cu,
+        title: cu.titleEn || cu.title || `Unit ${cu.unitId}`,
+        available: true,
+        isCustomUnit: true,
+      });
+    }
+  }
+  combined.sort((a, b) => a.unitId - b.unitId);
+  return combined;
 }
 
 export function getUnit(unitId) {
   const numId = Number(unitId);
-  const meta = units.find((u) => u.unitId === numId);
+  const all = listUnits();
+  const meta = all.find((u) => u.unitId === numId);
   const data = getMergedData(numId);
-  if (!meta || !data) return null;
-  return { ...meta, ...data };
+  if (!meta && !data) return null;
+  const finalMeta = meta || {
+    unitId: numId,
+    titleEn: data?.title || `Unit ${numId}`,
+    title: data?.title || `Unit ${numId}`,
+    titleVi: data?.titleVi || '',
+    emoji: '📘',
+    color: '#FFC83D',
+    available: true,
+    isCustomUnit: true,
+  };
+  return { ...finalMeta, ...(data || {}) };
 }
 
 export function vocabOf(unitIds) {
@@ -41,7 +97,7 @@ export function vocabOf(unitIds) {
 }
 
 export function allWords() {
-  return units.flatMap((u) => vocabOf([u.unitId]));
+  return listUnits().flatMap((u) => vocabOf([u.unitId]));
 }
 
 export function getWord(id) {

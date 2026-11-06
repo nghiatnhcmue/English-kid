@@ -17,6 +17,7 @@ export const KEYS = {
   CURRENT_STUDENT_ID: `${PREFIX}current_student_id`,
   STUDENT_PROGRESS: `${PREFIX}student_progress_map`,
   CUSTOM_QUESTIONS: `${PREFIX}custom_questions`,
+  CREATED_UNITS: `${PREFIX}created_units`,
 };
 
 export const DEFAULT_STUDENTS = [
@@ -379,6 +380,74 @@ export function createStore(storage = globalThis.localStorage) {
       write(KEYS.CUSTOM_UNITS, {});
       if (typeof window !== 'undefined') {
         window.dispatchEvent(new CustomEvent('curriculum-updated', { detail: { all: true } }));
+      }
+      return true;
+    },
+
+    // ---- Quản lý Thêm/Sửa/Xóa Unit mới do Giáo viên tạo ----
+    getCreatedUnits() {
+      const list = read(KEYS.CREATED_UNITS, []);
+      return Array.isArray(list) ? list : [];
+    },
+    saveCreatedUnit(unitMeta, initialData = {}) {
+      const all = api.getCreatedUnits();
+      const numId = Number(unitMeta.unitId);
+      const cleanMeta = {
+        unitId: numId,
+        titleEn: String(unitMeta.titleEn || unitMeta.title || `Unit ${numId}`).trim(),
+        title: String(unitMeta.titleEn || unitMeta.title || `Unit ${numId}`).trim(),
+        titleVi: String(unitMeta.titleVi || '').trim(),
+        topic: String(unitMeta.topic || 'Bài học tự chọn').trim(),
+        emoji: String(unitMeta.emoji || '📘').trim(),
+        color: String(unitMeta.color || '#FFC83D').trim(),
+        description: String(unitMeta.description || 'Bài học bổ trợ do thầy cô biên soạn.').trim(),
+        available: true,
+        isCustomUnit: true,
+        bookVolume: Number(unitMeta.bookVolume) || 2,
+        bookPages: String(unitMeta.bookPages || 'Tự chọn').trim(),
+        createdAt: unitMeta.createdAt || new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      const existingIndex = all.findIndex((u) => u.unitId === numId);
+      let updated;
+      if (existingIndex >= 0) {
+        updated = [...all];
+        updated[existingIndex] = { ...updated[existingIndex], ...cleanMeta };
+      } else {
+        updated = [...all, cleanMeta];
+      }
+      write(KEYS.CREATED_UNITS, updated);
+
+      // Đồng thời khởi tạo dữ liệu nội dung trong CUSTOM_UNITS nếu chưa có
+      const currentCustom = api.getCustomUnit(numId) || {};
+      api.saveCustomUnit(numId, {
+        unitId: numId,
+        title: cleanMeta.titleEn,
+        titleVi: cleanMeta.titleVi,
+        vocabularies: currentCustom.vocabularies || initialData.vocabularies || [],
+        grammar: currentCustom.grammar || initialData.grammar || { points: [], quiz: [] },
+        pronunciation: currentCustom.pronunciation || initialData.pronunciation || { sounds: [], explanation: '' },
+        listenPractice: currentCustom.listenPractice || initialData.listenPractice || { questions: [] },
+        reading: currentCustom.reading || initialData.reading || { passage: '', translation: '', questions: [] },
+        writing: currentCustom.writing || initialData.writing || { task: '', guide: '', hints: [] },
+        videos: currentCustom.videos || initialData.videos || [],
+        isCustomUnit: true,
+      });
+
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('curriculum-updated', { detail: { unitId: numId } }));
+      }
+      return cleanMeta;
+    },
+    deleteCreatedUnit(unitId) {
+      const numId = Number(unitId);
+      const all = api.getCreatedUnits();
+      const updated = all.filter((u) => u.unitId !== numId);
+      write(KEYS.CREATED_UNITS, updated);
+      api.resetUnit(numId);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('curriculum-updated', { detail: { unitId: numId, deleted: true } }));
       }
       return true;
     },

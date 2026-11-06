@@ -118,7 +118,7 @@ export default function HomePage() {
           <div className="flex items-center gap-3 text-ink-soft group-hover:text-ink">
             <span className="text-xl sm:text-2xl" aria-hidden>🔍</span>
             <span className="text-sm sm:text-base font-black">
-              Tìm kiếm từ vựng, ngữ pháp, bài đọc, câu nói... (12 Unit)
+              Tìm kiếm từ vựng, ngữ pháp, bài đọc, câu nói... ({units.length} Unit)
             </span>
           </div>
           <span className="hidden sm:inline-flex rounded-xl bg-banana px-3 py-1.5 text-xs font-black text-ink shadow-2xs group-hover:scale-105 transition-transform">
