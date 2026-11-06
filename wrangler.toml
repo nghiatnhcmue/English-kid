@@ -1,9 +1,12 @@
 name = "english-kid"
 compatibility_date = "2024-11-01"
-pages_build_output_dir = "dist"
+main = "src/worker.js"
+
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "english-kid-db"
 database_id = "4ed23c12-dbf9-4372-9d06-adb610404b5b"
-

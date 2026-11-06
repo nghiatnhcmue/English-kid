@@ -106,6 +106,32 @@
       "emoji": "📦",
       "audio": "/assets/audio/unit11/container.mp3",
       "audioExample": "/assets/audio/unit11/container-example.mp3"
+    },
+    {
+      "id": "u11_09",
+      "word": "protect",
+      "phonetic": "/prəˈtekt/",
+      "wordType": "Động từ",
+      "meaning": "Bảo vệ, gìn giữ",
+      "hint": "Hành động che chở, giữ cho môi trường và thiên nhiên an toàn",
+      "exampleEn": "We must protect the forest and green nature.",
+      "exampleVi": "Chúng ta phải bảo vệ rừng và thiên nhiên xanh.",
+      "emoji": "🛡️",
+      "audio": "/assets/audio/unit11/protect.mp3",
+      "audioExample": "/assets/audio/unit11/protect-example.mp3"
+    },
+    {
+      "id": "u11_10",
+      "word": "save energy",
+      "phonetic": "/seɪv ˈenədʒi/",
+      "wordType": "Cụm động từ",
+      "meaning": "Tiết kiệm năng lượng",
+      "hint": "Tắt đèn, tắt quạt khi ra khỏi phòng để không lãng phí điện năng",
+      "exampleEn": "Turning off unused lights helps save energy.",
+      "exampleVi": "Tắt đèn khi không dùng giúp tiết kiệm năng lượng.",
+      "emoji": "💡",
+      "audio": "/assets/audio/unit11/save-energy.mp3",
+      "audioExample": "/assets/audio/unit11/save-energy-example.mp3"
     }
   ],
   "extraQuestions": [],

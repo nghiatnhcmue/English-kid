@@ -49,15 +49,17 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
     }
 
     // 3. NGỮ PHÁP (A Closer Look 2)
-    if (unit.grammar?.practiceQuestions?.length) {
-      const g = unit.grammar.practiceQuestions[0];
+    const grammarList = unit.grammar?.quiz || unit.grammar?.practiceQuestions || [];
+    if (grammarList.length) {
+      const g = grammarList[0];
+      const correctAns = g.answer || g.options?.[g.answerIndex];
       list.push({
         type: 'grammar',
         domain: '📐 Ngữ pháp cốt lõi',
         question: g.question,
         options: g.options,
-        correctAnswer: g.answer,
-        hint: g.explanation || 'Áp dụng quy tắc ngữ pháp của bài học.',
+        correctAnswer: correctAns,
+        hint: g.explain || g.explanation || 'Áp dụng quy tắc ngữ pháp của bài học.',
       });
     }
 
@@ -75,29 +77,30 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
     }
 
     // 5. KỸ NĂNG ĐỌC (Skills 1)
-    if (unit.reading?.quizQuestions?.length) {
-      const r = unit.reading.quizQuestions[0];
+    const readQuestions = unit.reading?.questions || unit.reading?.quizQuestions || [];
+    if (readQuestions.length) {
+      const r = readQuestions[0];
       list.push({
         type: 'reading',
         domain: '📖 Kỹ năng Đọc hiểu',
-        passage: unit.reading.passageEn,
+        passage: unit.reading.passage || unit.reading.passageEn,
         question: r.question,
         options: r.options,
         correctAnswer: r.options[r.answerIndex],
-        hint: 'Đọc kỹ câu đầu tiên của đoạn văn.',
+        hint: 'Đọc kỹ câu trong đoạn văn để tìm thông tin.',
       });
     }
 
     // 6. KỸ NĂNG VIẾT (Skills 2)
-    if (unit.writing?.exercises?.length) {
-      const w = unit.writing.exercises[0];
+    if (unit.writing) {
+      const w = unit.writing;
       list.push({
         type: 'writing',
         domain: '✍️ Kỹ năng Viết câu',
         isScramble: true,
         meaningVi: w.meaningVi,
         correctSentence: w.correctSentence,
-        shuffledWords: w.shuffledWords,
+        shuffledWords: w.scrambledWords || w.shuffledWords,
         hint: 'Chạm các từ theo đúng thứ tự ngữ pháp.',
       });
     }

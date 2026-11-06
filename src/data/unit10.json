@@ -106,6 +106,32 @@
       "emoji": "🤖",
       "audio": "/assets/audio/unit10/robot-helper.mp3",
       "audioExample": "/assets/audio/unit10/robot-helper-example.mp3"
+    },
+    {
+      "id": "u10_09",
+      "word": "automatic",
+      "phonetic": "/ˌɔːtəˈmætɪk/",
+      "wordType": "Tính từ",
+      "meaning": "Tự động",
+      "hint": "Thiết bị tự đóng mở hoặc tự hoạt động mà không cần người điều khiển",
+      "exampleEn": "Our future house will have automatic doors.",
+      "exampleVi": "Ngôi nhà tương lai của em sẽ có các cánh cửa tự động.",
+      "emoji": "🚪",
+      "audio": "/assets/audio/unit10/automatic.mp3",
+      "audioExample": "/assets/audio/unit10/automatic-example.mp3"
+    },
+    {
+      "id": "u10_10",
+      "word": "modern",
+      "phonetic": "/ˈmɒdn/",
+      "wordType": "Tính từ",
+      "meaning": "Hiện đại, tối tân",
+      "hint": "Mang phong cách mới, áp dụng công nghệ tiên tiến nhất",
+      "exampleEn": "This modern house produces green energy.",
+      "exampleVi": "Ngôi nhà hiện đại này tự sản xuất năng lượng xanh.",
+      "emoji": "🏡",
+      "audio": "/assets/audio/unit10/modern.mp3",
+      "audioExample": "/assets/audio/unit10/modern-example.mp3"
     }
   ],
   "extraQuestions": [],

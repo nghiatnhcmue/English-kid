@@ -154,3 +154,4 @@ export default function StudentProfileModal({ onClose, onSave }) {
     </div>
   );
 }
+

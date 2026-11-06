@@ -106,6 +106,32 @@
       "emoji": "🌻",
       "audio": "/assets/audio/unit12/water-flowers.mp3",
       "audioExample": "/assets/audio/unit12/water-flowers-example.mp3"
+    },
+    {
+      "id": "u12_09",
+      "word": "smart assistant",
+      "phonetic": "/smɑːt əˈsɪstənt/",
+      "wordType": "Danh từ",
+      "meaning": "Trợ lý thông minh",
+      "hint": "Hệ thống AI giúp nhắc nhở lịch học và giải đáp câu hỏi",
+      "exampleEn": "The smart assistant answers all our questions.",
+      "exampleVi": "Trợ lý thông minh giải đáp mọi câu hỏi của em.",
+      "emoji": "🤖",
+      "audio": "/assets/audio/unit12/smart-assistant.mp3",
+      "audioExample": "/assets/audio/unit12/smart-assistant-example.mp3"
+    },
+    {
+      "id": "u12_10",
+      "word": "understand",
+      "phonetic": "/ˌʌndəˈstænd/",
+      "wordType": "Động từ",
+      "meaning": "Thấu hiểu, hiểu",
+      "hint": "Khả năng nắm bắt ý nghĩa hoặc cảm xúc của người khác",
+      "exampleEn": "Future robots will understand human emotions.",
+      "exampleVi": "Robot tương lai sẽ thấu hiểu cảm xúc con người.",
+      "emoji": "🧠",
+      "audio": "/assets/audio/unit12/understand.mp3",
+      "audioExample": "/assets/audio/unit12/understand-example.mp3"
     }
   ],
   "extraQuestions": [],

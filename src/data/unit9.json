@@ -106,6 +106,32 @@
       "emoji": "😋",
       "audio": "/assets/audio/unit9/delicious.mp3",
       "audioExample": "/assets/audio/unit9/delicious-example.mp3"
+    },
+    {
+      "id": "u9_09",
+      "word": "crowded",
+      "phonetic": "/ˈkraʊdɪd/",
+      "wordType": "Tính từ",
+      "meaning": "Đông đúc, náo nhiệt",
+      "hint": "Nơi có rất nhiều người qua lại tấp nập như phố xá trung tâm",
+      "exampleEn": "Tokyo is a very modern and crowded city.",
+      "exampleVi": "Tokyo là một thành phố rất hiện đại và đông đúc.",
+      "emoji": "👥",
+      "audio": "/assets/audio/unit9/crowded.mp3",
+      "audioExample": "/assets/audio/unit9/crowded-example.mp3"
+    },
+    {
+      "id": "u9_10",
+      "word": "historic",
+      "phonetic": "/hɪˈstɒrɪk/",
+      "wordType": "Tính từ",
+      "meaning": "Mang tính lịch sử, cổ kính",
+      "hint": "Địa điểm hoặc công trình có từ lâu đời gắn liền với lịch sử",
+      "exampleEn": "Ha Noi has many famous historic monuments.",
+      "exampleVi": "Hà Nội có nhiều di tích lịch sử nổi tiếng.",
+      "emoji": "📜",
+      "audio": "/assets/audio/unit9/historic.mp3",
+      "audioExample": "/assets/audio/unit9/historic-example.mp3"
     }
   ],
   "extraQuestions": [],

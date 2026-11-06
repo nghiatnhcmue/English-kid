@@ -119,6 +119,32 @@
       "emoji": "⚽",
       "audio": "/assets/audio/unit8/football.mp3",
       "audioExample": "/assets/audio/unit8/football-example.mp3"
+    },
+    {
+      "id": "u8_10",
+      "word": "champion",
+      "phonetic": "/ˈtʃæmpiən/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà vô địch, quán quân",
+      "hint": "Đội hoặc người chiến thắng giải nhất trong một cuộc thi đấu",
+      "exampleEn": "Our school football team became the champion.",
+      "exampleVi": "Đội bóng đá trường em đã trở thành nhà vô địch.",
+      "emoji": "🏆",
+      "audio": "/assets/audio/unit8/champion.mp3",
+      "audioExample": "/assets/audio/unit8/champion-example.mp3"
+    },
+    {
+      "id": "u8_11",
+      "word": "marathon",
+      "phonetic": "/ˈmærəθən/",
+      "wordType": "Danh từ",
+      "meaning": "Cuộc chạy ma-ra-tông",
+      "hint": "Môn thi chạy bộ đường trường dài hơn 42 km đòi hỏi sự bền bỉ",
+      "exampleEn": "Many runners join the city marathon.",
+      "exampleVi": "Nhiều vận động viên tham gia cuộc chạy ma-ra-tông thành phố.",
+      "emoji": "🏃",
+      "audio": "/assets/audio/unit8/marathon.mp3",
+      "audioExample": "/assets/audio/unit8/marathon-example.mp3"
     }
   ],
   "extraQuestions": [],

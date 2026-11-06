@@ -119,6 +119,32 @@
       "emoji": "📺",
       "audio": "/assets/audio/unit7/remote-control.mp3",
       "audioExample": "/assets/audio/unit7/remote-control-example.mp3"
+    },
+    {
+      "id": "u7_10",
+      "word": "weather forecast",
+      "phonetic": "/ˈweðə fɔːkɑːst/",
+      "wordType": "Danh từ",
+      "meaning": "Dự báo thời tiết",
+      "hint": "Bản tin dự đoán thời tiết nắng mưa trên tivi hàng ngày",
+      "exampleEn": "We watch the weather forecast every morning.",
+      "exampleVi": "Gia đình em xem dự báo thời tiết vào mỗi buổi sáng.",
+      "emoji": "⛅",
+      "audio": "/assets/audio/unit7/weather-forecast.mp3",
+      "audioExample": "/assets/audio/unit7/weather-forecast-example.mp3"
+    },
+    {
+      "id": "u7_11",
+      "word": "local television",
+      "phonetic": "/ˈləʊkl ˈtelɪvɪʒn/",
+      "wordType": "Danh từ",
+      "meaning": "Đài truyền hình địa phương",
+      "hint": "Kênh truyền hình phát tin tức và sự kiện trong khu vực tỉnh/thành phố",
+      "exampleEn": "Local television broadcasts news about our town.",
+      "exampleVi": "Đài truyền hình địa phương phát tin tức về thị trấn của em.",
+      "emoji": "🎥",
+      "audio": "/assets/audio/unit7/local-television.mp3",
+      "audioExample": "/assets/audio/unit7/local-television-example.mp3"
     }
   ],
   "extraQuestions": [],

@@ -119,6 +119,32 @@
       "emoji": "🏮",
       "audio": "/assets/audio/unit6/decorate.mp3",
       "audioExample": "/assets/audio/unit6/decorate-example.mp3"
+    },
+    {
+      "id": "u6_10",
+      "word": "gathering",
+      "phonetic": "/ˈɡæð.ə.rɪŋ/",
+      "wordType": "Danh từ",
+      "meaning": "Sum họp gia đình",
+      "hint": "Dịp các thành viên quây quần sum vầy bên nhau ngày Tết",
+      "exampleEn": "Family gathering is a wonderful Tet tradition.",
+      "exampleVi": "Sum họp gia đình là một truyền thống Tết tuyệt vời.",
+      "emoji": "🥘",
+      "audio": "/assets/audio/unit6/gathering.mp3",
+      "audioExample": "/assets/audio/unit6/gathering-example.mp3"
+    },
+    {
+      "id": "u6_11",
+      "word": "first footer",
+      "phonetic": "/ˌfɜːst ˈfʊtə/",
+      "wordType": "Danh từ",
+      "meaning": "Người xông đất",
+      "hint": "Người đầu tiên bước vào nhà chúc Tết sau thời khắc Giao thừa",
+      "exampleEn": "The first footer brings good luck for the new year.",
+      "exampleVi": "Người xông đất mang lại may mắn cho năm mới.",
+      "emoji": "🚶",
+      "audio": "/assets/audio/unit6/first-footer.mp3",
+      "audioExample": "/assets/audio/unit6/first-footer-example.mp3"
     }
   ],
   "extraQuestions": [],
