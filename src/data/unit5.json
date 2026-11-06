@@ -12,7 +12,9 @@
       "hint": "Dòng nước đổ từ trên vách núi cao xuống",
       "exampleEn": "Ban Gioc is a stunning waterfall in Cao Bang.",
       "exampleVi": "Bản Giốc là một thác nước tuyệt đẹp ở Cao Bằng.",
-      "emoji": "🌊"
+      "emoji": "🌊",
+      "audio": "/assets/audio/unit5/waterfall.mp3",
+      "audioExample": "/assets/audio/unit5/waterfall-example.mp3"
     },
     {
       "id": "u5_02",
@@ -23,7 +25,9 @@
       "hint": "Khoang rỗng tự nhiên lớn bên trong lòng núi đá",
       "exampleEn": "Son Doong is the largest cave in the world.",
       "exampleVi": "Sơn Đoòng là hang động lớn nhất thế giới.",
-      "emoji": "🪨"
+      "emoji": "🪨",
+      "audio": "/assets/audio/unit5/cave.mp3",
+      "audioExample": "/assets/audio/unit5/cave-example.mp3"
     },
     {
       "id": "u5_03",
@@ -34,7 +38,9 @@
       "hint": "Vùng đất rộng lớn toàn cát, rất khô hạn và ít mưa",
       "exampleEn": "Mui Ne has white sand dunes like a mini desert.",
       "exampleVi": "Mũi Né có những đồi cát trắng như một sa mạc thu nhỏ.",
-      "emoji": "🏜️"
+      "emoji": "🏜️",
+      "audio": "/assets/audio/unit5/desert.mp3",
+      "audioExample": "/assets/audio/unit5/desert-example.mp3"
     },
     {
       "id": "u5_04",
@@ -45,7 +51,9 @@
       "hint": "Vùng đất được bao bọc bốn bề bởi nước biển (chú ý chữ s câm)",
       "exampleEn": "Phu Quoc is a beautiful tropical island.",
       "exampleVi": "Phú Quốc là một hòn đảo nhiệt đới xinh đẹp.",
-      "emoji": "🏝️"
+      "emoji": "🏝️",
+      "audio": "/assets/audio/unit5/island.mp3",
+      "audioExample": "/assets/audio/unit5/island-example.mp3"
     },
     {
       "id": "u5_05",
@@ -56,7 +64,9 @@
       "hint": "Vùng đất rộng có bạt ngàn cây cối và muông thú",
       "exampleEn": "Cuc Phuong is an ancient rain forest in Viet Nam.",
       "exampleVi": "Cúc Phương là một khu rừng mưa cổ đại ở Việt Nam.",
-      "emoji": "🌲"
+      "emoji": "🌲",
+      "audio": "/assets/audio/unit5/forest.mp3",
+      "audioExample": "/assets/audio/unit5/forest-example.mp3"
     },
     {
       "id": "u5_06",
@@ -67,7 +77,9 @@
       "hint": "Vùng đất nhô cao hùng vĩ so với mặt đất",
       "exampleEn": "Fansipan is the highest mountain in Viet Nam.",
       "exampleVi": "Phan-xi-păng là ngọn núi cao nhất Việt Nam.",
-      "emoji": "⛰️"
+      "emoji": "⛰️",
+      "audio": "/assets/audio/unit5/mountain.mp3",
+      "audioExample": "/assets/audio/unit5/mountain-example.mp3"
     },
     {
       "id": "u5_07",
@@ -78,7 +90,9 @@
       "hint": "Túi vải dày ấm áp dùng để ngủ khi đi cắm trại ngoài trời",
       "exampleEn": "Bring a warm sleeping bag for the camping trip.",
       "exampleVi": "Hãy mang theo một chiếc túi ngủ ấm cho chuyến cắm trại.",
-      "emoji": "🛌"
+      "emoji": "🛌",
+      "audio": "/assets/audio/unit5/sleeping-bag.mp3",
+      "audioExample": "/assets/audio/unit5/sleeping-bag-example.mp3"
     },
     {
       "id": "u5_08",
@@ -89,7 +103,9 @@
       "hint": "Balo đeo vai đựng quần áo, nước uống khi đi leo núi",
       "exampleEn": "Pack all your supplies in your backpack.",
       "exampleVi": "Hãy xếp tất cả đồ dùng vào ba lô dã ngoại của em.",
-      "emoji": "🎒"
+      "emoji": "🎒",
+      "audio": "/assets/audio/unit5/backpack.mp3",
+      "audioExample": "/assets/audio/unit5/backpack-example.mp3"
     },
     {
       "id": "u5_09",
@@ -100,7 +116,9 @@
       "hint": "Băng dán nhỏ dùng để bảo vệ vết xước trên da",
       "exampleEn": "Put a plaster on your cut finger.",
       "exampleVi": "Dán một miếng băng cá nhân lên ngón tay bị xước nhé.",
-      "emoji": "🩹"
+      "emoji": "🩹",
+      "audio": "/assets/audio/unit5/plaster.mp3",
+      "audioExample": "/assets/audio/unit5/plaster-example.mp3"
     },
     {
       "id": "u5_10",
@@ -111,7 +129,9 @@
       "hint": "Kem thoa bảo vệ da khi đi ra ngoài trời nắng gắt",
       "exampleEn": "You must wear sun cream at the beach.",
       "exampleVi": "Em phải thoa kem chống nắng khi ở bãi biển.",
-      "emoji": "🧴"
+      "emoji": "🧴",
+      "audio": "/assets/audio/unit5/sun-cream.mp3",
+      "audioExample": "/assets/audio/unit5/sun-cream-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -205,5 +225,27 @@
     ],
     "correctSentence": "You must carry a heavy backpack carefully.",
     "meaningVi": "Em phải đeo chiếc ba lô nặng thật cẩn thận."
+  },
+  "video": {
+    "title": "Khám phá thiên nhiên: Geography Club - Wonders of Viet Nam (Kỳ quan Việt Nam)",
+    "channel": "Global Success English 6",
+    "youtubeId": "W6x2_L9mP7Q",
+    "searchQuery": "tiếng anh 6 global success unit 5 getting started",
+    "summaryVi": "Chuyến thám hiểm trực quan qua Vịnh Hạ Long, Đỉnh Fansipan và Hang Sơn Đoòng cùng các quy tắc an toàn du lịch cần ghi nhớ (Must / Mustn't).",
+    "keySentences": [
+      {
+        "en": "Ha Long Bay has thousands of stunning limestone islands.",
+        "vi": "Vịnh Hạ Long có hàng ngàn hòn đảo đá vôi tuyệt đẹp."
+      },
+      {
+        "en": "You must bring a raincoat and warm clothes.",
+        "vi": "Bạn phải mang theo áo mưa và quần áo ấm."
+      },
+      {
+        "en": "You mustn't litter in the national park.",
+        "vi": "Bạn không được xả rác trong vườn quốc gia."
+      }
+    ],
+    "reflectionQuestion": "Tại sao khi đi thám hiểm hang động chúng ta phải mang theo đèn pin?"
   }
 }

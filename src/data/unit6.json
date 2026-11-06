@@ -12,7 +12,9 @@
       "hint": "Hoa đào hồng rực hoặc hoa mai vàng nở rộ đón mùa xuân",
       "exampleEn": "Peach blossom blooms everywhere at Tet.",
       "exampleVi": "Hoa đào nở rộ khắp nơi vào dịp Tết.",
-      "emoji": "🌸"
+      "emoji": "🌸",
+      "audio": "/assets/audio/unit6/blossom.mp3",
+      "audioExample": "/assets/audio/unit6/blossom-example.mp3"
     },
     {
       "id": "u6_02",
@@ -23,7 +25,9 @@
       "hint": "Pháo bắn rực rỡ trên bầu trời đêm giao thừa",
       "exampleEn": "We watched the firework display on New Year's Eve.",
       "exampleVi": "Cả nhà em đã xem màn bắn pháo hoa vào đêm giao thừa.",
-      "emoji": "🎆"
+      "emoji": "🎆",
+      "audio": "/assets/audio/unit6/firework.mp3",
+      "audioExample": "/assets/audio/unit6/firework-example.mp3"
     },
     {
       "id": "u6_03",
@@ -34,7 +38,9 @@
       "hint": "Tiền mừng tuổi đựng trong phong bao đỏ chúc may mắn",
       "exampleEn": "Children receive lucky money from their grandparents.",
       "exampleVi": "Trẻ em nhận tiền lì xì từ ông bà.",
-      "emoji": "🧧"
+      "emoji": "🧧",
+      "audio": "/assets/audio/unit6/lucky-money.mp3",
+      "audioExample": "/assets/audio/unit6/lucky-money-example.mp3"
     },
     {
       "id": "u6_04",
@@ -45,7 +51,9 @@
       "hint": "Cô dì, chú bác, anh chị em họ trong gia đình",
       "exampleEn": "We visit our relative during the Tet holidays.",
       "exampleVi": "Chúng em đi thăm người bà con họ hàng trong dịp nghỉ Tết.",
-      "emoji": "👨‍👩‍👧‍👦"
+      "emoji": "👨‍👩‍👧‍👦",
+      "audio": "/assets/audio/unit6/relative.mp3",
+      "audioExample": "/assets/audio/unit6/relative-example.mp3"
     },
     {
       "id": "u6_05",
@@ -56,7 +64,9 @@
       "hint": "Tập giấy ghi ngày tháng năm mới treo trên tường",
       "exampleEn": "My mum bought a new calendar for the spring.",
       "exampleVi": "Mẹ em đã mua một quyển lịch mới cho mùa xuân.",
-      "emoji": "📅"
+      "emoji": "📅",
+      "audio": "/assets/audio/unit6/calendar.mp3",
+      "audioExample": "/assets/audio/unit6/calendar-example.mp3"
     },
     {
       "id": "u6_06",
@@ -67,7 +77,9 @@
       "hint": "Nơi thờ Phật, mọi người đến cầu bình an đầu năm",
       "exampleEn": "People go to the pagoda to pray for good luck.",
       "exampleVi": "Mọi người đi lễ chùa để cầu may mắn.",
-      "emoji": "🛕"
+      "emoji": "🛕",
+      "audio": "/assets/audio/unit6/pagoda.mp3",
+      "audioExample": "/assets/audio/unit6/pagoda-example.mp3"
     },
     {
       "id": "u6_07",
@@ -78,7 +90,9 @@
       "hint": "Những lời tốt đẹp gửi gắm cho nhau vào năm mới",
       "exampleEn": "I send my best wish to my beloved family.",
       "exampleVi": "Em gửi lời chúc tốt đẹp nhất tới gia đình thân yêu.",
-      "emoji": "✨"
+      "emoji": "✨",
+      "audio": "/assets/audio/unit6/wish.mp3",
+      "audioExample": "/assets/audio/unit6/wish-example.mp3"
     },
     {
       "id": "u6_08",
@@ -89,7 +103,9 @@
       "hint": "Bánh chưng, bánh tét, dưa hành ngày Tết",
       "exampleEn": "Banh chung is a special food for Vietnamese Tet.",
       "exampleVi": "Bánh chưng là một món ăn đặc biệt cho ngày Tết Việt Nam.",
-      "emoji": "🍲"
+      "emoji": "🍲",
+      "audio": "/assets/audio/unit6/special-food.mp3",
+      "audioExample": "/assets/audio/unit6/special-food-example.mp3"
     },
     {
       "id": "u6_09",
@@ -100,7 +116,9 @@
       "hint": "Treo đèn lồng, hoa tươi làm đẹp nhà cửa đón Tết",
       "exampleEn": "We decorate our house with yellow flowers.",
       "exampleVi": "Chúng em trang trí nhà cửa bằng những bông hoa vàng.",
-      "emoji": "🏮"
+      "emoji": "🏮",
+      "audio": "/assets/audio/unit6/decorate.mp3",
+      "audioExample": "/assets/audio/unit6/decorate-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -193,5 +211,27 @@
     ],
     "correctSentence": "Children receive lucky money at Tet.",
     "meaningVi": "Trẻ em được nhận tiền lì xì vào dịp Tết."
+  },
+  "video": {
+    "title": "Văn hóa ngày Tết: Happy New Year! (Phong tục Tết cổ truyền)",
+    "channel": "Global Success English 6",
+    "youtubeId": "T8j3_B7vK2M",
+    "searchQuery": "tiếng anh 6 global success unit 6 getting started",
+    "summaryVi": "Không khí chuẩn bị đón Tết của gia đình bạn Phong: dọn dẹp nhà cửa, gói bánh chưng, đi chợ hoa đào hoa mai và gửi lời chúc tốt đẹp.",
+    "keySentences": [
+      {
+        "en": "We should decorate our house before New Year's Eve.",
+        "vi": "Chúng ta nên trang hoàng nhà cửa trước đêm giao thừa."
+      },
+      {
+        "en": "Children receive lucky money in red envelopes.",
+        "vi": "Trẻ em nhận được tiền lì xì trong những phong bao màu đỏ."
+      },
+      {
+        "en": "You shouldn't break things during Tet holiday.",
+        "vi": "Bạn không nên làm vỡ đồ đạc trong những ngày Tết."
+      }
+    ],
+    "reflectionQuestion": "Những món ăn đặc trưng nào thường có trong mâm cỗ Tết?"
   }
 }

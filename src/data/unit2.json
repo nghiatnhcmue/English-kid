@@ -225,19 +225,31 @@
     "quiz": [
       {
         "question": "The cat is sleeping ______ the sofa.",
-        "options": ["on", "in", "between"],
+        "options": [
+          "on",
+          "in",
+          "between"
+        ],
         "answerIndex": 0,
         "explain": "Con mèo đang ngủ trên bề mặt ghế sô-pha, dùng giới từ 'on'."
       },
       {
         "question": "There is a microwave ______ the kitchen.",
-        "options": ["at", "on", "in"],
+        "options": [
+          "at",
+          "on",
+          "in"
+        ],
         "answerIndex": 2,
         "explain": "Ở bên trong phòng bếp, dùng giới từ 'in'."
       },
       {
         "question": "The bathroom is ______ to my bedroom.",
-        "options": ["next", "under", "behind"],
+        "options": [
+          "next",
+          "under",
+          "behind"
+        ],
         "answerIndex": 0,
         "explain": "Cụm 'next to' có nghĩa là ở ngay bên cạnh."
       }
@@ -246,7 +258,11 @@
   "listening": {
     "transcript": "Welcome to my home. There is a living room, a kitchen and two bedrooms.",
     "question": "Ngôi nhà có bao nhiêu phòng ngủ?",
-    "options": ["Một phòng", "Hai phòng", "Ba phòng"],
+    "options": [
+      "Một phòng",
+      "Hai phòng",
+      "Ba phòng"
+    ],
     "answerIndex": 1
   },
   "speaking": {
@@ -259,19 +275,34 @@
     "questions": [
       {
         "question": "Nam sống ở kiểu nhà nào?",
-        "options": ["Nhà ở quê", "Căn hộ chung cư", "Nhà phố trong thành phố"],
+        "options": [
+          "Nhà ở quê",
+          "Căn hộ chung cư",
+          "Nhà phố trong thành phố"
+        ],
         "answerIndex": 2
       },
       {
         "question": "Phòng ngủ của Nam nằm ở tầng mấy?",
-        "options": ["Tầng 1", "Tầng 2", "Tầng 3"],
+        "options": [
+          "Tầng 1",
+          "Tầng 2",
+          "Tầng 3"
+        ],
         "answerIndex": 1
       }
     ]
   },
   "writing": {
     "type": "unscramble",
-    "scrambledWords": ["The", "fridge", "is", "in", "the", "kitchen"],
+    "scrambledWords": [
+      "The",
+      "fridge",
+      "is",
+      "in",
+      "the",
+      "kitchen"
+    ],
     "correctSentence": "The fridge is in the kitchen",
     "meaningVi": "Chiếc tủ lạnh ở trong phòng bếp."
   },
@@ -405,5 +436,27 @@
         }
       ]
     }
-  ]
+  ],
+  "video": {
+    "title": "Hội thoại hoạt hình: A Look Inside My House (Khám phá ngôi nhà của em)",
+    "channel": "Global Success English 6",
+    "youtubeId": "M7d2_K9pL4Y",
+    "searchQuery": "tiếng anh 6 global success unit 2 getting started",
+    "summaryVi": "Bạn Mi dẫn bạn Nick tham quan qua video call ngôi nhà phố xinh đẹp của mình, giới thiệu phòng khách, phòng ngủ và vị trí đồ đạc như ghế sofa, tủ lạnh.",
+    "keySentences": [
+      {
+        "en": "There is a sofa and a television in the living room.",
+        "vi": "Có một chiếc ghế sofa và ti vi trong phòng khách."
+      },
+      {
+        "en": "The cat is sitting under the table.",
+        "vi": "Chú mèo đang ngồi ở dưới cái bàn."
+      },
+      {
+        "en": "My bedroom is next to the bathroom.",
+        "vi": "Phòng ngủ của tớ nằm cạnh phòng tắm."
+      }
+    ],
+    "reflectionQuestion": "Trong phòng khách của bạn Mi có những đồ đạc nào?"
+  }
 }

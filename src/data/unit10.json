@@ -12,7 +12,9 @@
       "hint": "Nhà được trang bị các thiết bị tự động điều khiển bằng giọng nói",
       "exampleEn": "In the future I will live in a smart house.",
       "exampleVi": "Trong tương lai em sẽ sống trong một ngôi nhà thông minh.",
-      "emoji": "🏠"
+      "emoji": "🏠",
+      "audio": "/assets/audio/unit10/smart-house.mp3",
+      "audioExample": "/assets/audio/unit10/smart-house-example.mp3"
     },
     {
       "id": "u10_02",
@@ -23,7 +25,9 @@
       "hint": "Nguồn năng lượng sạch thu từ ánh sáng mặt trời qua các tấm pin",
       "exampleEn": "Our future home will run on solar energy.",
       "exampleVi": "Ngôi nhà tương lai của chúng em sẽ chạy bằng năng lượng mặt trời.",
-      "emoji": "☀️"
+      "emoji": "☀️",
+      "audio": "/assets/audio/unit10/solar-energy.mp3",
+      "audioExample": "/assets/audio/unit10/solar-energy-example.mp3"
     },
     {
       "id": "u10_03",
@@ -34,7 +38,9 @@
       "hint": "Ngôi nhà nổi đặc biệt có thể bay vào vũ trụ hoặc trôi trên biển",
       "exampleEn": "Astronauts might live in a space houseboat.",
       "exampleVi": "Các phi hành gia có thể sẽ sống trong một ngôi nhà thuyền không gian.",
-      "emoji": "🛸"
+      "emoji": "🛸",
+      "audio": "/assets/audio/unit10/space-houseboat.mp3",
+      "audioExample": "/assets/audio/unit10/space-houseboat-example.mp3"
     },
     {
       "id": "u10_04",
@@ -45,7 +51,9 @@
       "hint": "Tivi tương lai có thể nói chuyện, lướt web và đặt hàng tự động",
       "exampleEn": "We will order food via our super smart TV.",
       "exampleVi": "Chúng em sẽ đặt đồ ăn qua chiếc tivi siêu thông minh.",
-      "emoji": "📺"
+      "emoji": "📺",
+      "audio": "/assets/audio/unit10/super-smart-tv.mp3",
+      "audioExample": "/assets/audio/unit10/super-smart-tv-example.mp3"
     },
     {
       "id": "u10_05",
@@ -56,7 +64,9 @@
       "hint": "Kết nối qua sóng vô tuyến, không cần cắm dây cáp rườm rà",
       "exampleEn": "All appliances will connect via wireless networks.",
       "exampleVi": "Tất cả thiết bị sẽ kết nối qua mạng không dây.",
-      "emoji": "📶"
+      "emoji": "📶",
+      "audio": "/assets/audio/unit10/wireless.mp3",
+      "audioExample": "/assets/audio/unit10/wireless-example.mp3"
     },
     {
       "id": "u10_06",
@@ -67,7 +77,9 @@
       "hint": "Đồ điện trong nhà như tủ lạnh, máy giặt, nồi cơm điện",
       "exampleEn": "Modern appliances make our housework much easier.",
       "exampleVi": "Các thiết bị gia dụng hiện đại giúp việc nhà dễ dàng hơn nhiều.",
-      "emoji": "🔌"
+      "emoji": "🔌",
+      "audio": "/assets/audio/unit10/appliances.mp3",
+      "audioExample": "/assets/audio/unit10/appliances-example.mp3"
     },
     {
       "id": "u10_07",
@@ -78,7 +90,9 @@
       "hint": "Biển sâu bao la, nơi có thể xây nhà nổi dưới đáy biển",
       "exampleEn": "Some people might build houses under the ocean.",
       "exampleVi": "Một số người có thể sẽ xây nhà dưới đáy đại dương.",
-      "emoji": "🌊"
+      "emoji": "🌊",
+      "audio": "/assets/audio/unit10/ocean.mp3",
+      "audioExample": "/assets/audio/unit10/ocean-example.mp3"
     },
     {
       "id": "u10_08",
@@ -89,7 +103,9 @@
       "hint": "Robot quét nhà, nấu cơm, rửa bát thay con người",
       "exampleEn": "A robot helper will clean the room every morning.",
       "exampleVi": "Một người máy phụ việc sẽ lau dọn phòng vào mỗi buổi sáng.",
-      "emoji": "🤖"
+      "emoji": "🤖",
+      "audio": "/assets/audio/unit10/robot-helper.mp3",
+      "audioExample": "/assets/audio/unit10/robot-helper-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -183,5 +199,27 @@
     ],
     "correctSentence": "Our smart house will use solar energy.",
     "meaningVi": "Ngôi nhà thông minh của chúng em sẽ sử dụng năng lượng mặt trời."
+  },
+  "video": {
+    "title": "Công nghệ tương lai: Houses in the Year 2050 (Ngôi nhà thông minh tương lai)",
+    "channel": "Global Success English 6",
+    "youtubeId": "F2h4_P8qZ3K",
+    "searchQuery": "tiếng anh 6 global success unit 10 getting started",
+    "summaryVi": "Ý tưởng thiết kế những ngôi nhà tương lai dưới lòng đại dương, trên vũ trụ với nguồn năng lượng mặt trời và robot tự động phục vụ.",
+    "keySentences": [
+      {
+        "en": "In the future, our houses will be powered by solar energy.",
+        "vi": "Trong tương lai, nhà của chúng ta sẽ chạy bằng năng lượng mặt trời."
+      },
+      {
+        "en": "A smart TV might help us order groceries automatically.",
+        "vi": "Ti vi thông minh có thể giúp chúng ta tự động đặt mua thực phẩm."
+      },
+      {
+        "en": "We will live in eco-friendly and wireless homes.",
+        "vi": "Chúng ta sẽ sống trong những ngôi nhà thân thiện môi trường và không dây."
+      }
+    ],
+    "reflectionQuestion": "Nguồn năng lượng sạch nào sẽ được dùng phổ biến trong tương lai?"
   }
 }

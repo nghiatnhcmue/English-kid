@@ -6,10 +6,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const units = [
-  { id: 1, file: path.join(rootDir, 'src/data/unit1.json'), dir: 'unit1' },
-  { id: 2, file: path.join(rootDir, 'src/data/unit2.json'), dir: 'unit2' },
-];
+const units = Array.from({ length: 12 }, (_, i) => ({
+  id: i + 1,
+  file: path.join(rootDir, `src/data/unit${i + 1}.json`),
+  dir: `unit${i + 1}`,
+}));
 
 function slugify(text) {
   return text

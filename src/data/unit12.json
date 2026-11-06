@@ -12,7 +12,9 @@
       "hint": "Bảo vệ an ninh nhà cửa chống trộm cắp",
       "exampleEn": "The smart robot will guard the house when we go away.",
       "exampleVi": "Người máy thông minh sẽ canh giữ nhà cửa khi chúng ta đi vắng.",
-      "emoji": "🛡️"
+      "emoji": "🛡️",
+      "audio": "/assets/audio/unit12/guard-the-house.mp3",
+      "audioExample": "/assets/audio/unit12/guard-the-house-example.mp3"
     },
     {
       "id": "u12_02",
@@ -23,7 +25,9 @@
       "hint": "Khuân vác đồ đạc to lớn cồng kềnh với sức mạnh cơ bắp máy",
       "exampleEn": "Robots with strong arms can lift heavy things easily.",
       "exampleVi": "Robot với cánh tay khỏe có thể nâng các vật nặng một cách dễ dàng.",
-      "emoji": "🏋️"
+      "emoji": "🏋️",
+      "audio": "/assets/audio/unit12/lift-heavy-things.mp3",
+      "audioExample": "/assets/audio/unit12/lift-heavy-things-example.mp3"
     },
     {
       "id": "u12_03",
@@ -34,7 +38,9 @@
       "hint": "Gấp chăn màn, chỉnh lại gối đệm phẳng phiu sau khi ngủ dậy",
       "exampleEn": "My home robot will make the bed every morning.",
       "exampleVi": "Người máy gia đình sẽ dọn dẹp giường ngủ vào mỗi sáng.",
-      "emoji": "🛏️"
+      "emoji": "🛏️",
+      "audio": "/assets/audio/unit12/make-the-bed.mp3",
+      "audioExample": "/assets/audio/unit12/make-the-bed-example.mp3"
     },
     {
       "id": "u12_04",
@@ -45,7 +51,9 @@
       "hint": "Dùng bàn ủi làm thẳng các nếp nhăn trên áo quần",
       "exampleEn": "Can your robot iron clothes neatly?",
       "exampleVi": "Người máy của bạn có thể ủi quần áo phẳng phiu không?",
-      "emoji": "👔"
+      "emoji": "👔",
+      "audio": "/assets/audio/unit12/iron-clothes.mp3",
+      "audioExample": "/assets/audio/unit12/iron-clothes-example.mp3"
     },
     {
       "id": "u12_05",
@@ -56,7 +64,9 @@
       "hint": "Nghe và phân biệt được tiếng của chủ nhân để làm theo lệnh",
       "exampleEn": "The AI assistant can recognise voice commands quickly.",
       "exampleVi": "Trợ lý AI có thể nhận diện giọng nói và khẩu lệnh rất nhanh.",
-      "emoji": "🎙️"
+      "emoji": "🎙️",
+      "audio": "/assets/audio/unit12/recognise-voice.mp3",
+      "audioExample": "/assets/audio/unit12/recognise-voice-example.mp3"
     },
     {
       "id": "u12_06",
@@ -67,7 +77,9 @@
       "hint": "Hút bụi và lau sạch bóng nền nhà",
       "exampleEn": "The vacuum robot can clean the floor automatically.",
       "exampleVi": "Robot hút bụi có thể lau dọn sàn nhà một cách tự động.",
-      "emoji": "🧹"
+      "emoji": "🧹",
+      "audio": "/assets/audio/unit12/clean-the-floor.mp3",
+      "audioExample": "/assets/audio/unit12/clean-the-floor-example.mp3"
     },
     {
       "id": "u12_07",
@@ -78,7 +90,9 @@
       "hint": "Chế biến đồ ăn sáng, trưa, tối thơm ngon",
       "exampleEn": "A chef robot will cook meals for the whole family.",
       "exampleVi": "Một người máy đầu bếp sẽ nấu các bữa ăn cho cả gia đình.",
-      "emoji": "🍳"
+      "emoji": "🍳",
+      "audio": "/assets/audio/unit12/cook-meals.mp3",
+      "audioExample": "/assets/audio/unit12/cook-meals-example.mp3"
     },
     {
       "id": "u12_08",
@@ -89,7 +103,9 @@
       "hint": "Tưới nước cho chậu hoa, cây cảnh trong vườn tươi tốt",
       "exampleEn": "The garden robot can water flowers every afternoon.",
       "exampleVi": "Người máy làm vườn có thể tưới hoa vào mỗi buổi chiều.",
-      "emoji": "🌻"
+      "emoji": "🌻",
+      "audio": "/assets/audio/unit12/water-flowers.mp3",
+      "audioExample": "/assets/audio/unit12/water-flowers-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -183,5 +199,27 @@
     ],
     "correctSentence": "This smart robot can guard our house.",
     "meaningVi": "Chú robot thông minh này có thể trông coi nhà của chúng em."
+  },
+  "video": {
+    "title": "Triển lãm công nghệ: International Robot Show (Người máy thông minh)",
+    "channel": "Global Success English 6",
+    "youtubeId": "R9m3_K2pZ8M",
+    "searchQuery": "tiếng anh 6 global success unit 12 getting started",
+    "summaryVi": "Tham quan hội chợ triển lãm robot thế giới, chiêm ngưỡng các người máy có thể nhận diện giọng nói, nấu ăn, chăm sóc vườn và làm việc nhà.",
+    "keySentences": [
+      {
+        "en": "This domestic robot can clean the floor and iron clothes.",
+        "vi": "Chú robot gia đình này có thể lau sàn nhà và là ủi quần áo."
+      },
+      {
+        "en": "Robots with AI will be able to talk to humans naturally.",
+        "vi": "Những người máy có trí tuệ nhân tạo sẽ có thể trò chuyện với con người tự nhiên."
+      },
+      {
+        "en": "Can a robot guard the house safely while we are away?",
+        "vi": "Liệu robot có thể trông nhà an toàn khi chúng ta đi vắng không?"
+      }
+    ],
+    "reflectionQuestion": "Người máy gia đình có thể giúp bạn những công việc gì?"
   }
 }

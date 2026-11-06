@@ -12,7 +12,9 @@
       "hint": "Cắt giảm lượng tiêu thụ để tránh lãng phí (chữ R thứ 1 trong 3R)",
       "exampleEn": "We should reduce the amount of electricity we use.",
       "exampleVi": "Chúng ta nên giảm bớt lượng điện năng tiêu thụ.",
-      "emoji": "📉"
+      "emoji": "📉",
+      "audio": "/assets/audio/unit11/reduce.mp3",
+      "audioExample": "/assets/audio/unit11/reduce-example.mp3"
     },
     {
       "id": "u11_02",
@@ -23,7 +25,9 @@
       "hint": "Dùng lại đồ vật nhiều lần thay vì vứt đi (chữ R thứ 2 trong 3R)",
       "exampleEn": "You can reuse empty bottles to grow small plants.",
       "exampleVi": "Bạn có thể tái sử dụng những chiếc chai rỗng để trồng cây nhỏ.",
-      "emoji": "🔄"
+      "emoji": "🔄",
+      "audio": "/assets/audio/unit11/reuse.mp3",
+      "audioExample": "/assets/audio/unit11/reuse-example.mp3"
     },
     {
       "id": "u11_03",
@@ -34,7 +38,9 @@
       "hint": "Biến rác thải thành nguyên liệu làm ra đồ mới (chữ R thứ 3 trong 3R)",
       "exampleEn": "People collect paper and plastic to recycle them.",
       "exampleVi": "Mọi người thu gom giấy và nhựa để tái chế chúng.",
-      "emoji": "♻️"
+      "emoji": "♻️",
+      "audio": "/assets/audio/unit11/recycle.mp3",
+      "audioExample": "/assets/audio/unit11/recycle-example.mp3"
     },
     {
       "id": "u11_04",
@@ -45,7 +51,9 @@
       "hint": "Đồ bẩn, đồ thừa không dùng nữa cần bỏ vào thùng rác",
       "exampleEn": "Do not throw rubbish on the street.",
       "exampleVi": "Đừng vứt rác thải bừa bãi ra đường phố.",
-      "emoji": "🗑️"
+      "emoji": "🗑️",
+      "audio": "/assets/audio/unit11/rubbish.mp3",
+      "audioExample": "/assets/audio/unit11/rubbish-example.mp3"
     },
     {
       "id": "u11_05",
@@ -56,7 +64,9 @@
       "hint": "Túi nhựa mỏng dùng đựng đồ, mất hàng trăm năm mới phân hủy",
       "exampleEn": "Try to avoid using a single-use plastic bag.",
       "exampleVi": "Hãy cố gắng tránh dùng túi nilon dùng một lần.",
-      "emoji": "🛍️"
+      "emoji": "🛍️",
+      "audio": "/assets/audio/unit11/plastic-bag.mp3",
+      "audioExample": "/assets/audio/unit11/plastic-bag-example.mp3"
     },
     {
       "id": "u11_06",
@@ -67,7 +77,9 @@
       "hint": "Bị nhiễm chất độc hại, khói bụi bẩn thỉu",
       "exampleEn": "The river is polluted by chemical waste.",
       "exampleVi": "Dòng sông bị ô nhiễm bởi chất thải hóa học.",
-      "emoji": "🏭"
+      "emoji": "🏭",
+      "audio": "/assets/audio/unit11/polluted.mp3",
+      "audioExample": "/assets/audio/unit11/polluted-example.mp3"
     },
     {
       "id": "u11_07",
@@ -78,7 +90,9 @@
       "hint": "Không khí, nguồn nước, cây xanh bao quanh sự sống chúng ta",
       "exampleEn": "Planting trees helps protect the green environment.",
       "exampleVi": "Trồng cây xanh giúp bảo vệ môi trường trong lành.",
-      "emoji": "🌍"
+      "emoji": "🌍",
+      "audio": "/assets/audio/unit11/environment.mp3",
+      "audioExample": "/assets/audio/unit11/environment-example.mp3"
     },
     {
       "id": "u11_08",
@@ -89,7 +103,9 @@
       "hint": "Hộp thủy tinh hoặc nhựa dùng để đựng thức ăn",
       "exampleEn": "Keep the leftover soup in a reusable food container.",
       "exampleVi": "Giữ phần súp còn thừa trong một hộp đựng thức ăn tái sử dụng.",
-      "emoji": "📦"
+      "emoji": "📦",
+      "audio": "/assets/audio/unit11/container.mp3",
+      "audioExample": "/assets/audio/unit11/container-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -184,5 +200,27 @@
     ],
     "correctSentence": "If we reuse bottles, we will save money.",
     "meaningVi": "Nếu chúng ta tái sử dụng chai lọ, chúng ta sẽ tiết kiệm được tiền."
+  },
+  "video": {
+    "title": "Hành tinh xanh: The 3R Project (Dự án giảm thiểu, tái sử dụng, tái chế)",
+    "channel": "Global Success English 6",
+    "youtubeId": "G3w8_L9mP2L",
+    "searchQuery": "tiếng anh 6 global success unit 11 getting started",
+    "summaryVi": "Các bạn học sinh cùng tham gia câu lạc bộ xanh Green Club, hướng dẫn tái chế chai nhựa, dùng túi vải và trồng cây bảo vệ môi trường.",
+    "keySentences": [
+      {
+        "en": "If we reuse glass bottles, we will save natural resources.",
+        "vi": "Nếu chúng ta tái sử dụng chai thủy tinh, chúng ta sẽ tiết kiệm tài nguyên thiên nhiên."
+      },
+      {
+        "en": "Do not throw rubbish into rivers and lakes.",
+        "vi": "Đừng vứt rác thải xuống sông hồ."
+      },
+      {
+        "en": "Small actions today will make a greener world tomorrow.",
+        "vi": "Những hành động nhỏ hôm nay sẽ tạo nên một thế giới xanh hơn ngày mai."
+      }
+    ],
+    "reflectionQuestion": "3 chữ R trong dự án bảo vệ môi trường là gì?"
   }
 }

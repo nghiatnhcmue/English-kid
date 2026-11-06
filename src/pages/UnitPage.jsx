@@ -8,6 +8,7 @@ import { playSfx } from '../utils/sfx.js';
 import { PageHeader, Stars, Button3D } from '../components/ui.jsx';
 import VocabCard from '../components/VocabCard.jsx';
 import WordInspectorModal from '../components/WordInspectorModal.jsx';
+import LessonVideo from '../components/LessonVideo.jsx';
 import { t } from '../i18n/vi.js';
 
 export const MODES = ['flashcard', 'listening', 'matching', 'spelling'];
@@ -201,6 +202,11 @@ export default function UnitPage() {
           </Button3D>
         </div>
       </section>
+
+      {/* Khối Video Hoạt hình & Bài giảng sinh động */}
+      {unit.video && (
+        <LessonVideo video={unit.video} unitTitle={unit.titleEn} />
+      )}
 
       {/* Danh sách từ vựng trong bài + Ô tìm kiếm từ */}
       <section aria-label={t.unit.vocabList} className="flex flex-col gap-3">

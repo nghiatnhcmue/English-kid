@@ -12,7 +12,9 @@
       "hint": "Môn thể thao dùng vợt đánh quả cầu lông qua lưới",
       "exampleEn": "We play badminton in the school yard.",
       "exampleVi": "Chúng em chơi cầu lông ở sân trường.",
-      "emoji": "🏸"
+      "emoji": "🏸",
+      "audio": "/assets/audio/unit8/badminton.mp3",
+      "audioExample": "/assets/audio/unit8/badminton-example.mp3"
     },
     {
       "id": "u8_02",
@@ -23,7 +25,9 @@
       "hint": "Môn tập nhảy thể dục theo điệu nhạc sôi động",
       "exampleEn": "The girls do aerobics every morning.",
       "exampleVi": "Các bạn nữ tập thể dục nhịp điệu mỗi sáng.",
-      "emoji": "🤸"
+      "emoji": "🤸",
+      "audio": "/assets/audio/unit8/aerobics.mp3",
+      "audioExample": "/assets/audio/unit8/aerobics-example.mp3"
     },
     {
       "id": "u8_03",
@@ -34,7 +38,9 @@
       "hint": "Môn võ thuật truyền thống nổi tiếng của Nhật Bản",
       "exampleEn": "Phong does karate twice a week.",
       "exampleVi": "Phong tập võ karate hai lần một tuần.",
-      "emoji": "🥋"
+      "emoji": "🥋",
+      "audio": "/assets/audio/unit8/karate.mp3",
+      "audioExample": "/assets/audio/unit8/karate-example.mp3"
     },
     {
       "id": "u8_04",
@@ -45,7 +51,9 @@
       "hint": "Môn thể thao đánh quả bóng nhựa nhỏ trên mặt bàn có lưới",
       "exampleEn": "Can you play table tennis with me?",
       "exampleVi": "Bạn chơi bóng bàn với mình được không?",
-      "emoji": "🏓"
+      "emoji": "🏓",
+      "audio": "/assets/audio/unit8/table-tennis.mp3",
+      "audioExample": "/assets/audio/unit8/table-tennis-example.mp3"
     },
     {
       "id": "u8_05",
@@ -56,7 +64,9 @@
       "hint": "Kính đeo bảo vệ mắt không bị nước vào khi bơi lội",
       "exampleEn": "Remember to wear your goggles when swimming.",
       "exampleVi": "Nhớ đeo kính bơi khi đi bơi nhé.",
-      "emoji": "🥽"
+      "emoji": "🥽",
+      "audio": "/assets/audio/unit8/goggles.mp3",
+      "audioExample": "/assets/audio/unit8/goggles-example.mp3"
     },
     {
       "id": "u8_06",
@@ -67,7 +77,9 @@
       "hint": "Vợt dùng để đánh bóng trong môn cầu lông, quần vợt",
       "exampleEn": "I got a new tennis racket on my birthday.",
       "exampleVi": "Em được tặng một cây vợt tennis mới vào ngày sinh nhật.",
-      "emoji": "🎾"
+      "emoji": "🎾",
+      "audio": "/assets/audio/unit8/racket.mp3",
+      "audioExample": "/assets/audio/unit8/racket-example.mp3"
     },
     {
       "id": "u8_07",
@@ -78,7 +90,9 @@
       "hint": "Tấm ván có 4 bánh xe nhỏ để trượt trên đường",
       "exampleEn": "He rides his skateboard in the park.",
       "exampleVi": "Bạn ấy trượt ván trượt trong công viên.",
-      "emoji": "🛹"
+      "emoji": "🛹",
+      "audio": "/assets/audio/unit8/skateboard.mp3",
+      "audioExample": "/assets/audio/unit8/skateboard-example.mp3"
     },
     {
       "id": "u8_08",
@@ -89,7 +103,9 @@
       "hint": "Dụng cụ cần thiết phục vụ cho việc tập luyện thể thao",
       "exampleEn": "The school gym has modern sports equipment.",
       "exampleVi": "Phòng tập của trường có đầy đủ thiết bị thể thao hiện đại.",
-      "emoji": "🥊"
+      "emoji": "🥊",
+      "audio": "/assets/audio/unit8/equipment.mp3",
+      "audioExample": "/assets/audio/unit8/equipment-example.mp3"
     },
     {
       "id": "u8_09",
@@ -100,7 +116,9 @@
       "hint": "Môn thể thao vua 11 người thi đấu sút bóng vào khung thành",
       "exampleEn": "Boys love playing football after school.",
       "exampleVi": "Các bạn nam rất thích chơi bóng đá sau giờ học.",
-      "emoji": "⚽"
+      "emoji": "⚽",
+      "audio": "/assets/audio/unit8/football.mp3",
+      "audioExample": "/assets/audio/unit8/football-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -195,5 +213,27 @@
     ],
     "correctSentence": "We played table tennis in the school gym.",
     "meaningVi": "Chúng em đã chơi bóng bàn trong nhà thể chất của trường."
+  },
+  "video": {
+    "title": "Thể thao học đường: At the Gym (Rèn luyện thân thể khỏe mạnh)",
+    "channel": "Global Success English 6",
+    "youtubeId": "S9d4_M3pL8K",
+    "searchQuery": "tiếng anh 6 global success unit 8 getting started",
+    "summaryVi": "Hai bạn nhỏ tại câu lạc bộ thể thao trường cùng nói về các trận cầu lông, bóng đá cuối tuần và những môn võ thuật bổ ích như Karate.",
+    "keySentences": [
+      {
+        "en": "Did you play football with your classmates yesterday?",
+        "vi": "Hôm qua bạn có đá bóng cùng các bạn cùng lớp không?"
+      },
+      {
+        "en": "I scored two goals and our team won the match!",
+        "vi": "Tớ đã ghi hai bàn thắng và đội chúng tớ đã giành chiến thắng!"
+      },
+      {
+        "en": "Remember to wear your sports shoes and warm up first.",
+        "vi": "Hãy nhớ đi giày thể thao và khởi động kỹ trước nhé."
+      }
+    ],
+    "reflectionQuestion": "Môn thể thao nào cần dùng vợt và quả cầu lông?"
   }
 }

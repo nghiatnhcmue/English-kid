@@ -12,7 +12,9 @@
       "hint": "Phim được vẽ bằng tranh hoặc đồ họa máy tính như Tom & Jerry",
       "exampleEn": "The Lion King is my favourite animated film.",
       "exampleVi": "Vua Sư Tử là bộ phim hoạt hình yêu thích của em.",
-      "emoji": "🦁"
+      "emoji": "🦁",
+      "audio": "/assets/audio/unit7/animated-film.mp3",
+      "audioExample": "/assets/audio/unit7/animated-film-example.mp3"
     },
     {
       "id": "u7_02",
@@ -23,7 +25,9 @@
       "hint": "Phim ghi lại sự thật về động vật hoang dã, lịch sử, khoa học",
       "exampleEn": "I watched an interesting documentary about oceans.",
       "exampleVi": "Em đã xem một bộ phim tài liệu thú vị về các đại dương.",
-      "emoji": "🐬"
+      "emoji": "🐬",
+      "audio": "/assets/audio/unit7/documentary.mp3",
+      "audioExample": "/assets/audio/unit7/documentary-example.mp3"
     },
     {
       "id": "u7_03",
@@ -34,7 +38,9 @@
       "hint": "Chương trình thi đấu đố vui có giải thưởng trên tivi",
       "exampleEn": "My whole family enjoys that funny game show.",
       "exampleVi": "Cả gia đình em đều thích trò chơi truyền hình vui nhộn đó.",
-      "emoji": "🎮"
+      "emoji": "🎮",
+      "audio": "/assets/audio/unit7/game-show.mp3",
+      "audioExample": "/assets/audio/unit7/game-show-example.mp3"
     },
     {
       "id": "u7_04",
@@ -45,7 +51,9 @@
       "hint": "Chương trình thời sự 19h cập nhật tin tức mỗi ngày",
       "exampleEn": "My parents watch the evening news programme at seven.",
       "exampleVi": "Bố mẹ em xem bản tin thời sự lúc 7 giờ tối.",
-      "emoji": "📰"
+      "emoji": "📰",
+      "audio": "/assets/audio/unit7/news-programme.mp3",
+      "audioExample": "/assets/audio/unit7/news-programme-example.mp3"
     },
     {
       "id": "u7_05",
@@ -56,7 +64,9 @@
       "hint": "Người biểu diễn mang lại tiếng cười sảng khoái cho khán giả",
       "exampleEn": "That talented comedian makes everybody laugh.",
       "exampleVi": "Diễn viên hài tài năng đó làm mọi người cười nghiêng ngả.",
-      "emoji": "🎭"
+      "emoji": "🎭",
+      "audio": "/assets/audio/unit7/comedian.mp3",
+      "audioExample": "/assets/audio/unit7/comedian-example.mp3"
     },
     {
       "id": "u7_06",
@@ -67,7 +77,9 @@
       "hint": "Kênh phát sóng như VTV1, VTV3, VTV7",
       "exampleEn": "VTV7 is an educational channel for students.",
       "exampleVi": "VTV7 là một kênh truyền hình giáo dục dành cho học sinh.",
-      "emoji": "📡"
+      "emoji": "📡",
+      "audio": "/assets/audio/unit7/channel.mp3",
+      "audioExample": "/assets/audio/unit7/channel-example.mp3"
     },
     {
       "id": "u7_07",
@@ -78,7 +90,9 @@
       "hint": "Giúp học hỏi thêm nhiều kiến thức bổ ích",
       "exampleEn": "This television programme is fun and educational.",
       "exampleVi": "Chương trình truyền hình này vừa vui vừa mang tính giáo dục.",
-      "emoji": "💡"
+      "emoji": "💡",
+      "audio": "/assets/audio/unit7/educational.mp3",
+      "audioExample": "/assets/audio/unit7/educational-example.mp3"
     },
     {
       "id": "u7_08",
@@ -89,7 +103,9 @@
       "hint": "Người ngồi trước màn hình tivi theo dõi chương trình",
       "exampleEn": "Millions of viewer watch the live football match.",
       "exampleVi": "Hàng triệu khán giả theo dõi trận bóng đá trực tiếp.",
-      "emoji": "👀"
+      "emoji": "👀",
+      "audio": "/assets/audio/unit7/viewer.mp3",
+      "audioExample": "/assets/audio/unit7/viewer-example.mp3"
     },
     {
       "id": "u7_09",
@@ -100,7 +116,9 @@
       "hint": "Chiếc điều khiển cầm tay bấm chuyển kênh tivi",
       "exampleEn": "Can you pass me the TV remote control please?",
       "exampleVi": "Bạn chuyển giúp em cái điều khiển từ xa của tivi nhé?",
-      "emoji": "📺"
+      "emoji": "📺",
+      "audio": "/assets/audio/unit7/remote-control.mp3",
+      "audioExample": "/assets/audio/unit7/remote-control-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -195,5 +213,27 @@
     ],
     "correctSentence": "This educational channel is very popular with kids.",
     "meaningVi": "Kênh truyền hình giáo dục này rất phổ biến với trẻ em."
+  },
+  "video": {
+    "title": "Hội thoại truyền hình: What's on TV today? (Chương trình TV yêu thích)",
+    "channel": "Global Success English 6",
+    "youtubeId": "V9m2_K4qZ8P",
+    "searchQuery": "tiếng anh 6 global success unit 7 getting started",
+    "summaryVi": "Các bạn nhỏ cùng trao đổi về lịch phát sóng các chương trình hoạt hình, đố vui kiến thức và kênh truyền hình giáo dục thiếu nhi VTV7.",
+    "keySentences": [
+      {
+        "en": "What channel is the educational programme on?",
+        "vi": "Chương trình giáo dục đó được chiếu trên kênh nào?"
+      },
+      {
+        "en": "I like documentaries because they teach me about animals.",
+        "vi": "Tớ thích phim tài liệu vì chúng dạy tớ hiểu về động vật."
+      },
+      {
+        "en": "Let's watch the game show together at eight o'clock.",
+        "vi": "Chúng mình cùng xem chương trình trò chơi vào lúc tám giờ nhé."
+      }
+    ],
+    "reflectionQuestion": "Kênh truyền hình nào chuyên dành cho học sinh Việt Nam?"
   }
 }

@@ -6,11 +6,12 @@ Tài liệu kỹ thuật và thiết kế tương tác dành cho web app học t
 
 ## 1. NGUỒN TẢI TÀI NGUYÊN TRỰC TIẾP (MIỄN PHÍ & CHUẨN WEB)
 
-| Loại tài nguyên | Nguồn tải uy tín | Định dạng tối ưu | Cách tìm & Tối ưu |
+| Loại tài nguyên | Nguồn tải uy tín & Chuẩn giáo dục | Định dạng tối ưu | Cách tìm & Tối ưu |
 | :--- | :--- | :---: | :--- |
+| **Giọng đọc bản xứ (Voice / Audio)** | • **Oxford & Cambridge Open Audio** (`oxfordlearnersdictionaries.com`, `dictionary.cambridge.org`)<br>• **Youdao Oxford/Cambridge API** (`dict.youdao.com/dictvoice`)<br>• **Wikimedia Commons / LinguaLibre** (`commons.wikimedia.org`)<br>• **Microsoft Edge Neural TTS / Google Speech** | `.mp3` | Tải về lưu trữ cục bộ trong dự án (`/assets/audio/unit[X]/[slug].mp3`) để chạy offline 100%, độ trễ 0ms, không phụ thuộc kết nối mạng. Dự phòng qua Youdao API và Web Speech API nội hợp. |
+| **Video bài học & Hoạt hình (Video Resources)** | • **NXB Giáo Dục Việt Nam (Global Success)**<br>• **VTV7 Kids (Kênh TH Giáo dục Quốc gia)**<br>• **British Council LearnEnglish Kids**<br>• **ZIM Education / VietJack / Loigiaihay** | `YouTube Embed` (No-cookie) | Nhúng qua chuẩn bảo mật trẻ em: `https://www.youtube-nocookie.com/embed/{id}`. Tích hợp phụ đề song ngữ, câu hỏi suy ngẫm sau khi xem và nút mở trực tiếp trên YouTube. |
 | **Mô hình 3D** | • **Poly Pizza** (`poly.pizza`)<br>• **Kenney Assets** (`kenney.nl`)<br>• **Quaternius** (`quaternius.com`) | `.glb` | Gõ từ vựng tiếng Anh (ví dụ: `calculator`, `backpack`, `sofa`). Chọn mẫu low-poly dưới **1 MB**, tối ưu texture bằng `glTF-Transform` để hiển thị mượt mà trên web và điện thoại. |
-| **File âm thanh phát âm mẫu** | • **Wikimedia Commons** (`commons.wikimedia.org`)<br>• **Cambridge / Oxford Open Audio** | `.mp3` / `.ogg` | Tìm theo cú pháp: `File:En-gb-[word].ogg` hoặc `File:En-us-[word].ogg` để tải audio người bản xứ đọc chuẩn từng từ cô đọng. |
-| **Âm thanh hiệu ứng (SFX)** | • **Mixkit Game SFX** (`mixkit.co/free-sound-effects/game`) | `.mp3` | Sử dụng 4 âm thanh thiết yếu:<br>1. `correct` (ting ting tươi vui)<br>2. `wrong` (tiếng cộc nhẹ nhàng, không chói tai)<br>3. `click` (tiếng lách cách bấm nút tự nhiên)<br>4. `victory` (tiếng pháo hoa chúc mừng hoàn thành). |
+| **Âm thanh hiệu ứng (SFX)** | • **WebAudio Synthesizer** (nội hợp không cần file)<br>• **Mixkit Game SFX** (`mixkit.co/free-sound-effects/game`) | `.mp3` / WebAudio | Sử dụng 4 âm thanh thiết yếu:<br>1. `correct` (ting ting tươi vui)<br>2. `wrong` (tiếng cộc nhẹ nhàng, không chói tai)<br>3. `click` (tiếng lách cách bấm nút tự nhiên)<br>4. `victory` (tiếng pháo hoa chúc mừng hoàn thành). |
 | **Hình ảnh 2D minh họa** | • **Flaticon** (`flaticon.com`)<br>• **Freepik Vector**<br>• **Custom SVG Studio** | `.svg` / `.webp` | Ưu tiên ảnh vector `.svg` siêu nhẹ (< 8KB) hoặc ảnh `.webp` nén qua Squoosh (kích thước tối đa $512 \times 512$, dung lượng dưới $30\text{ KB}$). |
 
 ---

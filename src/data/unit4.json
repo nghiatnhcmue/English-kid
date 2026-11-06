@@ -12,7 +12,9 @@
       "hint": "Nơi trưng bày các bức tranh và tác phẩm nghệ thuật",
       "exampleEn": "We visited an art gallery at the weekend.",
       "exampleVi": "Chúng em đã đến thăm một phòng trưng bày nghệ thuật vào cuối tuần.",
-      "emoji": "🖼️"
+      "emoji": "🖼️",
+      "audio": "/assets/audio/unit4/art-gallery.mp3",
+      "audioExample": "/assets/audio/unit4/art-gallery-example.mp3"
     },
     {
       "id": "u4_02",
@@ -23,7 +25,9 @@
       "hint": "Nhà thờ cổ kính, nguy nga của đạo Công giáo",
       "exampleEn": "The old cathedral is in the centre of the town.",
       "exampleVi": "Nhà thờ lớn cổ kính nằm ở trung tâm thị trấn.",
-      "emoji": "⛪"
+      "emoji": "⛪",
+      "audio": "/assets/audio/unit4/cathedral.mp3",
+      "audioExample": "/assets/audio/unit4/cathedral-example.mp3"
     },
     {
       "id": "u4_03",
@@ -34,7 +38,9 @@
       "hint": "Nơi đón và trả khách đi tàu hỏa",
       "exampleEn": "My father took a train at the railway station.",
       "exampleVi": "Bố em đã đón tàu hỏa tại nhà ga xe lửa.",
-      "emoji": "🚉"
+      "emoji": "🚉",
+      "audio": "/assets/audio/unit4/railway-station.mp3",
+      "audioExample": "/assets/audio/unit4/railway-station-example.mp3"
     },
     {
       "id": "u4_04",
@@ -45,7 +51,9 @@
       "hint": "Khoảng sân rộng lớn ngoài trời ở trung tâm thành phố",
       "exampleEn": "People gather in the public square in the evening.",
       "exampleVi": "Mọi người tụ tập tại quảng trường công cộng vào buổi tối.",
-      "emoji": "⛲"
+      "emoji": "⛲",
+      "audio": "/assets/audio/unit4/square.mp3",
+      "audioExample": "/assets/audio/unit4/square-example.mp3"
     },
     {
       "id": "u4_05",
@@ -56,7 +64,9 @@
       "hint": "Khu vực dân cư nằm ở vùng ven, rìa thành phố",
       "exampleEn": "We live in a quiet suburb outside Ha Noi.",
       "exampleVi": "Gia đình em sống ở một khu ngoại ô yên tĩnh ven Hà Nội.",
-      "emoji": "🏡"
+      "emoji": "🏡",
+      "audio": "/assets/audio/unit4/suburb.mp3",
+      "audioExample": "/assets/audio/unit4/suburb-example.mp3"
     },
     {
       "id": "u4_06",
@@ -67,7 +77,9 @@
       "hint": "Khu vực xung quanh nơi gia đình em đang sống",
       "exampleEn": "There are many trees in my neighbourhood.",
       "exampleVi": "Có rất nhiều cây xanh trong khu xóm của em.",
-      "emoji": "🏘️"
+      "emoji": "🏘️",
+      "audio": "/assets/audio/unit4/neighbourhood.mp3",
+      "audioExample": "/assets/audio/unit4/neighbourhood-example.mp3"
     },
     {
       "id": "u4_07",
@@ -78,7 +90,9 @@
       "hint": "Có rất nhiều người chen chúc",
       "exampleEn": "The market is very crowded on Sundays.",
       "exampleVi": "Khu chợ rất đông đúc vào các ngày Chủ nhật.",
-      "emoji": "👥"
+      "emoji": "👥",
+      "audio": "/assets/audio/unit4/crowded.mp3",
+      "audioExample": "/assets/audio/unit4/crowded-example.mp3"
     },
     {
       "id": "u4_08",
@@ -89,7 +103,9 @@
       "hint": "Thanh tịnh, êm ả, không ồn ào khói bụi",
       "exampleEn": "Life in the countryside is calm and peaceful.",
       "exampleVi": "Cuộc sống ở vùng quê thật êm đềm và yên bình.",
-      "emoji": "🌾"
+      "emoji": "🌾",
+      "audio": "/assets/audio/unit4/peaceful.mp3",
+      "audioExample": "/assets/audio/unit4/peaceful-example.mp3"
     },
     {
       "id": "u4_09",
@@ -100,7 +116,9 @@
       "hint": "Đã có từ lâu đời trong quá khứ",
       "exampleEn": "Hoi An is a famous historic town in Viet Nam.",
       "exampleVi": "Hội An là một thị trấn cổ kính nổi tiếng ở Việt Nam.",
-      "emoji": "🏛️"
+      "emoji": "🏛️",
+      "audio": "/assets/audio/unit4/historic.mp3",
+      "audioExample": "/assets/audio/unit4/historic-example.mp3"
     },
     {
       "id": "u4_10",
@@ -111,7 +129,9 @@
       "hint": "Gần các cửa hàng, trường học, đi lại dễ dàng",
       "exampleEn": "It is convenient to live near a supermarket.",
       "exampleVi": "Sống gần siêu thị rất tiện lợi.",
-      "emoji": "🛒"
+      "emoji": "🛒",
+      "audio": "/assets/audio/unit4/convenient.mp3",
+      "audioExample": "/assets/audio/unit4/convenient-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -206,5 +226,27 @@
     ],
     "correctSentence": "This railway station is larger than that one.",
     "meaningVi": "Nhà ga xe lửa này lớn hơn nhà ga kia."
+  },
+  "video": {
+    "title": "Hội thoại hoạt hình: Lost in the Neighbourhood (Hỏi đường trong khu phố)",
+    "channel": "Global Success English 6",
+    "youtubeId": "K9v1_Q8mL3Z",
+    "searchQuery": "tiếng anh 6 global success unit 4 getting started",
+    "summaryVi": "Hướng dẫn cách hỏi đường, chỉ đường và so sánh giữa khu phố yên bình ở ngoại ô với khu phố trung tâm đông đúc, tấp nập.",
+    "keySentences": [
+      {
+        "en": "Excuse me, can you tell me the way to the art gallery?",
+        "vi": "Xin lỗi, bạn có thể chỉ đường tới phòng tranh triển lãm được không?"
+      },
+      {
+        "en": "Go straight and then take the second turning on your left.",
+        "vi": "Đi thẳng rồi rẽ ở ngã rẽ thứ hai bên tay trái."
+      },
+      {
+        "en": "The central square is much more crowded than our suburb.",
+        "vi": "Quảng trường trung tâm đông đúc hơn nhiều so với khu ngoại ô."
+      }
+    ],
+    "reflectionQuestion": "Cụm từ tiếng Anh nào dùng để xin phép hỏi đường một cách lịch sự?"
   }
 }

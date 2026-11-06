@@ -12,7 +12,9 @@
       "hint": "Tin tưởng vào khả năng của bản thân khi nói chuyện hoặc làm việc",
       "exampleEn": "She is confident when speaking in English.",
       "exampleVi": "Bạn ấy rất tự tin khi nói tiếng Anh.",
-      "emoji": "😎"
+      "emoji": "😎",
+      "audio": "/assets/audio/unit3/confident.mp3",
+      "audioExample": "/assets/audio/unit3/confident-example.mp3"
     },
     {
       "id": "u3_02",
@@ -23,7 +25,9 @@
       "hint": "Có nhiều ý tưởng mới lạ và độc đáo",
       "exampleEn": "My creative friend draws amazing pictures.",
       "exampleVi": "Người bạn sáng tạo của em vẽ những bức tranh tuyệt đẹp.",
-      "emoji": "🎨"
+      "emoji": "🎨",
+      "audio": "/assets/audio/unit3/creative.mp3",
+      "audioExample": "/assets/audio/unit3/creative-example.mp3"
     },
     {
       "id": "u3_03",
@@ -34,7 +38,9 @@
       "hint": "Luôn muốn tìm hiểu và khám phá những điều mới",
       "exampleEn": "He is curious about the natural world.",
       "exampleVi": "Bạn ấy rất tò mò về thế giới tự nhiên.",
-      "emoji": "🧐"
+      "emoji": "🧐",
+      "audio": "/assets/audio/unit3/curious.mp3",
+      "audioExample": "/assets/audio/unit3/curious-example.mp3"
     },
     {
       "id": "u3_04",
@@ -45,7 +51,9 @@
       "hint": "Làm việc, học tập siêng năng và cần cù",
       "exampleEn": "Nam is a hard-working student in my class.",
       "exampleVi": "Nam là một học sinh chăm chỉ trong lớp em.",
-      "emoji": "🐝"
+      "emoji": "🐝",
+      "audio": "/assets/audio/unit3/hard-working.mp3",
+      "audioExample": "/assets/audio/unit3/hard-working-example.mp3"
     },
     {
       "id": "u3_05",
@@ -56,7 +64,9 @@
       "hint": "Bình tĩnh, không nản lòng khi gặp khó khăn hay phải chờ đợi",
       "exampleEn": "Our teacher is very patient with us.",
       "exampleVi": "Thầy giáo rất kiên nhẫn với chúng em.",
-      "emoji": "⏳"
+      "emoji": "⏳",
+      "audio": "/assets/audio/unit3/patient.mp3",
+      "audioExample": "/assets/audio/unit3/patient-example.mp3"
     },
     {
       "id": "u3_06",
@@ -67,7 +77,9 @@
       "hint": "Người luôn giữ lời hứa và hoàn thành tốt việc được giao",
       "exampleEn": "Mai is a reliable friend whom I can trust.",
       "exampleVi": "Mai là người bạn đáng tin cậy mà em có thể tin tưởng.",
-      "emoji": "🤝"
+      "emoji": "🤝",
+      "audio": "/assets/audio/unit3/reliable.mp3",
+      "audioExample": "/assets/audio/unit3/reliable-example.mp3"
     },
     {
       "id": "u3_07",
@@ -78,7 +90,9 @@
       "hint": "Vui vẻ, cởi mở và hòa đồng với mọi người xung quanh",
       "exampleEn": "The new classmate is very friendly to everyone.",
       "exampleVi": "Bạn cùng lớp mới rất thân thiện với mọi người.",
-      "emoji": "😊"
+      "emoji": "😊",
+      "audio": "/assets/audio/unit3/friendly.mp3",
+      "audioExample": "/assets/audio/unit3/friendly-example.mp3"
     },
     {
       "id": "u3_08",
@@ -89,7 +103,9 @@
       "hint": "Hay giúp đỡ người khác với tấm lòng nhân ái",
       "exampleEn": "She is kind and always helps other students.",
       "exampleVi": "Bạn ấy rất tốt bụng và luôn giúp đỡ các bạn khác.",
-      "emoji": "❤️"
+      "emoji": "❤️",
+      "audio": "/assets/audio/unit3/kind.mp3",
+      "audioExample": "/assets/audio/unit3/kind-example.mp3"
     },
     {
       "id": "u3_09",
@@ -100,7 +116,9 @@
       "hint": "Biết cách làm cho mọi người cười vui vẻ",
       "exampleEn": "He tells funny jokes in break time.",
       "exampleVi": "Bạn ấy kể những câu chuyện cười hài hước vào giờ giải lao.",
-      "emoji": "😂"
+      "emoji": "😂",
+      "audio": "/assets/audio/unit3/funny.mp3",
+      "audioExample": "/assets/audio/unit3/funny-example.mp3"
     },
     {
       "id": "u3_10",
@@ -111,7 +129,9 @@
       "hint": "Má tròn tròn, bầu bĩnh rất dễ thương của trẻ con",
       "exampleEn": "The baby has lovely chubby cheeks.",
       "exampleVi": "Em bé có đôi má phúng phính đáng yêu.",
-      "emoji": "👶"
+      "emoji": "👶",
+      "audio": "/assets/audio/unit3/chubby-cheeks.mp3",
+      "audioExample": "/assets/audio/unit3/chubby-cheeks-example.mp3"
     },
     {
       "id": "u3_11",
@@ -122,7 +142,9 @@
       "hint": "Tóc uốn lượn hình sóng bồng bềnh",
       "exampleEn": "Lan has black curly hair and big brown eyes.",
       "exampleVi": "Lan có mái tóc xoăn màu đen và đôi mắt to nâu.",
-      "emoji": "💇"
+      "emoji": "💇",
+      "audio": "/assets/audio/unit3/curly-hair.mp3",
+      "audioExample": "/assets/audio/unit3/curly-hair-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -216,5 +238,27 @@
     ],
     "correctSentence": "My friend is very kind and creative.",
     "meaningVi": "Bạn của em rất tốt bụng và sáng tạo."
+  },
+  "video": {
+    "title": "Hội thoại hoạt hình: Super Summer Camp (Trại hè kết bạn bốn phương)",
+    "channel": "Global Success English 6",
+    "youtubeId": "P8m4_N2qK7L",
+    "searchQuery": "tiếng anh 6 global success unit 3 getting started",
+    "summaryVi": "Hai bạn nhỏ tại trại hè quốc tế cùng trò chuyện, miêu tả tính cách và ngoại hình của những người bạn mới quen rất tốt bụng và vui vẻ.",
+    "keySentences": [
+      {
+        "en": "She is very friendly and always wears a big smile.",
+        "vi": "Bạn ấy rất thân thiện và luôn nở nụ cười rạng rỡ."
+      },
+      {
+        "en": "Nam has short curly hair and chubby cheeks.",
+        "vi": "Nam có mái tóc xoăn ngắn và đôi má phúng phính."
+      },
+      {
+        "en": "My creative friend draws amazing pictures.",
+        "vi": "Người bạn sáng tạo của tớ vẽ những bức tranh tuyệt đẹp."
+      }
+    ],
+    "reflectionQuestion": "Làm thế nào để miêu tả một người bạn tốt bụng bằng tiếng Anh?"
   }
 }

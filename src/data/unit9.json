@@ -12,7 +12,9 @@
       "hint": "Công trình kiến trúc đặc trưng nhận diện một thành phố (như tháp Eiffel)",
       "exampleEn": "The Eiffel Tower is a famous landmark in Paris.",
       "exampleVi": "Tháp Eiffel là công trình điểm nhấn nổi tiếng ở Paris.",
-      "emoji": "🗼"
+      "emoji": "🗼",
+      "audio": "/assets/audio/unit9/landmark.mp3",
+      "audioExample": "/assets/audio/unit9/landmark-example.mp3"
     },
     {
       "id": "u9_02",
@@ -23,7 +25,9 @@
       "hint": "Dinh thự nguy nga lộng lẫy nơi vua chúa, hoàng gia từng ở",
       "exampleEn": "Buckingham is the royal palace in London.",
       "exampleVi": "Buckingham là cung điện hoàng gia ở London.",
-      "emoji": "🏰"
+      "emoji": "🏰",
+      "audio": "/assets/audio/unit9/palace.mp3",
+      "audioExample": "/assets/audio/unit9/palace-example.mp3"
     },
     {
       "id": "u9_03",
@@ -34,7 +38,9 @@
       "hint": "Tấm thiệp in hình phong cảnh gửi qua đường bưu điện",
       "exampleEn": "I sent a postcard to my friend from Da Nang.",
       "exampleVi": "Em đã gửi một tấm bưu thiếp cho bạn từ Đà Nẵng.",
-      "emoji": "💌"
+      "emoji": "💌",
+      "audio": "/assets/audio/unit9/postcard.mp3",
+      "audioExample": "/assets/audio/unit9/postcard-example.mp3"
     },
     {
       "id": "u9_04",
@@ -45,7 +51,9 @@
       "hint": "Hình ảnh đại diện tiêu biểu cho một quốc gia hay thành phố",
       "exampleEn": "The Merlion is a famous symbol of Singapore.",
       "exampleVi": "Tượng Sư tử biển là biểu tượng nổi tiếng của Singapore.",
-      "emoji": "🦁"
+      "emoji": "🦁",
+      "audio": "/assets/audio/unit9/symbol.mp3",
+      "audioExample": "/assets/audio/unit9/symbol-example.mp3"
     },
     {
       "id": "u9_05",
@@ -56,7 +64,9 @@
       "hint": "Công trình xây dựng vươn cao vút lên bầu trời",
       "exampleEn": "Big Ben is a historic clock tower in England.",
       "exampleVi": "Big Ben là một tòa tháp đồng hồ lịch sử ở nước Anh.",
-      "emoji": "🏙️"
+      "emoji": "🏙️",
+      "audio": "/assets/audio/unit9/tower.mp3",
+      "audioExample": "/assets/audio/unit9/tower-example.mp3"
     },
     {
       "id": "u9_06",
@@ -67,7 +77,9 @@
       "hint": "Liên quan đến thiết kế và xây dựng các công trình nhà cửa",
       "exampleEn": "Ha Noi has unique architectural beauty.",
       "exampleVi": "Hà Nội có vẻ đẹp kiến trúc vô cùng độc đáo.",
-      "emoji": "🏛️"
+      "emoji": "🏛️",
+      "audio": "/assets/audio/unit9/architectural.mp3",
+      "audioExample": "/assets/audio/unit9/architectural-example.mp3"
     },
     {
       "id": "u9_07",
@@ -78,7 +90,9 @@
       "hint": "Công trình bắc ngang qua sông để người và xe cộ đi lại",
       "exampleEn": "The Golden Gate bridge is famous worldwide.",
       "exampleVi": "Cây cầu Cổng Vàng nổi tiếng trên toàn thế giới.",
-      "emoji": "🌉"
+      "emoji": "🌉",
+      "audio": "/assets/audio/unit9/bridge.mp3",
+      "audioExample": "/assets/audio/unit9/bridge-example.mp3"
     },
     {
       "id": "u9_08",
@@ -89,7 +103,9 @@
       "hint": "Món ăn có hương vị thơm ngon hấp dẫn",
       "exampleEn": "Vietnamese street food is cheap and delicious.",
       "exampleVi": "Ẩm thực đường phố Việt Nam vừa rẻ vừa ngon miệng.",
-      "emoji": "😋"
+      "emoji": "😋",
+      "audio": "/assets/audio/unit9/delicious.mp3",
+      "audioExample": "/assets/audio/unit9/delicious-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -185,5 +201,27 @@
     ],
     "correctSentence": "This is the most famous palace in the city.",
     "meaningVi": "Đây là cung điện nổi tiếng nhất trong thành phố."
+  },
+  "video": {
+    "title": "Du lịch thế giới: Cities Around the Globe (Những thành phố kỳ thú)",
+    "channel": "Global Success English 6",
+    "youtubeId": "C8w3_K9zL1M",
+    "searchQuery": "tiếng anh 6 global success unit 9 getting started",
+    "summaryVi": "Chuyến du ngoạn khám phá các công trình biểu tượng thế giới: Tháp Big Ben ở Luân Đôn, Tháp Eiffel ở Paris và Nhà hát Con Sò ở Sydney.",
+    "keySentences": [
+      {
+        "en": "Tokyo is one of the most exciting cities in the world.",
+        "vi": "Tokyo là một trong những thành phố sôi động nhất thế giới."
+      },
+      {
+        "en": "The Eiffel Tower is the most famous landmark in France.",
+        "vi": "Tháp Eiffel là biểu tượng nổi tiếng nhất nước Pháp."
+      },
+      {
+        "en": "Have you ever seen the Merlion in Singapore?",
+        "vi": "Bạn đã từng nhìn thấy tượng Merlion ở Singapore chưa?"
+      }
+    ],
+    "reflectionQuestion": "Biểu tượng nổi tiếng nhất của thành phố Luân Đôn là gì?"
   }
 }
