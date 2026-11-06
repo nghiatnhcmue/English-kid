@@ -13,6 +13,9 @@ import ShadowingStation from '../components/stations/ShadowingStation.jsx';
 import SpeakingStation from '../components/stations/SpeakingStation.jsx';
 import ReadingStation from '../components/stations/ReadingStation.jsx';
 import WritingStation from '../components/stations/WritingStation.jsx';
+import PronunciationStation from '../components/stations/PronunciationStation.jsx';
+import ListeningStation from '../components/stations/ListeningStation.jsx';
+import UnitMasteryQuiz from '../components/stations/UnitMasteryQuiz.jsx';
 import { MODES } from './UnitPage.jsx';
 import { t } from '../i18n/vi.js';
 
@@ -26,6 +29,9 @@ const COMPONENTS = {
   speaking: SpeakingStation,
   reading: ReadingStation,
   writing: WritingStation,
+  pronunciation: PronunciationStation,
+  listenstation: ListeningStation,
+  mastery: UnitMasteryQuiz,
 };
 
 /** Chạy 1 chế độ ôn cho 1 Unit, hoặc cho danh sách "Từ khó" (review). */

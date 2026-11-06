@@ -42,10 +42,13 @@ export const t = {
     matching: { name: 'Nối từ & nghĩa', desc: 'Nối từ tiếng Anh với hình vẽ hoặc nghĩa', icon: '🔗', step: 3 },
     spelling: { name: 'Thử tài điền chữ', desc: 'Điền các chữ cái còn thiếu để nhớ cách viết', icon: '🔤', step: 4 },
     grammar: { name: 'Ngữ pháp cốt lõi', desc: 'Công thức tinh gọn, mẹo nhận biết và bài tập củng cố', icon: '📐', step: 2 },
+    pronunciation: { name: 'Phát âm & Ngữ âm', desc: 'Cặp âm mục tiêu SGK, khẩu hình tiếng Việt và game phân biệt âm', icon: '🗣️', step: 2 },
     shadowing: { name: 'Luyện Nghe & Nói', desc: 'Nghe đối thoại học đường và thu âm nhại lại giọng chuẩn', icon: '🎙️', step: 3 },
     speaking: { name: 'Luyện Nói & Chấm Điểm AI', desc: 'Luyện nhại giọng (Shadowing), thu âm và nghe lại giọng mình', icon: '🎙️', step: 3 },
+    listenstation: { name: 'Luyện Nghe hội thoại', desc: 'Nghe đối thoại học đường thực tế và bài tập nghe hiểu', icon: '👂', step: 4 },
     reading: { name: 'Đọc hiểu trực quan', desc: 'Đoạn văn ngắn có hình ảnh và câu hỏi trắc nghiệm', icon: '📖', step: 4 },
     writing: { name: 'Viết câu sắp xếp', desc: 'Xếp các khối từ xáo trộn thành câu hoàn chỉnh', icon: '✍️', step: 5 },
+    mastery: { name: 'Thử thách Tổng hợp Unit', desc: 'Đủ 4 Kỹ năng + Từ vựng + Ngữ pháp trong cùng 1 bài test', icon: '🏆', step: 8 },
   },
   unit: {
     practice: '4 bước ôn tập từ vựng',
