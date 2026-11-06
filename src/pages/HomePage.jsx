@@ -74,6 +74,35 @@ export default function HomePage() {
         </section>
       )}
 
+      {/* Sân khấu 3D tương tác theo bối cảnh */}
+      <section aria-label="Sân khấu 3D tương tác" className="rounded-[2.5rem] bg-gradient-to-r from-sky-soft via-mint-soft to-banana-soft p-6 sm:p-7 shadow-[0_6px_0_#bfe6d6] border-2 border-mint-dark/20">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              🎭
+            </span>
+            <div>
+              <span className="inline-block rounded-full bg-mint text-white px-3 py-0.5 text-xs font-black uppercase mb-1">
+                Sân khấu 3D tương tác
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-ink">
+                Học từ vựng theo bối cảnh
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Mô phỏng góc bàn học, phòng khách, đổi màu vật thể 3D, thử thách ngữ cảnh & xúc xắc luyện nói
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/unit/1/stage"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-mint px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Khám phá 3D →</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Chuỗi ngày học liên tiếp */}
       <div className="flex items-center justify-center gap-2 rounded-2xl bg-white/90 border border-banana-soft px-4 py-3 text-center text-base sm:text-lg font-black text-ink shadow-xs">
         <span className="text-2xl" aria-hidden>🔥</span>

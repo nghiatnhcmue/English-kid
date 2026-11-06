@@ -1,7 +1,7 @@
 // Toàn bộ chữ trên giao diện. Muốn thêm ngôn ngữ khác chỉ cần tạo file tương tự.
 export const t = {
   appName: 'Tiếng Anh 6',
-  nav: { home: 'Trang chủ', test: 'Test tuần', journal: 'Nhật ký', settings: 'Cài đặt' },
+  nav: { home: 'Trang chủ', stage: 'Sân khấu 3D', test: 'Test tuần', journal: 'Nhật ký', settings: 'Cài đặt' },
   common: {
     back: 'Quay lại',
     backToHome: 'Quay lại trang chủ',

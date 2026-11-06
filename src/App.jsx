@@ -16,6 +16,7 @@ import TeacherPage from './pages/TeacherPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
+  { to: '/unit/1/stage', label: t.nav.stage, icon: '🎭' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
   { to: '/settings', label: t.nav.settings, icon: '⚙️' },
@@ -95,7 +96,7 @@ function TopNavBar() {
 
         {/* Quick Stats & Audio Toggle */}
         <div className="flex items-center gap-2">
-          <UnitSwitcher className="hidden w-52 xl:flex" />
+          <UnitSwitcher className="hidden w-48 lg:flex" />
           <div className="flex items-center gap-1 rounded-2xl bg-cream px-3 py-1.5 text-sm font-black text-ink shadow-xs border border-banana-soft">
             <span aria-hidden>⭐</span>
             <span>{totalStars}</span>
@@ -125,7 +126,7 @@ function BottomNav() {
       className="no-print md:hidden fixed inset-x-0 bottom-0 z-30 border-t-2 border-banana-soft bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-lg backdrop-blur"
       aria-label="Điều hướng điện thoại"
     >
-      <ul className="mx-auto grid max-w-md grid-cols-4">
+      <ul className="mx-auto grid max-w-lg grid-cols-5">
         {NAV.map((item) => (
           <li key={item.to}>
             <NavLink
