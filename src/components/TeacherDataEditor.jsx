@@ -1,20 +1,25 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { getUnit, listUnits } from '../utils/data.js';
 import { store } from '../utils/storage.js';
 import { speak, getCloudTtsUrl } from '../utils/speech.js';
+import { parseBatchQuestions } from '../utils/questionParser.js';
 import { 
   AlertCircle, 
   BookOpen, 
   Check, 
+  CheckCircle2,
+  ClipboardList,
   Code2, 
   Download, 
   FileEdit, 
   Headphones, 
+  HelpCircle,
   Pencil, 
   Plus, 
   RefreshCw, 
   RotateCcw, 
   Save, 
+  Sparkles,
   Trash2, 
   Upload, 
   Video, 
@@ -81,6 +86,31 @@ export default function TeacherDataEditor() {
     color: '#FFC83D',
     description: '',
   });
+
+  // Reading comprehension states
+  const [passageText, setPassageText] = useState('');
+  const [passageTitle, setPassageTitle] = useState('');
+  const [passageTranslation, setPassageTranslation] = useState('');
+  const [showReadingQuestionModal, setShowReadingQuestionModal] = useState(false);
+  const [editingReadingQuestionIndex, setEditingReadingQuestionIndex] = useState(-1);
+  const [readingQuestionForm, setReadingQuestionForm] = useState({
+    question: '',
+    options: ['', '', '', ''],
+    answerIndex: 0,
+    explain: '',
+  });
+
+  // Batch reading questions import modal
+  const [showBatchReadingModal, setShowBatchReadingModal] = useState(false);
+  const [batchReadingText, setBatchReadingText] = useState('');
+  const [batchReadingPreview, setBatchReadingPreview] = useState([]);
+
+  // Đồng bộ passage khi đổi Unit
+  useEffect(() => {
+    setPassageText(currentUnit?.reading?.passage || '');
+    setPassageTitle(currentUnit?.reading?.title || '');
+    setPassageTranslation(currentUnit?.reading?.translation || '');
+  }, [selectedUnitId, currentUnit?.reading?.passage, currentUnit?.reading?.title, currentUnit?.reading?.translation]);
 
   // Raw JSON state
   const [rawJsonText, setRawJsonText] = useState('');
@@ -163,6 +193,110 @@ export default function TeacherDataEditor() {
       reloadData();
       showNotification(`🗑️ Đã xóa thành công Unit ${unitId}!`, 'mint');
     }
+  };
+
+  // ---- BÀI ĐỌC HIỂU (READING) ----
+  const handleSaveReadingPassage = () => {
+    store().saveUnitReadingPassage(
+      selectedUnitId,
+      {
+        title: passageTitle,
+        passage: passageText,
+        translation: passageTranslation,
+      },
+      currentUnit?.reading
+    );
+    reloadData();
+    showNotification('💾 Đã lưu thành công đoạn văn đọc hiểu!', 'mint');
+  };
+
+  const handleOpenAddReadingQuestion = () => {
+    setReadingQuestionForm({
+      question: '',
+      options: ['', '', '', ''],
+      answerIndex: 0,
+      explain: '',
+    });
+    setEditingReadingQuestionIndex(-1);
+    setShowReadingQuestionModal(true);
+  };
+
+  const handleOpenEditReadingQuestion = (q, idx) => {
+    const opts = Array.isArray(q.options) ? [...q.options] : [];
+    while (opts.length < 4) opts.push('');
+    setReadingQuestionForm({
+      question: q.question || '',
+      options: opts,
+      answerIndex: Number(q.answerIndex) || 0,
+      explain: q.explain || '',
+    });
+    setEditingReadingQuestionIndex(idx);
+    setShowReadingQuestionModal(true);
+  };
+
+  const handleSaveReadingQuestion = (e) => {
+    e.preventDefault();
+    if (!readingQuestionForm.question.trim()) {
+      showNotification('Vui lòng nhập nội dung câu hỏi!', 'peach');
+      return;
+    }
+    const filteredOptions = readingQuestionForm.options.map((o) => o.trim()).filter(Boolean);
+    if (filteredOptions.length < 2) {
+      showNotification('Vui lòng nhập ít nhất 2 phương án trả lời!', 'peach');
+      return;
+    }
+    store().saveReadingQuestion(
+      selectedUnitId,
+      {
+        ...readingQuestionForm,
+        options: filteredOptions,
+      },
+      editingReadingQuestionIndex,
+      currentUnit?.reading
+    );
+    setShowReadingQuestionModal(false);
+    reloadData();
+    showNotification(
+      editingReadingQuestionIndex >= 0
+        ? '✅ Đã cập nhật câu hỏi đọc hiểu!'
+        : '🎉 Đã thêm câu hỏi đọc hiểu mới!',
+      'mint'
+    );
+  };
+
+  const handleDeleteReadingQuestion = (idx) => {
+    if (window.confirm('Thầy cô có chắc chắn muốn xóa câu hỏi đọc hiểu này?')) {
+      store().deleteReadingQuestion(selectedUnitId, idx, currentUnit?.reading);
+      reloadData();
+      showNotification('🗑️ Đã xóa câu hỏi đọc hiểu!', 'mint');
+    }
+  };
+
+  const handleOpenBatchReadingModal = () => {
+    setBatchReadingText('');
+    setBatchReadingPreview([]);
+    setShowBatchReadingModal(true);
+  };
+
+  const handlePreviewBatchReading = () => {
+    const parsed = parseBatchQuestions(batchReadingText);
+    setBatchReadingPreview(parsed);
+  };
+
+  const handleApplyBatchReading = () => {
+    const questionsToImport = batchReadingPreview.length > 0
+      ? batchReadingPreview
+      : parseBatchQuestions(batchReadingText);
+
+    if (!questionsToImport.length) {
+      showNotification('Không tìm thấy câu hỏi hợp lệ trong văn bản dán vào!', 'peach');
+      return;
+    }
+
+    store().batchAddReadingQuestions(selectedUnitId, questionsToImport, currentUnit?.reading);
+    setShowBatchReadingModal(false);
+    reloadData();
+    showNotification(`🎉 Đã thêm thành công ${questionsToImport.length} câu hỏi đọc hiểu vào bài!`, 'mint');
   };
 
   // ---- TỪ VỰNG ----
@@ -520,7 +654,7 @@ export default function TeacherDataEditor() {
           { id: 'vocab', label: `Từ vựng (${currentUnit?.vocabularies?.length || 0})`, icon: '📝' },
           { id: 'videos', label: `Video bài giảng (${currentUnit?.videos?.length || 0})`, icon: '🎬' },
           { id: 'grammar', label: `Ngữ pháp & Trắc nghiệm (${currentUnit?.grammar?.quiz?.length || 0})`, icon: '📐' },
-          { id: 'reading', label: 'Bài Đọc hiểu', icon: '📖' },
+          { id: 'reading', label: `Bài Đọc hiểu (${currentUnit?.reading?.questions?.length || 0} câu)`, icon: '📖' },
           { id: 'writing', label: 'Bài Viết câu', icon: '✍️' },
           { id: 'raw_json', label: 'Chuyên gia: Soạn JSON thô', icon: '💻' },
         ].map((tab) => (
@@ -774,40 +908,219 @@ export default function TeacherDataEditor() {
 
       {/* ================= TAB 4: ĐỌC HIỂU (READING) ================= */}
       {activeSubTab === 'reading' && (
-        <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
-          <h3 className="text-xl font-black text-ink border-b border-banana-soft pb-3">
-            📖 Bài tập Đọc hiểu Skills 1
-          </h3>
-          <div>
-            <label className="block text-sm font-black text-ink mb-1">Đoạn văn đọc hiểu (Passage):</label>
-            <textarea
-              rows={5}
-              defaultValue={currentUnit?.reading?.passage || ''}
-              onBlur={(e) => {
-                const reading = { ...(currentUnit?.reading || {}), passage: e.target.value };
-                store().saveCustomUnit(selectedUnitId, { reading });
-                reloadData();
-                showNotification('Đã cập nhật đoạn văn đọc hiểu!');
-              }}
-              className="w-full rounded-2xl bg-cream p-4 text-sm font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
-            />
-            <span className="text-xs font-bold text-ink-soft">Mẹo: Bấm ra ngoài ô nhập để tự động lưu đoạn văn.</span>
+        <div className="flex flex-col gap-6">
+          {/* KHỐI 1: SOẠN ĐOẠN VĂN ĐỌC HIỂU */}
+          <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3 flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-black text-ink flex items-center gap-2">
+                  <span>📖</span>
+                  <span>Đoạn Văn Đọc Hiểu Skills 1 (Unit {selectedUnitId})</span>
+                </h3>
+                <p className="text-xs font-bold text-ink-soft">
+                  Bài đọc chính để học sinh luyện đọc thầm, nghe đọc mẫu và trả lời câu hỏi nắm ý
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (!passageText.trim()) {
+                      showNotification('Vui lòng nhập đoạn văn trước khi nghe thử!', 'peach');
+                      return;
+                    }
+                    speak(passageText, { lang: 'en-GB', rate: 0.85 });
+                  }}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-sky-soft px-3.5 py-2 text-xs font-black text-sky-dark hover:bg-sky hover:text-ink transition-all cursor-pointer"
+                  title="Nghe máy đọc thử toàn bộ đoạn văn tiếng Anh"
+                >
+                  <Volume2 className="h-4 w-4" />
+                  <span>Nghe thử bài đọc</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleSaveReadingPassage}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-4 py-2 text-xs font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Save className="h-4 w-4" />
+                  <span>Lưu đoạn văn</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Tiêu đề đoạn văn */}
+            <div>
+              <label className="block text-xs font-black text-ink mb-1">
+                Tiêu đề bài đọc (Title - Tuỳ chọn):
+              </label>
+              <input
+                type="text"
+                value={passageTitle}
+                onChange={(e) => setPassageTitle(e.target.value)}
+                placeholder="Ví dụ: My New School, A Special Day..."
+                className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold text-ink border border-banana-soft"
+              />
+            </div>
+
+            {/* Đoạn văn tiếng Anh */}
+            <div>
+              <label className="block text-xs font-black text-ink mb-1 flex items-center justify-between">
+                <span>Nội dung đoạn văn tiếng Anh (Passage) (*):</span>
+                <span className="text-[11px] font-bold text-ink-soft">
+                  {passageText.trim().split(/\s+/).filter(Boolean).length} từ
+                </span>
+              </label>
+              <textarea
+                rows={6}
+                value={passageText}
+                onChange={(e) => setPassageText(e.target.value)}
+                onBlur={handleSaveReadingPassage}
+                placeholder="Nhập hoặc dán đoạn văn tiếng Anh vào đây..."
+                className="w-full rounded-2xl bg-cream p-4 text-sm font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana leading-relaxed"
+              />
+              <span className="text-[11px] font-bold text-ink-soft mt-1 block">
+                💡 Mẹo: Bấm nút <strong>"Lưu đoạn văn"</strong> hoặc bấm ra ngoài ô nhập để tự động lưu lại.
+              </span>
+            </div>
+
+            {/* Bản dịch nghĩa tiếng Việt */}
+            <div>
+              <label className="block text-xs font-black text-ink mb-1">
+                Bản dịch nghĩa tiếng Việt (Dành cho học sinh đối chiếu khi cần):
+              </label>
+              <textarea
+                rows={3}
+                value={passageTranslation}
+                onChange={(e) => setPassageTranslation(e.target.value)}
+                onBlur={handleSaveReadingPassage}
+                placeholder="Nhập bản dịch nghĩa tiếng Việt của đoạn văn..."
+                className="w-full rounded-2xl bg-cream p-3 text-xs font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana resize-none"
+              />
+            </div>
           </div>
 
-          <div className="space-y-2 mt-3">
-            <h4 className="font-black text-sm text-ink">Câu hỏi đọc hiểu ({currentUnit?.reading?.questions?.length || 0}):</h4>
-            {(currentUnit?.reading?.questions || []).map((q, idx) => (
-              <div key={idx} className="rounded-2xl bg-cream p-3 border border-banana-soft text-xs font-bold text-ink">
-                <span className="font-black text-peach">Câu {idx + 1}:</span> {q.question}
-                <div className="mt-1 flex flex-wrap gap-2 text-ink-soft">
-                  {q.options?.map((opt, oIdx) => (
-                    <span key={oIdx} className={oIdx === q.answerIndex ? 'text-mint-dark font-black underline' : ''}>
-                      {opt}
-                    </span>
-                  ))}
+          {/* KHỐI 2: QUẢN LÝ CÂU HỎI ĐỌC HIỂU */}
+          <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3 flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-black text-ink flex items-center gap-2">
+                  <span>❓</span>
+                  <span>Câu hỏi Đọc hiểu ({currentUnit?.reading?.questions?.length || 0} câu)</span>
+                </h3>
+                <p className="text-xs font-bold text-ink-soft">
+                  Các câu hỏi trắc nghiệm kiểm tra độ hiểu bài, bắt ý chính và chi tiết của đoạn văn
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  onClick={handleOpenAddReadingQuestion}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-3.5 py-2 text-xs font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Plus className="h-4 w-4" />
+                  <span>Thêm câu hỏi đọc hiểu</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleOpenBatchReadingModal}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-banana px-3.5 py-2 text-xs font-black text-ink hover:bg-banana-dark transition-all cursor-pointer shadow-[0_3px_0_var(--color-banana-dark)] active:translate-y-0.5 active:shadow-none"
+                >
+                  <ClipboardList className="h-4 w-4" />
+                  <span>Dán từ Word / Văn bản</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Danh sách câu hỏi */}
+            {(!currentUnit?.reading?.questions || currentUnit.reading.questions.length === 0) ? (
+              <div className="rounded-2xl border-2 border-dashed border-banana-soft p-8 text-center flex flex-col items-center gap-3 bg-cream/40">
+                <span className="text-4xl">📝</span>
+                <p className="text-base font-black text-ink">Chưa có câu hỏi đọc hiểu nào cho Unit này</p>
+                <p className="text-xs font-bold text-ink-soft max-w-md">
+                  Thầy cô hãy bấm nút <strong>"+ Thêm câu hỏi đọc hiểu"</strong> để tự tạo câu hỏi hoặc <strong>"Dán từ Word"</strong> để nhập nhanh đề bài có sẵn.
+                </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <button
+                    type="button"
+                    onClick={handleOpenAddReadingQuestion}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-4 py-2 text-xs font-black text-white hover:bg-mint-dark cursor-pointer shadow-xs"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>Thêm câu hỏi ngay</span>
+                  </button>
                 </div>
               </div>
-            ))}
+            ) : (
+              <div className="grid gap-3">
+                {currentUnit.reading.questions.map((q, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-2xl bg-cream/60 p-4 border border-banana-soft hover:bg-cream transition-colors flex flex-col gap-2.5"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-start gap-2">
+                        <span className="rounded-lg bg-banana px-2 py-0.5 text-xs font-black text-ink shrink-0">
+                          Câu {idx + 1}
+                        </span>
+                        <h4 className="text-sm font-black text-ink leading-snug">
+                          {q.question}
+                        </h4>
+                      </div>
+
+                      <div className="flex items-center gap-1 shrink-0">
+                        <button
+                          type="button"
+                          onClick={() => handleOpenEditReadingQuestion(q, idx)}
+                          className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-ink hover:bg-banana transition-all cursor-pointer shadow-2xs border border-banana-soft"
+                          title="Sửa câu hỏi này"
+                        >
+                          <Pencil className="h-3.5 w-3.5" />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDeleteReadingQuestion(idx)}
+                          className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-rose-600 hover:bg-rose-500 hover:text-white transition-all cursor-pointer shadow-2xs border border-rose-200"
+                          title="Xóa câu hỏi này"
+                        >
+                          <Trash2 className="h-3.5 w-3.5" />
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {q.options?.map((opt, oIdx) => {
+                        const isCorrect = oIdx === q.answerIndex;
+                        return (
+                          <div
+                            key={oIdx}
+                            className={`rounded-xl px-3 py-1.5 text-xs font-bold border transition-all ${
+                              isCorrect
+                                ? 'bg-mint-soft text-mint-dark border-mint font-black ring-1 ring-mint'
+                                : 'bg-white text-ink border-banana-soft/60'
+                            }`}
+                          >
+                            <span>{String.fromCharCode(65 + oIdx)}. </span>
+                            <span>{opt}</span>
+                            {isCorrect && <span className="ml-1 text-[11px] font-black">✓ (Đáp án đúng)</span>}
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {q.explain && (
+                      <div className="rounded-xl bg-banana-soft/60 px-3 py-1.5 text-[11px] font-bold text-ink-soft flex items-center gap-1.5">
+                        <span>💡</span>
+                        <span>Căn cứ bài đọc / Giải thích: {q.explain}</span>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -1478,6 +1791,221 @@ export default function TeacherDataEditor() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL THÊM / SỬA CÂU HỎI ĐỌC HIỂU */}
+      {showReadingQuestionModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xs overflow-y-auto">
+          <div className="w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl border-4 border-banana flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">{editingReadingQuestionIndex >= 0 ? '✏️' : '📖'}</span>
+                <div>
+                  <h3 className="text-xl font-black text-ink">
+                    {editingReadingQuestionIndex >= 0
+                      ? `Sửa câu hỏi đọc hiểu ${editingReadingQuestionIndex + 1}`
+                      : 'Thêm câu hỏi đọc hiểu mới'}
+                  </h3>
+                  <p className="text-xs font-bold text-ink-soft">
+                    Unit {selectedUnitId} · Đoạn văn đọc hiểu
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowReadingQuestionModal(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-cream font-black text-ink hover:bg-peach hover:text-white transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveReadingQuestion} className="flex flex-col gap-3">
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">
+                  Nội dung câu hỏi đọc hiểu (*):
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={readingQuestionForm.question}
+                  onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, question: e.target.value })}
+                  placeholder="Ví dụ: Where does Mai go to school?"
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                {readingQuestionForm.options.map((opt, i) => (
+                  <div key={i}>
+                    <label className="block text-[11px] font-black text-ink mb-0.5">
+                      Đáp án {String.fromCharCode(65 + i)}:
+                    </label>
+                    <input
+                      type="text"
+                      required={i < 2}
+                      value={opt}
+                      onChange={(e) => {
+                        const next = [...readingQuestionForm.options];
+                        next[i] = e.target.value;
+                        setReadingQuestionForm({ ...readingQuestionForm, options: next });
+                      }}
+                      placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                      className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 mt-1">
+                <div>
+                  <label className="block text-xs font-black text-ink mb-1">Đáp án đúng (*):</label>
+                  <select
+                    value={readingQuestionForm.answerIndex}
+                    onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, answerIndex: Number(e.target.value) })}
+                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
+                  >
+                    {readingQuestionForm.options.map((opt, i) => (
+                      <option key={i} value={i}>
+                        {String.fromCharCode(65 + i)}: {opt || `Đáp án ${String.fromCharCode(65 + i)}`}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-black text-ink mb-1">Căn cứ bài đọc / Giải thích:</label>
+                  <input
+                    type="text"
+                    value={readingQuestionForm.explain}
+                    onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, explain: e.target.value })}
+                    placeholder="Ví dụ: Dựa vào câu 'I go to a boarding school...'"
+                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-2 flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
+                <button
+                  type="button"
+                  onClick={() => setShowReadingQuestionModal(false)}
+                  className="rounded-2xl px-5 py-2.5 text-sm font-bold text-ink-soft hover:bg-cream cursor-pointer"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-2xl bg-banana px-6 py-2.5 text-sm font-black text-ink shadow-[0_3px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+                >
+                  {editingReadingQuestionIndex >= 0 ? 'Lưu thay đổi' : 'Thêm câu hỏi'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL DÁN CÂU HỎI ĐỌC HIỂU TỪ WORD */}
+      {showBatchReadingModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xs overflow-y-auto">
+          <div className="w-full max-w-2xl rounded-3xl bg-white p-6 shadow-2xl border-4 border-banana flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📋</span>
+                <div>
+                  <h3 className="text-xl font-black text-ink">
+                    Dán câu hỏi đọc hiểu hàng loạt từ Word
+                  </h3>
+                  <p className="text-xs font-bold text-ink-soft">
+                    Hệ thống tự động phân tách câu hỏi, 4 phương án A, B, C, D và đáp án đúng
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowBatchReadingModal(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-cream font-black text-ink hover:bg-peach hover:text-white transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <div className="rounded-2xl bg-cream/70 p-3 border border-banana-soft text-xs font-bold text-ink-soft leading-relaxed">
+                <span className="font-black text-ink">💡 Định dạng mẫu Word hỗ trợ:</span>
+                <pre className="mt-1 font-mono text-[11px] text-ink bg-white p-2 rounded-xl border border-banana-soft/60">
+{`Câu 1: Where does Mai go to school?
+A. Hanoi
+B. Da Nang
+C. Ho Chi Minh City
+Đáp án: B
+
+Câu 2: What does Mai like studying?
+A. Maths and art
+B. History and music
+C. Science and english
+Đáp án: A`}
+                </pre>
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">
+                  Dán nội dung câu hỏi từ Word vào đây (*):
+                </label>
+                <textarea
+                  rows={8}
+                  value={batchReadingText}
+                  onChange={(e) => {
+                    setBatchReadingText(e.target.value);
+                    const parsed = parseBatchQuestions(e.target.value);
+                    setBatchReadingPreview(parsed);
+                  }}
+                  placeholder="Dán câu hỏi vào đây..."
+                  className="w-full rounded-2xl bg-cream p-4 font-mono text-xs font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+                />
+              </div>
+
+              {/* Xem trước kết quả nhận diện */}
+              {batchReadingPreview.length > 0 && (
+                <div className="rounded-2xl bg-mint-soft/50 p-3 border border-mint text-xs">
+                  <div className="flex items-center gap-2 font-black text-mint-dark">
+                    <CheckCircle2 className="h-4 w-4" />
+                    <span>Đã nhận diện thành công {batchReadingPreview.length} câu hỏi trắc nghiệm!</span>
+                  </div>
+                  <div className="mt-2 max-h-36 overflow-y-auto space-y-1">
+                    {batchReadingPreview.map((q, i) => (
+                      <div key={i} className="text-ink font-bold bg-white/80 p-2 rounded-lg border border-mint/30">
+                        <span className="text-peach font-black">Câu {i + 1}:</span> {q.question}
+                        <span className="ml-2 text-mint-dark font-black">
+                          (Đáp án đúng: {String.fromCharCode(65 + q.answerIndex)})
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
+                <button
+                  type="button"
+                  onClick={() => setShowBatchReadingModal(false)}
+                  className="rounded-2xl px-5 py-2.5 text-sm font-bold text-ink-soft hover:bg-cream cursor-pointer"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="button"
+                  onClick={handleApplyBatchReading}
+                  disabled={!batchReadingText.trim()}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-6 py-2.5 text-sm font-black text-white shadow-[0_3px_0_#58b292] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  <Check className="h-4 w-4" />
+                  <span>Nhập {batchReadingPreview.length > 0 ? `${batchReadingPreview.length} câu` : 'câu hỏi'} vào Unit</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}

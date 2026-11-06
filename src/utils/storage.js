@@ -516,6 +516,78 @@ export function createStore(storage = globalThis.localStorage) {
       return nextList;
     },
 
+    // ---- Quản lý Bài đọc hiểu & Câu hỏi Đọc hiểu của Unit ----
+    getUnitReading(unitId, baseReading = null) {
+      const customUnit = api.getCustomUnit(unitId);
+      if (customUnit?.reading) {
+        return customUnit.reading;
+      }
+      return baseReading || { passage: '', questions: [] };
+    },
+    saveUnitReadingPassage(unitId, passageData, baseReading = null) {
+      const currentReading = api.getUnitReading(unitId, baseReading);
+      const updatedReading = {
+        ...currentReading,
+        title: passageData.title !== undefined ? String(passageData.title).trim() : currentReading.title,
+        passage: String(passageData.passage || '').trim(),
+        translation: passageData.translation !== undefined ? String(passageData.translation).trim() : (currentReading.translation || ''),
+      };
+      api.saveCustomUnit(unitId, { reading: updatedReading });
+      return updatedReading;
+    },
+    saveReadingQuestion(unitId, questionData, indexToUpdate = -1, baseReading = null) {
+      const currentReading = api.getUnitReading(unitId, baseReading);
+      const currentList = Array.isArray(currentReading.questions) ? [...currentReading.questions] : [];
+      const cleanQ = {
+        question: questionData.question.trim(),
+        options: Array.isArray(questionData.options)
+          ? questionData.options.map((o) => String(o).trim())
+          : [],
+        answerIndex: Number(questionData.answerIndex) || 0,
+        explain: questionData.explain
+          ? String(questionData.explain).trim()
+          : 'Dựa vào thông tin chi tiết trong đoạn văn đọc hiểu.',
+        isCustom: true,
+      };
+      if (indexToUpdate >= 0 && indexToUpdate < currentList.length) {
+        currentList[indexToUpdate] = cleanQ;
+      } else {
+        currentList.push(cleanQ);
+      }
+      const updatedReading = { ...currentReading, questions: currentList };
+      api.saveCustomUnit(unitId, { reading: updatedReading });
+      return updatedReading;
+    },
+    deleteReadingQuestion(unitId, index, baseReading = null) {
+      const currentReading = api.getUnitReading(unitId, baseReading);
+      const currentList = Array.isArray(currentReading.questions) ? [...currentReading.questions] : [];
+      if (index >= 0 && index < currentList.length) {
+        currentList.splice(index, 1);
+        const updatedReading = { ...currentReading, questions: currentList };
+        api.saveCustomUnit(unitId, { reading: updatedReading });
+        return updatedReading;
+      }
+      return currentReading;
+    },
+    batchAddReadingQuestions(unitId, questionsArray = [], baseReading = null) {
+      const currentReading = api.getUnitReading(unitId, baseReading);
+      const currentList = Array.isArray(currentReading.questions) ? [...currentReading.questions] : [];
+      const cleaned = (questionsArray || []).map((q) => ({
+        question: q.question.trim(),
+        options: Array.isArray(q.options)
+          ? q.options.map((o) => String(o).trim())
+          : [],
+        answerIndex: Number(q.answerIndex) || 0,
+        explain: q.explain
+          ? String(q.explain).trim()
+          : 'Dựa vào thông tin chi tiết trong đoạn văn đọc hiểu.',
+        isCustom: true,
+      }));
+      const updatedReading = { ...currentReading, questions: [...currentList, ...cleaned] };
+      api.saveCustomUnit(unitId, { reading: updatedReading });
+      return updatedReading;
+    },
+
     // ---- Quản lý Giao bài tập theo tuần (Assignments) ----
     getAssignments() {
       const list = read(KEYS.ASSIGNMENTS, []);

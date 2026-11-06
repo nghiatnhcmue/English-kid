@@ -76,4 +76,56 @@ describe('Custom Units management', () => {
     expect(customStore.getCreatedUnits()).toHaveLength(0);
     expect(customStore.getCustomUnit(13)).toBeNull();
   });
+
+  it('can manage reading passage and comprehension questions', () => {
+    // 1. Save passage
+    const updated = customStore.saveUnitReadingPassage(1, {
+      title: 'A Day at School',
+      passage: 'Mai goes to school by bicycle every morning.',
+      translation: 'Mai đến trường bằng xe đạp vào mỗi buổi sáng.',
+    });
+    expect(updated.title).toBe('A Day at School');
+    expect(updated.passage).toContain('bicycle');
+
+    // 2. Add question
+    customStore.saveReadingQuestion(1, {
+      question: 'How does Mai go to school?',
+      options: ['By bus', 'By bicycle', 'On foot'],
+      answerIndex: 1,
+      explain: 'Based on: Mai goes to school by bicycle',
+    });
+
+    const reading = customStore.getUnitReading(1);
+    expect(reading.questions).toHaveLength(1);
+    expect(reading.questions[0].question).toBe('How does Mai go to school?');
+    expect(reading.questions[0].answerIndex).toBe(1);
+
+    // 3. Edit question
+    customStore.saveReadingQuestion(1, {
+      question: 'How does Mai travel to school?',
+      options: ['By bus', 'By bicycle', 'On foot'],
+      answerIndex: 1,
+    }, 0);
+
+    const edited = customStore.getUnitReading(1);
+    expect(edited.questions[0].question).toBe('How does Mai travel to school?');
+
+    // 4. Batch add questions
+    customStore.batchAddReadingQuestions(1, [
+      {
+        question: 'When does Mai go to school?',
+        options: ['Every morning', 'Every evening'],
+        answerIndex: 0,
+      },
+    ]);
+
+    const batch = customStore.getUnitReading(1);
+    expect(batch.questions).toHaveLength(2);
+
+    // 5. Delete question
+    customStore.deleteReadingQuestion(1, 0);
+    const afterDelete = customStore.getUnitReading(1);
+    expect(afterDelete.questions).toHaveLength(1);
+    expect(afterDelete.questions[0].question).toBe('When does Mai go to school?');
+  });
 });
