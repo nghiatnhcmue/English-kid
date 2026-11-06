@@ -8,7 +8,7 @@
   { "unitId": 7, "titleEn": "Television", "titleVi": "Truyền hình", "emoji": "📺", "color": "#C3A6FF", "available": true, "bookVolume": 2, "bookPages": "Trang 6 – 15" },
   { "unitId": 8, "titleEn": "Sports and Games", "titleVi": "Thể thao và trò chơi", "emoji": "🏸", "color": "#FFC83D", "available": true, "bookVolume": 2, "bookPages": "Trang 16 – 25" },
   { "unitId": 9, "titleEn": "Cities of the World", "titleVi": "Các thành phố trên thế giới", "emoji": "🗼", "color": "#8EC5FF", "available": true, "bookVolume": 2, "bookPages": "Trang 26 – 35" },
-  { "unitId": 10, "titleEn": "Our Houses in the Future", "titleVi": "Ngôi nhà trong tương lai", "emoji": "🤖", "color": "#FFB38A", "available": true, "bookVolume": 2, "bookPages": "Trang 38 – 47" },
+  { "unitId": 10, "titleEn": "Our Houses in the Future", "titleVi": "Ngôi nhà trong tương lai", "emoji": "🛸", "color": "#FFB38A", "available": true, "bookVolume": 2, "bookPages": "Trang 38 – 47" },
   { "unitId": 11, "titleEn": "Our Greener World", "titleVi": "Thế giới xanh hơn", "emoji": "♻️", "color": "#7ED6B5", "available": true, "bookVolume": 2, "bookPages": "Trang 48 – 57" },
-  { "unitId": 12, "titleEn": "Robots", "titleVi": "Người máy", "emoji": "🦾", "color": "#C3A6FF", "available": true, "bookVolume": 2, "bookPages": "Trang 58 – 67" }
+  { "unitId": 12, "titleEn": "Robots", "titleVi": "Người máy", "emoji": "🤖", "color": "#C3A6FF", "available": true, "bookVolume": 2, "bookPages": "Trang 58 – 67" }
 ]
