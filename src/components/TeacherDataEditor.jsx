@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import { getUnit, listUnits } from '../utils/data.js';
 import { store } from '../utils/storage.js';
 import { speak, getCloudTtsUrl } from '../utils/speech.js';
-import { parseBatchQuestions } from '../utils/questionParser.js';
+import { parseBatchQuestions, parseBatchWriting } from '../utils/questionParser.js';
 import { 
   AlertCircle, 
   BookOpen, 
@@ -104,6 +104,33 @@ export default function TeacherDataEditor() {
   const [showBatchReadingModal, setShowBatchReadingModal] = useState(false);
   const [batchReadingText, setBatchReadingText] = useState('');
   const [batchReadingPreview, setBatchReadingPreview] = useState([]);
+
+  // Writing & Fill-in-the-blank states
+  const [showWritingModal, setShowWritingModal] = useState(false);
+  const [editingWritingIndex, setEditingWritingIndex] = useState(-1);
+  const [writingForm, setWritingForm] = useState({
+    type: 'unscramble', // 'unscramble' | 'fill_blank'
+    sentence: '',
+    correctSentence: '',
+    blankWord: '',
+    options: ['', '', '', ''],
+    meaningVi: '',
+    hint: '',
+  });
+
+  // Batch writing import modal
+  const [showBatchWritingModal, setShowBatchWritingModal] = useState(false);
+  const [batchWritingText, setBatchWritingText] = useState('');
+  const [batchWritingPreview, setBatchWritingPreview] = useState([]);
+
+  // Lấy danh sách câu viết chuẩn hóa
+  const writingData = useMemo(() => {
+    return store().getUnitWriting(selectedUnitId, currentUnit?.writing);
+  }, [selectedUnitId, currentUnit?.writing, refreshKey]);
+
+  const writingItems = useMemo(() => {
+    return writingData?.items || [];
+  }, [writingData]);
 
   // Đồng bộ passage khi đổi Unit
   useEffect(() => {
@@ -297,6 +324,112 @@ export default function TeacherDataEditor() {
     setShowBatchReadingModal(false);
     reloadData();
     showNotification(`🎉 Đã thêm thành công ${questionsToImport.length} câu hỏi đọc hiểu vào bài!`, 'mint');
+  };
+
+  // ---- BÀI TẬP VIẾT CÂU & ĐIỀN KHUYẾT (WRITING & CLOZE) ----
+  const handleOpenAddWriting = (type = 'unscramble') => {
+    setWritingForm({
+      type,
+      sentence: '',
+      correctSentence: '',
+      blankWord: '',
+      options: ['', '', '', ''],
+      meaningVi: '',
+      hint: '',
+    });
+    setEditingWritingIndex(-1);
+    setShowWritingModal(true);
+  };
+
+  const handleOpenEditWriting = (item, idx) => {
+    const opts = Array.isArray(item.options) ? [...item.options] : [];
+    while (opts.length < 4) opts.push('');
+    setWritingForm({
+      type: item.type || 'unscramble',
+      sentence: item.sentence || item.correctSentence || '',
+      correctSentence: item.correctSentence || item.sentence || '',
+      blankWord: item.blankWord || '',
+      options: opts,
+      meaningVi: item.meaningVi || '',
+      hint: item.hint || '',
+    });
+    setEditingWritingIndex(idx);
+    setShowWritingModal(true);
+  };
+
+  const handleSaveWritingItem = (e) => {
+    e.preventDefault();
+    const isFill = writingForm.type === 'fill_blank';
+    const mainSentence = isFill ? writingForm.sentence.trim() : writingForm.correctSentence.trim();
+    if (!mainSentence) {
+      showNotification(isFill ? 'Vui lòng nhập câu có chỗ trống!' : 'Vui lòng nhập câu tiếng Anh hoàn chỉnh!', 'peach');
+      return;
+    }
+    if (isFill && !writingForm.blankWord.trim()) {
+      showNotification('Vui lòng nhập từ cần điền đúng vào chỗ trống!', 'peach');
+      return;
+    }
+
+    const filteredOptions = writingForm.options.map((o) => o.trim()).filter(Boolean);
+    if (isFill && writingForm.blankWord.trim() && !filteredOptions.includes(writingForm.blankWord.trim())) {
+      filteredOptions.unshift(writingForm.blankWord.trim());
+    }
+
+    store().saveWritingItem(
+      selectedUnitId,
+      {
+        ...writingForm,
+        sentence: mainSentence,
+        correctSentence: isFill ? mainSentence.replace(/_{2,}/g, writingForm.blankWord.trim()).replace(/\[|\]/g, '') : mainSentence,
+        options: filteredOptions,
+      },
+      editingWritingIndex,
+      currentUnit?.writing
+    );
+
+    setShowWritingModal(false);
+    reloadData();
+    showNotification(
+      editingWritingIndex >= 0
+        ? '✅ Đã cập nhật bài tập viết / điền khuyết!'
+        : '🎉 Đã thêm bài tập viết / điền khuyết mới!',
+      'mint'
+    );
+  };
+
+  const handleDeleteWritingItem = (idx) => {
+    if (window.confirm('Thầy cô có chắc chắn muốn xóa bài tập này?')) {
+      store().deleteWritingItem(selectedUnitId, idx, currentUnit?.writing);
+      reloadData();
+      showNotification('🗑️ Đã xóa bài tập viết!', 'mint');
+    }
+  };
+
+  const handleOpenBatchWritingModal = () => {
+    setBatchWritingText('');
+    setBatchWritingPreview([]);
+    setShowBatchWritingModal(true);
+  };
+
+  const handlePreviewBatchWriting = () => {
+    const parsed = parseBatchWriting(batchWritingText);
+    setBatchWritingPreview(parsed);
+  };
+
+  const handleApplyBatchWriting = () => {
+    const itemsToImport = batchWritingPreview.length > 0
+      ? batchWritingPreview
+      : parseBatchWriting(batchWritingText);
+
+    if (!itemsToImport.length) {
+      showNotification('Không tìm thấy câu hợp lệ trong văn bản dán vào!', 'peach');
+      return;
+    }
+
+    store().batchAddWritingItems(selectedUnitId, itemsToImport, currentUnit?.writing);
+    setShowBatchWritingModal(false);
+    reloadData();
+    showNotification(`🎉 Đã thêm thành công ${itemsToImport.length} bài tập viết vào Unit!`, 'mint');
   };
 
   // ---- TỪ VỰNG ----
@@ -655,7 +788,7 @@ export default function TeacherDataEditor() {
           { id: 'videos', label: `Video bài giảng (${currentUnit?.videos?.length || 0})`, icon: '🎬' },
           { id: 'grammar', label: `Ngữ pháp & Trắc nghiệm (${currentUnit?.grammar?.quiz?.length || 0})`, icon: '📐' },
           { id: 'reading', label: `Bài Đọc hiểu (${currentUnit?.reading?.questions?.length || 0} câu)`, icon: '📖' },
-          { id: 'writing', label: 'Bài Viết câu', icon: '✍️' },
+          { id: 'writing', label: `Bài Viết & Điền khuyết (${writingItems.length} câu)`, icon: '✍️' },
           { id: 'raw_json', label: 'Chuyên gia: Soạn JSON thô', icon: '💻' },
         ].map((tab) => (
           <button
@@ -1125,41 +1258,194 @@ export default function TeacherDataEditor() {
         </div>
       )}
 
-      {/* ================= TAB 5: VIẾT CÂU (WRITING) ================= */}
+      {/* ================= TAB 5: VIẾT CÂU & ĐIỀN KHUYẾT (WRITING & CLOZE) ================= */}
       {activeSubTab === 'writing' && (
-        <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
-          <h3 className="text-xl font-black text-ink border-b border-banana-soft pb-3">
-            ✍️ Bài tập Viết câu ghép từ Skills 2
-          </h3>
-          <div className="rounded-2xl bg-cream p-4 border border-banana-soft space-y-3">
-            <div>
-              <label className="block text-xs font-black text-ink mb-1">Nghĩa tiếng Việt:</label>
-              <input
-                type="text"
-                defaultValue={currentUnit?.writing?.meaningVi || ''}
-                onBlur={(e) => {
-                  const writing = { ...(currentUnit?.writing || {}), meaningVi: e.target.value };
-                  store().saveCustomUnit(selectedUnitId, { writing });
-                  reloadData();
-                  showNotification('Đã lưu nghĩa tiếng Việt bài viết!');
-                }}
-                className="w-full rounded-xl bg-white px-3 py-2 text-sm font-bold border border-banana-soft"
-              />
+        <div className="flex flex-col gap-6">
+          <div className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3 flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-black text-ink flex items-center gap-2">
+                  <span>✍️</span>
+                  <span>Bài tập Viết câu & Điền khuyết Skills 2 ({writingItems.length} câu)</span>
+                </h3>
+                <p className="text-xs font-bold text-ink-soft">
+                  Rèn luyện phản xạ ngữ pháp qua dạng bài Ghép từ xáo trộn thành câu và Điền từ vào chỗ trống
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  onClick={() => handleOpenAddWriting('unscramble')}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-3.5 py-2 text-xs font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Plus className="h-4 w-4" />
+                  <span>Thêm câu ghép từ</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleOpenAddWriting('fill_blank')}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-sky px-3.5 py-2 text-xs font-black text-ink hover:bg-sky-dark hover:text-white transition-all cursor-pointer shadow-[0_3px_0_var(--color-sky-dark)] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Plus className="h-4 w-4" />
+                  <span>Thêm câu điền khuyết</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleOpenBatchWritingModal}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-banana px-3.5 py-2 text-xs font-black text-ink hover:bg-banana-dark transition-all cursor-pointer shadow-[0_3px_0_var(--color-banana-dark)] active:translate-y-0.5 active:shadow-none"
+                >
+                  <ClipboardList className="h-4 w-4" />
+                  <span>Dán từ Word / Văn bản</span>
+                </button>
+              </div>
             </div>
-            <div>
-              <label className="block text-xs font-black text-ink mb-1">Câu hoàn chỉnh đúng ngữ pháp:</label>
-              <input
-                type="text"
-                defaultValue={currentUnit?.writing?.correctSentence || ''}
-                onBlur={(e) => {
-                  const writing = { ...(currentUnit?.writing || {}), correctSentence: e.target.value };
-                  store().saveCustomUnit(selectedUnitId, { writing });
-                  reloadData();
-                  showNotification('Đã lưu câu chuẩn ngữ pháp!');
-                }}
-                className="w-full rounded-xl bg-white px-3 py-2 text-sm font-bold border border-banana-soft"
-              />
-            </div>
+
+            {/* Danh sách câu hỏi Viết & Điền khuyết */}
+            {writingItems.length === 0 ? (
+              <div className="rounded-2xl border-2 border-dashed border-banana-soft p-8 text-center flex flex-col items-center gap-3 bg-cream/40">
+                <span className="text-4xl">✍️</span>
+                <p className="text-base font-black text-ink">Chưa có bài tập viết câu nào cho Unit này</p>
+                <p className="text-xs font-bold text-ink-soft max-w-md">
+                  Thầy cô hãy bấm nút <strong>"+ Thêm câu ghép từ"</strong> hoặc <strong>"+ Thêm câu điền khuyết"</strong> để tạo bài tập thực hành viết cho học sinh.
+                </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <button
+                    type="button"
+                    onClick={() => handleOpenAddWriting('unscramble')}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-4 py-2 text-xs font-black text-white hover:bg-mint-dark cursor-pointer shadow-xs"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>Thêm câu ghép từ</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleOpenAddWriting('fill_blank')}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-sky px-4 py-2 text-xs font-black text-ink hover:bg-sky-dark hover:text-white cursor-pointer shadow-xs"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>Thêm câu điền khuyết</span>
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="grid gap-3">
+                {writingItems.map((item, idx) => {
+                  const isFill = item.type === 'fill_blank';
+                  return (
+                    <div
+                      key={item.id || idx}
+                      className="rounded-2xl bg-cream/60 p-4 border border-banana-soft hover:bg-cream transition-colors flex flex-col gap-2.5"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-start gap-2 flex-wrap">
+                          <span className="rounded-lg bg-banana px-2 py-0.5 text-xs font-black text-ink shrink-0">
+                            Câu {idx + 1}
+                          </span>
+                          <span
+                            className={`rounded-lg px-2 py-0.5 text-xs font-black shrink-0 ${
+                              isFill
+                                ? 'bg-sky-soft text-sky-dark border border-sky/30'
+                                : 'bg-mint-soft text-mint-dark border border-mint/30'
+                            }`}
+                          >
+                            {isFill ? '✏️ Điền khuyết (Fill-in-the-blank)' : '🧩 Ghép từ thành câu (Unscramble)'}
+                          </span>
+                        </div>
+
+                        <div className="flex items-center gap-1 shrink-0">
+                          <button
+                            type="button"
+                            onClick={() => handleOpenEditWriting(item, idx)}
+                            className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-ink hover:bg-banana transition-all cursor-pointer shadow-2xs border border-banana-soft"
+                            title="Sửa câu này"
+                          >
+                            <Pencil className="h-3.5 w-3.5" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteWritingItem(idx)}
+                            className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-rose-600 hover:bg-rose-500 hover:text-white transition-all cursor-pointer shadow-2xs border border-rose-200"
+                            title="Xóa câu này"
+                          >
+                            <Trash2 className="h-3.5 w-3.5" />
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* Hiển thị câu */}
+                      <div className="rounded-xl bg-white p-3 border border-banana-soft flex flex-col gap-1.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-black text-ink-soft">Câu bài tập:</span>
+                          <span className="text-sm font-black text-ink font-mono">
+                            {isFill ? item.sentence : item.correctSentence}
+                          </span>
+                        </div>
+
+                        {isFill && item.blankWord && (
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs font-black text-mint-dark">Từ cần điền đúng:</span>
+                            <span className="rounded-lg bg-mint-soft px-2 py-0.5 text-xs font-black text-mint-dark font-mono border border-mint">
+                              {item.blankWord}
+                            </span>
+                          </div>
+                        )}
+
+                        {!isFill && item.scrambledWords?.length > 0 && (
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-xs font-black text-ink-soft">Khối từ xáo trộn:</span>
+                            <div className="flex flex-wrap gap-1">
+                              {item.scrambledWords.map((w, wIdx) => (
+                                <span
+                                  key={wIdx}
+                                  className="rounded-lg bg-cream px-2 py-0.5 text-xs font-bold text-ink border border-banana-soft"
+                                >
+                                  {w}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {isFill && item.options?.length > 0 && (
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="text-xs font-black text-ink-soft">Lựa chọn gợi ý:</span>
+                            <div className="flex flex-wrap gap-1">
+                              {item.options.map((opt, oIdx) => (
+                                <span
+                                  key={oIdx}
+                                  className={`rounded-lg px-2 py-0.5 text-xs font-bold border ${
+                                    opt === item.blankWord
+                                      ? 'bg-mint-soft text-mint-dark border-mint font-black'
+                                      : 'bg-cream text-ink border-banana-soft'
+                                  }`}
+                                >
+                                  {opt} {opt === item.blankWord ? '✓' : ''}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {item.meaningVi && (
+                          <div className="text-xs font-bold text-ink-soft border-t border-banana-soft/60 pt-1.5 mt-0.5">
+                            💡 Nghĩa tiếng Việt: &quot;{item.meaningVi}&quot;
+                          </div>
+                        )}
+
+                        {item.hint && (
+                          <div className="text-[11px] font-bold text-ink-soft">
+                            📌 Gợi ý cho học sinh: {item.hint}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       )}
@@ -2003,6 +2289,285 @@ C. Science and english
                 >
                   <Check className="h-4 w-4" />
                   <span>Nhập {batchReadingPreview.length > 0 ? `${batchReadingPreview.length} câu` : 'câu hỏi'} vào Unit</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL THÊM / SỬA BÀI VIẾT CÂU & ĐIỀN KHUYẾT */}
+      {showWritingModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xs overflow-y-auto">
+          <div className="w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl border-4 border-mint flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">{writingForm.type === 'fill_blank' ? '✏️' : '🧩'}</span>
+                <div>
+                  <h3 className="text-xl font-black text-ink">
+                    {editingWritingIndex >= 0
+                      ? `Sửa bài viết câu ${editingWritingIndex + 1}`
+                      : writingForm.type === 'fill_blank'
+                      ? 'Thêm câu hỏi điền khuyết mới'
+                      : 'Thêm câu ghép từ xáo trộn mới'}
+                  </h3>
+                  <p className="text-xs font-bold text-ink-soft">
+                    Unit {selectedUnitId} · Bài tập Viết & Luyện câu Skills 2
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowWritingModal(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-cream font-black text-ink hover:bg-peach hover:text-white transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Chọn dạng bài */}
+            <div className="flex items-center gap-2 p-1.5 bg-cream rounded-2xl border border-banana-soft">
+              <button
+                type="button"
+                onClick={() => setWritingForm({ ...writingForm, type: 'unscramble' })}
+                className={`flex-1 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
+                  writingForm.type === 'unscramble'
+                    ? 'bg-mint text-white shadow-xs'
+                    : 'text-ink-soft hover:text-ink'
+                }`}
+              >
+                🧩 Ghép từ xáo trộn thành câu
+              </button>
+              <button
+                type="button"
+                onClick={() => setWritingForm({ ...writingForm, type: 'fill_blank' })}
+                className={`flex-1 py-2 rounded-xl text-xs font-black transition-all cursor-pointer ${
+                  writingForm.type === 'fill_blank'
+                    ? 'bg-sky text-ink shadow-xs'
+                    : 'text-ink-soft hover:text-ink'
+                }`}
+              >
+                ✏️ Điền từ vào chỗ trống
+              </button>
+            </div>
+
+            <form onSubmit={handleSaveWritingItem} className="flex flex-col gap-3">
+              {writingForm.type === 'unscramble' ? (
+                <div>
+                  <label className="block text-xs font-black text-ink mb-1">
+                    Câu hoàn chỉnh đúng ngữ pháp (*):
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={writingForm.correctSentence}
+                    onChange={(e) => setWritingForm({ ...writingForm, correctSentence: e.target.value })}
+                    placeholder="Ví dụ: This is my new calculator"
+                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                  />
+                  <span className="text-[11px] font-bold text-ink-soft mt-1 block">
+                    💡 Hệ thống sẽ tự động tách câu thành các khối từ và xáo trộn ngẫu nhiên cho học sinh chạm ghép.
+                  </span>
+                </div>
+              ) : (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Câu có chỗ trống (Dùng ______ hoặc [từ_cần_điền]) (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={writingForm.sentence}
+                      onChange={(e) => setWritingForm({ ...writingForm, sentence: e.target.value })}
+                      placeholder="Ví dụ: She ______ to school by bus every day."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-black text-ink mb-1">
+                        Từ cần điền đúng (*):
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={writingForm.blankWord}
+                        onChange={(e) => setWritingForm({ ...writingForm, blankWord: e.target.value })}
+                        placeholder="Ví dụ: goes"
+                        className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-black border border-banana-soft text-mint-dark"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-black text-ink mb-1">
+                        Các từ gợi ý / Lựa chọn:
+                      </label>
+                      <input
+                        type="text"
+                        value={Array.isArray(writingForm.options) ? writingForm.options.join(', ') : ''}
+                        onChange={(e) => {
+                          const opts = e.target.value.split(',').map((o) => o.trim());
+                          setWritingForm({ ...writingForm, options: opts });
+                        }}
+                        placeholder="Ví dụ: go, goes, going"
+                        className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">
+                  Nghĩa tiếng Việt của câu (*):
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={writingForm.meaningVi}
+                  onChange={(e) => setWritingForm({ ...writingForm, meaningVi: e.target.value })}
+                  placeholder="Ví dụ: Đây là chiếc máy tính cầm tay mới của mình."
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">
+                  Gợi ý cho học sinh (Tuỳ chọn):
+                </label>
+                <input
+                  type="text"
+                  value={writingForm.hint}
+                  onChange={(e) => setWritingForm({ ...writingForm, hint: e.target.value })}
+                  placeholder="Ví dụ: Bắt đầu bằng đại từ chỉ định This..."
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                />
+              </div>
+
+              <div className="mt-2 flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
+                <button
+                  type="button"
+                  onClick={() => setShowWritingModal(false)}
+                  className="rounded-2xl px-5 py-2.5 text-sm font-bold text-ink-soft hover:bg-cream cursor-pointer"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-2xl bg-mint px-6 py-2.5 text-sm font-black text-white shadow-[0_3px_0_#58b292] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+                >
+                  {editingWritingIndex >= 0 ? 'Lưu thay đổi' : 'Thêm câu bài tập'}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL DÁN BÀI TẬP VIẾT TỪ WORD */}
+      {showBatchWritingModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xs overflow-y-auto">
+          <div className="w-full max-w-2xl rounded-3xl bg-white p-6 shadow-2xl border-4 border-mint flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📋</span>
+                <div>
+                  <h3 className="text-xl font-black text-ink">
+                    Dán bài tập Viết & Điền khuyết hàng loạt từ Word
+                  </h3>
+                  <p className="text-xs font-bold text-ink-soft">
+                    Hỗ trợ dán câu sắp xếp xáo trộn hoặc câu điền từ vào chỗ trống
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowBatchWritingModal(false)}
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-cream font-black text-ink hover:bg-peach hover:text-white transition-all cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <div className="rounded-2xl bg-cream/70 p-3 border border-banana-soft text-xs font-bold text-ink-soft leading-relaxed">
+                <span className="font-black text-ink">💡 Định dạng mẫu Word hỗ trợ:</span>
+                <pre className="mt-1 font-mono text-[11px] text-ink bg-white p-2 rounded-xl border border-banana-soft/60">
+{`// Dạng 1: Ghép câu
+1. This / is / my / new / calculator
+-> Đây là chiếc máy tính cầm tay mới của mình.
+
+2. I do my homework after dinner.
+Nghĩa: Em làm bài tập sau bữa tối.
+
+// Dạng 2: Điền khuyết
+3. She ______ to school by bus every day.
+A. go
+B. goes
+C. going
+Đáp án: B`}
+                </pre>
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">
+                  Dán nội dung từ Word vào đây (*):
+                </label>
+                <textarea
+                  rows={8}
+                  value={batchWritingText}
+                  onChange={(e) => {
+                    setBatchWritingText(e.target.value);
+                    const parsed = parseBatchWriting(e.target.value);
+                    setBatchWritingPreview(parsed);
+                  }}
+                  placeholder="Dán câu hỏi vào đây..."
+                  className="w-full rounded-2xl bg-cream p-4 font-mono text-xs font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+                />
+              </div>
+
+              {/* Xem trước kết quả nhận diện */}
+              {batchWritingPreview.length > 0 && (
+                <div className="rounded-2xl bg-mint-soft/50 p-3 border border-mint text-xs">
+                  <div className="flex items-center gap-2 font-black text-mint-dark">
+                    <CheckCircle2 className="h-4 w-4" />
+                    <span>Đã nhận diện thành công {batchWritingPreview.length} câu bài tập!</span>
+                  </div>
+                  <div className="mt-2 max-h-36 overflow-y-auto space-y-1">
+                    {batchWritingPreview.map((item, i) => (
+                      <div key={i} className="text-ink font-bold bg-white/80 p-2 rounded-lg border border-mint/30 flex items-center justify-between gap-2">
+                        <div>
+                          <span className="text-peach font-black">Câu {i + 1} ({item.type === 'fill_blank' ? 'Điền khuyết' : 'Ghép câu'}):</span> {item.sentence || item.correctSentence}
+                        </div>
+                        {item.blankWord && (
+                          <span className="text-mint-dark font-black shrink-0">
+                            (Từ điền: {item.blankWord})
+                          </span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div className="flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">
+                <button
+                  type="button"
+                  onClick={() => setShowBatchWritingModal(false)}
+                  className="rounded-2xl px-5 py-2.5 text-sm font-bold text-ink-soft hover:bg-cream cursor-pointer"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  onClick={handleApplyBatchWriting}
+                  disabled={!batchWritingText.trim()}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-6 py-2.5 text-sm font-black text-white shadow-[0_3px_0_#58b292] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  <Check className="h-4 w-4" />
+                  <span>Nhập {batchWritingPreview.length > 0 ? `${batchWritingPreview.length} câu` : 'câu'} vào Unit</span>
                 </button>
               </div>
             </div>

@@ -588,6 +588,151 @@ export function createStore(storage = globalThis.localStorage) {
       return updatedReading;
     },
 
+    // ---- Quản lý Bài tập Viết câu & Điền khuyết (Writing & Cloze) ----
+    getUnitWriting(unitId, baseWriting = null) {
+      const customUnit = api.getCustomUnit(unitId);
+      if (customUnit?.writing) {
+        const raw = customUnit.writing;
+        if (Array.isArray(raw.items) && raw.items.length > 0) {
+          return raw;
+        }
+        if (raw.correctSentence) {
+          return {
+            ...raw,
+            items: [
+              {
+                id: `u${unitId}_write_base`,
+                type: raw.type || 'unscramble',
+                sentence: raw.correctSentence,
+                correctSentence: raw.correctSentence,
+                scrambledWords: raw.scrambledWords || raw.correctSentence.split(' '),
+                blankWord: raw.blankWord || '',
+                options: raw.options || [],
+                meaningVi: raw.meaningVi || '',
+                hint: raw.hint || '',
+              },
+            ],
+          };
+        }
+        return raw;
+      }
+      if (baseWriting?.correctSentence) {
+        return {
+          ...baseWriting,
+          items: [
+            {
+              id: `u${unitId}_write_base`,
+              type: baseWriting.type || 'unscramble',
+              sentence: baseWriting.correctSentence,
+              correctSentence: baseWriting.correctSentence,
+              scrambledWords: baseWriting.scrambledWords || baseWriting.correctSentence.split(' '),
+              blankWord: baseWriting.blankWord || '',
+              options: baseWriting.options || [],
+              meaningVi: baseWriting.meaningVi || '',
+              hint: baseWriting.hint || '',
+            },
+          ],
+        };
+      }
+      return baseWriting || { items: [] };
+    },
+    saveWritingItem(unitId, itemData, indexToUpdate = -1, baseWriting = null) {
+      const currentWriting = api.getUnitWriting(unitId, baseWriting);
+      const currentItems = Array.isArray(currentWriting.items) ? [...currentWriting.items] : [];
+      const isFill = itemData.type === 'fill_blank';
+      const cleanSentence = String(itemData.sentence || itemData.correctSentence || '').trim();
+      const cleanCorrect = String(itemData.correctSentence || itemData.sentence || '').trim();
+
+      const cleanItem = {
+        id: itemData.id || `write_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+        type: isFill ? 'fill_blank' : 'unscramble',
+        sentence: cleanSentence,
+        correctSentence: cleanCorrect,
+        blankWord: String(itemData.blankWord || '').trim(),
+        options: Array.isArray(itemData.options)
+          ? itemData.options.map((o) => String(o).trim()).filter(Boolean)
+          : [],
+        scrambledWords: Array.isArray(itemData.scrambledWords) && itemData.scrambledWords.length > 0
+          ? itemData.scrambledWords.map((w) => String(w).trim()).filter(Boolean)
+          : cleanCorrect.split(/\s+/).filter(Boolean),
+        meaningVi: String(itemData.meaningVi || '').trim(),
+        hint: String(itemData.hint || '').trim(),
+        isCustom: true,
+      };
+
+      if (indexToUpdate >= 0 && indexToUpdate < currentItems.length) {
+        currentItems[indexToUpdate] = cleanItem;
+      } else {
+        currentItems.push(cleanItem);
+      }
+
+      const updatedWriting = {
+        ...currentWriting,
+        items: currentItems,
+        correctSentence: currentItems[0]?.correctSentence || '',
+        scrambledWords: currentItems[0]?.scrambledWords || [],
+        meaningVi: currentItems[0]?.meaningVi || '',
+        type: currentItems[0]?.type || 'unscramble',
+      };
+      api.saveCustomUnit(unitId, { writing: updatedWriting });
+      return updatedWriting;
+    },
+    deleteWritingItem(unitId, index, baseWriting = null) {
+      const currentWriting = api.getUnitWriting(unitId, baseWriting);
+      const currentItems = Array.isArray(currentWriting.items) ? [...currentWriting.items] : [];
+      if (index >= 0 && index < currentItems.length) {
+        currentItems.splice(index, 1);
+        const updatedWriting = {
+          ...currentWriting,
+          items: currentItems,
+          correctSentence: currentItems[0]?.correctSentence || '',
+          scrambledWords: currentItems[0]?.scrambledWords || [],
+          meaningVi: currentItems[0]?.meaningVi || '',
+          type: currentItems[0]?.type || 'unscramble',
+        };
+        api.saveCustomUnit(unitId, { writing: updatedWriting });
+        return updatedWriting;
+      }
+      return currentWriting;
+    },
+    batchAddWritingItems(unitId, itemsArray = [], baseWriting = null) {
+      const currentWriting = api.getUnitWriting(unitId, baseWriting);
+      const currentItems = Array.isArray(currentWriting.items) ? [...currentWriting.items] : [];
+      const cleaned = (itemsArray || []).map((item) => {
+        const isFill = item.type === 'fill_blank';
+        const cleanSentence = String(item.sentence || item.correctSentence || '').trim();
+        const cleanCorrect = String(item.correctSentence || item.sentence || '').trim();
+        return {
+          id: item.id || `write_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+          type: isFill ? 'fill_blank' : 'unscramble',
+          sentence: cleanSentence,
+          correctSentence: cleanCorrect,
+          blankWord: String(item.blankWord || '').trim(),
+          options: Array.isArray(item.options)
+            ? item.options.map((o) => String(o).trim()).filter(Boolean)
+            : [],
+          scrambledWords: Array.isArray(item.scrambledWords) && item.scrambledWords.length > 0
+            ? item.scrambledWords.map((w) => String(w).trim()).filter(Boolean)
+            : cleanCorrect.split(/\s+/).filter(Boolean),
+          meaningVi: String(item.meaningVi || '').trim(),
+          hint: String(item.hint || '').trim(),
+          isCustom: true,
+        };
+      });
+
+      const nextItems = [...currentItems, ...cleaned];
+      const updatedWriting = {
+        ...currentWriting,
+        items: nextItems,
+        correctSentence: nextItems[0]?.correctSentence || '',
+        scrambledWords: nextItems[0]?.scrambledWords || [],
+        meaningVi: nextItems[0]?.meaningVi || '',
+        type: nextItems[0]?.type || 'unscramble',
+      };
+      api.saveCustomUnit(unitId, { writing: updatedWriting });
+      return updatedWriting;
+    },
+
     // ---- Quản lý Giao bài tập theo tuần (Assignments) ----
     getAssignments() {
       const list = read(KEYS.ASSIGNMENTS, []);

@@ -128,4 +128,61 @@ describe('Custom Units management', () => {
     expect(afterDelete.questions).toHaveLength(1);
     expect(afterDelete.questions[0].question).toBe('When does Mai go to school?');
   });
+
+  it('can manage writing sentences and fill-in-the-blank items', () => {
+    // 1. Add unscramble sentence
+    customStore.saveWritingItem(1, {
+      type: 'unscramble',
+      correctSentence: 'This is my new calculator',
+      meaningVi: 'Đây là chiếc máy tính cầm tay mới của mình.',
+    });
+
+    const w1 = customStore.getUnitWriting(1);
+    expect(w1.items).toHaveLength(1);
+    expect(w1.items[0].type).toBe('unscramble');
+    expect(w1.items[0].correctSentence).toBe('This is my new calculator');
+
+    // 2. Add fill_blank item
+    customStore.saveWritingItem(1, {
+      type: 'fill_blank',
+      sentence: 'She ______ to school by bus every day.',
+      blankWord: 'goes',
+      options: ['go', 'goes', 'going'],
+      meaningVi: 'Cô ấy đi học bằng xe buýt mỗi ngày.',
+    });
+
+    const w2 = customStore.getUnitWriting(1);
+    expect(w2.items).toHaveLength(2);
+    expect(w2.items[1].type).toBe('fill_blank');
+    expect(w2.items[1].blankWord).toBe('goes');
+
+    // 3. Edit item
+    customStore.saveWritingItem(1, {
+      type: 'fill_blank',
+      sentence: 'Nam ______ football every afternoon.',
+      blankWord: 'plays',
+      options: ['play', 'plays'],
+    }, 1);
+
+    const w3 = customStore.getUnitWriting(1);
+    expect(w3.items[1].blankWord).toBe('plays');
+
+    // 4. Batch add items
+    customStore.batchAddWritingItems(1, [
+      {
+        type: 'unscramble',
+        correctSentence: 'We study English at school.',
+        meaningVi: 'Chúng em học tiếng Anh ở trường.',
+      },
+    ]);
+
+    const w4 = customStore.getUnitWriting(1);
+    expect(w4.items).toHaveLength(3);
+
+    // 5. Delete item
+    customStore.deleteWritingItem(1, 0);
+    const w5 = customStore.getUnitWriting(1);
+    expect(w5.items).toHaveLength(2);
+    expect(w5.items[0].blankWord).toBe('plays');
+  });
 });
