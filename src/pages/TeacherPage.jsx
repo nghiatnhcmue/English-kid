@@ -670,13 +670,22 @@ export default function TeacherPage() {
 
           {/* Ma Trận Tiến Độ 12 Unit */}
           <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
-            <div>
-              <h3 className="text-xl sm:text-2xl font-black text-ink">
-                Tiến Độ Chi Tiết Các Unit ({allUnits.length} Bài học)
-              </h3>
-              <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
-                Theo dõi học sinh đã hoàn thành những trạm kỹ năng nào trong từng bài học
-              </p>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-banana-soft pb-3">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-black text-ink">
+                  Tiến Độ Chi Tiết Các Unit ({allUnits.length} Bài học)
+                </h3>
+                <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+                  Theo dõi học sinh đã hoàn thành những trạm kỹ năng nào trong từng bài học
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setActiveTab('editor')}
+                className="inline-flex items-center gap-1.5 self-start sm:self-center rounded-2xl bg-mint px-4 py-2.5 text-xs sm:text-sm font-black text-white hover:bg-mint-dark transition-all shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none cursor-pointer"
+              >
+                <span>➕ Thêm / Chỉnh Sửa Unit</span>
+              </button>
             </div>
 
             <div className="grid gap-3">

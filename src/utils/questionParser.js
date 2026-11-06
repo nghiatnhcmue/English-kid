@@ -196,123 +196,195 @@ export function parseBatchWriting(rawText) {
   // Tách từng dòng câu viết / câu điền khuyết
   const lines = rawText.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
   const items = [];
-  let currentSentence = '';
+  let currentItem = null;
 
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
     line = line.replace(/^\s*(?:câu|question|bài)?\s*\d+[\.\:\)\/]\s*/i, '').trim();
+    if (!line) continue;
 
-    // Dạng 1: "This / is / my / new / pen -> Đây là cây bút mới của mình"
-    const transMatch = line.match(/^([^\-\=\>]+?)\s*(?:->|=>|:\s*[A-ZÀ-Ỹa-zà-ỹ])\s*(.+)$/);
-    if (transMatch && (transMatch[1].includes('/') || transMatch[1].split(' ').length >= 2)) {
-      const rawSent = transMatch[1].replace(/\//g, ' ').replace(/\s+/g, ' ').trim();
+    // Kiểm tra dòng đáp án hoặc giải thích
+    const isAnswerKey = /^(?:đáp\s*án|answer|key)[\s\:\=]/i.test(line);
+    const isExplanation = /^(?:giải\s*thích|nghĩa|dịch|gợi\s*ý|hint|explain)[\s\:\=]/i.test(line) || line.startsWith('->') || line.startsWith('=>');
+
+    if (isAnswerKey) {
+      const ans = line.replace(/^(?:đáp\s*án|answer|key)[\s\:\=]+/i, '').trim();
+      if (currentItem) {
+        currentItem.correctSentence = ans;
+        if (!currentItem.blankWord && currentItem.type === 'fill_blank') {
+          currentItem.blankWord = ans;
+          currentItem.options = [ans];
+        }
+      }
+      continue;
+    }
+
+    if (isExplanation) {
+      const expl = line.replace(/^(?:giải\s*thích|nghĩa|dịch|gợi\s*ý|hint|explain)[\s\:\=]+|^(?:->|=>)\s*/i, '').trim();
+      if (currentItem) {
+        currentItem.meaningVi = expl;
+        currentItem.hint = expl;
+      }
+      continue;
+    }
+
+    // Dạng có kèm dịch ngay trên dòng: "This / is / my / new / pen -> Đây là cây bút mới của mình"
+    const transMatch = line.match(/^([^\-\=\>]+?)\s*(?:->|=>)\s*(.+)$/);
+    if (transMatch) {
+      if (currentItem) {
+        items.push(currentItem);
+        currentItem = null;
+      }
+      const rawSent = transMatch[1].replace(/^(?:sắp\s*xếp|unscramble|reorder|viết\s*lại)[\s\:\-]+/i, '').trim();
       const rawTrans = transMatch[2].trim();
       items.push(createSingleWritingItem(rawSent, rawTrans));
       continue;
     }
 
-    // Dạng 2: Dòng phụ nghĩa tiếng Việt "-> Đây là...", "Nghĩa: Đây là..."
-    if (line.startsWith('->') || line.startsWith('=>') || line.toLowerCase().startsWith('nghĩa:')) {
-      const trans = line.replace(/^(?:->|=>|nghĩa:\s*)/i, '').trim();
-      if (currentSentence) {
-        items.push(createSingleWritingItem(currentSentence, trans));
-        currentSentence = '';
-      }
-      continue;
+    // Câu mới
+    if (currentItem) {
+      items.push(currentItem);
     }
-
-    if (currentSentence) {
-      items.push(createSingleWritingItem(currentSentence, ''));
-    }
-    currentSentence = line.replace(/\//g, ' ').replace(/\s+/g, ' ').trim();
+    const cleanedLine = line.replace(/^(?:sắp\s*xếp|unscramble|reorder|viết\s*lại)[\s\:\-]+/i, '').trim();
+    currentItem = createSingleWritingItem(cleanedLine);
   }
 
-  if (currentSentence) {
-    items.push(createSingleWritingItem(currentSentence, ''));
+  if (currentItem) {
+    items.push(currentItem);
   }
 
   return items;
 }
 
-function createSingleWritingItem(sentence, meaningVi = '') {
-  const isFill = sentence.includes('_');
+function createSingleWritingItem(sentence, meaningVi = '', extra = {}) {
+  const hasBracket = /\[([^\]]+)\]/.test(sentence);
+  const isFill = sentence.includes('_') || hasBracket;
   const cleanSent = sentence.replace(/\s+/g, ' ').trim();
-  const words = cleanSent.split(/\s+/).filter(Boolean);
-  const shuffled = [...words].sort(() => Math.random() - 0.5);
 
-  let blankWord = '';
-  if (isFill) {
-    // Trích xuất từ trong ngoặc vuông [word] nếu có, ví dụ "She [goes] to school"
+  let blankWord = extra.blankWord || '';
+  if (hasBracket && !blankWord) {
     const bracketMatch = sentence.match(/\[([^\]]+)\]/);
     if (bracketMatch) {
       blankWord = bracketMatch[1].trim();
     }
   }
 
+  let correctSentence = extra.correctSentence || cleanSent.replace(/\[|\]/g, '');
+  if (sentence.includes('/') && !extra.correctSentence) {
+    correctSentence = cleanSent.replace(/\//g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  const displaySentence = hasBracket
+    ? cleanSent.replace(/\[([^\]]+)\]/g, '______')
+    : cleanSent;
+
+  const words = correctSentence.replace(/[\.\,\?\!]/g, '').split(/\s+/).filter(Boolean);
+  const shuffled = [...words].sort(() => Math.random() - 0.5);
+
   return {
     type: isFill ? 'fill_blank' : 'unscramble',
-    sentence: cleanSent,
+    sentence: isFill ? displaySentence : cleanSent,
     blankWord: blankWord,
     options: blankWord ? [blankWord] : [],
-    correctSentence: cleanSent.replace(/\[|\]/g, ''),
+    correctSentence: correctSentence,
     scrambledWords: shuffled,
     meaningVi: meaningVi || '',
-    hint: '',
+    hint: extra.hint || '',
   };
 }
 
 /**
  * Tiện ích phân tích bài tập tổng hợp ngoài SGK (Trắc nghiệm, Điền khuyết, Sắp xếp từ)
+ * Hỗ trợ trộn lẫn nhiều dạng bài tập trong cùng một văn bản dán từ Word
  */
 export function parseBatchAny(rawText) {
   if (!rawText || !rawText.trim()) return [];
 
-  // 1. Thử nhận diện dạng trắc nghiệm 4 đáp án A, B, C, D trước
-  const qList = parseBatchQuestions(rawText);
-  if (qList.length > 0) {
-    return qList.map((q) => {
-      const isFill = q.question.includes('_');
-      return {
-        id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
-        type: isFill ? 'fill_blank' : 'multiple_choice',
-        question: q.question,
-        prompt: q.question,
-        options: q.options || [],
-        answerIndex: q.answerIndex ?? 0,
-        blankWord: isFill ? (q.options[q.answerIndex] || '') : '',
-        correctSentence: isFill
-          ? q.question.replace(/_{2,}/g, q.options[q.answerIndex] || '').replace(/\s+/g, ' ').trim()
-          : '',
-        explain: q.explain || '',
-        isCustom: true,
-      };
-    });
+  const normalized = rawText.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const lines = normalized.split('\n');
+
+  const blocks = [];
+  let currentBlock = [];
+  const qStartRegex = /^\s*(?:câu|question|bài)?\s*\d+[\.\:\)\/]\s+/i;
+
+  for (const line of lines) {
+    if (qStartRegex.test(line)) {
+      if (currentBlock.length > 0) {
+        blocks.push(currentBlock.join('\n'));
+        currentBlock = [];
+      }
+      currentBlock.push(line);
+    } else {
+      if (currentBlock.length > 0) {
+        currentBlock.push(line);
+      } else if (line.trim()) {
+        currentBlock.push(line);
+      }
+    }
   }
 
-  // 2. Thử nhận diện dạng câu ghép / câu điền khuyết / viết lại câu
-  const writingList = parseBatchWriting(rawText);
-  if (writingList.length > 0) {
-    return writingList.map((w) => ({
-      id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
-      type: w.type || 'unscramble',
-      question:
-        w.type === 'unscramble'
-          ? w.meaningVi
-            ? `Sắp xếp các từ sau thành câu đúng (${w.meaningVi}):`
-            : 'Sắp xếp các từ sau thành câu hoàn chỉnh đúng ngữ pháp:'
-          : w.sentence || '',
-      prompt: w.meaningVi || '',
-      blankWord: w.blankWord || '',
-      correctSentence: w.correctSentence || w.sentence || '',
-      scrambledWords: w.scrambledWords || [],
-      options: w.options || [],
-      answerIndex: 0,
-      explain: w.meaningVi ? `Nghĩa tiếng Việt: ${w.meaningVi}` : '',
-      isCustom: true,
-    }));
+  if (currentBlock.length > 0) {
+    blocks.push(currentBlock.join('\n'));
   }
 
-  return [];
+  const finalBlocks = blocks.length > 0 ? blocks : normalized.split(/\n\s*\n/).filter((b) => b.trim());
+  const results = [];
+
+  for (const block of finalBlocks) {
+    const trimmed = block.trim();
+    if (!trimmed) continue;
+
+    // 1. Thử phân tích dạng trắc nghiệm lựa chọn A, B, C, D
+    const mcResults = parseBatchQuestions(trimmed);
+    if (mcResults.length > 0) {
+      for (const q of mcResults) {
+        const isFill = q.question.includes('_');
+        results.push({
+          id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+          type: isFill ? 'fill_blank' : 'multiple_choice',
+          question: q.question,
+          prompt: q.question,
+          options: q.options || [],
+          answerIndex: q.answerIndex ?? 0,
+          blankWord: isFill ? (q.options[q.answerIndex] || '') : '',
+          correctSentence: isFill
+            ? q.question.replace(/_{2,}/g, q.options[q.answerIndex] || '').replace(/\s+/g, ' ').trim()
+            : '',
+          explain: q.explain || '',
+          isCustom: true,
+        });
+      }
+      continue;
+    }
+
+    // 2. Thử phân tích dạng câu viết / điền khuyết / sắp xếp
+    const wResults = parseBatchWriting(trimmed);
+    if (wResults.length > 0) {
+      for (const w of wResults) {
+        results.push({
+          id: `q_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+          type: w.type || 'unscramble',
+          question:
+            w.type === 'unscramble'
+              ? w.meaningVi
+                ? `Sắp xếp các từ sau thành câu đúng (${w.meaningVi}):`
+                : 'Sắp xếp các từ sau thành câu hoàn chỉnh đúng ngữ pháp:'
+              : w.sentence || '',
+          prompt: w.meaningVi || '',
+          blankWord: w.blankWord || '',
+          correctSentence: w.correctSentence || w.sentence || '',
+          scrambledWords: w.scrambledWords || [],
+          options: w.options || [],
+          answerIndex: 0,
+          explain: w.meaningVi ? `Nghĩa tiếng Việt: ${w.meaningVi}` : '',
+          isCustom: true,
+        });
+      }
+      continue;
+    }
+  }
+
+  return results;
 }
 
 
