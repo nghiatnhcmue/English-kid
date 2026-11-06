@@ -14,10 +14,12 @@ import JournalPage from './pages/JournalPage.jsx';
 import SettingsPage from './pages/SettingsPage.jsx';
 import TeacherPage from './pages/TeacherPage.jsx';
 import GrammarPage from './pages/GrammarPage.jsx';
+import ListeningPage from './pages/ListeningPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
+  { to: '/listening', label: 'Luyện Nghe', icon: '👂' },
   { to: '/unit/1/stage', label: t.nav.stage, icon: '🎭' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
@@ -191,6 +193,7 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
+              <Route path="/listening" element={<Fresh component={ListeningPage} />} />
               <Route path="/unit/:unitId" element={<UnitPage />} />
               <Route path="/unit/:unitId/stage/:sceneId?" element={<Fresh component={StagePage} />} />
               <Route path="/unit/:unitId/:mode" element={<Fresh component={PracticePage} />} />

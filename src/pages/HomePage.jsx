@@ -132,6 +132,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Khối Banner: Phòng Luyện Nghe & Nói chuẩn bản ngữ */}
+      <section aria-label="Phòng Luyện Nghe" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-peach-soft via-cream to-sky-soft p-6 sm:p-7 shadow-[0_6px_0_#ffd2bf] border-2 border-peach/30">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              👂
+            </span>
+            <div>
+              <span className="rounded-full bg-peach text-white px-3 py-1 text-xs font-black shadow-xs">
+                Âm thanh bản xứ chuẩn US/UK
+              </span>
+              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
+                Phòng Luyện Nghe & Nói 12 Unit
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Nghe đối thoại học đường, trắc nghiệm nghe hiểu, chế độ nghe chậm 0.65x và luyện nói nhại giọng (Shadowing)
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/listening"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Vào Luyện Nghe →</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Chuỗi ngày học liên tiếp */}
       <div className="flex items-center justify-center gap-2 rounded-2xl bg-white/90 border border-banana-soft px-4 py-3 text-center text-base sm:text-lg font-black text-ink shadow-xs">
         <span className="text-2xl" aria-hidden>🔥</span>
