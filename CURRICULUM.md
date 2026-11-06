@@ -94,3 +94,4 @@ Mỗi từ trong hệ thống được đóng gói thành 6 thành phần:
 3. **Bước 3: Đánh giá định kỳ & Lưu kết quả (Weekly Check)**
    - Làm bài kiểm tra tuần gồm 15–20 câu hỏi tổng hợp.
    - Chấm điểm, bắn pháo hoa và gom các câu làm sai vào **"Sổ tay từ cần ôn lại"** để học lại riêng biệt.
+
