@@ -8,6 +8,8 @@ export const KEYS = {
   MASTERY: `${PREFIX}word_mastery`,
   PROGRESS: `${PREFIX}progress`,
   SETTINGS: `${PREFIX}settings`,
+  STUDENT: `${PREFIX}student_info`,
+  TEACHER_PIN: `${PREFIX}teacher_pin`,
 };
 
 export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true };
@@ -34,6 +36,26 @@ export function createStore(storage = globalThis.localStorage) {
   };
 
   const api = {
+    getStudentInfo() {
+      const info = read(KEYS.STUDENT, { name: '', class: '' });
+      return info && typeof info === 'object' ? info : { name: '', class: '' };
+    },
+    saveStudentInfo({ name = '', class: className = '' }) {
+      const clean = { name: String(name).trim(), class: String(className).trim() };
+      write(KEYS.STUDENT, clean);
+      return clean;
+    },
+
+    getTeacherPin() {
+      const pin = read(KEYS.TEACHER_PIN, '1234');
+      return String(pin || '1234');
+    },
+    saveTeacherPin(pin) {
+      const clean = String(pin || '1234').trim();
+      write(KEYS.TEACHER_PIN, clean);
+      return clean;
+    },
+
     getTestHistory() {
       const list = read(KEYS.TESTS, []);
       return Array.isArray(list) ? list : [];
@@ -43,10 +65,12 @@ export function createStore(storage = globalThis.localStorage) {
       return m && typeof m === 'object' && !Array.isArray(m) ? m : {};
     },
     /** answers: [{ questionId, wordId, type, correct }] */
-    saveTestResult({ unitIds, answers, now = new Date() }) {
+    saveTestResult({ unitIds, answers, now = new Date(), studentName, studentClass }) {
       const correct = answers.filter((a) => a.correct).length;
       const total = answers.length;
       const { score, stars } = scoreTest(correct, total);
+      const student = api.getStudentInfo();
+
       const entry = {
         id: `t_${now.getTime()}`,
         isoDate: now.toISOString(),
@@ -57,7 +81,10 @@ export function createStore(storage = globalThis.localStorage) {
         score,
         stars,
         answers,
+        studentName: studentName || student.name || 'Học sinh',
+        studentClass: studentClass || student.class || '6',
       };
+
       write(KEYS.TESTS, [entry, ...api.getTestHistory()]);
       write(KEYS.MASTERY, updateMastery(api.getMastery(), answers, entry.isoDate));
       api.markStudyDay(now);

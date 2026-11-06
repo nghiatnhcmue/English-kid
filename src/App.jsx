@@ -1,4 +1,4 @@
-import { HashRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { HashRouter, NavLink, Route, Routes, Link } from 'react-router-dom';
 import { SettingsProvider, useSettings } from './settings.jsx';
 import { store } from './utils/storage.js';
 import { streakOf } from './utils/dates.js';
@@ -10,6 +10,7 @@ import PracticePage from './pages/PracticePage.jsx';
 import TestPage from './pages/TestPage.jsx';
 import JournalPage from './pages/JournalPage.jsx';
 import SettingsPage from './pages/SettingsPage.jsx';
+import TeacherPage from './pages/TeacherPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
@@ -57,7 +58,7 @@ function TopNavBar() {
                   end={item.end}
                   onClick={() => playSfx('click')}
                   className={({ isActive }) =>
-                    `flex items-center gap-2 rounded-2xl px-4 py-2.5 text-base font-extrabold transition-all ${
+                    `flex items-center gap-2 rounded-2xl px-4 py-2 text-base font-extrabold transition-all ${
                       isActive
                         ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)]'
                         : 'text-ink-soft hover:bg-cream hover:text-ink'
@@ -71,11 +72,29 @@ function TopNavBar() {
                 </NavLink>
               </li>
             ))}
+
+            {/* Mục dành cho Giáo viên */}
+            <li>
+              <NavLink
+                to="/teacher"
+                onClick={() => playSfx('click')}
+                className={({ isActive }) =>
+                  `flex items-center gap-1.5 rounded-2xl px-3.5 py-2 text-sm font-black transition-all ${
+                    isActive
+                      ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
+                      : 'text-peach-dark hover:bg-rose-soft/50'
+                  }`
+                }
+              >
+                <span>👨‍🏫</span>
+                <span>Góc Giáo Viên</span>
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
         {/* Quick Stats & Audio Toggle */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2">
           <div className="flex items-center gap-1 rounded-2xl bg-cream px-3 py-1.5 text-sm font-black text-ink shadow-xs border border-banana-soft">
             <span aria-hidden>⭐</span>
             <span>{totalStars}</span>
@@ -145,6 +164,7 @@ export default function App() {
               <Route path="/test" element={<TestPage />} />
               <Route path="/journal" element={<JournalPage />} />
               <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/teacher" element={<TeacherPage />} />
               <Route path="*" element={<HomePage />} />
             </Routes>
           </main>

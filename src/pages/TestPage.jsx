@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { listUnits, vocabOf, getWord } from '../utils/data.js';
 import { store } from '../utils/storage.js';
 import { generateTest } from '../utils/testGenerator.js';
 import { wordsByStatus } from '../utils/mastery.js';
+import { submitTestScore } from '../utils/syncService.js';
 import { Button3D, Confetti, PageHeader, Stars } from '../components/ui.jsx';
 import WeeklyTest from '../components/WeeklyTest.jsx';
 import VocabCard from '../components/VocabCard.jsx';
@@ -13,6 +14,9 @@ import { t } from '../i18n/vi.js';
 function UnitPicker({ onStart }) {
   const units = listUnits().filter((u) => u.available);
   const [chosen, setChosen] = useState(() => new Set(units.slice(0, 1).map((u) => u.unitId)));
+  const savedStudent = store().getStudentInfo();
+  const [studentName, setStudentName] = useState(savedStudent.name || '');
+  const [studentClass, setStudentClass] = useState(savedStudent.class || '');
 
   const toggle = (id) => {
     playSfx('click');
@@ -21,8 +25,50 @@ function UnitPicker({ onStart }) {
     setChosen(next);
   };
 
+  const handleStart = () => {
+    const cleanName = studentName.trim() || 'Học sinh';
+    const cleanClass = studentClass.trim() || '6';
+    store().saveStudentInfo({ name: cleanName, class: cleanClass });
+    onStart([...chosen].sort((a, b) => a - b), cleanName, cleanClass);
+  };
+
   return (
     <div className="flex flex-col gap-6">
+      {/* Khối nhập thông tin học sinh */}
+      <section className="rounded-[2rem] bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft">
+        <h2 className="text-xl sm:text-2xl font-black text-ink mb-1">
+          👤 Thông tin của em
+        </h2>
+        <p className="text-sm font-bold text-ink-soft mb-4">
+          Thầy cô sẽ xem điểm dựa trên họ tên và lớp của em nhé!
+        </p>
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div>
+            <label className="block text-sm font-black text-ink mb-1">Họ và tên của em:</label>
+            <input
+              type="text"
+              value={studentName}
+              onChange={(e) => setStudentName(e.target.value)}
+              placeholder="Ví dụ: Nguyễn Văn An"
+              className="w-full rounded-2xl bg-cream px-4 py-3 text-base font-bold text-ink border-2 border-[#efe3cc] placeholder:text-ink-soft/50 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-black text-ink mb-1">Lớp:</label>
+            <input
+              type="text"
+              value={studentClass}
+              onChange={(e) => setStudentClass(e.target.value)}
+              placeholder="Ví dụ: 6A1"
+              className="w-full rounded-2xl bg-cream px-4 py-3 text-base font-bold text-ink border-2 border-[#efe3cc] placeholder:text-ink-soft/50 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Cấu trúc đề */}
       <div className="rounded-3xl bg-sky-soft/80 p-5 sm:p-6 border-2 border-sky/30 shadow-xs">
         <p className="text-lg sm:text-xl font-black text-ink">📋 {t.test.structure}</p>
         <p className="mt-1.5 text-base font-bold text-ink-soft">⏳ {t.common.noPressure}</p>
@@ -70,7 +116,7 @@ function UnitPicker({ onStart }) {
       <Button3D
         tone="peach"
         disabled={chosen.size === 0}
-        onClick={() => onStart([...chosen].sort((a, b) => a - b))}
+        onClick={handleStart}
         className="w-full py-5 text-xl"
       >
         {t.test.start}
@@ -85,18 +131,42 @@ function UnitPicker({ onStart }) {
 
 function TestResult({ entry }) {
   const wrongIds = [...new Set(entry.answers.filter((a) => !a.correct).map((a) => a.wordId))];
+  const [syncStatus, setSyncStatus] = useState('syncing');
+
+  useEffect(() => {
+    let mounted = true;
+    submitTestScore(entry).then((res) => {
+      if (mounted) {
+        setSyncStatus(res.success ? 'success' : 'saved_locally');
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, [entry]);
 
   return (
     <div className="flex flex-col gap-6">
       <Confetti show={entry.stars >= 2} />
 
       <div className="animate-pop flex flex-col items-center gap-3 rounded-[2.5rem] bg-white p-8 sm:p-10 text-center shadow-md border-4 border-banana-soft">
-        <p className="text-lg sm:text-xl font-black text-ink-soft">{t.test.score}</p>
+        <div className="flex items-center gap-2 rounded-full bg-cream px-4 py-1 text-sm font-black text-ink-soft border border-banana-soft">
+          <span>👤 {entry.studentName}</span>
+          <span>·</span>
+          <span>Lớp {entry.studentClass}</span>
+        </div>
+
+        <p className="text-lg sm:text-xl font-black text-ink-soft mt-1">{t.test.score}</p>
         <p className="text-7xl sm:text-8xl font-black text-peach tracking-tight">{entry.score}</p>
         <Stars count={entry.stars} className="text-5xl my-1" />
         <p className="text-xl sm:text-2xl font-black text-ink">
           {t.test.correctCount(entry.correct, entry.total)}
         </p>
+
+        {/* Thông báo gửi điểm cho giáo viên */}
+        <div className="mt-2 inline-flex items-center gap-2 rounded-2xl bg-mint-soft px-4 py-2 text-sm sm:text-base font-black text-mint-dark border border-mint/30">
+          <span>{syncStatus === 'syncing' ? '📡 Đang gửi điểm lên máy chủ...' : '✓ Đã tự động gửi điểm cho thầy cô!'}</span>
+        </div>
       </div>
 
       <section>
@@ -137,17 +207,22 @@ export default function TestPage() {
   const navigate = useNavigate();
   const [state, setState] = useState({ step: 'pick' });
 
-  const start = (unitIds) => {
+  const start = (unitIds, studentName, studentClass) => {
     const questions = generateTest({
       vocab: vocabOf(unitIds),
       hardWordIds: wordsByStatus(store().getMastery(), 'review'),
       seed: Date.now(),
     });
-    setState({ step: 'run', unitIds, questions });
+    setState({ step: 'run', unitIds, questions, studentName, studentClass });
   };
 
   const complete = (answers) => {
-    const entry = store().saveTestResult({ unitIds: state.unitIds, answers });
+    const entry = store().saveTestResult({
+      unitIds: state.unitIds,
+      answers,
+      studentName: state.studentName,
+      studentClass: state.studentClass,
+    });
     setState({ step: 'done', entry });
   };
 

@@ -5,14 +5,60 @@ const esc = (v) => {
   return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
 
-/** CSV lịch sử bài test, kèm danh sách từ sai. Có BOM để Excel đọc đúng tiếng Việt. */
+/** CSV lịch sử bài test của học sinh. Có BOM để Excel mở không bị lỗi font tiếng Việt. */
 export function testsToCsv(tests, wordLookup) {
   const header = ['Ngày', 'Tuần', 'Unit', 'Số câu đúng', 'Tổng số câu', 'Điểm (thang 10)', 'Số sao', 'Từ làm sai'];
   const rows = tests.map((t) => {
-    const wrong = [...new Set(t.answers.filter((a) => !a.correct).map((a) => wordLookup(a.wordId)?.word ?? a.wordId))];
-    return [formatViDate(t.isoDate), t.week, t.unitIds.join(' + '), t.correct, t.total, t.score, t.stars, wrong.join(' | ')];
+    const wrong = [
+      ...new Set(t.answers.filter((a) => !a.correct).map((a) => wordLookup(a.wordId)?.word ?? a.wordId)),
+    ];
+    return [
+      formatViDate(t.isoDate),
+      t.week,
+      t.unitIds.join(' + '),
+      t.correct,
+      t.total,
+      t.score,
+      t.stars,
+      wrong.join(' | '),
+    ];
   });
-  return '﻿' + [header, ...rows].map((r) => r.map(esc).join(',')).join('\r\n');
+  return '\uFEFF' + [header, ...rows].map((r) => r.map(esc).join(',')).join('\r\n');
+}
+
+/** CSV bảng điểm dành cho giáo viên (kèm Tên và Lớp của học sinh) */
+export function teacherScoresToCsv(records) {
+  const header = [
+    'Thời gian nộp bài',
+    'Họ và tên học sinh',
+    'Lớp',
+    'Bài học (Unit)',
+    'Điểm số (thang 10)',
+    'Số câu đúng',
+    'Tổng số câu',
+    'Đạt số sao',
+    'Các từ vựng làm sai',
+  ];
+
+  const rows = records.map((r) => {
+    const wrong = Array.isArray(r.wrongWords) ? r.wrongWords.join(' | ') : '';
+    const units = Array.isArray(r.unitIds) ? r.unitIds.map((u) => `Unit ${u}`).join(' + ') : '';
+    const time = r.createdAt ? `${formatViDate(r.createdAt)} ${new Date(r.createdAt).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })}` : '';
+
+    return [
+      time,
+      r.studentName || 'Học sinh',
+      r.studentClass || '',
+      units,
+      r.score,
+      r.correct,
+      r.total,
+      r.stars,
+      wrong,
+    ];
+  });
+
+  return '\uFEFF' + [header, ...rows].map((r) => r.map(esc).join(',')).join('\r\n');
 }
 
 export function downloadText(filename, text, type = 'text/csv;charset=utf-8') {

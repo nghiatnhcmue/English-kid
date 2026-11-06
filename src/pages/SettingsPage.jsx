@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useSettings } from '../settings.jsx';
 import { hasEnglishVoice, speak, isTtsSupported } from '../utils/speech.js';
 import { store } from '../utils/storage.js';
@@ -9,10 +10,22 @@ export default function SettingsPage() {
   const { settings, update } = useSettings();
   const [voiceOk, setVoiceOk] = useState(null);
 
+  const savedStudent = store().getStudentInfo();
+  const [studentName, setStudentName] = useState(savedStudent.name || '');
+  const [studentClass, setStudentClass] = useState(savedStudent.class || '');
+  const [savedSuccess, setSavedSuccess] = useState(false);
+
   useEffect(() => {
     if (!isTtsSupported()) return setVoiceOk(false);
     hasEnglishVoice().then(setVoiceOk);
   }, []);
+
+  const handleSaveStudent = (e) => {
+    e.preventDefault();
+    store().saveStudentInfo({ name: studentName, class: studentClass });
+    setSavedSuccess(true);
+    setTimeout(() => setSavedSuccess(false), 2000);
+  };
 
   const reset = () => {
     if (window.confirm(t.settings.resetConfirm)) {
@@ -25,6 +38,72 @@ export default function SettingsPage() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader title={`⚙️ ${t.settings.title}`} backTo="/" backLabel={t.nav.home} />
+
+      {/* Dành cho Giáo viên */}
+      <section className="rounded-3xl bg-gradient-to-r from-peach to-peach-dark p-6 text-white shadow-md">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span className="rounded-full bg-white/20 px-3 py-0.5 text-xs font-black uppercase tracking-wider">
+              Dành cho Thầy Cô
+            </span>
+            <h2 className="text-2xl font-black mt-1">👨‍🏫 Bảng Điểm & Quản Lý Học Sinh</h2>
+            <p className="text-sm font-bold opacity-90 mt-0.5">
+              Xem điểm số của học sinh qua Cloudflare D1, theo dõi từ hay sai và xuất file Excel.
+            </p>
+          </div>
+          <Link
+            to="/teacher"
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-white px-6 text-base font-black text-peach-dark shadow-md hover:bg-cream active:scale-95 transition-all text-center"
+          >
+            Mở Bảng Điểm 🔓
+          </Link>
+        </div>
+      </section>
+
+      {/* Thông tin học sinh */}
+      <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
+        <h2 className="text-2xl font-black text-ink mb-1">👤 Thông tin học sinh của máy này</h2>
+        <p className="text-sm font-bold text-ink-soft mb-4">
+          Tên và lớp sẽ tự động đính kèm khi nộp bài test để gửi điểm cho thầy cô.
+        </p>
+
+        <form onSubmit={handleSaveStudent} className="flex flex-col gap-3">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div>
+              <label className="block text-sm font-black text-ink mb-1">Họ và tên:</label>
+              <input
+                type="text"
+                value={studentName}
+                onChange={(e) => setStudentName(e.target.value)}
+                placeholder="Ví dụ: Nguyễn Văn An"
+                className="w-full rounded-2xl bg-cream px-4 py-2.5 text-base font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-black text-ink mb-1">Lớp:</label>
+              <input
+                type="text"
+                value={studentClass}
+                onChange={(e) => setStudentClass(e.target.value)}
+                placeholder="Ví dụ: 6A1"
+                className="w-full rounded-2xl bg-cream px-4 py-2.5 text-base font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+              />
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 mt-1">
+            <button
+              type="submit"
+              className="rounded-2xl bg-banana px-6 py-2.5 text-sm font-black text-ink shadow-[0_3px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+            >
+              Lưu thông tin
+            </button>
+            {savedSuccess && (
+              <span className="text-sm font-black text-mint-dark">✓ Đã lưu thành công!</span>
+            )}
+          </div>
+        </form>
+      </section>
 
       {/* Cài đặt giọng đọc tiếng Anh */}
       <section className="flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
