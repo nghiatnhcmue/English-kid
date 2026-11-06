@@ -56,11 +56,15 @@ export function loadVoices() {
 export function pickVoice(voices, lang = 'en-GB', online = typeof navigator === 'undefined' || navigator.onLine) {
   const norm = (l) => (l || '').replace('_', '-').toLowerCase();
   const english = voices.filter((v) => norm(v.lang).startsWith('en'));
-  const usable = online ? english : english.filter((v) => v.localService);
-  const pool = usable.length ? usable : english;
-  const exact = pool.filter((v) => norm(v.lang) === norm(lang));
-  const candidates = exact.length ? exact : pool;
-  return candidates.find((v) => /google|natural|enhanced|premium/i.test(v.name)) ?? candidates[0] ?? null;
+  if (!english.length) return null;
+
+  const exact = english.filter((v) => norm(v.lang) === norm(lang));
+  const candidates = exact.length ? exact : english;
+
+  // Ưu tiên giọng natural/google, nếu không có lấy local service
+  const natural = candidates.find((v) => /natural|enhanced|google/i.test(v.name));
+  const local = candidates.find((v) => v.localService);
+  return natural || local || candidates[0] || null;
 }
 
 export async function hasEnglishVoice() {
@@ -79,9 +83,14 @@ function playAudioFile(src, rate = 1) {
 
     const a = new Audio(src);
     currentAudio = a;
-    try {
-      a.playbackRate = Math.min(2, Math.max(0.5, rate));
-    } catch {}
+
+    const applyRate = () => {
+      try {
+        a.playbackRate = Math.min(2, Math.max(0.5, rate));
+      } catch {}
+    };
+    applyRate();
+    a.addEventListener('loadedmetadata', applyRate);
 
     const cleanup = () => {
       if (timer) clearTimeout(timer);
@@ -109,22 +118,22 @@ function playAudioFile(src, rate = 1) {
       resolve(false);
     });
 
-    // Timeout an toàn phòng trường hợp audio bị kẹt mạng (4 giây)
+    // Timeout an toàn 30 giây cho các câu thoại dài hoặc nghe chậm
     timer = setTimeout(() => {
       if (finished) return;
       finished = true;
       cleanup();
-      resolve(false);
-    }, 4000);
+      resolve(true);
+    }, 30000);
   });
 }
 
-/** Đọc văn bản/câu nói (Ưu tiên file âm thanh -> Online Cloud TTS cho từ vựng -> Web Speech API cho câu dài) */
+/** Đọc văn bản/câu nói (Ưu tiên file âm thanh chất lượng cao -> Online Youdao cho từ vựng -> Web Speech API cho câu dài) */
 export async function speak(text, { lang = 'en-GB', rate = 0.85, audio = null } = {}) {
   if (!text) return false;
   stopSpeaking();
 
-  // 1. Nếu có file âm thanh sẵn (ví dụ câu ví dụ trong dữ liệu)
+  // 1. Nếu có file âm thanh sẵn (ví dụ câu ví dụ, bài nghe listening, bài nói speaking)
   if (audio) {
     const ok = await playAudioFile(audio, rate);
     if (ok) return true;
@@ -145,20 +154,10 @@ export async function speak(text, { lang = 'en-GB', rate = 0.85, audio = null } 
     }
   }
 
-  // 2b. Thử phát Google TTS trực tuyến chuẩn giọng bản xứ UK/US
-  try {
-    const isUS = (lang || '').toLowerCase().includes('us');
-    const googleTtsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${isUS ? 'en-US' : 'en-GB'}&client=tw-ob&q=${encodeURIComponent(clean)}`;
-    const ok = await playAudioFile(googleTtsUrl, rate);
-    if (ok) return true;
-  } catch {
-    /* bỏ qua sang Web Speech API */
-  }
-
-  // 3. Với câu văn dài hoặc khi ngoại tuyến hoàn toàn:
-  // Dùng trực tiếp Web Speech API tích hợp của trình duyệt
+  // 3. Fallback sang Web Speech API tích hợp của trình duyệt (không trễ mạng, không bị Google CORS chặn)
   if (isTtsSupported()) {
     try {
+      if (synth.speaking || synth.pending) synth.cancel();
       if (synth.paused) synth.resume();
       let voices = synth.getVoices();
       if (!voices.length) {

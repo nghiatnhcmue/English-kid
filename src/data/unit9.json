@@ -182,7 +182,8 @@
       "Eiffel Tower",
       "Tokyo Tower"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit9/listening.mp3"
   },
   "speaking": {
     "targetSentence": "This historic tower is very famous.",
@@ -196,7 +197,8 @@
         "sentenceEn": "What a beautiful and crowded city!",
         "phonetic": "/wɒt ə ˈbjuːtɪfl ænd ˈkraʊdɪd ˈsɪti/",
         "meaningVi": "Thật là một thành phố xinh đẹp và náo nhiệt!",
-        "tipsVi": "Lên giọng ở cuối câu cảm thán \"city!\"."
+        "tipsVi": "Lên giọng ở cuối câu cảm thán \"city!\".",
+        "audio": "/assets/audio/unit9/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -204,7 +206,8 @@
         "sentenceEn": "Big Ben is the most famous historic clock in London.",
         "phonetic": "/bɪɡ ben ɪz ðə məʊst ˈfeɪməs hɪˈstɒrɪk klɒk ɪn ˈlʌndən/",
         "meaningVi": "Big Ben là chiếc đồng hồ lịch sử nổi tiếng nhất ở Luân Đôn.",
-        "tipsVi": "\"historic\" nhấn trọng âm vào âm thứ hai: his-TO-ric."
+        "tipsVi": "\"historic\" nhấn trọng âm vào âm thứ hai: his-TO-ric.",
+        "audio": "/assets/audio/unit9/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -212,7 +215,8 @@
         "sentenceEn": "The street food here is delicious and very cheap.",
         "phonetic": "/ðə striːt fuːd hɪər ɪz dɪˈlɪʃəs ænd ˈveri tʃiːp/",
         "meaningVi": "Đồ ăn đường phố ở đây vừa ngon vừa rất rẻ.",
-        "tipsVi": "\"delicious\" phát âm âm /ʃ/ tròn môi: de-LI-shus."
+        "tipsVi": "\"delicious\" phát âm âm /ʃ/ tròn môi: de-LI-shus.",
+        "audio": "/assets/audio/unit9/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -224,9 +228,11 @@
         "sentenceEn": "Yes, I have visited it with my family.",
         "phonetic": "/jes aɪ hæv ˈvɪzɪtɪd ɪt wɪð maɪ ˈfæməli/",
         "meaningVi": "Vâng, em đã từng ghé thăm nơi đó cùng gia đình rồi.",
-        "tipsVi": "\"visited\" phát âm đuôi là /-ɪd/."
+        "tipsVi": "\"visited\" phát âm đuôi là /-ɪd/.",
+        "audio": "/assets/audio/unit9/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit9/speaking-target.mp3"
   },
   "reading": {
     "passage": "Sydney is an exciting city in Australia. It has the famous Sydney Opera House with its unique architectural design. The weather is sunny in summer, and millions of tourists visit its beautiful beaches every year.",

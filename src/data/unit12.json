@@ -182,7 +182,8 @@
       "Dig holes",
       "Cut trees"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit12/listening.mp3"
   },
   "speaking": {
     "targetSentence": "This smart robot can recognise human voice.",
@@ -196,7 +197,8 @@
         "sentenceEn": "This smart robot can recognise human voice.",
         "phonetic": "/ðɪs smɑːt ˈrəʊbɒt kæn ˈrekəɡnaɪz ˈhjuːmən vɔɪs/",
         "meaningVi": "Chú robot thông minh này có thể nhận diện giọng nói con người.",
-        "tipsVi": "\"recognise\" nhấn trọng âm ở đầu: RE-cog-nise."
+        "tipsVi": "\"recognise\" nhấn trọng âm ở đầu: RE-cog-nise.",
+        "audio": "/assets/audio/unit12/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -204,7 +206,8 @@
         "sentenceEn": "Worker robots can build high buildings very fast.",
         "phonetic": "/ˈwɜːkə ˈrəʊbɒts kæn bɪld haɪ ˈbɪldɪŋz ˈveri fɑːst/",
         "meaningVi": "Robot công nhân có thể xây các tòa nhà cao tầng rất nhanh.",
-        "tipsVi": "\"fast\" có âm đuôi /st/, phát âm rõ và dứt khoát."
+        "tipsVi": "\"fast\" có âm đuôi /st/, phát âm rõ và dứt khoát.",
+        "audio": "/assets/audio/unit12/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -212,7 +215,8 @@
         "sentenceEn": "Robots will help make our lives easier and better.",
         "phonetic": "/ˈrəʊbɒts wɪl help meɪk ˈaʊə laɪvz ˈiːziər ænd ˈbetə/",
         "meaningVi": "Robot sẽ giúp cuộc sống của chúng ta dễ dàng và tốt đẹp hơn.",
-        "tipsVi": "\"lives\" là số nhiều của life, phát âm là /laɪvz/."
+        "tipsVi": "\"lives\" là số nhiều của life, phát âm là /laɪvz/.",
+        "audio": "/assets/audio/unit12/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -224,9 +228,11 @@
         "sentenceEn": "No, they cannot understand our emotions.",
         "phonetic": "/nəʊ ðeɪ ˈkænɒt ˌʌndəˈstænd ˈaʊər ɪˈməʊʃnz/",
         "meaningVi": "Không, chúng không thể thấu hiểu cảm xúc của chúng ta.",
-        "tipsVi": "\"emotions\" có âm /ʃ/ tròn môi: e-MO-tions."
+        "tipsVi": "\"emotions\" có âm /ʃ/ tròn môi: e-MO-tions.",
+        "audio": "/assets/audio/unit12/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit12/speaking-target.mp3"
   },
   "reading": {
     "passage": "Robots are becoming more helpful in our daily lives. Doctor robots can help examine patients, while teacher robots can teach English to young children. In the future, robots will be able to do heavy and dangerous work for humans.",

@@ -195,7 +195,8 @@
       "Lazy and shy",
       "Quiet and sad"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit3/listening.mp3"
   },
   "speaking": {
     "targetSentence": "My best friend is very hard-working and kind.",
@@ -209,7 +210,8 @@
         "sentenceEn": "She has long black hair and brown eyes.",
         "phonetic": "/ʃiː hæz lɒŋ blæk heər ænd braʊn aɪz/",
         "meaningVi": "Bạn ấy có mái tóc đen dài và đôi mắt nâu.",
-        "tipsVi": "Phát âm tròn môi với âm /ʃ/ trong \"She\"."
+        "tipsVi": "Phát âm tròn môi với âm /ʃ/ trong \"She\".",
+        "audio": "/assets/audio/unit3/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -217,7 +219,8 @@
         "sentenceEn": "My best friend is very hard-working and kind.",
         "phonetic": "/maɪ best frend ɪz ˈveri ˌhɑːd ˈwɜːkɪŋ ænd kaɪnd/",
         "meaningVi": "Bạn thân nhất của em rất chăm chỉ và tốt bụng.",
-        "tipsVi": "Nhấn rõ trọng âm của từ ghép \"hard-working\"."
+        "tipsVi": "Nhấn rõ trọng âm của từ ghép \"hard-working\".",
+        "audio": "/assets/audio/unit3/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -225,7 +228,8 @@
         "sentenceEn": "He is tall and sporty with a bright smile.",
         "phonetic": "/hiː ɪz tɔːl ænd ˈspɔːti wɪð ə braɪt smaɪl/",
         "meaningVi": "Cậu ấy cao ráo và yêu thể thao với nụ cười rạng rỡ.",
-        "tipsVi": "Bật âm đuôi /t/ trong từ \"bright\"."
+        "tipsVi": "Bật âm đuôi /t/ trong từ \"bright\".",
+        "audio": "/assets/audio/unit3/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -237,9 +241,11 @@
         "sentenceEn": "I would love to join your picnic!",
         "phonetic": "/aɪ wʊd lʌv tuː dʒɔɪn jɔː ˈpɪknɪk/",
         "meaningVi": "Mình rất muốn tham gia buổi dã ngoại cùng các bạn!",
-        "tipsVi": "Âm /dʒ/ trong \"join\" bật hơi mạnh và dứt khoát."
+        "tipsVi": "Âm /dʒ/ trong \"join\" bật hơi mạnh và dứt khoát.",
+        "audio": "/assets/audio/unit3/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit3/speaking-target.mp3"
   },
   "reading": {
     "passage": "Minh is my new classmate. He is twelve years old. He is very friendly and confident. Minh has chubby cheeks and short black hair. In his free time, he likes reading books and drawing pictures.",

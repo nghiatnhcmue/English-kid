@@ -124,10 +124,10 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
           <div className="rounded-2xl bg-cream-soft p-5 border border-banana-soft flex flex-col items-center gap-3 text-center">
             <p className="text-sm font-bold text-ink-soft">Bấm nút để nghe đoạn hội thoại:</p>
             <div className="flex items-center gap-3">
-              <SpeakerButton text={listening?.transcript} size="lg" />
+              <SpeakerButton text={listening?.transcript} audio={listening?.audio} size="lg" />
               <button
                 type="button"
-                onClick={() => speak(listening?.transcript, { rate: 0.65 })}
+                onClick={() => speak(listening?.transcript, { rate: 0.65, audio: listening?.audio })}
                 className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-white px-4 text-base font-black text-ink shadow-sm border border-[#efe3cc] hover:bg-cream active:translate-y-0.5 cursor-pointer"
               >
                 <span>🐢 Nghe chậm</span>
@@ -199,10 +199,10 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
 
           {/* Nghe mẫu trước khi nói */}
           <div className="flex items-center justify-center gap-3">
-            <SpeakerButton text={speaking?.targetSentence} size="md" />
+            <SpeakerButton text={speaking?.targetSentence} audio={speaking?.audio} size="md" />
             <button
               type="button"
-              onClick={() => speak(speaking?.targetSentence, { rate: 0.65 })}
+              onClick={() => speak(speaking?.targetSentence, { rate: 0.65, audio: speaking?.audio })}
               className="inline-flex min-h-12 items-center gap-1.5 rounded-2xl bg-cream px-4 text-sm font-black text-ink shadow-sm border border-[#efe3cc] hover:bg-banana-soft cursor-pointer"
             >
               <span>🐢 Nghe chậm từng từ</span>

@@ -195,7 +195,8 @@
       "Sunflowers",
       "Lotus flowers"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit6/listening.mp3"
   },
   "speaking": {
     "targetSentence": "We should visit our relatives during Tet.",
@@ -209,7 +210,8 @@
         "sentenceEn": "I wish you good health and happiness!",
         "phonetic": "/aɪ wɪʃ juː ɡʊd helθ ænd ˈhæpinəs/",
         "meaningVi": "Em chúc bạn/thầy cô dồi dào sức khỏe và hạnh phúc!",
-        "tipsVi": "Âm /θ/ trong \"health\" kẹp nhẹ đầu lưỡi thổi hơi ra."
+        "tipsVi": "Âm /θ/ trong \"health\" kẹp nhẹ đầu lưỡi thổi hơi ra.",
+        "audio": "/assets/audio/unit6/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -217,7 +219,8 @@
         "sentenceEn": "We should help our parents decorate the house.",
         "phonetic": "/wiː ʃʊd help ˈaʊə ˈpeərənts ˈdekəreɪt ðə haʊs/",
         "meaningVi": "Chúng em nên giúp bố mẹ trang hoàng nhà cửa.",
-        "tipsVi": "\"decorate\" nhấn trọng âm ở âm tiết thứ nhất: DE-co-rate."
+        "tipsVi": "\"decorate\" nhấn trọng âm ở âm tiết thứ nhất: DE-co-rate.",
+        "audio": "/assets/audio/unit6/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -225,7 +228,8 @@
         "sentenceEn": "Children should not ask for lucky money.",
         "phonetic": "/ˈtʃɪldrən ʃʊd nɒt ɑːsk fɔː ˈlʌki ˈmʌni/",
         "meaningVi": "Trẻ em không nên vòi vĩnh tiền lì xì.",
-        "tipsVi": "\"lucky money\" đọc liền mạch và tự nhiên."
+        "tipsVi": "\"lucky money\" đọc liền mạch và tự nhiên.",
+        "audio": "/assets/audio/unit6/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -237,9 +241,11 @@
         "sentenceEn": "We watch fireworks together on New Year's Eve.",
         "phonetic": "/wiː wɒtʃ ˈfaɪəwɜːks təˈɡeðər ɒn njuː jɪəz iːv/",
         "meaningVi": "Chúng em cùng nhau ngắm pháo hoa vào đêm Giao thừa.",
-        "tipsVi": "\"fireworks\" có âm /s/ ở đuôi, phát âm nhẹ."
+        "tipsVi": "\"fireworks\" có âm /s/ ở đuôi, phát âm nhẹ.",
+        "audio": "/assets/audio/unit6/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit6/speaking-target.mp3"
   },
   "reading": {
     "passage": "Tet is coming soon. In Viet Nam, people clean their houses to wash away bad luck. Children receive lucky money in red envelopes. Families gather together and enjoy special meals.",

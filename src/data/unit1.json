@@ -274,7 +274,8 @@
       "Hộp bút và thước kẻ",
       "Bộ đồng phục"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit1/listening.mp3"
   },
   "speaking": {
     "targetSentence": "I love my new school.",
@@ -288,7 +289,8 @@
         "sentenceEn": "I go to school by bicycle.",
         "phonetic": "/aɪ ɡəʊ tuː skuːl baɪ ˈbaɪsɪkl/",
         "meaningVi": "Em đi học bằng xe đạp.",
-        "tipsVi": "Phát âm rõ âm cuối /l/ trong \"bicycle\" nhé."
+        "tipsVi": "Phát âm rõ âm cuối /l/ trong \"bicycle\" nhé.",
+        "audio": "/assets/audio/unit1/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -296,7 +298,8 @@
         "sentenceEn": "This is Duy, my new friend.",
         "phonetic": "/ðɪs ɪz duːi maɪ njuː frend/",
         "meaningVi": "Đây là Duy, bạn mới của mình.",
-        "tipsVi": "Kẹp nhẹ đầu lưỡi giữa hai hàm răng khi phát âm \"This\" (/ðɪs/)."
+        "tipsVi": "Kẹp nhẹ đầu lưỡi giữa hai hàm răng khi phát âm \"This\" (/ðɪs/).",
+        "audio": "/assets/audio/unit1/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -304,7 +307,8 @@
         "sentenceEn": "I love my new school because teachers are nice.",
         "phonetic": "/aɪ lʌv maɪ njuː skuːl bɪˈkɒz ˈtiːtʃəz ɑː naɪs/",
         "meaningVi": "Em yêu ngôi trường mới vì thầy cô rất tốt bụng.",
-        "tipsVi": "Nhấn giọng vào \"love\", \"school\" và \"nice\" để biểu cảm tự nhiên."
+        "tipsVi": "Nhấn giọng vào \"love\", \"school\" và \"nice\" để biểu cảm tự nhiên.",
+        "audio": "/assets/audio/unit1/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -316,9 +320,11 @@
         "sentenceEn": "Yes, I am always ready!",
         "phonetic": "/jes aɪ æm ˈɔːlweɪz ˈredi/",
         "meaningVi": "Vâng, em luôn sẵn sàng!",
-        "tipsVi": "Nói với ngữ điệu vui tươi, tự tin và hào hứng."
+        "tipsVi": "Nói với ngữ điệu vui tươi, tự tin và hào hứng.",
+        "audio": "/assets/audio/unit1/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit1/speaking-target.mp3"
   },
   "reading": {
     "passage": "My name is Mai. I go to a boarding school in Da Nang. My school has a big library and a computer room. I like studying maths and art.",

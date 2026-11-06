@@ -362,12 +362,12 @@ export default function SpeakingStation({ unit, onFinish }) {
         {/* Các nút Nghe Mẫu Bản Xứ */}
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
           <div className="flex items-center gap-2 rounded-2xl bg-cream p-2 border border-banana-soft shadow-xs">
-            <SpeakerButton text={currentTarget.sentenceEn} size="lg" />
+            <SpeakerButton text={currentTarget.sentenceEn} audio={currentTarget.audio} size="lg" />
             <span className="text-xs sm:text-sm font-black text-ink pr-2">Nghe bản xứ chuẩn</span>
           </div>
           <button
             type="button"
-            onClick={() => speak(currentTarget.sentenceEn, { rate: 0.65 })}
+            onClick={() => speak(currentTarget.sentenceEn, { rate: 0.65, audio: currentTarget.audio })}
             className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-white px-5 text-sm sm:text-base font-black text-ink shadow-sm border border-banana-soft hover:bg-cream active:translate-y-0.5 cursor-pointer"
           >
             <span>🐢 Nghe chậm từng từ</span>

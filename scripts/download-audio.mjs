@@ -118,6 +118,62 @@ async function main() {
       }
     }
 
+    // Tải âm thanh bài nghe Listening
+    if (data.listening && data.listening.transcript) {
+      const listeningPath = path.join(targetDir, 'listening.mp3');
+      if (!fs.existsSync(listeningPath)) {
+        process.stdout.write(`  - Tải bài nghe: "${data.listening.transcript.slice(0, 30)}..." `);
+        const buf = await getSentenceAudio(data.listening.transcript);
+        if (buf) {
+          fs.writeFileSync(listeningPath, buf);
+          console.log(`✓ (${buf.byteLength} bytes)`);
+        } else {
+          console.log(`✗ Thất bại`);
+        }
+        await new Promise((r) => setTimeout(r, 120));
+      }
+      data.listening.audio = `/assets/audio/${u.dir}/listening.mp3`;
+    }
+
+    // Tải âm thanh bài nói Speaking Target
+    if (data.speaking && data.speaking.targetSentence) {
+      const speakingPath = path.join(targetDir, 'speaking-target.mp3');
+      if (!fs.existsSync(speakingPath)) {
+        process.stdout.write(`  - Tải câu nói: "${data.speaking.targetSentence}" `);
+        const buf = await getSentenceAudio(data.speaking.targetSentence);
+        if (buf) {
+          fs.writeFileSync(speakingPath, buf);
+          console.log(`✓ (${buf.byteLength} bytes)`);
+        } else {
+          console.log(`✗ Thất bại`);
+        }
+        await new Promise((r) => setTimeout(r, 120));
+      }
+      data.speaking.audio = `/assets/audio/${u.dir}/speaking-target.mp3`;
+    }
+
+    // Tải âm thanh các thử thách Speaking
+    if (data.speaking && Array.isArray(data.speaking.challenges)) {
+      for (let cIdx = 0; cIdx < data.speaking.challenges.length; cIdx++) {
+        const ch = data.speaking.challenges[cIdx];
+        if (ch.sentenceEn) {
+          const chPath = path.join(targetDir, `speaking-ch${cIdx + 1}.mp3`);
+          if (!fs.existsSync(chPath)) {
+            process.stdout.write(`    Thử thách ${cIdx + 1}: "${ch.sentenceEn.slice(0, 25)}..." `);
+            const buf = await getSentenceAudio(ch.sentenceEn);
+            if (buf) {
+              fs.writeFileSync(chPath, buf);
+              console.log(`✓ (${buf.byteLength} bytes)`);
+            } else {
+              console.log(`✗ Thất bại`);
+            }
+            await new Promise((r) => setTimeout(r, 120));
+          }
+          ch.audio = `/assets/audio/${u.dir}/speaking-ch${cIdx + 1}.mp3`;
+        }
+      }
+    }
+
     fs.writeFileSync(u.file, JSON.stringify(data, null, 2), 'utf-8');
     console.log(`💾 Đã cập nhật xong dữ liệu ${u.file}`);
   }

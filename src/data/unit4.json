@@ -182,7 +182,8 @@
       "A noisy market",
       "A busy airport"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit4/listening.mp3"
   },
   "speaking": {
     "targetSentence": "My neighbourhood is very peaceful and convenient.",
@@ -196,7 +197,8 @@
         "sentenceEn": "Excuse me, where is the cinema?",
         "phonetic": "/ɪkˈskjuːz miː weər ɪz ðə ˈsɪnəmɑː/",
         "meaningVi": "Xin lỗi, rạp chiếu phim ở đâu ạ?",
-        "tipsVi": "Lên giọng ở cuối câu hỏi \"cinema?\"."
+        "tipsVi": "Lên giọng ở cuối câu hỏi \"cinema?\".",
+        "audio": "/assets/audio/unit4/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -204,7 +206,8 @@
         "sentenceEn": "Go straight, then turn left at the lights.",
         "phonetic": "/ɡəʊ streɪt ðen tɜːn left æt ðə laɪts/",
         "meaningVi": "Hãy đi thẳng, sau đó rẽ trái ở cột đèn giao thông.",
-        "tipsVi": "Ngắt nhẹ sau \"straight\" để người nghe dễ theo dõi."
+        "tipsVi": "Ngắt nhẹ sau \"straight\" để người nghe dễ theo dõi.",
+        "audio": "/assets/audio/unit4/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -212,7 +215,8 @@
         "sentenceEn": "My neighbourhood is very peaceful and convenient.",
         "phonetic": "/maɪ ˈneɪbəhʊd ɪz ˈveri ˈpiːsfəl ænd kənˈviːniənt/",
         "meaningVi": "Khu phố nơi em sống rất yên bình và tiện lợi.",
-        "tipsVi": "Từ \"convenient\" nhấn trọng âm vào âm tiết thứ hai: con-VE-ni-ent."
+        "tipsVi": "Từ \"convenient\" nhấn trọng âm vào âm tiết thứ hai: con-VE-ni-ent.",
+        "audio": "/assets/audio/unit4/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -224,9 +228,11 @@
         "sentenceEn": "Yes, it is opposite the supermarket.",
         "phonetic": "/jes ɪt ɪz ˈɒpəzɪt ðə ˈsuːpəmɑːkɪt/",
         "meaningVi": "Vâng, nó ở đối diện siêu thị ạ.",
-        "tipsVi": "Âm đuôi /t/ trong \"opposite\" phát âm gọn nhẹ."
+        "tipsVi": "Âm đuôi /t/ trong \"opposite\" phát âm gọn nhẹ.",
+        "audio": "/assets/audio/unit4/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit4/speaking-target.mp3"
   },
   "reading": {
     "passage": "I live in a quiet suburb of Da Nang. The air here is cleaner and fresher than in the city centre. There are many convenient shops, a railway station, and a green park. People in my neighbourhood are very friendly.",

@@ -20,6 +20,17 @@ export default function ListeningStation({ unit, onFinish }) {
   const [answered, setAnswered] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(null);
   const [showTranscript, setShowTranscript] = useState(false);
+  const [slowPlaying, setSlowPlaying] = useState(false);
+
+  const handlePlaySlow = async () => {
+    if (slowPlaying) return;
+    setSlowPlaying(true);
+    try {
+      await speak(listening.transcript, { rate: 0.65, audio: listening.audio });
+    } finally {
+      setSlowPlaying(false);
+    }
+  };
 
   if (!listening) {
     return (
@@ -71,15 +82,20 @@ export default function ListeningStation({ unit, onFinish }) {
           </span>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center gap-2 rounded-2xl bg-cream p-2 border border-banana-soft shadow-xs">
-              <SpeakerButton text={listening.transcript} size="xl" />
+              <SpeakerButton text={listening.transcript} audio={listening.audio} size="xl" />
               <span className="text-sm font-black text-ink pr-3">Nghe tốc độ chuẩn</span>
             </div>
             <button
               type="button"
-              onClick={() => speak(listening.transcript, { rate: 0.65 })}
-              className="inline-flex min-h-14 items-center gap-2 rounded-2xl bg-white px-5 text-base font-black text-ink shadow-sm border border-banana-soft hover:bg-cream active:translate-y-0.5 cursor-pointer"
+              onClick={handlePlaySlow}
+              disabled={slowPlaying}
+              className={`inline-flex min-h-14 items-center gap-2 rounded-2xl px-5 text-base font-black transition-all cursor-pointer shadow-sm border ${
+                slowPlaying
+                  ? 'bg-sky-soft text-sky-dark border-sky ring-2 ring-sky/50 animate-pulse'
+                  : 'bg-white text-ink border-banana-soft hover:bg-cream active:translate-y-0.5'
+              }`}
             >
-              <span>🐢 Nghe chậm (0.65x)</span>
+              <span>🐢 {slowPlaying ? 'Đang đọc chậm...' : 'Nghe chậm (0.65x)'}</span>
             </button>
           </div>
           <p className="text-xs font-bold text-ink-soft max-w-md">
@@ -142,7 +158,7 @@ export default function ListeningStation({ unit, onFinish }) {
               </span>
               <button
                 type="button"
-                onClick={() => speak(listening.transcript)}
+                onClick={() => speak(listening.transcript, { audio: listening.audio })}
                 className="text-xs font-black text-sky-dark hover:underline flex items-center gap-1 cursor-pointer"
               >
                 <Volume2 className="h-3.5 w-3.5" /> Nghe lại

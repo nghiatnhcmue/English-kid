@@ -195,7 +195,8 @@
       "The music channel",
       "The news channel"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit7/listening.mp3"
   },
   "speaking": {
     "targetSentence": "I watch news programmes every evening.",
@@ -209,7 +210,8 @@
         "sentenceEn": "What is your favourite TV programme?",
         "phonetic": "/wɒt ɪz jɔː ˈfeɪvərɪt ˌtiː ˈviː ˈprəʊɡræm/",
         "meaningVi": "Chương trình tivi yêu thích của bạn là gì?",
-        "tipsVi": "\"favourite\" nhấn trọng âm ở đầu: FAY-vuh-rit."
+        "tipsVi": "\"favourite\" nhấn trọng âm ở đầu: FAY-vuh-rit.",
+        "audio": "/assets/audio/unit7/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -217,7 +219,8 @@
         "sentenceEn": "I watch educational channels to learn English.",
         "phonetic": "/aɪ wɒtʃ ˌedʒuˈkeɪʃənl ˈtʃænlz tuː lɜːn ˈɪŋɡlɪʃ/",
         "meaningVi": "Em xem các kênh giáo dục để học tiếng Anh.",
-        "tipsVi": "\"educational\" nhấn trọng âm vào âm \"ca\": e-ju-CA-tion-al."
+        "tipsVi": "\"educational\" nhấn trọng âm vào âm \"ca\": e-ju-CA-tion-al.",
+        "audio": "/assets/audio/unit7/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -225,7 +228,8 @@
         "sentenceEn": "I watch news programmes every evening.",
         "phonetic": "/aɪ wɒtʃ njuːz ˈprəʊɡræmz ˈevri ˈiːvnɪŋ/",
         "meaningVi": "Em xem các chương trình thời sự vào mỗi buổi tối.",
-        "tipsVi": "\"news\" phát âm có âm đuôi /z/: /njuːz/."
+        "tipsVi": "\"news\" phát âm có âm đuôi /z/: /njuːz/.",
+        "audio": "/assets/audio/unit7/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -237,9 +241,11 @@
         "sentenceEn": "Because it is very interesting and full of knowledge.",
         "phonetic": "/bɪˈkɒz ɪt ɪz ˈveri ˈɪntrəstɪŋ ænd fʊl əv ˈnɒlɪdʒ/",
         "meaningVi": "Vì nó rất thú vị và ngập tràn kiến thức bổ ích.",
-        "tipsVi": "\"interesting\" đọc 3 âm tiết gọn: IN-tre-sting."
+        "tipsVi": "\"interesting\" đọc 3 âm tiết gọn: IN-tre-sting.",
+        "audio": "/assets/audio/unit7/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit7/speaking-target.mp3"
   },
   "reading": {
     "passage": "Television is a popular source of entertainment and education. Viewers can watch many different channels from around the world. Educational programmes teach kids about animals, science, and history.",

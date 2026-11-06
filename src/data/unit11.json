@@ -182,7 +182,8 @@
       "Run, read, and write",
       "Rest, relax, and recover"
     ],
-    "answerIndex": 0
+    "answerIndex": 0,
+    "audio": "/assets/audio/unit11/listening.mp3"
   },
   "speaking": {
     "targetSentence": "We should reduce plastic waste to protect our planet.",
@@ -196,7 +197,8 @@
         "sentenceEn": "Remember to turn off lights before leaving.",
         "phonetic": "/rɪˈmembə tuː tɜːn ɒf laɪts bɪˈfɔː ˈliːvɪŋ/",
         "meaningVi": "Nhớ tắt đèn trước khi ra ngoài nhé.",
-        "tipsVi": "\"turn off\" có thể nối âm thành /tɜːn ɒf/."
+        "tipsVi": "\"turn off\" có thể nối âm thành /tɜːn ɒf/.",
+        "audio": "/assets/audio/unit11/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -204,7 +206,8 @@
         "sentenceEn": "We should reduce plastic waste to protect our planet.",
         "phonetic": "/wiː ʃʊd rɪˈdjuːs ˈplæstɪk weɪst tuː prəˈtekt ˈaʊə ˈplænɪt/",
         "meaningVi": "Chúng ta nên giảm rác thải nhựa để bảo vệ hành tinh.",
-        "tipsVi": "\"reduce\" nhấn trọng âm ở âm tiết thứ hai: re-DUCE."
+        "tipsVi": "\"reduce\" nhấn trọng âm ở âm tiết thứ hai: re-DUCE.",
+        "audio": "/assets/audio/unit11/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -212,7 +215,8 @@
         "sentenceEn": "You can reuse plastic bottles to grow green plants.",
         "phonetic": "/juː kæn ˌriːˈjuːz ˈplæstɪk ˈbɒtlz tuː ɡrəʊ ɡriːn plɑːnts/",
         "meaningVi": "Bạn có thể tái sử dụng chai nhựa để trồng cây xanh.",
-        "tipsVi": "\"reuse\" phát âm âm đầu kéo dài: re-USE."
+        "tipsVi": "\"reuse\" phát âm âm đầu kéo dài: re-USE.",
+        "audio": "/assets/audio/unit11/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -224,9 +228,11 @@
         "sentenceEn": "Let us walk or cycle to school to save energy!",
         "phonetic": "/let ʌs wɔːk ɔː ˈsaɪkl tuː skuːl tuː seɪv ˈenədʒi/",
         "meaningVi": "Chúng em hãy đi bộ hoặc đạp xe đến trường để tiết kiệm năng lượng ạ!",
-        "tipsVi": "Nói với giọng sôi nổi, nhiệt tình hưởng ứng."
+        "tipsVi": "Nói với giọng sôi nổi, nhiệt tình hưởng ứng.",
+        "audio": "/assets/audio/unit11/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit11/speaking-target.mp3"
   },
   "reading": {
     "passage": "Our planet is facing serious pollution. If we don't save energy, natural resources will run out quickly. Everyone can help by turning off the lights, picking up litter, and planting green trees.",

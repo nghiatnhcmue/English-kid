@@ -263,7 +263,8 @@
       "Hai phòng",
       "Ba phòng"
     ],
-    "answerIndex": 1
+    "answerIndex": 1,
+    "audio": "/assets/audio/unit2/listening.mp3"
   },
   "speaking": {
     "targetSentence": "There is a sofa in the living room.",
@@ -277,7 +278,8 @@
         "sentenceEn": "There is a sofa in the living room.",
         "phonetic": "/ðeər ɪz ə ˈsəʊfə ɪn ðə ˈlɪvɪŋ ruːm/",
         "meaningVi": "Có một chiếc ghế sô-pha trong phòng khách.",
-        "tipsVi": "Nối âm nhẹ giữa \"There is\" thành /ðeər ɪz/."
+        "tipsVi": "Nối âm nhẹ giữa \"There is\" thành /ðeər ɪz/.",
+        "audio": "/assets/audio/unit2/speaking-ch1.mp3"
       },
       {
         "id": "spk-2",
@@ -285,7 +287,8 @@
         "sentenceEn": "Wow, you have a lovely bedroom!",
         "phonetic": "/waʊ juː hæv ə ˈlʌvli ˈbedruːm/",
         "meaningVi": "Oa, bạn có một phòng ngủ thật đáng yêu!",
-        "tipsVi": "Lên giọng ở từ \"Wow\" và nhấn mạnh vào \"lovely\"."
+        "tipsVi": "Lên giọng ở từ \"Wow\" và nhấn mạnh vào \"lovely\".",
+        "audio": "/assets/audio/unit2/speaking-ch2.mp3"
       },
       {
         "id": "spk-3",
@@ -293,7 +296,8 @@
         "sentenceEn": "My family often cooks dinner in the kitchen.",
         "phonetic": "/maɪ ˈfæməli ˈɒfn kʊks ˈdɪnər ɪn ðə ˈkɪtʃɪn/",
         "meaningVi": "Gia đình em thường cùng nhau nấu bữa tối trong bếp.",
-        "tipsVi": "Nhớ phát âm âm /s/ ở đuôi từ \"cooks\" nhé."
+        "tipsVi": "Nhớ phát âm âm /s/ ở đuôi từ \"cooks\" nhé.",
+        "audio": "/assets/audio/unit2/speaking-ch3.mp3"
       },
       {
         "id": "spk-4",
@@ -305,9 +309,11 @@
         "sentenceEn": "It is sleeping under the table.",
         "phonetic": "/ɪt ɪz ˈsliːpɪŋ ˈʌndə ðə ˈteɪbl/",
         "meaningVi": "Nó đang ngủ dưới gầm bàn.",
-        "tipsVi": "Kéo dài âm /iː/ trong từ \"sleeping\"."
+        "tipsVi": "Kéo dài âm /iː/ trong từ \"sleeping\".",
+        "audio": "/assets/audio/unit2/speaking-ch4.mp3"
       }
-    ]
+    ],
+    "audio": "/assets/audio/unit2/speaking-target.mp3"
   },
   "reading": {
     "passage": "Nam lives in a town house in the city. His house is tall with three floors. His bedroom is on the second floor with a cozy balcony.",
