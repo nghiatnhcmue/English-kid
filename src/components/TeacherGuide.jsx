@@ -211,6 +211,13 @@ export default function TeacherGuide() {
               </p>
             </div>
           </div>
+
+          <div className="rounded-2xl bg-sky-soft/40 p-4 border border-sky/30 text-xs font-bold text-ink-soft">
+            <p className="font-black text-sky-dark text-sm mb-1">🔐 Tài khoản Cổng Quản Trị Giáo Viên:</p>
+            <p>
+              Tài khoản quản trị dành riêng cho thầy cô: Mã GV: <strong className="text-peach-dark">GV01</strong> | Mật khẩu: <strong className="text-mint-dark">123456789</strong>. Thầy cô có thể chủ động đổi mật khẩu mới bất cứ lúc nào qua nút <strong>"🔑 Đổi Mật Khẩu"</strong> ở góc trên trang.
+            </p>
+          </div>
         </div>
       )}
 

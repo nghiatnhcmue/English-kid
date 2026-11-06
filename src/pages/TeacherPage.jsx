@@ -1,12 +1,33 @@
 import { useState, useEffect, useMemo, useTransition } from 'react';
+import confetti from 'canvas-confetti';
 import { store, totalStarsOf } from '../utils/storage.js';
 import { fetchTeacherScores, deleteScore, clearAllScores } from '../utils/syncService.js';
 import { teacherScoresToCsv, downloadText } from '../utils/report.js';
 import { formatViDate, streakOf } from '../utils/dates.js';
 import { listUnits } from '../utils/data.js';
 import { wordsByStatus } from '../utils/mastery.js';
+import { playSfx } from '../utils/sfx.js';
 import { Button3D, PageHeader, Stars } from '../components/ui.jsx';
-import { Award, BookOpen, CheckCircle2, ChevronRight, Clock, FileText, Lock, Sparkles, User, Users } from 'lucide-react';
+import { 
+  AlertCircle, 
+  Award, 
+  BookOpen, 
+  CheckCircle2, 
+  ChevronRight, 
+  Clock, 
+  Eye, 
+  EyeOff, 
+  FileText, 
+  KeyRound, 
+  Lock, 
+  LogIn, 
+  LogOut, 
+  RotateCcw, 
+  ShieldCheck, 
+  Sparkles, 
+  User, 
+  Users 
+} from 'lucide-react';
 import TeacherAssignmentManager from '../components/TeacherAssignmentManager.jsx';
 import TeacherDataEditor from '../components/TeacherDataEditor.jsx';
 import TeacherGuide from '../components/TeacherGuide.jsx';
@@ -15,16 +36,24 @@ import TeacherClassProgress from '../components/TeacherClassProgress.jsx';
 import PdfReaderModal from '../components/PdfReaderModal.jsx';
 
 export default function TeacherPage() {
-  const [pin, setPin] = useState('');
-  const [isUnlocked, setIsUnlocked] = useState(false);
-  const [pinError, setPinError] = useState(false);
-  const [newPin, setNewPin] = useState('');
+  const [teacherSession, setTeacherSession] = useState(() => store().getTeacherSession());
+  const [usernameInput, setUsernameInput] = useState('GV01');
+  const [passwordInput, setPasswordInput] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+  // Đổi mật khẩu
   const [showSettings, setShowSettings] = useState(false);
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [changePassError, setChangePassError] = useState('');
+  const [changePassSuccess, setChangePassSuccess] = useState('');
+
   const [showGuideModal, setShowGuideModal] = useState(false);
   const [showPdfReaderModal, setShowPdfReaderModal] = useState(false);
   const [selectedBookForReader, setSelectedBookForReader] = useState('tap1');
 
-  const [activeTab, setActiveTab] = useState('scores'); // 'scores' | 'roadmap' | 'library'
+  const [activeTab, setActiveTab] = useState('scores'); // 'scores' | 'students' | 'progress_matrix' | 'assignments' | 'editor' | 'roadmap' | 'guide' | 'library'
   const [loading, setLoading] = useState(false);
   const [isPending, startTransition] = useTransition();
   const [scores, setScores] = useState([]);
@@ -33,7 +62,6 @@ export default function TeacherPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [inspectItem, setInspectItem] = useState(null);
 
-  const correctPin = store().getTeacherPin();
   const allUnits = listUnits();
   const currentStudent = store().getStudentInfo();
   const progress = store().getProgress();
@@ -43,15 +71,79 @@ export default function TeacherPage() {
   const masteredCount = wordsByStatus(mastery, 'mastered').length;
   const reviewCount = wordsByStatus(mastery, 'review').length;
 
-  const handleUnlock = (e) => {
+  const handleTeacherLogin = (e) => {
     e?.preventDefault();
-    if (pin.trim() === correctPin) {
-      setIsUnlocked(true);
-      setPinError(false);
+    const res = store().loginTeacher(usernameInput, passwordInput);
+    if (res.success) {
+      setTeacherSession(res.teacher);
+      setLoginError('');
+      playSfx('victory');
+      try {
+        confetti({ particleCount: 40, spread: 60, origin: { y: 0.6 } });
+      } catch {}
       loadScores();
     } else {
-      setPinError(true);
-      setPin('');
+      playSfx('wrong');
+      setLoginError(res.error || 'Tài khoản hoặc mật khẩu chưa chính xác!');
+    }
+  };
+
+  const handleTeacherLogout = () => {
+    if (window.confirm('Thầy/Cô có chắc muốn đăng xuất khỏi Cổng Giáo Viên?')) {
+      store().logoutTeacher();
+      setTeacherSession(null);
+      setPasswordInput('');
+      setLoginError('');
+      playSfx('click');
+    }
+  };
+
+  const handleQuickFill = () => {
+    setUsernameInput('GV01');
+    setPasswordInput('123456789');
+    setLoginError('');
+    playSfx('click');
+  };
+
+  const handleChangePassword = (e) => {
+    e?.preventDefault();
+    setChangePassError('');
+    setChangePassSuccess('');
+
+    if (!newPassword.trim()) {
+      setChangePassError('Vui lòng nhập mật khẩu mới!');
+      return;
+    }
+    if (newPassword.trim().length < 6) {
+      setChangePassError('Mật khẩu mới cần ít nhất 6 ký tự!');
+      return;
+    }
+    if (newPassword.trim() !== confirmPassword.trim()) {
+      setChangePassError('Xác nhận mật khẩu không khớp!');
+      return;
+    }
+
+    const res = store().saveTeacherPassword(newPassword.trim());
+    if (res.success) {
+      setChangePassSuccess('🎉 Đã cập nhật mật khẩu mới thành công!');
+      setNewPassword('');
+      setConfirmPassword('');
+      setTimeout(() => {
+        setShowSettings(false);
+        setChangePassSuccess('');
+      }, 2000);
+    } else {
+      setChangePassError(res.error || 'Không thể đổi mật khẩu.');
+    }
+  };
+
+  const handleResetDefaultPassword = () => {
+    if (window.confirm('Khôi phục mật khẩu giáo viên về mặc định (Mã GV: GV01 / Mật khẩu: 123456789)?')) {
+      store().resetTeacherAccount();
+      alert('Đã khôi phục tài khoản về mặc định:\nMã GV: GV01\nMật khẩu: 123456789');
+      setShowSettings(false);
+      setNewPassword('');
+      setConfirmPassword('');
     }
   };
 
@@ -68,11 +160,11 @@ export default function TeacherPage() {
   };
 
   useEffect(() => {
-    if (isUnlocked) {
+    if (teacherSession) {
       loadScores();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedClass, isUnlocked]);
+  }, [selectedClass, teacherSession]);
 
   // Danh sách các lớp có trong dữ liệu
   const classList = useMemo(() => {
@@ -144,57 +236,123 @@ export default function TeacherPage() {
     }
   };
 
-  const handleChangePin = () => {
-    if (newPin.trim().length >= 4) {
-      store().saveTeacherPin(newPin.trim());
-      alert('Đã đổi mã PIN thành công!');
-      setNewPin('');
-      setShowSettings(false);
-    } else {
-      alert('Mã PIN cần có ít nhất 4 ký tự.');
-    }
-  };
-
-  // Màn hình khóa PIN
-  if (!isUnlocked) {
+  // Màn hình Đăng Nhập Giáo Viên
+  if (!teacherSession) {
     return (
-      <div className="flex flex-col gap-6">
-        <PageHeader title="👨‍🏫 Góc Giáo Viên" backTo="/" backLabel="Về trang chủ" />
+      <div className="flex flex-col gap-6 max-w-lg mx-auto py-4">
+        <PageHeader title="👨‍🏫 Cổng Quản Trị Giáo Viên" backTo="/" backLabel="Về trang chủ" />
 
-        <div className="mx-auto flex w-full max-w-md flex-col items-center gap-6 rounded-[2.5rem] bg-white p-8 text-center shadow-md border-4 border-banana-soft">
-          <span className="text-6xl" aria-hidden>🔒</span>
-          <div>
-            <h2 className="text-2xl font-black text-ink">Khu vực dành cho Thầy Cô</h2>
-            <p className="text-sm font-bold text-ink-soft mt-1">
-              Nhập mã PIN để xem bảng điểm và kết quả làm bài của học sinh
+        <div className="flex flex-col items-center gap-6 rounded-[2.5rem] bg-white p-7 sm:p-9 shadow-lg border-4 border-banana-soft animate-in fade-in zoom-in-95">
+          <div className="relative">
+            <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-tr from-banana via-banana-light to-amber-200 text-4xl shadow-md border-2 border-banana-dark/20">
+              👨‍🏫
+            </div>
+            <span className="absolute -bottom-1 -right-1 flex h-8 w-8 items-center justify-center rounded-full bg-peach text-white shadow-xs">
+              <Lock className="h-4 w-4" />
+            </span>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl font-black text-ink">Đăng Nhập Giáo Viên</h2>
+            <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1">
+              Quản lý lớp học, giao bài tuần, chấm điểm & điều chỉnh giáo trình
             </p>
           </div>
 
-          <form onSubmit={handleUnlock} className="flex w-full flex-col gap-4">
-            <input
-              type="password"
-              inputMode="numeric"
-              maxLength={8}
-              value={pin}
-              onChange={(e) => setPin(e.target.value)}
-              placeholder="Nhập mã PIN bảo mật"
-              className="w-full rounded-2xl bg-cream px-4 py-3 text-center text-2xl font-black tracking-widest text-ink border-2 border-banana-soft focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
-              autoFocus
-            />
+          {/* Hộp Thông Tin Tài Khoản Mặc Định */}
+          <div className="w-full rounded-2xl bg-gradient-to-r from-banana-soft/60 via-amber-50 to-sky-soft/60 p-3.5 border-2 border-banana flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-black text-ink flex items-center gap-1.5">
+                <Sparkles className="h-4 w-4 text-peach" />
+                <span>Tài khoản giáo viên mặc định:</span>
+              </span>
+              <button
+                type="button"
+                onClick={handleQuickFill}
+                className="text-[11px] font-black text-peach-dark underline hover:text-peach cursor-pointer"
+              >
+                ⚡ Điền nhanh
+              </button>
+            </div>
+            <div className="flex items-center justify-around bg-white/90 p-2 rounded-xl border border-banana-soft/70 text-xs sm:text-sm font-black">
+              <div>
+                <span className="text-ink-soft font-bold">Mã GV: </span>
+                <span className="text-peach-dark font-black tracking-wider">GV01</span>
+              </div>
+              <span className="text-banana-dark">•</span>
+              <div>
+                <span className="text-ink-soft font-bold">Mật khẩu: </span>
+                <span className="text-mint-dark font-black tracking-wider">123456789</span>
+              </div>
+            </div>
+          </div>
 
-            {pinError && (
-              <p className="text-sm font-black text-peach">
-                ❌ Mã PIN chưa đúng. Vui lòng thử lại nhé thầy cô!
-              </p>
+          <form onSubmit={handleTeacherLogin} className="flex w-full flex-col gap-4">
+            {/* Input Tài Khoản GV */}
+            <div>
+              <label className="block text-xs font-black text-ink mb-1.5 flex items-center gap-1.5">
+                <User className="h-3.5 w-3.5 text-sky-dark" />
+                <span>Mã Tài Khoản Giáo Viên:</span>
+              </label>
+              <input
+                type="text"
+                autoCapitalize="characters"
+                value={usernameInput}
+                onChange={(e) => {
+                  setUsernameInput(e.target.value);
+                  setLoginError('');
+                }}
+                placeholder="Ví dụ: GV01"
+                className="w-full rounded-2xl bg-cream px-4 py-3 text-lg font-black tracking-wider text-ink border-2 border-banana-soft focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
+                autoFocus
+              />
+            </div>
+
+            {/* Input Mật Khẩu */}
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="text-xs font-black text-ink flex items-center gap-1.5">
+                  <KeyRound className="h-3.5 w-3.5 text-peach" />
+                  <span>Mật Khẩu Quản Trị:</span>
+                </label>
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="flex items-center gap-1 text-[11px] font-black text-ink-soft hover:text-ink cursor-pointer"
+                >
+                  {showPassword ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+                  <span>{showPassword ? 'Ẩn' : 'Hiện'}</span>
+                </button>
+              </div>
+              <div className="relative">
+                <input
+                  type={showPassword ? 'text' : 'password'}
+                  value={passwordInput}
+                  onChange={(e) => {
+                    setPasswordInput(e.target.value);
+                    setLoginError('');
+                  }}
+                  placeholder="Nhập mật khẩu (123456789)"
+                  className="w-full rounded-2xl bg-cream px-4 py-3 text-lg font-black tracking-wider text-ink border-2 border-banana-soft focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
+                />
+              </div>
+            </div>
+
+            {loginError && (
+              <div className="flex items-center gap-2 rounded-2xl bg-rose-50 p-3 border border-rose-200 text-xs sm:text-sm font-black text-rose-700 animate-in fade-in">
+                <AlertCircle className="h-4 w-4 shrink-0" />
+                <span>{loginError}</span>
+              </div>
             )}
 
-            <Button3D tone="peach" onClick={handleUnlock} className="w-full py-4 text-lg">
-              Mở khóa Bảng điểm 🔓
+            <Button3D tone="peach" onClick={handleTeacherLogin} className="w-full py-4 text-base sm:text-lg mt-1 font-black">
+              Đăng Nhập Quản Trị 🚀
             </Button3D>
           </form>
 
-          <p className="text-xs font-bold text-ink-soft">
-            🔒 Khu vực bảo mật dành riêng cho Giáo viên
+          <p className="text-xs font-bold text-ink-soft flex items-center gap-1.5 text-center">
+            <ShieldCheck className="h-4 w-4 text-mint-dark" />
+            <span>Khu vực bảo mật dành riêng cho Giáo viên bộ môn Tiếng Anh 6</span>
           </p>
         </div>
       </div>
@@ -210,6 +368,10 @@ export default function TeacherPage() {
         backLabel="Về trang chủ"
         right={
           <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-xs sm:text-sm font-black text-ink shadow-xs border border-banana-soft">
+              <span className="text-base">👨‍🏫</span>
+              <span>{teacherSession?.username || 'GV01'}</span>
+            </div>
             <button
               type="button"
               onClick={() => setShowGuideModal(true)}
@@ -222,9 +384,11 @@ export default function TeacherPage() {
             <button
               type="button"
               onClick={() => setShowSettings(!showSettings)}
-              className="rounded-2xl bg-white px-3 py-2 text-sm font-black text-ink shadow-xs border border-banana-soft hover:bg-cream cursor-pointer"
+              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-2 text-sm font-black text-ink shadow-xs border border-banana-soft hover:bg-cream cursor-pointer"
+              title="Đổi mật khẩu tài khoản GV01"
             >
-              ⚙️ Đổi PIN
+              <KeyRound className="h-4 w-4 text-peach" />
+              <span>Đổi Mật Khẩu</span>
             </button>
             <button
               type="button"
@@ -235,11 +399,12 @@ export default function TeacherPage() {
             </button>
             <button
               type="button"
-              onClick={() => setIsUnlocked(false)}
-              className="rounded-2xl bg-white px-3 py-2 text-sm font-black text-peach-dark shadow-xs border border-peach/30 hover:bg-rose-soft cursor-pointer"
-              title="Khóa bảo mật trang giáo viên"
+              onClick={handleTeacherLogout}
+              className="flex items-center gap-1 rounded-2xl bg-white px-3 py-2 text-sm font-black text-peach-dark shadow-xs border border-peach/30 hover:bg-rose-soft cursor-pointer"
+              title="Đăng xuất khỏi tài khoản giáo viên"
             >
-              🔒 Khóa
+              <LogOut className="h-4 w-4" />
+              <span>Đăng xuất</span>
             </button>
           </div>
         }
@@ -382,22 +547,87 @@ export default function TeacherPage() {
         </button>
       </nav>
 
-      {/* Đổi mã PIN */}
+      {/* Đổi Mật Khẩu Giáo Viên */}
       {showSettings && (
-        <section className="rounded-3xl bg-white p-5 shadow-xs border-2 border-banana-soft">
-          <h3 className="text-lg font-black text-ink mb-2">Đổi mã PIN giáo viên</h3>
-          <div className="flex flex-wrap items-center gap-3">
-            <input
-              type="password"
-              value={newPin}
-              onChange={(e) => setNewPin(e.target.value)}
-              placeholder="Nhập mã PIN mới (ít nhất 4 số)"
-              className="rounded-2xl bg-cream px-4 py-2.5 text-base font-bold text-ink border border-banana-soft"
-            />
-            <Button3D tone="mint" onClick={handleChangePin} className="min-h-12 py-2 px-5 text-sm">
-              Lưu mã PIN mới
-            </Button3D>
+        <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-sm border-2 border-banana-soft flex flex-col gap-4 animate-in fade-in">
+          <div className="flex items-center justify-between border-b border-banana-soft pb-3">
+            <div>
+              <h3 className="text-lg font-black text-ink flex items-center gap-2">
+                <KeyRound className="h-5 w-5 text-peach" />
+                <span>Đổi Mật Khẩu Quản Trị (Tài khoản: {teacherSession?.username || 'GV01'})</span>
+              </h3>
+              <p className="text-xs font-bold text-ink-soft mt-0.5">
+                Cập nhật mật khẩu mới cho tài khoản giáo viên để đảm bảo an toàn bảng điểm và dữ liệu bài học
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowSettings(false)}
+              className="text-xs font-black text-ink-soft hover:text-ink cursor-pointer"
+            >
+              ✕ Đóng
+            </button>
           </div>
+
+          <form onSubmit={handleChangePassword} className="flex flex-col gap-3 max-w-xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Mật khẩu mới (ít nhất 6 ký tự):</label>
+                <input
+                  type="password"
+                  value={newPassword}
+                  onChange={(e) => {
+                    setNewPassword(e.target.value);
+                    setChangePassError('');
+                  }}
+                  placeholder="Nhập mật khẩu mới"
+                  className="w-full rounded-2xl bg-cream px-3.5 py-2.5 text-sm font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Xác nhận mật khẩu mới:</label>
+                <input
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => {
+                    setConfirmPassword(e.target.value);
+                    setChangePassError('');
+                  }}
+                  placeholder="Nhập lại mật khẩu mới"
+                  className="w-full rounded-2xl bg-cream px-3.5 py-2.5 text-sm font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+                />
+              </div>
+            </div>
+
+            {changePassError && (
+              <p className="text-xs font-black text-rose-600 flex items-center gap-1.5">
+                <AlertCircle className="h-3.5 w-3.5" />
+                <span>{changePassError}</span>
+              </p>
+            )}
+
+            {changePassSuccess && (
+              <p className="text-xs font-black text-mint-dark flex items-center gap-1.5">
+                <CheckCircle2 className="h-3.5 w-3.5" />
+                <span>{changePassSuccess}</span>
+              </p>
+            )}
+
+            <div className="flex items-center gap-2 flex-wrap pt-1">
+              <Button3D tone="mint" onClick={handleChangePassword} className="min-h-11 py-2 px-5 text-sm">
+                Lưu Mật Khẩu Mới
+              </Button3D>
+              <button
+                type="button"
+                onClick={handleResetDefaultPassword}
+                className="inline-flex items-center gap-1.5 rounded-2xl bg-cream px-3.5 py-2.5 text-xs font-black text-ink-soft border border-banana-soft hover:bg-white hover:text-ink transition-all cursor-pointer"
+                title="Khôi phục lại mật khẩu mặc định 123456789"
+              >
+                <RotateCcw className="h-3.5 w-3.5" />
+                <span>Khôi phục mặc định (123456789)</span>
+              </button>
+            </div>
+          </form>
         </section>
       )}
 

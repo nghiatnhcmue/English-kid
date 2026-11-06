@@ -10,6 +10,8 @@ export const KEYS = {
   SETTINGS: `${PREFIX}settings`,
   STUDENT: `${PREFIX}student_info`,
   TEACHER_PIN: `${PREFIX}teacher_pin`,
+  TEACHER_ACCOUNT: `${PREFIX}teacher_account`,
+  TEACHER_SESSION: `${PREFIX}teacher_session`,
   CUSTOM_UNITS: `${PREFIX}custom_units`,
   ASSIGNMENTS: `${PREFIX}assignments`,
   ASSIGNMENT_SUBMISSIONS: `${PREFIX}assignment_submissions`,
@@ -34,6 +36,13 @@ export const DEFAULT_STUDENTS = [
 ];
 
 export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true };
+
+export const DEFAULT_TEACHER_ACCOUNT = {
+  username: 'GV01',
+  password: '123456789',
+  name: 'Giáo viên bộ môn',
+  role: 'teacher',
+};
 
 /** Tạo kho lưu trữ; storage có thể thay bằng bản giả khi test. */
 export function createStore(storage = globalThis.localStorage) {
@@ -198,13 +207,89 @@ export function createStore(storage = globalThis.localStorage) {
       return clean;
     },
 
+    // ---- Quản lý Đăng Nhập & Tài Khoản Giáo Viên ----
+    getTeacherAccount() {
+      const saved = read(KEYS.TEACHER_ACCOUNT, null);
+      if (saved && typeof saved === 'object' && saved.username) {
+        return {
+          ...DEFAULT_TEACHER_ACCOUNT,
+          ...saved,
+        };
+      }
+      return DEFAULT_TEACHER_ACCOUNT;
+    },
+    loginTeacher(username, password) {
+      const cleanUser = String(username || '').trim().toUpperCase();
+      const cleanPass = String(password || '').trim();
+      const account = api.getTeacherAccount();
+
+      if (!cleanUser || !cleanPass) {
+        return { success: false, error: 'Vui lòng nhập đầy đủ mã giáo viên và mật khẩu!' };
+      }
+
+      if (cleanUser !== String(account.username || 'GV01').trim().toUpperCase()) {
+        return { success: false, error: 'Mã giáo viên không chính xác. Tài khoản mặc định là GV01.' };
+      }
+
+      if (cleanPass !== String(account.password || '123456789').trim()) {
+        return { success: false, error: 'Mật khẩu chưa chính xác. Mật khẩu mặc định là 123456789.' };
+      }
+
+      const session = {
+        username: account.username || 'GV01',
+        name: account.name || 'Giáo viên bộ môn',
+        role: 'teacher',
+        loginAt: new Date().toISOString(),
+      };
+      write(KEYS.TEACHER_SESSION, session);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('teacher-auth-changed', { detail: { session } }));
+      }
+      return { success: true, teacher: session };
+    },
+    getTeacherSession() {
+      const session = read(KEYS.TEACHER_SESSION, null);
+      if (session && typeof session === 'object' && session.username) {
+        return session;
+      }
+      return null;
+    },
+    logoutTeacher() {
+      write(KEYS.TEACHER_SESSION, null);
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('teacher-auth-changed', { detail: { session: null } }));
+      }
+      return true;
+    },
+    saveTeacherPassword(newPassword) {
+      const cleanPass = String(newPassword || '').trim();
+      if (cleanPass.length < 6) {
+        return { success: false, error: 'Mật khẩu mới cần có ít nhất 6 ký tự.' };
+      }
+      const account = api.getTeacherAccount();
+      const updated = {
+        ...account,
+        password: cleanPass,
+        updatedAt: new Date().toISOString(),
+      };
+      write(KEYS.TEACHER_ACCOUNT, updated);
+      return { success: true, account: updated };
+    },
+    resetTeacherAccount() {
+      write(KEYS.TEACHER_ACCOUNT, DEFAULT_TEACHER_ACCOUNT);
+      return DEFAULT_TEACHER_ACCOUNT;
+    },
+
     getTeacherPin() {
-      const pin = read(KEYS.TEACHER_PIN, '1234');
-      return String(pin || '1234');
+      const pin = read(KEYS.TEACHER_PIN, null);
+      if (pin) return String(pin);
+      const acc = api.getTeacherAccount();
+      return String(acc.password || '123456789');
     },
     saveTeacherPin(pin) {
-      const clean = String(pin || '1234').trim();
+      const clean = String(pin || '123456789').trim();
       write(KEYS.TEACHER_PIN, clean);
+      api.saveTeacherPassword(clean);
       return clean;
     },
 
