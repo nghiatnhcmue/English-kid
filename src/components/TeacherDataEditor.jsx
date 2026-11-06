@@ -237,9 +237,14 @@ export default function TeacherDataEditor() {
     showNotification('💾 Đã lưu thành công đoạn văn đọc hiểu!', 'mint');
   };
 
-  const handleOpenAddReadingQuestion = () => {
+  const handleOpenAddReadingQuestion = (type = 'multiple_choice') => {
     setReadingQuestionForm({
+      type,
       question: '',
+      prompt: '',
+      blankWord: '',
+      correctSentence: '',
+      correctAnswer: '',
       options: ['', '', '', ''],
       answerIndex: 0,
       explain: '',
@@ -252,7 +257,12 @@ export default function TeacherDataEditor() {
     const opts = Array.isArray(q.options) ? [...q.options] : [];
     while (opts.length < 4) opts.push('');
     setReadingQuestionForm({
+      type: q.type || (q.question?.includes('_') ? 'fill_blank' : 'multiple_choice'),
       question: q.question || '',
+      prompt: q.prompt || '',
+      blankWord: q.blankWord || '',
+      correctSentence: q.correctSentence || '',
+      correctAnswer: q.correctAnswer || '',
       options: opts,
       answerIndex: Number(q.answerIndex) || 0,
       explain: q.explain || '',
@@ -263,19 +273,65 @@ export default function TeacherDataEditor() {
 
   const handleSaveReadingQuestion = (e) => {
     e.preventDefault();
-    if (!readingQuestionForm.question.trim()) {
-      showNotification('Vui lòng nhập nội dung câu hỏi!', 'peach');
-      return;
+    const qType = readingQuestionForm.type || 'multiple_choice';
+
+    let qText = readingQuestionForm.question.trim();
+    if (qType === 'unscramble') {
+      if (!readingQuestionForm.correctSentence.trim()) {
+        showNotification('Vui lòng nhập câu hoàn chỉnh để hệ thống xáo trộn từ!', 'peach');
+        return;
+      }
+      if (!qText) {
+        qText = readingQuestionForm.prompt.trim() || 'Sắp xếp các từ sau thành câu đúng ngữ pháp theo bài đọc:';
+      }
+    } else if (qType === 'sentence_completion') {
+      if (!readingQuestionForm.prompt.trim() && !qText) {
+        showNotification('Vui lòng nhập vế đầu câu hoặc câu hỏi!', 'peach');
+        return;
+      }
+      if (!qText) {
+        qText = readingQuestionForm.prompt.trim();
+      }
+      if (!readingQuestionForm.correctAnswer.trim() && !readingQuestionForm.options.some((o) => o.trim())) {
+        showNotification('Vui lòng nhập vế hoàn thành đúng cho câu!', 'peach');
+        return;
+      }
+    } else if (qType === 'fill_blank') {
+      if (!qText) {
+        showNotification('Vui lòng nhập câu chứa chỗ trống!', 'peach');
+        return;
+      }
+      if (!readingQuestionForm.blankWord.trim() && !readingQuestionForm.options.some((o) => o.trim())) {
+        showNotification('Vui lòng nhập từ cần điền đúng vào chỗ trống!', 'peach');
+        return;
+      }
+    } else {
+      if (!qText) {
+        showNotification('Vui lòng nhập nội dung câu hỏi!', 'peach');
+        return;
+      }
+      const filteredOptions = readingQuestionForm.options.map((o) => o.trim()).filter(Boolean);
+      if (filteredOptions.length < 2) {
+        showNotification('Vui lòng nhập ít nhất 2 phương án trả lời trắc nghiệm!', 'peach');
+        return;
+      }
     }
+
     const filteredOptions = readingQuestionForm.options.map((o) => o.trim()).filter(Boolean);
-    if (filteredOptions.length < 2) {
-      showNotification('Vui lòng nhập ít nhất 2 phương án trả lời!', 'peach');
-      return;
-    }
+    const blankWord = readingQuestionForm.blankWord.trim() || (filteredOptions[readingQuestionForm.answerIndex] || '');
+    const correctSentence = readingQuestionForm.correctSentence.trim() || qText;
+    const correctAnswer = readingQuestionForm.correctAnswer.trim() || blankWord;
+
     store().saveReadingQuestion(
       selectedUnitId,
       {
         ...readingQuestionForm,
+        type: qType,
+        question: qText,
+        prompt: readingQuestionForm.prompt.trim() || qText,
+        blankWord,
+        correctSentence,
+        correctAnswer,
         options: filteredOptions,
       },
       editingReadingQuestionIndex,
@@ -1150,20 +1206,47 @@ export default function TeacherDataEditor() {
               <div className="flex items-center gap-2 flex-wrap">
                 <button
                   type="button"
-                  onClick={handleOpenAddReadingQuestion}
-                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-3.5 py-2 text-xs font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none"
+                  onClick={() => handleOpenAddReadingQuestion('multiple_choice')}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-3 py-2 text-xs font-black text-white hover:bg-mint-dark transition-all cursor-pointer shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none"
                 >
                   <Plus className="h-4 w-4" />
-                  <span>Thêm câu hỏi đọc hiểu</span>
+                  <span>Trắc nghiệm</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleOpenAddReadingQuestion('fill_blank')}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-sky px-3 py-2 text-xs font-black text-ink hover:bg-sky-dark transition-all cursor-pointer shadow-[0_3px_0_#60a5fa] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Plus className="h-4 w-4" />
+                  <span>Điền khuyết</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleOpenAddReadingQuestion('unscramble')}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-peach px-3 py-2 text-xs font-black text-white hover:bg-peach-dark transition-all cursor-pointer shadow-[0_3px_0_#f48265] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Plus className="h-4 w-4" />
+                  <span>Sắp xếp từ</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => handleOpenAddReadingQuestion('sentence_completion')}
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-purple-600 px-3 py-2 text-xs font-black text-white hover:bg-purple-700 transition-all cursor-pointer shadow-[0_3px_0_#7e22ce] active:translate-y-0.5 active:shadow-none"
+                >
+                  <Plus className="h-4 w-4" />
+                  <span>Viết tiếp câu</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleOpenBatchReadingModal}
-                  className="inline-flex items-center gap-1.5 rounded-2xl bg-banana px-3.5 py-2 text-xs font-black text-ink hover:bg-banana-dark transition-all cursor-pointer shadow-[0_3px_0_var(--color-banana-dark)] active:translate-y-0.5 active:shadow-none"
+                  className="inline-flex items-center gap-1.5 rounded-2xl bg-banana px-3 py-2 text-xs font-black text-ink hover:bg-banana-dark transition-all cursor-pointer shadow-[0_3px_0_var(--color-banana-dark)] active:translate-y-0.5 active:shadow-none"
                 >
                   <ClipboardList className="h-4 w-4" />
-                  <span>Dán từ Word / Văn bản</span>
+                  <span>Dán từ Word</span>
                 </button>
               </div>
             </div>
@@ -1174,84 +1257,210 @@ export default function TeacherDataEditor() {
                 <span className="text-4xl">📝</span>
                 <p className="text-base font-black text-ink">Chưa có câu hỏi đọc hiểu nào cho Unit này</p>
                 <p className="text-xs font-bold text-ink-soft max-w-md">
-                  Thầy cô hãy bấm nút <strong>"+ Thêm câu hỏi đọc hiểu"</strong> để tự tạo câu hỏi hoặc <strong>"Dán từ Word"</strong> để nhập nhanh đề bài có sẵn.
+                  Thầy cô có thể tạo 5 - 10 câu hỏi đọc hiểu đa dạng dạng: trắc nghiệm A/B/C/D, điền khuyết, sắp xếp từ thành câu hoặc viết thêm để hoàn thành câu.
                 </p>
-                <div className="flex items-center gap-2 mt-2">
+                <div className="flex items-center gap-2 flex-wrap justify-center mt-2">
                   <button
                     type="button"
-                    onClick={handleOpenAddReadingQuestion}
-                    className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-4 py-2 text-xs font-black text-white hover:bg-mint-dark cursor-pointer shadow-xs"
+                    onClick={() => handleOpenAddReadingQuestion('multiple_choice')}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-mint px-3.5 py-2 text-xs font-black text-white hover:bg-mint-dark cursor-pointer shadow-xs"
                   >
                     <Plus className="h-4 w-4" />
-                    <span>Thêm câu hỏi ngay</span>
+                    <span>🏷️ Trắc nghiệm</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleOpenAddReadingQuestion('fill_blank')}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-sky px-3.5 py-2 text-xs font-black text-ink hover:bg-sky-dark cursor-pointer shadow-xs"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>✏️ Điền khuyết</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleOpenAddReadingQuestion('unscramble')}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-peach px-3.5 py-2 text-xs font-black text-white hover:bg-peach-dark cursor-pointer shadow-xs"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>🧩 Sắp xếp từ</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleOpenAddReadingQuestion('sentence_completion')}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-purple-600 px-3.5 py-2 text-xs font-black text-white hover:bg-purple-700 cursor-pointer shadow-xs"
+                  >
+                    <Plus className="h-4 w-4" />
+                    <span>✍️ Viết tiếp câu</span>
                   </button>
                 </div>
               </div>
             ) : (
               <div className="grid gap-3">
-                {currentUnit.reading.questions.map((q, idx) => (
-                  <div
-                    key={idx}
-                    className="rounded-2xl bg-cream/60 p-4 border border-banana-soft hover:bg-cream transition-colors flex flex-col gap-2.5"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="flex items-start gap-2">
-                        <span className="rounded-lg bg-banana px-2 py-0.5 text-xs font-black text-ink shrink-0">
-                          Câu {idx + 1}
-                        </span>
-                        <h4 className="text-sm font-black text-ink leading-snug">
-                          {q.question}
-                        </h4>
-                      </div>
-
-                      <div className="flex items-center gap-1 shrink-0">
-                        <button
-                          type="button"
-                          onClick={() => handleOpenEditReadingQuestion(q, idx)}
-                          className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-ink hover:bg-banana transition-all cursor-pointer shadow-2xs border border-banana-soft"
-                          title="Sửa câu hỏi này"
-                        >
-                          <Pencil className="h-3.5 w-3.5" />
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => handleDeleteReadingQuestion(idx)}
-                          className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-rose-600 hover:bg-rose-500 hover:text-white transition-all cursor-pointer shadow-2xs border border-rose-200"
-                          title="Xóa câu hỏi này"
-                        >
-                          <Trash2 className="h-3.5 w-3.5" />
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {q.options?.map((opt, oIdx) => {
-                        const isCorrect = oIdx === q.answerIndex;
-                        return (
-                          <div
-                            key={oIdx}
-                            className={`rounded-xl px-3 py-1.5 text-xs font-bold border transition-all ${
-                              isCorrect
-                                ? 'bg-mint-soft text-mint-dark border-mint font-black ring-1 ring-mint'
-                                : 'bg-white text-ink border-banana-soft/60'
+                {currentUnit.reading.questions.map((q, idx) => {
+                  const itemType = q.type || (q.question?.includes('_') ? 'fill_blank' : 'multiple_choice');
+                  return (
+                    <div
+                      key={idx}
+                      className="rounded-2xl bg-cream/60 p-4 border border-banana-soft hover:bg-cream transition-colors flex flex-col gap-2.5"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex items-start gap-2 flex-wrap flex-1">
+                          <span className="rounded-lg bg-banana px-2 py-0.5 text-xs font-black text-ink shrink-0">
+                            Câu {idx + 1}
+                          </span>
+                          <span
+                            className={`rounded-lg px-2.5 py-0.5 text-xs font-black shrink-0 ${
+                              itemType === 'multiple_choice'
+                                ? 'bg-mint-soft text-mint-dark'
+                                : itemType === 'fill_blank'
+                                ? 'bg-sky-soft text-sky-dark'
+                                : itemType === 'unscramble'
+                                ? 'bg-peach-soft text-peach-dark'
+                                : 'bg-purple-100 text-purple-700'
                             }`}
                           >
-                            <span>{String.fromCharCode(65 + oIdx)}. </span>
-                            <span>{opt}</span>
-                            {isCorrect && <span className="ml-1 text-[11px] font-black">✓ (Đáp án đúng)</span>}
-                          </div>
-                        );
-                      })}
-                    </div>
+                            {itemType === 'multiple_choice'
+                              ? '🏷️ Trắc nghiệm'
+                              : itemType === 'fill_blank'
+                              ? '✏️ Điền khuyết'
+                              : itemType === 'unscramble'
+                              ? '🧩 Sắp xếp từ'
+                              : '✍️ Viết tiếp câu'}
+                          </span>
+                          <h4 className="text-sm font-black text-ink leading-snug">
+                            {q.question}
+                          </h4>
+                        </div>
 
-                    {q.explain && (
-                      <div className="rounded-xl bg-banana-soft/60 px-3 py-1.5 text-[11px] font-bold text-ink-soft flex items-center gap-1.5">
-                        <span>💡</span>
-                        <span>Căn cứ bài đọc / Giải thích: {q.explain}</span>
+                        <div className="flex items-center gap-1 shrink-0">
+                          <button
+                            type="button"
+                            onClick={() => handleOpenEditReadingQuestion(q, idx)}
+                            className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-ink hover:bg-banana transition-all cursor-pointer shadow-2xs border border-banana-soft"
+                            title="Sửa câu hỏi này"
+                          >
+                            <Pencil className="h-3.5 w-3.5" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteReadingQuestion(idx)}
+                            className="flex h-8 w-8 items-center justify-center rounded-xl bg-white text-rose-600 hover:bg-rose-500 hover:text-white transition-all cursor-pointer shadow-2xs border border-rose-200"
+                            title="Xóa câu hỏi này"
+                          >
+                            <Trash2 className="h-3.5 w-3.5" />
+                          </button>
+                        </div>
                       </div>
-                    )}
-                  </div>
-                ))}
+
+                      {/* Hiển thị chi tiết theo loại câu hỏi */}
+                      {itemType === 'multiple_choice' && Array.isArray(q.options) && q.options.length > 0 && (
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {q.options.map((opt, oIdx) => {
+                            const isCorrect = oIdx === q.answerIndex;
+                            return (
+                              <div
+                                key={oIdx}
+                                className={`rounded-xl px-3 py-1.5 text-xs font-bold border transition-all ${
+                                  isCorrect
+                                    ? 'bg-mint-soft text-mint-dark border-mint font-black ring-1 ring-mint'
+                                    : 'bg-white text-ink border-banana-soft/60'
+                                }`}
+                              >
+                                <span>{String.fromCharCode(65 + oIdx)}. </span>
+                                <span>{opt}</span>
+                                {isCorrect && <span className="ml-1 text-[11px] font-black">✓ (Đáp án đúng)</span>}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {itemType === 'fill_blank' && (
+                        <div className="flex flex-col gap-2">
+                          <div className="rounded-xl bg-white p-3 border border-banana-soft/60 text-xs font-bold text-ink flex items-center gap-2 flex-wrap">
+                            <span className="text-ink-soft">Từ điền đúng vào chỗ trống:</span>
+                            <span className="rounded-lg bg-sky px-2.5 py-1 text-ink font-black text-xs shadow-xs">
+                              {q.blankWord || (q.options ? q.options[q.answerIndex] : 'Chưa nhập')}
+                            </span>
+                          </div>
+                          {Array.isArray(q.options) && q.options.length > 0 && (
+                            <div className="flex items-center gap-1.5 flex-wrap text-xs font-bold text-ink-soft">
+                              <span>Các lựa chọn gợi ý:</span>
+                              {q.options.map((opt, oIdx) => (
+                                <span
+                                  key={oIdx}
+                                  className={`rounded-lg px-2 py-0.5 text-xs border ${
+                                    oIdx === q.answerIndex
+                                      ? 'bg-mint-soft text-mint-dark border-mint font-black'
+                                      : 'bg-white text-ink border-banana-soft'
+                                  }`}
+                                >
+                                  {opt}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {itemType === 'unscramble' && (
+                        <div className="flex flex-col gap-2">
+                          <div className="rounded-xl bg-white p-3 border border-banana-soft/60 text-xs font-bold text-ink">
+                            <span className="text-ink-soft">Câu hoàn chỉnh: </span>
+                            <span className="text-peach-dark font-black text-sm">
+                              {q.correctSentence || q.question}
+                            </span>
+                          </div>
+                          {((q.scrambledWords && q.scrambledWords.length > 0) || q.correctSentence) && (
+                            <div className="flex items-center gap-1.5 flex-wrap text-xs font-bold text-ink-soft">
+                              <span>Các mảnh từ ghép:</span>
+                              {(q.scrambledWords?.length > 0 ? q.scrambledWords : (q.correctSentence || '').split(/\s+/)).map((w, wIdx) => (
+                                <span key={wIdx} className="rounded-lg bg-cream px-2 py-0.5 text-ink font-bold border border-banana-soft">
+                                  {w}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {itemType === 'sentence_completion' && (
+                        <div className="flex flex-col gap-2">
+                          <div className="rounded-xl bg-white p-3 border border-banana-soft/60 text-xs font-bold text-ink flex items-center gap-2 flex-wrap">
+                            <span className="text-ink-soft">Vế hoàn thành đúng:</span>
+                            <span className="rounded-lg bg-purple-600 px-2.5 py-1 text-white font-black text-xs shadow-xs">
+                              {q.correctAnswer || q.blankWord || (q.options ? q.options[q.answerIndex] : 'Chưa nhập')}
+                            </span>
+                          </div>
+                          {Array.isArray(q.options) && q.options.length > 0 && (
+                            <div className="flex items-center gap-1.5 flex-wrap text-xs font-bold text-ink-soft">
+                              <span>Các lựa chọn gợi ý:</span>
+                              {q.options.map((opt, oIdx) => (
+                                <span
+                                  key={oIdx}
+                                  className={`rounded-lg px-2 py-0.5 text-xs border ${
+                                    oIdx === q.answerIndex
+                                      ? 'bg-purple-100 text-purple-700 border-purple-300 font-black'
+                                      : 'bg-white text-ink border-banana-soft'
+                                  }`}
+                                >
+                                  {opt}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {q.explain && (
+                        <div className="rounded-xl bg-banana-soft/60 px-3 py-1.5 text-[11px] font-bold text-ink-soft flex items-center gap-1.5">
+                          <span>💡</span>
+                          <span>Căn cứ bài đọc / Giải thích: {q.explain}</span>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -2084,7 +2293,7 @@ export default function TeacherDataEditor() {
       {/* MODAL THÊM / SỬA CÂU HỎI ĐỌC HIỂU */}
       {showReadingQuestionModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink/60 p-4 backdrop-blur-xs overflow-y-auto">
-          <div className="w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl border-4 border-banana flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
+          <div className="w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl border-4 border-banana flex flex-col gap-4 my-8 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b border-banana-soft pb-3">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{editingReadingQuestionIndex >= 0 ? '✏️' : '📖'}</span>
@@ -2095,7 +2304,7 @@ export default function TeacherDataEditor() {
                       : 'Thêm câu hỏi đọc hiểu mới'}
                   </h3>
                   <p className="text-xs font-bold text-ink-soft">
-                    Unit {selectedUnitId} · Đoạn văn đọc hiểu
+                    Unit {selectedUnitId} · Bài tập đọc hiểu chuyên sâu
                   </p>
                 </div>
               </div>
@@ -2108,69 +2317,270 @@ export default function TeacherDataEditor() {
               </button>
             </div>
 
-            <form onSubmit={handleSaveReadingQuestion} className="flex flex-col gap-3">
-              <div>
-                <label className="block text-xs font-black text-ink mb-1">
-                  Nội dung câu hỏi đọc hiểu (*):
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={readingQuestionForm.question}
-                  onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, question: e.target.value })}
-                  placeholder="Ví dụ: Where does Mai go to school?"
-                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
-                />
-              </div>
+            {/* Thanh chuyển đổi 4 loại câu hỏi */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 rounded-2xl bg-cream border border-banana-soft">
+              <button
+                type="button"
+                onClick={() => setReadingQuestionForm((prev) => ({ ...prev, type: 'multiple_choice' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  (readingQuestionForm.type || 'multiple_choice') === 'multiple_choice'
+                    ? 'bg-mint text-white shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                🏷️ Trắc nghiệm
+              </button>
+              <button
+                type="button"
+                onClick={() => setReadingQuestionForm((prev) => ({ ...prev, type: 'fill_blank' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  readingQuestionForm.type === 'fill_blank'
+                    ? 'bg-sky text-ink shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                ✏️ Điền khuyết
+              </button>
+              <button
+                type="button"
+                onClick={() => setReadingQuestionForm((prev) => ({ ...prev, type: 'unscramble' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  readingQuestionForm.type === 'unscramble'
+                    ? 'bg-peach text-white shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                🧩 Sắp xếp từ
+              </button>
+              <button
+                type="button"
+                onClick={() => setReadingQuestionForm((prev) => ({ ...prev, type: 'sentence_completion' }))}
+                className={`rounded-xl py-2 px-2 text-xs font-black transition-all cursor-pointer ${
+                  readingQuestionForm.type === 'sentence_completion'
+                    ? 'bg-purple-600 text-white shadow-xs'
+                    : 'text-ink-soft hover:bg-white'
+                }`}
+              >
+                ✍️ Viết tiếp câu
+              </button>
+            </div>
 
-              <div className="grid grid-cols-2 gap-2">
-                {readingQuestionForm.options.map((opt, i) => (
-                  <div key={i}>
-                    <label className="block text-[11px] font-black text-ink mb-0.5">
-                      Đáp án {String.fromCharCode(65 + i)}:
+            <form onSubmit={handleSaveReadingQuestion} className="flex flex-col gap-3">
+              {/* DẠNG 1: TRẮC NGHIỆM A/B/C/D */}
+              {(!readingQuestionForm.type || readingQuestionForm.type === 'multiple_choice') && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Nội dung câu hỏi đọc hiểu (*):
                     </label>
                     <input
                       type="text"
-                      required={i < 2}
-                      value={opt}
-                      onChange={(e) => {
-                        const next = [...readingQuestionForm.options];
-                        next[i] = e.target.value;
-                        setReadingQuestionForm({ ...readingQuestionForm, options: next });
-                      }}
-                      placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
-                      className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                      required
+                      value={readingQuestionForm.question}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, question: e.target.value })}
+                      placeholder="Ví dụ: Where does Mai go to school?"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
                     />
                   </div>
-                ))}
-              </div>
 
-              <div className="grid grid-cols-2 gap-3 mt-1">
-                <div>
-                  <label className="block text-xs font-black text-ink mb-1">Đáp án đúng (*):</label>
-                  <select
-                    value={readingQuestionForm.answerIndex}
-                    onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, answerIndex: Number(e.target.value) })}
-                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
-                  >
+                  <div className="grid grid-cols-2 gap-2">
                     {readingQuestionForm.options.map((opt, i) => (
-                      <option key={i} value={i}>
-                        {String.fromCharCode(65 + i)}: {opt || `Đáp án ${String.fromCharCode(65 + i)}`}
-                      </option>
+                      <div key={i}>
+                        <label className="block text-[11px] font-black text-ink mb-0.5">
+                          Đáp án {String.fromCharCode(65 + i)}:
+                        </label>
+                        <input
+                          type="text"
+                          required={i < 2}
+                          value={opt}
+                          onChange={(e) => {
+                            const next = [...readingQuestionForm.options];
+                            next[i] = e.target.value;
+                            setReadingQuestionForm({ ...readingQuestionForm, options: next });
+                          }}
+                          placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                          className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                        />
+                      </div>
                     ))}
-                  </select>
-                </div>
+                  </div>
 
-                <div>
-                  <label className="block text-xs font-black text-ink mb-1">Căn cứ bài đọc / Giải thích:</label>
-                  <input
-                    type="text"
-                    value={readingQuestionForm.explain}
-                    onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, explain: e.target.value })}
-                    placeholder="Ví dụ: Dựa vào câu 'I go to a boarding school...'"
-                    className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">Đáp án đúng (*):</label>
+                    <select
+                      value={readingQuestionForm.answerIndex}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, answerIndex: Number(e.target.value) })}
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
+                    >
+                      {readingQuestionForm.options.map((opt, i) => (
+                        <option key={i} value={i}>
+                          {String.fromCharCode(65 + i)}: {opt || `Đáp án ${String.fromCharCode(65 + i)}`}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </>
+              )}
+
+              {/* DẠNG 2: ĐIỀN KHUYẾT (FILL IN THE BLANK) */}
+              {readingQuestionForm.type === 'fill_blank' && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Câu chứa chỗ trống (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={readingQuestionForm.question}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, question: e.target.value })}
+                      placeholder="Ví dụ: Mai loves studying ______ and art at school."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                    <p className="text-[11px] font-bold text-ink-soft mt-1">
+                      💡 Thầy cô có thể dùng dấu gạch dưới <code>______</code> để biểu thị chỗ trống.
+                    </p>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Từ cần điền đúng vào chỗ trống (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={readingQuestionForm.blankWord}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, blankWord: e.target.value })}
+                      placeholder="Ví dụ: maths"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-black text-ink mb-1">
+                      Các lựa chọn gợi ý (Tùy chọn - nếu để trống học sinh sẽ gõ trực tiếp):
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {readingQuestionForm.options.map((opt, i) => (
+                        <input
+                          key={i}
+                          type="text"
+                          value={opt}
+                          onChange={(e) => {
+                            const next = [...readingQuestionForm.options];
+                            next[i] = e.target.value;
+                            setReadingQuestionForm({ ...readingQuestionForm, options: next });
+                          }}
+                          placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                          className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* DẠNG 3: SẮP XẾP TỪ THÀNH CÂU (UNSCRAMBLE) */}
+              {readingQuestionForm.type === 'unscramble' && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Yêu cầu / Gợi ý tiếng Việt:
+                    </label>
+                    <input
+                      type="text"
+                      value={readingQuestionForm.prompt}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, prompt: e.target.value })}
+                      placeholder="Ví dụ: Sắp xếp các từ để hoàn thành câu về sở thích của Mai:"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Câu hoàn chỉnh đúng ngữ pháp (*):
+                    </label>
+                    <textarea
+                      rows={2}
+                      required
+                      value={readingQuestionForm.correctSentence}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, correctSentence: e.target.value })}
+                      placeholder="Ví dụ: Mai loves studying maths and art at school."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft resize-none"
+                    />
+                    <div className="rounded-xl bg-peach-soft/60 p-2.5 text-[11px] font-bold text-peach-dark mt-1 flex items-center gap-1.5">
+                      <span>🧩</span>
+                      <span>Hệ thống sẽ tự động tách các từ và xáo trộn để học sinh bấm chọn ghép lại theo bài đọc!</span>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* DẠNG 4: VIẾT TIẾP HOÀN THÀNH CÂU (SENTENCE COMPLETION) */}
+              {readingQuestionForm.type === 'sentence_completion' && (
+                <>
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Vế đầu câu / Câu gợi ý (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={readingQuestionForm.prompt}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, prompt: e.target.value })}
+                      placeholder="Ví dụ: Mai goes to a boarding school in..."
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-black text-ink mb-1">
+                      Vế hoàn thành câu đúng (*):
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={readingQuestionForm.correctAnswer}
+                      onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, correctAnswer: e.target.value })}
+                      placeholder="Ví dụ: Da Nang"
+                      className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-black text-ink mb-1">
+                      Các lựa chọn gợi ý (Tùy chọn):
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      {readingQuestionForm.options.map((opt, i) => (
+                        <input
+                          key={i}
+                          type="text"
+                          value={opt}
+                          onChange={(e) => {
+                            const next = [...readingQuestionForm.options];
+                            next[i] = e.target.value;
+                            setReadingQuestionForm({ ...readingQuestionForm, options: next });
+                          }}
+                          placeholder={`Lựa chọn ${String.fromCharCode(65 + i)}`}
+                          className="w-full rounded-xl bg-cream px-3 py-1.5 text-xs font-bold border border-banana-soft"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {/* CĂN CỨ BÀI ĐỌC / GIẢI THÍCH (DÙNG CHO TẤT CẢ CÁC DẠNG) */}
+              <div>
+                <label className="block text-xs font-black text-ink mb-1">Căn cứ bài đọc / Giải thích:</label>
+                <input
+                  type="text"
+                  value={readingQuestionForm.explain}
+                  onChange={(e) => setReadingQuestionForm({ ...readingQuestionForm, explain: e.target.value })}
+                  placeholder="Ví dụ: Dựa vào câu 'I go to a boarding school in Da Nang...'"
+                  className="w-full rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft"
+                />
               </div>
 
               <div className="mt-2 flex items-center justify-end gap-3 pt-3 border-t border-banana-soft">

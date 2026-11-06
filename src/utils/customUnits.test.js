@@ -185,4 +185,58 @@ describe('Custom Units management', () => {
     expect(w5.items).toHaveLength(2);
     expect(w5.items[0].blankWord).toBe('plays');
   });
+
+  it('supports 5-10 passage questions with 4 interactive types', () => {
+    // Save passage
+    customStore.saveUnitReadingPassage(2, {
+      title: 'My Dream House',
+      passage: 'I live in a peaceful house with a large garden in Da Lat. My room has a window facing pine trees.',
+    });
+
+    // Add 1. multiple_choice
+    customStore.saveReadingQuestion(2, {
+      type: 'multiple_choice',
+      question: 'Where is the house located?',
+      options: ['In Ha Noi', 'In Da Lat', 'In Da Nang'],
+      answerIndex: 1,
+      explain: 'Based on: with a large garden in Da Lat',
+    });
+
+    // Add 2. fill_blank
+    customStore.saveReadingQuestion(2, {
+      type: 'fill_blank',
+      question: 'My room has a ______ facing pine trees.',
+      blankWord: 'window',
+      options: ['window', 'door', 'balcony'],
+      answerIndex: 0,
+      explain: 'Based on: My room has a window facing pine trees',
+    });
+
+    // Add 3. unscramble
+    customStore.saveReadingQuestion(2, {
+      type: 'unscramble',
+      prompt: 'Sắp xếp câu về ngôi nhà:',
+      correctSentence: 'I live in a peaceful house',
+    });
+
+    // Add 4. sentence_completion
+    customStore.saveReadingQuestion(2, {
+      type: 'sentence_completion',
+      prompt: 'The window faces...',
+      correctAnswer: 'pine trees',
+      options: ['pine trees', 'flowers', 'a busy road'],
+      answerIndex: 0,
+    });
+
+    const reading = customStore.getUnitReading(2);
+    expect(reading.questions).toHaveLength(4);
+    expect(reading.questions[0].type).toBe('multiple_choice');
+    expect(reading.questions[1].type).toBe('fill_blank');
+    expect(reading.questions[1].blankWord).toBe('window');
+    expect(reading.questions[2].type).toBe('unscramble');
+    expect(reading.questions[2].correctSentence).toBe('I live in a peaceful house');
+    expect(reading.questions[2].scrambledWords).toEqual(['I', 'live', 'in', 'a', 'peaceful', 'house']);
+    expect(reading.questions[3].type).toBe('sentence_completion');
+    expect(reading.questions[3].correctAnswer).toBe('pine trees');
+  });
 });

@@ -538,10 +538,20 @@ export function createStore(storage = globalThis.localStorage) {
     saveReadingQuestion(unitId, questionData, indexToUpdate = -1, baseReading = null) {
       const currentReading = api.getUnitReading(unitId, baseReading);
       const currentList = Array.isArray(currentReading.questions) ? [...currentReading.questions] : [];
+      const qType = questionData.type || 'multiple_choice';
       const cleanQ = {
-        question: questionData.question.trim(),
+        id: questionData.id || `rq_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+        type: qType,
+        question: String(questionData.question || '').trim(),
+        prompt: String(questionData.prompt || '').trim(),
+        blankWord: String(questionData.blankWord || '').trim(),
+        correctSentence: String(questionData.correctSentence || '').trim(),
+        correctAnswer: String(questionData.correctAnswer || '').trim(),
+        scrambledWords: Array.isArray(questionData.scrambledWords) && questionData.scrambledWords.length > 0
+          ? questionData.scrambledWords.map((w) => String(w).trim()).filter(Boolean)
+          : (questionData.correctSentence ? String(questionData.correctSentence).trim().split(/\s+/).filter(Boolean) : []),
         options: Array.isArray(questionData.options)
-          ? questionData.options.map((o) => String(o).trim())
+          ? questionData.options.map((o) => String(o).trim()).filter(Boolean)
           : [],
         answerIndex: Number(questionData.answerIndex) || 0,
         explain: questionData.explain
@@ -572,17 +582,29 @@ export function createStore(storage = globalThis.localStorage) {
     batchAddReadingQuestions(unitId, questionsArray = [], baseReading = null) {
       const currentReading = api.getUnitReading(unitId, baseReading);
       const currentList = Array.isArray(currentReading.questions) ? [...currentReading.questions] : [];
-      const cleaned = (questionsArray || []).map((q) => ({
-        question: q.question.trim(),
-        options: Array.isArray(q.options)
-          ? q.options.map((o) => String(o).trim())
-          : [],
-        answerIndex: Number(q.answerIndex) || 0,
-        explain: q.explain
-          ? String(q.explain).trim()
-          : 'Dựa vào thông tin chi tiết trong đoạn văn đọc hiểu.',
-        isCustom: true,
-      }));
+      const cleaned = (questionsArray || []).map((q) => {
+        const qType = q.type || (q.question?.includes('_') ? 'fill_blank' : 'multiple_choice');
+        return {
+          id: q.id || `rq_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
+          type: qType,
+          question: String(q.question || '').trim(),
+          prompt: String(q.prompt || '').trim(),
+          blankWord: String(q.blankWord || (q.options ? q.options[q.answerIndex || 0] : '')).trim(),
+          correctSentence: String(q.correctSentence || '').trim(),
+          correctAnswer: String(q.correctAnswer || '').trim(),
+          scrambledWords: Array.isArray(q.scrambledWords) && q.scrambledWords.length > 0
+            ? q.scrambledWords.map((w) => String(w).trim()).filter(Boolean)
+            : (q.correctSentence ? String(q.correctSentence).trim().split(/\s+/).filter(Boolean) : []),
+          options: Array.isArray(q.options)
+            ? q.options.map((o) => String(o).trim()).filter(Boolean)
+            : [],
+          answerIndex: Number(q.answerIndex) || 0,
+          explain: q.explain
+            ? String(q.explain).trim()
+            : 'Dựa vào thông tin chi tiết trong đoạn văn đọc hiểu.',
+          isCustom: true,
+        };
+      });
       const updatedReading = { ...currentReading, questions: [...currentList, ...cleaned] };
       api.saveCustomUnit(unitId, { reading: updatedReading });
       return updatedReading;
