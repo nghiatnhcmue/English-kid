@@ -45,6 +45,25 @@ export default function HomePage() {
         </div>
       </header>
 
+      {/* Khối Tìm kiếm nhanh toàn diện 12 Unit */}
+      <div className="relative w-full">
+        <Link
+          to="/search"
+          onClick={() => playSfx('click')}
+          className="group flex h-14 sm:h-16 w-full items-center justify-between rounded-3xl border-3 border-banana-soft bg-white px-5 sm:px-6 shadow-[0_4px_0_#efe3cc] hover:border-banana hover:shadow-[0_6px_0_#d8b13c] transition-all cursor-pointer"
+        >
+          <div className="flex items-center gap-3 text-ink-soft group-hover:text-ink">
+            <span className="text-xl sm:text-2xl" aria-hidden>🔍</span>
+            <span className="text-sm sm:text-base font-black">
+              Tìm kiếm từ vựng, ngữ pháp, bài đọc, câu nói... (12 Unit)
+            </span>
+          </div>
+          <span className="hidden sm:inline-flex rounded-xl bg-banana px-3 py-1.5 text-xs font-black text-ink shadow-2xs group-hover:scale-105 transition-transform">
+            Tra cứu ngay ↵
+          </span>
+        </Link>
+      </div>
+
       {/* Thẻ Hero: HỌC TIẾP NGAY - Cực kỳ rõ ràng, học sinh không cần suy nghĩ */}
       {nextUnit && (
         <section aria-label="Bài học tiếp theo" className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-banana to-banana-soft p-6 sm:p-8 shadow-[0_8px_0_var(--color-banana-dark)] border-2 border-banana-dark/20">
@@ -186,6 +205,64 @@ export default function HomePage() {
             className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-mint px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
           >
             <span>Vào Luyện Nói →</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Khối Banner: Phòng Luyện Đọc hiểu trực quan */}
+      <section aria-label="Phòng Luyện Đọc hiểu" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-sky-soft via-cream to-mint-soft p-6 sm:p-7 shadow-[0_6px_0_#c4dcf7] border-2 border-sky/30">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              📖
+            </span>
+            <div>
+              <span className="rounded-full bg-sky text-ink px-3 py-1 text-xs font-black shadow-xs">
+                Đoạn văn A1 chuẩn SGK Global Success
+              </span>
+              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
+                Phòng Luyện Đọc hiểu 12 Unit
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Đoạn văn ngắn có loa đọc toàn văn, câu hỏi trắc nghiệm kiểm tra nắm ý và bài tập sắp xếp câu
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/reading"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-sky px-6 text-lg font-black text-ink shadow-[0_4px_0_var(--color-sky-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Vào Luyện Đọc →</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Khối Banner: Phòng Luyện Viết & Sắp xếp câu */}
+      <section aria-label="Phòng Luyện Viết" className="overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-mint-soft via-cream to-banana-soft p-6 sm:p-7 shadow-[0_6px_0_#bfe6d6] border-2 border-mint-dark/20">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+          <div className="flex items-center gap-4">
+            <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white text-4xl shadow-sm" aria-hidden>
+              ✍️
+            </span>
+            <div>
+              <span className="rounded-full bg-mint text-white px-3 py-1 text-xs font-black shadow-xs">
+                Guided Writing · Xếp khối từ
+              </span>
+              <h2 className="mt-1 text-2xl sm:text-3xl font-black text-ink">
+                Phòng Luyện Viết 12 Unit
+              </h2>
+              <p className="text-sm sm:text-base font-bold text-ink-soft">
+                Sắp xếp các khối từ xáo trộn thành câu hoàn chỉnh đúng ngữ pháp, có dịch nghĩa và chấm điểm tức thì
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/writing"
+            onClick={() => playSfx('click')}
+            className="inline-flex min-h-14 shrink-0 items-center justify-center gap-2 rounded-2xl bg-mint px-6 text-lg font-black text-white shadow-[0_4px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer text-center"
+          >
+            <span>Vào Luyện Viết →</span>
           </Link>
         </div>
       </section>

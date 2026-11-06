@@ -18,15 +18,17 @@ import ListeningPage from './pages/ListeningPage.jsx';
 import SpeakingPage from './pages/SpeakingPage.jsx';
 import ReadingPage from './pages/ReadingPage.jsx';
 import WritingPage from './pages/WritingPage.jsx';
+import SearchPage from './pages/SearchPage.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
+  { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
-  { to: '/listening', label: 'Luyện Nghe', icon: '👂' },
-  { to: '/speaking', label: 'Luyện Nói', icon: '🎙️' },
-  { to: '/reading', label: 'Đọc hiểu', icon: '📖' },
-  { to: '/writing', label: 'Luyện Viết', icon: '✍️' },
-  { to: '/unit/1/stage', label: t.nav.stage, icon: '🎭' },
+  { to: '/listening', label: 'Nghe', icon: '👂' },
+  { to: '/speaking', label: 'Nói', icon: '🎙️' },
+  { to: '/reading', label: 'Đọc', icon: '📖' },
+  { to: '/writing', label: 'Viết', icon: '✍️' },
+  { to: '/unit/1/stage', label: '3D Stage', icon: '🎭' },
   { to: '/test', label: t.nav.test, icon: '📝' },
   { to: '/journal', label: t.nav.journal, icon: '📒' },
   { to: '/settings', label: t.nav.settings, icon: '⚙️' },
@@ -154,12 +156,12 @@ function TopNavBar() {
 
 const MOBILE_NAV = [
   { to: '/', label: 'Trang chủ', icon: '🏠', end: true },
+  { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
   { to: '/listening', label: 'Nghe', icon: '👂' },
   { to: '/speaking', label: 'Nói', icon: '🎙️' },
   { to: '/reading', label: 'Đọc', icon: '📖' },
   { to: '/writing', label: 'Viết', icon: '✍️' },
-  { to: '/test', label: 'Test', icon: '📝' },
 ];
 
 function BottomNav() {
@@ -208,6 +210,7 @@ export default function App() {
           <main className="mx-auto w-full max-w-4xl flex-1 px-4 pt-4 pb-28 md:pb-12 md:pt-6">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/search" element={<Fresh component={SearchPage} />} />
               <Route path="/grammar" element={<Fresh component={GrammarPage} />} />
               <Route path="/listening" element={<Fresh component={ListeningPage} />} />
               <Route path="/speaking" element={<Fresh component={SpeakingPage} />} />
