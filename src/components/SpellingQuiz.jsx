@@ -193,8 +193,8 @@ export default function SpellingQuiz({ words, onFinish }) {
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-3">
         <ProgressBar value={index} max={list.length} tone="bg-mint" />
-        <span className="shrink-0 text-base font-black text-ink">
-          {index + 1}/{list.length}
+        <span className="shrink-0 text-sm sm:text-base font-black text-ink whitespace-nowrap">
+          Từ {index + 1} / {list.length} từ
         </span>
       </div>
 

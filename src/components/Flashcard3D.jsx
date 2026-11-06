@@ -88,8 +88,8 @@ export default function Flashcard3D({ words, onFinish }) {
       {/* Tiến độ bài học */}
       <div className="flex items-center gap-3">
         <ProgressBar value={index + 1} max={words.length} tone="bg-banana" />
-        <span className="shrink-0 text-base font-black text-ink">
-          {index + 1}/{words.length}
+        <span className="shrink-0 text-sm sm:text-base font-black text-ink whitespace-nowrap">
+          Từ {index + 1} / {words.length} từ
         </span>
       </div>
 

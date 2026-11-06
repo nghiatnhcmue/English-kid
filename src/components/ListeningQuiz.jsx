@@ -136,8 +136,8 @@ export default function ListeningQuiz({ words, pool, onFinish }) {
     <div className="flex flex-col gap-4">
       <div className="flex items-center gap-3">
         <ProgressBar value={index} max={list.length} tone="bg-peach" />
-        <span className="shrink-0 text-base font-black text-ink">
-          {index + 1}/{list.length}
+        <span className="shrink-0 text-sm sm:text-base font-black text-ink whitespace-nowrap">
+          Câu {index + 1} / {list.length} câu
         </span>
       </div>
 
