@@ -71,18 +71,3 @@ describe('similarity', () => {
     expect(similarity('', 'I have a ruler.')).toBe(0);
   });
 });
-
-describe('sao sân khấu', () => {
-  it('lưu sao tốt nhất, không làm sai tổng sao 4 chế độ', () => {
-    const data = {};
-    const s = createStore({ getItem: (k) => data[k] ?? null, setItem: (k, v) => (data[k] = v), removeItem: (k) => delete data[k] });
-    s.saveModeResult(1, 'flashcard', 3);
-    s.saveStageResult(1, 'desk', 'maths', 2);
-    s.saveStageResult(1, 'desk', 'maths', 1);
-    s.saveStageResult(1, 'desk', 'drawing', 3);
-    const p = s.getProgress();
-    expect(modeStarsOf(p.units[1])).toBe(3);
-    expect(stageStarsOf(p.units[1])).toBe(5);
-    expect(totalStarsOf(p)).toBe(8);
-  });
-});

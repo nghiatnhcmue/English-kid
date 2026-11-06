@@ -15,7 +15,7 @@ export default defineConfig({
         short_name: 'Tiếng Anh 6',
         description: 'Học từ vựng Tiếng Anh 6 (Global Success) cho bạn mới bắt đầu',
         lang: 'vi',
-        start_url: '.',
+        start_url: '/',
         display: 'standalone',
         background_color: '#FFF8E7',
         theme_color: '#FFC83D',
@@ -24,6 +24,9 @@ export default defineConfig({
         ],
       },
       workbox: {
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
         // Khung app + JSON + ảnh được cache sẵn; model 3D (.glb) không cache sẵn vì nặng.
         globPatterns: ['**/*.{js,css,html,svg,webp,woff2,json}'],
         // Thư viện 3D (~1MB) và font chữ Kirin không cache sẵn; 3D sẽ được cache khi mở lần đầu.
@@ -51,7 +54,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: './',
+  base: '/',
   build: {
     // model-viewer là chunk tải lười, chỉ dùng khi từ có mô hình 3D
     chunkSizeWarningLimit: 1200,
