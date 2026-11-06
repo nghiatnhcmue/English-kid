@@ -1,9 +1,12 @@
 import { useState, useEffect, useMemo, useTransition } from 'react';
-import { store } from '../utils/storage.js';
+import { store, totalStarsOf } from '../utils/storage.js';
 import { fetchTeacherScores, deleteScore, clearAllScores } from '../utils/syncService.js';
 import { teacherScoresToCsv, downloadText } from '../utils/report.js';
-import { formatViDate } from '../utils/dates.js';
+import { formatViDate, streakOf } from '../utils/dates.js';
+import { listUnits } from '../utils/data.js';
+import { wordsByStatus } from '../utils/mastery.js';
 import { Button3D, PageHeader, Stars } from '../components/ui.jsx';
+import { Award, BookOpen, CheckCircle2, ChevronRight, Clock, FileText, Lock, Sparkles, User, Users } from 'lucide-react';
 
 export default function TeacherPage() {
   const [pin, setPin] = useState('');
@@ -12,6 +15,7 @@ export default function TeacherPage() {
   const [newPin, setNewPin] = useState('');
   const [showSettings, setShowSettings] = useState(false);
 
+  const [activeTab, setActiveTab] = useState('scores'); // 'scores' | 'roadmap' | 'library'
   const [loading, setLoading] = useState(false);
   const [isPending, startTransition] = useTransition();
   const [scores, setScores] = useState([]);
@@ -21,6 +25,14 @@ export default function TeacherPage() {
   const [inspectItem, setInspectItem] = useState(null);
 
   const correctPin = store().getTeacherPin();
+  const allUnits = listUnits();
+  const currentStudent = store().getStudentInfo();
+  const progress = store().getProgress();
+  const mastery = store().getMastery();
+  const studentStreak = streakOf(progress.studyDays);
+  const studentTotalStars = totalStarsOf(progress);
+  const masteredCount = wordsByStatus(mastery, 'mastered').length;
+  const reviewCount = wordsByStatus(mastery, 'review').length;
 
   const handleUnlock = (e) => {
     e?.preventDefault();
@@ -183,8 +195,8 @@ export default function TeacherPage() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader
-        title="👨‍🏫 Bảng Điểm Giáo Viên"
-        subtitle="Theo dõi tiến độ và kết quả làm bài của học sinh"
+        title="👨‍🏫 Bảng Điểm & Lộ Trình Giáo Viên"
+        subtitle="Quản lý lớp học, theo dõi tiến độ 12 Unit và phân tích kết quả bài test của học sinh"
         backTo="/"
         backLabel="Về trang chủ"
         right={
@@ -199,13 +211,63 @@ export default function TeacherPage() {
             <button
               type="button"
               onClick={loadScores}
-              className="rounded-2xl bg-banana px-4 py-2 text-sm font-black text-ink shadow-[0_3px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
+              className="rounded-2xl bg-banana px-3.5 py-2 text-sm font-black text-ink shadow-[0_3px_0_var(--color-banana-dark)] hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer"
             >
-              🔄 {loading ? 'Đang tải...' : 'Làm mới'}
+              🔄 {loading ? '...' : 'Làm mới'}
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsUnlocked(false)}
+              className="rounded-2xl bg-white px-3 py-2 text-sm font-black text-peach-dark shadow-xs border border-peach/30 hover:bg-rose-soft cursor-pointer"
+              title="Khóa bảo mật trang giáo viên"
+            >
+              🔒 Khóa
             </button>
           </div>
         }
       />
+
+      {/* Thanh 3 Tab Điều Hướng Giáo Viên */}
+      <nav aria-label="Tab quản lý giáo viên" className="flex gap-2 rounded-2xl bg-white p-1.5 shadow-xs border-2 border-banana-soft overflow-x-auto">
+        <button
+          type="button"
+          onClick={() => setActiveTab('scores')}
+          className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'scores'
+              ? 'bg-peach text-white shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>📊</span>
+          <span>Bảng Điểm & Bài Test ({filteredScores.length})</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('roadmap')}
+          className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'roadmap'
+              ? 'bg-banana text-ink shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>🗺️</span>
+          <span>Theo Dõi Lộ Trình 12 Unit</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => setActiveTab('library')}
+          className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer whitespace-nowrap ${
+            activeTab === 'library'
+              ? 'bg-sky text-ink shadow-xs'
+              : 'text-ink-soft hover:bg-cream hover:text-ink'
+          }`}
+        >
+          <span>📚</span>
+          <span>Thư Viện SGK & Phân Phối</span>
+        </button>
+      </nav>
 
       {/* Đổi mã PIN */}
       {showSettings && (
@@ -226,307 +288,441 @@ export default function TeacherPage() {
         </section>
       )}
 
-      {/* Trạng thái kết nối Cloudflare D1 Database */}
-      <section className={`rounded-3xl p-5 border-2 ${backendStatus.hasD1 ? 'bg-mint-soft/80 border-mint text-mint-dark' : 'bg-banana-soft/80 border-banana-dark/30 text-ink'}`}>
-        <div className="flex items-center justify-between flex-wrap gap-2">
-          <div className="flex items-center gap-2.5">
-            <span className="text-2xl">{backendStatus.hasD1 ? '🟢' : '🟡'}</span>
-            <div>
-              <h3 className="font-black text-base sm:text-lg">
-                {backendStatus.hasD1 ? 'Cloudflare D1 Database: Đang kết nối Online' : 'Chưa cấu hình Cloudflare D1 Database'}
+      {/* TAB 1: BẢNG ĐIỂM & BÀI TEST */}
+      {activeTab === 'scores' && (
+        <div className="flex flex-col gap-6">
+          {/* Trạng thái kết nối Cloudflare D1 Database */}
+          <section className={`rounded-3xl p-5 border-2 ${backendStatus.hasD1 ? 'bg-mint-soft/80 border-mint text-mint-dark' : 'bg-banana-soft/80 border-banana-dark/30 text-ink'}`}>
+            <div className="flex items-center justify-between flex-wrap gap-2">
+              <div className="flex items-center gap-2.5">
+                <span className="text-2xl">{backendStatus.hasD1 ? '🟢' : '🟡'}</span>
+                <div>
+                  <h3 className="font-black text-base sm:text-lg">
+                    {backendStatus.hasD1 ? 'Cloudflare D1 Database: Đang kết nối Online' : 'Chưa cấu hình Cloudflare D1 Database'}
+                  </h3>
+                  <p className="text-sm font-bold opacity-85">
+                    {backendStatus.hasD1
+                      ? 'Điểm số từ mọi thiết bị học sinh đều được đồng bộ tự động lên máy chủ.'
+                      : 'Hiện đang hiển thị điểm lưu cục bộ trên máy này. Để xem điểm từ máy học sinh khác qua Cloudflare, chỉ cần bật D1 theo hướng dẫn bên dưới.'}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {!backendStatus.hasD1 && (
+              <div className="mt-3 rounded-2xl bg-white/90 p-4 text-sm font-bold text-ink">
+                <p className="font-black text-peach mb-1">👉 2 bước nhanh để bật D1 trên Cloudflare Dashboard (mất 1 phút):</p>
+                <ol className="list-decimal list-inside space-y-1">
+                  <li>Vào Cloudflare Dashboard → <strong>Storage & Databases</strong> → <strong>D1 SQL Database</strong> → Bấm <strong>Create</strong> đặt tên là <code>english-kid-db</code>.</li>
+                  <li>Vào <strong>Workers & Pages</strong> → chọn dự án <strong>English-kid</strong> → <strong>Settings</strong> → <strong>Functions</strong> → cuộn xuống <strong>D1 Database Bindings</strong> → Bấm <strong>Add binding</strong>: Variable name đặt là <code>DB</code>, Database chọn <code>english-kid-db</code> vừa tạo. Xong!</li>
+                </ol>
+              </div>
+            )}
+          </section>
+
+          {/* 4 Thẻ thống kê nhanh */}
+          <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
+              <p className="text-xs sm:text-sm font-black text-ink-soft">Tổng lượt bài test</p>
+              <p className="text-3xl sm:text-4xl font-black text-ink mt-1">{stats.total}</p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
+              <p className="text-xs sm:text-sm font-black text-ink-soft">Điểm trung bình</p>
+              <p className="text-3xl sm:text-4xl font-black text-peach mt-1">{stats.avg} / 10</p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
+              <p className="text-xs sm:text-sm font-black text-ink-soft">Tỷ lệ đạt (≥ 5.0)</p>
+              <p className="text-3xl sm:text-4xl font-black text-mint-dark mt-1">{stats.passRate}%</p>
+            </div>
+
+            <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
+              <p className="text-xs sm:text-sm font-black text-ink-soft">Xuất báo cáo</p>
+              <button
+                type="button"
+                onClick={handleExportCsv}
+                disabled={filteredScores.length === 0}
+                className="mt-2 inline-flex items-center gap-1 rounded-2xl bg-sky px-3 py-1.5 text-sm font-black text-ink shadow-[0_3px_0_var(--color-sky-dark)] hover:-translate-y-0.5 active:translate-y-0.5 disabled:opacity-40 cursor-pointer"
+              >
+                ⬇️ Tải Excel (CSV)
+              </button>
+            </div>
+          </section>
+
+          {/* Top các từ vựng học sinh làm sai nhiều nhất */}
+          {stats.topWrong.length > 0 && (
+            <section className="rounded-3xl bg-white p-5 shadow-xs border-2 border-rose-soft">
+              <h3 className="text-lg font-black text-ink mb-2 flex items-center gap-2">
+                <span>🔴</span>
+                <span>Các từ học sinh hay làm sai nhất (Cần ôn lại trên lớp)</span>
               </h3>
-              <p className="text-sm font-bold opacity-85">
-                {backendStatus.hasD1
-                  ? 'Điểm số từ mọi thiết bị học sinh đều được đồng bộ tự động lên máy chủ.'
-                  : 'Hiện đang hiển thị điểm lưu cục bộ trên máy này. Để xem điểm từ máy học sinh khác qua Cloudflare, chỉ cần bật D1 theo hướng dẫn bên dưới.'}
+              <div className="flex flex-wrap gap-2">
+                {stats.topWrong.map((item) => (
+                  <span
+                    key={item.word}
+                    className="inline-flex items-center gap-1.5 rounded-2xl bg-rose-soft px-3.5 py-1.5 text-sm font-black text-peach-dark border border-peach/20"
+                  >
+                    <span>{item.word}</span>
+                    <span className="rounded-full bg-white px-2 py-0.2 text-xs font-black text-ink">
+                      {item.count} em sai
+                    </span>
+                  </span>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Bộ lọc theo Lớp và Ô tìm kiếm học sinh */}
+          <section className="flex flex-wrap items-center justify-between gap-3 rounded-3xl bg-white p-4 shadow-xs border-2 border-banana-soft">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-sm font-black text-ink">Lọc lớp:</span>
+              {classList.map((cls) => (
+                <button
+                  key={cls}
+                  type="button"
+                  onClick={() => setSelectedClass(cls)}
+                  className={`rounded-2xl px-3.5 py-1.5 text-sm font-black transition-all cursor-pointer ${
+                    selectedClass === cls
+                      ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
+                      : 'bg-cream text-ink-soft hover:bg-banana-soft'
+                  }`}
+                >
+                  {cls === 'all' ? 'Tất cả lớp' : `Lớp ${cls}`}
+                </button>
+              ))}
+            </div>
+
+            <div className="relative w-full sm:w-64">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="🔍 Tìm tên học sinh..."
+                className="w-full rounded-2xl bg-cream px-3.5 py-2 text-sm font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
+              />
+            </div>
+          </section>
+
+          {/* Bảng danh sách chi tiết bài thi */}
+          <section className="rounded-3xl bg-white p-5 shadow-xs border-2 border-banana-soft overflow-hidden">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-black text-ink">
+                Danh sách bài thi ({filteredScores.length})
+              </h3>
+              {filteredScores.length > 0 && (
+                <button
+                  type="button"
+                  onClick={handleClearAll}
+                  className="text-xs font-bold text-peach-dark hover:underline cursor-pointer"
+                >
+                  Xóa tất cả
+                </button>
+              )}
+            </div>
+
+            {filteredScores.length === 0 ? (
+              <div className="py-12 text-center font-bold text-ink-soft">
+                <span className="text-5xl block mb-2" aria-hidden>📝</span>
+                Chưa có bài kiểm tra nào trong danh mục này.
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-left text-sm">
+                  <thead>
+                    <tr className="border-b-2 border-banana-soft text-ink-soft">
+                      <th className="pb-3 font-black">Thời gian</th>
+                      <th className="pb-3 font-black">Họ và tên</th>
+                      <th className="pb-3 font-black">Lớp</th>
+                      <th className="pb-3 font-black">Bài học</th>
+                      <th className="pb-3 font-black">Số câu đúng</th>
+                      <th className="pb-3 font-black">Điểm</th>
+                      <th className="pb-3 font-black">Từ làm sai</th>
+                      <th className="pb-3 font-black text-right">Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-banana-soft/50">
+                    {filteredScores.map((row) => {
+                      const scoreNum = Number(row.score) || 0;
+                      const scoreColor =
+                        scoreNum >= 8
+                          ? 'bg-mint-soft text-mint-dark'
+                          : scoreNum >= 5
+                            ? 'bg-banana-soft text-ink'
+                            : 'bg-rose-soft text-peach-dark';
+
+                      const wrongList = Array.isArray(row.wrongWords) ? row.wrongWords : [];
+                      const units = Array.isArray(row.unitIds) ? row.unitIds.map((u) => `Unit ${u}`).join(', ') : '';
+
+                      return (
+                        <tr key={row.id} className="hover:bg-cream/60 transition-colors">
+                          <td className="py-3 font-bold text-ink-soft">
+                            {row.createdAt ? formatViDate(row.createdAt) : ''}
+                          </td>
+                          <td className="py-3 font-black text-ink text-base">
+                            {row.studentName || 'Học sinh'}
+                          </td>
+                          <td className="py-3 font-black text-ink">
+                            <span className="rounded-full bg-cream px-2.5 py-0.5 text-xs border border-banana-soft">
+                              {row.studentClass || '-'}
+                            </span>
+                          </td>
+                          <td className="py-3 font-bold text-ink-soft">{units}</td>
+                          <td className="py-3 font-black text-ink">
+                            {row.correct}/{row.total}
+                          </td>
+                          <td className="py-3">
+                            <span className={`inline-block rounded-xl px-2.5 py-1 text-base font-black ${scoreColor}`}>
+                              {row.score}
+                            </span>
+                          </td>
+                          <td className="py-3 max-w-xs truncate font-bold text-peach">
+                            {wrongList.length > 0 ? wrongList.join(', ') : '✓ Không sai'}
+                          </td>
+                          <td className="py-3 text-right">
+                            <button
+                              type="button"
+                              onClick={() => handleDeleteItem(row.id)}
+                              className="rounded-xl px-2.5 py-1 text-xs font-bold text-peach-dark hover:bg-rose-soft cursor-pointer transition-colors"
+                              title="Xóa bài thi này"
+                            >
+                              Xóa
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </section>
+        </div>
+      )}
+
+      {/* TAB 2: THEO DÕI LỘ TRÌNH 12 UNIT CỦA HỌC SINH */}
+      {activeTab === 'roadmap' && (
+        <div className="flex flex-col gap-6">
+          {/* Thẻ Tổng quan Hồ Sơ Học Sinh */}
+          <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-banana text-4xl shadow-sm">
+                {currentStudent.avatar || '👤'}
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-xl sm:text-2xl font-black text-ink">
+                    {currentStudent.name || 'Chưa đặt tên'}
+                  </h3>
+                  <span className="rounded-full bg-cream px-3 py-0.5 text-xs font-black text-ink-soft border border-banana-soft">
+                    {currentStudent.class ? `Lớp ${currentStudent.class}` : 'Chưa chọn lớp'}
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+                  Thiết bị học tập hiện tại · Tiến độ lưu an toàn trong hệ thống
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 w-full sm:w-auto">
+              <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
+                <span className="text-xs font-black text-ink-soft block">Tổng số sao</span>
+                <span className="text-xl font-black text-ink">⭐ {studentTotalStars}</span>
+              </div>
+              <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
+                <span className="text-xs font-black text-ink-soft block">Chuỗi học tập</span>
+                <span className="text-xl font-black text-peach-dark">🔥 {studentStreak} ngày</span>
+              </div>
+              <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
+                <span className="text-xs font-black text-ink-soft block">Từ vựng đã thuộc</span>
+                <span className="text-xl font-black text-mint-dark">✓ {masteredCount} từ</span>
+              </div>
+            </div>
+          </section>
+
+          {/* Ma Trận Tiến Độ 12 Unit */}
+          <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
+            <div>
+              <h3 className="text-xl sm:text-2xl font-black text-ink">
+                Tiến Độ Chi Tiết 12 Unit (Global Success 6)
+              </h3>
+              <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+                Theo dõi học sinh đã hoàn thành những trạm kỹ năng nào trong từng bài học
               </p>
             </div>
-          </div>
+
+            <div className="grid gap-3">
+              {allUnits.map((u) => {
+                const uProg = progress.units[u.unitId]?.modes || {};
+                const uStars = Object.values(uProg).reduce((a, b) => a + b, 0);
+                const hasVocab = (uProg.flashcard || 0) > 0;
+                const hasGrammar = (uProg.grammar || 0) > 0;
+                const hasSpeaking = (uProg.speaking || 0) > 0;
+                const hasListening = (uProg.listenstation || 0) > 0 || (uProg.listening || 0) > 0;
+                const hasReading = (uProg.reading || 0) > 0;
+                const hasWriting = (uProg.writing || 0) > 0;
+                const hasMastery = (uProg.mastery || 0) > 0;
+
+                const completedStations = [hasVocab, hasGrammar, hasSpeaking, hasListening, hasReading, hasWriting, hasMastery].filter(Boolean).length;
+
+                return (
+                  <div
+                    key={u.unitId}
+                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl bg-cream/50 p-4 border border-banana-soft hover:bg-cream transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-3xl shrink-0" aria-hidden>{u.emoji}</span>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-base sm:text-lg font-black text-ink">
+                            Unit {u.unitId}: {u.titleEn}
+                          </h4>
+                          <span className="text-xs font-bold text-ink-soft">({u.titleVi})</span>
+                        </div>
+                        {/* 7 Badge Trạm Kỹ năng */}
+                        <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasVocab ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasVocab ? '✓' : '○'} Từ vựng
+                          </span>
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasGrammar ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasGrammar ? '✓' : '○'} Ngữ pháp
+                          </span>
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasListening ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasListening ? '✓' : '○'} Nghe
+                          </span>
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasSpeaking ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasSpeaking ? '✓' : '○'} Nói
+                          </span>
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasReading ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasReading ? '✓' : '○'} Đọc
+                          </span>
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasWriting ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasWriting ? '✓' : '○'} Viết
+                          </span>
+                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasMastery ? 'bg-peach text-white shadow-2xs' : 'bg-gray-200 text-gray-500'}`}>
+                            {hasMastery ? '★ Bài tập Unit' : '○ Bài tập'}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-3 self-end sm:self-center">
+                      <div className="text-right">
+                        <span className="text-xs font-black text-ink-soft block">Tiến độ trạm</span>
+                        <span className="text-sm font-black text-ink">{completedStations} / 7 Trạm</span>
+                      </div>
+                      <Button3D
+                        tone="banana"
+                        to={`/unit/${u.unitId}`}
+                        className="px-3.5 py-1.5 text-xs"
+                      >
+                        Xem Unit →
+                      </Button3D>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
         </div>
+      )}
 
-        {!backendStatus.hasD1 && (
-          <div className="mt-3 rounded-2xl bg-white/90 p-4 text-sm font-bold text-ink">
-            <p className="font-black text-peach mb-1">👉 2 bước nhanh để bật D1 trên Cloudflare Dashboard (mất 1 phút):</p>
-            <ol className="list-decimal list-inside space-y-1">
-              <li>Vào Cloudflare Dashboard → <strong>Storage & Databases</strong> → <strong>D1 SQL Database</strong> → Bấm <strong>Create</strong> đặt tên là <code>english-kid-db</code>.</li>
-              <li>Vào <strong>Workers & Pages</strong> → chọn dự án <strong>English-kid</strong> → <strong>Settings</strong> → <strong>Functions</strong> → cuộn xuống <strong>D1 Database Bindings</strong> → Bấm <strong>Add binding</strong>: Variable name đặt là <code>DB</code>, Database chọn <code>english-kid-db</code> vừa tạo. Xong!</li>
-            </ol>
-          </div>
-        )}
-      </section>
-
-      {/* 4 Thẻ thống kê nhanh */}
-      <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
-          <p className="text-xs sm:text-sm font-black text-ink-soft">Tổng lượt bài test</p>
-          <p className="text-3xl sm:text-4xl font-black text-ink mt-1">{stats.total}</p>
-        </div>
-
-        <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
-          <p className="text-xs sm:text-sm font-black text-ink-soft">Điểm trung bình</p>
-          <p className="text-3xl sm:text-4xl font-black text-peach mt-1">{stats.avg} / 10</p>
-        </div>
-
-        <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
-          <p className="text-xs sm:text-sm font-black text-ink-soft">Tỷ lệ đạt (≥ 5.0)</p>
-          <p className="text-3xl sm:text-4xl font-black text-mint-dark mt-1">{stats.passRate}%</p>
-        </div>
-
-        <div className="rounded-3xl bg-white p-5 text-center shadow-xs border-2 border-banana-soft">
-          <p className="text-xs sm:text-sm font-black text-ink-soft">Xuất báo cáo</p>
-          <button
-            type="button"
-            onClick={handleExportCsv}
-            disabled={filteredScores.length === 0}
-            className="mt-2 inline-flex items-center gap-1 rounded-2xl bg-sky px-3 py-1.5 text-sm font-black text-ink shadow-[0_3px_0_var(--color-sky-dark)] hover:-translate-y-0.5 active:translate-y-0.5 disabled:opacity-40 cursor-pointer"
-          >
-            ⬇️ Tải Excel (CSV)
-          </button>
-        </div>
-      </section>
-
-      {/* Top các từ vựng học sinh làm sai nhiều nhất */}
-      {stats.topWrong.length > 0 && (
-        <section className="rounded-3xl bg-white p-5 shadow-xs border-2 border-rose-soft">
-          <h3 className="text-lg font-black text-ink mb-2 flex items-center gap-2">
-            <span>🔴</span>
-            <span>Các từ học sinh hay làm sai nhất (Cần ôn lại trên lớp)</span>
-          </h3>
-          <div className="flex flex-wrap gap-2">
-            {stats.topWrong.map((item) => (
-              <span
-                key={item.word}
-                className="inline-flex items-center gap-1.5 rounded-2xl bg-rose-soft px-3.5 py-1.5 text-sm font-black text-peach-dark border border-peach/20"
-              >
-                <span>{item.word}</span>
-                <span className="rounded-full bg-white px-2 py-0.2 text-xs font-black text-ink">
-                  {item.count} em sai
-                </span>
+      {/* TAB 3: THƯ VIỆN SGK & PHÂN PHỐI */}
+      {activeTab === 'library' && (
+        <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
+          <div className="flex items-center gap-3 border-b-2 border-banana-soft pb-4 mb-4">
+            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-xs">
+              📄
+            </span>
+            <div>
+              <span className="rounded-full bg-banana-soft px-3 py-0.5 text-xs font-black text-ink-soft">
+                Học liệu chính thức Bộ GD&ĐT
               </span>
-            ))}
+              <h2 className="text-xl sm:text-2xl font-black text-ink mt-0.5">
+                Thư viện Sách Giáo Khoa & Tài Liệu PDF (Global Success 6)
+              </h2>
+            </div>
+          </div>
+
+          <p className="text-sm sm:text-base font-bold text-ink-soft mb-5">
+            Toàn bộ nội dung từ vựng, ngữ pháp và 4 kỹ năng trên web app đều đối chiếu chuẩn xác 100% theo các đầu sách PDF chính thức dưới đây:
+          </p>
+
+          <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+              <div>
+                <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
+                  Học kỳ I
+                </span>
+                <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 1</h3>
+                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 1 đến Unit 6 (Trang 6 – 69). Bản số hóa chuẩn NXBGDVN.</p>
+              </div>
+              <a
+                href="https://hanhtrangso.nxbgd.vn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-banana px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+              >
+                Mở SGK Tập 1 (Hành Trang Số) ↗
+              </a>
+            </div>
+
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+              <div>
+                <span className="rounded-full bg-sky px-2.5 py-0.5 text-xs font-black text-ink">
+                  Học kỳ II
+                </span>
+                <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 2</h3>
+                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 7 đến Unit 12 (Trang 6 – 69). Kèm các bài Review củng cố.</p>
+              </div>
+              <a
+                href="https://hoclieu.vn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-sky px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+              >
+                Mở SGK Tập 2 (Học Liệu VN) ↗
+              </a>
+            </div>
+
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+              <div>
+                <span className="rounded-full bg-mint px-2.5 py-0.5 text-xs font-black text-white">
+                  Bài tập củng cố
+                </span>
+                <h3 className="mt-2 text-base font-black text-ink">Sách Bài Tập (Workbook)</h3>
+                <p className="text-xs font-bold text-ink-soft mt-1">Bộ bài tập ngữ pháp, đọc hiểu bổ trợ dành cho tự luyện ở nhà.</p>
+              </div>
+              <a
+                href="https://sachhoc.com/sach-giao-khoa-tieng-anh-lop-6-tap-1-phien-ban-moi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-mint px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+              >
+                Tải Workbook PDF ↗
+              </a>
+            </div>
+
+            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
+              <div>
+                <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white">
+                  Dành cho Giáo viên
+                </span>
+                <h3 className="mt-2 text-base font-black text-ink">Sách Giáo Viên (Teacher's Book)</h3>
+                <p className="text-xs font-bold text-ink-soft mt-1">Kế hoạch bài dạy (giáo án), phân phối tiết và hướng dẫn giảng dạy.</p>
+              </div>
+              <a
+                href="https://taphuan.nxbgd.vn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-10 items-center justify-center rounded-xl bg-peach px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
+              >
+                Mở Sách Giáo Viên (Tập Huấn) ↗
+              </a>
+            </div>
           </div>
         </section>
       )}
-
-      {/* Bộ lọc theo Lớp và Ô tìm kiếm học sinh */}
-      <section className="flex flex-wrap items-center justify-between gap-3 rounded-3xl bg-white p-4 shadow-xs border-2 border-banana-soft">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-sm font-black text-ink">Lọc lớp:</span>
-          {classList.map((cls) => (
-            <button
-              key={cls}
-              type="button"
-              onClick={() => setSelectedClass(cls)}
-              className={`rounded-2xl px-3.5 py-1.5 text-sm font-black transition-all cursor-pointer ${
-                selectedClass === cls
-                  ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
-                  : 'bg-cream text-ink-soft hover:bg-banana-soft'
-              }`}
-            >
-              {cls === 'all' ? 'Tất cả lớp' : `Lớp ${cls}`}
-            </button>
-          ))}
-        </div>
-
-        <div className="relative w-full sm:w-64">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="🔍 Tìm tên học sinh..."
-            className="w-full rounded-2xl bg-cream px-3.5 py-2 text-sm font-bold text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana"
-          />
-        </div>
-      </section>
-
-      {/* Bảng danh sách chi tiết học sinh */}
-      <section className="rounded-3xl bg-white p-5 shadow-xs border-2 border-banana-soft overflow-hidden">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-xl font-black text-ink">
-            Danh sách bài thi ({filteredScores.length})
-          </h3>
-          {filteredScores.length > 0 && (
-            <button
-              type="button"
-              onClick={handleClearAll}
-              className="text-xs font-bold text-peach-dark hover:underline cursor-pointer"
-            >
-              Xóa tất cả
-            </button>
-          )}
-        </div>
-
-        {filteredScores.length === 0 ? (
-          <div className="py-12 text-center font-bold text-ink-soft">
-            <span className="text-5xl block mb-2" aria-hidden>📝</span>
-            Chưa có bài kiểm tra nào trong danh mục này.
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b-2 border-banana-soft text-ink-soft">
-                  <th className="pb-3 font-black">Thời gian</th>
-                  <th className="pb-3 font-black">Họ và tên</th>
-                  <th className="pb-3 font-black">Lớp</th>
-                  <th className="pb-3 font-black">Bài học</th>
-                  <th className="pb-3 font-black">Số câu đúng</th>
-                  <th className="pb-3 font-black">Điểm</th>
-                  <th className="pb-3 font-black">Từ làm sai</th>
-                  <th className="pb-3 font-black text-right">Thao tác</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-banana-soft/50">
-                {filteredScores.map((row) => {
-                  const scoreNum = Number(row.score) || 0;
-                  const scoreColor =
-                    scoreNum >= 8
-                      ? 'bg-mint-soft text-mint-dark'
-                      : scoreNum >= 5
-                        ? 'bg-banana-soft text-ink'
-                        : 'bg-rose-soft text-peach-dark';
-
-                  const wrongList = Array.isArray(row.wrongWords) ? row.wrongWords : [];
-                  const units = Array.isArray(row.unitIds) ? row.unitIds.map((u) => `Unit ${u}`).join(', ') : '';
-
-                  return (
-                    <tr key={row.id} className="hover:bg-cream/60 transition-colors">
-                      <td className="py-3 font-bold text-ink-soft">
-                        {row.createdAt ? formatViDate(row.createdAt) : ''}
-                      </td>
-                      <td className="py-3 font-black text-ink text-base">
-                        {row.studentName || 'Học sinh'}
-                      </td>
-                      <td className="py-3 font-black text-ink">
-                        <span className="rounded-full bg-cream px-2.5 py-0.5 text-xs border border-banana-soft">
-                          {row.studentClass || '-'}
-                        </span>
-                      </td>
-                      <td className="py-3 font-bold text-ink-soft">{units}</td>
-                      <td className="py-3 font-black text-ink">
-                        {row.correct}/{row.total}
-                      </td>
-                      <td className="py-3">
-                        <span className={`inline-block rounded-xl px-2.5 py-1 text-base font-black ${scoreColor}`}>
-                          {row.score}
-                        </span>
-                      </td>
-                      <td className="py-3 max-w-xs truncate font-bold text-peach">
-                        {wrongList.length > 0 ? wrongList.join(', ') : '✓ Không sai'}
-                      </td>
-                      <td className="py-3 text-right">
-                        <button
-                          type="button"
-                          onClick={() => handleDeleteItem(row.id)}
-                          className="rounded-xl px-2.5 py-1 text-xs font-bold text-peach-dark hover:bg-rose-soft cursor-pointer transition-colors"
-                          title="Xóa bài thi này"
-                        >
-                          Xóa
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </section>
-
-      {/* Thư viện Sách giáo khoa & Tài liệu PDF chuẩn Bộ GD&ĐT */}
-      <section className="rounded-3xl bg-white p-6 shadow-xs border-2 border-banana-soft">
-        <div className="flex items-center gap-3 border-b-2 border-banana-soft pb-4 mb-4">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-xs">
-            📄
-          </span>
-          <div>
-            <span className="rounded-full bg-banana-soft px-3 py-0.5 text-xs font-black text-ink-soft">
-              Học liệu chính thức Bộ GD&ĐT
-            </span>
-            <h2 className="text-xl sm:text-2xl font-black text-ink mt-0.5">
-              Thư viện Sách Giáo Khoa & Tài Liệu PDF (Global Success 6)
-            </h2>
-          </div>
-        </div>
-
-        <p className="text-sm sm:text-base font-bold text-ink-soft mb-5">
-          Toàn bộ nội dung từ vựng, ngữ pháp và 4 kỹ năng trên web app đều đối chiếu chuẩn xác 100% theo các đầu sách PDF chính thức dưới đây:
-        </p>
-
-        <div className="grid gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
-            <div>
-              <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
-                Học kỳ I
-              </span>
-              <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 1</h3>
-              <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 1 đến Unit 6 (Trang 6 – 69). Bản số hóa chuẩn NXBGDVN.</p>
-            </div>
-            <a
-              href="https://hanhtrangso.nxbgd.vn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-banana px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-            >
-              Mở SGK Tập 1 (Hành Trang Số) ↗
-            </a>
-          </div>
-
-          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
-            <div>
-              <span className="rounded-full bg-sky px-2.5 py-0.5 text-xs font-black text-ink">
-                Học kỳ II
-              </span>
-              <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 2</h3>
-              <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 7 đến Unit 12 (Trang 6 – 69). Kèm các bài Review củng cố.</p>
-            </div>
-            <a
-              href="https://hoclieu.vn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-sky px-3 text-xs font-black text-ink shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-            >
-              Mở SGK Tập 2 (Học Liệu VN) ↗
-            </a>
-          </div>
-
-          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
-            <div>
-              <span className="rounded-full bg-mint px-2.5 py-0.5 text-xs font-black text-white">
-                Bài tập củng cố
-              </span>
-              <h3 className="mt-2 text-base font-black text-ink">Sách Bài Tập (Workbook)</h3>
-              <p className="text-xs font-bold text-ink-soft mt-1">Bộ bài tập ngữ pháp, đọc hiểu bổ trợ dành cho tự luyện ở nhà.</p>
-            </div>
-            <a
-              href="https://sachhoc.com/sach-giao-khoa-tieng-anh-lop-6-tap-1-phien-ban-moi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-mint px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-            >
-              Tải Workbook PDF ↗
-            </a>
-          </div>
-
-          <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border border-[#efe3cc] shadow-2xs">
-            <div>
-              <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white">
-                Dành cho Giáo viên
-              </span>
-              <h3 className="mt-2 text-base font-black text-ink">Sách Giáo Viên (Teacher's Book)</h3>
-              <p className="text-xs font-bold text-ink-soft mt-1">Kế hoạch bài dạy (giáo án), phân phối tiết và hướng dẫn giảng dạy.</p>
-            </div>
-            <a
-              href="https://taphuan.nxbgd.vn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-10 items-center justify-center rounded-xl bg-peach px-3 text-xs font-black text-white shadow-2xs hover:scale-102 transition-all cursor-pointer text-center"
-            >
-              Mở Sách Giáo Viên (Tập Huấn) ↗
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

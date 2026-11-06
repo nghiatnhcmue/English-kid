@@ -8,12 +8,16 @@ import { playSfx } from '../utils/sfx.js';
 import { Button3D } from '../components/ui.jsx';
 import { t } from '../i18n/vi.js';
 
+import StudentProfileModal from '../components/StudentProfileModal.jsx';
+
 export default function HomePage() {
   const units = listUnits();
   const progress = store().getProgress();
   const hardCount = wordsByStatus(store().getMastery(), 'review').length;
   const streak = streakOf(progress.studyDays);
   const totalStars = totalStarsOf(progress);
+  const [student, setStudent] = useState(() => store().getStudentInfo());
+  const [showProfile, setShowProfile] = useState(false);
 
   // Tìm bài học tiếp theo em nên học (bài đầu tiên chưa đạt đủ 12 sao hoặc bài 1)
   const nextUnit = useMemo(() => {
@@ -33,17 +37,40 @@ export default function HomePage() {
           <h1 className="text-3xl sm:text-4xl font-black text-ink">
             {t.appName} <span aria-hidden>📚</span>
           </h1>
-          <p className="text-base sm:text-lg font-bold text-ink-soft">{t.home.hello}</p>
+          <p className="text-base sm:text-lg font-bold text-ink-soft">
+            {student.name ? (
+              <>
+                Chào em, <strong className="text-peach-dark">{student.name}</strong> {student.class ? `(Lớp ${student.class})` : ''}! Hôm nay mình cùng học tiếng Anh nhé!
+              </>
+            ) : (
+              'Chào em! Hôm nay mình cùng học tiếng Anh nhé!'
+            )}
+          </p>
         </div>
         <div className="flex items-center gap-2 font-black md:hidden">
-          <span className="flex items-center gap-1 rounded-2xl bg-white px-3.5 py-1.5 shadow-xs border border-banana-soft">
+          <button
+            type="button"
+            onClick={() => setShowProfile(true)}
+            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 shadow-xs border border-banana-soft text-xs font-black text-ink cursor-pointer"
+          >
+            <span>{student.avatar || '👤'}</span>
+            <span className="max-w-24 truncate">{student.name || 'Đặt tên'}</span>
+          </button>
+          <span className="flex items-center gap-1 rounded-2xl bg-white px-3 py-1.5 shadow-xs border border-banana-soft text-xs">
             <span aria-hidden>⭐</span> {totalStars}
           </span>
-          <span className="flex items-center gap-1 rounded-2xl bg-white px-3.5 py-1.5 shadow-xs border border-banana-soft">
+          <span className="flex items-center gap-1 rounded-2xl bg-white px-3 py-1.5 shadow-xs border border-banana-soft text-xs">
             <span aria-hidden>🔥</span> {streak}
           </span>
         </div>
       </header>
+
+      {showProfile && (
+        <StudentProfileModal
+          onClose={() => setShowProfile(false)}
+          onSave={(info) => setStudent(info)}
+        />
+      )}
 
       {/* Khối Tìm kiếm nhanh toàn diện 12 Unit */}
       <div className="relative w-full">

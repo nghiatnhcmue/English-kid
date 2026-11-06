@@ -19,6 +19,7 @@ import ReadingPage from './pages/ReadingPage.jsx';
 import WritingPage from './pages/WritingPage.jsx';
 import SearchPage from './pages/SearchPage.jsx';
 import PronunciationPage from './pages/PronunciationPage.jsx';
+import StudentProfileModal from './components/StudentProfileModal.jsx';
 
 const NAV = [
   { to: '/', label: t.nav.home, icon: '🏠', end: true },
@@ -39,6 +40,8 @@ function TopNavBar() {
   const progress = store().getProgress();
   const streak = streakOf(progress.studyDays);
   const totalStars = totalStarsOf(progress);
+  const [studentInfo, setStudentInfo] = useState(() => store().getStudentInfo());
+  const [showProfileModal, setShowProfileModal] = useState(false);
   useLocation(); // vẽ lại khi đổi trang để số sao/streak luôn mới
 
   const toggleSound = () => {
@@ -48,116 +51,139 @@ function TopNavBar() {
   };
 
   return (
-    <header className="no-print sticky top-0 z-40 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 gap-3">
-        {/* Logo / Tên Ứng Dụng */}
-        <NavLink
-          to="/"
-          className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
-        >
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
-            <span>📚</span>
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-xl font-black tracking-tight text-ink">
-              {t.appName}
-            </span>
-            <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
-              Global Success 6
-            </span>
-          </div>
-        </NavLink>
+    <>
+      <header className="no-print sticky top-0 z-40 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 gap-3">
+          {/* Logo / Tên Ứng Dụng */}
+          <NavLink
+            to="/"
+            className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
+          >
+            <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
+              <span>📚</span>
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-black tracking-tight text-ink">
+                {t.appName}
+              </span>
+              <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
+                Global Success 6
+              </span>
+            </div>
+          </NavLink>
 
-        {/* Thanh Menu Điều Hướng Trung Tâm */}
-        <nav aria-label="Điều hướng chính" className="flex items-center">
-          <ul className="flex items-center gap-1 lg:gap-1.5 rounded-2xl bg-cream/70 p-1 border border-banana-soft/60">
-            {NAV.map((item) => (
-              <li key={item.to}>
+          {/* Thanh Menu Điều Hướng Trung Tâm */}
+          <nav aria-label="Điều hướng chính" className="flex items-center">
+            <ul className="flex items-center gap-1 lg:gap-1.5 rounded-2xl bg-cream/70 p-1 border border-banana-soft/60">
+              {NAV.map((item) => (
+                <li key={item.to}>
+                  <NavLink
+                    to={item.to}
+                    end={item.end}
+                    onClick={() => playSfx('click')}
+                    className={({ isActive }) =>
+                      `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3.5 lg:py-2 text-xs lg:text-sm font-extrabold whitespace-nowrap transition-all select-none ${
+                        isActive
+                          ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)] scale-[1.02]'
+                          : 'text-ink-soft hover:bg-white hover:text-ink'
+                      }`
+                    }
+                  >
+                    <span className="text-base lg:text-lg leading-none" aria-hidden>
+                      {item.icon}
+                    </span>
+                    <span className="whitespace-nowrap">{item.label}</span>
+                  </NavLink>
+                </li>
+              ))}
+
+              {/* Vạch ngăn cách tinh tế */}
+              <li className="h-5 w-px bg-banana-dark/20 mx-0.5" aria-hidden />
+
+              {/* Mục dành cho Giáo viên */}
+              <li>
                 <NavLink
-                  to={item.to}
-                  end={item.end}
+                  to="/teacher"
                   onClick={() => playSfx('click')}
                   className={({ isActive }) =>
-                    `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3.5 lg:py-2 text-xs lg:text-sm font-extrabold whitespace-nowrap transition-all select-none ${
+                    `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs lg:text-sm font-black whitespace-nowrap transition-all select-none ${
                       isActive
-                        ? 'bg-banana text-ink shadow-[0_3px_0_var(--color-banana-dark)] scale-[1.02]'
-                        : 'text-ink-soft hover:bg-white hover:text-ink'
+                        ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
+                        : 'text-peach-dark hover:bg-peach/15'
                     }`
                   }
                 >
-                  <span className="text-base lg:text-lg leading-none" aria-hidden>
-                    {item.icon}
-                  </span>
-                  <span className="whitespace-nowrap">{item.label}</span>
+                  <span className="text-base leading-none">👨‍🏫</span>
+                  <span className="whitespace-nowrap">Góc Giáo Viên</span>
                 </NavLink>
               </li>
-            ))}
+            </ul>
+          </nav>
 
-            {/* Vạch ngăn cách tinh tế */}
-            <li className="h-5 w-px bg-banana-dark/20 mx-0.5" aria-hidden />
+          {/* Cụm Tiện Ích: Đăng nhập học sinh + Đổi bài + Số sao + Streak + Âm thanh */}
+          <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
+            {/* Nút Hồ sơ / Đăng nhập học sinh */}
+            <button
+              type="button"
+              onClick={() => {
+                playSfx('click');
+                setShowProfileModal(true);
+              }}
+              title="Bấm để đăng nhập hoặc đổi tên học sinh"
+              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:bg-cream hover:scale-105 transition-all cursor-pointer"
+            >
+              <span className="text-sm lg:text-base leading-none" aria-hidden>{studentInfo.avatar || '👤'}</span>
+              <span className="max-w-32 truncate">{studentInfo.name ? `${studentInfo.name} (${studentInfo.class || '6'})` : 'Học sinh đăng nhập'}</span>
+            </button>
 
-            {/* Mục dành cho Giáo viên */}
-            <li>
-              <NavLink
-                to="/teacher"
-                onClick={() => playSfx('click')}
-                className={({ isActive }) =>
-                  `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs lg:text-sm font-black whitespace-nowrap transition-all select-none ${
-                    isActive
-                      ? 'bg-peach text-white shadow-[0_3px_0_var(--color-peach-dark)]'
-                      : 'text-peach-dark hover:bg-peach/15'
-                  }`
-                }
-              >
-                <span className="text-base leading-none">👨‍🏫</span>
-                <span className="whitespace-nowrap">Góc Giáo Viên</span>
-              </NavLink>
-            </li>
-          </ul>
-        </nav>
+            <UnitSwitcher className="hidden xl:flex w-52" />
 
-        {/* Cụm Tiện Ích: Đổi bài + Số sao + Chuỗi streak + Âm thanh */}
-        <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
-          <UnitSwitcher className="hidden xl:flex w-52" />
+            {/* Huy hiệu Sao ⭐ */}
+            <div
+              title={`Em đã tích lũy được ${totalStars} ngôi sao`}
+              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
+            >
+              <span className="text-sm lg:text-base leading-none" aria-hidden>⭐</span>
+              <span>{totalStars}</span>
+            </div>
 
-          {/* Huy hiệu Sao ⭐ */}
-          <div
-            title={`Em đã tích lũy được ${totalStars} ngôi sao`}
-            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-ink shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
-          >
-            <span className="text-sm lg:text-base leading-none" aria-hidden>⭐</span>
-            <span>{totalStars}</span>
+            {/* Huy hiệu Chuỗi ngày học 🔥 */}
+            <div
+              title={streak > 0 ? `Chuỗi học liên tiếp ${streak} ngày` : 'Học mỗi ngày để giữ ngọn lửa!'}
+              className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-peach-dark shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
+            >
+              <span className="text-sm lg:text-base leading-none" aria-hidden>🔥</span>
+              <span>{streak}</span>
+            </div>
+
+            {/* Nút bật / tắt âm thanh */}
+            <button
+              type="button"
+              onClick={toggleSound}
+              aria-label={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
+              title={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-base font-bold shadow-[0_2px_0_#e9dcc4] hover:bg-cream active:translate-y-0.5 active:shadow-none cursor-pointer border border-[#ece0cc] transition-all hover:scale-105"
+            >
+              {settings.sound ? '🔊' : '🔇'}
+            </button>
           </div>
-
-          {/* Huy hiệu Chuỗi ngày học 🔥 */}
-          <div
-            title={streak > 0 ? `Chuỗi học liên tiếp ${streak} ngày` : 'Học mỗi ngày để giữ ngọn lửa!'}
-            className="flex items-center gap-1.5 rounded-2xl bg-white px-3 py-1.5 text-xs lg:text-sm font-black text-peach-dark shadow-[0_2px_0_#e9dcc4] border border-banana-soft select-none hover:scale-105 transition-transform"
-          >
-            <span className="text-sm lg:text-base leading-none" aria-hidden>🔥</span>
-            <span>{streak}</span>
-          </div>
-
-          {/* Nút bật / tắt âm thanh */}
-          <button
-            type="button"
-            onClick={toggleSound}
-            aria-label={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
-            title={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-base font-bold shadow-[0_2px_0_#e9dcc4] hover:bg-cream active:translate-y-0.5 active:shadow-none cursor-pointer border border-[#ece0cc] transition-all hover:scale-105"
-          >
-            {settings.sound ? '🔊' : '🔇'}
-          </button>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Modal đăng nhập / đổi thông tin học sinh */}
+      {showProfileModal && (
+        <StudentProfileModal
+          onClose={() => setShowProfileModal(false)}
+          onSave={(info) => setStudentInfo(info)}
+        />
+      )}
+    </>
   );
 }
 
 const MOBILE_NAV = [
   { to: '/', label: 'Trang chủ', icon: '🏠', end: true },
   { to: '/search', label: 'Tìm kiếm', icon: '🔍' },
-  { to: '/pronunciation', label: 'Phát âm', icon: '🗣️' },
   { to: '/grammar', label: 'Ngữ pháp', icon: '📐' },
   { to: '/listening', label: 'Nghe', icon: '👂' },
   { to: '/speaking', label: 'Nói', icon: '🎙️' },
@@ -171,7 +197,7 @@ function BottomNav() {
       className="no-print md:hidden fixed inset-x-0 bottom-0 z-30 border-t-2 border-banana-soft bg-white/95 pb-[env(safe-area-inset-bottom)] shadow-lg backdrop-blur"
       aria-label="Điều hướng điện thoại"
     >
-      <ul className="mx-auto grid max-w-lg grid-cols-8">
+      <ul className="mx-auto grid max-w-lg grid-cols-7">
         {MOBILE_NAV.map((item) => (
           <li key={item.to}>
             <NavLink
@@ -179,12 +205,12 @@ function BottomNav() {
               end={item.end}
               onClick={() => playSfx('click')}
               className={({ isActive }) =>
-                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-[9px] font-black transition-colors ${
+                `flex min-h-16 flex-col items-center justify-center gap-0.5 text-[10px] font-black transition-colors ${
                   isActive ? 'text-peach' : 'text-ink-soft'
                 }`
               }
             >
-              <span className="text-lg leading-none" aria-hidden>
+              <span className="text-xl leading-none" aria-hidden>
                 {item.icon}
               </span>
               <span className="whitespace-nowrap">{item.label}</span>

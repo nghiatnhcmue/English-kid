@@ -37,11 +37,15 @@ export function createStore(storage = globalThis.localStorage) {
 
   const api = {
     getStudentInfo() {
-      const info = read(KEYS.STUDENT, { name: '', class: '' });
-      return info && typeof info === 'object' ? info : { name: '', class: '' };
+      const info = read(KEYS.STUDENT, { name: '', class: '', avatar: '🦊' });
+      return info && typeof info === 'object' ? info : { name: '', class: '', avatar: '🦊' };
     },
-    saveStudentInfo({ name = '', class: className = '' }) {
-      const clean = { name: String(name).trim(), class: String(className).trim() };
+    saveStudentInfo({ name = '', class: className = '', avatar = '🦊' }) {
+      const clean = {
+        name: String(name).trim(),
+        class: String(className).trim(),
+        avatar: String(avatar || '🦊'),
+      };
       write(KEYS.STUDENT, clean);
       return clean;
     },
