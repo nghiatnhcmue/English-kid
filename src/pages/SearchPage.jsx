@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Search as SearchIcon, X, Volume2, ArrowRight, BookOpen } from 'lucide-react';
 import { searchCurriculum } from '../utils/search.js';
 import { PageHeader, SpeakerButton, SlowSpeakerButton, WordImage, Button3D } from '../components/ui.jsx';
+import WordInspectorModal from '../components/WordInspectorModal.jsx';
 import { playSfx } from '../utils/sfx.js';
 
 const QUICK_TAGS = [
@@ -23,6 +24,7 @@ const QUICK_TAGS = [
 export default function SearchPage() {
   const [query, setQuery] = useState('');
   const [activeTab, setActiveTab] = useState('all'); // 'all' | 'vocab' | 'grammar' | 'reading' | 'speaking' | 'listening'
+  const [inspectWord, setInspectWord] = useState(null);
 
   const results = useMemo(() => searchCurriculum(query), [query]);
 
@@ -150,13 +152,29 @@ export default function SearchPage() {
                     className="flex items-center justify-between gap-3 rounded-2xl bg-white p-4 shadow-[0_3px_0_#efe3cc] border border-[#efe3cc]"
                   >
                     <div className="flex items-center gap-3 min-w-0 flex-1">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cream">
+                      <button
+                        type="button"
+                        onClick={() => setInspectWord(w)}
+                        className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-cream cursor-pointer transition-transform hover:scale-105 ${
+                          w.model3d ? 'ring-2 ring-banana' : ''
+                        }`}
+                        title={w.model3d ? 'Xem mô hình 3D 360°' : 'Xem từ vựng'}
+                      >
                         <WordImage word={w} size="sm" />
-                      </div>
+                      </button>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-baseline gap-2">
                           <h3 className="text-lg font-black text-ink">{w.word}</h3>
                           <span className="text-xs font-bold text-sky-dark">{w.phonetic}</span>
+                          {w.model3d && (
+                            <button
+                              type="button"
+                              onClick={() => setInspectWord(w)}
+                              className="rounded-full bg-banana-soft px-2 py-0.5 text-[10px] font-black text-ink cursor-pointer hover:bg-banana"
+                            >
+                              🧊 3D
+                            </button>
+                          )}
                         </div>
                         <p className="text-base font-black text-ink truncate">{w.meaning}</p>
                         <span className="text-xs font-bold text-ink-soft block mt-0.5">
@@ -165,6 +183,16 @@ export default function SearchPage() {
                       </div>
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
+                      {w.model3d && (
+                        <button
+                          type="button"
+                          onClick={() => setInspectWord(w)}
+                          className="rounded-xl bg-cream p-2 text-xs font-black text-ink hover:bg-banana transition-all cursor-pointer border border-[#efe3cc]"
+                          title="Xoay mô hình 3D"
+                        >
+                          🧊 3D
+                        </button>
+                      )}
                       <SpeakerButton word={w} size="sm" />
                       <Link
                         to={`/unit/${w.unitId}`}
@@ -297,6 +325,13 @@ export default function SearchPage() {
             </section>
           )}
         </div>
+      )}
+      {/* Cửa sổ xem mô hình 3D từ vựng khi tìm kiếm */}
+      {inspectWord && (
+        <WordInspectorModal
+          word={inspectWord}
+          onClose={() => setInspectWord(null)}
+        />
       )}
     </div>
   );

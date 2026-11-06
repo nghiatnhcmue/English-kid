@@ -7,6 +7,7 @@ import { statusOf } from '../utils/mastery.js';
 import { playSfx } from '../utils/sfx.js';
 import { PageHeader, Stars, Button3D } from '../components/ui.jsx';
 import VocabCard from '../components/VocabCard.jsx';
+import WordInspectorModal from '../components/WordInspectorModal.jsx';
 import { t } from '../i18n/vi.js';
 
 export const MODES = ['flashcard', 'listening', 'matching', 'spelling'];
@@ -22,6 +23,7 @@ export default function UnitPage() {
   const { unitId } = useParams();
   const unit = getUnit(unitId);
   const [query, setQuery] = useState('');
+  const [inspectWord, setInspectWord] = useState(null);
 
   const unitProgress = store().getProgress().units[unit?.unitId];
   const modeStars = unitProgress?.modes ?? {};
@@ -239,12 +241,24 @@ export default function UnitPage() {
           <ul className="flex flex-col gap-3">
             {filteredWords.map((w) => (
               <li key={w.id}>
-                <VocabCard word={w} status={statusOf(mastery[w.id])} />
+                <VocabCard
+                  word={w}
+                  status={statusOf(mastery[w.id])}
+                  onInspect={setInspectWord}
+                />
               </li>
             ))}
           </ul>
         )}
       </section>
+
+      {/* Hộp xem chi tiết mô hình 3D tương tác của từ vựng */}
+      {inspectWord && (
+        <WordInspectorModal
+          word={inspectWord}
+          onClose={() => setInspectWord(null)}
+        />
+      )}
     </div>
   );
 }

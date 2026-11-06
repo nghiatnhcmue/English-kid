@@ -1,43 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import { Button3D, ProgressBar, SpeakerButton, SlowSpeakerButton, WordImage, KeyboardBadge } from './ui.jsx';
+import ModelView from './ModelView.jsx';
 import { playSfx } from '../utils/sfx.js';
 import { t } from '../i18n/vi.js';
-
-/** Mô hình 3D (chỉ tải thư viện model-viewer khi từ có file .glb). */
-function ModelView({ word }) {
-  const [ready, setReady] = useState(false);
-  const [failed, setFailed] = useState(false);
-
-  useEffect(() => {
-    let alive = true;
-    import('@google/model-viewer')
-      .then(() => alive && setReady(true))
-      .catch(() => alive && setFailed(true));
-    return () => {
-      alive = false;
-    };
-  }, []);
-
-  if (failed || !ready) return <WordImage word={word} size="xl" />;
-  return (
-    <div
-      onClick={(e) => e.stopPropagation()}
-      onPointerDown={(e) => e.stopPropagation()}
-      className="h-56 w-full"
-    >
-      <model-viewer
-        src={word.model3d}
-        alt={word.word}
-        camera-controls
-        auto-rotate
-        touch-action="pan-y"
-        shadow-intensity="1"
-        style={{ width: '100%', height: '100%' }}
-        onError={() => setFailed(true)}
-      />
-    </div>
-  );
-}
 
 export default function Flashcard3D({ words, onFinish }) {
   const [index, setIndex] = useState(0);
@@ -110,7 +75,13 @@ export default function Flashcard3D({ words, onFinish }) {
 
             <div className="flex flex-col items-center gap-2">
               {word.model3d && (!word.image || show3dMode) ? (
-                <ModelView word={word} />
+                <div
+                  onClick={(e) => e.stopPropagation()}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  className="h-56 w-full flex items-center justify-center"
+                >
+                  <ModelView word={word} interactive autoRotate className="h-full w-full" />
+                </div>
               ) : (
                 <WordImage word={word} size="xl" className="animate-float" />
               )}
