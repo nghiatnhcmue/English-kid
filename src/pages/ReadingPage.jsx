@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { listUnits, getUnit } from '../utils/data.js';
 import { PageHeader, Button3D } from '../components/ui.jsx';
 import ReadingStation from '../components/stations/ReadingStation.jsx';
+import StationRunner from '../components/StationRunner.jsx';
 import { playSfx } from '../utils/sfx.js';
 import { BookOpen, Sparkles } from 'lucide-react';
 
@@ -83,7 +84,7 @@ export default function ReadingPage() {
             </Button3D>
           </div>
 
-          <ReadingStation unit={currentUnit} onFinish={() => {}} />
+          <StationRunner Station={ReadingStation} unit={currentUnit} mode="reading" />
         </div>
       )}
     </div>

@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { SettingsProvider, useSettings } from './settings.jsx';
-import { store, totalStarsOf } from './utils/storage.js';
+import { KEYS, onStoreWrite, store, totalStarsOf } from './utils/storage.js';
+import { getStudentToken, pendingCount, startSync } from './utils/api.js';
 import { streakOf } from './utils/dates.js';
 import { playSfx } from './utils/sfx.js';
 import { t } from './i18n/vi.js';
@@ -67,6 +68,7 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
                 <NavLink
                   to={item.to}
                   end={item.end}
+                  title={item.label}
                   onClick={() => playSfx('click')}
                   className={({ isActive }) =>
                     `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3.5 lg:py-2 text-xs lg:text-sm font-extrabold whitespace-nowrap transition-all select-none ${
@@ -79,7 +81,8 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
                   <span className="text-base lg:text-lg leading-none" aria-hidden>
                     {item.icon}
                   </span>
-                  <span className="whitespace-nowrap">{item.label}</span>
+                  {/* Màn < 1280px: chỉ icon (chữ vẫn đọc được bằng trình đọc màn hình) để thanh trên không tràn ngang */}
+                  <span className="sr-only xl:not-sr-only xl:whitespace-nowrap">{item.label}</span>
                 </NavLink>
               </li>
             ))}
@@ -91,6 +94,7 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
             <li>
               <NavLink
                 to="/teacher"
+                title="Góc Giáo Viên"
                 onClick={() => playSfx('click')}
                 className={({ isActive }) =>
                   `flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 lg:px-3 lg:py-2 text-xs lg:text-sm font-black whitespace-nowrap transition-all select-none ${
@@ -101,7 +105,7 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
                 }
               >
                 <span className="text-base leading-none">👨‍🏫</span>
-                <span className="whitespace-nowrap">Góc Giáo Viên</span>
+                <span className="sr-only xl:not-sr-only xl:whitespace-nowrap">Góc Giáo Viên</span>
               </NavLink>
             </li>
           </ul>
@@ -122,7 +126,7 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
             <span className="text-sm lg:text-base leading-none" aria-hidden>
               {currentStudent ? (currentStudent.avatar || '🦁') : '👤'}
             </span>
-            <span className="max-w-36 truncate">
+            <span className="sr-only 2xl:not-sr-only 2xl:max-w-36 2xl:truncate">
               {currentStudent ? `${currentStudent.name} (${currentStudent.class})` : 'Đăng nhập học sinh'}
             </span>
           </button>
@@ -237,6 +241,47 @@ function AppContent() {
   const location = useLocation();
   const [currentStudent, setCurrentStudent] = useState(() => store().getCurrentStudent());
   const [showAuthModal, setShowAuthModal] = useState(false);
+  const [, setDataTick] = useState(0);
+  const [toast, setToast] = useState(null); // { tone, text }
+  const [pending, setPending] = useState(() => pendingCount());
+
+  useEffect(() => {
+    startSync();
+    const bump = () => setDataTick((n) => n + 1);
+    const onWriteFailed = () =>
+      setToast({ tone: 'error', text: '⚠️ Bộ nhớ trình duyệt đã đầy nên CHƯA lưu được. Hãy dùng ảnh/âm thanh nhỏ hơn hoặc xóa bớt.' });
+    const onSync = (e) => {
+      const d = e.detail || {};
+      if (d.state === 'error') setToast({ tone: 'error', text: `⚠️ ${d.error}` });
+      if (d.state === 'saved') setToast({ tone: 'ok', text: '☁️ Đã lưu lên máy chủ – học sinh ở máy khác sẽ nhận được.' });
+    };
+    const onOutbox = (e) => setPending(e.detail?.pending ?? pendingCount());
+    window.addEventListener('curriculum-updated', bump);
+    window.addEventListener('assignment-updated', bump);
+    window.addEventListener('storage-write-failed', onWriteFailed);
+    window.addEventListener('sync-status', onSync);
+    window.addEventListener('outbox-changed', onOutbox);
+    // Giáo viên sửa / xóa đúng học sinh đang đăng nhập trên máy này → cập nhật tên trên thanh trên cùng
+    const off = onStoreWrite((key) => {
+      if (key === KEYS.STUDENTS || key === KEYS.CURRENT_STUDENT_ID) setCurrentStudent(store().getCurrentStudent());
+      if (key.endsWith('_outbox')) setPending(pendingCount());
+    });
+    return () => {
+      window.removeEventListener('curriculum-updated', bump);
+      window.removeEventListener('assignment-updated', bump);
+      window.removeEventListener('storage-write-failed', onWriteFailed);
+      window.removeEventListener('sync-status', onSync);
+      window.removeEventListener('outbox-changed', onOutbox);
+      off();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!toast) return undefined;
+    const id = setTimeout(() => setToast(null), toast.tone === 'error' ? 8000 : 3000);
+    return () => clearTimeout(id);
+  }, [toast]);
+
   const progress = store().getProgress();
   const streak = streakOf(progress.studyDays);
   const totalStars = totalStarsOf(progress);
@@ -264,6 +309,15 @@ function AppContent() {
         totalStars={totalStars}
       />
       <main className="mx-auto w-full max-w-4xl flex-1 px-4 pt-4 pb-28 md:pb-12 md:pt-6">
+        {currentStudent && pending > 0 && !getStudentToken() && !isTeacherPage && (
+          <button
+            type="button"
+            onClick={() => setShowAuthModal(true)}
+            className="mb-4 w-full rounded-2xl bg-banana-soft px-4 py-3 text-left text-sm font-black text-ink border-2 border-banana cursor-pointer"
+          >
+            💾 Có {pending} kết quả chưa gửi cho thầy cô. Bấm vào đây và đăng nhập bằng mã PIN để gửi nhé!
+          </button>
+        )}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/search" element={<Fresh component={SearchPage} />} />
@@ -284,6 +338,17 @@ function AppContent() {
         </Routes>
       </main>
       <BottomNav />
+
+      {toast && (
+        <div
+          role="status"
+          className={`fixed inset-x-4 bottom-24 z-50 mx-auto max-w-md rounded-2xl px-4 py-3 text-sm font-black shadow-lg md:bottom-6 ${
+            toast.tone === 'error' ? 'bg-rose-600 text-white' : 'bg-mint-dark text-white'
+          }`}
+        >
+          {toast.text}
+        </div>
+      )}
 
       {/* Modal đăng nhập đơn giản cho học sinh yếu máy tính */}
       <StudentAuthModal

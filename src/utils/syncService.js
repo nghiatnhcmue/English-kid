@@ -1,128 +1,80 @@
 import { store } from './storage.js';
 import { getWord } from './data.js';
+import { apiFetch, enqueue, getStudentToken } from './api.js';
+
+const wrongWordsOf = (answers) => [
+  ...new Set(
+    (answers || [])
+      .filter((a) => a && a.correct === false)
+      .map((a) => getWord(a.wordId)?.word || a.wordId)
+      .filter(Boolean),
+  ),
+];
 
 /**
- * Gửi kết quả bài kiểm tra lên máy chủ Cloudflare D1
+ * Gửi kết quả bài test lên máy chủ. Luôn đi qua hàng đợi: mất mạng thì tự gửi lại khi có mạng.
+ * Tên/lớp do máy chủ lấy từ tài khoản đã đăng nhập (không tin dữ liệu gửi lên).
  */
 export async function submitTestScore(entry) {
-  const wrongWords = [
-    ...new Set(
-      entry.answers
-        ?.filter((a) => !a.correct)
-        .map((a) => getWord(a.wordId)?.word || a.wordId)
-        .filter(Boolean) || []
-    ),
-  ];
-
-  const payload = {
-    id: entry.id,
-    studentName: entry.studentName || 'Học sinh',
-    studentClass: entry.studentClass || '6',
+  enqueue('score', {
+    kind: 'test',
     score: entry.score,
     stars: entry.stars,
     correct: entry.correct,
     total: entry.total,
     unitIds: entry.unitIds,
-    wrongWords,
+    wrongWords: wrongWordsOf(entry.answers),
     answers: entry.answers,
-    createdAt: entry.isoDate,
-  };
-
-  try {
-    const res = await fetch('/api/scores', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-    });
-
-    if (res.ok) {
-      const data = await res.json();
-      return { success: !!data.success, remote: true, hasD1: data.hasD1 !== false };
-    }
-    return { success: false, remote: false, error: `HTTP ${res.status}` };
-  } catch (err) {
-    // Không có mạng hoặc chạy ở môi trường offline cục bộ
-    return { success: false, remote: false, offline: true, error: err.message };
-  }
+  }, entry.id ? `score:${entry.id}` : null);
+  return { success: true, queued: true, needsLogin: !getStudentToken() };
 }
 
-/**
- * Lấy danh sách điểm thi cho giáo viên
- */
-export async function fetchTeacherScores(classFilter = 'all') {
-  try {
-    const url = classFilter && classFilter !== 'all' ? `/api/scores?class=${encodeURIComponent(classFilter)}` : '/api/scores';
-    const res = await fetch(url);
+/** Nộp bài giao (bài giáo viên giao qua mã/link). */
+export function submitAssignmentResult({ id, assignmentId, score, detail }) {
+  enqueue('submission', { assignmentId, score, detail }, id ? `sub:${id}` : null);
+}
 
-    if (res.ok) {
-      const json = await res.json();
-      if (json.hasD1 === false) {
-        // D1 chưa được liên kết
-        return {
-          success: false,
-          hasD1: false,
-          error: json.error,
-          data: getLocalFallbackScores(classFilter),
-        };
-      }
-      return {
-        success: true,
-        hasD1: true,
-        data: json.data || [],
-      };
-    }
-  } catch (err) {
-    /* Mạng offline hoặc serverless chưa chạy */
-  }
-
-  // Dữ liệu dự phòng từ localStorage nếu chưa liên kết Cloudflare D1
+/** Lấy điểm cho giáo viên. kind: 'test' (mặc định) | 'all' (gồm cả tiến độ từng trạm). */
+export async function fetchTeacherScores(classFilter = 'all', kind = 'test') {
+  const qs = new URLSearchParams();
+  if (classFilter && classFilter !== 'all') qs.set('class', classFilter);
+  if (kind === 'all') qs.set('kind', 'all');
+  const r = await apiFetch(`/api/scores${qs.toString() ? `?${qs}` : ''}`, { role: 'teacher' });
+  if (r.ok) return { success: true, hasD1: true, data: r.data?.data || [] };
+  if (r.status === 401) return { success: false, hasD1: true, needsLogin: true, error: r.data?.error, data: [] };
+  // Chưa liên kết D1 (503) hoặc mất mạng: xem điểm đã lưu trên máy này
   return {
     success: false,
     hasD1: false,
     isLocalFallback: true,
-    data: getLocalFallbackScores(classFilter),
+    offline: !!r.offline,
+    error: r.data?.error,
+    data: kind === 'all' ? [] : getLocalFallbackScores(classFilter),
   };
 }
 
-/**
- * Xóa một bản ghi điểm
- */
+/** Lấy bài nộp của bài giao (giáo viên). */
+export async function fetchSubmissions(assignmentId) {
+  const r = await apiFetch(`/api/submissions${assignmentId ? `?assignmentId=${encodeURIComponent(assignmentId)}` : ''}`, { role: 'teacher' });
+  return r.ok ? r.data?.data || [] : null;
+}
+
 export async function deleteScore(id) {
-  try {
-    const res = await fetch(`/api/scores?id=${encodeURIComponent(id)}`, { method: 'DELETE' });
-    if (res.ok) {
-      const json = await res.json();
-      return json.success;
-    }
-  } catch {
-    /* bỏ qua */
-  }
-  return false;
+  const r = await apiFetch(`/api/scores?id=${encodeURIComponent(id)}`, { method: 'DELETE', role: 'teacher' });
+  return !!(r.ok && r.data?.success);
 }
 
-/**
- * Xóa toàn bộ điểm (khi giáo viên muốn đặt lại danh sách lớp)
- */
-export async function clearAllScores() {
-  try {
-    const res = await fetch('/api/scores?all=true', { method: 'DELETE' });
-    if (res.ok) {
-      const json = await res.json();
-      return json.success;
-    }
-  } catch {
-    /* bỏ qua */
-  }
-  return false;
+/** Xóa điểm của MỘT lớp (không còn lệnh xóa toàn bộ). */
+export async function clearClassScores(className) {
+  if (!className || className === 'all') return false;
+  const r = await apiFetch(`/api/scores?class=${encodeURIComponent(className)}&confirm=yes`, { method: 'DELETE', role: 'teacher' });
+  return !!(r.ok && r.data?.success);
 }
 
-/**
- * Lấy danh sách điểm lưu tạm trên máy này nếu chưa có D1
- */
+/** Điểm lưu trên máy này (khi chưa có D1 hoặc mất mạng). */
 function getLocalFallbackScores(classFilter) {
   const localTests = store().getTestHistory();
   const student = store().getStudentInfo();
-
   let list = localTests.map((t) => ({
     id: t.id,
     studentName: t.studentName || student.name || 'Em học sinh',
@@ -132,18 +84,12 @@ function getLocalFallbackScores(classFilter) {
     correct: t.correct,
     total: t.total,
     unitIds: t.unitIds,
-    wrongWords: [
-      ...new Set(
-        t.answers?.filter((a) => !a.correct).map((a) => getWord(a.wordId)?.word || a.wordId).filter(Boolean) || []
-      ),
-    ],
+    wrongWords: wrongWordsOf(t.answers),
     createdAt: t.isoDate,
+    kind: 'test',
   }));
-
   if (classFilter && classFilter !== 'all') {
-    list = list.filter((item) => item.studentClass.toLowerCase() === classFilter.toLowerCase());
+    list = list.filter((item) => String(item.studentClass).toLowerCase() === classFilter.toLowerCase());
   }
-
   return list;
 }
-

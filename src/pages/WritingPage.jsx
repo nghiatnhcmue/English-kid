@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { listUnits, getUnit } from '../utils/data.js';
 import { PageHeader, Button3D } from '../components/ui.jsx';
 import WritingStation from '../components/stations/WritingStation.jsx';
+import StationRunner from '../components/StationRunner.jsx';
 import { playSfx } from '../utils/sfx.js';
 import { PenTool } from 'lucide-react';
 
@@ -83,7 +84,7 @@ export default function WritingPage() {
             </Button3D>
           </div>
 
-          <WritingStation unit={currentUnit} onFinish={() => {}} />
+          <StationRunner Station={WritingStation} unit={currentUnit} mode="writing" />
         </div>
       )}
     </div>

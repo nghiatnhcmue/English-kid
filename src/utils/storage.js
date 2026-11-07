@@ -37,14 +37,29 @@ export const DEFAULT_STUDENTS = [
 
 export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true };
 
-export const DEFAULT_TEACHER_ACCOUNT = {
-  username: 'GV01',
-  password: '123456789',
-  name: 'Giáo viên bộ môn',
-  role: 'teacher',
-};
+// Ghi chú: KHÔNG còn tài khoản giáo viên mặc định trên máy. Đăng nhập giáo viên do máy chủ kiểm tra (src/utils/api.js).
+
+// Lớp đồng bộ đăng ký để biết khi nào nội dung giáo viên thay đổi trên máy.
+const writeListeners = new Set();
+export function onStoreWrite(fn) {
+  writeListeners.add(fn);
+  return () => writeListeners.delete(fn);
+}
+const IS_DEV = (() => {
+  try {
+    return !!import.meta.env?.DEV;
+  } catch {
+    return false;
+  }
+})();
 
 /** Tạo kho lưu trữ; storage có thể thay bằng bản giả khi test. */
+export function randomPin() {
+  const a = new Uint32Array(1);
+  (globalThis.crypto || { getRandomValues: (x) => ((x[0] = Math.floor(Math.random() * 2 ** 32)), x) }).getRandomValues(a);
+  return String(1000 + (a[0] % 9000));
+}
+
 export function createStore(storage = globalThis.localStorage) {
   const read = (key, fallback) => {
     try {
@@ -59,19 +74,69 @@ export function createStore(storage = globalThis.localStorage) {
   const write = (key, value) => {
     try {
       storage?.setItem(key, JSON.stringify(value));
-      return true;
     } catch {
+      // Hết dung lượng bộ nhớ trình duyệt (thường do ảnh/âm thanh lớn): báo cho giao diện thay vì im lặng
+      if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('storage-write-failed', { detail: { key } }));
       return false;
     }
+    writeListeners.forEach((fn) => {
+      try {
+        fn(key);
+      } catch {
+        /* bỏ qua */
+      }
+    });
+    return true;
+  };
+
+  // Dữ liệu học của TỪNG em (máy dùng chung trong lớp): điểm test, từ đã thuộc, bài nộp
+  // lưu theo khóa riêng `<khóa>__<mã học sinh>`. Chưa đăng nhập thì dùng khóa chung (khách).
+  const PER_STUDENT = [KEYS.TESTS, KEYS.MASTERY, KEYS.ASSIGNMENT_SUBMISSIONS];
+  const currentId = () => read(KEYS.CURRENT_STUDENT_ID, null);
+  const nsKey = (base) => {
+    const id = currentId();
+    return id ? `${base}__${id}` : base;
+  };
+  /** Lần đầu tách dữ liệu: dữ liệu chung cũ trên máy được giao cho em đăng nhập đầu tiên (chỉ 1 lần). */
+  const migrateOnce = (id) => {
+    const flag = `${PREFIX}per_student_migrated`;
+    if (!id || read(flag, false)) return;
+    for (const base of PER_STUDENT) {
+      const own = `${base}__${id}`;
+      if (storage?.getItem(own) == null && storage?.getItem(base) != null) write(own, read(base, null));
+    }
+    const map = read(KEYS.STUDENT_PROGRESS, {}) || {};
+    const legacy = read(KEYS.PROGRESS, null);
+    if (!map[id] && legacy?.units) {
+      map[id] = { units: legacy.units, studyDays: Array.isArray(legacy.studyDays) ? legacy.studyDays : [] };
+      write(KEYS.STUDENT_PROGRESS, map);
+    }
+    write(flag, true);
+  };
+
+  const collectAll = (base) => {
+    const out = [...(read(base, []) || [])];
+    try {
+      for (let i = 0; i < (storage?.length || 0); i++) {
+        const k = storage.key(i);
+        if (k && k.startsWith(`${base}__`)) out.push(...(read(k, []) || []));
+      }
+    } catch {
+      /* bỏ qua */
+    }
+    return out;
   };
 
   const api = {
     // ---- Quản lý Tài khoản Học sinh ----
     getStudents() {
       const list = read(KEYS.STUDENTS, null);
-      if (Array.isArray(list) && list.length > 0) return list;
-      write(KEYS.STUDENTS, DEFAULT_STUDENTS);
-      return DEFAULT_STUDENTS;
+      if (Array.isArray(list)) return list;
+      // Tài khoản mẫu chỉ dùng khi chạy thử (npm run dev), không tự tạo trên bản thật
+      if (!IS_DEV) return [];
+      const demo = DEFAULT_STUDENTS.map((st) => ({ ...st, demo: true }));
+      write(KEYS.STUDENTS, demo);
+      return demo;
     },
 
     getCurrentStudent() {
@@ -90,6 +155,7 @@ export function createStore(storage = globalThis.localStorage) {
       const all = api.getStudents();
       const found = all.find((s) => s.id === studentId);
       if (found) {
+        migrateOnce(found.id);
         write(KEYS.CURRENT_STUDENT_ID, found.id);
         write(KEYS.STUDENT, { name: found.name, class: found.class, avatar: found.avatar });
         return found;
@@ -103,14 +169,17 @@ export function createStore(storage = globalThis.localStorage) {
       const found = all.find(
         (s) =>
           s.id === identifier ||
-          (s.username && s.username.toLowerCase() === cleanId) ||
-          s.name.toLowerCase() === cleanId
+          (s.username && s.username.toLowerCase() === cleanId)
       );
       if (!found) {
         return { success: false, error: 'Không tìm thấy tài khoản học sinh này.' };
       }
-      if (found.password && String(found.password).trim() !== String(password || '').trim()) {
-        return { success: false, error: 'Mật khẩu chưa chính xác. Hãy hỏi lại thầy cô nhé!' };
+      // Đăng nhập trên máy (chỉ dùng khi không kết nối được máy chủ): bắt buộc có mã đã lưu trên máy này
+      if (!found.password) {
+        return { success: false, error: 'Máy này chưa lưu mã PIN của em. Em cần có mạng để đăng nhập.' };
+      }
+      if (String(found.password).trim() !== String(password || '').trim()) {
+        return { success: false, error: 'Mã PIN chưa đúng. Hãy hỏi lại thầy cô nhé!' };
       }
       api.setCurrentStudent(found.id);
       return { success: true, student: found };
@@ -129,7 +198,7 @@ export function createStore(storage = globalThis.localStorage) {
         username: String(student.username || id).trim().toLowerCase(),
         name: String(student.name || 'Học sinh').trim(),
         class: String(student.class || '6A1').trim(),
-        password: String(student.password || '123').trim(),
+        password: String(student.password || '').trim() || randomPin(),
         avatar: String(student.avatar || '🦁'),
         createdAt: student.createdAt || new Date().toISOString(),
       };
@@ -152,6 +221,19 @@ export function createStore(storage = globalThis.localStorage) {
       const all = api.getStudents();
       const next = all.filter((s) => s.id !== studentId);
       write(KEYS.STUDENTS, next);
+      // Dọn dữ liệu học của em đó trên máy này
+      for (const base of PER_STUDENT) {
+        try {
+          storage?.removeItem(`${base}__${studentId}`);
+        } catch {
+          /* bỏ qua */
+        }
+      }
+      const map = read(KEYS.STUDENT_PROGRESS, {}) || {};
+      if (map[studentId]) {
+        delete map[studentId];
+        write(KEYS.STUDENT_PROGRESS, map);
+      }
       if (read(KEYS.CURRENT_STUDENT_ID, null) === studentId) {
         api.logoutStudent();
       }
@@ -163,6 +245,7 @@ export function createStore(storage = globalThis.localStorage) {
       if (!lines.length) return [];
       const avatars = ['🦁', '🦊', '🐱', '🐼', '🚀', '🦄', '⚽', '🎨', '📚', '🎒', '⭐', '🐬'];
       const added = [];
+      const taken = new Set(api.getStudents().map((x) => String(x.username || '').toLowerCase()));
       lines.forEach((name, idx) => {
         const cleanName = name.replace(/^\d+[\.\-\s]+/, '').trim();
         if (!cleanName) return;
@@ -171,13 +254,18 @@ export function createStore(storage = globalThis.localStorage) {
           .normalize('NFD')
           .replace(/[\u0300-\u036f]/g, '')
           .replace(/[^a-z0-9]/g, '');
-        const username = `${slug || 'hs'}${String(className).toLowerCase().replace(/[^a-z0-9]/g, '')}${idx + 1}`;
+        // Tên đăng nhập không được trùng với bạn đã có (kể cả khi nhập nhiều đợt cho cùng lớp)
+        const base = `${slug || 'hs'}${String(className).toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+        let username = base;
+        for (let n = 2; taken.has(username); n++) username = `${base}${n}`;
+        taken.add(username);
         const newStu = {
           id: `stu_${Date.now()}_${idx}_${Math.random().toString(36).slice(2, 5)}`,
           username,
           name: cleanName,
           class: className,
-          password: defaultPassword,
+          // Mỗi em một mã PIN 4 số ngẫu nhiên (trừ khi thầy cô nhập một mã chung)
+          password: /^\d{4,8}$/.test(String(defaultPassword || '')) ? String(defaultPassword) : randomPin(),
           avatar: avatars[idx % avatars.length],
           createdAt: new Date().toISOString(),
         };
@@ -207,98 +295,47 @@ export function createStore(storage = globalThis.localStorage) {
       return clean;
     },
 
-    // ---- Quản lý Đăng Nhập & Tài Khoản Giáo Viên ----
-    getTeacherAccount() {
-      const saved = read(KEYS.TEACHER_ACCOUNT, null);
-      if (saved && typeof saved === 'object' && saved.username) {
-        return {
-          ...DEFAULT_TEACHER_ACCOUNT,
-          ...saved,
-        };
-      }
-      return DEFAULT_TEACHER_ACCOUNT;
-    },
-    loginTeacher(username, password) {
-      const cleanUser = String(username || '').trim().toUpperCase();
-      const cleanPass = String(password || '').trim();
-      const account = api.getTeacherAccount();
-
-      if (!cleanUser || !cleanPass) {
-        return { success: false, error: 'Vui lòng nhập đầy đủ mã giáo viên và mật khẩu!' };
-      }
-
-      if (cleanUser !== String(account.username || 'GV01').trim().toUpperCase()) {
-        return { success: false, error: 'Mã giáo viên không chính xác. Tài khoản mặc định là GV01.' };
-      }
-
-      if (cleanPass !== String(account.password || '123456789').trim()) {
-        return { success: false, error: 'Mật khẩu chưa chính xác. Mật khẩu mặc định là 123456789.' };
-      }
-
-      const session = {
-        username: account.username || 'GV01',
-        name: account.name || 'Giáo viên bộ môn',
-        role: 'teacher',
-        loginAt: new Date().toISOString(),
-      };
-      write(KEYS.TEACHER_SESSION, session);
-      if (typeof window !== 'undefined') {
-        window.dispatchEvent(new CustomEvent('teacher-auth-changed', { detail: { session } }));
-      }
-      return { success: true, teacher: session };
-    },
+    // ---- Phiên giáo viên (máy chủ cấp token; ở đây chỉ nhớ thông tin hiển thị) ----
     getTeacherSession() {
       const session = read(KEYS.TEACHER_SESSION, null);
-      if (session && typeof session === 'object' && session.username) {
-        return session;
-      }
-      return null;
+      const token = read(`${PREFIX}teacher_token`, null);
+      return session && typeof session === 'object' && session.username && token ? session : null;
     },
-    logoutTeacher() {
+    setTeacherSession(session) {
+      write(KEYS.TEACHER_SESSION, session);
+    },
+    clearTeacherSession() {
       write(KEYS.TEACHER_SESSION, null);
-      if (typeof window !== 'undefined') {
-        window.dispatchEvent(new CustomEvent('teacher-auth-changed', { detail: { session: null } }));
-      }
-      return true;
-    },
-    saveTeacherPassword(newPassword) {
-      const cleanPass = String(newPassword || '').trim();
-      if (cleanPass.length < 6) {
-        return { success: false, error: 'Mật khẩu mới cần có ít nhất 6 ký tự.' };
-      }
-      const account = api.getTeacherAccount();
-      const updated = {
-        ...account,
-        password: cleanPass,
-        updatedAt: new Date().toISOString(),
-      };
-      write(KEYS.TEACHER_ACCOUNT, updated);
-      return { success: true, account: updated };
-    },
-    resetTeacherAccount() {
-      write(KEYS.TEACHER_ACCOUNT, DEFAULT_TEACHER_ACCOUNT);
-      return DEFAULT_TEACHER_ACCOUNT;
     },
 
-    getTeacherPin() {
-      const pin = read(KEYS.TEACHER_PIN, null);
-      if (pin) return String(pin);
-      const acc = api.getTeacherAccount();
-      return String(acc.password || '123456789');
+    // ---- Đọc/ghi thô cho lớp đồng bộ ----
+    readRaw(key) {
+      return read(key, null);
     },
-    saveTeacherPin(pin) {
-      const clean = String(pin || '123456789').trim();
-      write(KEYS.TEACHER_PIN, clean);
-      api.saveTeacherPassword(clean);
-      return clean;
+    writeRaw(key, value) {
+      return write(key, value);
+    },
+
+    /** Gộp danh sách học sinh từ máy chủ (không có PIN) vào danh sách trên máy. */
+    mergeRoster(list = []) {
+      if (!Array.isArray(list) || !list.length) return api.getStudents();
+      const cur = read(KEYS.STUDENTS, []) || [];
+      const byId = new Map(cur.filter((x) => !x.demo).map((x) => [x.id, x]));
+      for (const st of list) {
+        if (!st?.id) continue;
+        byId.set(st.id, { ...(byId.get(st.id) || {}), id: st.id, username: st.username, name: st.name, class: st.class, avatar: st.avatar });
+      }
+      const next = [...byId.values()];
+      write(KEYS.STUDENTS, next);
+      return next;
     },
 
     getTestHistory() {
-      const list = read(KEYS.TESTS, []);
+      const list = read(nsKey(KEYS.TESTS), []);
       return Array.isArray(list) ? list : [];
     },
     getMastery() {
-      const m = read(KEYS.MASTERY, {});
+      const m = read(nsKey(KEYS.MASTERY), {});
       return m && typeof m === 'object' && !Array.isArray(m) ? m : {};
     },
     /** answers: [{ questionId, wordId, type, correct }] */
@@ -322,8 +359,12 @@ export function createStore(storage = globalThis.localStorage) {
         studentClass: studentClass || student.class || '6',
       };
 
-      write(KEYS.TESTS, [entry, ...api.getTestHistory()]);
-      write(KEYS.MASTERY, updateMastery(api.getMastery(), answers, entry.isoDate));
+      // Giới hạn lịch sử để không đầy bộ nhớ trình duyệt: giữ 200 bài, chỉ 30 bài mới nhất còn chi tiết từng câu
+      const history = [entry, ...api.getTestHistory()]
+        .slice(0, 200)
+        .map((t, i) => (i < 30 || !t.answers ? t : { ...t, answers: undefined }));
+      write(nsKey(KEYS.TESTS), history);
+      write(nsKey(KEYS.MASTERY), updateMastery(api.getMastery(), answers, entry.isoDate));
       api.markStudyDay(now);
       return entry;
     },
@@ -336,6 +377,7 @@ export function createStore(storage = globalThis.localStorage) {
         if (stuP && typeof stuP === 'object') {
           return { units: stuP.units ?? {}, studyDays: Array.isArray(stuP.studyDays) ? stuP.studyDays : [] };
         }
+        return { units: {}, studyDays: [] }; // em mới: không lấy tiến độ của bạn khác trên cùng máy
       }
       const p = read(KEYS.PROGRESS, {});
       return { units: p.units ?? {}, studyDays: Array.isArray(p.studyDays) ? p.studyDays : [] };
@@ -347,10 +389,10 @@ export function createStore(storage = globalThis.localStorage) {
       const unit = p.units[numUnit] ?? { modes: {} };
       unit.modes = { ...unit.modes, [mode]: Math.max(unit.modes?.[mode] ?? 0, stars) };
       p.units = { ...p.units, [numUnit]: unit };
-      write(KEYS.PROGRESS, p);
 
-      // Lưu song song vào tiến độ học sinh nếu đang đăng nhập
+      // Đang đăng nhập: chỉ ghi vào tiến độ của em đó (không ghi vào tiến độ chung của máy)
       const cur = api.getCurrentStudent();
+      if (!cur) write(KEYS.PROGRESS, p);
       if (cur) {
         const map = read(KEYS.STUDENT_PROGRESS, {});
         const stuP = map[cur.id] || { units: {}, studyDays: [] };
@@ -368,8 +410,19 @@ export function createStore(storage = globalThis.localStorage) {
       api.markStudyDay(now);
     },
     markStudyDay(now = new Date()) {
-      const p = api.getProgress();
       const day = localDay(now);
+      const cur = api.getCurrentStudent();
+      if (cur) {
+        const map = read(KEYS.STUDENT_PROGRESS, {}) || {};
+        const stuP = map[cur.id] || { units: {}, studyDays: [] };
+        if (!stuP.studyDays.includes(day)) {
+          stuP.studyDays = [...stuP.studyDays, day].slice(-400);
+          map[cur.id] = stuP;
+          write(KEYS.STUDENT_PROGRESS, map);
+        }
+        return;
+      }
+      const p = api.getProgress();
       if (!p.studyDays.includes(day)) {
         p.studyDays = [...p.studyDays, day].slice(-400);
         write(KEYS.PROGRESS, p);
@@ -397,29 +450,9 @@ export function createStore(storage = globalThis.localStorage) {
       // 1. Cập nhật tiến độ
       api.saveModeResult(numUnit, stationKey, stars, now);
 
-      // 2. Đồng bộ kết quả lên Cloudflare D1
-      if (student) {
-        try {
-          if (typeof window !== 'undefined' && window.fetch) {
-            fetch('/api/scores', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                id: `stn_${now.getTime()}_${Math.random().toString(36).slice(2, 6)}`,
-                studentName: student.name,
-                studentClass: student.class,
-                score: data.score != null ? Number(data.score) : stars * 3.33,
-                stars,
-                correct: data.correct != null ? (data.correct ? 1 : 0) : 1,
-                total: 1,
-                unitIds: [numUnit],
-                wrongWords: [],
-                answers: [{ station: stationKey, unitId: numUnit, data }],
-                createdAt: now.toISOString(),
-              }),
-            }).catch(() => {});
-          }
-        } catch {}
+      // 2. Báo cho lớp đồng bộ (api.js) gửi lên máy chủ – có hàng đợi khi mất mạng
+      if (student && typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('station-progress', { detail: { unitId: numUnit, stationKey, stars, data } }));
       }
     },
 
@@ -921,7 +954,8 @@ export function createStore(storage = globalThis.localStorage) {
 
     // ---- Lịch sử nộp bài tập của học sinh (Assignment Submissions) ----
     getAssignmentSubmissions(assignmentId) {
-      const all = read(KEYS.ASSIGNMENT_SUBMISSIONS, []);
+      // Máy giáo viên (không có học sinh đăng nhập) xem được bài nộp thử của mọi em trên máy này
+      const all = currentId() ? read(nsKey(KEYS.ASSIGNMENT_SUBMISSIONS), []) : collectAll(KEYS.ASSIGNMENT_SUBMISSIONS);
       if (!Array.isArray(all)) return [];
       if (!assignmentId) return all;
       return all.filter(
@@ -945,18 +979,33 @@ export function createStore(storage = globalThis.localStorage) {
         correct: submission.correct ?? 10,
         detail: submission.detail || null,
       };
-      write(KEYS.ASSIGNMENT_SUBMISSIONS, [entry, ...all]);
+      write(nsKey(KEYS.ASSIGNMENT_SUBMISSIONS), [entry, ...read(nsKey(KEYS.ASSIGNMENT_SUBMISSIONS), [])].slice(0, 300));
       return entry;
     },
 
+    /**
+     * "Bắt đầu lại" trong Cài đặt: chỉ xóa dữ liệu HỌC trên máy này (điểm, tiến độ, từ đã thuộc, cài đặt).
+     * KHÔNG xóa phiên/tài khoản giáo viên, danh sách học sinh (kèm mã PIN trên máy thầy cô) và nội dung đã soạn.
+     */
     clearAll() {
-      Object.values(KEYS).forEach((k) => {
+      const id = currentId();
+      const remove = (k) => {
         try {
           storage?.removeItem(k);
         } catch {
           /* bỏ qua */
         }
-      });
+      };
+      if (id) {
+        // Máy dùng chung: chỉ xóa dữ liệu của em đang đăng nhập, giữ nguyên tiến độ các bạn khác
+        PER_STUDENT.forEach((b) => remove(`${b}__${id}`));
+        const map = read(KEYS.STUDENT_PROGRESS, {}) || {};
+        delete map[id];
+        write(KEYS.STUDENT_PROGRESS, map);
+        remove(KEYS.SETTINGS);
+        return;
+      }
+      [KEYS.TESTS, KEYS.MASTERY, KEYS.PROGRESS, KEYS.SETTINGS, KEYS.STUDENT, KEYS.ASSIGNMENT_SUBMISSIONS].forEach(remove);
     },
   };
   return api;

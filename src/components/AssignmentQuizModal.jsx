@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect } from 'react';
 import { store } from '../utils/storage.js';
-import { getUnit } from '../utils/data.js';
-import { submitTestScore } from '../utils/syncService.js';
+import { getUnit, getUnitRaw } from '../utils/data.js';
+import { prepareItem } from '../utils/quiz.js';
+import { submitAssignmentResult, submitTestScore } from '../utils/syncService.js';
 import { playSfx } from '../utils/sfx.js';
 import { Confetti, ProgressBar, SpeakerButton } from './ui.jsx';
 import { 
@@ -21,22 +22,31 @@ import {
 
 export default function AssignmentQuizModal({ assignment, isOpen, onClose, onCompleted }) {
   if (!isOpen || !assignment) return null;
+  // key: đổi bài giao thì làm lại từ câu 1, không giữ đáp án của bài trước
+  return <AssignmentQuizBody key={assignment.id} assignment={assignment} onClose={onClose} onCompleted={onCompleted} />;
+}
+
+function AssignmentQuizBody({ assignment, onClose, onCompleted }) {
 
   const student = store().getStudentInfo();
   const hasUnit = Number(assignment.unitId) > 0;
   const unit = useMemo(() => (hasUnit ? getUnit(assignment.unitId) : null), [assignment.unitId, hasUnit]);
 
-  // Lấy danh sách câu hỏi của bài tập
+  // Lấy danh sách câu hỏi của bài tập. Câu thầy cô soạn thường để đáp án đúng ở ô A,
+  // nên trộn lại vị trí đáp án (cố định theo bài giao) và xáo từ của câu sắp xếp.
   const questions = useMemo(() => {
+    const salt = `as:${assignment.id}`;
     if (Array.isArray(assignment.questions) && assignment.questions.length > 0) {
-      return assignment.questions;
+      return assignment.questions.map((q) => prepareItem(q, salt));
     }
     const unitQuiz = unit?.grammar?.quiz || [];
     if (Array.isArray(assignment.selectedQuestions) && assignment.selectedQuestions.length > 0) {
-      return assignment.selectedQuestions.map((idx) => unitQuiz[idx]).filter(Boolean);
+      // Chọn theo vị trí trong ngân hàng câu hỏi GỐC (không bị trộn) rồi mới trộn đáp án
+      const rawQuiz = (hasUnit ? getUnitRaw(assignment.unitId) : null)?.grammar?.quiz || [];
+      return assignment.selectedQuestions.map((idx) => rawQuiz[idx]).filter(Boolean).map((q) => prepareItem(q, salt));
     }
     return unitQuiz;
-  }, [assignment, unit]);
+  }, [assignment, unit, hasUnit]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState({}); // { [qIndex]: value }
@@ -221,7 +231,8 @@ export default function AssignmentQuizModal({ assignment, isOpen, onClose, onCom
       });
     });
 
-    const rawScore = totalQuestions > 0 ? (correctCount / totalQuestions) * 10 : 10;
+    if (totalQuestions === 0) return; // bài giao chưa có câu hỏi: không chấm điểm
+    const rawScore = (correctCount / totalQuestions) * 10;
     const score = Math.round(rawScore * 10) / 10;
     const stars = score >= 9 ? 3 : score >= 7 ? 2 : 1;
 
@@ -236,24 +247,23 @@ export default function AssignmentQuizModal({ assignment, isOpen, onClose, onCom
       detail: details,
     });
 
-    // Đồng bộ điểm số lên Cloudflare D1
-    try {
-      await submitTestScore({
-        id: submissionEntry.id || `sub_${Date.now()}`,
-        studentName: student.name || 'Học sinh',
-        studentClass: student.class || '6',
-        score,
-        stars,
-        correct: correctCount,
-        total: totalQuestions,
-        unitIds: [Number(assignment.unitId) || 1],
-        wrongWords: [],
-        answers: details,
-        isoDate: new Date().toISOString(),
-      });
-    } catch {
-      // Ignored if network or offline
-    }
+    // Gửi lên máy chủ qua hàng đợi (mất mạng thì tự gửi lại): bài nộp cho bài giao + một dòng trong bảng điểm
+    const subId = submissionEntry.id || `sub_${Date.now()}`;
+    submitAssignmentResult({
+      id: subId,
+      assignmentId: assignment.id,
+      score,
+      detail: { code: assignment.code, title: assignment.title, correct: correctCount, total: totalQuestions, stars, answers: details },
+    });
+    submitTestScore({
+      id: subId,
+      score,
+      stars,
+      correct: correctCount,
+      total: totalQuestions,
+      unitIds: Number(assignment.unitId) > 0 ? [Number(assignment.unitId)] : [], // bài ngoài SGK: không gắn Unit
+      answers: details,
+    });
 
     setResult({
       score,

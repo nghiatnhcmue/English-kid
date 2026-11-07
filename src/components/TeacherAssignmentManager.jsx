@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect } from 'react';
-import { getUnit, listUnits } from '../utils/data.js';
+import { getUnitRaw, listUnits } from '../utils/data.js';
 import { store } from '../utils/storage.js';
+import { fetchSubmissions } from '../utils/syncService.js';
 import { parseBatchQuestions, parseBatchAny } from '../utils/questionParser.js';
 import { 
   BookOpen,
@@ -90,8 +91,32 @@ export default function TeacherAssignmentManager() {
     explain: '',
   });
 
-  const activeUnit = useMemo(() => (unitId > 0 ? getUnit(unitId) : null), [unitId]);
-  const bankUnit = useMemo(() => getUnit(bankUnitId), [bankUnitId]);
+  // Bài nộp từ mọi máy học sinh (máy chủ) + bài nộp thử trên chính máy này
+  const [remoteSubs, setRemoteSubs] = useState([]);
+  useEffect(() => {
+    fetchSubmissions().then((list) => list && setRemoteSubs(list));
+  }, []);
+  const subsFor = (assignmentId) => {
+    const remote = remoteSubs
+      .filter((x) => x.assignmentId === assignmentId)
+      .map((x) => ({
+        id: x.id,
+        assignmentId: x.assignmentId,
+        studentName: x.studentName,
+        studentClass: x.studentClass,
+        submittedAt: x.submittedAt,
+        score: x.score,
+        stars: x.detail?.stars ?? (x.score >= 9 ? 3 : x.score >= 7 ? 2 : 1),
+        total: x.detail?.total ?? 0,
+        correct: x.detail?.correct ?? 0,
+        detail: x.detail?.answers || x.detail || null,
+        remote: true,
+      }));
+    return [...remote, ...store().getAssignmentSubmissions(assignmentId)];
+  };
+
+  const activeUnit = useMemo(() => (unitId > 0 ? getUnitRaw(unitId) : null), [unitId]);
+  const bankUnit = useMemo(() => getUnitRaw(bankUnitId), [bankUnitId]);
 
   // Lấy câu hỏi hiện tại của Unit đang chọn trong form tạo bài
   const [unitQuestions, setUnitQuestions] = useState([]);
@@ -102,14 +127,14 @@ export default function TeacherAssignmentManager() {
       setUnitQuestions([]);
       return;
     }
-    const u = getUnit(uId);
+    const u = getUnitRaw(uId);
     const baseQuiz = u?.grammar?.quiz || [];
     const qList = store().getUnitQuestions(uId, baseQuiz);
     setUnitQuestions(qList);
   };
 
   const refreshBankQuestions = (uId = bankUnitId) => {
-    const u = getUnit(uId);
+    const u = getUnitRaw(uId);
     const baseQuiz = u?.grammar?.quiz || [];
     const qList = store().getUnitQuestions(uId, baseQuiz);
     setBankQuestions(qList);
@@ -368,7 +393,7 @@ export default function TeacherAssignmentManager() {
 
   const copyZaloMessage = (assign) => {
     const url = getAssignmentUrl(assign.code);
-    const msg = `Kính gửi Quý Phụ huynh và các em học sinh lớp ${assign.targetClass === 'all' ? '6' : assign.targetClass},\nThầy/Cô gửi bài tập tuần này trên ứng dụng English-Kid:\n📌 Bài: ${assign.title}\n⏰ Hạn nộp: ${assign.deadline || 'Chủ Nhật tuần này'}\n📝 Lời dặn: ${assign.note || 'Các em cố gắng hoàn thành tốt nhé!'}\n👉 Link làm bài trực tiếp: ${url}\n(Bấm vào link là làm được ngay, không cần đăng nhập phức tạp).\nChúc các em học tập vui vẻ!`;
+    const msg = `Kính gửi Quý Phụ huynh và các em học sinh lớp ${assign.targetClass === 'all' ? '6' : assign.targetClass},\nThầy/Cô gửi bài tập tuần này trên ứng dụng English-Kid:\n📌 Bài: ${assign.title}\n⏰ Hạn nộp: ${assign.deadline || 'Chủ Nhật tuần này'}\n📝 Lời dặn: ${assign.note || 'Các em cố gắng hoàn thành tốt nhé!'}\n👉 Link làm bài trực tiếp: ${url}\n(Bấm vào link, chọn tên mình và nhập mã PIN thầy cô đã phát là làm được ngay).\nChúc các em học tập vui vẻ!`;
     navigator.clipboard?.writeText(msg);
     setCopiedZaloId(assign.code);
     setTimeout(() => setCopiedZaloId(null), 2500);
@@ -409,16 +434,23 @@ export default function TeacherAssignmentManager() {
       alert('Vui lòng nhập ít nhất 2 đáp án lựa chọn (A, B).');
       return;
     }
+    // Bỏ ô trống thì vị trí đáp án đúng phải dời theo (vd bỏ trống B, đáp án đúng là C → thành B)
+    const keptIdx = questionForm.options.map((o, i) => (o.trim() ? i : -1)).filter((i) => i >= 0);
+    const remappedAnswer = keptIdx.indexOf(Number(questionForm.answerIndex));
+    if (remappedAnswer < 0) {
+      alert('Đáp án đúng đang là một ô trống. Hãy chọn lại đáp án đúng.');
+      return;
+    }
 
-    const targetU = getUnit(questionModalUnitId);
+    const targetU = getUnitRaw(questionModalUnitId);
     const baseQuiz = targetU?.grammar?.quiz || [];
 
     const updatedList = store().saveUnitQuestion(
       questionModalUnitId,
       {
         question: questionForm.question.trim(),
-        options: questionForm.options.filter(Boolean),
-        answerIndex: questionForm.answerIndex,
+        options: validOptions.map((o) => o.trim()),
+        answerIndex: remappedAnswer,
         explain: questionForm.explain.trim(),
       },
       editingQuestionIndex,
@@ -453,7 +485,7 @@ export default function TeacherAssignmentManager() {
 
   const handleDeleteQuestion = (targetUnitId, index) => {
     if (!window.confirm('Thầy/Cô có chắc chắn muốn xóa câu hỏi này khỏi bài học?')) return;
-    const targetU = getUnit(targetUnitId);
+    const targetU = getUnitRaw(targetUnitId);
     const baseQuiz = targetU?.grammar?.quiz || [];
     const updated = store().deleteUnitQuestion(targetUnitId, index, baseQuiz);
 
@@ -500,7 +532,7 @@ export default function TeacherAssignmentManager() {
       return;
     }
 
-    const targetU = getUnit(batchModalUnitId);
+    const targetU = getUnitRaw(batchModalUnitId);
     const baseQuiz = targetU?.grammar?.quiz || [];
     const prevCount = store().getUnitQuestions(batchModalUnitId, baseQuiz).length;
 
@@ -604,7 +636,7 @@ export default function TeacherAssignmentManager() {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {assignments.map((assign) => {
-                const submissions = store().getAssignmentSubmissions(assign.id);
+                const submissions = subsFor(assign.id);
                 return (
                   <div
                     key={assign.id}
@@ -1712,7 +1744,7 @@ export default function TeacherAssignmentManager() {
 
             <div className="flex-1 overflow-y-auto">
               {(() => {
-                const subs = store().getAssignmentSubmissions(inspectAssignment.id);
+                const subs = subsFor(inspectAssignment.id);
                 if (subs.length === 0) {
                   return (
                     <div className="py-12 text-center flex flex-col items-center gap-2">

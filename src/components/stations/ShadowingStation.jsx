@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Mic, Volume2, RotateCcw, Check, Sparkles } from 'lucide-react';
 import { Button3D, SpeakerButton, SlowSpeakerButton, Stars } from '../ui.jsx';
 import { createRecorder, isRecordingSupported } from '../../utils/recorder.js';
-import { isSttSupported, recognizeOnce, speak } from '../../utils/speech.js';
+import { isSttSupported, recognizeOnce, speak, playRecording } from '../../utils/speech.js';
 import { similarity, speakingLevel } from '../../utils/scene.js';
 import { playSfx } from '../../utils/sfx.js';
 import { useSettings } from '../../settings.jsx';
@@ -255,8 +255,7 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
                   <button
                     type="button"
                     onClick={() => {
-                      const a = new Audio(audioUrl);
-                      a.play();
+                      playRecording(audioUrl);
                     }}
                     className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-white px-5 text-sm font-black text-ink shadow-sm border border-[#efe3cc] hover:bg-cream active:translate-y-0.5 cursor-pointer"
                   >

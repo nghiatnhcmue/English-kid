@@ -92,7 +92,8 @@
       "exampleVi": "Bạn ấy trượt ván trượt trong công viên.",
       "emoji": "🛹",
       "audio": "/assets/audio/unit8/skateboard.mp3",
-      "audioExample": "/assets/audio/unit8/skateboard-example.mp3"
+      "audioExample": "/assets/audio/unit8/skateboard-example.mp3",
+      "extended": true
     },
     {
       "id": "u8_08",
@@ -104,7 +105,7 @@
       "exampleEn": "The school gym has modern sports equipment.",
       "exampleVi": "Phòng tập của trường có đầy đủ thiết bị thể thao hiện đại.",
       "emoji": "🥊",
-      "audio": "/assets/audio/unit8/equipment.mp3",
+      "audio": "/assets/audio/unit8/equipment-v2.mp3",
       "audioExample": "/assets/audio/unit8/equipment-example.mp3"
     },
     {
@@ -145,6 +146,123 @@
       "emoji": "🏃",
       "audio": "/assets/audio/unit8/marathon.mp3",
       "audioExample": "/assets/audio/unit8/marathon-example.mp3"
+    },
+    {
+      "id": "u8_12",
+      "word": "sports shoes",
+      "phonetic": "/ˈspɔːts ʃuːz/",
+      "wordType": "Danh từ",
+      "meaning": "Giày thể thao",
+      "hint": "Giày đi khi chơi thể thao",
+      "exampleEn": "I wear sports shoes when I run.",
+      "exampleVi": "Em đi giày thể thao khi chạy.",
+      "emoji": "👟",
+      "audio": "/assets/audio/unit8/sports-shoes.mp3",
+      "audioExample": "/assets/audio/unit8/sports-shoes-example.mp3"
+    },
+    {
+      "id": "u8_13",
+      "word": "bicycle",
+      "phonetic": "/ˈbaɪsɪkl/",
+      "wordType": "Danh từ",
+      "meaning": "Xe đạp",
+      "hint": "Dùng cho môn cycling (đạp xe)",
+      "exampleEn": "I ride my bicycle to school.",
+      "exampleVi": "Em đạp xe đến trường.",
+      "emoji": "🚲",
+      "audio": "/assets/audio/unit8/bicycle.mp3",
+      "audioExample": "/assets/audio/unit8/bicycle-example.mp3"
+    },
+    {
+      "id": "u8_14",
+      "word": "gym",
+      "phonetic": "/dʒɪm/",
+      "wordType": "Danh từ",
+      "meaning": "Phòng tập thể dục",
+      "hint": "Nơi có nhiều dụng cụ tập luyện",
+      "exampleEn": "This gym is very big.",
+      "exampleVi": "Phòng tập này rất rộng.",
+      "emoji": "🏋️",
+      "audio": "/assets/audio/unit8/gym.mp3",
+      "audioExample": "/assets/audio/unit8/gym-example.mp3"
+    },
+    {
+      "id": "u8_15",
+      "word": "fit",
+      "phonetic": "/fɪt/",
+      "wordType": "Tính từ",
+      "meaning": "Khỏe mạnh, cân đối",
+      "hint": "Tập thể thao giúp em fit",
+      "exampleEn": "You look fit!",
+      "exampleVi": "Trông bạn khỏe khoắn quá!",
+      "emoji": "💪",
+      "audio": "/assets/audio/unit8/fit.mp3",
+      "audioExample": "/assets/audio/unit8/fit-example.mp3"
+    },
+    {
+      "id": "u8_16",
+      "word": "sporty",
+      "phonetic": "/ˈspɔːti/",
+      "wordType": "Tính từ",
+      "meaning": "Dáng thể thao, mê thể thao",
+      "hint": "Người thích và chơi nhiều môn thể thao",
+      "exampleEn": "My friend is very sporty.",
+      "exampleVi": "Bạn em rất mê thể thao.",
+      "emoji": "🤾",
+      "audio": "/assets/audio/unit8/sporty.mp3",
+      "audioExample": "/assets/audio/unit8/sporty-example.mp3"
+    },
+    {
+      "id": "u8_17",
+      "word": "competition",
+      "phonetic": "/ˌkɒmpəˈtɪʃn/",
+      "wordType": "Danh từ",
+      "meaning": "Cuộc thi, cuộc đua",
+      "hint": "Nơi mọi người tranh tài",
+      "exampleEn": "She won a sports competition.",
+      "exampleVi": "Bạn ấy đã thắng một cuộc thi thể thao.",
+      "emoji": "🏁",
+      "audio": "/assets/audio/unit8/competition.mp3",
+      "audioExample": "/assets/audio/unit8/competition-example.mp3"
+    },
+    {
+      "id": "u8_18",
+      "word": "congratulations",
+      "phonetic": "/kənˌɡrætʃuˈleɪʃnz/",
+      "wordType": "Cụm từ",
+      "meaning": "Xin chúc mừng!",
+      "hint": "Nói khi ai đó thắng hoặc thành công",
+      "exampleEn": "Congratulations! You won!",
+      "exampleVi": "Chúc mừng! Bạn thắng rồi!",
+      "emoji": "🎊",
+      "audio": "/assets/audio/unit8/congratulations.mp3",
+      "audioExample": "/assets/audio/unit8/congratulations-example.mp3"
+    },
+    {
+      "id": "u8_19",
+      "word": "score",
+      "phonetic": "/skɔː/",
+      "wordType": "Động từ",
+      "meaning": "Ghi bàn, ghi điểm",
+      "hint": "score a goal: ghi một bàn thắng",
+      "exampleEn": "He scored two goals.",
+      "exampleVi": "Bạn ấy đã ghi hai bàn thắng.",
+      "emoji": "🥅",
+      "audio": "/assets/audio/unit8/score.mp3",
+      "audioExample": "/assets/audio/unit8/score-example.mp3"
+    },
+    {
+      "id": "u8_20",
+      "word": "chess",
+      "phonetic": "/tʃes/",
+      "wordType": "Danh từ",
+      "meaning": "Cờ vua",
+      "hint": "play chess: chơi cờ vua",
+      "exampleEn": "My grandpa and I play chess.",
+      "exampleVi": "Ông và em chơi cờ vua.",
+      "emoji": "♟️",
+      "audio": "/assets/audio/unit8/chess.mp3",
+      "audioExample": "/assets/audio/unit8/chess-example.mp3"
     }
   ],
   "extraQuestions": [],

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { listUnits, getUnit } from '../utils/data.js';
 import { PageHeader } from '../components/ui.jsx';
 import PronunciationStation from '../components/stations/PronunciationStation.jsx';
+import StationRunner from '../components/StationRunner.jsx';
 import { playSfx } from '../utils/sfx.js';
 
 export default function PronunciationPage() {
@@ -50,7 +51,7 @@ export default function PronunciationPage() {
 
       {/* Nội dung Ngữ âm của Unit được chọn */}
       {currentUnit && (
-        <PronunciationStation unit={currentUnit} onFinish={() => {}} />
+        <StationRunner Station={PronunciationStation} unit={currentUnit} mode="pronunciation" />
       )}
     </div>
   );

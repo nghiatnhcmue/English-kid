@@ -137,7 +137,7 @@ function TestResult({ entry }) {
     let mounted = true;
     submitTestScore(entry).then((res) => {
       if (mounted) {
-        setSyncStatus(res.success ? 'success' : 'saved_locally');
+        setSyncStatus(res.needsLogin ? 'needs_login' : 'success');
       }
     });
     return () => {
@@ -165,7 +165,13 @@ function TestResult({ entry }) {
 
         {/* Thông báo gửi điểm cho giáo viên */}
         <div className="mt-2 inline-flex items-center gap-2 rounded-2xl bg-mint-soft px-4 py-2 text-sm sm:text-base font-black text-mint-dark border border-mint/30">
-          <span>{syncStatus === 'syncing' ? '📡 Đang gửi điểm lên máy chủ...' : '✓ Đã tự động gửi điểm cho thầy cô!'}</span>
+          <span>
+            {syncStatus === 'syncing'
+              ? '📡 Đang gửi điểm cho thầy cô...'
+              : syncStatus === 'needs_login'
+                ? '💾 Đã lưu điểm. Em đăng nhập bằng mã PIN để gửi cho thầy cô nhé!'
+                : '✓ Điểm sẽ tự gửi cho thầy cô (kể cả khi mất mạng, có mạng lại sẽ gửi).'}
+          </span>
         </div>
       </div>
 

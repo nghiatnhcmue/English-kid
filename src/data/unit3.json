@@ -13,7 +13,7 @@
       "exampleEn": "She is confident when speaking in English.",
       "exampleVi": "Bạn ấy rất tự tin khi nói tiếng Anh.",
       "emoji": "😎",
-      "audio": "/assets/audio/unit3/confident.mp3",
+      "audio": "/assets/audio/unit3/confident-v2.mp3",
       "audioExample": "/assets/audio/unit3/confident-example.mp3"
     },
     {
@@ -40,7 +40,8 @@
       "exampleVi": "Bạn ấy rất tò mò về thế giới tự nhiên.",
       "emoji": "🧐",
       "audio": "/assets/audio/unit3/curious.mp3",
-      "audioExample": "/assets/audio/unit3/curious-example.mp3"
+      "audioExample": "/assets/audio/unit3/curious-example.mp3",
+      "extended": true
     },
     {
       "id": "u3_04",
@@ -66,7 +67,8 @@
       "exampleVi": "Thầy giáo rất kiên nhẫn với chúng em.",
       "emoji": "⏳",
       "audio": "/assets/audio/unit3/patient.mp3",
-      "audioExample": "/assets/audio/unit3/patient-example.mp3"
+      "audioExample": "/assets/audio/unit3/patient-example.mp3",
+      "extended": true
     },
     {
       "id": "u3_06",
@@ -79,7 +81,8 @@
       "exampleVi": "Mai là người bạn đáng tin cậy mà em có thể tin tưởng.",
       "emoji": "🤝",
       "audio": "/assets/audio/unit3/reliable.mp3",
-      "audioExample": "/assets/audio/unit3/reliable-example.mp3"
+      "audioExample": "/assets/audio/unit3/reliable-example.mp3",
+      "extended": true
     },
     {
       "id": "u3_07",
@@ -131,7 +134,8 @@
       "exampleVi": "Em bé có đôi má phúng phính đáng yêu.",
       "emoji": "👶",
       "audio": "/assets/audio/unit3/chubby-cheeks.mp3",
-      "audioExample": "/assets/audio/unit3/chubby-cheeks-example.mp3"
+      "audioExample": "/assets/audio/unit3/chubby-cheeks-example.mp3",
+      "extended": true
     },
     {
       "id": "u3_11",
@@ -145,6 +149,149 @@
       "emoji": "💇",
       "audio": "/assets/audio/unit3/curly-hair.mp3",
       "audioExample": "/assets/audio/unit3/curly-hair-example.mp3"
+    },
+    {
+      "id": "u3_12",
+      "word": "clever",
+      "phonetic": "/ˈklevə/",
+      "wordType": "Tính từ",
+      "meaning": "Thông minh, lanh lợi",
+      "hint": "Học nhanh và hiểu nhanh",
+      "exampleEn": "Mai is clever. She learns quickly.",
+      "exampleVi": "Mai rất thông minh. Bạn ấy học rất nhanh.",
+      "emoji": "💡",
+      "audio": "/assets/audio/unit3/clever.mp3",
+      "audioExample": "/assets/audio/unit3/clever-example.mp3"
+    },
+    {
+      "id": "u3_13",
+      "word": "caring",
+      "phonetic": "/ˈkeərɪŋ/",
+      "wordType": "Tính từ",
+      "meaning": "Chu đáo, biết quan tâm",
+      "hint": "Hay giúp đỡ và lo lắng cho người khác",
+      "exampleEn": "My sister is caring. She helps me a lot.",
+      "exampleVi": "Chị em rất chu đáo. Chị giúp em nhiều lắm.",
+      "emoji": "🤗",
+      "audio": "/assets/audio/unit3/caring.mp3",
+      "audioExample": "/assets/audio/unit3/caring-example.mp3"
+    },
+    {
+      "id": "u3_14",
+      "word": "careful",
+      "phonetic": "/ˈkeəfl/",
+      "wordType": "Tính từ",
+      "meaning": "Cẩn thận",
+      "hint": "Làm gì cũng chú ý, không vội",
+      "exampleEn": "Be careful when you cross the road.",
+      "exampleVi": "Hãy cẩn thận khi qua đường.",
+      "emoji": "⚠️",
+      "audio": "/assets/audio/unit3/careful.mp3",
+      "audioExample": "/assets/audio/unit3/careful-example.mp3"
+    },
+    {
+      "id": "u3_15",
+      "word": "active",
+      "phonetic": "/ˈæktɪv/",
+      "wordType": "Tính từ",
+      "meaning": "Năng động, hăng hái",
+      "hint": "Thích vận động, tham gia nhiều hoạt động",
+      "exampleEn": "Tom is active. He plays sports every day.",
+      "exampleVi": "Tom rất năng động. Bạn ấy chơi thể thao mỗi ngày.",
+      "emoji": "🏃",
+      "audio": "/assets/audio/unit3/active.mp3",
+      "audioExample": "/assets/audio/unit3/active-example.mp3"
+    },
+    {
+      "id": "u3_16",
+      "word": "shy",
+      "phonetic": "/ʃaɪ/",
+      "wordType": "Tính từ",
+      "meaning": "Nhút nhát, xấu hổ",
+      "hint": "Ngại nói chuyện với người lạ",
+      "exampleEn": "He is shy, so he speaks quietly.",
+      "exampleVi": "Bạn ấy nhút nhát nên nói rất nhỏ.",
+      "emoji": "😳",
+      "audio": "/assets/audio/unit3/shy.mp3",
+      "audioExample": "/assets/audio/unit3/shy-example.mp3"
+    },
+    {
+      "id": "u3_17",
+      "word": "appearance",
+      "phonetic": "/əˈpɪərəns/",
+      "wordType": "Danh từ",
+      "meaning": "Ngoại hình, bề ngoài",
+      "hint": "Miêu tả tóc, mắt, mũi, dáng người",
+      "exampleEn": "Can you describe her appearance?",
+      "exampleVi": "Bạn miêu tả ngoại hình của cô ấy được không?",
+      "emoji": "🪞",
+      "audio": "/assets/audio/unit3/appearance.mp3",
+      "audioExample": "/assets/audio/unit3/appearance-example.mp3"
+    },
+    {
+      "id": "u3_18",
+      "word": "personality",
+      "phonetic": "/ˌpɜːsəˈnæləti/",
+      "wordType": "Danh từ",
+      "meaning": "Tính cách",
+      "hint": "kind, funny, shy… là tính cách",
+      "exampleEn": "Her personality is kind and friendly.",
+      "exampleVi": "Tính cách của bạn ấy tốt bụng và thân thiện.",
+      "emoji": "🧩",
+      "audio": "/assets/audio/unit3/personality.mp3",
+      "audioExample": "/assets/audio/unit3/personality-example.mp3"
+    },
+    {
+      "id": "u3_19",
+      "word": "cheek",
+      "phonetic": "/tʃiːk/",
+      "wordType": "Danh từ",
+      "meaning": "Má",
+      "hint": "Số nhiều: cheeks (đôi má)",
+      "exampleEn": "The baby has round cheeks.",
+      "exampleVi": "Em bé có đôi má tròn.",
+      "emoji": "🥰",
+      "audio": "/assets/audio/unit3/cheek.mp3",
+      "audioExample": "/assets/audio/unit3/cheek-example.mp3"
+    },
+    {
+      "id": "u3_20",
+      "word": "shoulder",
+      "phonetic": "/ˈʃəʊldə/",
+      "wordType": "Danh từ",
+      "meaning": "Vai",
+      "hint": "Bộ phận cơ thể nối cánh tay",
+      "exampleEn": "She has long hair to her shoulders.",
+      "exampleVi": "Bạn ấy có mái tóc dài ngang vai.",
+      "emoji": "🤷",
+      "audio": "/assets/audio/unit3/shoulder.mp3",
+      "audioExample": "/assets/audio/unit3/shoulder-example.mp3"
+    },
+    {
+      "id": "u3_21",
+      "word": "nose",
+      "phonetic": "/nəʊz/",
+      "wordType": "Danh từ",
+      "meaning": "Cái mũi",
+      "hint": "Dùng để ngửi",
+      "exampleEn": "He has a small nose.",
+      "exampleVi": "Bạn ấy có cái mũi nhỏ.",
+      "emoji": "👃",
+      "audio": "/assets/audio/unit3/nose.mp3",
+      "audioExample": "/assets/audio/unit3/nose-example.mp3"
+    },
+    {
+      "id": "u3_22",
+      "word": "glasses",
+      "phonetic": "/ˈɡlɑːsɪz/",
+      "wordType": "Danh từ",
+      "meaning": "Kính đeo mắt",
+      "hint": "Luôn ở dạng số nhiều",
+      "exampleEn": "She has glasses and long black hair.",
+      "exampleVi": "Bạn ấy đeo kính và có mái tóc đen dài.",
+      "emoji": "👓",
+      "audio": "/assets/audio/unit3/glasses.mp3",
+      "audioExample": "/assets/audio/unit3/glasses-example.mp3"
     }
   ],
   "extraQuestions": [],

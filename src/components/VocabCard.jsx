@@ -1,4 +1,4 @@
-import { SpeakerButton, SlowSpeakerButton, WordImage } from './ui.jsx';
+import { SpeakerButton, SlowSpeakerButton, WordImage, ExtendedBadge } from './ui.jsx';
 
 const BADGE = {
   review: { text: '🔴 Cần ôn lại', cls: 'bg-rose-soft text-peach-dark' },
@@ -60,6 +60,7 @@ export default function VocabCard({ word, status, compact = false, onInspect }) 
             <span className="rounded-full bg-banana-soft px-3 py-0.5 text-ink-soft">
               {word.wordType}
             </span>
+            <ExtendedBadge word={word} />
             {word.model3d && (
               <button
                 type="button"

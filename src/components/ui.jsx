@@ -44,6 +44,14 @@ export function SpeakerIcon({ className = 'h-8 w-8' }) {
   );
 }
 
+/** Nhãn riêng cho từng nút loa ("Nghe từ “ruler”", "Nghe: I have a ruler…") – để biết nút nào đọc gì */
+function speakLabel(base, target) {
+  if (!target) return base;
+  if (typeof target === 'object') return target.word ? `${base} từ “${target.word}”` : base;
+  const s = String(target).trim();
+  return s ? `${base}: ${s.length > 48 ? `${s.slice(0, 45)}…` : s}` : base;
+}
+
 /** Nút phát âm to, dễ bấm: đọc chuẩn và có hiệu ứng sóng âm khi đang đọc */
 export function SpeakerButton({
   word,
@@ -102,8 +110,8 @@ export function SpeakerButton({
         e.stopPropagation();
         play();
       }}
-      aria-label={label ?? t.common.listen}
-      title={label ?? t.common.listen}
+      aria-label={label ?? speakLabel(t.common.listen, target)}
+      title={label ?? speakLabel(t.common.listen, target)}
       className={`inline-flex shrink-0 items-center justify-center gap-2 rounded-full cursor-pointer transition-all active:translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-peach ${
         slow
           ? 'bg-sky text-ink shadow-[0_5px_0_var(--color-sky-dark)] active:shadow-[0_1px_0_var(--color-sky-dark)]'
@@ -140,8 +148,8 @@ export function SlowSpeakerButton({ word, text, audio, size = 'sm', className = 
     <button
       type="button"
       onClick={play}
-      aria-label={t.common.listenSlow}
-      title={t.common.listenSlow}
+      aria-label={speakLabel(t.common.listenSlow, target)}
+      title={speakLabel(t.common.listenSlow, target)}
       className={`inline-flex shrink-0 items-center justify-center gap-1.5 rounded-2xl bg-sky-soft text-ink font-black border-2 border-sky-dark/20 shadow-[0_3px_0_#c4dcf7] cursor-pointer hover:bg-sky-soft/80 active:translate-y-0.5 active:shadow-none transition-all ${dims} ${
         playing ? 'ring-2 ring-sky' : ''
       } ${className}`}
@@ -205,13 +213,16 @@ export function Stars({ count = 0, max = 3, className = 'text-2xl' }) {
 /** Tiêu đề trang to rõ, có nút "Quay lại" kèm chữ rõ nghĩa cho học sinh dễ nhận biết */
 export function PageHeader({ title, subtitle, backTo, backLabel, right }) {
   return (
-    <header className="no-print mb-4 flex flex-wrap items-center justify-between gap-3">
-      <div className="flex items-center gap-3 min-w-0 flex-1">
+    // min-w-0 + flex: khi trang đặt PageHeader cạnh nút khác trong một hàng flex, header vẫn co lại được
+    // (tiêu đề dài sẽ bị cắt "…" thay vì đẩy trang tràn ngang)
+    <header className="no-print mb-4 flex min-w-0 max-w-full flex-[1_1_20rem] flex-wrap items-center justify-between gap-3">
+      {/* Tiêu đề luôn có tối thiểu ~16rem; thiếu chỗ thì nhóm nút bên phải tự xuống dòng (không ép tiêu đề về 0) */}
+      <div className="flex min-w-[min(100%,16rem)] flex-[1_1_18rem] items-center gap-3">
         {backTo && (
           <Link
             to={backTo}
             onClick={() => playSfx('click')}
-            className="inline-flex h-13 items-center justify-center gap-2 rounded-2xl bg-white px-4 text-base font-extrabold text-ink shadow-[0_4px_0_#e9dcc4] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-banana"
+            className="inline-flex h-13 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-2xl bg-white px-4 text-base font-extrabold text-ink shadow-[0_4px_0_#e9dcc4] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-banana"
           >
             <span className="text-xl leading-none">←</span>
             <span>{backLabel ?? t.common.back}</span>
@@ -222,7 +233,7 @@ export function PageHeader({ title, subtitle, backTo, backLabel, right }) {
           {subtitle && <p className="truncate text-sm sm:text-base font-bold text-ink-soft">{subtitle}</p>}
         </div>
       </div>
-      {right && <div className="shrink-0">{right}</div>}
+      {right && <div className="max-w-full">{right}</div>}
     </header>
   );
 }
@@ -325,4 +336,17 @@ export function starsFromMistakes(mistakes, total) {
   if (mistakes === 0) return 3;
   if (mistakes <= Math.max(1, Math.round(total / 4))) return 2;
   return 1;
+}
+
+/** Nhãn cho từ không nằm trong trang SGK của Unit (từ mở rộng). */
+export function ExtendedBadge({ word }) {
+  if (!word?.extended) return null;
+  return (
+    <span
+      className="rounded-full border border-sky-dark/30 bg-sky/20 px-2.5 py-0.5 text-xs font-black text-ink"
+      title="Từ mở rộng, không có trong trang SGK của bài này"
+    >
+      ✨ Mở rộng
+    </span>
+  );
 }

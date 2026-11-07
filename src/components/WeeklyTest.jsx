@@ -212,13 +212,13 @@ function QuestionBody({ q, response, onAnswer }) {
       );
     }
     case 'context': {
-      const wordObj = getWord(q.wordId);
       return (
         <div className="flex flex-col gap-5">
           <div className="rounded-3xl bg-white p-6 text-center shadow-xs border-2 border-banana-soft my-2">
             <div className="flex items-center justify-center gap-3">
               <p className="text-2xl sm:text-3xl font-black text-ink leading-relaxed">{q.sentence}</p>
-              {wordObj?.audioExample && <SpeakerButton audio={wordObj.audioExample} text={wordObj.exampleEn} size="sm" />}
+              {/* Đọc câu CÓ chỗ trống (TTS), không phát file câu đầy đủ để không lộ đáp án */}
+              <SpeakerButton text={q.sentence.replace(/_+/g, '…')} size="sm" />
             </div>
             <p className="mt-2 text-lg sm:text-xl font-bold text-ink-soft">({q.sentenceVi})</p>
           </div>

@@ -79,6 +79,7 @@ export function searchCurriculum(query) {
           unitTitle: `Unit ${u.unitId}: ${u.titleEn}`,
           emoji: u.emoji,
           sentence: u.speaking.targetSentence,
+          audio: u.speaking.audio || null,
           phonetic: u.speaking.phonetic,
           meaningVi: u.speaking.meaningVi,
         });

@@ -1,13 +1,32 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { User, Lock, KeyRound, Sparkles, X, Check, School, LogOut, ArrowRight, Delete } from 'lucide-react';
 import { Button3D } from './ui.jsx';
 import { store } from '../utils/storage.js';
+import { fetchRoster, loginStudentOnline, logoutStudentOnline } from '../utils/api.js';
 import { playSfx } from '../utils/sfx.js';
 
 export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forceLogin = false }) {
+  const [rosterTick, setRosterTick] = useState(0);
+  const [rosterOffline, setRosterOffline] = useState(false);
+  const [busy, setBusy] = useState(false);
   const currentStudent = store().getCurrentStudent();
-  const allStudents = store().getStudents();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const allStudents = useMemo(() => store().getStudents(), [rosterTick, isOpen]);
+
+  // Mở bảng đăng nhập: tải danh sách lớp mới nhất từ máy chủ (không có mã PIN)
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    let alive = true;
+    fetchRoster().then((r) => {
+      if (!alive) return;
+      setRosterOffline(!r.success);
+      setRosterTick((t) => t + 1);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [isOpen]);
 
   // Danh sách các lớp
   const classList = useMemo(() => {
@@ -18,6 +37,9 @@ export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forc
   }, [allStudents]);
 
   const [selectedClass, setSelectedClass] = useState(classList[0] || '6A1');
+  useEffect(() => {
+    if (!classList.includes(selectedClass)) setSelectedClass(classList[0]);
+  }, [classList, selectedClass]);
   const [activeTab, setActiveTab] = useState('oneclick'); // 'oneclick' | 'manual'
   
   // Trạng thái chọn học sinh trong tab 1-click
@@ -60,53 +82,55 @@ export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forc
     setErrorMsg('');
   };
 
-  // Xác nhận đăng nhập từ tab 1-click
-  const handleConfirmPinLogin = (e) => {
-    e?.preventDefault();
-    if (!selectedStudent) return;
-
-    const res = store().loginStudent(selectedStudent.id, pinInput);
+  /**
+   * Đăng nhập: máy chủ kiểm tra mã PIN. Chỉ khi KHÔNG kết nối được máy chủ mới thử tài khoản đã lưu
+   * trên máy này (máy của thầy cô có lưu PIN) – máy học sinh không có PIN nên luôn cần mạng lần đầu.
+   */
+  const doLogin = async (ident, pin, onFail) => {
+    if (busy) return;
+    setBusy(true);
+    let res = await loginStudentOnline(ident, pin);
+    if (!res.success && (res.offline || res.status === 503)) {
+      const local = store().loginStudent(ident, pin);
+      res = local.success ? local : { ...local, error: res.offline ? 'Chưa có mạng. Em kết nối mạng rồi đăng nhập lại nhé!' : local.error };
+    }
+    setBusy(false);
     if (res.success) {
       playSfx('victory');
       confetti({ particleCount: 50, spread: 70, origin: { y: 0.6 } });
       setSuccessMsg(`Xin chào ${res.student.name}!`);
       setTimeout(() => {
-        onLoginSuccess?.(res.student);
+        onLoginSuccess?.(store().getCurrentStudent() || res.student);
         onClose?.();
       }, 700);
     } else {
       playSfx('wrong');
-      setErrorMsg(res.error || 'Mật khẩu chưa đúng, em thử lại nhé!');
-      setPinInput('');
+      setErrorMsg(res.error || 'Mã PIN chưa đúng, em thử lại nhé!');
+      onFail?.();
     }
+  };
+
+  // Xác nhận đăng nhập từ tab 1-click
+  const handleConfirmPinLogin = (e) => {
+    e?.preventDefault();
+    if (!selectedStudent) return;
+    doLogin(selectedStudent.id, pinInput, () => setPinInput(''));
   };
 
   // Xác nhận đăng nhập từ tab thủ công
   const handleManualLogin = (e) => {
     e?.preventDefault();
     if (!usernameInput.trim()) {
-      setErrorMsg('Vui lòng nhập mã học sinh hoặc tên của em.');
+      setErrorMsg('Vui lòng nhập tên đăng nhập của em.');
       return;
     }
-
-    const res = store().loginStudent(usernameInput.trim(), passwordInput.trim());
-    if (res.success) {
-      playSfx('victory');
-      confetti({ particleCount: 50, spread: 70, origin: { y: 0.6 } });
-      setSuccessMsg(`Xin chào ${res.student.name}!`);
-      setTimeout(() => {
-        onLoginSuccess?.(res.student);
-        onClose?.();
-      }, 700);
-    } else {
-      playSfx('wrong');
-      setErrorMsg(res.error || 'Tài khoản hoặc mật khẩu không chính xác.');
-    }
+    doLogin(usernameInput.trim(), passwordInput.trim());
   };
 
   // Xử lý đăng xuất (khi học sinh đang đăng nhập mở modal này)
   const handleLogout = () => {
     playSfx('click');
+    logoutStudentOnline();
     store().logoutStudent();
     setSelectedStudent(null);
     setPinInput('');
@@ -274,6 +298,13 @@ export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forc
                     <span className="text-xs font-black text-ink-soft">
                       Bấm vào tên của em trong danh sách:
                     </span>
+                    {filteredStudents.length === 0 && (
+                      <p className="rounded-2xl bg-banana-soft p-3 text-sm font-bold text-ink">
+                        {rosterOffline
+                          ? '📡 Chưa tải được danh sách lớp. Em kết nối mạng rồi mở lại nhé!'
+                          : 'Lớp chưa có tài khoản. Em nhờ thầy cô tạo tài khoản và đưa mã PIN nhé!'}
+                      </p>
+                    )}
                     <div className="grid grid-cols-2 sm:grid-cols-2 gap-2.5 max-h-60 overflow-y-auto p-1">
                       {filteredStudents.map((stu) => (
                         <button
@@ -324,7 +355,7 @@ export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forc
                     {/* Ô hiển thị mã PIN */}
                     <div className="w-full flex flex-col items-center gap-1.5 pt-1">
                       <span className="text-xs font-bold text-ink-soft">
-                        Nhập mật khẩu (Mặc định: <strong>123</strong>):
+                        Nhập mã PIN thầy cô đưa cho em:
                       </span>
                       <div className="flex items-center justify-center gap-2 h-12 w-full max-w-[220px] rounded-2xl bg-white border-2 border-banana px-4 shadow-inner">
                         {pinInput ? (
@@ -407,13 +438,13 @@ export default function StudentAuthModal({ isOpen, onClose, onLoginSuccess, forc
                 <div>
                   <label className="block text-xs font-black text-ink mb-1 flex items-center gap-1.5">
                     <Lock className="h-4 w-4 text-sky-dark" />
-                    <span>Mật khẩu:</span>
+                    <span>Mã PIN:</span>
                   </label>
                   <input
                     type="password"
                     value={passwordInput}
                     onChange={(e) => setPasswordInput(e.target.value)}
-                    placeholder="Nhập mật khẩu (Mặc định: 123)"
+                    placeholder="Mã PIN thầy cô cấp"
                     className="w-full rounded-2xl bg-cream px-4 py-3 text-base font-bold text-ink border-2 border-banana-soft placeholder:text-ink-soft/40 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-banana"
                   />
                 </div>

@@ -1,5 +1,6 @@
 import units from '../data/units.json';
 import { store } from './storage.js';
+import { prepareUnitForPractice } from './quiz.js';
 
 // Tự nạp mọi file unitN.json: thêm Unit mới chỉ cần thêm file dữ liệu.
 const modules = import.meta.glob('../data/unit*.json', { eager: true, import: 'default' });
@@ -9,14 +10,26 @@ for (const mod of Object.values(modules)) {
   if (mod && typeof mod.unitId === 'number') baseUnitData[mod.unitId] = mod;
 }
 
+const isPlainObject = (v) => v && typeof v === 'object' && !Array.isArray(v);
+
+// Gộp dữ liệu giáo viên lên dữ liệu gốc: các mục dạng object (grammar, reading…) gộp 1 cấp,
+// để lưu riêng `grammar.quiz` không làm mất quy tắc/ví dụ ngữ pháp của SGK.
+export function mergeUnitData(base, custom) {
+  if (!custom) return base;
+  const out = { ...base, ...custom };
+  for (const key of Object.keys(custom)) {
+    if (isPlainObject(base?.[key]) && isPlainObject(custom[key])) {
+      out[key] = { ...base[key], ...custom[key] };
+    }
+  }
+  return out;
+}
+
 function getMergedData(numId) {
   const base = baseUnitData[numId];
   try {
     const custom = store().getCustomUnit(numId);
-    if (base) {
-      if (!custom) return base;
-      return { ...base, ...custom };
-    }
+    if (base) return mergeUnitData(base, custom);
     // Nếu không nằm trong baseUnitData, tìm trong createdUnits do giáo viên tạo
     const createdUnits = store().getCreatedUnits() || [];
     const createdMeta = createdUnits.find((u) => u.unitId === numId);
@@ -70,7 +83,13 @@ export function listUnits() {
   return combined;
 }
 
+/** Unit để học: câu trắc nghiệm đã trộn đáp án, câu sắp xếp đã xáo từ. */
 export function getUnit(unitId) {
+  return prepareUnitForPractice(getUnitRaw(unitId));
+}
+
+/** Unit đúng như dữ liệu đã lưu (cho trình soạn của giáo viên – sửa/lưu không bị xáo trộn). */
+export function getUnitRaw(unitId) {
   const numId = Number(unitId);
   const all = listUnits();
   const meta = all.find((u) => u.unitId === numId);

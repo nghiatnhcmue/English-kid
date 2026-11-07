@@ -5,6 +5,7 @@ import { Button3D, SpeakerButton, Stars } from '../ui.jsx';
 import { speak } from '../../utils/speech.js';
 import { playSfx } from '../../utils/sfx.js';
 import { store } from '../../utils/storage.js';
+import { shuffle } from '../../utils/random.js';
 
 /**
  * Thử thách Tổng hợp Toàn diện Unit (Unit Mastery Quiz):
@@ -20,16 +21,18 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
   // Tạo danh sách 6 câu hỏi tổng hợp từ dữ liệu của Unit
   const questions = useMemo(() => {
     const list = [];
-    const v1 = unit.vocabularies?.[0] || { word: 'school', meaning: 'trường học' };
-    const v2 = unit.vocabularies?.[1] || { word: 'bag', meaning: 'cặp' };
-    const v3 = unit.vocabularies?.[2] || { word: 'book', meaning: 'sách' };
+    // Chọn ngẫu nhiên từ cần hỏi + 2 từ nhiễu, rồi trộn vị trí đáp án
+    const vocab = shuffle((unit.vocabularies || []).filter((v) => v?.word && v?.meaning));
+    const v1 = vocab[0] || { word: 'school', meaning: 'trường học' };
+    const v2 = vocab.find((v) => v.word !== v1.word && v.meaning !== v1.meaning) || { word: 'bag', meaning: 'cặp' };
+    const v3 = vocab.find((v) => ![v1.word, v2.word].includes(v.word) && ![v1.meaning, v2.meaning].includes(v.meaning)) || { word: 'book', meaning: 'sách' };
 
     // 1. TỪ VỰNG
     list.push({
       type: 'vocab',
       domain: '🔤 Từ vựng',
       question: `Từ nào sau đây có nghĩa là "${v1.meaning}"?`,
-      options: [v1.word, v2.word, v3.word],
+      options: shuffle([v1.word, v2.word, v3.word]),
       correctAnswer: v1.word,
       hint: v1.hint || 'Nhớ lại các từ mới đã học ở đầu bài nhé.',
     });
@@ -41,10 +44,10 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
         type: 'pronunciation',
         domain: '🗣️ Phát âm & Ngữ âm',
         audioText: p.word,
-        question: `Nghe từ "${p.word}" (${p.meaning}) và chọn âm đúng:`,
+        question: `Nghe "${p.word}" (${p.meaning}) và chọn đáp án đúng:`,
         options: p.options,
         correctAnswer: p.correctSound,
-        hint: `Cặp âm của Unit ${unit.unitId} là ${unit.pronunciation.pair}.`,
+        hint: `Chủ đề phát âm Unit ${unit.unitId}: ${unit.pronunciation.title || unit.pronunciation.pair}.`,
       });
     }
 
@@ -69,6 +72,7 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
         type: 'listening',
         domain: '👂 Kỹ năng Nghe',
         audioText: unit.listening.transcript,
+        audio: unit.listening.audio || null,
         question: `[Nghe đoạn thoại] ${unit.listening.question}`,
         options: unit.listening.options,
         correctAnswer: unit.listening.options[unit.listening.answerIndex],
@@ -78,8 +82,8 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
 
     // 5. KỸ NĂNG ĐỌC (Skills 1)
     const readQuestions = unit.reading?.questions || unit.reading?.quizQuestions || [];
-    if (readQuestions.length) {
-      const r = readQuestions[0];
+    const r = readQuestions.find((q) => Array.isArray(q?.options) && q.options.length > 1 && Number.isInteger(q.answerIndex));
+    if (r) {
       list.push({
         type: 'reading',
         domain: '📖 Kỹ năng Đọc hiểu',
@@ -92,8 +96,10 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
     }
 
     // 6. KỸ NĂNG VIẾT (Skills 2)
-    if (unit.writing) {
-      const w = unit.writing;
+    const w = unit.writing?.correctSentence
+      ? unit.writing
+      : (unit.writing?.items || []).find((it) => it?.type === 'unscramble' && it.correctSentence);
+    if (w?.correctSentence) {
       list.push({
         type: 'writing',
         domain: '✍️ Kỹ năng Viết câu',
@@ -117,6 +123,7 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
   // Trạng thái cho câu hỏi viết (sắp xếp từ)
   const currentQ = questions[currentIdx];
   const [writtenWords, setWrittenWords] = useState([]);
+  const [pickedIdx, setPickedIdx] = useState([]); // vị trí trong ngân hàng từ đã được chọn
 
   const handleSelectOption = (opt) => {
     if (isSubmitted) return;
@@ -133,15 +140,17 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
 
   // Logic sắp xếp từ cho câu hỏi viết
   const handlePickWord = (word, index) => {
-    if (isSubmitted) return;
+    if (isSubmitted || pickedIdx.includes(index)) return;
     playSfx('click');
     setWrittenWords((prev) => [...prev, word]);
+    setPickedIdx((prev) => [...prev, index]);
   };
 
   const handleRemoveWord = (index) => {
     if (isSubmitted) return;
     playSfx('click');
     setWrittenWords((prev) => prev.filter((_, i) => i !== index));
+    setPickedIdx((prev) => prev.filter((_, i) => i !== index));
   };
 
   const checkWrittenAnswer = () => {
@@ -164,6 +173,7 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
       setSelectedOption(null);
       setIsSubmitted(false);
       setWrittenWords([]);
+      setPickedIdx([]);
     } else {
       setIsFinished(true);
       playSfx('victory');
@@ -179,6 +189,7 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
     setIsSubmitted(false);
     setIsFinished(false);
     setWrittenWords([]);
+    setPickedIdx([]);
   };
 
   const correctCount = Object.values(userAnswers).filter(Boolean).length;
@@ -229,10 +240,10 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
             <div className="flex flex-col items-center gap-2 rounded-2xl bg-cream/70 p-4 border border-banana-soft">
               <span className="text-xs font-bold text-ink-soft">Bấm loa để nghe âm thanh câu hỏi:</span>
               <div className="flex items-center gap-3">
-                <SpeakerButton text={currentQ.audioText} size="lg" />
+                <SpeakerButton text={currentQ.audioText} audio={currentQ.audio} size="lg" />
                 <button
                   type="button"
-                  onClick={() => speak(currentQ.audioText, { rate: 0.65 })}
+                  onClick={() => speak(currentQ.audioText, { rate: 0.65, audio: currentQ.audio })}
                   className="inline-flex min-h-12 items-center gap-1.5 rounded-2xl bg-white px-4 text-sm font-black text-ink shadow-xs border border-banana-soft hover:bg-cream cursor-pointer"
                 >
                   <span>🐢 Nghe chậm</span>
@@ -330,9 +341,9 @@ export default function UnitMasteryQuiz({ unit, onFinish }) {
                   <button
                     key={i}
                     type="button"
-                    disabled={isSubmitted}
+                    disabled={isSubmitted || pickedIdx.includes(i)}
                     onClick={() => handlePickWord(word, i)}
-                    className="rounded-xl bg-white px-4 py-2 text-base font-black text-ink shadow-sm border border-banana-soft hover:bg-banana hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer transition-all"
+                    className="disabled:opacity-30 disabled:pointer-events-none rounded-xl bg-white px-4 py-2 text-base font-black text-ink shadow-sm border border-banana-soft hover:bg-banana hover:-translate-y-0.5 active:translate-y-0.5 cursor-pointer transition-all"
                   >
                     {word}
                   </button>

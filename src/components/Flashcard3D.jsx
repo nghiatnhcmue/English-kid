@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import { Button3D, ProgressBar, SpeakerButton, SlowSpeakerButton, WordImage, KeyboardBadge } from './ui.jsx';
+import { Button3D, ProgressBar, SpeakerButton, SlowSpeakerButton, WordImage, KeyboardBadge, ExtendedBadge } from './ui.jsx';
 import ModelView from './ModelView.jsx';
 import { playSfx } from '../utils/sfx.js';
 import { t } from '../i18n/vi.js';
@@ -117,6 +117,7 @@ export default function Flashcard3D({ words, onFinish }) {
                 <span className="rounded-full bg-mint text-white px-3 py-1 text-xs sm:text-sm font-black">
                   {word.wordType}
                 </span>
+                <ExtendedBadge word={word} />
                 <h2 className="mt-3 text-4xl sm:text-5xl font-black text-ink">{word.meaning}</h2>
                 <p className="mt-2 text-lg font-bold text-ink-soft">💡 {word.hint}</p>
               </div>

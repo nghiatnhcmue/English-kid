@@ -215,7 +215,13 @@ export default function TeacherGuide() {
           <div className="rounded-2xl bg-sky-soft/40 p-4 border border-sky/30 text-xs font-bold text-ink-soft">
             <p className="font-black text-sky-dark text-sm mb-1">🔐 Tài khoản Cổng Quản Trị Giáo Viên:</p>
             <p>
-              Tài khoản quản trị dành riêng cho thầy cô: Mã GV: <strong className="text-peach-dark">GV01</strong> | Mật khẩu: <strong className="text-mint-dark">123456789</strong>. Thầy cô có thể chủ động đổi mật khẩu mới bất cứ lúc nào qua nút <strong>"🔑 Đổi Mật Khẩu"</strong> ở góc trên trang.
+              Tài khoản giáo viên được <strong>kiểm tra trên máy chủ</strong> (không còn tài khoản mặc định). Lần đầu, thầy cô bấm "Tạo tài khoản giáo
+              viên" và nhập <strong>mã cài đặt</strong> do người quản lý website đặt trên Cloudflare (ADMIN_SETUP_CODE). Mật khẩu cần ít nhất 8 ký tự;
+              đổi mật khẩu qua nút <strong>"🔑 Đổi Mật Khẩu"</strong> (phải nhập mật khẩu cũ, các máy khác sẽ tự đăng xuất).
+            </p>
+            <p className="mt-1">
+              Mã PIN của học sinh là 4–8 chữ số, mỗi em một mã. Thầy cô in phiếu PIN ở tab "Tài khoản học sinh". Mã PIN chỉ lưu trên máy đã tạo,
+              máy chủ chỉ giữ bản mã hóa.
             </p>
           </div>
         </div>

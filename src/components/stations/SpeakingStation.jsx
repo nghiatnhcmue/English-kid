@@ -3,7 +3,7 @@ import { Mic, Volume2, RotateCcw, Check, Sparkles, MessageCircle, BookOpen, Volu
 import confetti from 'canvas-confetti';
 import { Button3D, SpeakerButton, SlowSpeakerButton, Stars } from '../ui.jsx';
 import { createRecorder, isRecordingSupported } from '../../utils/recorder.js';
-import { isSttSupported, recognizeOnce, speak } from '../../utils/speech.js';
+import { isSttSupported, recognizeOnce, speak, playRecording } from '../../utils/speech.js';
 import { similarity, speakingLevel } from '../../utils/scene.js';
 import { playSfx } from '../../utils/sfx.js';
 import { useSettings } from '../../settings.jsx';
@@ -80,6 +80,7 @@ export default function SpeakingStation({ unit, onFinish }) {
         tipsVi: item.tipsVi,
         dialogue: item.dialogue,
         level: item.level,
+        audio: item.audio || null,
       };
     } else {
       const v = vocabularies[selectedVocabIdx] || vocabularies[0];
@@ -87,9 +88,10 @@ export default function SpeakingStation({ unit, onFinish }) {
         sentenceEn: v?.word || '',
         phonetic: v?.phonetic || '',
         meaningVi: v?.meaning || '',
-        tipsVi: `Loại từ: [${v?.type || 'từ vựng'}] · Ví dụ: "${v?.example || ''}"`,
+        tipsVi: `Loại từ: [${v?.wordType || 'từ vựng'}] · Ví dụ: "${v?.exampleEn || ''}"`,
         dialogue: null,
         level: `Từ vựng ${selectedVocabIdx + 1}/${vocabularies.length}`,
+        audio: v?.audio || null,
       };
     }
   }, [mode, selectedIdx, selectedVocabIdx, challengeList, vocabularies]);
@@ -493,8 +495,7 @@ export default function SpeakingStation({ unit, onFinish }) {
                 <button
                   type="button"
                   onClick={() => {
-                    const a = new Audio(audioUrl);
-                    a.play();
+                    playRecording(audioUrl);
                   }}
                   className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-peach px-6 text-base font-black text-white shadow-[0_4px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none cursor-pointer"
                 >

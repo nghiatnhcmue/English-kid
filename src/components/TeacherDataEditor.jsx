@@ -1,7 +1,8 @@
 import { useState, useMemo, useEffect } from 'react';
-import { getUnit, listUnits } from '../utils/data.js';
+import { getUnitRaw, listUnits } from '../utils/data.js';
 import { store } from '../utils/storage.js';
-import { speak, getCloudTtsUrl } from '../utils/speech.js';
+import { speak } from '../utils/speech.js';
+import { videoEmbedUrl } from '../utils/video.js';
 import { parseBatchQuestions, parseBatchWriting } from '../utils/questionParser.js';
 import { 
   AlertCircle, 
@@ -34,7 +35,7 @@ export default function TeacherDataEditor() {
 
   // Load merged unit data
   const [refreshKey, setRefreshKey] = useState(0);
-  const currentUnit = useMemo(() => getUnit(selectedUnitId), [selectedUnitId, refreshKey]);
+  const currentUnit = useMemo(() => getUnitRaw(selectedUnitId), [selectedUnitId, refreshKey]);
   const isCustomized = useMemo(() => !!store().getCustomUnit(selectedUnitId), [selectedUnitId, refreshKey]);
 
   // Form states
@@ -55,6 +56,13 @@ export default function TeacherDataEditor() {
   const [audioFileName, setAudioFileName] = useState('');
   const [isRecordingAudio, setIsRecordingAudio] = useState(false);
   const [audioRecorder, setAudioRecorder] = useState(null);
+  // Rời trang khi đang thu âm thì tắt micro
+  useEffect(
+    () => () => {
+      if (audioRecorder && audioRecorder.state === 'recording') audioRecorder.stop();
+    },
+    [audioRecorder],
+  );
   const [recordingSeconds, setRecordingSeconds] = useState(0);
 
   // Video form states
@@ -197,9 +205,15 @@ export default function TeacherDataEditor() {
       showNotification('Vui lòng nhập đầy đủ tiêu đề Tiếng Anh và Tiếng Việt cho Unit!', 'peach');
       return;
     }
+    const newId = Number(unitForm.unitId);
+    // Unit 1–12 là bài SGK: tạo Unit mới trùng số sẽ ghi đè mất nội dung SGK của học sinh
+    if (!isEditingUnit && (newId <= 12 || listUnits().some((u) => u.unitId === newId))) {
+      showNotification(`Unit ${newId} đã có. Hãy chọn số từ 13 trở lên và chưa dùng.`, 'peach');
+      return;
+    }
     const saved = store().saveCreatedUnit({
       ...unitForm,
-      unitId: Number(unitForm.unitId),
+      unitId: newId,
     });
     setSelectedUnitId(saved.unitId);
     setShowUnitModal(false);
@@ -544,8 +558,9 @@ export default function TeacherDataEditor() {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    if (file.size > 5 * 1024 * 1024) {
-      alert('File âm thanh quá lớn (tối đa 5MB). Vui lòng chọn file ngắn hơn.');
+    // Âm thanh được lưu kèm nội dung bài (đồng bộ cho mọi máy) nên phải nhỏ: tối đa 300KB (~15 giây mp3)
+    if (file.size > 300 * 1024) {
+      alert(`File âm thanh quá lớn (${(file.size / 1024).toFixed(0)}KB, tối đa 300KB). Hãy cắt ngắn chỉ còn phần đọc từ/câu.`);
       return;
     }
 
@@ -580,6 +595,11 @@ export default function TeacherDataEditor() {
 
       mediaRecorder.onstop = () => {
         const blob = new Blob(chunks, { type: 'audio/webm' });
+        stream.getTracks().forEach((track) => track.stop());
+        if (blob.size > 300 * 1024) {
+          alert('Bản thu quá dài. Hãy thu lại thật ngắn (chỉ đọc từ hoặc câu ví dụ).');
+          return;
+        }
         const reader = new FileReader();
         reader.onloadend = () => {
           const base64data = reader.result;
@@ -588,7 +608,6 @@ export default function TeacherDataEditor() {
           showNotification('Đã thu âm giọng đọc thành công!', 'mint');
         };
         reader.readAsDataURL(blob);
-        stream.getTracks().forEach((track) => track.stop());
       };
 
       mediaRecorder.start();
@@ -668,10 +687,18 @@ export default function TeacherDataEditor() {
       emoji: wordForm.emoji?.trim() || '',
       exampleEn: wordForm.exampleEn.trim() || `${wordForm.word.trim()} is very interesting.`,
       exampleVi: wordForm.exampleVi.trim() || `${wordForm.meaning.trim()} rất thú vị.`,
-      audio: wordForm.audio.trim() || getCloudTtsUrl(wordForm.word.trim(), 'en-GB'),
-      audioExample: `https://translate.google.com/translate_tts?ie=UTF-8&tl=en-GB&client=tw-ob&q=${encodeURIComponent(
-        wordForm.exampleEn.trim() || `${wordForm.word.trim()} is very interesting.`
-      )}`,
+      // Audio: để trống thì app tự đọc (Youdao online → giọng máy). Đổi chữ của từ mà vẫn giữ file cũ
+      // sẽ phát sai từ, nên bỏ file cũ đi. Câu ví dụ chỉ giữ file thu sẵn khi câu không đổi.
+      audio: (() => {
+        const a = (wordForm.audio || '').trim();
+        const wordChanged = editingWord && editingWord.word.trim().toLowerCase() !== wordForm.word.trim().toLowerCase();
+        if (wordChanged && a === (editingWord.audio || '').trim()) return '';
+        return a.includes('dictvoice') ? '' : a;
+      })(),
+      audioExample:
+        editingWord && (editingWord.exampleEn || '').trim() === wordForm.exampleEn.trim() && !String(editingWord.audioExample || '').includes('translate_tts')
+          ? editingWord.audioExample || ''
+          : '',
     };
 
     if (editingWord) {
@@ -1107,15 +1134,17 @@ export default function TeacherDataEditor() {
                   )}
 
                   {/* Nhúng YouTube xem thử */}
-                  {vid.url && (
+                  {videoEmbedUrl(vid.url) ? (
                     <div className="mt-3 aspect-video w-full overflow-hidden rounded-xl bg-black/10">
                       <iframe
-                        src={vid.url.replace('watch?v=', 'embed/')}
+                        src={videoEmbedUrl(vid.url)}
                         title={vid.title}
                         className="h-full w-full border-0"
                         allowFullScreen
                       />
                     </div>
+                  ) : (
+                    vid.url && <p className="mt-2 text-xs font-bold text-peach-dark">⚠️ Chỉ nhúng được link YouTube hoặc Vimeo.</p>
                   )}
                 </div>
               </div>
@@ -2336,7 +2365,7 @@ export default function TeacherDataEditor() {
                   <input
                     type="number"
                     required
-                    min={1}
+                    min={13}
                     max={99}
                     disabled={isEditingUnit}
                     value={unitForm.unitId}

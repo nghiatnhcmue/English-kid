@@ -14,7 +14,8 @@
       "exampleVi": "Trong tương lai em sẽ sống trong một ngôi nhà thông minh.",
       "emoji": "🏠",
       "audio": "/assets/audio/unit10/smart-house.mp3",
-      "audioExample": "/assets/audio/unit10/smart-house-example.mp3"
+      "audioExample": "/assets/audio/unit10/smart-house-example.mp3",
+      "extended": true
     },
     {
       "id": "u10_02",
@@ -40,7 +41,8 @@
       "exampleVi": "Các phi hành gia có thể sẽ sống trong một ngôi nhà thuyền không gian.",
       "emoji": "🛸",
       "audio": "/assets/audio/unit10/space-houseboat.mp3",
-      "audioExample": "/assets/audio/unit10/space-houseboat-example.mp3"
+      "audioExample": "/assets/audio/unit10/space-houseboat-example.mp3",
+      "extended": true
     },
     {
       "id": "u10_04",
@@ -65,7 +67,7 @@
       "exampleEn": "All appliances will connect via wireless networks.",
       "exampleVi": "Tất cả thiết bị sẽ kết nối qua mạng không dây.",
       "emoji": "📶",
-      "audio": "/assets/audio/unit10/wireless.mp3",
+      "audio": "/assets/audio/unit10/wireless-v2.mp3",
       "audioExample": "/assets/audio/unit10/wireless-example.mp3"
     },
     {
@@ -103,9 +105,10 @@
       "hint": "Robot quét nhà, nấu cơm, rửa bát thay con người",
       "exampleEn": "A robot helper will clean the room every morning.",
       "exampleVi": "Một người máy phụ việc sẽ lau dọn phòng vào mỗi buổi sáng.",
-      "emoji": "🤖",
+      "emoji": "🦾",
       "audio": "/assets/audio/unit10/robot-helper.mp3",
-      "audioExample": "/assets/audio/unit10/robot-helper-example.mp3"
+      "audioExample": "/assets/audio/unit10/robot-helper-example.mp3",
+      "extended": true
     },
     {
       "id": "u10_09",
@@ -118,7 +121,8 @@
       "exampleVi": "Ngôi nhà tương lai của em sẽ có các cánh cửa tự động.",
       "emoji": "🚪",
       "audio": "/assets/audio/unit10/automatic.mp3",
-      "audioExample": "/assets/audio/unit10/automatic-example.mp3"
+      "audioExample": "/assets/audio/unit10/automatic-example.mp3",
+      "extended": true
     },
     {
       "id": "u10_10",
@@ -131,7 +135,151 @@
       "exampleVi": "Ngôi nhà hiện đại này tự sản xuất năng lượng xanh.",
       "emoji": "🏡",
       "audio": "/assets/audio/unit10/modern.mp3",
-      "audioExample": "/assets/audio/unit10/modern-example.mp3"
+      "audioExample": "/assets/audio/unit10/modern-example.mp3",
+      "extended": true
+    },
+    {
+      "id": "u10_11",
+      "word": "electric cooker",
+      "phonetic": "/ɪˌlektrɪk ˈkʊkə/",
+      "wordType": "Danh từ",
+      "meaning": "Nồi cơm điện, bếp điện",
+      "hint": "Giúp nấu cơm",
+      "exampleEn": "An electric cooker can cook rice.",
+      "exampleVi": "Nồi cơm điện có thể nấu cơm.",
+      "emoji": "🍚",
+      "audio": "/assets/audio/unit10/electric-cooker.mp3",
+      "audioExample": "/assets/audio/unit10/electric-cooker-example.mp3"
+    },
+    {
+      "id": "u10_12",
+      "word": "washing machine",
+      "phonetic": "/ˈwɒʃɪŋ məˌʃiːn/",
+      "wordType": "Danh từ",
+      "meaning": "Máy giặt",
+      "hint": "Giúp giặt và vắt quần áo",
+      "exampleEn": "The washing machine washes our clothes.",
+      "exampleVi": "Máy giặt giặt quần áo cho chúng ta.",
+      "emoji": "🧺",
+      "audio": "/assets/audio/unit10/washing-machine.mp3",
+      "audioExample": "/assets/audio/unit10/washing-machine-example.mp3"
+    },
+    {
+      "id": "u10_13",
+      "word": "electric fan",
+      "phonetic": "/ɪˌlektrɪk ˈfæn/",
+      "wordType": "Danh từ",
+      "meaning": "Quạt điện",
+      "hint": "Làm mát khi trời nóng",
+      "exampleEn": "Please turn on the electric fan.",
+      "exampleVi": "Làm ơn bật quạt điện lên.",
+      "emoji": "🌀",
+      "audio": "/assets/audio/unit10/electric-fan.mp3",
+      "audioExample": "/assets/audio/unit10/electric-fan-example.mp3"
+    },
+    {
+      "id": "u10_14",
+      "word": "smart clock",
+      "phonetic": "/ˌsmɑːt ˈklɒk/",
+      "wordType": "Danh từ",
+      "meaning": "Đồng hồ thông minh",
+      "hint": "Đồng hồ biết báo thức, nói chuyện",
+      "exampleEn": "My smart clock wakes me up at six.",
+      "exampleVi": "Đồng hồ thông minh đánh thức em lúc sáu giờ.",
+      "emoji": "⏰",
+      "audio": "/assets/audio/unit10/smart-clock.mp3",
+      "audioExample": "/assets/audio/unit10/smart-clock-example.mp3"
+    },
+    {
+      "id": "u10_15",
+      "word": "computer",
+      "phonetic": "/kəmˈpjuːtə/",
+      "wordType": "Danh từ",
+      "meaning": "Máy vi tính",
+      "hint": "Dùng để gửi và nhận email",
+      "exampleEn": "I use the computer to send emails.",
+      "exampleVi": "Em dùng máy tính để gửi email.",
+      "emoji": "💻",
+      "audio": "/assets/audio/unit10/computer.mp3",
+      "audioExample": "/assets/audio/unit10/computer-example.mp3"
+    },
+    {
+      "id": "u10_16",
+      "word": "UFO",
+      "phonetic": "/ˌjuː ef ˈəʊ/",
+      "wordType": "Danh từ",
+      "meaning": "Đĩa bay",
+      "hint": "Unidentified Flying Object",
+      "exampleEn": "His future house looks like a UFO.",
+      "exampleVi": "Ngôi nhà tương lai của bạn ấy trông giống đĩa bay.",
+      "emoji": "👽",
+      "audio": "/assets/audio/unit10/ufo.mp3",
+      "audioExample": "/assets/audio/unit10/ufo-example.mp3"
+    },
+    {
+      "id": "u10_17",
+      "word": "cottage",
+      "phonetic": "/ˈkɒtɪdʒ/",
+      "wordType": "Danh từ",
+      "meaning": "Nhà tranh, nhà nhỏ ở quê",
+      "hint": "Ngôi nhà nhỏ ở nông thôn",
+      "exampleEn": "My grandparents live in a cottage.",
+      "exampleVi": "Ông bà em sống trong một ngôi nhà nhỏ ở quê.",
+      "emoji": "🛖",
+      "audio": "/assets/audio/unit10/cottage.mp3",
+      "audioExample": "/assets/audio/unit10/cottage-example.mp3"
+    },
+    {
+      "id": "u10_18",
+      "word": "helicopter",
+      "phonetic": "/ˈhelɪkɒptə/",
+      "wordType": "Danh từ",
+      "meaning": "Máy bay lên thẳng, trực thăng",
+      "hint": "Bay lên thẳng được",
+      "exampleEn": "We might travel by helicopter.",
+      "exampleVi": "Chúng ta có thể sẽ đi lại bằng trực thăng.",
+      "emoji": "🚁",
+      "audio": "/assets/audio/unit10/helicopter.mp3",
+      "audioExample": "/assets/audio/unit10/helicopter-example.mp3"
+    },
+    {
+      "id": "u10_19",
+      "word": "hi-tech",
+      "phonetic": "/ˌhaɪ ˈtek/",
+      "wordType": "Tính từ",
+      "meaning": "Công nghệ cao",
+      "hint": "high technology",
+      "exampleEn": "My future house will be hi-tech.",
+      "exampleVi": "Ngôi nhà tương lai của em sẽ có công nghệ cao.",
+      "emoji": "🔬",
+      "audio": "/assets/audio/unit10/hi-tech.mp3",
+      "audioExample": "/assets/audio/unit10/hi-tech-example.mp3"
+    },
+    {
+      "id": "u10_20",
+      "word": "housework",
+      "phonetic": "/ˈhaʊswɜːk/",
+      "wordType": "Danh từ",
+      "meaning": "Việc nhà",
+      "hint": "do housework: làm việc nhà",
+      "exampleEn": "Robots will do the housework for us.",
+      "exampleVi": "Người máy sẽ làm việc nhà giúp chúng ta.",
+      "emoji": "🧹",
+      "audio": "/assets/audio/unit10/housework.mp3",
+      "audioExample": "/assets/audio/unit10/housework-example.mp3"
+    },
+    {
+      "id": "u10_21",
+      "word": "robot",
+      "phonetic": "/ˈrəʊbɒt/",
+      "wordType": "Danh từ",
+      "meaning": "Người máy",
+      "hint": "Máy có thể tự làm việc",
+      "exampleEn": "My house might have ten robots.",
+      "exampleVi": "Nhà em có thể sẽ có mười người máy.",
+      "emoji": "🤖",
+      "audio": "/assets/audio/unit10/robot.mp3",
+      "audioExample": "/assets/audio/unit10/robot-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -448,121 +596,159 @@
   "bookVolume": 2,
   "bookPages": "Trang 38 – 47",
   "pronunciation": {
-    "pair": "/dr/ & /tr/",
-    "title": "Phân biệt cặp phụ âm đôi: /dr/ (Đờ-rờ) & /tr/ (Tờ-rờ)",
+    "pair": "Oo & oO",
+    "title": "Trọng âm của từ có 2 âm tiết (Stress in two-syllable words)",
     "sound1": {
-      "symbol": "/dr/",
-      "name": "Cụm âm /dr/",
-      "guideVi": "Đầu lưỡi chạm nướu phát âm /d/ rồi cong lưỡi lướt nhanh sang /r/ có rung thanh.",
+      "symbol": "Oo",
+      "name": "Nhấn âm tiết thứ nhất",
+      "guideVi": "Đọc âm tiết đầu to, rõ và dài hơn; âm tiết sau đọc nhẹ. Phần lớn danh từ 2 âm tiết nhấn ở âm đầu: ˈpicture, ˈrobot.",
       "words": [
         {
-          "word": "draw",
-          "highlight": "dr",
-          "meaning": "vẽ tranh"
+          "word": "picture",
+          "highlight": "pic",
+          "meaning": "bức tranh"
         },
         {
-          "word": "dream",
-          "highlight": "dr",
-          "meaning": "giấc mơ"
+          "word": "robot",
+          "highlight": "ro",
+          "meaning": "người máy"
         },
         {
-          "word": "drive",
-          "highlight": "dr",
-          "meaning": "lái xe"
+          "word": "kitchen",
+          "highlight": "kit",
+          "meaning": "nhà bếp"
         },
         {
-          "word": "drink",
-          "highlight": "dr",
-          "meaning": "đồ uống"
+          "word": "housework",
+          "highlight": "house",
+          "meaning": "việc nhà"
+        },
+        {
+          "word": "palace",
+          "highlight": "pal",
+          "meaning": "cung điện"
+        },
+        {
+          "word": "village",
+          "highlight": "vil",
+          "meaning": "ngôi làng"
         }
       ]
     },
     "sound2": {
-      "symbol": "/tr/",
-      "name": "Cụm âm /tr/",
-      "guideVi": "Đầu lưỡi chạm nướu phát âm /t/ rồi bật nhanh sang /r/ tống luồng hơi gió mạnh.",
+      "symbol": "oO",
+      "name": "Nhấn âm tiết thứ hai",
+      "guideVi": "Âm tiết đầu đọc nhẹ, âm tiết sau to và rõ. Nhiều từ có tiền tố be-, a- nhấn âm sau: beˈhind, aˈbout.",
       "words": [
         {
-          "word": "travel",
-          "highlight": "tr",
-          "meaning": "du lịch"
+          "word": "machine",
+          "highlight": "chine",
+          "meaning": "máy móc"
         },
         {
-          "word": "tree",
-          "highlight": "tr",
-          "meaning": "cái cây"
+          "word": "hotel",
+          "highlight": "tel",
+          "meaning": "khách sạn"
         },
         {
-          "word": "traffic",
-          "highlight": "tr",
-          "meaning": "giao thông"
+          "word": "behind",
+          "highlight": "hind",
+          "meaning": "phía sau"
         },
         {
-          "word": "train",
-          "highlight": "tr",
-          "meaning": "xe lửa"
+          "word": "about",
+          "highlight": "bout",
+          "meaning": "về"
+        },
+        {
+          "word": "today",
+          "highlight": "day",
+          "meaning": "hôm nay"
+        },
+        {
+          "word": "police",
+          "highlight": "lice",
+          "meaning": "cảnh sát"
         }
       ]
     },
     "practiceQuiz": [
       {
-        "word": "draw",
-        "meaning": "vẽ",
-        "correctSound": "/dr/",
+        "word": "robot",
+        "meaning": "người máy",
+        "correctSound": "Oo",
         "options": [
-          "/dr/",
-          "/tr/"
+          "Oo",
+          "oO"
         ]
       },
       {
-        "word": "travel",
-        "meaning": "du lịch",
-        "correctSound": "/tr/",
+        "word": "machine",
+        "meaning": "máy móc",
+        "correctSound": "oO",
         "options": [
-          "/dr/",
-          "/tr/"
+          "Oo",
+          "oO"
         ]
       },
       {
-        "word": "dream",
-        "meaning": "giấc mơ",
-        "correctSound": "/dr/",
+        "word": "bedroom",
+        "meaning": "phòng ngủ",
+        "correctSound": "Oo",
         "options": [
-          "/dr/",
-          "/tr/"
+          "Oo",
+          "oO"
         ]
       },
       {
-        "word": "tree",
-        "meaning": "cái cây",
-        "correctSound": "/tr/",
+        "word": "hotel",
+        "meaning": "khách sạn",
+        "correctSound": "oO",
         "options": [
-          "/dr/",
-          "/tr/"
+          "Oo",
+          "oO"
         ]
       },
       {
-        "word": "drive",
-        "meaning": "lái xe",
-        "correctSound": "/dr/",
+        "word": "mountains",
+        "meaning": "núi",
+        "correctSound": "Oo",
         "options": [
-          "/dr/",
-          "/tr/"
+          "Oo",
+          "oO"
         ]
       },
       {
-        "word": "train",
-        "meaning": "xe lửa",
-        "correctSound": "/tr/",
+        "word": "behind",
+        "meaning": "phía sau",
+        "correctSound": "oO",
         "options": [
-          "/dr/",
-          "/tr/"
+          "Oo",
+          "oO"
+        ]
+      },
+      {
+        "word": "housework",
+        "meaning": "việc nhà",
+        "correctSound": "Oo",
+        "options": [
+          "Oo",
+          "oO"
+        ]
+      },
+      {
+        "word": "today",
+        "meaning": "hôm nay",
+        "correctSound": "oO",
+        "options": [
+          "Oo",
+          "oO"
         ]
       }
     ],
     "tongueTwister": {
-      "en": "Children dream to travel by train and draw green trees.",
-      "vi": "Trẻ em mơ ước được đi du lịch bằng tàu hỏa và vẽ những hàng cây xanh."
+      "en": "The robot helps me to do the housework in the kitchen.",
+      "vi": "Người máy giúp em làm việc nhà trong bếp."
     }
   }
 }

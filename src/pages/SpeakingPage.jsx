@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { listUnits, getUnit } from '../utils/data.js';
 import { PageHeader, Button3D } from '../components/ui.jsx';
 import SpeakingStation from '../components/stations/SpeakingStation.jsx';
+import StationRunner from '../components/StationRunner.jsx';
 import { playSfx } from '../utils/sfx.js';
 import { BookOpen } from 'lucide-react';
 
@@ -11,12 +12,12 @@ export default function SpeakingPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const paramUnit = parseInt(searchParams.get('unit'), 10);
 
-  const initialId = Number.isFinite(paramUnit) && paramUnit >= 1 && paramUnit <= 12 ? paramUnit : 1;
+  const initialId = Number.isFinite(paramUnit) && paramUnit >= 1 && units.some((u) => u.unitId === paramUnit) ? paramUnit : 1;
   const [selectedUnitId, setSelectedUnitId] = useState(initialId);
   const currentUnit = getUnit(selectedUnitId);
 
   useEffect(() => {
-    if (Number.isFinite(paramUnit) && paramUnit >= 1 && paramUnit <= 12 && paramUnit !== selectedUnitId) {
+    if (Number.isFinite(paramUnit) && paramUnit >= 1 && units.some((u) => u.unitId === paramUnit) && paramUnit !== selectedUnitId) {
       setSelectedUnitId(paramUnit);
     }
   }, [paramUnit, selectedUnitId]);
@@ -88,7 +89,7 @@ export default function SpeakingPage() {
 
       {/* Trạm Luyện Nói của Unit được chọn */}
       {currentUnit && (
-        <SpeakingStation unit={currentUnit} onFinish={() => {}} />
+        <StationRunner Station={SpeakingStation} unit={currentUnit} mode="speaking" />
       )}
     </div>
   );

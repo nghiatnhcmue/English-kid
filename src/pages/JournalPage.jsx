@@ -228,7 +228,7 @@ export default function JournalPage() {
           <h2 className="mb-3 text-2xl font-black text-ink">{t.journal.tests}</h2>
           <ul className="flex flex-col gap-3">
             {tests.map((test) => {
-              const wrong = [...new Set(test.answers.filter((a) => !a.correct).map((a) => a.wordId))];
+              const wrong = [...new Set((test.answers || []).filter((a) => !a.correct).map((a) => a.wordId))];
               return (
                 <li
                   key={test.id}

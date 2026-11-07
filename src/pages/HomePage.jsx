@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { listUnits } from '../utils/data.js';
 import { store, totalStarsOf } from '../utils/storage.js';
@@ -31,10 +31,22 @@ export default function HomePage() {
     return unfinished || available[0];
   }, [units, progress]);
 
-  // Kiểm tra bài tập được Giáo viên giao
-  const activeAssignments = useMemo(() => {
-    return store().getAssignments().filter((a) => a.status !== 'closed');
+  // Bài giao của thầy cô (tải từ máy chủ): chỉ bài đang mở, đúng lớp của em, còn hạn
+  const [assignTick, setAssignTick] = useState(0);
+  useEffect(() => {
+    const bump = () => setAssignTick((n) => n + 1);
+    window.addEventListener('assignment-updated', bump);
+    return () => window.removeEventListener('assignment-updated', bump);
   }, []);
+  const activeAssignments = useMemo(() => {
+    const myClass = String(student.class || '').trim().toLowerCase();
+    const today = new Date().toISOString().slice(0, 10);
+    return store()
+      .getAssignments()
+      .filter((a) => a.status !== 'closed')
+      .filter((a) => !a.targetClass || a.targetClass === 'all' || !myClass || String(a.targetClass).trim().toLowerCase() === myClass)
+      .filter((a) => !/^\d{4}-\d{2}-\d{2}/.test(String(a.deadline || '')) || String(a.deadline).slice(0, 10) >= today);
+  }, [assignTick, student.class]);
 
   const assignedItem = useMemo(() => {
     if (typeof window === 'undefined') return null;
@@ -43,19 +55,22 @@ export default function HomePage() {
     const params = new URLSearchParams(queryPart);
     const assignCode = params.get('assign');
     if (assignCode) {
+      // Link có mã bài: mở đúng bài đó (kể cả khi quá hạn, để em vẫn làm bù được)
       return store().getAssignmentById(assignCode) || activeAssignments[0] || null;
     }
     return activeAssignments[0] || null;
   }, [activeAssignments]);
 
   // Tự động mở bài tập nếu học sinh mở link chia sẻ từ Thầy/Cô (?assign=CODE)
+  const autoOpenedRef = useRef(null);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const hash = window.location.hash || '';
     const queryPart = hash.includes('?') ? hash.split('?')[1] : window.location.search.replace('?', '');
     const params = new URLSearchParams(queryPart);
     const assignCode = params.get('assign');
-    if (assignCode && assignedItem) {
+    if (assignCode && assignedItem && autoOpenedRef.current !== assignedItem.id) {
+      autoOpenedRef.current = assignedItem.id; // chỉ tự mở 1 lần cho mỗi link
       if (
         assignedItem.scopeType === 'external_quiz' ||
         assignedItem.scopeType === 'custom_questions' ||
@@ -78,7 +93,8 @@ export default function HomePage() {
       return `/unit/${assignedItem.unitId}`;
     }
     if (assignedItem.scopeType === 'custom_words') {
-      return `/practice/${assignedItem.unitId}`;
+      const ids = (assignedItem.selectedWordIds || []).join(',');
+      return `/unit/${assignedItem.unitId}/flashcard${ids ? `?words=${encodeURIComponent(ids)}` : ''}`;
     }
     return `/unit/${assignedItem.unitId}`;
   }, [assignedItem]);

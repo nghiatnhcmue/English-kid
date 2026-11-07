@@ -79,7 +79,8 @@
       "exampleVi": "Dòng sông bị ô nhiễm bởi chất thải hóa học.",
       "emoji": "🏭",
       "audio": "/assets/audio/unit11/polluted.mp3",
-      "audioExample": "/assets/audio/unit11/polluted-example.mp3"
+      "audioExample": "/assets/audio/unit11/polluted-example.mp3",
+      "extended": true
     },
     {
       "id": "u11_07",
@@ -91,7 +92,7 @@
       "exampleEn": "Planting trees helps protect the green environment.",
       "exampleVi": "Trồng cây xanh giúp bảo vệ môi trường trong lành.",
       "emoji": "🌍",
-      "audio": "/assets/audio/unit11/environment.mp3",
+      "audio": "/assets/audio/unit11/environment-v2.mp3",
       "audioExample": "/assets/audio/unit11/environment-example.mp3"
     },
     {
@@ -118,7 +119,8 @@
       "exampleVi": "Chúng ta phải bảo vệ rừng và thiên nhiên xanh.",
       "emoji": "🛡️",
       "audio": "/assets/audio/unit11/protect.mp3",
-      "audioExample": "/assets/audio/unit11/protect-example.mp3"
+      "audioExample": "/assets/audio/unit11/protect-example.mp3",
+      "extended": true
     },
     {
       "id": "u11_10",
@@ -131,7 +133,138 @@
       "exampleVi": "Tắt đèn khi không dùng giúp tiết kiệm năng lượng.",
       "emoji": "💡",
       "audio": "/assets/audio/unit11/save-energy.mp3",
-      "audioExample": "/assets/audio/unit11/save-energy-example.mp3"
+      "audioExample": "/assets/audio/unit11/save-energy-example.mp3",
+      "extended": true
+    },
+    {
+      "id": "u11_11",
+      "word": "plastic bottle",
+      "phonetic": "/ˌplæstɪk ˈbɒtl/",
+      "wordType": "Danh từ",
+      "meaning": "Chai nhựa",
+      "hint": "Có thể tái chế",
+      "exampleEn": "We can recycle plastic bottles.",
+      "exampleVi": "Chúng ta có thể tái chế chai nhựa.",
+      "emoji": "🍼",
+      "audio": "/assets/audio/unit11/plastic-bottle.mp3",
+      "audioExample": "/assets/audio/unit11/plastic-bottle-example.mp3"
+    },
+    {
+      "id": "u11_12",
+      "word": "glass",
+      "phonetic": "/ɡlɑːs/",
+      "wordType": "Danh từ",
+      "meaning": "Thủy tinh",
+      "hint": "Danh từ không đếm được khi chỉ chất liệu",
+      "exampleEn": "Put the glass in the recycling bin.",
+      "exampleVi": "Hãy bỏ đồ thủy tinh vào thùng tái chế.",
+      "emoji": "🫙",
+      "audio": "/assets/audio/unit11/glass.mp3",
+      "audioExample": "/assets/audio/unit11/glass-example.mp3"
+    },
+    {
+      "id": "u11_13",
+      "word": "paper",
+      "phonetic": "/ˈpeɪpə/",
+      "wordType": "Danh từ",
+      "meaning": "Giấy",
+      "hint": "Có thể tái chế thành giấy mới",
+      "exampleEn": "Use both sides of the paper.",
+      "exampleVi": "Hãy dùng cả hai mặt giấy.",
+      "emoji": "📄",
+      "audio": "/assets/audio/unit11/paper.mp3",
+      "audioExample": "/assets/audio/unit11/paper-example.mp3"
+    },
+    {
+      "id": "u11_14",
+      "word": "noise",
+      "phonetic": "/nɔɪz/",
+      "wordType": "Danh từ",
+      "meaning": "Tiếng ồn",
+      "hint": "Nên giảm tiếng ồn (reduce noise)",
+      "exampleEn": "We should reduce noise at night.",
+      "exampleVi": "Chúng ta nên giảm tiếng ồn vào ban đêm.",
+      "emoji": "🔊",
+      "audio": "/assets/audio/unit11/noise.mp3",
+      "audioExample": "/assets/audio/unit11/noise-example.mp3"
+    },
+    {
+      "id": "u11_15",
+      "word": "reusable",
+      "phonetic": "/ˌriːˈjuːzəbl/",
+      "wordType": "Tính từ",
+      "meaning": "Có thể dùng lại",
+      "hint": "reuse (dùng lại) + able",
+      "exampleEn": "I use a reusable shopping bag.",
+      "exampleVi": "Em dùng túi mua sắm có thể dùng lại.",
+      "emoji": "👜",
+      "audio": "/assets/audio/unit11/reusable.mp3",
+      "audioExample": "/assets/audio/unit11/reusable-example.mp3"
+    },
+    {
+      "id": "u11_16",
+      "word": "recycling bin",
+      "phonetic": "/ˌriːˈsaɪklɪŋ bɪn/",
+      "wordType": "Danh từ",
+      "meaning": "Thùng rác tái chế",
+      "hint": "Thùng đựng rác có thể tái chế",
+      "exampleEn": "Put the paper in the recycling bin.",
+      "exampleVi": "Hãy bỏ giấy vào thùng rác tái chế.",
+      "emoji": "🚮",
+      "audio": "/assets/audio/unit11/recycling-bin.mp3",
+      "audioExample": "/assets/audio/unit11/recycling-bin-example.mp3"
+    },
+    {
+      "id": "u11_17",
+      "word": "charity",
+      "phonetic": "/ˈtʃærəti/",
+      "wordType": "Danh từ",
+      "meaning": "Hội từ thiện, việc từ thiện",
+      "hint": "Giúp đỡ người khó khăn",
+      "exampleEn": "We give old clothes to charity.",
+      "exampleVi": "Chúng em tặng quần áo cũ cho hội từ thiện.",
+      "emoji": "💝",
+      "audio": "/assets/audio/unit11/charity.mp3",
+      "audioExample": "/assets/audio/unit11/charity-example.mp3"
+    },
+    {
+      "id": "u11_18",
+      "word": "go green",
+      "phonetic": "/ɡəʊ ˈɡriːn/",
+      "wordType": "Cụm động từ",
+      "meaning": "Sống xanh, thân thiện với môi trường",
+      "hint": "Làm những việc tốt cho môi trường",
+      "exampleEn": "Let's go green and cycle to school.",
+      "exampleVi": "Hãy sống xanh và đạp xe đến trường nào.",
+      "emoji": "🌱",
+      "audio": "/assets/audio/unit11/go-green.mp3",
+      "audioExample": "/assets/audio/unit11/go-green-example.mp3"
+    },
+    {
+      "id": "u11_19",
+      "word": "exchange",
+      "phonetic": "/ɪksˈtʃeɪndʒ/",
+      "wordType": "Động từ",
+      "meaning": "Trao đổi",
+      "hint": "Đổi đồ cũ lấy đồ khác",
+      "exampleEn": "We exchange old books with our friends.",
+      "exampleVi": "Chúng em trao đổi sách cũ với bạn bè.",
+      "emoji": "🤲",
+      "audio": "/assets/audio/unit11/exchange.mp3",
+      "audioExample": "/assets/audio/unit11/exchange-example.mp3"
+    },
+    {
+      "id": "u11_20",
+      "word": "wrap",
+      "phonetic": "/ræp/",
+      "wordType": "Động từ",
+      "meaning": "Gói, bọc",
+      "hint": "Chữ w không đọc: /ræp/",
+      "exampleEn": "Don't wrap food in plastic bags.",
+      "exampleVi": "Đừng gói đồ ăn bằng túi nilon.",
+      "emoji": "🎁",
+      "audio": "/assets/audio/unit11/wrap.mp3",
+      "audioExample": "/assets/audio/unit11/wrap-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -449,121 +582,159 @@
   "bookVolume": 2,
   "bookPages": "Trang 48 – 57",
   "pronunciation": {
-    "pair": "/ɑː/ & /æ/",
-    "title": "Phân biệt cặp nguyên âm: /ɑː/ (A sâu dài) & /æ/ (E bẹt rộng)",
+    "pair": "Nhấn & Lướt",
+    "title": "Nhịp điệu trong câu (Rhythm in sentences)",
     "sound1": {
-      "symbol": "/ɑː/",
-      "name": "Âm A sâu dài",
-      "guideVi": "Hạ hàm mở rộng khoang miệng, âm phát ra trầm sâu từ cuống họng.",
+      "symbol": "Nhấn",
+      "name": "Từ được nhấn (đọc to, rõ)",
+      "guideVi": "Danh từ, động từ chính, tính từ mang nghĩa quan trọng nên được nhấn: If you CYcle, it’ll HELP the EARTH.",
       "words": [
         {
-          "word": "plant",
-          "highlight": "a",
-          "meaning": "trồng cây"
+          "word": "cycle",
+          "highlight": "",
+          "meaning": "đạp xe"
         },
         {
-          "word": "fast",
-          "highlight": "a",
-          "meaning": "nhanh nhẹn"
+          "word": "Earth",
+          "highlight": "",
+          "meaning": "Trái Đất"
         },
         {
-          "word": "father",
-          "highlight": "a",
-          "meaning": "người cha"
+          "word": "water",
+          "highlight": "",
+          "meaning": "nước"
         },
         {
-          "word": "park",
-          "highlight": "ar",
-          "meaning": "công viên"
+          "word": "garden",
+          "highlight": "",
+          "meaning": "khu vườn"
+        },
+        {
+          "word": "happy",
+          "highlight": "",
+          "meaning": "vui vẻ"
+        },
+        {
+          "word": "trees",
+          "highlight": "",
+          "meaning": "cây cối"
         }
       ]
     },
     "sound2": {
-      "symbol": "/æ/",
-      "name": "Âm E bẹt",
-      "guideVi": "Kéo khóe miệng sang hai bên và hạ cằm hết cỡ, âm lai giữa a và e.",
+      "symbol": "Lướt",
+      "name": "Từ đọc lướt (nhẹ, nhanh)",
+      "guideVi": "Mạo từ, giới từ, đại từ, trợ động từ thường đọc nhẹ và nhanh để giữ nhịp: a, the, to, for, is, are.",
       "words": [
         {
-          "word": "plastic",
-          "highlight": "a",
-          "meaning": "nhựa"
+          "word": "the",
+          "highlight": "",
+          "meaning": "mạo từ"
         },
         {
-          "word": "bag",
-          "highlight": "a",
-          "meaning": "túi xách"
+          "word": "a",
+          "highlight": "",
+          "meaning": "một"
         },
         {
-          "word": "environment",
-          "highlight": "a",
-          "meaning": "môi trường"
+          "word": "to",
+          "highlight": "",
+          "meaning": "đến, để"
         },
         {
-          "word": "recycle",
-          "highlight": "a",
-          "meaning": "tái chế"
+          "word": "for",
+          "highlight": "",
+          "meaning": "cho"
+        },
+        {
+          "word": "is",
+          "highlight": "",
+          "meaning": "thì, là"
+        },
+        {
+          "word": "are",
+          "highlight": "",
+          "meaning": "thì, là"
         }
       ]
     },
     "practiceQuiz": [
       {
-        "word": "plant",
-        "meaning": "trồng cây",
-        "correctSound": "/ɑː/",
+        "word": "water",
+        "meaning": "nước",
+        "correctSound": "Nhấn",
         "options": [
-          "/ɑː/",
-          "/æ/"
+          "Nhấn",
+          "Lướt"
         ]
       },
       {
-        "word": "plastic",
-        "meaning": "chất nhựa",
-        "correctSound": "/æ/",
+        "word": "the",
+        "meaning": "mạo từ",
+        "correctSound": "Lướt",
         "options": [
-          "/ɑː/",
-          "/æ/"
-        ]
-      },
-      {
-        "word": "fast",
-        "meaning": "nhanh",
-        "correctSound": "/ɑː/",
-        "options": [
-          "/ɑː/",
-          "/æ/"
-        ]
-      },
-      {
-        "word": "bag",
-        "meaning": "túi xách",
-        "correctSound": "/æ/",
-        "options": [
-          "/ɑː/",
-          "/æ/"
-        ]
-      },
-      {
-        "word": "park",
-        "meaning": "công viên",
-        "correctSound": "/ɑː/",
-        "options": [
-          "/ɑː/",
-          "/æ/"
+          "Nhấn",
+          "Lướt"
         ]
       },
       {
         "word": "recycle",
         "meaning": "tái chế",
-        "correctSound": "/æ/",
+        "correctSound": "Nhấn",
         "options": [
-          "/ɑː/",
-          "/æ/"
+          "Nhấn",
+          "Lướt"
+        ]
+      },
+      {
+        "word": "to",
+        "meaning": "đến, để",
+        "correctSound": "Lướt",
+        "options": [
+          "Nhấn",
+          "Lướt"
+        ]
+      },
+      {
+        "word": "school",
+        "meaning": "trường học",
+        "correctSound": "Nhấn",
+        "options": [
+          "Nhấn",
+          "Lướt"
+        ]
+      },
+      {
+        "word": "for",
+        "meaning": "cho",
+        "correctSound": "Lướt",
+        "options": [
+          "Nhấn",
+          "Lướt"
+        ]
+      },
+      {
+        "word": "plastic",
+        "meaning": "nhựa",
+        "correctSound": "Nhấn",
+        "options": [
+          "Nhấn",
+          "Lướt"
+        ]
+      },
+      {
+        "word": "a",
+        "meaning": "một",
+        "correctSound": "Lướt",
+        "options": [
+          "Nhấn",
+          "Lướt"
         ]
       }
     ],
     "tongueTwister": {
-      "en": "Do not throw plastic bags in the park, plant green trees fast!",
-      "vi": "Đừng vứt túi nhựa trong công viên, hãy nhanh chóng trồng thêm cây xanh!"
+      "en": "We reuse bags and recycle bottles to help the Earth.",
+      "vi": "Chúng em dùng lại túi và tái chế chai để giúp Trái Đất."
     }
   }
 }

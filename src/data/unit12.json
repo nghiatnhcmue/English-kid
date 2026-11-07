@@ -5,29 +5,29 @@
   "vocabularies": [
     {
       "id": "u12_01",
-      "word": "guard the house",
-      "phonetic": "/ˌɡɑːd ðə ˈhaʊs/",
+      "word": "work as a guard",
+      "phonetic": "/wɜːk əz ə ɡɑːd/",
       "wordType": "Cụm động từ",
-      "meaning": "Canh giữ nhà cửa",
+      "meaning": "Làm bảo vệ, canh gác",
       "hint": "Bảo vệ an ninh nhà cửa chống trộm cắp",
-      "exampleEn": "The smart robot will guard the house when we go away.",
-      "exampleVi": "Người máy thông minh sẽ canh giữ nhà cửa khi chúng ta đi vắng.",
+      "exampleEn": "This robot can work as a guard at night.",
+      "exampleVi": "Người máy này có thể làm bảo vệ vào ban đêm.",
       "emoji": "🛡️",
-      "audio": "/assets/audio/unit12/guard-the-house.mp3",
-      "audioExample": "/assets/audio/unit12/guard-the-house-example.mp3"
+      "audio": "/assets/audio/unit12/work-as-a-guard.mp3",
+      "audioExample": "/assets/audio/unit12/work-as-a-guard-example.mp3"
     },
     {
       "id": "u12_02",
-      "word": "lift heavy things",
-      "phonetic": "/ˌlɪft ˈhevi θɪŋz/",
+      "word": "move heavy things",
+      "phonetic": "/muːv ˈhevi θɪŋz/",
       "wordType": "Cụm động từ",
-      "meaning": "Nâng các vật nặng",
+      "meaning": "Di chuyển đồ vật nặng",
       "hint": "Khuân vác đồ đạc to lớn cồng kềnh với sức mạnh cơ bắp máy",
-      "exampleEn": "Robots with strong arms can lift heavy things easily.",
-      "exampleVi": "Robot với cánh tay khỏe có thể nâng các vật nặng một cách dễ dàng.",
+      "exampleEn": "A worker robot can move heavy things.",
+      "exampleVi": "Người máy công nhân có thể di chuyển đồ vật nặng.",
       "emoji": "🏋️",
-      "audio": "/assets/audio/unit12/lift-heavy-things.mp3",
-      "audioExample": "/assets/audio/unit12/lift-heavy-things-example.mp3"
+      "audio": "/assets/audio/unit12/move-heavy-things.mp3",
+      "audioExample": "/assets/audio/unit12/move-heavy-things-example.mp3"
     },
     {
       "id": "u12_03",
@@ -40,7 +40,8 @@
       "exampleVi": "Người máy gia đình sẽ dọn dẹp giường ngủ vào mỗi sáng.",
       "emoji": "🛏️",
       "audio": "/assets/audio/unit12/make-the-bed.mp3",
-      "audioExample": "/assets/audio/unit12/make-the-bed-example.mp3"
+      "audioExample": "/assets/audio/unit12/make-the-bed-example.mp3",
+      "extended": true
     },
     {
       "id": "u12_04",
@@ -66,7 +67,8 @@
       "exampleVi": "Trợ lý AI có thể nhận diện giọng nói và khẩu lệnh rất nhanh.",
       "emoji": "🎙️",
       "audio": "/assets/audio/unit12/recognise-voice.mp3",
-      "audioExample": "/assets/audio/unit12/recognise-voice-example.mp3"
+      "audioExample": "/assets/audio/unit12/recognise-voice-example.mp3",
+      "extended": true
     },
     {
       "id": "u12_06",
@@ -96,16 +98,16 @@
     },
     {
       "id": "u12_08",
-      "word": "water flowers",
-      "phonetic": "/ˌwɔːtə ˈflaʊəz/",
+      "word": "water plants",
+      "phonetic": "/ˈwɔːtə plɑːnts/",
       "wordType": "Cụm động từ",
-      "meaning": "Tưới hoa",
+      "meaning": "Tưới cây",
       "hint": "Tưới nước cho chậu hoa, cây cảnh trong vườn tươi tốt",
-      "exampleEn": "The garden robot can water flowers every afternoon.",
-      "exampleVi": "Người máy làm vườn có thể tưới hoa vào mỗi buổi chiều.",
+      "exampleEn": "I often water plants after school.",
+      "exampleVi": "Em thường tưới cây sau giờ học.",
       "emoji": "🌻",
-      "audio": "/assets/audio/unit12/water-flowers.mp3",
-      "audioExample": "/assets/audio/unit12/water-flowers-example.mp3"
+      "audio": "/assets/audio/unit12/water-plants.mp3",
+      "audioExample": "/assets/audio/unit12/water-plants-example.mp3"
     },
     {
       "id": "u12_09",
@@ -118,20 +120,138 @@
       "exampleVi": "Trợ lý thông minh giải đáp mọi câu hỏi của em.",
       "emoji": "🤖",
       "audio": "/assets/audio/unit12/smart-assistant.mp3",
-      "audioExample": "/assets/audio/unit12/smart-assistant-example.mp3"
+      "audioExample": "/assets/audio/unit12/smart-assistant-example.mp3",
+      "extended": true
     },
     {
       "id": "u12_10",
-      "word": "understand",
-      "phonetic": "/ˌʌndəˈstænd/",
-      "wordType": "Động từ",
-      "meaning": "Thấu hiểu, hiểu",
+      "word": "understand our feelings",
+      "phonetic": "/ˌʌndəˈstænd ˈaʊə ˈfiːlɪŋz/",
+      "wordType": "Cụm động từ",
+      "meaning": "Hiểu cảm xúc của chúng ta",
       "hint": "Khả năng nắm bắt ý nghĩa hoặc cảm xúc của người khác",
-      "exampleEn": "Future robots will understand human emotions.",
-      "exampleVi": "Robot tương lai sẽ thấu hiểu cảm xúc con người.",
+      "exampleEn": "Robots cannot understand our feelings yet.",
+      "exampleVi": "Người máy chưa thể hiểu cảm xúc của chúng ta.",
       "emoji": "🧠",
-      "audio": "/assets/audio/unit12/understand.mp3",
-      "audioExample": "/assets/audio/unit12/understand-example.mp3"
+      "audio": "/assets/audio/unit12/understand-our-feelings.mp3",
+      "audioExample": "/assets/audio/unit12/understand-our-feelings-example.mp3"
+    },
+    {
+      "id": "u12_11",
+      "word": "do the dishes",
+      "phonetic": "/duː ðə ˈdɪʃɪz/",
+      "wordType": "Cụm động từ",
+      "meaning": "Rửa bát đĩa",
+      "hint": "Việc nhà sau bữa ăn",
+      "exampleEn": "This robot can do the dishes.",
+      "exampleVi": "Người máy này có thể rửa bát.",
+      "emoji": "🍽️",
+      "audio": "/assets/audio/unit12/do-the-dishes.mp3",
+      "audioExample": "/assets/audio/unit12/do-the-dishes-example.mp3"
+    },
+    {
+      "id": "u12_12",
+      "word": "do the washing",
+      "phonetic": "/duː ðə ˈwɒʃɪŋ/",
+      "wordType": "Cụm động từ",
+      "meaning": "Giặt quần áo",
+      "hint": "Việc nhà với quần áo bẩn",
+      "exampleEn": "Can your robot do the washing?",
+      "exampleVi": "Người máy của bạn có giặt đồ được không?",
+      "emoji": "👕",
+      "audio": "/assets/audio/unit12/do-the-washing.mp3",
+      "audioExample": "/assets/audio/unit12/do-the-washing-example.mp3"
+    },
+    {
+      "id": "u12_13",
+      "word": "put toys away",
+      "phonetic": "/pʊt tɔɪz əˈweɪ/",
+      "wordType": "Cụm động từ",
+      "meaning": "Cất đồ chơi đi",
+      "hint": "put … away: cất gọn",
+      "exampleEn": "H8 can put toys away.",
+      "exampleVi": "H8 có thể cất đồ chơi gọn gàng.",
+      "emoji": "🧸",
+      "audio": "/assets/audio/unit12/put-toys-away.mp3",
+      "audioExample": "/assets/audio/unit12/put-toys-away-example.mp3"
+    },
+    {
+      "id": "u12_14",
+      "word": "pick fruit",
+      "phonetic": "/pɪk fruːt/",
+      "wordType": "Cụm động từ",
+      "meaning": "Hái quả",
+      "hint": "pick: hái (hoa, quả)",
+      "exampleEn": "I can pick fruit in the garden.",
+      "exampleVi": "Em có thể hái quả trong vườn.",
+      "emoji": "🍎",
+      "audio": "/assets/audio/unit12/pick-fruit.mp3",
+      "audioExample": "/assets/audio/unit12/pick-fruit-example.mp3"
+    },
+    {
+      "id": "u12_15",
+      "word": "repair",
+      "phonetic": "/rɪˈpeə/",
+      "wordType": "Động từ",
+      "meaning": "Sửa chữa",
+      "hint": "Làm cho đồ hỏng chạy lại",
+      "exampleEn": "It can repair broken machines.",
+      "exampleVi": "Nó có thể sửa máy móc bị hỏng.",
+      "emoji": "🛠️",
+      "audio": "/assets/audio/unit12/repair.mp3",
+      "audioExample": "/assets/audio/unit12/repair-example.mp3"
+    },
+    {
+      "id": "u12_16",
+      "word": "space station",
+      "phonetic": "/ˈspeɪs ˌsteɪʃn/",
+      "wordType": "Danh từ",
+      "meaning": "Trạm vũ trụ",
+      "hint": "Nơi làm việc ngoài không gian",
+      "exampleEn": "Robots can work at a space station.",
+      "exampleVi": "Người máy có thể làm việc ở trạm vũ trụ.",
+      "emoji": "🛰️",
+      "audio": "/assets/audio/unit12/space-station.mp3",
+      "audioExample": "/assets/audio/unit12/space-station-example.mp3"
+    },
+    {
+      "id": "u12_17",
+      "word": "planet",
+      "phonetic": "/ˈplænɪt/",
+      "wordType": "Danh từ",
+      "meaning": "Hành tinh",
+      "hint": "Trái Đất là một hành tinh",
+      "exampleEn": "Mars is a red planet.",
+      "exampleVi": "Sao Hỏa là một hành tinh màu đỏ.",
+      "emoji": "🪐",
+      "audio": "/assets/audio/unit12/planet.mp3",
+      "audioExample": "/assets/audio/unit12/planet-example.mp3"
+    },
+    {
+      "id": "u12_18",
+      "word": "useful",
+      "phonetic": "/ˈjuːsfl/",
+      "wordType": "Tính từ",
+      "meaning": "Hữu ích, có ích",
+      "hint": "use (dùng) + ful",
+      "exampleEn": "A home robot is very useful.",
+      "exampleVi": "Người máy gia đình rất hữu ích.",
+      "emoji": "👍",
+      "audio": "/assets/audio/unit12/useful.mp3",
+      "audioExample": "/assets/audio/unit12/useful-example.mp3"
+    },
+    {
+      "id": "u12_19",
+      "word": "broken",
+      "phonetic": "/ˈbrəʊkən/",
+      "wordType": "Tính từ",
+      "meaning": "Bị hỏng, bị vỡ",
+      "hint": "Không dùng được nữa",
+      "exampleEn": "My bike is broken.",
+      "exampleVi": "Xe đạp của em bị hỏng.",
+      "emoji": "💔",
+      "audio": "/assets/audio/unit12/broken.mp3",
+      "audioExample": "/assets/audio/unit12/broken-example.mp3"
     }
   ],
   "extraQuestions": [],
@@ -450,121 +570,121 @@
   "bookVolume": 2,
   "bookPages": "Trang 58 – 67",
   "pronunciation": {
-    "pair": "/ɔɪ/ & /aɪ/",
-    "title": "Phân biệt cặp nguyên âm đôi: /ɔɪ/ (Oi) & /aɪ/ (Ai)",
+    "pair": "↘ & ↗",
+    "title": "Ngữ điệu xuống trong câu trần thuật (Falling tone in statements)",
     "sound1": {
-      "symbol": "/ɔɪ/",
-      "name": "Âm /ɔɪ/",
-      "guideVi": "Bắt đầu từ âm /ɔ/ chu tròn môi rồi trượt mỉm cười sang âm /ɪ/, tương tự âm \"oi\".",
+      "symbol": "↘",
+      "name": "Câu trần thuật: giọng đi xuống",
+      "guideVi": "Khi kể hoặc nói một điều, giọng hạ xuống ở cuối câu: We go to school every morning ↘.",
       "words": [
         {
-          "word": "voice",
-          "highlight": "oi",
-          "meaning": "giọng nói"
+          "word": "I often water plants.",
+          "highlight": "",
+          "meaning": "Em thường tưới cây."
         },
         {
-          "word": "boy",
-          "highlight": "oy",
-          "meaning": "cậu bé"
+          "word": "H8 is a home robot.",
+          "highlight": "",
+          "meaning": "H8 là người máy gia đình."
         },
         {
-          "word": "toy",
-          "highlight": "oy",
-          "meaning": "đồ chơi"
+          "word": "It can do the dishes.",
+          "highlight": "",
+          "meaning": "Nó có thể rửa bát."
         },
         {
-          "word": "noise",
-          "highlight": "oi",
-          "meaning": "tiếng ồn"
+          "word": "My dad makes meals.",
+          "highlight": "",
+          "meaning": "Bố em nấu ăn."
         }
       ]
     },
     "sound2": {
-      "symbol": "/aɪ/",
-      "name": "Âm /aɪ/",
-      "guideVi": "Mở rộng miệng phát âm /a/ rồi mỉm cười lướt nhanh sang /ɪ/, tương tự âm \"ai\".",
+      "symbol": "↗",
+      "name": "Câu hỏi Có/Không: giọng đi lên",
+      "guideVi": "So sánh: câu hỏi Yes/No thường lên giọng ở cuối: Can it do the dishes ↗?",
       "words": [
         {
-          "word": "like",
-          "highlight": "i",
-          "meaning": "yêu thích"
+          "word": "Can it do the dishes?",
+          "highlight": "",
+          "meaning": "Nó rửa bát được không?"
         },
         {
-          "word": "high",
-          "highlight": "igh",
-          "meaning": "trên cao"
+          "word": "Is it a home robot?",
+          "highlight": "",
+          "meaning": "Đó là người máy gia đình à?"
         },
         {
-          "word": "climb",
-          "highlight": "i",
-          "meaning": "leo trèo"
+          "word": "Can you pick fruit?",
+          "highlight": "",
+          "meaning": "Bạn hái quả được không?"
         },
         {
-          "word": "right",
-          "highlight": "igh",
-          "meaning": "chính xác"
+          "word": "Do you like robots?",
+          "highlight": "",
+          "meaning": "Bạn thích người máy không?"
         }
       ]
     },
     "practiceQuiz": [
       {
-        "word": "voice",
-        "meaning": "giọng nói",
-        "correctSound": "/ɔɪ/",
+        "word": "Robots can repair broken machines.",
+        "meaning": "Người máy có thể sửa máy hỏng.",
+        "correctSound": "↘",
         "options": [
-          "/ɔɪ/",
-          "/aɪ/"
+          "↘",
+          "↗"
         ]
       },
       {
-        "word": "like",
-        "meaning": "thích",
-        "correctSound": "/aɪ/",
+        "word": "Can your robot iron clothes?",
+        "meaning": "Người máy của bạn ủi đồ được không?",
+        "correctSound": "↗",
         "options": [
-          "/ɔɪ/",
-          "/aɪ/"
+          "↘",
+          "↗"
         ]
       },
       {
-        "word": "boy",
-        "meaning": "cậu bé",
-        "correctSound": "/ɔɪ/",
+        "word": "WB2 is the strongest robot.",
+        "meaning": "WB2 là người máy khỏe nhất.",
+        "correctSound": "↘",
         "options": [
-          "/ɔɪ/",
-          "/aɪ/"
+          "↘",
+          "↗"
         ]
       },
       {
-        "word": "high",
-        "meaning": "cao",
-        "correctSound": "/aɪ/",
+        "word": "Is it useful?",
+        "meaning": "Nó có hữu ích không?",
+        "correctSound": "↗",
         "options": [
-          "/ɔɪ/",
-          "/aɪ/"
+          "↘",
+          "↗"
         ]
       },
       {
-        "word": "toy",
-        "meaning": "đồ chơi",
-        "correctSound": "/ɔɪ/",
+        "word": "I can pick fruit.",
+        "meaning": "Em có thể hái quả.",
+        "correctSound": "↘",
         "options": [
-          "/ɔɪ/",
-          "/aɪ/"
+          "↘",
+          "↗"
         ]
       },
       {
-        "word": "climb",
-        "meaning": "leo trèo",
-        "correctSound": "/aɪ/",
+        "word": "Can it understand our feelings?",
+        "meaning": "Nó có hiểu cảm xúc của chúng ta không?",
+        "correctSound": "↗",
         "options": [
-          "/ɔɪ/",
-          "/aɪ/"
+          "↘",
+          "↗"
         ]
       }
     ],
     "tongueTwister": {
-      "en": "The robot with a soft voice likes to climb high.",
-      "vi": "Chú robot có giọng nói ấm áp thích leo lên những nơi cao."
+      "en": "My robot can do the washing, but it can’t understand my feelings.",
+      "vi": "Người máy của em giặt đồ được nhưng không hiểu cảm xúc của em."
     }
   }
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { listUnits, getUnit } from '../utils/data.js';
 import { PageHeader } from '../components/ui.jsx';
 import GrammarStation from '../components/stations/GrammarStation.jsx';
+import StationRunner from '../components/StationRunner.jsx';
 import { playSfx } from '../utils/sfx.js';
 
 export default function GrammarPage() {
@@ -63,7 +64,7 @@ export default function GrammarPage() {
             <span className="text-4xl shrink-0" aria-hidden>{currentUnit.emoji}</span>
           </div>
 
-          <GrammarStation unit={currentUnit} onFinish={() => {}} />
+          <StationRunner Station={GrammarStation} unit={currentUnit} mode="grammar" />
         </section>
       )}
     </div>

@@ -1,14 +1,32 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { Users, UserPlus, KeyRound, Pencil, Trash2, Printer, Check, X, Sparkles, School, Search, FileText, Lock } from 'lucide-react';
 import { Button3D } from './ui.jsx';
-import { store } from '../utils/storage.js';
+import { store, randomPin } from '../utils/storage.js';
+import { fetchTeacherStudents, syncStudents, toServerStudent } from '../utils/api.js';
 import { playSfx } from '../utils/sfx.js';
 
 const AVATARS = ['🦁', '🦊', '🐱', '🐼', '🚀', '🦄', '⚽', '🎨', '📚', '🎒', '⭐', '🐬'];
 
 export default function TeacherStudentManager() {
-  const [students, setStudents] = useState(() => store().getStudents());
+  const [students, setStudents] = useState(() => store().getStudents().filter((x) => !x.demo));
+  const [syncMsg, setSyncMsg] = useState(null); // { tone: 'ok' | 'error', text }
+
+  // Danh sách trên máy chủ là chuẩn: em nào chưa có trên máy này thì thêm vào (PIN chỉ lưu trên máy thầy cô)
+  useEffect(() => {
+    fetchTeacherStudents().then((remote) => {
+      if (!remote) return setSyncMsg({ tone: 'error', text: '📡 Chưa tải được danh sách từ máy chủ – đang xem danh sách trên máy này.' });
+      store().mergeRoster(remote);
+      setStudents(store().getStudents().filter((x) => !x.demo));
+    });
+  }, []);
+
+  const pushToServer = async (change, okText) => {
+    setSyncMsg({ tone: 'ok', text: '⏳ Đang lưu lên máy chủ…' });
+    const r = await syncStudents(change);
+    setSyncMsg(r.success ? { tone: 'ok', text: okText } : { tone: 'error', text: `⚠️ ${r.error} Học sinh chưa đăng nhập được bằng tài khoản này.` });
+    return r;
+  };
   const [selectedClass, setSelectedClass] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -21,12 +39,12 @@ export default function TeacherStudentManager() {
   const [formName, setFormName] = useState('');
   const [formClass, setFormClass] = useState('6A1');
   const [formUsername, setFormUsername] = useState('');
-  const [formPassword, setFormPassword] = useState('123');
+  const [formPassword, setFormPassword] = useState('');
   const [formAvatar, setFormAvatar] = useState('🦁');
 
   // Form batch import
   const [batchClass, setBatchClass] = useState('6A1');
-  const [batchDefaultPassword, setBatchDefaultPassword] = useState('123');
+  const [batchDefaultPassword, setBatchDefaultPassword] = useState(''); // trống = mỗi em một PIN ngẫu nhiên
   const [batchNamesText, setBatchNamesText] = useState('');
 
   // Danh sách các lớp
@@ -61,7 +79,7 @@ export default function TeacherStudentManager() {
     setFormName('');
     setFormClass(selectedClass !== 'all' ? selectedClass : '6A1');
     setFormUsername('');
-    setFormPassword('123');
+    setFormPassword(randomPin());
     setFormAvatar(AVATARS[Math.floor(Math.random() * AVATARS.length)]);
   };
 
@@ -72,59 +90,92 @@ export default function TeacherStudentManager() {
     setFormName(stu.name || '');
     setFormClass(stu.class || '6A1');
     setFormUsername(stu.username || '');
-    setFormPassword(stu.password || '123');
+    setFormPassword(stu.password || '');
     setFormAvatar(stu.avatar || '🦁');
   };
 
-  // Lưu học sinh
-  const handleSaveStudent = (e) => {
+  // Lưu học sinh (trên máy + máy chủ)
+  const handleSaveStudent = async (e) => {
     e?.preventDefault();
     if (!formName.trim()) return;
-
+    const pin = formPassword.trim();
+    if (pin && !/^\d{4,8}$/.test(pin)) {
+      alert('Mã PIN là 4–8 chữ số (bàn phím đăng nhập của học sinh chỉ có số).');
+      return;
+    }
     const isNew = !editingStudent.id;
-    const cleanUsername = formUsername.trim() || 
-      (isNew ? `${formName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')}${formClass.toLowerCase()}` : editingStudent.username);
+    const cleanUsername = (
+      formUsername.trim() ||
+      (isNew
+        ? `${formName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '')}${formClass.toLowerCase().replace(/[^a-z0-9]/g, '')}`
+        : editingStudent.username)
+    ).toLowerCase();
+    const clash = store()
+      .getStudents()
+      .find((x) => x.id !== editingStudent.id && String(x.username).toLowerCase() === cleanUsername);
+    if (clash) {
+      alert(`Tên đăng nhập "${cleanUsername}" đã dùng cho ${clash.name} (${clash.class}). Hãy đặt tên khác.`);
+      return;
+    }
 
     const saved = store().saveStudent({
       id: editingStudent.id,
       name: formName.trim(),
       class: formClass.trim() || '6A1',
       username: cleanUsername,
-      password: formPassword.trim() || '123',
+      password: pin || (isNew ? randomPin() : ''),
       avatar: formAvatar,
     });
 
-    setStudents(store().getStudents());
+    setStudents(store().getStudents().filter((x) => !x.demo));
     setEditingStudent(null);
     playSfx('victory');
     confetti({ particleCount: 35, spread: 60, origin: { y: 0.6 } });
+    const pinChanged = isNew || (pin && pin !== editingStudent.password);
+    await pushToServer({ upsert: [{ ...toServerStudent(saved), pin: pinChanged ? saved.password : undefined }] }, `✅ Đã lưu ${saved.name} lên máy chủ.`);
   };
 
   // Xóa học sinh
-  const handleDeleteStudent = (stu) => {
+  const handleDeleteStudent = async (stu) => {
     if (window.confirm(`Thầy cô có chắc chắn muốn xóa tài khoản học sinh "${stu.name}" (${stu.class}) không?`)) {
       playSfx('click');
       store().deleteStudent(stu.id);
-      setStudents(store().getStudents());
+      setStudents(store().getStudents().filter((x) => !x.demo));
+      await pushToServer({ remove: [stu.id] }, `🗑️ Đã xóa ${stu.name} trên máy chủ.`);
     }
   };
 
   // Nhập hàng loạt cả lớp
-  const handleBatchImport = (e) => {
+  const handleBatchImport = async (e) => {
     e?.preventDefault();
     if (!batchNamesText.trim()) return;
-
-    const added = store().batchImportStudents(batchNamesText, batchClass, batchDefaultPassword);
-    setStudents(store().getStudents());
+    const pin = batchDefaultPassword.trim();
+    if (pin && !/^\d{4,8}$/.test(pin)) {
+      alert('Mã PIN chung phải là 4–8 chữ số, hoặc để trống để mỗi em có một mã ngẫu nhiên.');
+      return;
+    }
+    const added = store().batchImportStudents(batchNamesText, batchClass, pin);
+    setStudents(store().getStudents().filter((x) => !x.demo));
     setShowBatchModal(false);
     setBatchNamesText('');
     playSfx('victory');
     confetti({ particleCount: 60, spread: 80, origin: { y: 0.6 } });
-    alert(`🎉 Đã tạo thành công ${added.length} tài khoản học sinh cho Lớp ${batchClass}!`);
+    const r = await pushToServer({ upsert: added.map(toServerStudent) }, `🎉 Đã tạo ${added.length} tài khoản lớp ${batchClass} trên máy chủ. Bấm "In phiếu" để phát mã PIN cho các em.`);
+    if (!r.success) alert(`Đã tạo ${added.length} tài khoản trên máy này nhưng CHƯA lưu được lên máy chủ: ${r.error}`);
   };
 
   return (
     <div className="flex flex-col gap-5">
+      {syncMsg && (
+        <p
+          role="status"
+          className={`rounded-2xl px-4 py-2.5 text-sm font-black border ${
+            syncMsg.tone === 'error' ? 'bg-rose-50 text-rose-700 border-rose-200' : 'bg-mint-soft text-mint-dark border-mint/30'
+          }`}
+        >
+          {syncMsg.text}
+        </p>
+      )}
       {/* Thẻ điều khiển & Thống kê */}
       <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
@@ -257,7 +308,7 @@ export default function TeacherStudentManager() {
                     <td className="py-3 px-3">
                       <div className="flex items-center gap-2">
                         <span className="rounded-xl bg-banana-soft/60 px-2.5 py-1 font-mono font-black text-ink text-sm border border-banana">
-                          {stu.password || '123'}
+                          {stu.password || <span title="Mã PIN chỉ lưu trên máy đã tạo. Sửa học sinh để đặt mã mới.">🔒 ẩn</span>}
                         </span>
                       </div>
                     </td>
@@ -371,14 +422,14 @@ export default function TeacherStudentManager() {
               {/* Mật khẩu */}
               <div>
                 <label className="block text-xs font-black text-ink mb-1">
-                  Mật khẩu học sinh (Mặc định: 123):
+                  Mã PIN đăng nhập (4–8 chữ số; để trống khi sửa = giữ mã cũ):
                 </label>
                 <input
                   type="text"
-                  required
+                  inputMode="numeric"
                   value={formPassword}
-                  onChange={(e) => setFormPassword(e.target.value)}
-                  placeholder="Nhập mật khẩu (ví dụ: 123 hoặc 1234)"
+                  onChange={(e) => setFormPassword(e.target.value.replace(/\D/g, '').slice(0, 8))}
+                  placeholder="vd: 4821"
                   className="w-full rounded-2xl bg-cream px-4 py-2.5 text-sm font-bold text-ink border-2 border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana font-mono"
                 />
               </div>
@@ -472,14 +523,14 @@ export default function TeacherStudentManager() {
                 </div>
                 <div>
                   <label className="block text-xs font-black text-ink mb-1">
-                    Mật khẩu mặc định:
+                    Mã PIN chung (để trống = mỗi em một mã ngẫu nhiên):
                   </label>
                   <input
                     type="text"
-                    required
+                    inputMode="numeric"
                     value={batchDefaultPassword}
-                    onChange={(e) => setBatchDefaultPassword(e.target.value)}
-                    placeholder="Mặc định: 123"
+                    onChange={(e) => setBatchDefaultPassword(e.target.value.replace(/\D/g, '').slice(0, 8))}
+                    placeholder="Để trống (khuyên dùng)"
                     className="w-full rounded-2xl bg-cream px-4 py-2.5 text-sm font-bold text-ink border-2 border-banana-soft font-mono"
                   />
                 </div>
@@ -575,7 +626,7 @@ export default function TeacherStudentManager() {
                   <span className="text-[11px] font-bold text-ink-soft">Lớp: {stu.class}</span>
                   <div className="mt-1 pt-1 border-t border-banana-soft/60 text-left text-[11px] font-mono">
                     <div>Mã: <strong className="text-sky-dark">{stu.username || stu.id}</strong></div>
-                    <div>Pass: <strong className="text-peach-dark">{stu.password || '123'}</strong></div>
+                    <div>Mã PIN: <strong className="text-peach-dark">{stu.password || '(hỏi thầy cô)'}</strong></div>
                   </div>
                 </div>
               ))}

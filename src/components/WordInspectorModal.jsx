@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { X, Rotate3d, Smartphone, RotateCcw } from 'lucide-react';
 import ModelView, { applyModelColor } from './ModelView.jsx';
-import { SpeakerButton, SlowSpeakerButton } from './ui.jsx';
+import { SpeakerButton, SlowSpeakerButton, ExtendedBadge } from './ui.jsx';
 import { speak } from '../utils/speech.js';
 import { playSfx } from '../utils/sfx.js';
 import { useSettings } from '../settings.jsx';
@@ -46,7 +46,7 @@ export default function WordInspectorModal({ word, onClose }) {
     if (applyModelColor(mvRef.current, c?.hex ?? null)) {
       setColor(c?.hex ?? null);
     }
-    if (c) speak(`${c.en}!`, settings);
+    if (c) speak(c.en, settings);
   };
 
   if (!word) return null;
@@ -132,6 +132,7 @@ export default function WordInspectorModal({ word, onClose }) {
                 <span className="rounded-full bg-banana-soft px-3 py-0.5 text-ink font-black">
                   {word.wordType}
                 </span>
+                <ExtendedBadge word={word} />
                 {word.hint && <span>💡 {word.hint}</span>}
               </div>
             </div>

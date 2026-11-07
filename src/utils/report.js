@@ -1,7 +1,9 @@
 import { formatViDate } from './dates.js';
 
-const esc = (v) => {
-  const s = String(v ?? '');
+export const esc = (v) => {
+  let s = String(v ?? '');
+  // Chống "CSV injection": ô bắt đầu bằng = + - @ (hoặc tab/CR) sẽ bị Excel chạy như công thức → thêm dấu ' phía trước
+  if (/^[=+\-@\t\r]/.test(s) && !/^-?\d+([.,]\d+)?$/.test(s)) s = `'${s}`;
   return /[",\n;]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
 
@@ -10,7 +12,7 @@ export function testsToCsv(tests, wordLookup) {
   const header = ['Ngày', 'Tuần', 'Unit', 'Số câu đúng', 'Tổng số câu', 'Điểm (thang 10)', 'Số sao', 'Từ làm sai'];
   const rows = tests.map((t) => {
     const wrong = [
-      ...new Set(t.answers.filter((a) => !a.correct).map((a) => wordLookup(a.wordId)?.word ?? a.wordId)),
+      ...new Set((t.answers || []).filter((a) => !a.correct).map((a) => wordLookup(a.wordId)?.word ?? a.wordId)),
     ];
     return [
       formatViDate(t.isoDate),

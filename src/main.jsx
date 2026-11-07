@@ -8,8 +8,11 @@ import './index.css';
 // Tự động reload trang ngay khi Service Worker bản mới claims clients (F5 / cập nhật code)
 if ('serviceWorker' in navigator) {
   let refreshing = false;
+  // Lần đầu mở app: SW mới cài cũng bắn 'controllerchange' → KHÔNG reload (nếu không trang tự tải lại
+  // vài giây sau khi mở và xóa mất chữ em đang gõ). Chỉ reload khi đã có SW cũ, tức là có bản cập nhật.
+  const hadController = !!navigator.serviceWorker.controller;
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (!refreshing) {
+    if (hadController && !refreshing) {
       refreshing = true;
       window.location.reload();
     }

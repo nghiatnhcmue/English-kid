@@ -29,7 +29,7 @@ export default function TeacherClassProgress() {
     setIsSyncing(true);
     playSfx('click');
     try {
-      const res = await fetchTeacherScores(selectedClass);
+      const res = await fetchTeacherScores(selectedClass, 'all');
       setRemoteScores(res.data || []);
       playSfx('correct');
     } catch {
@@ -65,15 +65,21 @@ export default function TeacherClassProgress() {
   const getStudentUnitStatus = (student, unitId) => {
     const numId = Number(unitId);
     const stuProg = allProgress[student.id]?.units?.[numId] || {};
-    const modes = stuProg.modes || {};
+    const modes = { ...(stuProg.modes || {}) };
 
-    // Tìm trong kết quả đồng bộ remote xem có bài thi hay bài tập của học sinh này không
-    const studentRemote = remoteScores.filter(
+    // Kết quả từ máy chủ (mọi máy học sinh): khớp theo id tài khoản; bản ghi cũ chưa có id thì khớp theo tên
+    const mine = remoteScores.filter(
       (r) =>
-        r.studentName?.toLowerCase() === student.name?.toLowerCase() &&
+        (r.studentId ? r.studentId === student.id : r.studentName?.toLowerCase() === student.name?.toLowerCase()) &&
         Array.isArray(r.unitIds) &&
         r.unitIds.includes(numId)
     );
+    for (const r of mine) {
+      if (r.kind !== 'station') continue;
+      const key = r.answers?.[0]?.station;
+      if (key) modes[key] = Math.max(modes[key] || 0, Number(r.stars) || 1);
+    }
+    const studentRemote = mine.filter((r) => r.kind !== 'station');
 
     const hasVocab = (modes.flashcard || 0) > 0 || (modes.matching || 0) > 0;
     const hasListening = (modes.listenstation || 0) > 0 || (modes.listening || 0) > 0;

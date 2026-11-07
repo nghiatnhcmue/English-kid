@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { getUnit, getWord, allWords } from '../utils/data.js';
 import { store } from '../utils/storage.js';
 import { wordsByStatus } from '../utils/mastery.js';
@@ -37,6 +37,9 @@ const COMPONENTS = {
 /** Chạy 1 chế độ ôn cho 1 Unit, hoặc cho danh sách "Từ khó" (review). */
 export default function PracticePage({ review = false }) {
   const { unitId, mode } = useParams();
+  const [searchParams] = useSearchParams();
+  // Bài giao "chọn từ vựng": ?words=u1_01,u1_05 → chỉ luyện những từ thầy cô chọn
+  const onlyIds = (searchParams.get('words') || '').split(',').map((x) => x.trim()).filter(Boolean);
   const unit = review ? null : getUnit(unitId);
   const [round, setRound] = useState(0);
   const [result, setResult] = useState(null);
@@ -46,8 +49,11 @@ export default function PracticePage({ review = false }) {
       const hard = wordsByStatus(store().getMastery(), 'review').map(getWord).filter(Boolean);
       return { words: hard, pool: allWords() };
     }
-    return { words: unit?.vocabularies ?? [], pool: unit?.vocabularies ?? [] };
-  }, [review, unit]);
+    const all = unit?.vocabularies ?? [];
+    const chosen = onlyIds.length ? all.filter((w) => onlyIds.includes(w.id)) : all;
+    return { words: chosen.length ? chosen : all, pool: all };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [review, unit, onlyIds.join(',')]);
 
   const Mode = COMPONENTS[mode];
   const backTo = review ? '/journal' : `/unit/${unitId}`;

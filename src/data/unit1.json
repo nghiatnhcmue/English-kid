@@ -101,7 +101,8 @@
       "emoji": "📏",
       "model3d": "/assets/models/unit1/ruler.glb",
       "audio": "/assets/audio/unit1/ruler.mp3",
-      "audioExample": "/assets/audio/unit1/ruler-example.mp3"
+      "audioExample": "/assets/audio/unit1/ruler-example.mp3",
+      "extended": true
     },
     {
       "id": "u1_08",
@@ -115,7 +116,8 @@
       "emoji": "📘",
       "model3d": "/assets/models/unit1/textbook.glb",
       "audio": "/assets/audio/unit1/textbook.mp3",
-      "audioExample": "/assets/audio/unit1/textbook-example.mp3"
+      "audioExample": "/assets/audio/unit1/textbook-example.mp3",
+      "extended": true
     },
     {
       "id": "u1_09",
@@ -195,7 +197,7 @@
       "exampleVi": "Chúng em có môn Khoa học vào thứ Ba.",
       "emoji": "🔬",
       "model3d": "/assets/models/unit1/science.glb",
-      "audio": "/assets/audio/unit1/science.mp3",
+      "audio": "/assets/audio/unit1/science-v2.mp3",
       "audioExample": "/assets/audio/unit1/science-example.mp3"
     },
     {
@@ -224,7 +226,151 @@
       "emoji": "🎨",
       "model3d": "/assets/models/unit1/creative.glb",
       "audio": "/assets/audio/unit1/creative.mp3",
-      "audioExample": "/assets/audio/unit1/creative-example.mp3"
+      "audioExample": "/assets/audio/unit1/creative-example.mp3",
+      "extended": true
+    },
+    {
+      "id": "u1_17",
+      "word": "art",
+      "phonetic": "/ɑːt/",
+      "wordType": "Danh từ",
+      "meaning": "Môn Mĩ thuật",
+      "hint": "Môn học vẽ tranh, tô màu, nặn tượng",
+      "exampleEn": "I have art on Friday.",
+      "exampleVi": "Em có tiết Mĩ thuật vào thứ Sáu.",
+      "emoji": "🖌️",
+      "audio": "/assets/audio/unit1/art.mp3",
+      "audioExample": "/assets/audio/unit1/art-example.mp3"
+    },
+    {
+      "id": "u1_18",
+      "word": "music",
+      "phonetic": "/ˈmjuːzɪk/",
+      "wordType": "Danh từ",
+      "meaning": "Môn Âm nhạc",
+      "hint": "Môn học hát và chơi nhạc cụ",
+      "exampleEn": "We study music in the morning.",
+      "exampleVi": "Chúng em học Âm nhạc vào buổi sáng.",
+      "emoji": "🎵",
+      "audio": "/assets/audio/unit1/music.mp3",
+      "audioExample": "/assets/audio/unit1/music-example.mp3"
+    },
+    {
+      "id": "u1_19",
+      "word": "lessons",
+      "phonetic": "/ˈlesnz/",
+      "wordType": "Danh từ",
+      "meaning": "Các tiết học, bài học",
+      "hint": "Đi với động từ have: have lessons",
+      "exampleEn": "We have five lessons today.",
+      "exampleVi": "Hôm nay chúng em có năm tiết học.",
+      "emoji": "📖",
+      "audio": "/assets/audio/unit1/lessons.mp3",
+      "audioExample": "/assets/audio/unit1/lessons-example.mp3"
+    },
+    {
+      "id": "u1_20",
+      "word": "exercise",
+      "phonetic": "/ˈeksəsaɪz/",
+      "wordType": "Danh từ",
+      "meaning": "Bài tập thể dục",
+      "hint": "Đi với động từ do: do exercise",
+      "exampleEn": "My dad does exercise every morning.",
+      "exampleVi": "Bố em tập thể dục mỗi sáng.",
+      "emoji": "🤸",
+      "audio": "/assets/audio/unit1/exercise.mp3",
+      "audioExample": "/assets/audio/unit1/exercise-example.mp3"
+    },
+    {
+      "id": "u1_21",
+      "word": "school lunch",
+      "phonetic": "/ˌskuːl ˈlʌntʃ/",
+      "wordType": "Cụm từ",
+      "meaning": "Bữa trưa ở trường",
+      "hint": "Đi với động từ have: have school lunch",
+      "exampleEn": "We have school lunch at twelve.",
+      "exampleVi": "Chúng em ăn trưa ở trường lúc mười hai giờ.",
+      "emoji": "🍱",
+      "audio": "/assets/audio/unit1/school-lunch.mp3",
+      "audioExample": "/assets/audio/unit1/school-lunch-example.mp3"
+    },
+    {
+      "id": "u1_22",
+      "word": "favourite",
+      "phonetic": "/ˈfeɪvərɪt/",
+      "wordType": "Tính từ",
+      "meaning": "Được yêu thích nhất",
+      "hint": "Viết kiểu Anh – Anh có chữ u: favourite",
+      "exampleEn": "English is my favourite subject.",
+      "exampleVi": "Tiếng Anh là môn học em yêu thích nhất.",
+      "emoji": "❤️",
+      "audio": "/assets/audio/unit1/favourite.mp3",
+      "audioExample": "/assets/audio/unit1/favourite-example.mp3"
+    },
+    {
+      "id": "u1_23",
+      "word": "smart",
+      "phonetic": "/smɑːt/",
+      "wordType": "Tính từ",
+      "meaning": "Bảnh bao, gọn gàng",
+      "hint": "Mặc đồng phục trông thật smart",
+      "exampleEn": "You look smart in your uniform.",
+      "exampleVi": "Bạn trông thật gọn gàng trong bộ đồng phục.",
+      "emoji": "✨",
+      "audio": "/assets/audio/unit1/smart.mp3",
+      "audioExample": "/assets/audio/unit1/smart-example.mp3"
+    },
+    {
+      "id": "u1_24",
+      "word": "swimming pool",
+      "phonetic": "/ˈswɪmɪŋ puːl/",
+      "wordType": "Danh từ",
+      "meaning": "Bể bơi",
+      "hint": "Nơi có nước để bơi",
+      "exampleEn": "Our school has a big swimming pool.",
+      "exampleVi": "Trường em có một bể bơi lớn.",
+      "emoji": "🏊",
+      "audio": "/assets/audio/unit1/swimming-pool.mp3",
+      "audioExample": "/assets/audio/unit1/swimming-pool-example.mp3"
+    },
+    {
+      "id": "u1_25",
+      "word": "share",
+      "phonetic": "/ʃeə/",
+      "wordType": "Động từ",
+      "meaning": "Chia sẻ, dùng chung",
+      "hint": "Cùng dùng đồ với bạn",
+      "exampleEn": "I share my pencils with my friend.",
+      "exampleVi": "Em dùng chung bút chì với bạn.",
+      "emoji": "🤝",
+      "audio": "/assets/audio/unit1/share.mp3",
+      "audioExample": "/assets/audio/unit1/share-example.mp3"
+    },
+    {
+      "id": "u1_26",
+      "word": "international",
+      "phonetic": "/ˌɪntəˈnæʃnəl/",
+      "wordType": "Tính từ",
+      "meaning": "Quốc tế",
+      "hint": "Có học sinh hoặc hoạt động của nhiều nước",
+      "exampleEn": "She goes to an international school.",
+      "exampleVi": "Bạn ấy học ở một trường quốc tế.",
+      "emoji": "🌏",
+      "audio": "/assets/audio/unit1/international.mp3",
+      "audioExample": "/assets/audio/unit1/international-example.mp3"
+    },
+    {
+      "id": "u1_27",
+      "word": "remember",
+      "phonetic": "/rɪˈmembə/",
+      "wordType": "Động từ",
+      "meaning": "Nhớ, ghi nhớ",
+      "hint": "Trái nghĩa với forget (quên)",
+      "exampleEn": "Remember to bring your calculator.",
+      "exampleVi": "Nhớ mang máy tính cầm tay nhé.",
+      "emoji": "🧠",
+      "audio": "/assets/audio/unit1/remember.mp3",
+      "audioExample": "/assets/audio/unit1/remember-example.mp3"
     }
   ],
   "extraQuestions": [],

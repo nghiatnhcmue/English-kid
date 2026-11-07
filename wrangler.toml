@@ -5,6 +5,8 @@ main = "src/worker.js"
 [assets]
 directory = "./dist"
 not_found_handling = "single-page-application"
+# /api/* luôn chạy Worker (không bị trả index.html)
+run_worker_first = ["/api/*"]
 
 [[d1_databases]]
 binding = "DB"

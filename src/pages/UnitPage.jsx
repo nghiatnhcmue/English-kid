@@ -8,6 +8,9 @@ import { PageHeader, Stars, Button3D } from '../components/ui.jsx';
 import VocabCard from '../components/VocabCard.jsx';
 import WordInspectorModal from '../components/WordInspectorModal.jsx';
 import LessonVideo from '../components/LessonVideo.jsx';
+import PdfReaderModal, { bookIdForUnit, pdfPageForUnit } from '../components/PdfReaderModal.jsx';
+import { downloadUnitOffline, isUnitOffline } from '../utils/offline.js';
+import { videoEmbedUrl } from '../utils/video.js';
 import { t } from '../i18n/vi.js';
 
 export const MODES = ['flashcard', 'listening', 'matching', 'spelling'];
@@ -24,6 +27,8 @@ export default function UnitPage() {
   const unit = getUnit(unitId);
   const [query, setQuery] = useState('');
   const [inspectWord, setInspectWord] = useState(null);
+  const [showBook, setShowBook] = useState(false);
+  const [offline, setOffline] = useState(() => ({ state: isUnitOffline(unitId) ? 'done' : 'idle', done: 0, total: 0 }));
 
   const unitProgress = store().getProgress().units[unit?.unitId];
   const modeStars = unitProgress?.modes ?? {};
@@ -75,18 +80,49 @@ export default function UnitPage() {
               </strong>
             </div>
             <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
-              Khớp chuẩn 100% các phần: Getting Started · A Closer Look 1 & 2 · Skills 1 & 2 · Looking Back
+              Theo các phần: Getting Started · A Closer Look 1 & 2 · Communication · Skills 1 & 2 · Looking Back
             </p>
           </div>
         </div>
-        <a
-          href={unit.bookVolume === 2 ? "https://hoclieu.vn" : "https://hanhtrangso.nxbgd.vn"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex min-h-10 items-center gap-1.5 rounded-xl bg-cream px-3.5 text-xs font-black text-ink-soft hover:bg-banana hover:text-ink transition-all cursor-pointer border border-[#efe3cc]"
-        >
-          <span>Mở SGK điện tử ↗</span>
-        </a>
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            onClick={() => {
+              playSfx('click');
+              setShowBook(true);
+            }}
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-xl bg-banana px-3.5 text-xs font-black text-ink shadow-[0_2px_0_var(--color-banana-dark)] hover:-translate-y-0.5 transition-all cursor-pointer"
+          >
+            📖 Xem SGK trang {unit.bookStartPage || unit.bookPages?.match(/\d+/)?.[0]}
+          </button>
+          <button
+            type="button"
+            disabled={offline.state === 'loading'}
+            onClick={async () => {
+              playSfx('click');
+              setOffline({ state: 'loading', done: 0, total: 0 });
+              const r = await downloadUnitOffline(unit, (done, total) => setOffline({ state: 'loading', done, total }));
+              setOffline({ state: r.ok ? 'done' : 'partial', done: r.total - r.failed, total: r.total });
+            }}
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-xl bg-white px-3.5 text-xs font-black text-ink-soft border border-[#efe3cc] hover:bg-mint/20 transition-all cursor-pointer disabled:cursor-wait"
+          >
+            {offline.state === 'loading'
+              ? `⏳ Đang tải ${offline.done}/${offline.total}`
+              : offline.state === 'done'
+                ? '✅ Đã tải, học được khi mất mạng'
+                : offline.state === 'partial'
+                  ? `⚠️ Tải được ${offline.done}/${offline.total} – bấm thử lại`
+                  : '⬇️ Tải bài để học offline'}
+          </button>
+          <a
+            href="https://hanhtrangso.nxbgd.vn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-10 items-center gap-1.5 rounded-xl bg-cream px-3.5 text-xs font-black text-ink-soft hover:bg-banana hover:text-ink transition-all cursor-pointer border border-[#efe3cc]"
+          >
+            <span>SGK điện tử NXB ↗</span>
+          </a>
+        </div>
       </aside>
 
       {/* KHỐI 1: BÀI TẬP TỔNG HỢP TOÀN DIỆN UNIT (4 Kỹ Năng + Từ Vựng + Ngữ Pháp) */}
@@ -159,7 +195,7 @@ export default function UnitPage() {
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>🗣️</span>
               <h3 className="text-lg font-black leading-tight text-white">
-                Cặp âm {unit.pronunciation?.pair || 'chuẩn SGK'}
+                Phát âm: {unit.pronunciation?.pair || 'chuẩn SGK'}
               </h3>
             </div>
           </Button3D>
@@ -291,6 +327,26 @@ export default function UnitPage() {
         <LessonVideo video={unit.video} unitTitle={unit.titleEn} />
       )}
 
+      {/* Video thầy cô thêm cho bài này (chỉ YouTube / Vimeo) */}
+      {(unit.videos || []).some((v) => videoEmbedUrl(v.url)) && (
+        <section aria-label="Video thầy cô gửi" className="rounded-3xl bg-white p-5 sm:p-6 shadow-[0_5px_0_#efe3cc] border-2 border-banana-soft">
+          <h2 className="text-lg font-black text-ink">🎬 Video thầy cô gửi</h2>
+          <div className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
+            {unit.videos.filter((v) => videoEmbedUrl(v.url)).map((v) => (
+              <figure key={v.id || v.url} className="flex flex-col gap-2">
+                <div className="aspect-video w-full overflow-hidden rounded-2xl bg-black/10">
+                  <iframe src={videoEmbedUrl(v.url)} title={v.title} className="h-full w-full border-0" loading="lazy" allowFullScreen />
+                </div>
+                <figcaption className="text-sm font-black text-ink">
+                  {v.title}
+                  {v.description && <span className="block text-xs font-bold text-ink-soft">{v.description}</span>}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Danh sách từ vựng trong bài + Ô tìm kiếm từ */}
       <section aria-label={t.unit.vocabList} className="flex flex-col gap-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -342,6 +398,13 @@ export default function UnitPage() {
       </section>
 
       {/* Hộp xem chi tiết mô hình 3D tương tác của từ vựng */}
+      <PdfReaderModal
+        isOpen={showBook}
+        onClose={() => setShowBook(false)}
+        initialBookId={bookIdForUnit(unit)}
+        initialPage={pdfPageForUnit(unit)}
+      />
+
       {inspectWord && (
         <WordInspectorModal
           word={inspectWord}

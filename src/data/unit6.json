@@ -14,7 +14,8 @@
       "exampleVi": "Hoa đào nở rộ khắp nơi vào dịp Tết.",
       "emoji": "🌸",
       "audio": "/assets/audio/unit6/blossom.mp3",
-      "audioExample": "/assets/audio/unit6/blossom-example.mp3"
+      "audioExample": "/assets/audio/unit6/blossom-example.mp3",
+      "extended": true
     },
     {
       "id": "u6_02",
@@ -52,7 +53,7 @@
       "exampleEn": "We visit our relative during the Tet holidays.",
       "exampleVi": "Chúng em đi thăm người bà con họ hàng trong dịp nghỉ Tết.",
       "emoji": "👨‍👩‍👧‍👦",
-      "audio": "/assets/audio/unit6/relative.mp3",
+      "audio": "/assets/audio/unit6/relative-v2.mp3",
       "audioExample": "/assets/audio/unit6/relative-example.mp3"
     },
     {
@@ -66,7 +67,8 @@
       "exampleVi": "Mẹ em đã mua một quyển lịch mới cho mùa xuân.",
       "emoji": "📅",
       "audio": "/assets/audio/unit6/calendar.mp3",
-      "audioExample": "/assets/audio/unit6/calendar-example.mp3"
+      "audioExample": "/assets/audio/unit6/calendar-example.mp3",
+      "extended": true
     },
     {
       "id": "u6_06",
@@ -79,7 +81,8 @@
       "exampleVi": "Mọi người đi lễ chùa để cầu may mắn.",
       "emoji": "🛕",
       "audio": "/assets/audio/unit6/pagoda.mp3",
-      "audioExample": "/assets/audio/unit6/pagoda-example.mp3"
+      "audioExample": "/assets/audio/unit6/pagoda-example.mp3",
+      "extended": true
     },
     {
       "id": "u6_07",
@@ -122,16 +125,16 @@
     },
     {
       "id": "u6_10",
-      "word": "gathering",
-      "phonetic": "/ˈɡæð.ə.rɪŋ/",
-      "wordType": "Danh từ",
+      "word": "family gathering",
+      "phonetic": "/ˌfæməli ˈɡæðərɪŋ/",
+      "wordType": "Cụm từ",
       "meaning": "Sum họp gia đình",
       "hint": "Dịp các thành viên quây quần sum vầy bên nhau ngày Tết",
-      "exampleEn": "Family gathering is a wonderful Tet tradition.",
-      "exampleVi": "Sum họp gia đình là một truyền thống Tết tuyệt vời.",
+      "exampleEn": "Tet is a time for family gatherings.",
+      "exampleVi": "Tết là dịp sum họp gia đình.",
       "emoji": "🥘",
-      "audio": "/assets/audio/unit6/gathering.mp3",
-      "audioExample": "/assets/audio/unit6/gathering-example.mp3"
+      "audio": "/assets/audio/unit6/family-gathering.mp3",
+      "audioExample": "/assets/audio/unit6/family-gathering-example.mp3"
     },
     {
       "id": "u6_11",
@@ -144,7 +147,125 @@
       "exampleVi": "Người xông đất mang lại may mắn cho năm mới.",
       "emoji": "🚶",
       "audio": "/assets/audio/unit6/first-footer.mp3",
-      "audioExample": "/assets/audio/unit6/first-footer-example.mp3"
+      "audioExample": "/assets/audio/unit6/first-footer-example.mp3",
+      "extended": true
+    },
+    {
+      "id": "u6_12",
+      "word": "celebrate",
+      "phonetic": "/ˈselɪbreɪt/",
+      "wordType": "Động từ",
+      "meaning": "Tổ chức, kỉ niệm (ngày lễ)",
+      "hint": "celebrate Tet: đón Tết",
+      "exampleEn": "We celebrate Tet in January or February.",
+      "exampleVi": "Chúng em đón Tết vào tháng Một hoặc tháng Hai.",
+      "emoji": "🎉",
+      "audio": "/assets/audio/unit6/celebrate.mp3",
+      "audioExample": "/assets/audio/unit6/celebrate-example.mp3"
+    },
+    {
+      "id": "u6_13",
+      "word": "cheer",
+      "phonetic": "/tʃɪə/",
+      "wordType": "Động từ",
+      "meaning": "Reo hò, chúc mừng",
+      "hint": "Hô to vui vẻ",
+      "exampleEn": "People cheer at midnight.",
+      "exampleVi": "Mọi người reo hò lúc nửa đêm.",
+      "emoji": "🙌",
+      "audio": "/assets/audio/unit6/cheer.mp3",
+      "audioExample": "/assets/audio/unit6/cheer-example.mp3"
+    },
+    {
+      "id": "u6_14",
+      "word": "behave",
+      "phonetic": "/bɪˈheɪv/",
+      "wordType": "Động từ",
+      "meaning": "Cư xử, đối xử",
+      "hint": "behave well: cư xử ngoan",
+      "exampleEn": "Children should behave well at Tet.",
+      "exampleVi": "Trẻ em nên cư xử ngoan vào dịp Tết.",
+      "emoji": "😇",
+      "audio": "/assets/audio/unit6/behave.mp3",
+      "audioExample": "/assets/audio/unit6/behave-example.mp3"
+    },
+    {
+      "id": "u6_15",
+      "word": "temple",
+      "phonetic": "/ˈtempl/",
+      "wordType": "Danh từ",
+      "meaning": "Ngôi đền",
+      "hint": "go to a temple: đi lễ đền",
+      "exampleEn": "We go to the temple on the first day.",
+      "exampleVi": "Chúng em đi lễ đền vào ngày mùng một.",
+      "emoji": "⛩️",
+      "audio": "/assets/audio/unit6/temple.mp3",
+      "audioExample": "/assets/audio/unit6/temple-example.mp3"
+    },
+    {
+      "id": "u6_16",
+      "word": "fun",
+      "phonetic": "/fʌn/",
+      "wordType": "Danh từ",
+      "meaning": "Niềm vui, sự vui vẻ",
+      "hint": "have fun: vui chơi",
+      "exampleEn": "We have a lot of fun at Tet.",
+      "exampleVi": "Chúng em vui chơi rất nhiều vào dịp Tết.",
+      "emoji": "🥳",
+      "audio": "/assets/audio/unit6/fun.mp3",
+      "audioExample": "/assets/audio/unit6/fun-example.mp3"
+    },
+    {
+      "id": "u6_17",
+      "word": "luck",
+      "phonetic": "/lʌk/",
+      "wordType": "Danh từ",
+      "meaning": "Sự may mắn",
+      "hint": "Good luck! = Chúc may mắn!",
+      "exampleEn": "Red is the colour of luck.",
+      "exampleVi": "Màu đỏ là màu của may mắn.",
+      "emoji": "🍀",
+      "audio": "/assets/audio/unit6/luck.mp3",
+      "audioExample": "/assets/audio/unit6/luck-example.mp3"
+    },
+    {
+      "id": "u6_18",
+      "word": "peach flower",
+      "phonetic": "/ˈpiːtʃ ˌflaʊə/",
+      "wordType": "Danh từ",
+      "meaning": "Hoa đào",
+      "hint": "Hoa ngày Tết ở miền Bắc",
+      "exampleEn": "We decorate our house with peach flowers.",
+      "exampleVi": "Chúng em trang trí nhà bằng hoa đào.",
+      "emoji": "💮",
+      "audio": "/assets/audio/unit6/peach-flower.mp3",
+      "audioExample": "/assets/audio/unit6/peach-flower-example.mp3"
+    },
+    {
+      "id": "u6_19",
+      "word": "shopping",
+      "phonetic": "/ˈʃɒpɪŋ/",
+      "wordType": "Danh từ",
+      "meaning": "Việc mua sắm",
+      "hint": "do the shopping: đi mua sắm",
+      "exampleEn": "My mum does a lot of shopping before Tet.",
+      "exampleVi": "Mẹ em mua sắm rất nhiều trước Tết.",
+      "emoji": "🛍️",
+      "audio": "/assets/audio/unit6/shopping.mp3",
+      "audioExample": "/assets/audio/unit6/shopping-example.mp3"
+    },
+    {
+      "id": "u6_20",
+      "word": "throw",
+      "phonetic": "/θrəʊ/",
+      "wordType": "Động từ",
+      "meaning": "Ném, vứt",
+      "hint": "Không nên vứt rác ngày Tết",
+      "exampleEn": "We shouldn't throw things at Tet.",
+      "exampleVi": "Chúng ta không nên ném đồ vào dịp Tết.",
+      "emoji": "🤾",
+      "audio": "/assets/audio/unit6/throw.mp3",
+      "audioExample": "/assets/audio/unit6/throw-example.mp3"
     }
   ],
   "extraQuestions": [],

@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState, useEffect } from 'react';
 import { shuffle } from '../utils/random.js';
 import { playSfx } from '../utils/sfx.js';
 import { sayWord } from '../utils/speech.js';
@@ -17,6 +17,10 @@ function chunk(list, size) {
 }
 
 export default function MatchingGame({ words, onFinish }) {
+  // Hẹn giờ tự dọn khi rời trang: không gọi onDone/onFinish sau khi đã thoát
+  const timers = useRef([]);
+  useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const later = (fn, ms) => timers.current.push(setTimeout(fn, ms));
   const { settings } = useSettings();
   const [target, setTarget] = useState('image'); // 'image' | 'meaning'
   const rounds = useMemo(() => chunk(shuffle(words), ROUND_SIZE), [words]);
@@ -41,10 +45,10 @@ export default function MatchingGame({ words, onFinish }) {
       setMatched(next);
       setSelected(null);
       setFeedbackMsg({ type: 'success', text: `Chính xác! ${word.word}` });
-      setTimeout(() => setFeedbackMsg(null), 1200);
+      later(() => setFeedbackMsg(null), 1200);
 
       if (next.size === round.length) {
-        setTimeout(() => {
+        later(() => {
           if (roundIdx + 1 < rounds.length) {
             setRoundIdx(roundIdx + 1);
             setMatched(new Set());
@@ -58,7 +62,7 @@ export default function MatchingGame({ words, onFinish }) {
       mistakes.current++;
       setShakeId(rightId);
       setFeedbackMsg({ type: 'wrong', text: t.matching.wrongTryAgain });
-      setTimeout(() => {
+      later(() => {
         setShakeId(null);
         setFeedbackMsg(null);
       }, 1200);
@@ -78,7 +82,7 @@ export default function MatchingGame({ words, onFinish }) {
     if (!selected) {
       // Nhắc nhở nếu học sinh bấm cột bên phải trước
       setFeedbackMsg({ type: 'info', text: '👉 Em hãy chọn 1 từ ở cột bên trái trước nhé!' });
-      setTimeout(() => setFeedbackMsg(null), 1500);
+      later(() => setFeedbackMsg(null), 1500);
       return;
     }
     attempt(selected, id);

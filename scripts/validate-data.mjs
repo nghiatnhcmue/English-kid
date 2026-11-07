@@ -105,6 +105,90 @@ if (existsSync(modelRoot)) {
     }
   }
 }
+// ---------- Âm thanh, câu hỏi, sắp xếp câu, phát âm, trang SGK ----------
+import { openSync, readSync, closeSync } from 'node:fs';
+const headOf = (p) => {
+  const fd = openSync(p, 'r');
+  const b = Buffer.alloc(4);
+  readSync(fd, b, 0, 4, 0);
+  closeSync(fd);
+  return b;
+};
+const isMp3 = (b) => b.slice(0, 3).toString('latin1') === 'ID3' || (b[0] === 0xff && (b[1] & 0xe0) === 0xe0);
+const normWords = (t) => String(t || '').toLowerCase().replace(/[.,!?;:"]/g, '').split(/\s+/).filter(Boolean).sort().join(' ');
+let audioRefs = 0;
+let extendedCount = 0;
+
+for (const file of files) {
+  let unit;
+  try {
+    unit = JSON.parse(readFileSync(join(dataDir, file), 'utf8'));
+  } catch {
+    continue;
+  }
+  const checkAudio = (where, url) => {
+    if (!url) return;
+    if (/^(data:|https?:)/.test(url)) return; // giáo viên tự thêm (không nằm trong project)
+    audioRefs++;
+    const p = join(publicDir, url.replace(/^\//, ''));
+    if (!existsSync(p)) errors.push(`${file} › ${where}: không tìm thấy file âm thanh ${url}`);
+    else if (!isMp3(headOf(p))) errors.push(`${file} › ${where}: ${url} không phải mp3 thật (WAV/hỏng → Safari/iOS không phát)`);
+  };
+  const seen = new Map();
+  for (const v of unit.vocabularies || []) {
+    checkAudio(`${v.id} (${v.word}) audio`, v.audio);
+    checkAudio(`${v.id} (${v.word}) audioExample`, v.audioExample);
+    if (!v.audio) warnings.push(`${file} › ${v.id} (${v.word}): chưa có file âm thanh của từ (sẽ đọc online/giọng máy)`);
+    const k = String(v.word).trim().toLowerCase();
+    if (seen.has(k)) errors.push(`${file} › ${v.id}: từ "${v.word}" bị trùng với ${seen.get(k)}`);
+    seen.set(k, v.id);
+    if (v.extended) extendedCount++;
+  }
+  checkAudio('listening', unit.listening?.audio);
+  checkAudio('speaking', unit.speaking?.audio);
+  (unit.speaking?.challenges || []).forEach((c, i) => checkAudio(`speaking.challenges[${i}]`, c.audio));
+
+  const checkQ = (where, q) => {
+    if (!q || !Array.isArray(q.options) || !q.options.length) return;
+    const okIndex = Number.isInteger(q.answerIndex) && q.answerIndex >= 0 && q.answerIndex < q.options.length;
+    const okBlank = q.blankWord && q.options.some((o) => String(o).trim().toLowerCase() === String(q.blankWord).trim().toLowerCase());
+    if (!okIndex && !okBlank) errors.push(`${file} › ${where}: đáp án đúng (answerIndex/blankWord) không nằm trong các lựa chọn`);
+    if (new Set(q.options.map((o) => String(o).trim().toLowerCase())).size !== q.options.length) warnings.push(`${file} › ${where}: có lựa chọn trùng nhau`);
+  };
+  (unit.grammar?.quiz || []).forEach((q, i) => checkQ(`grammar.quiz[${i}]`, q));
+  (unit.reading?.questions || []).forEach((q, i) => checkQ(`reading.questions[${i}]`, q));
+  checkQ('listening', unit.listening);
+  const scr = (where, it) => {
+    if (!Array.isArray(it?.scrambledWords) || !it.correctSentence) return;
+    if (normWords(it.scrambledWords.join(' ')) !== normWords(it.correctSentence)) errors.push(`${file} › ${where}: các từ xáo trộn không khớp câu đúng`);
+  };
+  (unit.writing?.items || []).forEach((it, i) => {
+    checkQ(`writing.items[${i}]`, it);
+    scr(`writing.items[${i}]`, it);
+  });
+  scr('writing', unit.writing);
+  (unit.reading?.questions || []).forEach((q, i) => scr(`reading.questions[${i}]`, q));
+
+  const pr = unit.pronunciation;
+  if (!pr) warnings.push(`${file}: chưa có phần phát âm`);
+  else {
+    for (const k of ['pair', 'title']) if (!pr[k]) errors.push(`${file} › pronunciation: thiếu "${k}"`);
+    for (const k of ['sound1', 'sound2']) if (!pr[k]?.symbol || !Array.isArray(pr[k]?.words) || !pr[k].words.length) errors.push(`${file} › pronunciation.${k}: thiếu symbol/words`);
+    (pr.practiceQuiz || []).forEach((q, i) => {
+      if (!q.options?.includes(q.correctSound)) errors.push(`${file} › pronunciation.practiceQuiz[${i}]: đáp án "${q.correctSound}" không có trong lựa chọn`);
+    });
+    if ((pr.practiceQuiz || []).length < 4) warnings.push(`${file} › pronunciation: nên có ít nhất 4 câu luyện`);
+  }
+}
+
+// Trang SGK: trang PDF = trang in + 1, mỗi tập 73 trang
+for (const u of units) {
+  const n = Number(u.bookStartPage);
+  if (!Number.isInteger(n) || n < 1 || n + 1 > 73) errors.push(`units.json › Unit ${u.unitId}: bookStartPage "${u.bookStartPage}" không hợp lệ (1–72)`);
+  if (![1, 2].includes(Number(u.bookVolume))) errors.push(`units.json › Unit ${u.unitId}: bookVolume phải là 1 hoặc 2`);
+}
+console.log(`🔊 ${audioRefs} file âm thanh được tham chiếu · ✨ ${extendedCount} từ mở rộng (ngoài trang SGK)`);
+
 for (const c of credits) {
   if (!existsSync(join(publicDir, c.file.replace(/^\//, '')))) errors.push(`credits.json: không tìm thấy file ${c.file}`);
   if (!c.author || !c.license || !c.source) errors.push(`credits.json: ${c.file} thiếu author/license/source`);

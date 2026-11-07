@@ -27,7 +27,8 @@
       "exampleVi": "Em đã xem một bộ phim tài liệu thú vị về các đại dương.",
       "emoji": "🐬",
       "audio": "/assets/audio/unit7/documentary.mp3",
-      "audioExample": "/assets/audio/unit7/documentary-example.mp3"
+      "audioExample": "/assets/audio/unit7/documentary-example.mp3",
+      "extended": true
     },
     {
       "id": "u7_03",
@@ -53,7 +54,8 @@
       "exampleVi": "Bố mẹ em xem bản tin thời sự lúc 7 giờ tối.",
       "emoji": "📰",
       "audio": "/assets/audio/unit7/news-programme.mp3",
-      "audioExample": "/assets/audio/unit7/news-programme-example.mp3"
+      "audioExample": "/assets/audio/unit7/news-programme-example.mp3",
+      "extended": true
     },
     {
       "id": "u7_05",
@@ -65,8 +67,9 @@
       "exampleEn": "That talented comedian makes everybody laugh.",
       "exampleVi": "Diễn viên hài tài năng đó làm mọi người cười nghiêng ngả.",
       "emoji": "🎭",
-      "audio": "/assets/audio/unit7/comedian.mp3",
-      "audioExample": "/assets/audio/unit7/comedian-example.mp3"
+      "audio": "/assets/audio/unit7/comedian-v2.mp3",
+      "audioExample": "/assets/audio/unit7/comedian-example.mp3",
+      "extended": true
     },
     {
       "id": "u7_06",
@@ -118,7 +121,8 @@
       "exampleVi": "Bạn chuyển giúp em cái điều khiển từ xa của tivi nhé?",
       "emoji": "📺",
       "audio": "/assets/audio/unit7/remote-control.mp3",
-      "audioExample": "/assets/audio/unit7/remote-control-example.mp3"
+      "audioExample": "/assets/audio/unit7/remote-control-example.mp3",
+      "extended": true
     },
     {
       "id": "u7_10",
@@ -131,7 +135,8 @@
       "exampleVi": "Gia đình em xem dự báo thời tiết vào mỗi buổi sáng.",
       "emoji": "⛅",
       "audio": "/assets/audio/unit7/weather-forecast.mp3",
-      "audioExample": "/assets/audio/unit7/weather-forecast-example.mp3"
+      "audioExample": "/assets/audio/unit7/weather-forecast-example.mp3",
+      "extended": true
     },
     {
       "id": "u7_11",
@@ -144,7 +149,164 @@
       "exampleVi": "Đài truyền hình địa phương phát tin tức về thị trấn của em.",
       "emoji": "🎥",
       "audio": "/assets/audio/unit7/local-television.mp3",
-      "audioExample": "/assets/audio/unit7/local-television-example.mp3"
+      "audioExample": "/assets/audio/unit7/local-television-example.mp3",
+      "extended": true
+    },
+    {
+      "id": "u7_12",
+      "word": "talent show",
+      "phonetic": "/ˈtælənt ʃəʊ/",
+      "wordType": "Danh từ",
+      "meaning": "Cuộc thi tài năng",
+      "hint": "Cuộc thi chọn người biểu diễn giỏi nhất",
+      "exampleEn": "I love watching talent shows.",
+      "exampleVi": "Em rất thích xem các cuộc thi tài năng.",
+      "emoji": "🎤",
+      "audio": "/assets/audio/unit7/talent-show.mp3",
+      "audioExample": "/assets/audio/unit7/talent-show-example.mp3"
+    },
+    {
+      "id": "u7_13",
+      "word": "comedy",
+      "phonetic": "/ˈkɒmədi/",
+      "wordType": "Danh từ",
+      "meaning": "Phim hài, hài kịch",
+      "hint": "Chương trình làm người xem cười",
+      "exampleEn": "My dad loves comedy. It makes him laugh.",
+      "exampleVi": "Bố em rất thích phim hài. Phim làm bố cười.",
+      "emoji": "😂",
+      "audio": "/assets/audio/unit7/comedy.mp3",
+      "audioExample": "/assets/audio/unit7/comedy-example-v2.mp3"
+    },
+    {
+      "id": "u7_14",
+      "word": "character",
+      "phonetic": "/ˈkærəktə/",
+      "wordType": "Danh từ",
+      "meaning": "Nhân vật",
+      "hint": "Người hoặc con vật trong phim",
+      "exampleEn": "Jerry is my favourite character.",
+      "exampleVi": "Jerry là nhân vật em yêu thích nhất.",
+      "emoji": "🐭",
+      "audio": "/assets/audio/unit7/character.mp3",
+      "audioExample": "/assets/audio/unit7/character-example.mp3"
+    },
+    {
+      "id": "u7_15",
+      "word": "cartoon",
+      "phonetic": "/kɑːˈtuːn/",
+      "wordType": "Danh từ",
+      "meaning": "Phim hoạt hình",
+      "hint": "Phim vẽ cho trẻ em",
+      "exampleEn": "My brother loves cartoons.",
+      "exampleVi": "Em trai em rất thích phim hoạt hình.",
+      "emoji": "🦸",
+      "audio": "/assets/audio/unit7/cartoon.mp3",
+      "audioExample": "/assets/audio/unit7/cartoon-example.mp3"
+    },
+    {
+      "id": "u7_16",
+      "word": "programme",
+      "phonetic": "/ˈprəʊɡræm/",
+      "wordType": "Danh từ",
+      "meaning": "Chương trình (truyền hình)",
+      "hint": "Viết kiểu Anh – Anh: programme",
+      "exampleEn": "What is your favourite TV programme?",
+      "exampleVi": "Chương trình TV bạn thích nhất là gì?",
+      "emoji": "🗓️",
+      "audio": "/assets/audio/unit7/programme.mp3",
+      "audioExample": "/assets/audio/unit7/programme-example.mp3"
+    },
+    {
+      "id": "u7_17",
+      "word": "cute",
+      "phonetic": "/kjuːt/",
+      "wordType": "Tính từ",
+      "meaning": "Dễ thương, xinh xắn",
+      "hint": "Hay dùng cho em bé, con vật nhỏ",
+      "exampleEn": "The little cat is very cute.",
+      "exampleVi": "Chú mèo nhỏ rất dễ thương.",
+      "emoji": "🐱",
+      "audio": "/assets/audio/unit7/cute.mp3",
+      "audioExample": "/assets/audio/unit7/cute-example.mp3"
+    },
+    {
+      "id": "u7_18",
+      "word": "live",
+      "phonetic": "/laɪv/",
+      "wordType": "Tính từ",
+      "meaning": "Trực tiếp",
+      "hint": "Đọc là /laɪv/ khi là tính từ",
+      "exampleEn": "We watch the live football match.",
+      "exampleVi": "Chúng em xem trận bóng đá trực tiếp.",
+      "emoji": "🔴",
+      "audio": "/assets/audio/unit7/live.mp3",
+      "audioExample": "/assets/audio/unit7/live-example.mp3"
+    },
+    {
+      "id": "u7_19",
+      "word": "popular",
+      "phonetic": "/ˈpɒpjələ/",
+      "wordType": "Tính từ",
+      "meaning": "Được ưa chuộng, phổ biến",
+      "hint": "Nhiều người thích",
+      "exampleEn": "This channel is popular with children.",
+      "exampleVi": "Kênh này được trẻ em ưa chuộng.",
+      "emoji": "⭐",
+      "audio": "/assets/audio/unit7/popular.mp3",
+      "audioExample": "/assets/audio/unit7/popular-example.mp3"
+    },
+    {
+      "id": "u7_20",
+      "word": "clip",
+      "phonetic": "/klɪp/",
+      "wordType": "Danh từ",
+      "meaning": "Đoạn phim ngắn",
+      "hint": "Video ngắn",
+      "exampleEn": "I watch a short clip about animals.",
+      "exampleVi": "Em xem một đoạn phim ngắn về động vật.",
+      "emoji": "🎞️",
+      "audio": "/assets/audio/unit7/clip.mp3",
+      "audioExample": "/assets/audio/unit7/clip-example.mp3"
+    },
+    {
+      "id": "u7_21",
+      "word": "TV guide",
+      "phonetic": "/ˌtiː ˈviː ɡaɪd/",
+      "wordType": "Danh từ",
+      "meaning": "Lịch phát sóng truyền hình",
+      "hint": "Bảng ghi giờ các chương trình",
+      "exampleEn": "Let's look at the TV guide.",
+      "exampleVi": "Mình cùng xem lịch phát sóng nhé.",
+      "emoji": "📋",
+      "audio": "/assets/audio/unit7/tv-guide.mp3",
+      "audioExample": "/assets/audio/unit7/tv-guide-example.mp3"
+    },
+    {
+      "id": "u7_22",
+      "word": "funny",
+      "phonetic": "/ˈfʌni/",
+      "wordType": "Tính từ",
+      "meaning": "Hài hước, buồn cười",
+      "hint": "Làm người khác cười",
+      "exampleEn": "This cartoon is very funny.",
+      "exampleVi": "Phim hoạt hình này rất buồn cười.",
+      "emoji": "🤣",
+      "audio": "/assets/audio/unit7/funny.mp3",
+      "audioExample": "/assets/audio/unit7/funny-example.mp3"
+    },
+    {
+      "id": "u7_23",
+      "word": "boring",
+      "phonetic": "/ˈbɔːrɪŋ/",
+      "wordType": "Tính từ",
+      "meaning": "Nhàm chán",
+      "hint": "Trái nghĩa với interesting",
+      "exampleEn": "This film is boring. I don't like it.",
+      "exampleVi": "Bộ phim này chán quá. Em không thích.",
+      "emoji": "🥱",
+      "audio": "/assets/audio/unit7/boring.mp3",
+      "audioExample": "/assets/audio/unit7/boring-example.mp3"
     }
   ],
   "extraQuestions": [],

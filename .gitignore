@@ -8,3 +8,5 @@ Thumbs.db
 .idea
 /pdf/
 !public/pdf/
+.dev.vars
+.wrangler

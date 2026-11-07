@@ -271,7 +271,7 @@ export default function SearchPage() {
                       <p className="text-sm font-bold text-ink-soft mt-1">({s.meaningVi})</p>
                     </div>
                     <div className="flex items-center justify-between pt-2 border-t border-peach/20">
-                      <SpeakerButton text={s.sentence} size="sm" />
+                      <SpeakerButton text={s.sentence} audio={s.audio} size="sm" />
                       <Link
                         to={`/unit/${s.unitId}/shadowing`}
                         onClick={() => playSfx('click')}

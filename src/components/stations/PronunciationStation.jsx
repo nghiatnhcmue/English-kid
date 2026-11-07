@@ -16,6 +16,11 @@ import { useSettings } from '../../settings.jsx';
 export default function PronunciationStation({ unit, onFinish }) {
   const { settings } = useSettings();
   const pron = unit?.pronunciation;
+  // Từ nào trùng từ vựng của Unit thì dùng file mp3 thu sẵn (chạy offline), còn lại mới đọc online/TTS
+  const audioFor = useMemo(() => {
+    const map = new Map((unit?.vocabularies || []).map((v) => [v.word.toLowerCase(), v.audio]));
+    return (text) => map.get(String(text || '').toLowerCase()) || null;
+  }, [unit]);
 
   // Trạng thái phần luyện tập trắc nghiệm phân biệt âm
   const quizList = useMemo(() => pron?.practiceQuiz || [], [pron]);
@@ -98,13 +103,13 @@ export default function PronunciationStation({ unit, onFinish }) {
             </p>
 
             <div className="mt-4 flex flex-col gap-2">
-              <span className="text-xs font-black uppercase text-ink-soft">Từ ví dụ chứa âm:</span>
+              <span className="text-xs font-black uppercase text-ink-soft">Ví dụ (bấm để nghe):</span>
               <div className="grid grid-cols-2 gap-2">
                 {pron.sound1.words.map((w, idx) => (
                   <button
                     key={idx}
                     type="button"
-                    onClick={() => speak(w.word, settings)}
+                    onClick={() => speak(w.word, { ...settings, audio: audioFor(w.word) })}
                     className="group flex flex-col items-start rounded-2xl bg-cream/70 p-3 text-left hover:bg-banana hover:shadow-xs transition-all cursor-pointer border border-[#efe3cc]"
                   >
                     <div className="flex items-center justify-between w-full">
@@ -138,13 +143,13 @@ export default function PronunciationStation({ unit, onFinish }) {
             </p>
 
             <div className="mt-4 flex flex-col gap-2">
-              <span className="text-xs font-black uppercase text-peach-dark">Từ ví dụ chứa âm:</span>
+              <span className="text-xs font-black uppercase text-peach-dark">Ví dụ (bấm để nghe):</span>
               <div className="grid grid-cols-2 gap-2">
                 {pron.sound2.words.map((w, idx) => (
                   <button
                     key={idx}
                     type="button"
-                    onClick={() => speak(w.word, settings)}
+                    onClick={() => speak(w.word, { ...settings, audio: audioFor(w.word) })}
                     className="group flex flex-col items-start rounded-2xl bg-peach-soft/30 p-3 text-left hover:bg-peach hover:text-white hover:shadow-xs transition-all cursor-pointer border border-peach/30"
                   >
                     <div className="flex items-center justify-between w-full">
@@ -188,6 +193,7 @@ export default function PronunciationStation({ unit, onFinish }) {
             <div className="flex flex-col items-center gap-2">
               <SpeakerButton
                 text={currentQuiz.word}
+                audio={audioFor(currentQuiz.word)}
                 size="xl"
                 className="shadow-[0_6px_0_var(--color-peach-dark)]"
               />

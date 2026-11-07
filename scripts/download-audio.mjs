@@ -20,6 +20,34 @@ function slugify(text) {
     .replace(/^-+|-+$/g, '');
 }
 
+export function isMp3(buf) {
+  if (!buf || buf.length < 4) return false;
+  if (buf.slice(0, 3).toString('latin1') === 'ID3') return true;
+  return buf[0] === 0xff && (buf[1] & 0xe0) === 0xe0; // MPEG frame sync
+}
+
+function isUsableMp3(file) {
+  if (!fs.existsSync(file)) return false;
+  const fd = fs.openSync(file, 'r');
+  const head = Buffer.alloc(4);
+  fs.readSync(fd, head, 0, 4, 0);
+  fs.closeSync(fd);
+  return isMp3(head);
+}
+
+// Chọn file đích: giữ file đang dùng nếu là mp3 hợp lệ; nếu là WAV/hỏng thì ghi sang tên mới -v2
+// (tên mới để vượt qua cache "immutable" 1 năm trên thiết bị học sinh).
+function pickTarget(dir, unitDir, currentUrl, baseName) {
+  const candidates = [];
+  if (currentUrl && currentUrl.startsWith(`/assets/audio/${unitDir}/`)) candidates.push(path.basename(currentUrl));
+  candidates.push(`${baseName}.mp3`, `${baseName}-v2.mp3`, `${baseName}-v3.mp3`);
+  for (const name of candidates) {
+    if (isUsableMp3(path.join(dir, name))) return { name, exists: true };
+  }
+  const free = candidates.find((n) => !fs.existsSync(path.join(dir, n))) || `${baseName}-v9.mp3`;
+  return { name: free, exists: false };
+}
+
 async function fetchAudio(url) {
   try {
     const res = await fetch(url, {
@@ -28,9 +56,11 @@ async function fetchAudio(url) {
       },
     });
     if (!res.ok) return null;
-    const buf = await res.arrayBuffer();
+    const buf = Buffer.from(await res.arrayBuffer());
     if (buf.byteLength < 500) return null; // quá nhỏ hoặc lỗi
-    return Buffer.from(buf);
+    // Chỉ nhận mp3 thật (Youdao đôi khi trả WAV → Safari/iOS không phát được khi mang đuôi .mp3)
+    if (!isMp3(buf)) return null;
+    return buf;
   } catch (err) {
     return null;
   }
@@ -82,39 +112,25 @@ async function main() {
 
     for (const v of data.vocabularies) {
       const slug = slugify(v.word);
-      const wordAudioPath = path.join(targetDir, `${slug}.mp3`);
-      const exampleAudioPath = path.join(targetDir, `${slug}-example.mp3`);
-
-      // Tải âm thanh từ vựng
-      if (!fs.existsSync(wordAudioPath)) {
-        process.stdout.write(`  - Tải từ: "${v.word}"... `);
-        const buf = await getWordAudio(v.word);
-        if (buf) {
-          fs.writeFileSync(wordAudioPath, buf);
-          console.log(`✓ (${buf.byteLength} bytes)`);
-        } else {
-          console.log(`✗ Thất bại`);
-        }
-        await new Promise((r) => setTimeout(r, 120)); // tránh rate-limit
-      } else {
-        console.log(`  - Từ "${v.word}" đã có sẵn ✓`);
-      }
-      v.audio = `/assets/audio/${u.dir}/${slug}.mp3`;
-
-      // Tải âm thanh câu ví dụ (nếu có)
-      if (v.exampleEn) {
-        if (!fs.existsSync(exampleAudioPath)) {
-          process.stdout.write(`    Ví dụ: "${v.exampleEn.slice(0, 30)}..." `);
-          const buf = await getSentenceAudio(v.exampleEn);
+      const tasks = [
+        { field: 'audio', base: slug, text: v.word, get: getWordAudio, label: 'Từ' },
+        v.exampleEn && { field: 'audioExample', base: `${slug}-example`, text: v.exampleEn, get: getSentenceAudio, label: 'Ví dụ' },
+      ].filter(Boolean);
+      for (const t of tasks) {
+        const target = pickTarget(targetDir, u.dir, v[t.field], t.base);
+        if (!target.exists) {
+          process.stdout.write(`  - ${t.label}: "${t.text.slice(0, 40)}" → ${target.name} `);
+          const buf = await t.get(t.text);
           if (buf) {
-            fs.writeFileSync(exampleAudioPath, buf);
+            fs.writeFileSync(path.join(targetDir, target.name), buf);
             console.log(`✓ (${buf.byteLength} bytes)`);
           } else {
-            console.log(`✗ Thất bại`);
+            console.log('✗ Thất bại');
+            continue;
           }
-          await new Promise((r) => setTimeout(r, 120));
+          await new Promise((r) => setTimeout(r, 150)); // tránh rate-limit
         }
-        v.audioExample = `/assets/audio/${u.dir}/${slug}-example.mp3`;
+        v[t.field] = `/assets/audio/${u.dir}/${target.name}`;
       }
     }
 
@@ -174,12 +190,12 @@ async function main() {
       }
     }
 
-    fs.writeFileSync(u.file, JSON.stringify(data, null, 2), 'utf-8');
+    fs.writeFileSync(u.file, JSON.stringify(data, null, 2) + '\n', 'utf-8');
     console.log(`💾 Đã cập nhật xong dữ liệu ${u.file}`);
   }
 
   console.log('\n🎉 Hoàn thành toàn bộ quá trình tải âm thanh!');
 }
 
-main().catch(console.error);
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) main().catch(console.error);
 

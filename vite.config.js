@@ -27,10 +27,13 @@ export default defineConfig({
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
+        // index.html không precache → phải tắt fallback mặc định, nếu không SW lỗi "non-precached-url" và không cài được.
+        navigateFallback: null,
         // Khung app + JSON + ảnh được cache sẵn; index.html KHÔNG cache cứng để F5 luôn cập nhật bản mới.
         globPatterns: ['**/*.{js,css,svg,webp,woff2,json}'],
         // Thư viện 3D (~1MB) và font chữ Kirin không cache sẵn; 3D sẽ được cache khi mở lần đầu.
-        globIgnores: ['**/model-viewer-*.js', '**/*cyrillic*'],
+        // pdf.js (đọc SGK) cũng tải lười, cache khi mở lần đầu.
+        globIgnores: ['**/model-viewer-*.js', '**/pdf.min-*.js', '**/*cyrillic*'],
         runtimeCaching: [
           {
             // Yêu cầu điều hướng trang (F5, gõ URL) luôn ưu tiên tải từ mạng (NetworkFirst)
@@ -42,7 +45,7 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: ({ url }) => /model-viewer-.*\.js$/.test(url.pathname),
+            urlPattern: ({ url }) => /(model-viewer-.*\.js|pdf\.min-.*\.js|pdf\.worker\.min-.*\.mjs)$/.test(url.pathname),
             handler: 'CacheFirst',
             options: { cacheName: 'model-viewer-lib' },
           },
@@ -51,13 +54,21 @@ export default defineConfig({
             handler: 'CacheFirst',
             options: {
               cacheName: 'models-3d',
+              cacheableResponse: { statuses: [200] },
               expiration: { maxEntries: 200 },
             },
           },
           {
-            urlPattern: ({ url }) => url.pathname.includes('/assets/audio/'),
+            // Chỉ lưu mp3 thật (200 + audio/mpeg): file thiếu bị máy chủ trả index.html sẽ KHÔNG bị cache nhầm.
+            // rangeRequests: phát được từ cache cả khi trình duyệt xin từng đoạn (Range) – cần cho Safari.
+            urlPattern: ({ url }) => url.pathname.startsWith('/assets/audio/'),
             handler: 'CacheFirst',
-            options: { cacheName: 'audio' },
+            options: {
+              cacheName: 'audio-v2',
+              rangeRequests: true,
+              cacheableResponse: { statuses: [200], headers: { 'content-type': 'audio/mpeg' } },
+              expiration: { maxEntries: 2000, maxAgeSeconds: 60 * 60 * 24 * 60 },
+            },
           },
         ],
       },

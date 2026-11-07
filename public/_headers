@@ -1,9 +1,25 @@
-/assets/*
+# File JS/CSS do Vite build có mã hash trong tên → cache vĩnh viễn được.
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.css
   Cache-Control: public, max-age=31536000, immutable
 
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
+# Âm thanh, hình ảnh, mô hình 3D KHÔNG có hash: cache 7 ngày để bản sửa vẫn đến được máy học sinh.
+/assets/audio/*
+  Cache-Control: public, max-age=604800
+
+/assets/images/*
+  Cache-Control: public, max-age=604800
+
+/assets/models/*
+  Cache-Control: public, max-age=604800
+
+/pdf/*
+  Cache-Control: public, max-age=604800
+
 /sw.js
   Cache-Control: no-cache
-

@@ -20,6 +20,10 @@ function makeOptions(word, pool) {
 }
 
 function Round({ word, pool, onDone }) {
+  // Hẹn giờ tự dọn khi rời trang: không gọi onDone/onFinish sau khi đã thoát
+  const timers = useRef([]);
+  useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const later = (fn, ms) => timers.current.push(setTimeout(fn, ms));
   const options = useMemo(() => makeOptions(word, pool), [word, pool]);
   const [wrongIds, setWrongIds] = useState(() => new Set());
   const [shakeId, setShakeId] = useState(null);
@@ -31,12 +35,12 @@ function Round({ word, pool, onDone }) {
       if (opt.id === word.id) {
         setCorrect(true);
         playSfx('correct');
-        setTimeout(() => onDone(wrongIds.size > 0), 1200);
+        later(() => onDone(wrongIds.size > 0), 1200);
       } else {
         playSfx('wrong');
         setWrongIds((prev) => new Set(prev).add(opt.id));
         setShakeId(opt.id);
-        setTimeout(() => setShakeId(null), 450);
+        later(() => setShakeId(null), 450);
       }
     },
     [correct, wrongIds, word.id, onDone],

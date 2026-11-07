@@ -12,6 +12,10 @@ const MAX_WORDS = 8;
 const MAX_TRIES = 2;
 
 function SpellingItem({ word, onDone }) {
+  // Hẹn giờ tự dọn khi rời trang: không gọi onDone/onFinish sau khi đã thoát
+  const timers = useRef([]);
+  useEffect(() => () => timers.current.forEach(clearTimeout), []);
+  const later = (fn, ms) => timers.current.push(setTimeout(fn, ms));
   const { settings } = useSettings();
   const puzzle = useMemo(() => {
     const g = makeGap(word.word);
@@ -33,14 +37,14 @@ function SpellingItem({ word, onDone }) {
         setStatus('correct');
         playSfx('correct');
         sayWord(word, settings);
-        setTimeout(() => onDone(tries > 0), 1300);
+        later(() => onDone(tries > 0), 1300);
         return;
       }
       playSfx('wrong');
       const nextTries = tries + 1;
       setTries(nextTries);
       setShake(true);
-      setTimeout(() => setShake(false), 450);
+      later(() => setShake(false), 450);
       if (nextTries >= MAX_TRIES) {
         setStatus('revealed');
         sayWord(word, settings, { slowToo: true });
@@ -48,7 +52,7 @@ function SpellingItem({ word, onDone }) {
       }
       setStatus('wrong');
       // Giữ lại chữ đúng, chỉ trả các chữ sai về bảng chữ
-      setTimeout(() => {
+      later(() => {
         setFilled(
           Object.fromEntries(
             Object.entries(next).filter(([i, f]) => f.letter === puzzle.gap[i].char)

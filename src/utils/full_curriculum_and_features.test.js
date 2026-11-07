@@ -155,9 +155,9 @@ describe('10-Point Curriculum & Features Comprehensive Verification', () => {
       '/θ/ & /ð/',     // Unit 7
       '/e/ & /æ/',     // Unit 8
       '/əʊ/ & /aʊ/',   // Unit 9
-      '/dr/ & /tr/',   // Unit 10
-      '/ɑː/ & /æ/',    // Unit 11
-      '/ɔɪ/ & /aɪ/',   // Unit 12
+      'Oo & oO',      // Unit 10: Stress in two-syllable words (SGK tr.40)
+      'Nhấn & Lướt',  // Unit 11: Rhythm in sentences (SGK tr.51)
+      '↘ & ↗',        // Unit 12: Falling tone in statements (SGK tr.60)
     ];
 
     units.forEach((summary, idx) => {
