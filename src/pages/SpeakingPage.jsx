@@ -33,7 +33,7 @@ export default function SpeakingPage() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <PageHeader
           title="🎙️ Phòng Luyện Nói & Chấm Điểm AI"
-          subtitle="Luyện nhại giọng (Shadowing) · Mẫu câu giao tiếp SGK & Từ vựng · Thu âm và so sánh giọng bản xứ"
+          subtitle="Luyện đọc hội thoại SGK (Getting Started) · Mẫu câu giao tiếp & Từ vựng · Chấm điểm AI từng từ & nghe lại giọng"
           backTo={`/unit/${selectedUnitId}`}
           backLabel={`Về Unit ${selectedUnitId}`}
         />

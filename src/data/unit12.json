@@ -386,9 +386,109 @@
         "meaningVi": "Không, chúng không thể thấu hiểu cảm xúc của chúng ta.",
         "tipsVi": "\"emotions\" có âm /ʃ/ tròn môi: e-MO-tions.",
         "audio": "/assets/audio/unit12/speaking-ch4.mp3"
+      },
+      {
+        "id": "spk-5",
+        "level": "Khả năng của robot",
+        "sentenceEn": "Doctor robots can examine sick patients and give correct medicine.",
+        "phonetic": "/ˈdɒktə ˈrəʊbɒts kæn ɪɡˈzæmɪn sɪk ˈpeɪʃnts ænd ɡɪv kəˈrekt ˈmedsn/",
+        "meaningVi": "Robot bác sĩ có thể thăm khám cho bệnh nhân và phát thuốc chuẩn xác.",
+        "tipsVi": "Phát âm rõ từ \"patients\" (/ˈpeɪʃnts/) và \"medicine\" (/ˈmedsn/)."
+      },
+      {
+        "id": "spk-6",
+        "level": "So sánh tương lai",
+        "sentenceEn": "Robots will be the smartest and most helpful inventions in our lives.",
+        "phonetic": "/ˈrəʊbɒts wɪl biː ðə ˈsmɑːtɪst ænd məʊst ˈhelpfl ɪnˈvenʃnz ɪn ˈaʊə laɪvz/",
+        "meaningVi": "Robot sẽ là phát minh thông minh nhất và hữu ích nhất trong đời sống chúng ta.",
+        "tipsVi": "So sánh nhất: \"the smartest and most helpful\"."
       }
     ],
-    "audio": "/assets/audio/unit12/speaking-target.mp3"
+    "audio": "/assets/audio/unit12/speaking-target.mp3",
+    "dialogueTitle": "Getting Started: At the International Robot Show",
+    "dialogueContext": "Nick, Phong và Tiến sĩ Alex đang hào hứng tham quan Triển lãm Robot Quốc tế tại Hà Nội.",
+    "dialogueLines": [
+      {
+        "id": "u12_d1",
+        "speaker": "Nick",
+        "sentenceEn": "Good morning, Dr. Alex. What a fantastic robot show!",
+        "phonetic": "/ɡʊd ˈmɔːnɪŋ ˈdɒktər ˈæleks wɒt ə fænˈtæstɪk ˈrəʊbɒt ʃəʊ/",
+        "meaningVi": "Chào buổi sáng tiến sĩ Alex. Triển lãm robot này hoành tráng quá ạ!",
+        "tipsVi": "Lời chào kính trọng và câu cảm thán hào hứng: \"What a fantastic...\"."
+      },
+      {
+        "id": "u12_d2",
+        "speaker": "TS. Alex",
+        "sentenceEn": "Good morning, boys. Welcome to the International Robot Exhibition!",
+        "phonetic": "/ɡʊd ˈmɔːnɪŋ bɔɪz ˈwelkəm tuː ðɪ ˌɪntəˈnæʃnəl ˈrəʊbɒt ˌeksɪˈbɪʃn/",
+        "meaningVi": "Chào buổi sáng các cậu bé. Chào mừng các cháu đến với Triển lãm Robot Quốc tế!",
+        "tipsVi": "Từ \"exhibition\" (/ˌeksɪˈbɪʃn/) nhấn trọng âm ba."
+      },
+      {
+        "id": "u12_d3",
+        "speaker": "Phong",
+        "sentenceEn": "Can this tall silver robot talk with humans?",
+        "phonetic": "/kæn ðɪs tɔːl ˈsɪlvə ˈrəʊbɒt tɔːk wɪð ˈhjuːmənz/",
+        "meaningVi": "Chú robot màu bạc cao lớn này có thể trò chuyện với con người không ạ?",
+        "tipsVi": "Lên giọng ở cuối câu hỏi khả năng với Can: \"humans↗\"."
+      },
+      {
+        "id": "u12_d4",
+        "speaker": "TS. Alex",
+        "sentenceEn": "Yes, it can speak ten different languages fluently.",
+        "phonetic": "/jes ɪt kæn spiːk ten ˈdɪfrənt ˈlæŋɡwɪdʒɪz ˈfluːəntli/",
+        "meaningVi": "Có chứ, nó có thể nói trôi chảy mười ngôn ngữ khác nhau đấy.",
+        "tipsVi": "Nhấn vào trạng từ \"fluently\" (/ˈfluːəntli/ - trôi chảy)."
+      },
+      {
+        "id": "u12_d5",
+        "speaker": "Nick",
+        "sentenceEn": "What can worker robots do in industrial factories?",
+        "phonetic": "/wɒt kæn ˈwɜːkə ˈrəʊbɒts duː ɪn ɪnˈdʌstriəl ˈfæktəriz/",
+        "meaningVi": "Còn các robot công nhân thì có thể làm những gì trong nhà máy công nghiệp ạ?",
+        "tipsVi": "Cụm danh từ \"worker robots\" và \"factories\"."
+      },
+      {
+        "id": "u12_d6",
+        "speaker": "TS. Alex",
+        "sentenceEn": "They can lift heavy materials and build modern cars very fast.",
+        "phonetic": "/ðeɪ kæn lɪft ˈhevi məˈtɪəriəlz ænd bɪld ˈmɒdn kɑːz ˈveri fɑːst/",
+        "meaningVi": "Chúng có thể nâng vật liệu nặng và lắp ráp ô tô hiện đại rất nhanh chóng.",
+        "tipsVi": "Động từ hành động mạnh mẽ: \"lift heavy materials\" và \"build cars\"."
+      },
+      {
+        "id": "u12_d7",
+        "speaker": "Phong",
+        "sentenceEn": "Can home robots help children with their difficult homework?",
+        "phonetic": "/kæn həʊm ˈrəʊbɒts help ˈtʃɪldrən wɪð ðeə ˈdɪfɪkəlt ˈhəʊmwɜːk/",
+        "meaningVi": "Robot gia đình có thể giúp trẻ em làm bài tập về nhà khó không ạ?",
+        "tipsVi": "Lên giọng nhẹ ở cuối: \"homework↗\"."
+      },
+      {
+        "id": "u12_d8",
+        "speaker": "TS. Alex",
+        "sentenceEn": "Yes, they can teach English and explain difficult maths problems.",
+        "phonetic": "/jes ðeɪ kæn tiːtʃ ˈɪŋɡlɪʃ ænd ɪkˈspleɪn ˈdɪfɪkəlt mæθs ˈprɒbləmz/",
+        "meaningVi": "Được chứ, chúng có thể dạy tiếng Anh và giảng giải các bài toán khó.",
+        "tipsVi": "Hai kỹ năng gia sư: \"teach English\" và \"explain maths problems\"."
+      },
+      {
+        "id": "u12_d9",
+        "speaker": "Nick",
+        "sentenceEn": "Will robots ever replace human teachers completely?",
+        "phonetic": "/wɪl ˈrəʊbɒts ˈevə rɪˈpleɪs ˈhjuːmən ˈtiːtʃəz kəmˈpliːtli/",
+        "meaningVi": "Liệu có khi nào robot thay thế hoàn toàn các thầy cô giáo không ạ?",
+        "tipsVi": "Câu hỏi dự đoán tương lai với \"Will\": \"replace human teachers\"."
+      },
+      {
+        "id": "u12_d10",
+        "speaker": "TS. Alex",
+        "sentenceEn": "No, they won't! Robots cannot show human feelings and love.",
+        "phonetic": "/nəʊ ðeɪ wəʊnt ˈrəʊbɒts ˈkænɒt ʃəʊ ˈhjuːmən ˈfiːlɪŋz ænd lʌv/",
+        "meaningVi": "Không đâu các cháu! Robot không thể thể hiện cảm xúc và tình yêu thương như con người.",
+        "tipsVi": "Khẳng định ấm áp và sâu sắc: \"human feelings and love\"."
+      }
+    ]
   },
   "reading": {
     "title": "The International Robot Show in Ha Noi",

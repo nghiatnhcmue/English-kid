@@ -479,9 +479,109 @@
         "meaningVi": "Nó đang ngủ dưới gầm bàn.",
         "tipsVi": "Kéo dài âm /iː/ trong từ \"sleeping\".",
         "audio": "/assets/audio/unit2/speaking-ch4.mp3"
+      },
+      {
+        "id": "spk-5",
+        "level": "Mô tả phòng ốc",
+        "sentenceEn": "There is a poster on the wall above the bed.",
+        "phonetic": "/ðeər ɪz ə ˈpəʊstər ɒn ðə wɔːl əˈbʌv ðə bed/",
+        "meaningVi": "Có một bức áp phích trên tường phía trên giường ngủ.",
+        "tipsVi": "Luyện các giới từ \"on the wall\" và \"above the bed\"."
+      },
+      {
+        "id": "spk-6",
+        "level": "Cảm nghĩ ngôi nhà",
+        "sentenceEn": "My favourite room in the house is the cosy living room.",
+        "phonetic": "/maɪ ˈfeɪvərɪt ruːm ɪn ðə haʊs ɪz ðə ˈkəʊzi ˈlɪvɪŋ ruːm/",
+        "meaningVi": "Căn phòng em yêu thích nhất trong nhà là phòng khách ấm cúng.",
+        "tipsVi": "Nhấn giọng vào \"favourite\" và \"cosy\"."
       }
     ],
-    "audio": "/assets/audio/unit2/speaking-target.mp3"
+    "audio": "/assets/audio/unit2/speaking-target.mp3",
+    "dialogueTitle": "Getting Started: A Look at the House",
+    "dialogueContext": "Elena gọi điện video cho Mi để chúc mừng và tham quan ngôi nhà mới của Mi.",
+    "dialogueLines": [
+      {
+        "id": "u2_d1",
+        "speaker": "Elena",
+        "sentenceEn": "Hello, Mi.",
+        "phonetic": "/həˈləʊ miː/",
+        "meaningVi": "Chào Mi.",
+        "tipsVi": "Chào hỏi vui tươi, ấm áp."
+      },
+      {
+        "id": "u2_d2",
+        "speaker": "Mi",
+        "sentenceEn": "Hi, Elena. Welcome to my new home!",
+        "phonetic": "/haɪ ɪˈleɪnə ˈwelkəm tuː maɪ njuː həʊm/",
+        "meaningVi": "Chào Elena. Chào mừng bạn đến nhà mới của mình!",
+        "tipsVi": "Nhấn giọng vào \"Welcome\" và \"new home\"."
+      },
+      {
+        "id": "u2_d3",
+        "speaker": "Elena",
+        "sentenceEn": "Wow, it is so beautiful! Is that your living room?",
+        "phonetic": "/waʊ ɪt ɪz səʊ ˈbjuːtɪfl ɪz ðæt jɔː ˈlɪvɪŋ ruːm/",
+        "meaningVi": "Chà, đẹp quá! Đó là phòng khách của bạn à?",
+        "tipsVi": "Biểu lộ sự trầm trồ, lên giọng ở \"living room↗\"."
+      },
+      {
+        "id": "u2_d4",
+        "speaker": "Mi",
+        "sentenceEn": "Yes, it is. There is a sofa, a table, and a big television.",
+        "phonetic": "/jes ɪt ɪz ðeər ɪz ə ˈsəʊfə ə ˈteɪbl ænd ə bɪɡ ˈtelɪvɪʒn/",
+        "meaningVi": "Đúng rồi. Có ghế sô-pha, bàn và một chiếc ti vi lớn.",
+        "tipsVi": "Đọc rõ cấu trúc \"There is a...\" mô tả đồ vật."
+      },
+      {
+        "id": "u2_d5",
+        "speaker": "Elena",
+        "sentenceEn": "How many rooms are there in your house?",
+        "phonetic": "/haʊ ˈmeni ruːmz ɑː ðeər ɪn jɔː haʊs/",
+        "meaningVi": "Có bao nhiêu phòng trong ngôi nhà của bạn?",
+        "tipsVi": "Câu hỏi \"How many\" xuống giọng ở cuối câu: \"house↘\"."
+      },
+      {
+        "id": "u2_d6",
+        "speaker": "Mi",
+        "sentenceEn": "There are six rooms: a living room, a kitchen, and four bedrooms.",
+        "phonetic": "/ðeər ɑː sɪks ruːmz ə ˈlɪvɪŋ ruːm ə ˈkɪtʃɪn ænd fɔː ˈbedruːmz/",
+        "meaningVi": "Có sáu phòng: một phòng khách, một phòng bếp và bốn phòng ngủ.",
+        "tipsVi": "Đọc rõ âm số nhiều /z/ trong \"rooms\" và \"bedrooms\"."
+      },
+      {
+        "id": "u2_d7",
+        "speaker": "Elena",
+        "sentenceEn": "Where is your dog, Luke?",
+        "phonetic": "/weər ɪz jɔː dɒɡ luːk/",
+        "meaningVi": "Chú cún Luke của bạn đâu rồi?",
+        "tipsVi": "Phát âm rõ tên riêng \"Luke\" với âm /k/ ở cuối."
+      },
+      {
+        "id": "u2_d8",
+        "speaker": "Mi",
+        "sentenceEn": "He is behind the sofa, sleeping under the lamp.",
+        "phonetic": "/hiː ɪz bɪˈhaɪnd ðə ˈsəʊfə ˈsliːpɪŋ ˈʌndə ðə læmp/",
+        "meaningVi": "Nó đang ở sau ghế sô-pha, ngủ dưới chân đèn.",
+        "tipsVi": "Nhấn vào giới từ chỉ vị trí: \"behind\" và \"under\"."
+      },
+      {
+        "id": "u2_d9",
+        "speaker": "Elena",
+        "sentenceEn": "He is so cute!",
+        "phonetic": "/hiː ɪz səʊ kjuːt/",
+        "meaningVi": "Chú cún dễ thương quá!",
+        "tipsVi": "Cảm thán nhẹ nhàng, nhấn vào tính từ \"cute\" (/kjuːt/)."
+      },
+      {
+        "id": "u2_d10",
+        "speaker": "Mi",
+        "sentenceEn": "Thank you. Let me show you my bedroom.",
+        "phonetic": "/θæŋk juː let miː ʃəʊ juː maɪ ˈbedruːm/",
+        "meaningVi": "Cảm ơn bạn. Để mình cho bạn xem phòng ngủ của mình nhé.",
+        "tipsVi": "Âm /θ/ trong \"Thank\" kẹp nhẹ lưỡi giữa hai hàm răng."
+      }
+    ]
   },
   "reading": {
     "title": "A Room at the Crazy House Hotel, Da Lat",

@@ -69,19 +69,33 @@ export function searchCurriculum(query) {
       });
     }
 
-    // 4. Tìm Luyện Nói
+    // 4. Tìm Luyện Nói (Mẫu câu, Thử thách và Hội thoại SGK)
     if (u.speaking) {
       const matchEn = u.speaking.targetSentence?.toLowerCase().includes(q);
       const matchVi = u.speaking.meaningVi?.toLowerCase().includes(q);
-      if (matchEn || matchVi) {
+      const matchTopic = u.speaking.situationalTopic?.toLowerCase().includes(q);
+      const matchDialogueTitle = u.speaking.dialogueTitle?.toLowerCase().includes(q);
+
+      const matchedLine = (u.speaking.dialogueLines || []).find(
+        (l) => l.sentenceEn?.toLowerCase().includes(q) || l.meaningVi?.toLowerCase().includes(q)
+      );
+
+      const matchedChallenge = (u.speaking.challenges || []).find(
+        (c) => c.sentenceEn?.toLowerCase().includes(q) || c.meaningVi?.toLowerCase().includes(q)
+      );
+
+      if (matchEn || matchVi || matchTopic || matchDialogueTitle || matchedLine || matchedChallenge) {
+        const sentenceToDisplay = matchedLine?.sentenceEn || matchedChallenge?.sentenceEn || u.speaking.targetSentence;
+        const phoneticToDisplay = matchedLine?.phonetic || matchedChallenge?.phonetic || u.speaking.phonetic;
+        const meaningToDisplay = matchedLine?.meaningVi || matchedChallenge?.meaningVi || u.speaking.meaningVi;
         speaking.push({
           unitId: u.unitId,
           unitTitle: `Unit ${u.unitId}: ${u.titleEn}`,
           emoji: u.emoji,
-          sentence: u.speaking.targetSentence,
+          sentence: sentenceToDisplay,
           audio: u.speaking.audio || null,
-          phonetic: u.speaking.phonetic,
-          meaningVi: u.speaking.meaningVi,
+          phonetic: phoneticToDisplay,
+          meaningVi: meaningToDisplay,
         });
       }
     }

@@ -117,15 +117,25 @@ describe('10-Point Curriculum & Features Comprehensive Verification', () => {
     });
   });
 
-  // Test 6: Speaking Target Sentences & Progressive Challenges
-  it('6. All 12 Units have AI Speaking challenges and target sentence', () => {
+  // Test 6: Speaking Target Sentences, Progressive Challenges & Textbook Getting Started Dialogues
+  it('6. All 12 Units have AI Speaking challenges and Getting Started textbook dialogues', () => {
     units.forEach((summary) => {
       const u = getUnit(summary.unitId);
       const spk = u.speaking;
       expect(spk).toBeDefined();
       expect(spk.targetSentence).toBeTruthy();
       expect(spk.meaningVi).toBeTruthy();
-      expect(spk.challenges.length).toBeGreaterThanOrEqual(3);
+      expect(spk.challenges.length).toBeGreaterThanOrEqual(6);
+      expect(spk.dialogueTitle).toBeTruthy();
+      expect(spk.dialogueContext).toBeTruthy();
+      expect(spk.dialogueLines.length).toBeGreaterThanOrEqual(8);
+      spk.dialogueLines.forEach((line) => {
+        expect(line.speaker).toBeTruthy();
+        expect(line.sentenceEn).toBeTruthy();
+        expect(line.phonetic).toMatch(/^\/.+\/$/);
+        expect(line.meaningVi).toBeTruthy();
+        expect(line.tipsVi).toBeTruthy();
+      });
     });
   });
 

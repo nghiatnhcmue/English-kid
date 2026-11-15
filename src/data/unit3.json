@@ -426,9 +426,109 @@
         "meaningVi": "Mình rất muốn tham gia buổi dã ngoại cùng các bạn!",
         "tipsVi": "Âm /dʒ/ trong \"join\" bật hơi mạnh và dứt khoát.",
         "audio": "/assets/audio/unit3/speaking-ch4.mp3"
+      },
+      {
+        "id": "spk-5",
+        "level": "Miêu tả ngoại hình",
+        "sentenceEn": "My best friend has round blue eyes and a friendly smile.",
+        "phonetic": "/maɪ best frend hæz raʊnd bluː aɪz ænd ə ˈfrendli smaɪl/",
+        "meaningVi": "Bạn thân nhất của em có đôi mắt tròn xanh biếc và nụ cười thân thiện.",
+        "tipsVi": "Chú ý phát âm rõ âm /z/ trong \"eyes\" và /l/ trong \"smile\"."
+      },
+      {
+        "id": "spk-6",
+        "level": "Tính cách bạn bè",
+        "sentenceEn": "She is very creative and always helps other classmates.",
+        "phonetic": "/ʃiː ɪz ˈveri kriˈeɪtɪv ænd ˈɔːlweɪz helps ˈʌðə ˈklɑːsmeɪts/",
+        "meaningVi": "Bạn ấy rất sáng tạo và luôn giúp đỡ các bạn cùng lớp.",
+        "tipsVi": "Nhấn vào tính từ \"creative\" và trạng từ \"always\"."
       }
     ],
-    "audio": "/assets/audio/unit3/speaking-target.mp3"
+    "audio": "/assets/audio/unit3/speaking-target.mp3",
+    "dialogueTitle": "Getting Started: A Surprise Guest",
+    "dialogueContext": "Phong và Nam đang có buổi dã ngoại tại công viên thì Châu và Mai xuất hiện.",
+    "dialogueLines": [
+      {
+        "id": "u3_d1",
+        "speaker": "Phong",
+        "sentenceEn": "Hi, Nam. The weather is so nice today!",
+        "phonetic": "/haɪ næm ðə ˈweðər ɪz səʊ naɪs təˈdeɪ/",
+        "meaningVi": "Chào Nam. Thời tiết hôm nay đẹp thật đấy!",
+        "tipsVi": "Âm /ð/ trong \"weather\" rung nhẹ dây thanh quản."
+      },
+      {
+        "id": "u3_d2",
+        "speaker": "Nam",
+        "sentenceEn": "Yes, it is great for a picnic in the park.",
+        "phonetic": "/jes ɪt ɪz ɡreɪt fɔːr ə ˈpɪknɪk ɪn ðə pɑːk/",
+        "meaningVi": "Ừ, rất tuyệt cho một buổi dã ngoại ở công viên.",
+        "tipsVi": "Nhấn vào tính từ \"great\" và danh từ \"picnic\"."
+      },
+      {
+        "id": "u3_d3",
+        "speaker": "Phong",
+        "sentenceEn": "Look! Who is that girl with long black hair?",
+        "phonetic": "/lʊk huː ɪz ðæt ɡɜːl wɪð lɒŋ blæk heə/",
+        "meaningVi": "Nhìn kìa! Cô bạn có mái tóc đen dài kia là ai thế?",
+        "tipsVi": "Cụm miêu tả ngoại hình: \"long black hair\" nối tự nhiên."
+      },
+      {
+        "id": "u3_d4",
+        "speaker": "Nam",
+        "sentenceEn": "That is Chau. She is in class 6A.",
+        "phonetic": "/ðæt ɪz tʃaʊ ʃiː ɪz ɪn klɑːs sɪks eɪ/",
+        "meaningVi": "Đó là Châu. Bạn ấy học lớp 6A.",
+        "tipsVi": "Giới thiệu bạn bè tự nhiên, rõ ràng."
+      },
+      {
+        "id": "u3_d5",
+        "speaker": "Phong",
+        "sentenceEn": "She looks very friendly and sporty.",
+        "phonetic": "/ʃiː lʊks ˈveri ˈfrendli ænd ˈspɔːti/",
+        "meaningVi": "Trông bạn ấy rất thân thiện và yêu thể thao.",
+        "tipsVi": "Các tính từ chỉ tính cách: \"friendly\" và \"sporty\"."
+      },
+      {
+        "id": "u3_d6",
+        "speaker": "Nam",
+        "sentenceEn": "Yes, she plays basketball very well.",
+        "phonetic": "/jes ʃiː pleɪz ˈbɑːskɪtbɔːl ˈveri wel/",
+        "meaningVi": "Đúng rồi, bạn ấy chơi bóng rổ rất cừ khôi.",
+        "tipsVi": "Nhấn giọng vào trạng từ \"very well\"."
+      },
+      {
+        "id": "u3_d7",
+        "speaker": "Chau",
+        "sentenceEn": "Hi, Phong! Hi, Nam! Can we sit here?",
+        "phonetic": "/haɪ fɒŋ haɪ næm kæn wiː sɪt hɪə/",
+        "meaningVi": "Chào Phong! Chào Nam! Chúng mình ngồi cùng ở đây được không?",
+        "tipsVi": "Câu xin phép lịch sự: lên giọng ở cuối \"here↗\"."
+      },
+      {
+        "id": "u3_d8",
+        "speaker": "Phong",
+        "sentenceEn": "Sure! Please have some biscuits and fruit.",
+        "phonetic": "/ʃʊə pliːz hæv sʌm ˈbɪskɪts ænd fruːt/",
+        "meaningVi": "Chắc chắn rồi! Mời các bạn dùng bánh quy và hoa quả.",
+        "tipsVi": "Hiếu khách, ấm áp: nhấn \"Sure!\" và \"Please\"."
+      },
+      {
+        "id": "u3_d9",
+        "speaker": "Chau",
+        "sentenceEn": "Thank you. You are so kind!",
+        "phonetic": "/θæŋk juː juː ɑː səʊ kaɪnd/",
+        "meaningVi": "Cảm ơn các bạn. Các bạn thật tốt bụng!",
+        "tipsVi": "Biểu lộ sự biết ơn chân thành, nhấn vào \"kind\"."
+      },
+      {
+        "id": "u3_d10",
+        "speaker": "Nam",
+        "sentenceEn": "Let's play badminton together after eating.",
+        "phonetic": "/lets pleɪ ˈbædmɪntən təˈɡeðər ˈɑːftər ˈiːtɪŋ/",
+        "meaningVi": "Ăn xong chúng mình cùng chơi cầu lông nhé.",
+        "tipsVi": "Rủ rê bạn bè: \"Let's play... together\"."
+      }
+    ]
   },
   "reading": {
     "title": "First Day at the Superb Summer Camp",

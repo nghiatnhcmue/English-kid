@@ -441,9 +441,109 @@
         "meaningVi": "Vì nó rất thú vị và ngập tràn kiến thức bổ ích.",
         "tipsVi": "\"interesting\" đọc 3 âm tiết gọn: IN-tre-sting.",
         "audio": "/assets/audio/unit7/speaking-ch4.mp3"
+      },
+      {
+        "id": "spk-5",
+        "level": "Chương trình giáo dục",
+        "sentenceEn": "I learn a lot of practical knowledge from science documentaries.",
+        "phonetic": "/aɪ lɜːn ə lɒt əv ˈpræktɪkl ˈnɒlɪdʒ frəm ˈsaɪəns ˌdɒkjuˈmentriz/",
+        "meaningVi": "Em học được rất nhiều kiến thức thực tế từ các bộ phim tài liệu khoa học.",
+        "tipsVi": "Phát âm chuẩn từ \"documentaries\" (/ˌdɒkjuˈmentriz/)."
+      },
+      {
+        "id": "spk-6",
+        "level": "Bày tỏ quan điểm",
+        "sentenceEn": "Although educational programmes are long, they are very useful.",
+        "phonetic": "/ɔːlˈðəʊ ˌedʒuˈkeɪʃənl ˈprəʊɡræmz ɑː lɒŋ ðeɪ ɑː ˈveri ˈjuːsfl/",
+        "meaningVi": "Mặc dù các chương trình giáo dục khá dài, nhưng chúng rất hữu ích.",
+        "tipsVi": "Sử dụng liên từ nhượng bộ \"Although\" tự nhiên."
       }
     ],
-    "audio": "/assets/audio/unit7/speaking-target.mp3"
+    "audio": "/assets/audio/unit7/speaking-target.mp3",
+    "dialogueTitle": "Getting Started: What's On Today?",
+    "dialogueContext": "Phong và Hùng đang ngồi xem lịch phát sóng các chương trình truyền hình yêu thích.",
+    "dialogueLines": [
+      {
+        "id": "u7_d1",
+        "speaker": "Phong",
+        "sentenceEn": "What are you watching, Hung?",
+        "phonetic": "/wɒt ɑː juː ˈwɒtʃɪŋ hʊŋ/",
+        "meaningVi": "Cậu đang xem chương trình gì thế Hùng?",
+        "tipsVi": "Hỏi tự nhiên, xuống giọng ở \"Hung↘\"."
+      },
+      {
+        "id": "u7_d2",
+        "speaker": "Hùng",
+        "sentenceEn": "I am watching The Voice Kids. The singers are very talented.",
+        "phonetic": "/aɪ æm ˈwɒtʃɪŋ ðə vɔɪs kɪdz ðə ˈsɪŋəz ɑː ˈveri ˈtæləntɪd/",
+        "meaningVi": "Tớ đang xem Giọng hát Việt nhí. Các bạn thí sinh rất tài năng.",
+        "tipsVi": "Khen ngợi: phát âm rõ tính từ \"talented\" (/ˈtæləntɪd/)."
+      },
+      {
+        "id": "u7_d3",
+        "speaker": "Phong",
+        "sentenceEn": "Do you like watching animated cartoons?",
+        "phonetic": "/duː juː laɪk ˈwɒtʃɪŋ ˈænɪmeɪtɪd kɑːˈtuːnz/",
+        "meaningVi": "Cậu có thích xem phim hoạt hình không?",
+        "tipsVi": "Lên giọng ở cuối câu hỏi Yes/No: \"cartoons↗\"."
+      },
+      {
+        "id": "u7_d4",
+        "speaker": "Hùng",
+        "sentenceEn": "Yes, Tom and Jerry is my all-time favourite cartoon.",
+        "phonetic": "/jes tɒm ænd ˈdʒeri ɪz maɪ ɔːl taɪm ˈfeɪvərɪt kɑːˈtuːn/",
+        "meaningVi": "Có chứ, Tom và Jerry là bộ phim hoạt hình yêu thích nhất của tớ.",
+        "tipsVi": "Nhấn giọng vào cụm từ \"all-time favourite\"."
+      },
+      {
+        "id": "u7_d5",
+        "speaker": "Phong",
+        "sentenceEn": "Why do you like it so much?",
+        "phonetic": "/waɪ duː juː laɪk ɪt səʊ mʌtʃ/",
+        "meaningVi": "Tại sao cậu lại yêu thích bộ phim đó đến vậy?",
+        "tipsVi": "Câu hỏi lý do với \"Why\": xuống giọng ở \"so much↘\"."
+      },
+      {
+        "id": "u7_d6",
+        "speaker": "Hùng",
+        "sentenceEn": "Because it is colourful, funny, and entertaining.",
+        "phonetic": "/bɪˈkɒz ɪt ɪz ˈkʌləfl ˈfʌni ænd ˌentəˈteɪnɪŋ/",
+        "meaningVi": "Bởi vì phim rất nhiều màu sắc, hài hước và tính giải trí cao.",
+        "tipsVi": "Liệt kê ba tính từ: \"colourful↗\", \"funny↗\", \"entertaining↘\"."
+      },
+      {
+        "id": "u7_d7",
+        "speaker": "Phong",
+        "sentenceEn": "How many hours a day do you watch television?",
+        "phonetic": "/haʊ ˈmeni ˈaʊəz ə deɪ duː juː wɒtʃ ˈtelɪvɪʒn/",
+        "meaningVi": "Mỗi ngày cậu xem ti vi khoảng bao nhiêu tiếng?",
+        "tipsVi": "Từ \"hours\" có âm h câm: phát âm là /ˈaʊəz/."
+      },
+      {
+        "id": "u7_d8",
+        "speaker": "Hùng",
+        "sentenceEn": "Only about one hour, after I finish my homework.",
+        "phonetic": "/ˈəʊnli əˈbaʊt wʌn ˈaʊər ˈɑːftər aɪ ˈfɪnɪʃ maɪ ˈhəʊmwɜːk/",
+        "meaningVi": "Chỉ khoảng một tiếng thôi, sau khi tớ đã làm xong bài tập về nhà.",
+        "tipsVi": "Thói quen tốt, nhấn vào \"one hour\" và \"finish\"."
+      },
+      {
+        "id": "u7_d9",
+        "speaker": "Phong",
+        "sentenceEn": "Good habit! Too much screen time is bad for our eyes.",
+        "phonetic": "/ɡʊd ˈhæbɪt tuː mʌtʃ skriːn taɪm ɪz bæd fɔːr ˈaʊər aɪz/",
+        "meaningVi": "Thói quen tốt đấy! Nhìn màn hình quá nhiều sẽ hại cho mắt.",
+        "tipsVi": "Khen ngợi và khuyên nhủ: \"screen time\" và \"eyes\"."
+      },
+      {
+        "id": "u7_d10",
+        "speaker": "Hùng",
+        "sentenceEn": "Let's turn to the Discovery channel to watch wild animals!",
+        "phonetic": "/lets tɜːn tuː ðə dɪˈskʌvəri ˈtʃænl tuː wɒtʃ waɪld ˈænɪmlz/",
+        "meaningVi": "Chúng mình cùng chuyển sang kênh Discovery để xem thế giới động vật hoang dã nhé!",
+        "tipsVi": "Hào hứng rủ bạn: \"Let's turn to...\"."
+      }
+    ]
   },
   "reading": {
     "title": "A Day's TV Guide",

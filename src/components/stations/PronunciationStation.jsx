@@ -269,6 +269,30 @@ export default function PronunciationStation({ unit, onFinish }) {
           </div>
         </section>
       )}
+
+      {/* Banner kết nối sang Phòng Luyện Nói AI (Hội thoại SGK & Mẫu câu) */}
+      <section aria-label="Phòng Luyện Nói AI" className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 rounded-3xl bg-gradient-to-r from-peach-soft via-cream to-banana-soft p-5 border-2 border-peach/30 shadow-xs">
+        <div className="flex items-center gap-3">
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-peach text-2xl text-white shadow-xs" aria-hidden>
+            🎙️
+          </span>
+          <div>
+            <h4 className="text-base sm:text-lg font-black text-ink">
+              Luyện Đọc Hội Thoại SGK & Mẫu Câu Cùng AI
+            </h4>
+            <p className="text-xs sm:text-sm font-bold text-ink-soft">
+              Đọc theo nhân vật đoạn Getting Started của Unit {unit.unitId}, chấm điểm AI và nghe lại giọng nói của em!
+            </p>
+          </div>
+        </div>
+        <Button3D
+          to={`/speaking?unit=${unit.unitId}`}
+          tone="peach"
+          className="px-5 py-2.5 text-sm shrink-0"
+        >
+          <span>Vào phòng Luyện Nói →</span>
+        </Button3D>
+      </section>
     </div>
   );
 }

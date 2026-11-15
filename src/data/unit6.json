@@ -400,9 +400,109 @@
         "meaningVi": "Chúng em cùng nhau ngắm pháo hoa vào đêm Giao thừa.",
         "tipsVi": "\"fireworks\" có âm /s/ ở đuôi, phát âm nhẹ.",
         "audio": "/assets/audio/unit6/speaking-ch4.mp3"
+      },
+      {
+        "id": "spk-5",
+        "level": "Lời khuyên năm mới",
+        "sentenceEn": "You should not ask for lucky money from adults.",
+        "phonetic": "/juː ʃʊd nɒt ɑːsk fɔː ˈlʌki ˈmʌni frəm ˈædʌlts/",
+        "meaningVi": "Em không nên tự ý đòi tiền lì xì từ người lớn.",
+        "tipsVi": "Khuyên nhủ lễ phép: \"should not ask for...\"."
+      },
+      {
+        "id": "spk-6",
+        "level": "Lời chúc Tết",
+        "sentenceEn": "I wish you a joyful new year with good luck and success!",
+        "phonetic": "/aɪ wɪʃ juː ə ˈdʒɔɪfl njuː jɪə wɪð ɡʊd lʌk ænd səkˈses/",
+        "meaningVi": "Mình chúc bạn một năm mới tràn ngập niềm vui, may mắn và thành công!",
+        "tipsVi": "Ngữ điệu chúc tụng tươi vui, truyền cảm."
       }
     ],
-    "audio": "/assets/audio/unit6/speaking-target.mp3"
+    "audio": "/assets/audio/unit6/speaking-target.mp3",
+    "dialogueTitle": "Getting Started: Happy New Year!",
+    "dialogueContext": "Linda đến thăm gia đình Phong và cùng trò chuyện về phong tục Tết cổ truyền Việt Nam.",
+    "dialogueLines": [
+      {
+        "id": "u6_d1",
+        "speaker": "Linda",
+        "sentenceEn": "Phong, does Viet Nam celebrate the New Year like England?",
+        "phonetic": "/fɒŋ dʌz vjet næm ˈselɪbreɪt ðə njuː jɪə laɪk ˈɪŋɡlənd/",
+        "meaningVi": "Phong ơi, Việt Nam có đón năm mới giống như ở nước Anh không?",
+        "tipsVi": "Hỏi thăm thân thiện, lên giọng nhẹ ở \"England↗\"."
+      },
+      {
+        "id": "u6_d2",
+        "speaker": "Phong",
+        "sentenceEn": "We celebrate Tet. It is the biggest festival in Viet Nam.",
+        "phonetic": "/wiː ˈselɪbreɪt tet ɪt ɪz ðə ˈbɪɡɪst ˈfestɪvl ɪn vjet næm/",
+        "meaningVi": "Chúng mình đón Tết. Đó là ngày hội lớn nhất ở Việt Nam.",
+        "tipsVi": "Tự hào giới thiệu văn hóa dân tộc, nhấn \"biggest festival\"."
+      },
+      {
+        "id": "u6_d3",
+        "speaker": "Linda",
+        "sentenceEn": "What do you do before Tet?",
+        "phonetic": "/wɒt duː juː duː bɪˈfɔː tet/",
+        "meaningVi": "Các bạn thường làm những gì trước Tết vậy?",
+        "tipsVi": "Câu hỏi Wh- xuống giọng ở \"Tet↘\"."
+      },
+      {
+        "id": "u6_d4",
+        "speaker": "Phong",
+        "sentenceEn": "We clean and decorate our house with peach blossoms.",
+        "phonetic": "/wiː kliːn ænd ˈdekəreɪt ˈaʊə haʊs wɪð piːtʃ ˈblɒsəmz/",
+        "meaningVi": "Chúng mình dọn dẹp và trang hoàng nhà cửa bằng những cành hoa đào.",
+        "tipsVi": "Phát âm rõ cụm \"peach blossoms\" (/piːtʃ ˈblɒsəmz/)."
+      },
+      {
+        "id": "u6_d5",
+        "speaker": "Linda",
+        "sentenceEn": "What traditional food do you eat at Tet?",
+        "phonetic": "/wɒt trəˈdɪʃənl fuːd duː juː iːt æt tet/",
+        "meaningVi": "Các bạn ăn món ăn truyền thống gì trong dịp Tết?",
+        "tipsVi": "Cụm danh từ \"traditional food\" (món ăn truyền thống)."
+      },
+      {
+        "id": "u6_d6",
+        "speaker": "Phong",
+        "sentenceEn": "We make banh chung with sticky rice, green beans, and pork.",
+        "phonetic": "/wiː meɪk bæŋ tʃʊŋ wɪð ˈstɪki raɪs ɡriːn biːnz ænd pɔːk/",
+        "meaningVi": "Chúng mình gói bánh chưng bằng gạo nếp, đỗ xanh và thịt lợn.",
+        "tipsVi": "Liệt kê các nguyên liệu gói bánh thơm ngon."
+      },
+      {
+        "id": "u6_d7",
+        "speaker": "Linda",
+        "sentenceEn": "Do children get presents?",
+        "phonetic": "/duː ˈtʃɪldrən ɡet ˈpreznts/",
+        "meaningVi": "Trẻ em có được nhận quà không bạn?",
+        "tipsVi": "Lên giọng ở cuối câu hỏi: \"presents↗\"."
+      },
+      {
+        "id": "u6_d8",
+        "speaker": "Phong",
+        "sentenceEn": "Yes! Children receive lucky money inside red envelopes.",
+        "phonetic": "/jes ˈtʃɪldrən rɪˈsiːv ˈlʌki ˈmʌni ɪnˈsaɪd red ˈenvələʊps/",
+        "meaningVi": "Có chứ! Trẻ em được nhận tiền lì xì trong những phong bao đỏ.",
+        "tipsVi": "Hào hứng: \"lucky money\" và \"red envelopes\"."
+      },
+      {
+        "id": "u6_d9",
+        "speaker": "Linda",
+        "sentenceEn": "What should people do during Tet?",
+        "phonetic": "/wɒt ʃʊd ˈpiːpl duː ˈdjʊərɪŋ tet/",
+        "meaningVi": "Mọi người nên làm gì trong những ngày Tết?",
+        "tipsVi": "Hỏi về lời khuyên phong tục với động từ \"should\"."
+      },
+      {
+        "id": "u6_d10",
+        "speaker": "Phong",
+        "sentenceEn": "People should wish each other good health and happiness!",
+        "phonetic": "/ˈpiːpl ʃʊd wɪʃ iːtʃ ˈʌðə ɡʊd helθ ænd ˈhæpinəs/",
+        "meaningVi": "Mọi người nên chúc nhau nhiều sức khỏe và niềm hạnh phúc!",
+        "tipsVi": "Lời chúc tốt lành, ấm áp: \"good health and happiness\"."
+      }
+    ]
   },
   "reading": {
     "title": "New Year Celebrations Around the World",
