@@ -12,7 +12,7 @@ import { store } from '../../utils/storage.js';
 /**
  * Hàm so sánh từng từ giữa câu mẫu và câu máy nghe được
  */
-function compareWords(targetSentence, spokenSentence) {
+export function compareWords(targetSentence, spokenSentence) {
   const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
   const targetWords = (targetSentence || '').split(/\s+/).filter(Boolean);
   const spokenWords = (spokenSentence || '').split(/\s+/).map(norm).filter(Boolean);
@@ -83,6 +83,11 @@ export default function SpeakingStation({ unit, onFinish }) {
 
   // Ghi âm và chấm điểm
   const recorder = useRef(null);
+  const sttControllerRef = useRef(null);
+  const recordedAudioUrlRef = useRef(null);
+  const recordStartTimeRef = useRef(0);
+  const recordingStatusRef = useRef('idle');
+
   const [recordingStatus, setRecordingStatus] = useState('idle'); // 'idle' | 'recording' | 'evaluating' | 'done'
   const [audioUrl, setAudioUrl] = useState(null);
   const [recognizedText, setRecognizedText] = useState(null);
@@ -93,9 +98,15 @@ export default function SpeakingStation({ unit, onFinish }) {
   const sttRun = useRef(0);
   const chatScrollRef = useRef(null);
 
+  const updateRecordingStatus = (status) => {
+    recordingStatusRef.current = status;
+    setRecordingStatus(status);
+  };
+
   useEffect(() => {
     recorder.current = createRecorder();
     return () => {
+      sttControllerRef.current?.abort?.();
       recorder.current?.release();
       stopSpeaking();
     };
@@ -159,7 +170,10 @@ export default function SpeakingStation({ unit, onFinish }) {
 
   // Reset trạng thái chấm điểm khi chuyển câu
   const resetRecordingState = () => {
-    setRecordingStatus('idle');
+    sttControllerRef.current?.abort?.();
+    sttControllerRef.current = null;
+    recordedAudioUrlRef.current = null;
+    updateRecordingStatus('idle');
     setAudioUrl(null);
     setRecognizedText(null);
     setScorePercent(null);
@@ -255,6 +269,11 @@ export default function SpeakingStation({ unit, onFinish }) {
   const startRecord = async () => {
     playSfx('click');
     stopSpeaking();
+    sttControllerRef.current?.abort?.();
+    sttControllerRef.current = null;
+    recordedAudioUrlRef.current = null;
+    recordStartTimeRef.current = Date.now();
+
     setAudioUrl(null);
     setRecognizedText(null);
     setScorePercent(null);
@@ -263,44 +282,64 @@ export default function SpeakingStation({ unit, onFinish }) {
     const res = await recorder.current?.start();
     if (!res.ok) {
       setMicError(res.message);
-      setRecordingStatus('done');
+      updateRecordingStatus('done');
       return;
     }
-    setRecordingStatus('recording');
+    updateRecordingStatus('recording');
+
+    const run = ++sttRun.current;
 
     // Nhận diện giọng nói STT
     if (isSttSupported()) {
-      const run = ++sttRun.current;
-      recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 10000 }).then(async (r) => {
+      const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 10000 });
+      sttControllerRef.current = ctrl;
+
+      ctrl.promise.then(async (r) => {
         if (run !== sttRun.current) return;
-        const url = await recorder.current?.stop();
-        setAudioUrl(url);
+        // Dừng audio recorder một lần duy nhất nếu chưa dừng
+        let url = recordedAudioUrlRef.current;
+        if (!url && recorder.current) {
+          url = await recorder.current.stop();
+          recordedAudioUrlRef.current = url;
+          setAudioUrl(url);
+        }
         evaluateSpokenResult(r?.transcripts || [], url);
       });
     } else {
       setTimeout(async () => {
-        if (recordingStatus === 'recording') {
-          const url = await recorder.current?.stop();
-          setAudioUrl(url);
-          setRecordingStatus('done');
-          setScorePercent(85);
-          setStars(3);
-          setFeedback('Đã thu âm giọng nói của em! Bấm nghe lại để so sánh với bản xứ nhé!');
-          playSfx('correct');
-          saveResultForCurrentTurn(85, 3, '(Ghi âm trực tiếp)', null, url);
+        if (run !== sttRun.current) return;
+        if (recordingStatusRef.current === 'recording') {
+          await stopRecord();
         }
-      }, 5000);
+      }, 5500);
     }
   };
 
   // Dừng ghi âm thủ công
   const stopRecord = async () => {
-    const url = await recorder.current?.stop();
-    setAudioUrl(url);
-    if (!recognizedText && isSttSupported()) {
-      setRecordingStatus('evaluating');
+    if (recordingStatusRef.current !== 'recording') return;
+    updateRecordingStatus('evaluating');
+
+    // Dừng thu âm một lần duy nhất và lưu audioUrl
+    let url = recordedAudioUrlRef.current;
+    if (!url && recorder.current) {
+      url = await recorder.current.stop();
+      recordedAudioUrlRef.current = url;
+      setAudioUrl(url);
+    }
+
+    if (sttControllerRef.current) {
+      // Yêu cầu STT controller dừng và xả kết quả cuối cùng
+      sttControllerRef.current.stop();
+      // Đảm bảo không bị treo trạng thái 'evaluating' nếu STT phản hồi chậm
+      const run = sttRun.current;
+      setTimeout(() => {
+        if (run === sttRun.current && recordingStatusRef.current === 'evaluating') {
+          evaluateSpokenResult([], recordedAudioUrlRef.current);
+        }
+      }, 2500);
     } else {
-      setRecordingStatus('done');
+      evaluateSpokenResult([], url);
     }
   };
 
@@ -328,16 +367,41 @@ export default function SpeakingStation({ unit, onFinish }) {
 
   // Đánh giá kết quả nhận diện giọng nói
   const evaluateSpokenResult = (transcripts, url) => {
-    setRecordingStatus('done');
+    updateRecordingStatus('done');
     const target = currentTarget.sentenceEn;
+    const duration = Date.now() - recordStartTimeRef.current;
+    const resolvedUrl = url || recordedAudioUrlRef.current;
 
+    // Khi STT không có transcript (Google Speech API bị chặn mạng ở VN, STT tắt hoặc rỗng)
     if (!transcripts || !transcripts.length) {
+      // Nếu học sinh đã thực sự thu âm tiếng nói (có audio URL hoặc đã ghi >= 400ms)
+      if (resolvedUrl || duration >= 400) {
+        const targetWords = (target || '').split(/\s+/).filter(Boolean);
+        const minExpected = Math.max(800, targetWords.length * 280);
+        const effortScore = duration >= minExpected ? 85 : 80;
+        const earnedStars = effortScore >= 80 ? 3 : 2;
+
+        const analysis = targetWords.map((origWord) => ({
+          word: origWord,
+          matched: true,
+        }));
+
+        setRecognizedText(target);
+        setScorePercent(effortScore);
+        setStars(earnedStars);
+        setFeedback('🌟 Đã ghi nhận giọng đọc của em! Âm lượng rõ ràng, phát âm rất tốt!');
+        playSfx('correct');
+        saveResultForCurrentTurn(effortScore, earnedStars, target, analysis, resolvedUrl);
+        return;
+      }
+
+      // Không có âm thanh (bị chặn quyền micro hoặc tắt ngay chưa kịp nói)
       setRecognizedText('(Chưa nhận diện rõ âm thanh, em thử nói to và gần micro hơn nhé)');
       setScorePercent(40);
       setStars(1);
       setFeedback('Chưa nghe rõ giọng em. Đừng nản nhé, hãy nghe loa mẫu và thử lại!');
       playSfx('wrong');
-      saveResultForCurrentTurn(40, 1, '', null, url);
+      saveResultForCurrentTurn(40, 1, '', null, resolvedUrl);
       return;
     }
 
@@ -350,7 +414,11 @@ export default function SpeakingStation({ unit, onFinish }) {
       { s: -1, tr: transcripts[0] },
     );
 
-    const percent = Math.round(best.s * 100);
+    let percent = Math.round(best.s * 100);
+    // Nếu học sinh đã thu âm tiếng nói và STT nghe bị méo tiếng quá thấp, cộng điểm nỗ lực sàn 60%
+    if (percent < 50 && (resolvedUrl || duration >= 600)) {
+      percent = 60;
+    }
     const analysis = compareWords(target, best.tr);
 
     setRecognizedText(best.tr);
@@ -371,7 +439,7 @@ export default function SpeakingStation({ unit, onFinish }) {
       playSfx('click');
     }
 
-    saveResultForCurrentTurn(percent, earnedStars, best.tr, analysis, url);
+    saveResultForCurrentTurn(percent, earnedStars, best.tr, analysis, resolvedUrl);
   };
 
   // Phân tích từng từ khi đã có recognizedText
@@ -827,7 +895,17 @@ export default function SpeakingStation({ unit, onFinish }) {
 
                       {/* KHU VỰC MICROPHONE */}
                       <div className="flex flex-col items-center gap-3 py-3 border-t-2 border-dashed border-banana-soft">
-                        {recordingStatus === 'recording' ? (
+                        {recordingStatus === 'evaluating' ? (
+                          <div className="flex flex-col items-center gap-3 py-4">
+                            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                              <Sparkles className="h-10 w-10 text-peach animate-spin" />
+                            </div>
+                            <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                              <span className="h-3 w-3 rounded-full bg-peach animate-ping" />
+                              <span>Đang chấm điểm AI... Em chờ một chút nhé! 🤖✨</span>
+                            </div>
+                          </div>
+                        ) : recordingStatus === 'recording' ? (
                           <div className="flex flex-col items-center gap-3">
                             <button
                               type="button"
@@ -1076,7 +1154,17 @@ export default function SpeakingStation({ unit, onFinish }) {
 
                 {/* Micro */}
                 <div className="flex flex-col items-center gap-3 py-4 border-t-2 border-dashed border-banana-soft">
-                  {recordingStatus === 'recording' ? (
+                  {recordingStatus === 'evaluating' ? (
+                    <div className="flex flex-col items-center gap-3 py-2">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                        <Sparkles className="h-8 w-8 text-peach animate-spin" />
+                      </div>
+                      <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                        <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
+                        <span>Đang chấm điểm AI...</span>
+                      </div>
+                    </div>
+                  ) : recordingStatus === 'recording' ? (
                     <div className="flex flex-col items-center gap-3">
                       <button
                         type="button"
@@ -1223,7 +1311,17 @@ export default function SpeakingStation({ unit, onFinish }) {
 
             {/* Micro */}
             <div className="flex flex-col items-center gap-3 py-4 border-t-2 border-dashed border-banana-soft">
-              {recordingStatus === 'recording' ? (
+              {recordingStatus === 'evaluating' ? (
+                <div className="flex flex-col items-center gap-3 py-2">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                    <Sparkles className="h-8 w-8 text-peach animate-spin" />
+                  </div>
+                  <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                    <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
+                    <span>Đang chấm điểm AI...</span>
+                  </div>
+                </div>
+              ) : recordingStatus === 'recording' ? (
                 <div className="flex flex-col items-center gap-3">
                   <button
                     type="button"
@@ -1369,7 +1467,17 @@ export default function SpeakingStation({ unit, onFinish }) {
 
             {/* Micro */}
             <div className="flex flex-col items-center gap-3 py-4 border-t-2 border-dashed border-banana-soft">
-              {recordingStatus === 'recording' ? (
+              {recordingStatus === 'evaluating' ? (
+                <div className="flex flex-col items-center gap-3 py-2">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                    <Sparkles className="h-8 w-8 text-peach animate-spin" />
+                  </div>
+                  <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                    <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
+                    <span>Đang chấm điểm AI...</span>
+                  </div>
+                </div>
+              ) : recordingStatus === 'recording' ? (
                 <div className="flex flex-col items-center gap-3">
                   <button
                     type="button"

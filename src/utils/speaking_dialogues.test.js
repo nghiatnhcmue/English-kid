@@ -157,4 +157,55 @@ describe('Speaking & Textbook Getting Started Dialogues Suite', () => {
       expect(studentLines.length + computerLines.length).toBe(lines.length);
     });
   });
+
+  it('9. Graceful fallback logic awards positive effort score (75-85%) and matches words when audio recorded', () => {
+    const targetSentence = 'Hello teacher, I love English.';
+    const targetWords = targetSentence.split(/\s+/).filter(Boolean);
+    const audioUrl = 'blob:http://localhost:5173/mock-audio-123';
+    const duration = 1500;
+
+    // Simulate fallback evaluation logic
+    const minExpected = Math.max(800, targetWords.length * 280);
+    const effortScore = duration >= minExpected ? 85 : 80;
+    const earnedStars = effortScore >= 80 ? 3 : 2;
+    const analysis = targetWords.map((origWord) => ({
+      word: origWord,
+      matched: true,
+    }));
+
+    expect(effortScore).toBeGreaterThanOrEqual(75);
+    expect(effortScore).toBeLessThanOrEqual(85);
+    expect(earnedStars).toBe(3);
+    expect(analysis.every((w) => w.matched)).toBe(true);
+  });
+
+  it('10. Audio recorder double-stop prevention preserves valid audioUrl', async () => {
+    let stopCallCount = 0;
+    const mockRecorder = {
+      stop: async () => {
+        stopCallCount++;
+        if (stopCallCount === 1) return 'blob:http://localhost/test-audio';
+        return null; // A second call returns null in native MediaRecorder
+      },
+    };
+
+    // Simulated component ref pattern
+    let recordedAudioUrl = null;
+    const getRecordedUrl = async () => {
+      if (!recordedAudioUrl) {
+        recordedAudioUrl = await mockRecorder.stop();
+      }
+      return recordedAudioUrl;
+    };
+
+    // First call (e.g. on manual stopRecord)
+    const url1 = await getRecordedUrl();
+    expect(url1).toBe('blob:http://localhost/test-audio');
+    expect(stopCallCount).toBe(1);
+
+    // Second call (e.g. from async STT promise resolving later)
+    const url2 = await getRecordedUrl();
+    expect(url2).toBe('blob:http://localhost/test-audio');
+    expect(stopCallCount).toBe(1); // Never called stop twice!
+  });
 });

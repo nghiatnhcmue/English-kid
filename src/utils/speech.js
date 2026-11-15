@@ -274,38 +274,147 @@ export async function playRecording(url) {
 }
 
 // ---- Nhận dạng giọng nói (STT cho Stage 3D) ----
-const Recognition = typeof window !== 'undefined' ? window.SpeechRecognition || window.webkitSpeechRecognition : undefined;
+const getRecognition = () => {
+  const scope = typeof window !== 'undefined' ? window : typeof globalThis !== 'undefined' ? globalThis : undefined;
+  return scope ? scope.SpeechRecognition || scope.webkitSpeechRecognition : undefined;
+};
 
-export const isSttSupported = () => !!Recognition;
+export const isSttSupported = () => !!getRecognition();
 
+/**
+ * Nhận dạng giọng nói một lần (STT) với bộ điều khiển hỗ trợ kết quả tạm thời (interim results)
+ * và phương thức `.stop()` theo yêu cầu.
+ * Trả về controller có `.promise`, `.stop()`, `.abort()` đồng thời là thenable (await được).
+ */
 export function recognizeOnce({ lang = 'en-GB', timeoutMs = 8000 } = {}) {
-  if (!Recognition) return Promise.resolve(null);
-  return new Promise((resolve) => {
-    let done = false;
-    const finish = (value) => {
-      if (done) return;
-      done = true;
-      clearTimeout(timer);
-      try {
-        rec.abort();
-      } catch {}
-      resolve(value);
-    };
-    const rec = new Recognition();
-    rec.lang = lang;
-    rec.interimResults = false;
-    rec.maxAlternatives = 5;
-    rec.onresult = (e) => {
-      const alts = [...(e.results?.[0] ?? [])].map((r) => r.transcript);
-      finish(alts.length ? { transcripts: alts } : null);
-    };
-    rec.onerror = () => finish(null);
-    rec.onend = () => finish(null);
-    const timer = setTimeout(() => finish(null), timeoutMs);
-    try {
-      rec.start();
-    } catch {
-      finish(null);
-    }
+  const Recognition = getRecognition();
+  let rec = null;
+  let done = false;
+  let timer = null;
+  let stopTimer = null;
+  let latestTranscripts = [];
+
+  let resolvePromise;
+  const promise = new Promise((resolve) => {
+    resolvePromise = resolve;
   });
+
+  const finish = (value, shouldAbort = false) => {
+    if (done) return;
+    done = true;
+    clearTimeout(timer);
+    clearTimeout(stopTimer);
+    if (shouldAbort) {
+      try {
+        rec?.abort();
+      } catch {
+        /* bỏ qua */
+      }
+    }
+    resolvePromise(value);
+  };
+
+  const stop = () => {
+    if (done) return promise;
+    // Gọi rec.stop() để engine xả và phát ra transcript cuối cùng (thay vì rec.abort làm mất dữ liệu)
+    try {
+      if (rec) {
+        rec.stop();
+      }
+    } catch {
+      finish(latestTranscripts.length ? { transcripts: latestTranscripts } : null);
+    }
+    // Bộ đếm an toàn chờ onresult / onend xả xong trong vòng 1.2s
+    stopTimer = setTimeout(() => {
+      finish(latestTranscripts.length ? { transcripts: latestTranscripts } : null);
+    }, 1200);
+    return promise;
+  };
+
+  const abort = () => {
+    finish(null, true);
+  };
+
+  const controller = {
+    promise,
+    stop,
+    abort,
+    then: (onFulfilled, onRejected) => promise.then(onFulfilled, onRejected),
+    catch: (onRejected) => promise.catch(onRejected),
+    finally: (onFinally) => promise.finally(onFinally),
+  };
+
+  if (!Recognition) {
+    resolvePromise(null);
+    return controller;
+  }
+
+  try {
+    rec = new Recognition();
+    rec.lang = lang;
+    rec.interimResults = true;
+    rec.maxAlternatives = 5;
+
+    rec.onresult = (e) => {
+      if (!e?.results) return;
+      let finalAccum = '';
+      let interimAccum = '';
+      const alts = [];
+
+      for (let i = 0; i < e.results.length; ++i) {
+        const res = e.results[i];
+        if (res.isFinal) {
+          finalAccum += (res[0]?.transcript || '') + ' ';
+        } else {
+          interimAccum += (res[0]?.transcript || '') + ' ';
+        }
+      }
+      const combined = (finalAccum + interimAccum).trim();
+      if (combined) {
+        alts.push(combined);
+      }
+
+      // Thu thập thêm các giả thuyết thay thế (alternatives)
+      for (let i = 0; i < e.results.length; ++i) {
+        const res = e.results[i];
+        for (let j = 0; j < (res?.length || 0); ++j) {
+          const t = res[j]?.transcript?.trim();
+          if (t && !alts.includes(t)) {
+            alts.push(t);
+          }
+        }
+      }
+
+      if (alts.length) {
+        latestTranscripts = alts;
+      }
+    };
+
+    rec.onerror = () => {
+      // Nếu đã thu được một phần transcript trước đó, giữ lại thay vì hủy hoàn toàn
+      if (latestTranscripts.length) {
+        finish({ transcripts: latestTranscripts });
+      } else {
+        finish(null);
+      }
+    };
+
+    rec.onend = () => {
+      finish(latestTranscripts.length ? { transcripts: latestTranscripts } : null);
+    };
+
+    timer = setTimeout(() => {
+      if (latestTranscripts.length) {
+        finish({ transcripts: latestTranscripts });
+      } else {
+        finish(null);
+      }
+    }, timeoutMs);
+
+    rec.start();
+  } catch {
+    finish(null);
+  }
+
+  return controller;
 }

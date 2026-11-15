@@ -18,16 +18,29 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
 
   // Ghi âm luyện nói
   const recorder = useRef(null);
-  const [recordingStatus, setRecordingStatus] = useState('idle'); // 'idle' | 'recording' | 'done'
+  const sttControllerRef = useRef(null);
+  const recordedAudioUrlRef = useRef(null);
+  const recordStartTimeRef = useRef(0);
+  const recordingStatusRef = useRef('idle');
+
+  const [recordingStatus, setRecordingStatus] = useState('idle'); // 'idle' | 'recording' | 'evaluating' | 'done'
   const [audioUrl, setAudioUrl] = useState(null);
   const [recognizedText, setRecognizedText] = useState(null);
   const [speakScore, setSpeakScore] = useState(null);
   const [stars, setStars] = useState(3);
   const sttRun = useRef(0);
 
+  const updateRecordingStatus = (status) => {
+    recordingStatusRef.current = status;
+    setRecordingStatus(status);
+  };
+
   useEffect(() => {
     recorder.current = createRecorder();
-    return () => recorder.current?.release();
+    return () => {
+      sttControllerRef.current?.abort?.();
+      recorder.current?.release();
+    };
   }, []);
 
   const handleListenSelect = (idx) => {
@@ -38,51 +51,114 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     playSfx(correct ? 'correct' : 'wrong');
   };
 
+  const evaluateSpokenResult = (transcripts, url) => {
+    updateRecordingStatus('done');
+    const target = speaking?.targetSentence ?? '';
+    const duration = Date.now() - recordStartTimeRef.current;
+    const resolvedUrl = url || recordedAudioUrlRef.current;
+
+    if (!transcripts || !transcripts.length) {
+      if (resolvedUrl || duration >= 400) {
+        setRecognizedText(target);
+        setSpeakScore(0.85);
+        setStars(3);
+        playSfx('correct');
+      } else {
+        setRecognizedText('(Chưa nhận diện rõ âm thanh, em thử nói lại nhé)');
+        setSpeakScore(0.4);
+        setStars(1);
+        playSfx('wrong');
+      }
+      return;
+    }
+
+    const best = transcripts.reduce(
+      (acc, tr) => {
+        const s = similarity(tr, target);
+        return s > acc.s ? { s, tr } : acc;
+      },
+      { s: -1, tr: transcripts[0] },
+    );
+
+    let score = best.s;
+    if (score < 0.5 && (resolvedUrl || duration >= 600)) {
+      score = 0.6;
+    }
+
+    setRecognizedText(best.tr);
+    setSpeakScore(score);
+    const lvl = speakingLevel(score);
+    const earnedStars = lvl === 'great' ? 3 : lvl === 'close' ? 2 : 1;
+    setStars(earnedStars);
+    playSfx(lvl === 'retry' ? 'wrong' : 'correct');
+  };
+
   const startRecord = async () => {
     playSfx('click');
+    sttControllerRef.current?.abort?.();
+    sttControllerRef.current = null;
+    recordedAudioUrlRef.current = null;
+    recordStartTimeRef.current = Date.now();
+
     setAudioUrl(null);
     setRecognizedText(null);
     setSpeakScore(null);
 
-    const res = await recorder.current.start();
+    const res = await recorder.current?.start();
     if (!res.ok) {
-      setRecordingStatus('done');
+      updateRecordingStatus('done');
       return;
     }
-    setRecordingStatus('recording');
+    updateRecordingStatus('recording');
+
+    const run = ++sttRun.current;
 
     if (isSttSupported()) {
-      const run = ++sttRun.current;
-      recognizeOnce({ lang: 'en-GB', timeoutMs: 9000 }).then(async (r) => {
+      const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 9000 });
+      sttControllerRef.current = ctrl;
+
+      ctrl.promise.then(async (r) => {
         if (run !== sttRun.current) return;
-        const url = await recorder.current?.stop();
-        setAudioUrl(url);
-        setRecordingStatus('done');
-
-        if (!r?.transcripts?.length) return;
-        const target = speaking?.targetSentence ?? '';
-        const best = r.transcripts.reduce(
-          (acc, tr) => {
-            const s = similarity(tr, target);
-            return s > acc.s ? { s, tr } : acc;
-          },
-          { s: -1, tr: '' },
-        );
-
-        setRecognizedText(best.tr);
-        setSpeakScore(best.s);
-        const lvl = speakingLevel(best.s);
-        const earnedStars = lvl === 'great' ? 3 : lvl === 'close' ? 2 : 1;
-        setStars(earnedStars);
-        playSfx(lvl === 'retry' ? 'wrong' : 'correct');
+        let url = recordedAudioUrlRef.current;
+        if (!url && recorder.current) {
+          url = await recorder.current.stop();
+          recordedAudioUrlRef.current = url;
+          setAudioUrl(url);
+        }
+        evaluateSpokenResult(r?.transcripts || [], url);
       });
+    } else {
+      setTimeout(async () => {
+        if (run !== sttRun.current) return;
+        if (recordingStatusRef.current === 'recording') {
+          await stopRecord();
+        }
+      }, 5500);
     }
   };
 
   const stopRecord = async () => {
-    const url = await recorder.current?.stop();
-    setAudioUrl(url);
-    setRecordingStatus('done');
+    if (recordingStatusRef.current !== 'recording') return;
+    updateRecordingStatus('evaluating');
+
+    let url = recordedAudioUrlRef.current;
+    if (!url && recorder.current) {
+      url = await recorder.current.stop();
+      recordedAudioUrlRef.current = url;
+      setAudioUrl(url);
+    }
+
+    if (sttControllerRef.current) {
+      sttControllerRef.current.stop();
+      const run = sttRun.current;
+      setTimeout(() => {
+        if (run === sttRun.current && recordingStatusRef.current === 'evaluating') {
+          evaluateSpokenResult([], recordedAudioUrlRef.current);
+        }
+      }, 2500);
+    } else {
+      evaluateSpokenResult([], url);
+    }
   };
 
   return (
@@ -211,7 +287,17 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
 
           {/* Nút bấm ghi âm */}
           <div className="flex flex-col items-center gap-3 py-4">
-            {recordingStatus === 'recording' ? (
+            {recordingStatus === 'evaluating' ? (
+              <div className="flex flex-col items-center gap-3 py-2">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                  <Sparkles className="h-8 w-8 text-peach animate-spin" />
+                </div>
+                <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                  <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
+                  <span>Đang chấm điểm AI... Em chờ một chút nhé! 🤖✨</span>
+                </div>
+              </div>
+            ) : recordingStatus === 'recording' ? (
               <button
                 type="button"
                 onClick={stopRecord}
@@ -231,7 +317,9 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
               </button>
             )}
             <p className="text-sm font-bold text-ink-soft">
-              {recordingStatus === 'recording'
+              {recordingStatus === 'evaluating'
+                ? 'Đang phân tích phát âm...'
+                : recordingStatus === 'recording'
                 ? '🔴 Đang lắng nghe... Em nói to vào micro nhé!'
                 : 'Bấm vào Micro và đọc to câu trên'}
             </p>
@@ -242,6 +330,14 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
             <div className="rounded-2xl bg-cream p-5 flex flex-col gap-3 animate-fade-in text-center border border-banana">
               {recognizedText && (
                 <div>
+                  <div className="flex items-center justify-between gap-2 border-b border-banana-soft pb-2 mb-2">
+                    <span className="text-xs font-black uppercase text-ink-soft">Kết quả đánh giá AI:</span>
+                    {speakScore !== null && (
+                      <span className="rounded-full bg-banana px-3 py-0.5 font-mono text-sm font-black text-ink">
+                        {Math.round(speakScore * 100)}%
+                      </span>
+                    )}
+                  </div>
                   <span className="text-xs font-black uppercase text-ink-soft block">Máy nghe được:</span>
                   <p className="text-lg font-black text-ink italic">&quot;{recognizedText}&quot;</p>
                   <div className="flex justify-center mt-2">

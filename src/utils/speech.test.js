@@ -25,7 +25,7 @@ class FakeAudio {
 }
 globalThis.Audio = FakeAudio;
 
-const { sayWord, speak, stopSpeaking, mp3Rate } = await import('./speech.js');
+const { sayWord, speak, stopSpeaking, mp3Rate, recognizeOnce, isSttSupported } = await import('./speech.js');
 const tick = () => new Promise((r) => setTimeout(r, 0));
 
 beforeEach(() => {
@@ -82,5 +82,90 @@ describe('speech: điều phối lượt phát', () => {
     expect(played[1].src).toContain('dictvoice'); // cụm ngắn → thử Youdao
     played[1].emit('ended');
     expect(await p).toBe(true);
+  });
+});
+
+describe('speech: recognizeOnce STT controller', () => {
+  it('trả về controller với .promise, .stop(), .abort() và thenable khi không hỗ trợ STT', async () => {
+    const ctrl = recognizeOnce();
+    expect(ctrl).toHaveProperty('promise');
+    expect(typeof ctrl.stop).toBe('function');
+    expect(typeof ctrl.abort).toBe('function');
+    expect(typeof ctrl.then).toBe('function');
+
+    const res = await ctrl;
+    expect(res).toBeNull();
+  });
+
+  it('hỗ trợ interimResults = true, gọi rec.stop() khi controller.stop() và trả về transcripts', async () => {
+    let capturedRec = null;
+    class MockSpeechRecognition {
+      constructor() {
+        this.lang = 'en-US';
+        this.interimResults = false;
+        this.maxAlternatives = 1;
+        this.stopCalled = false;
+        this.abortCalled = false;
+        capturedRec = this;
+      }
+      start() {}
+      stop() {
+        this.stopCalled = true;
+        // Giả lập bắn sự kiện onend sau khi stop
+        setTimeout(() => {
+          this.onend?.();
+        }, 10);
+      }
+      abort() {
+        this.abortCalled = true;
+      }
+    }
+
+    globalThis.SpeechRecognition = MockSpeechRecognition;
+
+    const ctrl = recognizeOnce({ lang: 'en-GB', timeoutMs: 5000 });
+    expect(capturedRec).not.toBeNull();
+    expect(capturedRec.interimResults).toBe(true);
+    expect(capturedRec.maxAlternatives).toBe(5);
+
+    // Giả lập browser bắn sự kiện onresult với interim/final transcript
+    capturedRec.onresult?.({
+      results: [
+        Object.assign([{ transcript: 'hello' }], { isFinal: true, length: 1 }),
+        Object.assign([{ transcript: 'world' }], { isFinal: false, length: 1 }),
+      ],
+    });
+
+    // Dừng nhận diện bằng controller.stop()
+    await ctrl.stop();
+    expect(capturedRec.stopCalled).toBe(true);
+    expect(capturedRec.abortCalled).toBe(false);
+
+    const result = await ctrl.promise;
+    expect(result).not.toBeNull();
+    expect(result.transcripts).toContain('hello world');
+
+    delete globalThis.SpeechRecognition;
+  });
+
+  it('abort() hủy nhận diện và trả về null', async () => {
+    class MockSpeechRecognition {
+      constructor() {
+        this.abortCalled = false;
+      }
+      start() {}
+      stop() {}
+      abort() {
+        this.abortCalled = true;
+      }
+    }
+    globalThis.SpeechRecognition = MockSpeechRecognition;
+
+    const ctrl = recognizeOnce();
+    ctrl.abort();
+    const result = await ctrl.promise;
+    expect(result).toBeNull();
+
+    delete globalThis.SpeechRecognition;
   });
 });
