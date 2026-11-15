@@ -38,6 +38,8 @@ import TeacherGuide from '../components/TeacherGuide.jsx';
 import TeacherStudentManager from '../components/TeacherStudentManager.jsx';
 import TeacherClassProgress from '../components/TeacherClassProgress.jsx';
 import PdfReaderModal from '../components/PdfReaderModal.jsx';
+import { OFFICIAL_BOOKS, SCHOOL_LEVELS, getBooksBySchoolLevel } from '../data/officialBooks.js';
+import multiGradeCurriculum from '../data/multiGradeCurriculum.json';
 
 export default function TeacherPage() {
   const [teacherSession, setTeacherSession] = useState(() => store().getTeacherSession());
@@ -61,6 +63,9 @@ export default function TeacherPage() {
   const [showGuideModal, setShowGuideModal] = useState(false);
   const [showPdfReaderModal, setShowPdfReaderModal] = useState(false);
   const [selectedBookForReader, setSelectedBookForReader] = useState('tap1');
+  const [libraryFilterLevel, setLibraryFilterLevel] = useState('all');
+  const [selectedRoadmapGrade, setSelectedRoadmapGrade] = useState(6);
+  const [roadmapSemesterFilter, setRoadmapSemesterFilter] = useState('all');
 
   const [activeTab, setActiveTab] = useState('scores'); // 'scores' | 'students' | 'progress_matrix' | 'assignments' | 'editor' | 'roadmap' | 'guide' | 'library'
   const [loading, setLoading] = useState(false);
@@ -72,6 +77,9 @@ export default function TeacherPage() {
   const [inspectItem, setInspectItem] = useState(null);
 
   const allUnits = listUnits();
+  const filteredOfficialBooks = useMemo(() => {
+    return getBooksBySchoolLevel(libraryFilterLevel);
+  }, [libraryFilterLevel]);
   const currentStudent = store().getStudentInfo();
   const progress = store().getProgress();
   const mastery = store().getMastery();
@@ -578,7 +586,7 @@ export default function TeacherPage() {
           }`}
         >
           <span>🗺️</span>
-          <span>Lộ Trình Bài Học ({allUnits.length} Unit)</span>
+          <span>Lộ Trình Bài Học (Lớp 1-12)</span>
         </button>
 
         <button
@@ -604,7 +612,7 @@ export default function TeacherPage() {
           }`}
         >
           <span>📚</span>
-          <span>Thư Viện SGK & PDF</span>
+          <span>Thư Viện SGK & PDF (14 Sách)</span>
         </button>
       </nav>
 
@@ -896,139 +904,444 @@ export default function TeacherPage() {
       {/* TAB HƯỚNG DẪN THẦY CÔ */}
       {activeTab === 'guide' && <TeacherGuide />}
 
-      {/* TAB 2: THEO DÕI LỘ TRÌNH 12 UNIT CỦA HỌC SINH */}
+      {/* TAB 2: THEO DÕI LỘ TRÌNH BÀI HỌC CÁC KHỐI LỚP (1-12) */}
       {activeTab === 'roadmap' && (
         <div className="flex flex-col gap-6">
-          {/* Thẻ Tổng quan Hồ Sơ Học Sinh */}
-          <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-banana text-4xl shadow-sm">
-                {currentStudent.avatar || '👤'}
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-xl sm:text-2xl font-black text-ink">
-                    {currentStudent.name || 'Chưa đặt tên'}
-                  </h3>
-                  <span className="rounded-full bg-cream px-3 py-0.5 text-xs font-black text-ink-soft border border-banana-soft">
-                    {currentStudent.class ? `Lớp ${currentStudent.class}` : 'Chưa chọn lớp'}
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
-                  Thiết bị học tập hiện tại · Tiến độ lưu an toàn trong hệ thống
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 w-full sm:w-auto">
-              <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
-                <span className="text-xs font-black text-ink-soft block">Tổng số sao</span>
-                <span className="text-xl font-black text-ink">⭐ {studentTotalStars}</span>
-              </div>
-              <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
-                <span className="text-xs font-black text-ink-soft block">Chuỗi học tập</span>
-                <span className="text-xl font-black text-peach-dark">🔥 {studentStreak} ngày</span>
-              </div>
-              <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
-                <span className="text-xs font-black text-ink-soft block">Từ vựng đã thuộc</span>
-                <span className="text-xl font-black text-mint-dark">✓ {masteredCount} từ</span>
-              </div>
-            </div>
-          </section>
-
-          {/* Ma Trận Tiến Độ 12 Unit */}
+          {/* Thanh Chọn Khối Lớp Lộ Trình */}
           <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-banana-soft pb-3">
-              <div>
-                <h3 className="text-xl sm:text-2xl font-black text-ink">
-                  Tiến Độ Chi Tiết Các Unit ({allUnits.length} Bài học)
-                </h3>
-                <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
-                  Theo dõi học sinh đã hoàn thành những trạm kỹ năng nào trong từng bài học
-                </p>
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-banana text-2xl shadow-xs">
+                  🗺️
+                </span>
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-black text-ink">
+                    Lộ Trình Học & Phân Phối Chương Trình (Lớp 1 – 12)
+                  </h3>
+                  <p className="text-xs sm:text-sm font-bold text-ink-soft">
+                    Xem khung phân phối chương trình SGK Global Success cho mọi khối lớp hoặc theo dõi chi tiết trạm bài tập.
+                  </p>
+                </div>
               </div>
-              <button
-                type="button"
-                onClick={() => setActiveTab('editor')}
-                className="inline-flex items-center gap-1.5 self-start sm:self-center rounded-2xl bg-mint px-4 py-2.5 text-xs sm:text-sm font-black text-white hover:bg-mint-dark transition-all shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none cursor-pointer"
-              >
-                <span>➕ Thêm / Chỉnh Sửa Unit</span>
-              </button>
+
+              {/* Dropdown tiện lợi trên màn hình nhỏ */}
+              <div className="sm:hidden w-full">
+                <select
+                  value={selectedRoadmapGrade}
+                  onChange={(e) => {
+                    setSelectedRoadmapGrade(Number(e.target.value));
+                    setRoadmapSemesterFilter('all');
+                  }}
+                  className="w-full rounded-2xl border-2 border-banana bg-cream px-3 py-2 text-sm font-black text-ink shadow-2xs"
+                >
+                  <optgroup label="Tiểu học">
+                    <option value={1}>Lớp 1 (16 Units)</option>
+                    <option value={2}>Lớp 2 (16 Units)</option>
+                    <option value={3}>Lớp 3 (20 Units)</option>
+                    <option value={4}>Lớp 4 (20 Units)</option>
+                    <option value={5}>Lớp 5 (20 Units)</option>
+                  </optgroup>
+                  <optgroup label="THCS">
+                    <option value={6}>Lớp 6 (12 Units - Tương tác 3D)</option>
+                    <option value={7}>Lớp 7 (12 Units)</option>
+                    <option value={8}>Lớp 8 (12 Units)</option>
+                  </optgroup>
+                  <optgroup label="THPT">
+                    <option value={10}>Lớp 10 (10 Units)</option>
+                    <option value={11}>Lớp 11 (10 Units)</option>
+                    <option value={12}>Lớp 12 (10 Units)</option>
+                  </optgroup>
+                </select>
+              </div>
             </div>
 
-            <div className="grid gap-3">
-              {allUnits.map((u) => {
-                const uProg = progress.units[u.unitId]?.modes || {};
-                const uStars = Object.values(uProg).reduce((a, b) => a + b, 0);
-                const hasVocab = (uProg.flashcard || 0) > 0;
-                const hasGrammar = (uProg.grammar || 0) > 0;
-                const hasSpeaking = (uProg.speaking || 0) > 0;
-                const hasListening = (uProg.listenstation || 0) > 0 || (uProg.listening || 0) > 0;
-                const hasReading = (uProg.reading || 0) > 0;
-                const hasWriting = (uProg.writing || 0) > 0;
-                const hasMastery = (uProg.mastery || 0) > 0;
-
-                const completedStations = [hasVocab, hasGrammar, hasSpeaking, hasListening, hasReading, hasWriting, hasMastery].filter(Boolean).length;
-
-                return (
-                  <div
-                    key={u.unitId}
-                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl bg-cream/50 p-4 border border-banana-soft hover:bg-cream transition-colors"
+            {/* Pills theo từng cấp học */}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-black text-ink-soft min-w-16">Tiểu học:</span>
+                {[1, 2, 3, 4, 5].map((g) => (
+                  <button
+                    key={g}
+                    type="button"
+                    onClick={() => {
+                      setSelectedRoadmapGrade(g);
+                      setRoadmapSemesterFilter('all');
+                    }}
+                    className={`rounded-xl px-3.5 py-1.5 text-xs font-black transition-all cursor-pointer ${
+                      selectedRoadmapGrade === g
+                        ? 'bg-emerald-600 text-white shadow-xs scale-105'
+                        : 'bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100'
+                    }`}
                   >
-                    <div className="flex items-center gap-3">
-                      <span className="text-3xl shrink-0" aria-hidden>{u.emoji}</span>
-                      <div>
-                        <div className="flex items-center gap-2">
-                          <h4 className="text-base sm:text-lg font-black text-ink">
-                            Unit {u.unitId}: {u.titleEn}
-                          </h4>
-                          <span className="text-xs font-bold text-ink-soft">({u.titleVi})</span>
-                        </div>
-                        {/* 7 Badge Trạm Kỹ năng */}
-                        <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasVocab ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasVocab ? '✓' : '○'} Từ vựng
-                          </span>
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasGrammar ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasGrammar ? '✓' : '○'} Ngữ pháp
-                          </span>
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasListening ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasListening ? '✓' : '○'} Nghe
-                          </span>
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasSpeaking ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasSpeaking ? '✓' : '○'} Nói
-                          </span>
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasReading ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasReading ? '✓' : '○'} Đọc
-                          </span>
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasWriting ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasWriting ? '✓' : '○'} Viết
-                          </span>
-                          <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasMastery ? 'bg-peach text-white shadow-2xs' : 'bg-gray-200 text-gray-500'}`}>
-                            {hasMastery ? '★ Bài tập Unit' : '○ Bài tập'}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+                    Lớp {g}
+                  </button>
+                ))}
+              </div>
 
-                    <div className="flex items-center gap-3 self-end sm:self-center">
-                      <div className="text-right">
-                        <span className="text-xs font-black text-ink-soft block">Tiến độ trạm</span>
-                        <span className="text-sm font-black text-ink">{completedStations} / 7 Trạm</span>
-                      </div>
-                      <Button3D
-                        tone="banana"
-                        to={`/unit/${u.unitId}`}
-                        className="px-3.5 py-1.5 text-xs"
-                      >
-                        Xem Unit →
-                      </Button3D>
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-black text-ink-soft min-w-16">THCS:</span>
+                {[6, 7, 8].map((g) => (
+                  <button
+                    key={g}
+                    type="button"
+                    onClick={() => {
+                      setSelectedRoadmapGrade(g);
+                      setRoadmapSemesterFilter('all');
+                    }}
+                    className={`rounded-xl px-3.5 py-1.5 text-xs font-black transition-all cursor-pointer ${
+                      selectedRoadmapGrade === g
+                        ? 'bg-banana text-ink shadow-xs scale-105 border-2 border-banana-dark'
+                        : 'bg-cream text-ink-soft border border-banana-soft hover:bg-banana/30 hover:text-ink'
+                    }`}
+                  >
+                    Lớp {g} {g === 6 ? '★ Tương tác 3D' : ''}
+                  </button>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-black text-ink-soft min-w-16">THPT:</span>
+                {[10, 11, 12].map((g) => (
+                  <button
+                    key={g}
+                    type="button"
+                    onClick={() => {
+                      setSelectedRoadmapGrade(g);
+                      setRoadmapSemesterFilter('all');
+                    }}
+                    className={`rounded-xl px-3.5 py-1.5 text-xs font-black transition-all cursor-pointer ${
+                      selectedRoadmapGrade === g
+                        ? 'bg-rose-600 text-white shadow-xs scale-105'
+                        : 'bg-rose-50 text-rose-800 border border-rose-200 hover:bg-rose-100'
+                    }`}
+                  >
+                    Lớp {g}
+                  </button>
+                ))}
+              </div>
             </div>
           </section>
+
+          {/* HIỂN THỊ NỘI DUNG LỚP ĐƯỢC CHỌN */}
+          {selectedRoadmapGrade === 6 ? (
+            <>
+              {/* Thẻ Tổng quan Hồ Sơ Học Sinh */}
+              <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-banana text-4xl shadow-sm">
+                    {currentStudent.avatar || '👤'}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xl sm:text-2xl font-black text-ink">
+                        {currentStudent.name || 'Chưa đặt tên'}
+                      </h3>
+                      <span className="rounded-full bg-cream px-3 py-0.5 text-xs font-black text-ink-soft border border-banana-soft">
+                        {currentStudent.class ? `Lớp ${currentStudent.class}` : 'Chưa chọn lớp'}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+                      Thiết bị học tập hiện tại · Tiến độ lưu an toàn trong hệ thống
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
+                    <span className="text-xs font-black text-ink-soft block">Tổng số sao</span>
+                    <span className="text-xl font-black text-ink">⭐ {studentTotalStars}</span>
+                  </div>
+                  <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
+                    <span className="text-xs font-black text-ink-soft block">Chuỗi học tập</span>
+                    <span className="text-xl font-black text-peach-dark">🔥 {studentStreak} ngày</span>
+                  </div>
+                  <div className="flex-1 sm:flex-initial rounded-2xl bg-cream p-3 text-center border border-banana-soft">
+                    <span className="text-xs font-black text-ink-soft block">Từ vựng đã thuộc</span>
+                    <span className="text-xl font-black text-mint-dark">✓ {masteredCount} từ</span>
+                  </div>
+                </div>
+              </section>
+
+              {/* Ma Trận Tiến Độ 12 Unit */}
+              <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-banana-soft pb-3">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-black text-ink">
+                      Tiến Độ Chi Tiết Các Unit ({allUnits.length} Bài học)
+                    </h3>
+                    <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+                      Theo dõi học sinh đã hoàn thành những trạm kỹ năng nào trong từng bài học
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setActiveTab('editor')}
+                    className="inline-flex items-center gap-1.5 self-start sm:self-center rounded-2xl bg-mint px-4 py-2.5 text-xs sm:text-sm font-black text-white hover:bg-mint-dark transition-all shadow-[0_3px_0_#58b292] active:translate-y-0.5 active:shadow-none cursor-pointer"
+                  >
+                    <span>➕ Thêm / Chỉnh Sửa Unit</span>
+                  </button>
+                </div>
+
+                <div className="grid gap-3">
+                  {allUnits.map((u) => {
+                    const uProg = progress.units[u.unitId]?.modes || {};
+                    const uStars = Object.values(uProg).reduce((a, b) => a + b, 0);
+                    const hasVocab = (uProg.flashcard || 0) > 0;
+                    const hasGrammar = (uProg.grammar || 0) > 0;
+                    const hasSpeaking = (uProg.speaking || 0) > 0;
+                    const hasListening = (uProg.listenstation || 0) > 0 || (uProg.listening || 0) > 0;
+                    const hasReading = (uProg.reading || 0) > 0;
+                    const hasWriting = (uProg.writing || 0) > 0;
+                    const hasMastery = (uProg.mastery || 0) > 0;
+
+                    const completedStations = [hasVocab, hasGrammar, hasSpeaking, hasListening, hasReading, hasWriting, hasMastery].filter(Boolean).length;
+
+                    return (
+                      <div
+                        key={u.unitId}
+                        className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-2xl bg-cream/50 p-4 border border-banana-soft hover:bg-cream transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <span className="text-3xl shrink-0" aria-hidden>{u.emoji}</span>
+                          <div>
+                            <div className="flex items-center gap-2">
+                              <h4 className="text-base sm:text-lg font-black text-ink">
+                                Unit {u.unitId}: {u.titleEn}
+                              </h4>
+                              <span className="text-xs font-bold text-ink-soft">({u.titleVi})</span>
+                            </div>
+                            {/* 7 Badge Trạm Kỹ năng */}
+                            <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasVocab ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasVocab ? '✓' : '○'} Từ vựng
+                              </span>
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasGrammar ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasGrammar ? '✓' : '○'} Ngữ pháp
+                              </span>
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasListening ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasListening ? '✓' : '○'} Nghe
+                              </span>
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasSpeaking ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasSpeaking ? '✓' : '○'} Nói
+                              </span>
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasReading ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasReading ? '✓' : '○'} Đọc
+                              </span>
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasWriting ? 'bg-mint text-white' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasWriting ? '✓' : '○'} Viết
+                              </span>
+                              <span className={`rounded-lg px-2 py-0.5 text-[11px] font-black ${hasMastery ? 'bg-peach text-white shadow-2xs' : 'bg-gray-200 text-gray-500'}`}>
+                                {hasMastery ? '★ Bài tập Unit' : '○ Bài tập'}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="flex items-center gap-3 self-end sm:self-center">
+                          <div className="text-right">
+                            <span className="text-xs font-black text-ink-soft block">Tiến độ trạm</span>
+                            <span className="text-sm font-black text-ink">{completedStations} / 7 Trạm</span>
+                          </div>
+                          <Button3D
+                            tone="banana"
+                            to={`/unit/${u.unitId}`}
+                            className="px-3.5 py-1.5 text-xs"
+                          >
+                            Xem Unit →
+                          </Button3D>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            </>
+          ) : (
+            /* Hiển thị lộ trình bài học của các khối lớp khác (1, 2, 3, 4, 5, 7, 8, 10, 11, 12) */
+            (() => {
+              const gradeData = multiGradeCurriculum.grades.find((g) => g.grade === selectedRoadmapGrade);
+              if (!gradeData) return null;
+
+              const filteredUnits = gradeData.units.filter((u) => {
+                if (roadmapSemesterFilter === 'all') return true;
+                return u.semester === Number(roadmapSemesterFilter);
+              });
+
+              const levelBadgeTone =
+                gradeData.level === 'primary' ? 'bg-emerald-500 text-white' :
+                gradeData.level === 'secondary' ? 'bg-banana text-ink border border-banana-dark/30' :
+                'bg-rose-500 text-white';
+
+              return (
+                <div className="flex flex-col gap-5">
+                  {/* Banner Giới Thiệu Khối Lớp & SGK */}
+                  <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="flex items-center gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-cream text-3xl shadow-sm border border-banana-soft">
+                        📚
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="text-xl sm:text-2xl font-black text-ink">
+                            {gradeData.title}
+                          </h3>
+                          <span className={`rounded-full px-3 py-0.5 text-xs font-black ${levelBadgeTone}`}>
+                            {gradeData.levelName}
+                          </span>
+                          <span className="rounded-full bg-cream px-3 py-0.5 text-xs font-black text-ink-soft border border-banana-soft">
+                            {gradeData.totalUnits} Units
+                          </span>
+                        </div>
+                        <p className="text-xs sm:text-sm font-bold text-ink-soft mt-1 max-w-2xl leading-relaxed">
+                          {gradeData.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 w-full sm:w-auto flex-wrap">
+                      {gradeData.textbooks.map((tb) => (
+                        <button
+                          key={tb.bookId}
+                          type="button"
+                          onClick={() => {
+                            setSelectedBookForReader(tb.bookId);
+                            setShowPdfReaderModal(true);
+                          }}
+                          className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 rounded-2xl bg-peach px-4 py-2.5 text-xs sm:text-sm font-black text-white shadow-[0_3px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer whitespace-nowrap"
+                        >
+                          <BookOpen className="h-4 w-4" />
+                          <span>Đọc {tb.title.replace('SGK ', '')} 📖</span>
+                        </button>
+                      ))}
+                    </div>
+                  </section>
+
+                  {/* Bộ Lọc Học Kỳ & Danh Sách Bài Học */}
+                  <section className="rounded-3xl bg-white p-5 sm:p-6 shadow-xs border-2 border-banana-soft flex flex-col gap-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-banana-soft pb-3">
+                      <div>
+                        <h3 className="text-xl sm:text-2xl font-black text-ink">
+                          Phân Phối Bài Học – {gradeData.gradeName} ({filteredUnits.length} / {gradeData.totalUnits} Unit)
+                        </h3>
+                        <p className="text-xs sm:text-sm font-bold text-ink-soft mt-0.5">
+                          Khung chương trình chuẩn Bộ GD&ĐT. Bấm "Đọc SGK 📖" để tra cứu sách giáo khoa tương ứng.
+                        </p>
+                      </div>
+
+                      <div className="flex items-center gap-2 self-start sm:self-center">
+                        <button
+                          type="button"
+                          onClick={() => setRoadmapSemesterFilter('all')}
+                          className={`rounded-xl px-3 py-1.5 text-xs font-black transition-all cursor-pointer ${
+                            roadmapSemesterFilter === 'all'
+                              ? 'bg-banana text-ink shadow-xs'
+                              : 'bg-cream text-ink-soft hover:bg-banana/30'
+                          }`}
+                        >
+                          Tất cả ({gradeData.units.length})
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setRoadmapSemesterFilter(1)}
+                          className={`rounded-xl px-3 py-1.5 text-xs font-black transition-all cursor-pointer ${
+                            roadmapSemesterFilter === 1
+                              ? 'bg-banana text-ink shadow-xs'
+                              : 'bg-cream text-ink-soft hover:bg-banana/30'
+                          }`}
+                        >
+                          Học kỳ I
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setRoadmapSemesterFilter(2)}
+                          className={`rounded-xl px-3 py-1.5 text-xs font-black transition-all cursor-pointer ${
+                            roadmapSemesterFilter === 2
+                              ? 'bg-banana text-ink shadow-xs'
+                              : 'bg-cream text-ink-soft hover:bg-banana/30'
+                          }`}
+                        >
+                          Học kỳ II
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {filteredUnits.map((u) => (
+                        <div
+                          key={u.unit}
+                          className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/50 p-4 border border-banana-soft hover:bg-cream hover:border-banana transition-all"
+                        >
+                          <div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
+                                Unit {u.unit}
+                              </span>
+                              <div className="flex items-center gap-1.5">
+                                <span className="rounded-full bg-white px-2 py-0.5 text-[11px] font-black text-ink-soft border border-banana-soft">
+                                  Học kỳ {u.semester === 1 ? 'I' : 'II'}
+                                </span>
+                                <span className="rounded-full bg-mint/20 text-mint-dark px-2 py-0.5 text-[11px] font-black">
+                                  {u.theme}
+                                </span>
+                              </div>
+                            </div>
+
+                            <h4 className="text-base sm:text-lg font-black text-ink mt-2">
+                              {u.title}
+                            </h4>
+                            <p className="text-xs font-bold text-ink-soft">
+                              {u.titleVi}
+                            </p>
+
+                            {/* Chi tiết âm vần, ngữ pháp hoặc từ vựng */}
+                            <div className="mt-2 flex flex-col gap-1 text-xs">
+                              {u.targetPhonics && (
+                                <div className="flex items-center gap-1 text-ink-soft">
+                                  <span className="font-black text-ink">Ngữ âm:</span>
+                                  <span className="font-mono bg-white px-1.5 py-0.5 rounded border border-banana-soft text-peach-dark font-bold">
+                                    {u.targetPhonics}
+                                  </span>
+                                </div>
+                              )}
+                              {u.grammar && (
+                                <div className="flex items-start gap-1 text-ink-soft">
+                                  <span className="font-black text-ink shrink-0">Ngữ pháp:</span>
+                                  <span className="font-bold text-ink/80">{u.grammar}</span>
+                                </div>
+                              )}
+                              {u.keyVocab && u.keyVocab.length > 0 && (
+                                <div className="flex items-start gap-1 text-ink-soft">
+                                  <span className="font-black text-ink shrink-0">Từ vựng:</span>
+                                  <span className="font-medium text-ink-soft">{u.keyVocab.join(', ')}</span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+
+                          <div className="flex items-center justify-between pt-2 border-t border-banana-soft/60">
+                            <span className="text-[11px] font-bold text-ink-soft">
+                              {gradeData.title.split('–')[0]}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setSelectedBookForReader(u.bookId);
+                                setShowPdfReaderModal(true);
+                              }}
+                              className="inline-flex items-center gap-1 rounded-xl bg-peach px-3 py-1.5 text-xs font-black text-white shadow-2xs hover:-translate-y-0.5 transition-all cursor-pointer"
+                            >
+                              <BookOpen className="h-3.5 w-3.5" />
+                              <span>Đọc SGK 📖</span>
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                </div>
+              );
+            })()
+          )}
         </div>
       )}
 
@@ -1042,10 +1355,10 @@ export default function TeacherPage() {
               </span>
               <div>
                 <span className="rounded-full bg-banana-soft px-3 py-0.5 text-xs font-black text-ink-soft">
-                  Bản scan SGK để tra cứu
+                  Thư viện tài liệu chuẩn NXB Giáo Dục Việt Nam
                 </span>
                 <h2 className="text-xl sm:text-2xl font-black text-ink mt-0.5">
-                  Thư viện Sách Giáo Khoa & Trình Đọc PDF (Global Success 6)
+                  Thư viện Sách Giáo Khoa & Trình Đọc PDF (Toàn bộ 14 Sách từ Lớp 1 - 12)
                 </h2>
               </div>
             </div>
@@ -1066,168 +1379,182 @@ export default function TeacherPage() {
           <div className="rounded-2xl bg-gradient-to-r from-banana-soft via-cream to-mint-soft/50 p-4 border border-banana-soft flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <p className="text-sm font-black text-ink">
-                ✨ Trình đọc PDF đã tích hợp sẵn trọn bộ SGK Tiếng Anh 6 Tập 1 & Tập 2!
+                ✨ Trình đọc PDF đã tích hợp sẵn trọn bộ 14 SGK Tiếng Anh Global Success từ Lớp 1 đến Lớp 12!
               </p>
               <p className="text-xs font-bold text-ink-soft mt-0.5">
-                Thầy/Cô bấm "Đọc sách trực tiếp" là xem được ngay trong ứng dụng, hoặc bấm "Tải PDF" để lưu offline về máy tính.
+                Thầy/Cô bấm "Đọc Sách Trực Tiếp 📖" là xem được ngay trong ứng dụng với bộ lọc cấp học tiện lợi, hoặc bấm "Tải PDF" để lưu offline về máy tính.
               </p>
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {/* SGK TẬP 1 */}
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-banana px-2.5 py-0.5 text-xs font-black text-ink">
-                    Học kỳ I
-                  </span>
-                  <span className="text-[11px] font-mono font-bold text-ink-soft bg-white px-2 py-0.5 rounded-md border border-banana-soft">
-                    16.8 MB
-                  </span>
-                </div>
-                <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 1</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 1 đến Unit 6 và Review 1–2 (sách in trang 6 – 71). Bản scan, không phải file gốc của NXB.</p>
-              </div>
+          {/* Filter tabs by school level: [Tất cả (14)], [Tiểu học: Lớp 1-5], [THCS: Lớp 6-8], [THPT: Lớp 10-12] */}
+          <div className="flex flex-wrap items-center gap-2 border-b border-banana-soft pb-3">
+            {[
+              { id: 'all', label: 'Tất cả (14)', count: 14 },
+              { id: 'primary', label: 'Tiểu học: Lớp 1-5', count: 7 },
+              { id: 'secondary', label: 'THCS: Lớp 6-8', count: 4 },
+              { id: 'high', label: 'THPT: Lớp 10-12', count: 3 },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setLibraryFilterLevel(tab.id)}
+                className={`flex items-center gap-2 rounded-2xl px-4 py-2 text-xs sm:text-sm font-black transition-all cursor-pointer ${
+                  libraryFilterLevel === tab.id
+                    ? 'bg-sky text-ink shadow-xs border-2 border-sky-dark/40 scale-102'
+                    : 'bg-cream text-ink-soft border border-banana-soft hover:bg-banana/30 hover:text-ink'
+                }`}
+              >
+                <span>{tab.label}</span>
+              </button>
+            ))}
+          </div>
 
-              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedBookForReader('tap1');
-                    setShowPdfReaderModal(true);
-                  }}
-                  className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+          {/* Grid các đầu sách SGK chính thức */}
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {filteredOfficialBooks.map((book) => {
+              const levelLabel =
+                book.schoolLevel === 'primary' ? 'Tiểu học' :
+                book.schoolLevel === 'secondary' ? 'THCS' : 'THPT';
+              const levelBadgeClass =
+                book.schoolLevel === 'primary' ? 'bg-emerald-500 text-white' :
+                book.schoolLevel === 'secondary' ? 'bg-banana text-ink border border-banana-dark/30' :
+                'bg-rose-500 text-white';
+
+              return (
+                <div
+                  key={book.id}
+                  className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md hover:border-banana transition-all"
                 >
-                  <BookOpen className="h-4 w-4" />
-                  <span>Đọc Sách Trực Tiếp 📖</span>
-                </button>
+                  <div>
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <span className={`rounded-full px-2.5 py-0.5 text-xs font-black ${levelBadgeClass}`}>
+                          {levelLabel} · Lớp {book.grade}
+                        </span>
+                        <span className="rounded-full bg-white px-2 py-0.5 text-[11px] font-black text-ink-soft border border-banana-soft">
+                          {book.semester}
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-mono font-bold text-ink-soft bg-white px-2 py-0.5 rounded-md border border-banana-soft">
+                        {book.fileSize}
+                      </span>
+                    </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  <a
-                    href="/pdf/sgk-tieng-anh-6-tap-1.pdf"
-                    download="SGK-Tieng-Anh-6-Tap-1-Global-Success.pdf"
-                    className="flex items-center justify-center gap-1 rounded-xl bg-banana px-2.5 py-1.5 text-xs font-black text-ink shadow-2xs hover:bg-banana-dark transition-all"
-                  >
-                    <Download className="h-3.5 w-3.5" />
-                    <span>Tải PDF</span>
-                  </a>
-                  <a
-                    href="/pdf/sgk-tieng-anh-6-tap-1.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1 rounded-xl bg-white px-2.5 py-1.5 text-xs font-black text-ink border border-banana-soft hover:bg-cream transition-all"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    <span>Tab mới</span>
-                  </a>
+                    <h3 className="mt-2.5 text-base font-black text-ink line-clamp-1" title={book.title}>
+                      {book.title}
+                    </h3>
+                    <p className="text-xs font-bold text-ink-soft mt-1 line-clamp-3 leading-relaxed">
+                      {book.desc}
+                    </p>
+                    <div className="mt-2 text-[11px] font-bold text-ink-soft">
+                      📄 Quy cách: {book.pages}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedBookForReader(book.id);
+                        setShowPdfReaderModal(true);
+                      }}
+                      className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                    >
+                      <BookOpen className="h-4 w-4" />
+                      <span>Đọc Sách Trực Tiếp 📖</span>
+                    </button>
+
+                    <div className="grid grid-cols-2 gap-2">
+                      <a
+                        href={book.src}
+                        download={book.downloadName}
+                        className="flex items-center justify-center gap-1 rounded-xl bg-banana px-2.5 py-1.5 text-xs font-black text-ink shadow-2xs hover:bg-banana-dark transition-all"
+                      >
+                        <Download className="h-3.5 w-3.5" />
+                        <span>Tải PDF</span>
+                      </a>
+                      <a
+                        href={book.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-1 rounded-xl bg-white px-2.5 py-1.5 text-xs font-black text-ink border border-banana-soft hover:bg-cream transition-all"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        <span>Tab mới</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
+          </div>
 
-            {/* SGK TẬP 2 */}
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
-              <div>
-                <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-sky px-2.5 py-0.5 text-xs font-black text-ink">
-                    Học kỳ II
+          {/* SÁCH BÀI TẬP VÀ SÁCH GIÁO VIÊN (CUSTOM UPLOAD) */}
+          <div className="mt-3 pt-4 border-t-2 border-banana-soft flex flex-col gap-3">
+            <h3 className="text-base font-black text-ink flex items-center gap-2">
+              <span>📁</span>
+              <span>Tài Liệu Bổ Trợ & Sách Tự Mở (PDF Riêng)</span>
+            </h3>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {/* SÁCH BÀI TẬP (WORKBOOK) */}
+              <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
+                <div>
+                  <span className="rounded-full bg-mint px-2.5 py-0.5 text-xs font-black text-white">
+                    Bài tập củng cố
                   </span>
-                  <span className="text-[11px] font-mono font-bold text-ink-soft bg-white px-2 py-0.5 rounded-md border border-banana-soft">
-                    16.5 MB
+                  <h3 className="mt-2 text-base font-black text-ink">Sách Bài Tập (Workbook)</h3>
+                  <p className="text-xs font-bold text-ink-soft mt-1">
+                    Bài tập bổ trợ 4 kỹ năng. Thầy/Cô có thể tải file PDF từ máy để đọc trực tiếp.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedBookForReader('tap1');
+                      setShowPdfReaderModal(true);
+                    }}
+                    className="flex items-center justify-center gap-1.5 rounded-xl bg-mint px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
+                  >
+                    <Upload className="h-4 w-4" />
+                    <span>Mở PDF từ máy tính 📁</span>
+                  </button>
+                  <p className="text-[11px] font-bold text-center text-ink-soft">
+                    Hỗ trợ mở mọi file PDF bài tập
+                  </p>
+                </div>
+              </div>
+
+              {/* SÁCH GIÁO VIÊN */}
+              <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
+                <div>
+                  <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white">
+                    Dành cho Giáo viên
                   </span>
+                  <h3 className="mt-2 text-base font-black text-ink">Sách Giáo Viên (Teacher's Book)</h3>
+                  <p className="text-xs font-bold text-ink-soft mt-1">
+                    Kế hoạch bài dạy (giáo án), phân phối tiết và tài liệu bồi dưỡng.
+                  </p>
                 </div>
-                <h3 className="mt-2 text-base font-black text-ink">SGK Tiếng Anh 6 – Tập 2</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Gồm Unit 7 đến Unit 12 và Review 3–4 (sách in trang 6 – 71).</p>
-              </div>
 
-              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedBookForReader('tap2');
-                    setShowPdfReaderModal(true);
-                  }}
-                  className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
-                >
-                  <BookOpen className="h-4 w-4" />
-                  <span>Đọc Sách Trực Tiếp 📖</span>
-                </button>
-
-                <div className="grid grid-cols-2 gap-2">
-                  <a
-                    href="/pdf/sgk-tieng-anh-6-tap-2.pdf"
-                    download="SGK-Tieng-Anh-6-Tap-2-Global-Success.pdf"
-                    className="flex items-center justify-center gap-1 rounded-xl bg-sky px-2.5 py-1.5 text-xs font-black text-ink shadow-2xs hover:bg-sky-dark transition-all"
+                <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSelectedBookForReader('tap1');
+                      setShowPdfReaderModal(true);
+                    }}
+                    className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
                   >
-                    <Download className="h-3.5 w-3.5" />
-                    <span>Tải PDF</span>
-                  </a>
-                  <a
-                    href="/pdf/sgk-tieng-anh-6-tap-2.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1 rounded-xl bg-white px-2.5 py-1.5 text-xs font-black text-ink border border-banana-soft hover:bg-cream transition-all"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    <span>Tab mới</span>
-                  </a>
+                    <Upload className="h-4 w-4" />
+                    <span>Mở PDF Giáo Án / SGV 📁</span>
+                  </button>
+                  <p className="text-[11px] font-bold text-center text-ink-soft">
+                    Đọc trực tiếp mọi giáo án PDF
+                  </p>
                 </div>
-              </div>
-            </div>
-
-            {/* SÁCH BÀI TẬP (WORKBOOK) */}
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
-              <div>
-                <span className="rounded-full bg-mint px-2.5 py-0.5 text-xs font-black text-white">
-                  Bài tập củng cố
-                </span>
-                <h3 className="mt-2 text-base font-black text-ink">Sách Bài Tập (Workbook)</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Bài tập bổ trợ 4 kỹ năng. Thầy/Cô có thể tải file PDF từ máy để đọc trực tiếp.</p>
-              </div>
-
-              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedBookForReader('tap1');
-                    setShowPdfReaderModal(true);
-                  }}
-                  className="flex items-center justify-center gap-1.5 rounded-xl bg-mint px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-mint-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
-                >
-                  <Upload className="h-4 w-4" />
-                  <span>Mở PDF từ máy tính 📁</span>
-                </button>
-                <p className="text-[11px] font-bold text-center text-ink-soft">
-                  Hỗ trợ mở mọi file PDF bài tập
-                </p>
-              </div>
-            </div>
-
-            {/* SÁCH GIÁO VIÊN */}
-            <div className="flex flex-col justify-between gap-3 rounded-2xl bg-cream/70 p-4 border-2 border-banana-soft shadow-xs hover:shadow-md transition-all">
-              <div>
-                <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white">
-                  Dành cho Giáo viên
-                </span>
-                <h3 className="mt-2 text-base font-black text-ink">Sách Giáo Viên (Teacher's Book)</h3>
-                <p className="text-xs font-bold text-ink-soft mt-1">Kế hoạch bài dạy (giáo án), phân phối tiết và tài liệu bồi dưỡng.</p>
-              </div>
-
-              <div className="flex flex-col gap-2 pt-2 border-t border-banana-soft/60">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSelectedBookForReader('tap1');
-                    setShowPdfReaderModal(true);
-                  }}
-                  className="flex items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2.5 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
-                >
-                  <Upload className="h-4 w-4" />
-                  <span>Mở PDF Giáo Án / SGV 📁</span>
-                </button>
-                <p className="text-[11px] font-bold text-center text-ink-soft">
-                  Đọc trực tiếp mọi giáo án PDF
-                </p>
               </div>
             </div>
           </div>

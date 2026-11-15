@@ -1,6 +1,16 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Download, ExternalLink, Maximize2, Minimize2, Upload, X, ZoomIn, ZoomOut } from 'lucide-react';
 import workerUrl from 'pdfjs-dist/legacy/build/pdf.worker.min.mjs?url';
+import {
+  OFFICIAL_BOOKS,
+  SCHOOL_LEVELS,
+  findOfficialBook,
+  getBooksBySchoolLevel,
+  getBooksByGrade,
+} from '../data/officialBooks.js';
+
+// Tái xuất danh mục sách và các hàm trợ giúp
+export { OFFICIAL_BOOKS, SCHOOL_LEVELS, findOfficialBook, getBooksBySchoolLevel, getBooksByGrade };
 
 // Bản scan SGK: trang PDF = trang in trên sách + 1 (trang 1 của file là bìa).
 export const PDF_PAGE_OFFSET = 1;
@@ -9,33 +19,6 @@ export const pdfPageForUnit = (unit) => {
   const start = Number(unit?.bookStartPage) || Number(String(unit?.bookPages || '').match(/\d+/)?.[0]) || 1;
   return start + PDF_PAGE_OFFSET;
 };
-
-export const OFFICIAL_BOOKS = [
-  {
-    id: 'tap1',
-    title: 'SGK Tiếng Anh 6 – Tập 1 (Global Success)',
-    shortTitle: 'Tập 1 (Unit 1 - 6)',
-    semester: 'Học kỳ I',
-    badgeTone: 'bg-banana text-ink',
-    desc: 'Unit 1 đến Unit 6 và Review 1 – 2 (sách in trang 6 – 71). Bản scan để tra cứu nhanh.',
-    src: '/pdf/sgk-tieng-anh-6-tap-1.pdf',
-    downloadName: 'SGK-Tieng-Anh-6-Tap-1-Global-Success.pdf',
-    fileSize: '16.8 MB',
-    pages: '73 trang',
-  },
-  {
-    id: 'tap2',
-    title: 'SGK Tiếng Anh 6 – Tập 2 (Global Success)',
-    shortTitle: 'Tập 2 (Unit 7 - 12)',
-    semester: 'Học kỳ II',
-    badgeTone: 'bg-sky text-ink',
-    desc: 'Unit 7 đến Unit 12 và Review 3 – 4 (sách in trang 6 – 71). Bản scan để tra cứu nhanh.',
-    src: '/pdf/sgk-tieng-anh-6-tap-2.pdf',
-    downloadName: 'SGK-Tieng-Anh-6-Tap-2-Global-Success.pdf',
-    fileSize: '16.5 MB',
-    pages: '73 trang',
-  },
-];
 
 let pdfjsPromise;
 function loadPdfjs() {
@@ -62,6 +45,7 @@ const ZOOMS = [1, 1.25, 1.5, 2];
  */
 function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   const [activeBookId, setActiveBookId] = useState(initialBookId);
+  const [levelFilter, setLevelFilter] = useState('all');
   const [customPdf, setCustomPdf] = useState(null);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [doc, setDoc] = useState(null);
@@ -75,9 +59,27 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   const viewportRef = useRef(null);
   const renderTaskRef = useRef(null);
 
-  const currentBook = customPdf || OFFICIAL_BOOKS.find((b) => b.id === activeBookId) || OFFICIAL_BOOKS[0];
+  const currentBook = customPdf || findOfficialBook(activeBookId);
   const isOfficial = !customPdf;
   const printedPage = isOfficial ? page - PDF_PAGE_OFFSET : page;
+
+  // Đồng bộ activeBookId và levelFilter khi initialBookId thay đổi
+  useEffect(() => {
+    if (initialBookId) {
+      setActiveBookId(initialBookId);
+      const b = findOfficialBook(initialBookId);
+      if (b?.schoolLevel) {
+        setLevelFilter(b.schoolLevel);
+      }
+    }
+  }, [initialBookId]);
+
+  // Đồng bộ trang ban đầu
+  useEffect(() => {
+    if (initialPage) {
+      setPage(initialPage);
+    }
+  }, [initialPage]);
 
   // Giải phóng blob URL của file tự mở khi đổi file hoặc đóng trình đọc
   useEffect(() => () => customPdf?.src && URL.revokeObjectURL(customPdf.src), [customPdf]);
@@ -103,7 +105,7 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
     return () => ro.disconnect();
   }, []);
 
-  // Mở tài liệu (chỉ tải phần cần thiết của file 16MB)
+  // Mở tài liệu (chỉ tải phần cần thiết của file)
   useEffect(() => {
     let cancelled = false;
     let task = null;
@@ -179,7 +181,7 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
     setCustomPdf({
       id: 'custom',
       title: file.name,
-      shortTitle: 'File PDF tải lên',
+      shortTitle: 'File PDF riêng',
       semester: 'Tài liệu riêng',
       badgeTone: 'bg-mint text-white',
       src: URL.createObjectURL(file),
@@ -192,11 +194,20 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   const handleSelectBook = (bookId) => {
     setCustomPdf(null);
     setActiveBookId(bookId);
+    const b = findOfficialBook(bookId);
+    if (b?.schoolLevel && levelFilter !== 'all' && levelFilter !== b.schoolLevel) {
+      setLevelFilter(b.schoolLevel);
+    }
     setPage(bookId === initialBookId ? initialPage : 1 + PDF_PAGE_OFFSET);
   };
 
   const navBtn =
-    'flex h-10 min-w-10 items-center justify-center rounded-xl bg-white px-2 text-ink border border-banana-soft hover:bg-cream disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer';
+    'flex h-10 min-w-10 items-center justify-center rounded-xl bg-white px-2 text-ink border border-banana-soft hover:bg-cream disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer transition-colors';
+
+  const visibleBooksForPills =
+    levelFilter === 'all'
+      ? OFFICIAL_BOOKS
+      : OFFICIAL_BOOKS.filter((b) => b.schoolLevel === levelFilter);
 
   return (
     <div
@@ -210,19 +221,40 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
           isFullScreen ? 'h-[98vh] max-w-[98vw]' : 'h-[96vh] sm:h-[92vh] max-w-5xl'
         }`}
       >
-        <header className="flex flex-col gap-2 border-b-2 border-banana-soft p-3 sm:p-4 bg-cream/70">
+        <header className="flex flex-col gap-2.5 border-b-2 border-banana-soft p-3 sm:p-4 bg-cream/70">
+          {/* Hàng 1: Tiêu đề sách, badge thông tin và các nút thao tác chính */}
           <div className="flex items-center justify-between gap-2">
             <div className="flex min-w-0 items-center gap-2">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-banana text-lg" aria-hidden>
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-2xl bg-banana text-lg shadow-2xs" aria-hidden>
                 📖
               </span>
               <div className="min-w-0">
-                <span className={`rounded-full px-2 py-0.5 text-[11px] font-black ${currentBook.badgeTone}`}>{currentBook.semester}</span>
-                <h3 className="truncate text-sm sm:text-lg font-black text-ink">{currentBook.title}</h3>
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  {currentBook.schoolLevel && (
+                    <span className="rounded-full bg-ink/10 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-ink">
+                      {currentBook.schoolLevel === 'primary' ? 'Tiểu học' : currentBook.schoolLevel === 'secondary' ? 'THCS' : 'THPT'}
+                    </span>
+                  )}
+                  <span className={`rounded-full px-2 py-0.5 text-[11px] font-black ${currentBook.badgeTone}`}>
+                    {currentBook.semester}
+                  </span>
+                  {currentBook.pages && (
+                    <span className="text-[11px] font-bold text-ink-soft hidden sm:inline">
+                      • {currentBook.pages}
+                    </span>
+                  )}
+                  {currentBook.fileSize && (
+                    <span className="text-[11px] font-mono font-bold text-ink-soft hidden md:inline">
+                      ({currentBook.fileSize})
+                    </span>
+                  )}
+                </div>
+                <h3 className="truncate text-sm sm:text-base md:text-lg font-black text-ink">{currentBook.title}</h3>
               </div>
             </div>
+
             <div className="flex shrink-0 items-center gap-1.5">
-              <a href={currentBook.src} download={currentBook.downloadName} className={navBtn} title={`Tải PDF (${currentBook.fileSize})`}>
+              <a href={currentBook.src} download={currentBook.downloadName} className={navBtn} title={`Tải PDF (${currentBook.fileSize || ''})`}>
                 <Download className="h-4 w-4" />
               </a>
               <a href={currentBook.src} target="_blank" rel="noopener noreferrer" className={navBtn} title="Mở PDF trong tab mới">
@@ -237,29 +269,106 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
             </div>
           </div>
 
+          {/* Hàng 2: Bộ chọn 14 SGK và thanh điều hướng trang / thu phóng */}
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <div className="flex items-center gap-1 rounded-2xl bg-white p-1 border border-banana-soft">
-              {OFFICIAL_BOOKS.map((b) => (
-                <button
-                  key={b.id}
-                  type="button"
-                  onClick={() => handleSelectBook(b.id)}
-                  className={`rounded-xl px-2.5 py-1.5 text-xs font-black cursor-pointer ${
-                    isOfficial && activeBookId === b.id ? 'bg-peach text-white' : 'text-ink-soft hover:bg-cream'
-                  }`}
+            <div className="flex items-center gap-1.5 flex-wrap">
+              {/* Dropdown chuyển đổi 14 đầu sách */}
+              <div className="flex items-center rounded-2xl bg-white p-1 border border-banana-soft shadow-2xs">
+                <label htmlFor="official-book-select" className="sr-only">
+                  Chọn sách giáo khoa
+                </label>
+                <select
+                  id="official-book-select"
+                  value={isOfficial ? currentBook.id : 'custom'}
+                  onChange={(e) => {
+                    if (e.target.value !== 'custom') {
+                      handleSelectBook(e.target.value);
+                    }
+                  }}
+                  aria-label="Chọn sách giáo khoa"
+                  className="h-8 max-w-[190px] sm:max-w-[240px] md:max-w-[280px] truncate rounded-xl bg-transparent px-2 text-xs font-black text-ink outline-none cursor-pointer hover:bg-cream/60 transition-colors"
                 >
-                  {b.shortTitle}
-                </button>
-              ))}
-              <label className="flex items-center gap-1 rounded-xl px-2 py-1.5 text-xs font-black text-ink-soft hover:bg-banana-soft cursor-pointer" title="Mở file PDF trong máy">
-                <Upload className="h-3.5 w-3.5" />
-                <span className="hidden sm:inline">PDF trong máy</span>
-                <input type="file" accept="application/pdf" onChange={handleCustomPdfUpload} className="hidden" />
-              </label>
+                  {customPdf && (
+                    <option value="custom">📄 {customPdf.title} (PDF tải lên)</option>
+                  )}
+                  <optgroup label="🌱 Tiểu học (Lớp 1 – 5)">
+                    {OFFICIAL_BOOKS.filter((b) => b.schoolLevel === 'primary').map((b) => (
+                      <option key={b.id} value={b.id}>
+                        {b.shortTitle} – {b.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <optgroup label="🏫 THCS (Lớp 6 – 8)">
+                    {OFFICIAL_BOOKS.filter((b) => b.schoolLevel === 'secondary').map((b) => (
+                      <option key={b.id} value={b.id}>
+                        {b.shortTitle} – {b.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <optgroup label="🎓 THPT (Lớp 10 – 12)">
+                    {OFFICIAL_BOOKS.filter((b) => b.schoolLevel === 'high').map((b) => (
+                      <option key={b.id} value={b.id}>
+                        {b.shortTitle} – {b.title}
+                      </option>
+                    ))}
+                  </optgroup>
+                </select>
+
+                <label
+                  className="flex items-center gap-1 rounded-xl px-2 py-1 text-xs font-black text-ink-soft hover:bg-banana-soft cursor-pointer transition-colors"
+                  title="Mở file PDF trong máy"
+                >
+                  <Upload className="h-3.5 w-3.5" />
+                  <span className="hidden lg:inline">PDF riêng</span>
+                  <input type="file" accept="application/pdf" onChange={handleCustomPdfUpload} className="hidden" />
+                </label>
+              </div>
+
+              {/* Bộ lọc cấp học dạng pill */}
+              <div className="hidden xl:flex items-center gap-1 rounded-2xl bg-white/90 p-1 border border-banana-soft/70">
+                {SCHOOL_LEVELS.map((lvl) => (
+                  <button
+                    key={lvl.id}
+                    type="button"
+                    onClick={() => setLevelFilter(lvl.id)}
+                    className={`rounded-xl px-2.5 py-1 text-[11px] font-black cursor-pointer transition-colors ${
+                      levelFilter === lvl.id ? 'bg-ink text-white shadow-2xs' : 'text-ink-soft hover:bg-cream'
+                    }`}
+                  >
+                    {lvl.label}
+                  </button>
+                ))}
+              </div>
+
+              {/* Các nút chọn nhanh từng cuốn sách */}
+              <div className="hidden md:flex items-center gap-1 max-w-[280px] lg:max-w-[340px] xl:max-w-[420px] overflow-x-auto no-scrollbar py-0.5">
+                {visibleBooksForPills.map((b) => (
+                  <button
+                    key={b.id}
+                    type="button"
+                    onClick={() => handleSelectBook(b.id)}
+                    title={`${b.title} (${b.pages})`}
+                    className={`shrink-0 rounded-xl px-2.5 py-1 text-[11px] font-black cursor-pointer transition-all ${
+                      isOfficial && currentBook.id === b.id
+                        ? 'bg-peach text-white shadow-2xs'
+                        : 'bg-white text-ink-soft border border-banana-soft hover:bg-cream'
+                    }`}
+                  >
+                    {b.shortTitle}
+                  </button>
+                ))}
+              </div>
             </div>
 
+            {/* Điều khiển trang & thu phóng */}
             <div className="flex items-center gap-1.5">
-              <button type="button" className={navBtn} disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} aria-label="Trang trước">
+              <button
+                type="button"
+                className={navBtn}
+                disabled={page <= 1}
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                aria-label="Trang trước"
+              >
                 <ChevronLeft className="h-5 w-5" />
               </button>
               <form
@@ -276,19 +385,37 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
                   onBlur={() => goToPrinted(pageInput)}
                   inputMode="numeric"
                   aria-label="Số trang"
-                  className="h-10 w-12 rounded-xl border border-banana-soft bg-white text-center text-sm font-black text-ink"
+                  className="h-10 w-12 rounded-xl border border-banana-soft bg-white text-center text-sm font-black text-ink shadow-2xs"
                 />
                 <span className="whitespace-nowrap">
                   {printedPage < 1 && isOfficial ? '(bìa)' : `/ ${isOfficial ? Math.max(0, numPages - PDF_PAGE_OFFSET) : numPages}`}
                 </span>
               </form>
-              <button type="button" className={navBtn} disabled={!numPages || page >= numPages} onClick={() => setPage((p) => Math.min(numPages, p + 1))} aria-label="Trang sau">
+              <button
+                type="button"
+                className={navBtn}
+                disabled={!numPages || page >= numPages}
+                onClick={() => setPage((p) => Math.min(numPages, p + 1))}
+                aria-label="Trang sau"
+              >
                 <ChevronRight className="h-5 w-5" />
               </button>
-              <button type="button" className={navBtn} disabled={zoomIdx === 0} onClick={() => setZoomIdx((z) => Math.max(0, z - 1))} aria-label="Thu nhỏ">
+              <button
+                type="button"
+                className={navBtn}
+                disabled={zoomIdx === 0}
+                onClick={() => setZoomIdx((z) => Math.max(0, z - 1))}
+                aria-label="Thu nhỏ"
+              >
                 <ZoomOut className="h-4 w-4" />
               </button>
-              <button type="button" className={navBtn} disabled={zoomIdx === ZOOMS.length - 1} onClick={() => setZoomIdx((z) => Math.min(ZOOMS.length - 1, z + 1))} aria-label="Phóng to">
+              <button
+                type="button"
+                className={navBtn}
+                disabled={zoomIdx === ZOOMS.length - 1}
+                onClick={() => setZoomIdx((z) => Math.min(ZOOMS.length - 1, z + 1))}
+                aria-label="Phóng to"
+              >
                 <ZoomIn className="h-4 w-4" />
               </button>
             </div>
@@ -297,13 +424,20 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
 
         <div ref={viewportRef} className="relative flex-1 overflow-auto bg-slate-700 p-1">
           {status === 'loading' && (
-            <p className="absolute inset-x-0 top-10 text-center text-sm font-bold text-white">Đang mở sách… (chỉ tải những trang em xem)</p>
+            <p className="absolute inset-x-0 top-10 text-center text-sm font-bold text-white">
+              Đang mở {currentBook.title}… (chỉ tải những trang em xem)
+            </p>
           )}
           {status === 'error' && (
-            <div className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-5 text-center">
+            <div className="mx-auto mt-10 max-w-sm rounded-2xl bg-white p-5 text-center shadow-lg">
               <p className="font-black text-ink">Chưa mở được sách 😢</p>
-              <p className="mt-1 text-sm font-bold text-ink-soft">Kiểm tra mạng rồi thử lại, hoặc mở PDF trong tab mới.</p>
-              <a href={currentBook.src} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block rounded-xl bg-banana px-4 py-2 text-sm font-black text-ink">
+              <p className="mt-1 text-sm font-bold text-ink-soft">Kiểm tra kết nối rồi thử lại, hoặc mở PDF trong tab mới.</p>
+              <a
+                href={currentBook.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block rounded-xl bg-banana px-4 py-2 text-sm font-black text-ink hover:bg-banana-dark transition-colors"
+              >
                 Mở PDF trong tab mới ↗
               </a>
             </div>

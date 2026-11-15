@@ -1,0 +1,2070 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "series": "Global Success - Tiếng Anh GDPT 2018",
+    "publisher": "Nhà Xuất Bản Giáo Dục Việt Nam",
+    "updatedAt": "2026-11-15",
+    "description": "Lộ trình khung chương trình Sách Giáo Khoa Tiếng Anh chuẩn từ Lớp 1 đến Lớp 12 với liên kết tài liệu PDF và các trạm học tập."
+  },
+  "schoolLevels": [
+    {
+      "id": "all",
+      "name": "Tất cả các cấp",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "primary",
+      "name": "Tiểu học",
+      "grades": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "badgeTone": "bg-emerald-500 text-white",
+      "description": "Chương trình làm quen và xây dựng nền tảng tiếng Anh, phản xạ giao tiếp tự nhiên và phát âm chuẩn bản ngữ."
+    },
+    {
+      "id": "secondary",
+      "name": "THCS",
+      "grades": [
+        6,
+        7,
+        8
+      ],
+      "badgeTone": "bg-banana text-ink",
+      "description": "Phát triển 4 kỹ năng Nghe - Nói - Đọc - Viết toàn diện, làm chủ ngữ pháp trọng tâm và vốn từ phong phú."
+    },
+    {
+      "id": "high",
+      "name": "THPT",
+      "grades": [
+        10,
+        11,
+        12
+      ],
+      "badgeTone": "bg-rose-500 text-white",
+      "description": "Nâng cao năng lực học thuật, tư duy phản biện, kỹ năng thuyết trình và chuẩn bị tốt nghiệp - chứng chỉ quốc tế."
+    }
+  ],
+  "grades": [
+    {
+      "grade": 1,
+      "gradeName": "Lớp 1",
+      "level": "primary",
+      "levelName": "Tiểu học",
+      "title": "SGK Tiếng Anh 1 – Global Success",
+      "totalUnits": 16,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-1"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-1",
+          "title": "SGK Tiếng Anh 1 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-1.pdf",
+          "downloadName": "SGK-Tieng-Anh-1-Global-Success.pdf",
+          "fileSize": "47.3 MB",
+          "pages": 77
+        }
+      ],
+      "description": "Làm quen với chữ cái, âm vần tiếng Anh qua hình ảnh sinh động, bài đồng dao và các chủ đề trường học, gia đình.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "In the school playground",
+          "titleVi": "Ở sân trường",
+          "theme": "School & Daily Life",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/b/ (Letter B)",
+          "keyVocab": [
+            "bill",
+            "ball",
+            "bike",
+            "book"
+          ]
+        },
+        {
+          "unit": 2,
+          "title": "In the dining room",
+          "titleVi": "Trong phòng ăn",
+          "theme": "Home & Food",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/c/ (Letter C)",
+          "keyVocab": [
+            "cake",
+            "car",
+            "cat",
+            "cup"
+          ]
+        },
+        {
+          "unit": 3,
+          "title": "At the street market",
+          "titleVi": "Ở chợ phố",
+          "theme": "Shopping & Places",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/m/ (Letter M)",
+          "keyVocab": [
+            "mango",
+            "money",
+            "monkey",
+            "milk"
+          ]
+        },
+        {
+          "unit": 4,
+          "title": "In the bedroom",
+          "titleVi": "Trong phòng ngủ",
+          "theme": "Home & Furniture",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/d/ (Letter D)",
+          "keyVocab": [
+            "desk",
+            "dog",
+            "door",
+            "duck"
+          ]
+        },
+        {
+          "unit": 5,
+          "title": "At the fish and chip shop",
+          "titleVi": "Ở quán cá và khoai tây chiên",
+          "theme": "Food & Places",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/f/ (Letter F)",
+          "keyVocab": [
+            "fish",
+            "chips",
+            "face",
+            "foot"
+          ]
+        },
+        {
+          "unit": 6,
+          "title": "In the classroom",
+          "titleVi": "Trong phòng học",
+          "theme": "School & Objects",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/g/ (Letter G)",
+          "keyVocab": [
+            "girl",
+            "gate",
+            "garden",
+            "goat"
+          ]
+        },
+        {
+          "unit": 7,
+          "title": "In the garden",
+          "titleVi": "Trong khu vườn",
+          "theme": "Nature & Animals",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/o/ (Letter O)",
+          "keyVocab": [
+            "ox",
+            "box",
+            "fox",
+            "clock"
+          ]
+        },
+        {
+          "unit": 8,
+          "title": "In the park",
+          "titleVi": "Trong công viên",
+          "theme": "Recreation & Outdoor",
+          "semester": 1,
+          "bookId": "sgk-1",
+          "targetPhonics": "/p/ (Letter P)",
+          "keyVocab": [
+            "pen",
+            "pencil",
+            "park",
+            "popcorn"
+          ]
+        },
+        {
+          "unit": 9,
+          "title": "In the shop",
+          "titleVi": "Trong cửa hàng",
+          "theme": "Shopping & Clothes",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/a/ (Letter A)",
+          "keyVocab": [
+            "apple",
+            "hat",
+            "cat",
+            "bag"
+          ]
+        },
+        {
+          "unit": 10,
+          "title": "At the zoo",
+          "titleVi": "Ở sở thú",
+          "theme": "Wild Animals",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/h/ (Letter H)",
+          "keyVocab": [
+            "horse",
+            "hippo",
+            "hand",
+            "hair"
+          ]
+        },
+        {
+          "unit": 11,
+          "title": "At the bus stop",
+          "titleVi": "Ở bến xe buýt",
+          "theme": "Vehicles & Transport",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/u/ (Letter U)",
+          "keyVocab": [
+            "bus",
+            "sun",
+            "truck",
+            "umbrella"
+          ]
+        },
+        {
+          "unit": 12,
+          "title": "At the lake",
+          "titleVi": "Ở bên hồ",
+          "theme": "Nature & Activities",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/l/ (Letter L)",
+          "keyVocab": [
+            "lake",
+            "leaf",
+            "lemon",
+            "lion"
+          ]
+        },
+        {
+          "unit": 13,
+          "title": "In the school canteen",
+          "titleVi": "Trong nhà ăn của trường",
+          "theme": "School & Food",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/i/ (Letter I)",
+          "keyVocab": [
+            "milk",
+            "chips",
+            "fish",
+            "chicken"
+          ]
+        },
+        {
+          "unit": 14,
+          "title": "In the toy shop",
+          "titleVi": "Trong cửa hàng đồ chơi",
+          "theme": "Toys & Play",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/t/ (Letter T)",
+          "keyVocab": [
+            "tiger",
+            "top",
+            "teddy bear",
+            "train"
+          ]
+        },
+        {
+          "unit": 15,
+          "title": "At the football match",
+          "titleVi": "Ở trận đấu bóng đá",
+          "theme": "Sports & Games",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/s/ (Letter S)",
+          "keyVocab": [
+            "sand",
+            "sea",
+            "sun",
+            "sail"
+          ]
+        },
+        {
+          "unit": 16,
+          "title": "At home",
+          "titleVi": "Ở nhà",
+          "theme": "Family & Routine",
+          "semester": 2,
+          "bookId": "sgk-1",
+          "targetPhonics": "/e/ (Letter E)",
+          "keyVocab": [
+            "red",
+            "bed",
+            "pen",
+            "bell"
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 2,
+      "gradeName": "Lớp 2",
+      "level": "primary",
+      "levelName": "Tiểu học",
+      "title": "SGK Tiếng Anh 2 – Global Success",
+      "totalUnits": 16,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-2"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-2",
+          "title": "SGK Tiếng Anh 2 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-2.pdf",
+          "downloadName": "SGK-Tieng-Anh-2-Global-Success.pdf",
+          "fileSize": "55.4 MB",
+          "pages": 77
+        }
+      ],
+      "description": "Mở rộng hệ thống phát âm phụ âm đôi, từ vựng sinh hoạt hàng ngày và mẫu câu giao tiếp đơn giản.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "At my birthday party",
+          "titleVi": "Ở tiệc sinh nhật của tôi",
+          "theme": "Celebrations & Food",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/p/ (Letter P)",
+          "keyVocab": [
+            "pizza",
+            "popcorn",
+            "pasta"
+          ]
+        },
+        {
+          "unit": 2,
+          "title": "In the backyard",
+          "titleVi": "Trong sân sau nhà",
+          "theme": "Home & Garden",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/k/ (Letter K)",
+          "keyVocab": [
+            "kitten",
+            "kite",
+            "bike"
+          ]
+        },
+        {
+          "unit": 3,
+          "title": "At the seaside",
+          "titleVi": "Ở bãi biển",
+          "theme": "Summer & Sea",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/s/ (Letter S)",
+          "keyVocab": [
+            "sea",
+            "sail",
+            "sand"
+          ]
+        },
+        {
+          "unit": 4,
+          "title": "In the countryside",
+          "titleVi": "Ở vùng nông thôn",
+          "theme": "Nature & Country",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/r/ (Letter R)",
+          "keyVocab": [
+            "river",
+            "road",
+            "rainbow"
+          ]
+        },
+        {
+          "unit": 5,
+          "title": "In the classroom",
+          "titleVi": "Trong phòng học",
+          "theme": "School & Shapes",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/kw/ (Letter Q)",
+          "keyVocab": [
+            "question",
+            "quilt",
+            "square"
+          ]
+        },
+        {
+          "unit": 6,
+          "title": "On the farm",
+          "titleVi": "Ở nông trại",
+          "theme": "Farm Animals",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/ks/ (Letter X)",
+          "keyVocab": [
+            "fox",
+            "box",
+            "ox"
+          ]
+        },
+        {
+          "unit": 7,
+          "title": "In the kitchen",
+          "titleVi": "Trong nhà bếp",
+          "theme": "Kitchen & Food",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/dʒ/ (Letter J)",
+          "keyVocab": [
+            "jam",
+            "jelly",
+            "juice"
+          ]
+        },
+        {
+          "unit": 8,
+          "title": "In the village",
+          "titleVi": "Trong làng quê",
+          "theme": "Community & Sports",
+          "semester": 1,
+          "bookId": "sgk-2",
+          "targetPhonics": "/v/ (Letter V)",
+          "keyVocab": [
+            "van",
+            "village",
+            "volleyball"
+          ]
+        },
+        {
+          "unit": 9,
+          "title": "In the grocery store",
+          "titleVi": "Trong cửa hàng tạp hóa",
+          "theme": "Food & Shopping",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/j/ (Letter Y)",
+          "keyVocab": [
+            "yam",
+            "yogurt",
+            "yo-yo"
+          ]
+        },
+        {
+          "unit": 10,
+          "title": "At the zoo",
+          "titleVi": "Ở sở thú",
+          "theme": "Zoo Animals",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/z/ (Letter Z)",
+          "keyVocab": [
+            "zebra",
+            "zebu",
+            "zoo"
+          ]
+        },
+        {
+          "unit": 11,
+          "title": "In the playground",
+          "titleVi": "Ở sân chơi",
+          "theme": "Play & Sports",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/aɪ/ (Letter I)",
+          "keyVocab": [
+            "bike",
+            "kite",
+            "slide"
+          ]
+        },
+        {
+          "unit": 12,
+          "title": "At the café",
+          "titleVi": "Ở quán cà phê",
+          "theme": "Drinks & Desserts",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/eɪ/ (Letter A)",
+          "keyVocab": [
+            "cake",
+            "table",
+            "grapes"
+          ]
+        },
+        {
+          "unit": 13,
+          "title": "In the maths class",
+          "titleVi": "Trong giờ học Toán",
+          "theme": "Numbers 11-15",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/n/ (Letter N)",
+          "keyVocab": [
+            "eleven",
+            "twelve",
+            "thirteen",
+            "fourteen",
+            "fifteen"
+          ]
+        },
+        {
+          "unit": 14,
+          "title": "At home",
+          "titleVi": "Ở nhà",
+          "theme": "Family Members",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/ə(r)/",
+          "keyVocab": [
+            "father",
+            "mother",
+            "brother"
+          ]
+        },
+        {
+          "unit": 15,
+          "title": "In the clothes shop",
+          "titleVi": "Ở cửa hàng quần áo",
+          "theme": "Clothing",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/ʃ/ (Letter Sh)",
+          "keyVocab": [
+            "shirt",
+            "shoes",
+            "shorts"
+          ]
+        },
+        {
+          "unit": 16,
+          "title": "At the campsite",
+          "titleVi": "Ở khu cắm trại",
+          "theme": "Camping & Outdoors",
+          "semester": 2,
+          "bookId": "sgk-2",
+          "targetPhonics": "/t/ (Letter T)",
+          "keyVocab": [
+            "tent",
+            "teapot",
+            "blanket"
+          ]
+        }
+      ]
+    },
+    {
+      "grade": 3,
+      "gradeName": "Lớp 3",
+      "level": "primary",
+      "levelName": "Tiểu học",
+      "title": "SGK Tiếng Anh 3 – Global Success",
+      "totalUnits": 20,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn Tập 2. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-3-tap2"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-3-tap2",
+          "title": "SGK Tiếng Anh 3 – Tập 2 (Global Success)",
+          "semester": "Học kỳ II",
+          "src": "/pdf/sgk-tieng-anh-3-tap-2.pdf",
+          "downloadName": "SGK-Tieng-Anh-3-Tap-2-Global-Success.pdf",
+          "fileSize": "11.1 MB",
+          "pages": 78
+        }
+      ],
+      "description": "Bắt đầu chương trình tiếng Anh bắt buộc bậc Tiểu học, làm quen hội thoại giao tiếp cơ bản, đồ vật và người thân.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "Hello",
+          "titleVi": "Xin chào",
+          "theme": "Greetings & Names",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Hello/Hi, I'm..."
+        },
+        {
+          "unit": 2,
+          "title": "Our names",
+          "titleVi": "Tên của chúng mình",
+          "theme": "Spelling & Age",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What's your name? / How old are you?"
+        },
+        {
+          "unit": 3,
+          "title": "Our friends",
+          "titleVi": "Bạn bè của chúng mình",
+          "theme": "Friends & Introductions",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "This is... / Is this...?"
+        },
+        {
+          "unit": 4,
+          "title": "Our bodies",
+          "titleVi": "Cơ thể của chúng mình",
+          "theme": "Body Parts",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Touch your... / What's this?"
+        },
+        {
+          "unit": 5,
+          "title": "My hobbies",
+          "titleVi": "Sở thích của tôi",
+          "theme": "Free Time & Activities",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What's your hobby? - I like..."
+        },
+        {
+          "unit": 6,
+          "title": "Our school",
+          "titleVi": "Trường học của chúng mình",
+          "theme": "School Facilities",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Is that your school? - Yes, it is."
+        },
+        {
+          "unit": 7,
+          "title": "Classroom instructions",
+          "titleVi": "Hiệu lệnh trong lớp học",
+          "theme": "Classroom Commands",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "May I come in? / Open your book."
+        },
+        {
+          "unit": 8,
+          "title": "My school things",
+          "titleVi": "Đồ dùng học tập của tôi",
+          "theme": "Stationery",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "I have a... / Do you have a...?"
+        },
+        {
+          "unit": 9,
+          "title": "Colours",
+          "titleVi": "Màu sắc",
+          "theme": "Colours & Objects",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What colour is it? - It's..."
+        },
+        {
+          "unit": 10,
+          "title": "Breaktime activities",
+          "titleVi": "Hoạt động giờ ra chơi",
+          "theme": "Games & Breaktime",
+          "semester": 1,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What do you do at break time? - I play..."
+        },
+        {
+          "unit": 11,
+          "title": "My family",
+          "titleVi": "Gia đình của tôi",
+          "theme": "Family Members",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Who's that? - He's/She's my..."
+        },
+        {
+          "unit": 12,
+          "title": "My house",
+          "titleVi": "Ngôi nhà của tôi",
+          "theme": "Rooms in the House",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Where's the living room? - It's here."
+        },
+        {
+          "unit": 13,
+          "title": "My bedroom",
+          "titleVi": "Phòng ngủ của tôi",
+          "theme": "Furniture & Prepositions",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Where's the bed? - It's in the room."
+        },
+        {
+          "unit": 14,
+          "title": "My toys",
+          "titleVi": "Đồ chơi của tôi",
+          "theme": "Toys & Quantities",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What toys do you have? - I have..."
+        },
+        {
+          "unit": 15,
+          "title": "My family celebrations",
+          "titleVi": "Ngày kỷ niệm gia đình",
+          "theme": "Parties & Birthdays",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "When is your birthday? - It's in..."
+        },
+        {
+          "unit": 16,
+          "title": "My pets",
+          "titleVi": "Thú cưng của tôi",
+          "theme": "Pets & Animals",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Do you have any pets? - Yes, I have a..."
+        },
+        {
+          "unit": 17,
+          "title": "Our toys",
+          "titleVi": "Đồ chơi của chúng mình",
+          "theme": "Toys & Locations",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "Where are the cars? - They're on the floor."
+        },
+        {
+          "unit": 18,
+          "title": "At the shopping centre",
+          "titleVi": "Ở trung tâm thương mại",
+          "theme": "Shopping & Clothes",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "How much is the T-shirt? - It's..."
+        },
+        {
+          "unit": 19,
+          "title": "Outdoor activities",
+          "titleVi": "Hoạt động ngoài trời",
+          "theme": "Weather & Activities",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What are they doing? - They're skating."
+        },
+        {
+          "unit": 20,
+          "title": "At the zoo",
+          "titleVi": "Ở sở thú",
+          "theme": "Wild Animals & Actions",
+          "semester": 2,
+          "bookId": "sgk-3-tap2",
+          "grammar": "What's the tiger doing? - It's roaring."
+        }
+      ]
+    },
+    {
+      "grade": 4,
+      "gradeName": "Lớp 4",
+      "level": "primary",
+      "levelName": "Tiểu học",
+      "title": "SGK Tiếng Anh 4 – Global Success",
+      "totalUnits": 20,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ Tập 1 & Tập 2. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-4-tap1",
+        "sgk-4-tap2"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-4-tap1",
+          "title": "SGK Tiếng Anh 4 – Tập 1 (Global Success)",
+          "semester": "Học kỳ I",
+          "src": "/pdf/sgk-tieng-anh-4-tap-1.pdf",
+          "downloadName": "SGK-Tieng-Anh-4-Tap-1-Global-Success.pdf",
+          "fileSize": "12.6 MB",
+          "pages": 83
+        },
+        {
+          "bookId": "sgk-4-tap2",
+          "title": "SGK Tiếng Anh 4 – Tập 2 (Global Success)",
+          "semester": "Học kỳ II",
+          "src": "/pdf/sgk-tieng-anh-4-tap-2.pdf",
+          "downloadName": "SGK-Tieng-Anh-4-Tap-2-Global-Success.pdf",
+          "fileSize": "12.3 MB",
+          "pages": 79
+        }
+      ],
+      "description": "Nâng cao từ vựng và phản xạ giao tiếp theo thời gian, thời khóa biểu, sở thích và nghề nghiệp.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "My friends",
+          "titleVi": "Bạn bè của tôi",
+          "theme": "Countries & Nationalities",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "Where are you from? - I'm from..."
+        },
+        {
+          "unit": 2,
+          "title": "Time and daily routines",
+          "titleVi": "Thời gian và sinh hoạt hàng ngày",
+          "theme": "Time & Habits",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "What time is it? / What time do you...?"
+        },
+        {
+          "unit": 3,
+          "title": "My week",
+          "titleVi": "Tuần lễ của tôi",
+          "theme": "Days of the Week",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "What day is it today? - It's..."
+        },
+        {
+          "unit": 4,
+          "title": "My birthday party",
+          "titleVi": "Tiệc sinh nhật của tôi",
+          "theme": "Months & Birthdays",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "When is your birthday? - It's in..."
+        },
+        {
+          "unit": 5,
+          "title": "Things we can do",
+          "titleVi": "Những điều chúng mình có thể làm",
+          "theme": "Abilities (Can/Can't)",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "Can you swim? - Yes, I can."
+        },
+        {
+          "unit": 6,
+          "title": "Our school facilities",
+          "titleVi": "Cơ sở vật chất trường học",
+          "theme": "School Buildings",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "Where is the library? - It's on the first floor."
+        },
+        {
+          "unit": 7,
+          "title": "Our timetables",
+          "titleVi": "Thời khóa biểu của chúng mình",
+          "theme": "School Subjects",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "What subjects do you have today? - I have..."
+        },
+        {
+          "unit": 8,
+          "title": "My favourite subjects",
+          "titleVi": "Môn học yêu thích",
+          "theme": "Favorite Subjects & Reasons",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "Why do you like English? - Because..."
+        },
+        {
+          "unit": 9,
+          "title": "Our sports day",
+          "titleVi": "Ngày hội thể thao",
+          "theme": "Sports & Events",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "When is Sports Day? - It's in May."
+        },
+        {
+          "unit": 10,
+          "title": "Our summer holidays",
+          "titleVi": "Kỳ nghỉ hè của chúng mình",
+          "theme": "Past Holidays & Travel",
+          "semester": 1,
+          "bookId": "sgk-4-tap1",
+          "grammar": "Where were you last summer? - I was in..."
+        },
+        {
+          "unit": 11,
+          "title": "My home",
+          "titleVi": "Ngôi nhà của tôi",
+          "theme": "Homes & Locations",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "Where do you live? - I live in..."
+        },
+        {
+          "unit": 12,
+          "title": "Jobs",
+          "titleVi": "Nghề nghiệp",
+          "theme": "Occupations & Workplaces",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "What does your father do? - He's a..."
+        },
+        {
+          "unit": 13,
+          "title": "Appearance",
+          "titleVi": "Ngoại hình",
+          "theme": "Describing Appearance",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "What does he look like? - He's tall and slim."
+        },
+        {
+          "unit": 14,
+          "title": "Daily activities",
+          "titleVi": "Hoạt động hàng ngày",
+          "theme": "Daily Life Routines",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "What do you do in the morning? - I..."
+        },
+        {
+          "unit": 15,
+          "title": "My family's weekends",
+          "titleVi": "Ngày cuối tuần của gia đình",
+          "theme": "Family Weekend Activities",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "What does your family do on Sundays?"
+        },
+        {
+          "unit": 16,
+          "title": "Weather",
+          "titleVi": "Thời tiết",
+          "theme": "Weather & Seasons",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "What's the weather like today? - It's sunny."
+        },
+        {
+          "unit": 17,
+          "title": "In the city",
+          "titleVi": "Trong thành phố",
+          "theme": "Directions & City Places",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "How can I get to the bakery? - Turn left."
+        },
+        {
+          "unit": 18,
+          "title": "At the shopping centre",
+          "titleVi": "Ở trung tâm mua sắm",
+          "theme": "Prices & Shopping",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "How much are these shoes? - They're..."
+        },
+        {
+          "unit": 19,
+          "title": "The animal world",
+          "titleVi": "Thế giới động vật",
+          "theme": "Animals & Characteristics",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "Why do you like monkeys? - Because they're funny."
+        },
+        {
+          "unit": 20,
+          "title": "At summer camp",
+          "titleVi": "Ở trại hè",
+          "theme": "Camp Activities & Future",
+          "semester": 2,
+          "bookId": "sgk-4-tap2",
+          "grammar": "What are you going to do this summer?"
+        }
+      ]
+    },
+    {
+      "grade": 5,
+      "gradeName": "Lớp 5",
+      "level": "primary",
+      "levelName": "Tiểu học",
+      "title": "SGK Tiếng Anh 5 – Global Success",
+      "totalUnits": 20,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ Tập 1 & Tập 2. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-5-tap1",
+        "sgk-5-tap2"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-5-tap1",
+          "title": "SGK Tiếng Anh 5 – Tập 1 (Global Success)",
+          "semester": "Học kỳ I",
+          "src": "/pdf/sgk-tieng-anh-5-tap-1.pdf",
+          "downloadName": "SGK-Tieng-Anh-5-Tap-1-Global-Success.pdf",
+          "fileSize": "13.1 MB",
+          "pages": 83
+        },
+        {
+          "bookId": "sgk-5-tap2",
+          "title": "SGK Tiếng Anh 5 – Tập 2 (Global Success)",
+          "semester": "Học kỳ II",
+          "src": "/pdf/sgk-tieng-anh-5-tap-2.pdf",
+          "downloadName": "SGK-Tieng-Anh-5-Tap-2-Global-Success.pdf",
+          "fileSize": "45.7 MB",
+          "pages": 78
+        }
+      ],
+      "description": "Hoàn thiện chuẩn đầu ra Tiểu học bậc 1 (A1), củng cố ngữ pháp thời quá khứ, tương lai và hội thoại tự tin.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "All about me!",
+          "titleVi": "Tất cả về tôi!",
+          "theme": "Personal Identity",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "What are you like? - I'm friendly and hard-working."
+        },
+        {
+          "unit": 2,
+          "title": "Our homes",
+          "titleVi": "Nhà của chúng mình",
+          "theme": "Hometown & Addresses",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "What is your address? - It's..."
+        },
+        {
+          "unit": 3,
+          "title": "My foreign friends",
+          "titleVi": "Những người bạn ngoại quốc",
+          "theme": "Countries & Languages",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "What nationality is she? - She's..."
+        },
+        {
+          "unit": 4,
+          "title": "Our free-time activities",
+          "titleVi": "Hoạt động thời gian rảnh",
+          "theme": "Hobbies & Frequency",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "How often do you go swimming? - Once a week."
+        },
+        {
+          "unit": 5,
+          "title": "My future job",
+          "titleVi": "Nghề nghiệp tương lai",
+          "theme": "Dream Jobs & Ambitions",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "What would you like to be in the future?"
+        },
+        {
+          "unit": 6,
+          "title": "Our school rooms",
+          "titleVi": "Các phòng chức năng ở trường",
+          "theme": "School Facilities",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "Where is the computer room? - It's on..."
+        },
+        {
+          "unit": 7,
+          "title": "Our favourite school activities",
+          "titleVi": "Hoạt động trường học yêu thích",
+          "theme": "School Events",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "Which school activity do you like best?"
+        },
+        {
+          "unit": 8,
+          "title": "In our classroom",
+          "titleVi": "Trong lớp học của chúng mình",
+          "theme": "Classroom Rules & Tools",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "We should / shouldn't talk in class."
+        },
+        {
+          "unit": 9,
+          "title": "Our outdoor activities",
+          "titleVi": "Hoạt động ngoài trời",
+          "theme": "Outdoor Games",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "What did you do yesterday? - We played..."
+        },
+        {
+          "unit": 10,
+          "title": "Our school trip",
+          "titleVi": "Chuyến tham quan của trường",
+          "theme": "School Trips & Past Experiences",
+          "semester": 1,
+          "bookId": "sgk-5-tap1",
+          "grammar": "How did you get there? - By coach."
+        },
+        {
+          "unit": 11,
+          "title": "Family time",
+          "titleVi": "Thời gian bên gia đình",
+          "theme": "Family Moments",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "What does your family do together?"
+        },
+        {
+          "unit": 12,
+          "title": "Our Tet holiday",
+          "titleVi": "Tết nguyên đán của chúng ta",
+          "theme": "Traditional Holidays",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "What do you do at Tet? - We make banh chung."
+        },
+        {
+          "unit": 13,
+          "title": "Our special days",
+          "titleVi": "Những ngày lễ đặc biệt",
+          "theme": "Special Celebrations",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "When is Teachers' Day? - It's on November 20th."
+        },
+        {
+          "unit": 14,
+          "title": "Staying healthy",
+          "titleVi": "Giữ gìn sức khỏe",
+          "theme": "Healthy Habits & Food",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "You should eat more vegetables."
+        },
+        {
+          "unit": 15,
+          "title": "Our health",
+          "titleVi": "Sức khỏe của chúng ta",
+          "theme": "Health Problems & Advice",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "What's the matter with you? - I have a toothache."
+        },
+        {
+          "unit": 16,
+          "title": "Seasons and the weather",
+          "titleVi": "Các mùa và thời tiết",
+          "theme": "Seasons Around the Country",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "What is summer like in your hometown?"
+        },
+        {
+          "unit": 17,
+          "title": "Stories for children",
+          "titleVi": "Truyện kể cho thiếu nhi",
+          "theme": "Fairy Tales & Characters",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "What happened first? What happened then?"
+        },
+        {
+          "unit": 18,
+          "title": "Means of transport",
+          "titleVi": "Phương tiện giao thông",
+          "theme": "Transport & Safety",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "How do you go to school? - On foot."
+        },
+        {
+          "unit": 19,
+          "title": "Places of interest",
+          "titleVi": "Các danh lam thắng cảnh",
+          "theme": "Sightseeing Spots",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "Which place would you like to visit?"
+        },
+        {
+          "unit": 20,
+          "title": "Our summer holidays",
+          "titleVi": "Kỳ nghỉ hè của chúng mình",
+          "theme": "Holiday Plans",
+          "semester": 2,
+          "bookId": "sgk-5-tap2",
+          "grammar": "Where are you going this summer? - I'm going to..."
+        }
+      ]
+    },
+    {
+      "grade": 6,
+      "gradeName": "Lớp 6",
+      "level": "secondary",
+      "levelName": "THCS",
+      "title": "SGK Tiếng Anh 6 – Global Success",
+      "totalUnits": 12,
+      "interactiveAvailable": true,
+      "interactiveNote": "ĐÃ TRIỂN KHAI ĐẦY ĐỦ 100%: 7 trạm kỹ năng, thẻ 3D, từ vựng chuẩn SGK và ma trận chấm điểm trực tiếp.",
+      "bookIds": [
+        "tap1",
+        "tap2"
+      ],
+      "textbooks": [
+        {
+          "bookId": "tap1",
+          "title": "SGK Tiếng Anh 6 – Tập 1 (Global Success)",
+          "semester": "Học kỳ I",
+          "src": "/pdf/sgk-tieng-anh-6-tap-1.pdf",
+          "downloadName": "SGK-Tieng-Anh-6-Tap-1-Global-Success.pdf",
+          "fileSize": "16.0 MB",
+          "pages": 73
+        },
+        {
+          "bookId": "tap2",
+          "title": "SGK Tiếng Anh 6 – Tập 2 (Global Success)",
+          "semester": "Học kỳ II",
+          "src": "/pdf/sgk-tieng-anh-6-tap-2.pdf",
+          "downloadName": "SGK-Tieng-Anh-6-Tap-2-Global-Success.pdf",
+          "fileSize": "15.8 MB",
+          "pages": 73
+        }
+      ],
+      "description": "Chương trình trọng tâm của ứng dụng: Đầy đủ 12 bài học tương tác với phòng học 3D, ngân hàng đề thi và trợ lý giọng nói AI.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "My New School",
+          "titleVi": "Trường học mới của tôi",
+          "theme": "School Life",
+          "semester": 1,
+          "bookId": "tap1",
+          "grammar": "Present simple, Adverbs of frequency",
+          "phonics": "/ɑː/ và /ʌ/",
+          "interactive": true
+        },
+        {
+          "unit": 2,
+          "title": "My House",
+          "titleVi": "Ngôi nhà của tôi",
+          "theme": "Home & Furniture",
+          "semester": 1,
+          "bookId": "tap1",
+          "grammar": "Possessive case, Prepositions of place",
+          "phonics": "/s/ và /z/",
+          "interactive": true
+        },
+        {
+          "unit": 3,
+          "title": "My Friends",
+          "titleVi": "Bạn bè của tôi",
+          "theme": "Friends & Personalities",
+          "semester": 1,
+          "bookId": "tap1",
+          "grammar": "Present continuous for now and plans",
+          "phonics": "/b/ và /p/",
+          "interactive": true
+        },
+        {
+          "unit": 4,
+          "title": "My Neighbourhood",
+          "titleVi": "Khu phố của tôi",
+          "theme": "Neighbourhood & Directions",
+          "semester": 1,
+          "bookId": "tap1",
+          "grammar": "Comparative adjectives",
+          "phonics": "/iː/ và /ɪ/",
+          "interactive": true
+        },
+        {
+          "unit": 5,
+          "title": "Natural Wonders of Viet Nam",
+          "titleVi": "Kỳ quan thiên nhiên Việt Nam",
+          "theme": "Nature & Travel",
+          "semester": 1,
+          "bookId": "tap1",
+          "grammar": "Countable/uncountable nouns, modal must/mustn't",
+          "phonics": "/t/ và /d/",
+          "interactive": true
+        },
+        {
+          "unit": 6,
+          "title": "Our Tet Holiday",
+          "titleVi": "Tết của chúng tôi",
+          "theme": "Festivals & Traditions",
+          "semester": 1,
+          "bookId": "tap1",
+          "grammar": "Should/shouldn't, some/any",
+          "phonics": "/s/ và /ʃ/",
+          "interactive": true
+        },
+        {
+          "unit": 7,
+          "title": "Television",
+          "titleVi": "Truyền hình",
+          "theme": "Media & Entertainment",
+          "semester": 2,
+          "bookId": "tap2",
+          "grammar": "Wh-questions, conjunctions (and, but, so)",
+          "phonics": "/θ/ và /ð/",
+          "interactive": true
+        },
+        {
+          "unit": 8,
+          "title": "Sports and Games",
+          "titleVi": "Thể thao và trò chơi",
+          "theme": "Sports & Hobbies",
+          "semester": 2,
+          "bookId": "tap2",
+          "grammar": "Past simple tense, imperatives",
+          "phonics": "/e/ và /æ/",
+          "interactive": true
+        },
+        {
+          "unit": 9,
+          "title": "Cities of the World",
+          "titleVi": "Các thành phố trên thế giới",
+          "theme": "World Cities & Landmarks",
+          "semester": 2,
+          "bookId": "tap2",
+          "grammar": "Possessive pronouns, superlative adjectives",
+          "phonics": "/əʊ/ và /aʊ/",
+          "interactive": true
+        },
+        {
+          "unit": 10,
+          "title": "Our Houses in the Future",
+          "titleVi": "Những ngôi nhà trong tương lai",
+          "theme": "Future Living & Tech",
+          "semester": 2,
+          "bookId": "tap2",
+          "grammar": "Future simple (will/won't), might for possibility",
+          "phonics": "/dr/ và /tr/",
+          "interactive": true
+        },
+        {
+          "unit": 11,
+          "title": "Our Greener World",
+          "titleVi": "Thế giới xanh hơn của chúng ta",
+          "theme": "Environment & 3Rs",
+          "semester": 2,
+          "bookId": "tap2",
+          "grammar": "First conditional sentences",
+          "phonics": "/ɑː/ và /æ/",
+          "interactive": true
+        },
+        {
+          "unit": 12,
+          "title": "Robots",
+          "titleVi": "Người máy",
+          "theme": "Robotics & AI",
+          "semester": 2,
+          "bookId": "tap2",
+          "grammar": "Superlative forms of short and long adjectives",
+          "phonics": "/ɔɪ/ và /aʊ/",
+          "interactive": true
+        }
+      ]
+    },
+    {
+      "grade": 7,
+      "gradeName": "Lớp 7",
+      "level": "secondary",
+      "levelName": "THCS",
+      "title": "SGK Tiếng Anh 7 – Global Success",
+      "totalUnits": 12,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ cả năm. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-7"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-7",
+          "title": "SGK Tiếng Anh 7 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-7.pdf",
+          "downloadName": "SGK-Tieng-Anh-7-Global-Success.pdf",
+          "fileSize": "76.1 MB",
+          "pages": 143
+        }
+      ],
+      "description": "Nâng cao kỹ năng giao tiếp tình huống, so sánh ngữ pháp và khám phá các chủ đề văn hóa, du lịch, nguồn năng lượng tương lai.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "Hobbies",
+          "titleVi": "Sở thích",
+          "theme": "Interests & Leisure",
+          "semester": 1,
+          "bookId": "sgk-7",
+          "grammar": "Verbs of liking + V-ing",
+          "phonics": "/ə/ và /ɜː/"
+        },
+        {
+          "unit": 2,
+          "title": "Healthy Living",
+          "titleVi": "Sống lành mạnh",
+          "theme": "Health & Lifestyle",
+          "semester": 1,
+          "bookId": "sgk-7",
+          "grammar": "Simple sentences, more/less imperatives",
+          "phonics": "/f/ và /v/"
+        },
+        {
+          "unit": 3,
+          "title": "Community Service",
+          "titleVi": "Phục vụ cộng đồng",
+          "theme": "Volunteering & Community",
+          "semester": 1,
+          "bookId": "sgk-7",
+          "grammar": "Past simple vs Present perfect",
+          "phonics": "/t/, /d/, /ɪd/"
+        },
+        {
+          "unit": 4,
+          "title": "Music and Arts",
+          "titleVi": "Âm nhạc và nghệ thuật",
+          "theme": "Performing Arts",
+          "semester": 1,
+          "bookId": "sgk-7",
+          "grammar": "Comparisons: (not) as... as, the same as, different from",
+          "phonics": "/ʃ/ và /ʒ/"
+        },
+        {
+          "unit": 5,
+          "title": "Food and Drink",
+          "titleVi": "Ẩm thực và đồ uống",
+          "theme": "Vietnamese & Global Cuisine",
+          "semester": 1,
+          "bookId": "sgk-7",
+          "grammar": "Nouns of quantity, some, any, a lot of",
+          "phonics": "/ɒ/ và /ɔː/"
+        },
+        {
+          "unit": 6,
+          "title": "A Visit to a School",
+          "titleVi": "Thăm một ngôi trường",
+          "theme": "Historic Schools & Education",
+          "semester": 1,
+          "bookId": "sgk-7",
+          "grammar": "Prepositions of time and place",
+          "phonics": "/tʃ/ và /dʒ/"
+        },
+        {
+          "unit": 7,
+          "title": "Traffic",
+          "titleVi": "Giao thông",
+          "theme": "Road Safety & Means of Transport",
+          "semester": 2,
+          "bookId": "sgk-7",
+          "grammar": "It indicating distance, used to",
+          "phonics": "/e/ và /eɪ/"
+        },
+        {
+          "unit": 8,
+          "title": "Films",
+          "titleVi": "Phim ảnh",
+          "theme": "Cinema & Genres",
+          "semester": 2,
+          "bookId": "sgk-7",
+          "grammar": "Connectors: although/though, however",
+          "phonics": "/ɪə/ và /eə/"
+        },
+        {
+          "unit": 9,
+          "title": "Festivals Around the World",
+          "titleVi": "Lễ hội quanh thế giới",
+          "theme": "World Cultures & Festivals",
+          "semester": 2,
+          "bookId": "sgk-7",
+          "grammar": "Yes/No questions, adverbial clauses",
+          "phonics": "Stress in two-syllable words"
+        },
+        {
+          "unit": 10,
+          "title": "Energy Sources",
+          "titleVi": "Các nguồn năng lượng",
+          "theme": "Renewable & Green Energy",
+          "semester": 2,
+          "bookId": "sgk-7",
+          "grammar": "Present continuous for future actions",
+          "phonics": "/aɪ/ và /aʊ/"
+        },
+        {
+          "unit": 11,
+          "title": "Travelling in the Future",
+          "titleVi": "Du lịch trong tương lai",
+          "theme": "Future Transport & Modes",
+          "semester": 2,
+          "bookId": "sgk-7",
+          "grammar": "Future simple with will, possessive pronouns",
+          "phonics": "Sentence stress"
+        },
+        {
+          "unit": 12,
+          "title": "English-Speaking Countries",
+          "titleVi": "Các quốc gia nói tiếng Anh",
+          "theme": "Global English & Cultures",
+          "semester": 2,
+          "bookId": "sgk-7",
+          "grammar": "Articles: a/an/the and zero article",
+          "phonics": "Intonation in questions"
+        }
+      ]
+    },
+    {
+      "grade": 8,
+      "gradeName": "Lớp 8",
+      "level": "secondary",
+      "levelName": "THCS",
+      "title": "SGK Tiếng Anh 8 – Global Success",
+      "totalUnits": 12,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ cả năm. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-8"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-8",
+          "title": "SGK Tiếng Anh 8 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-8.pdf",
+          "downloadName": "SGK-Tieng-Anh-8-Global-Success.pdf",
+          "fileSize": "35.1 MB",
+          "pages": 141
+        }
+      ],
+      "description": "Phát triển tư duy phân tích, đa dạng văn hóa các dân tộc Việt Nam, bảo vệ môi trường và thành tựu khoa học công nghệ.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "Leisure Time",
+          "titleVi": "Thời gian rảnh rỗi",
+          "theme": "Teen Hobbies & Activities",
+          "semester": 1,
+          "bookId": "sgk-8",
+          "grammar": "Verbs of liking/disliking + V-ing/to-infinitive",
+          "phonics": "/ʊ/ và /uː/"
+        },
+        {
+          "unit": 2,
+          "title": "Life in the Countryside",
+          "titleVi": "Cuộc sống ở làng quê",
+          "theme": "Rural Life & Changes",
+          "semester": 1,
+          "bookId": "sgk-8",
+          "grammar": "Comparative adverbs",
+          "phonics": "/ə/ và /ɪ/"
+        },
+        {
+          "unit": 3,
+          "title": "Teenagers",
+          "titleVi": "Tuổi thiếu niên",
+          "theme": "Teen Issues & Social Media",
+          "semester": 1,
+          "bookId": "sgk-8",
+          "grammar": "Simple and compound sentences",
+          "phonics": "/ʊə/ và /ɔɪ/"
+        },
+        {
+          "unit": 4,
+          "title": "Ethnic Groups of Viet Nam",
+          "titleVi": "Các dân tộc Việt Nam",
+          "theme": "Culture & Heritage",
+          "semester": 1,
+          "bookId": "sgk-8",
+          "grammar": "Yes/No and Wh-questions, countable/uncountable nouns",
+          "phonics": "/k/ và /g/"
+        },
+        {
+          "unit": 5,
+          "title": "Our Customs and Traditions",
+          "titleVi": "Phong tục và truyền thống",
+          "theme": "Customs & Traditions",
+          "semester": 1,
+          "bookId": "sgk-8",
+          "grammar": "Zero article, modal verbs should/have to",
+          "phonics": "/n/ và /ŋ/"
+        },
+        {
+          "unit": 6,
+          "title": "Lifestyles",
+          "titleVi": "Lối sống",
+          "theme": "Modern vs Traditional Lifestyles",
+          "semester": 1,
+          "bookId": "sgk-8",
+          "grammar": "First conditional with modals",
+          "phonics": "/br/ và /pr/"
+        },
+        {
+          "unit": 7,
+          "title": "Environmental Protection",
+          "titleVi": "Bảo vệ môi trường",
+          "theme": "Ecology & Wildlife",
+          "semester": 2,
+          "bookId": "sgk-8",
+          "grammar": "Complex sentences with adverb clauses of time",
+          "phonics": "/bl/ và /cl/"
+        },
+        {
+          "unit": 8,
+          "title": "Shopping",
+          "titleVi": "Mua sắm",
+          "theme": "Consumer Culture & Online Shopping",
+          "semester": 2,
+          "bookId": "sgk-8",
+          "grammar": "Present simple for scheduled future events",
+          "phonics": "/sp/ và /st/"
+        },
+        {
+          "unit": 9,
+          "title": "Natural Disasters",
+          "titleVi": "Thảm họa thiên nhiên",
+          "theme": "Disasters & Emergency Prep",
+          "semester": 2,
+          "bookId": "sgk-8",
+          "grammar": "Past continuous tense",
+          "phonics": "/eə/ và /ɪə/"
+        },
+        {
+          "unit": 10,
+          "title": "Communication in the Future",
+          "titleVi": "Giao tiếp trong tương lai",
+          "theme": "Future Tech & Social Platforms",
+          "semester": 2,
+          "bookId": "sgk-8",
+          "grammar": "Prepositions of time and place, possessive pronouns",
+          "phonics": "Word stress in words ending in -ity and -itive"
+        },
+        {
+          "unit": 11,
+          "title": "Science and Technology",
+          "titleVi": "Khoa học và công nghệ",
+          "theme": "Inventions & Scientific Advances",
+          "semester": 2,
+          "bookId": "sgk-8",
+          "grammar": "Reported speech (statements)",
+          "phonics": "Sentence stress in statements"
+        },
+        {
+          "unit": 12,
+          "title": "Life on Other Planets",
+          "titleVi": "Sự sống trên các hành tinh khác",
+          "theme": "Space Exploration & Aliens",
+          "semester": 2,
+          "bookId": "sgk-8",
+          "grammar": "Reported speech (questions)",
+          "phonics": "Intonation in questions"
+        }
+      ]
+    },
+    {
+      "grade": 10,
+      "gradeName": "Lớp 10",
+      "level": "high",
+      "levelName": "THPT",
+      "title": "SGK Tiếng Anh 10 – Global Success",
+      "totalUnits": 10,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ cả năm. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-10"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-10",
+          "title": "SGK Tiếng Anh 10 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-10.pdf",
+          "downloadName": "SGK-Tieng-Anh-10-Global-Success.pdf",
+          "fileSize": "24.7 MB",
+          "pages": 134
+        }
+      ],
+      "description": "Bước khởi đầu THPT theo chương trình GDPT 2018: Tiếp cận các chủ đề bình đẳng giới, môi trường và tổ chức quốc tế.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "Family Life",
+          "titleVi": "Đời sống gia đình",
+          "theme": "Family Roles & Relationships",
+          "semester": 1,
+          "bookId": "sgk-10",
+          "grammar": "Present simple vs Present continuous",
+          "phonics": "/br/, /kr/, /tr/"
+        },
+        {
+          "unit": 2,
+          "title": "Humans and the Environment",
+          "titleVi": "Con người và môi trường",
+          "theme": "Eco-friendly Living",
+          "semester": 1,
+          "bookId": "sgk-10",
+          "grammar": "Will vs Be going to, Passive voice",
+          "phonics": "/pl/, /kl/, /pr/, /gl/"
+        },
+        {
+          "unit": 3,
+          "title": "Music",
+          "titleVi": "Âm nhạc",
+          "theme": "Music Styles & Competitions",
+          "semester": 1,
+          "bookId": "sgk-10",
+          "grammar": "Compound sentences, to-infinitives and bare infinitives",
+          "phonics": "Stress in two-syllable words"
+        },
+        {
+          "unit": 4,
+          "title": "For a Better Community",
+          "titleVi": "Vì một cộng đồng tốt đẹp hơn",
+          "theme": "Volunteering & Community",
+          "semester": 1,
+          "bookId": "sgk-10",
+          "grammar": "Past simple vs Past continuous with when/while",
+          "phonics": "Adjectives ending in -ed and -ing"
+        },
+        {
+          "unit": 5,
+          "title": "Inventions",
+          "titleVi": "Các phát minh",
+          "theme": "Technological Innovations",
+          "semester": 1,
+          "bookId": "sgk-10",
+          "grammar": "Present perfect, gerunds and infinitives",
+          "phonics": "Stress in three-syllable nouns"
+        },
+        {
+          "unit": 6,
+          "title": "Gender Equality",
+          "titleVi": "Bình đẳng giới",
+          "theme": "Equal Rights & Careers",
+          "semester": 2,
+          "bookId": "sgk-10",
+          "grammar": "Passive voice with modal verbs",
+          "phonics": "Stress in words with more than three syllables"
+        },
+        {
+          "unit": 7,
+          "title": "Viet Nam and International Organisations",
+          "titleVi": "Việt Nam và các tổ chức quốc tế",
+          "theme": "UN, UNICEF, WTO Partnerships",
+          "semester": 2,
+          "bookId": "sgk-10",
+          "grammar": "Comparative and superlative adjectives",
+          "phonics": "Stress in words ending in -ion and -ic"
+        },
+        {
+          "unit": 8,
+          "title": "New Ways to Learn",
+          "titleVi": "Những cách học mới",
+          "theme": "Digital Learning & Online Tools",
+          "semester": 2,
+          "bookId": "sgk-10",
+          "grammar": "Relative clauses (defining and non-defining)",
+          "phonics": "Sentence stress"
+        },
+        {
+          "unit": 9,
+          "title": "Protecting the Environment",
+          "titleVi": "Bảo vệ môi trường",
+          "theme": "Conservation & Habitat Loss",
+          "semester": 2,
+          "bookId": "sgk-10",
+          "grammar": "Reported speech (statements and questions)",
+          "phonics": "Rhythm in sentences"
+        },
+        {
+          "unit": 10,
+          "title": "Ecotourism",
+          "titleVi": "Du lịch sinh thái",
+          "theme": "Sustainable Travel",
+          "semester": 2,
+          "bookId": "sgk-10",
+          "grammar": "Conditional sentences Type 1 and Type 2",
+          "phonics": "Intonation in requests and invitations"
+        }
+      ]
+    },
+    {
+      "grade": 11,
+      "gradeName": "Lớp 11",
+      "level": "high",
+      "levelName": "THPT",
+      "title": "SGK Tiếng Anh 11 – Global Success",
+      "totalUnits": 10,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ cả năm. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-11"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-11",
+          "title": "SGK Tiếng Anh 11 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-11.pdf",
+          "downloadName": "SGK-Tieng-Anh-11-Global-Success.pdf",
+          "fileSize": "27.5 MB",
+          "pages": 135
+        }
+      ],
+      "description": "Nâng tầm tư duy độc lập, chuyên đề di sản văn hóa, định hướng giáo dục nghề nghiệp và sinh thái toàn cầu.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "A Long and Healthy Life",
+          "titleVi": "Cuộc sống lâu dài và khỏe mạnh",
+          "theme": "Longevity & Health Science",
+          "semester": 1,
+          "bookId": "sgk-11",
+          "grammar": "Past simple vs Present perfect",
+          "phonics": "Strong and weak forms of auxiliary verbs"
+        },
+        {
+          "unit": 2,
+          "title": "The Generation Gap",
+          "titleVi": "Khoảng cách thế hệ",
+          "theme": "Family Conflicts & Understanding",
+          "semester": 1,
+          "bookId": "sgk-11",
+          "grammar": "Modal verbs (must, have to, should), Linking verbs",
+          "phonics": "Contracted forms"
+        },
+        {
+          "unit": 3,
+          "title": "Cities of the Future",
+          "titleVi": "Các thành phố tương lai",
+          "theme": "Smart Cities & Urban Tech",
+          "semester": 1,
+          "bookId": "sgk-11",
+          "grammar": "Stative verbs in continuous forms",
+          "phonics": "Linking consonants to vowels"
+        },
+        {
+          "unit": 4,
+          "title": "ASEAN and Viet Nam",
+          "titleVi": "ASEAN và Việt Nam",
+          "theme": "Regional Community & Integration",
+          "semester": 1,
+          "bookId": "sgk-11",
+          "grammar": "Gerunds as subjects and objects",
+          "phonics": "Elision of vowels"
+        },
+        {
+          "unit": 5,
+          "title": "Global Warming",
+          "titleVi": "Sự nóng lên toàn cầu",
+          "theme": "Climate Change & Emissions",
+          "semester": 1,
+          "bookId": "sgk-11",
+          "grammar": "Present participle and past participle clauses",
+          "phonics": "Sentence stress and intonation"
+        },
+        {
+          "unit": 6,
+          "title": "Preserving Our Heritage",
+          "titleVi": "Bảo tồn di sản của chúng ta",
+          "theme": "Cultural & Natural Monuments",
+          "semester": 2,
+          "bookId": "sgk-11",
+          "grammar": "To-infinitive clauses",
+          "phonics": "Intonation in choice questions"
+        },
+        {
+          "unit": 7,
+          "title": "Education Options for School-Leavers",
+          "titleVi": "Lựa chọn học tập sau phổ thông",
+          "theme": "Higher Ed & Vocational Training",
+          "semester": 2,
+          "bookId": "sgk-11",
+          "grammar": "Perfect gerunds and perfect participles",
+          "phonics": "Intonation in wh-questions"
+        },
+        {
+          "unit": 8,
+          "title": "Becoming Independent",
+          "titleVi": "Trở nên độc lập",
+          "theme": "Self-reliance & Life Skills",
+          "semester": 2,
+          "bookId": "sgk-11",
+          "grammar": "Cleft sentences with 'It is/was... that'",
+          "phonics": "Sentence rhythm"
+        },
+        {
+          "unit": 9,
+          "title": "Social Issues",
+          "titleVi": "Các vấn đề xã hội",
+          "theme": "Peer Pressure & Bullying",
+          "semester": 2,
+          "bookId": "sgk-11",
+          "grammar": "Linking words and phrases",
+          "phonics": "Intonation in question tags"
+        },
+        {
+          "unit": 10,
+          "title": "The Ecosystem",
+          "titleVi": "Hệ sinh thái",
+          "theme": "Biodiversity & Preservation",
+          "semester": 2,
+          "bookId": "sgk-11",
+          "grammar": "Compound nouns, relative clauses with prepositions",
+          "phonics": "Intonation in echo questions"
+        }
+      ]
+    },
+    {
+      "grade": 12,
+      "gradeName": "Lớp 12",
+      "level": "high",
+      "levelName": "THPT",
+      "title": "SGK Tiếng Anh 12 – Global Success",
+      "totalUnits": 10,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ cả năm. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-12"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-12",
+          "title": "SGK Tiếng Anh 12 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-12.pdf",
+          "downloadName": "SGK-Tieng-Anh-12-Global-Success.pdf",
+          "fileSize": "32.1 MB",
+          "pages": 159
+        }
+      ],
+      "description": "Chuẩn bị toàn diện cho kỳ thi Tốt nghiệp THPT, đại học và công dân toàn cầu với các chủ đề trí tuệ nhân tạo, truyền thông và định hướng sự nghiệp.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "Life Stories We Admire",
+          "titleVi": "Những câu chuyện cuộc đời chúng ta ngưỡng mộ",
+          "theme": "Inspirational Figures",
+          "semester": 1,
+          "bookId": "sgk-12",
+          "grammar": "Past simple vs Past continuous, used to/would",
+          "phonics": "Weak and strong forms of prepositions"
+        },
+        {
+          "unit": 2,
+          "title": "A Multicultural World",
+          "titleVi": "Thế giới đa văn hóa",
+          "theme": "Cultural Diversity & Customs",
+          "semester": 1,
+          "bookId": "sgk-12",
+          "grammar": "Articles: a/an, the, zero article",
+          "phonics": "Stress in words ending in -ic, -ical, -tion"
+        },
+        {
+          "unit": 3,
+          "title": "Green Living",
+          "titleVi": "Sống xanh",
+          "theme": "Sustainable Practices & Carbon Footprint",
+          "semester": 1,
+          "bookId": "sgk-12",
+          "grammar": "Adverbial clauses of condition, concession, result",
+          "phonics": "Linking /r/ and intrusive /w/, /j/"
+        },
+        {
+          "unit": 4,
+          "title": "Urbanisation",
+          "titleVi": "Đô thị hóa",
+          "theme": "Megacities & Urban Shift",
+          "semester": 1,
+          "bookId": "sgk-12",
+          "grammar": "Subjunctive mood in that-clauses, compound adjectives",
+          "phonics": "Consonant clusters in word final position"
+        },
+        {
+          "unit": 5,
+          "title": "The World of Work",
+          "titleVi": "Thế giới công việc",
+          "theme": "Future Careers & Work Ethics",
+          "semester": 1,
+          "bookId": "sgk-12",
+          "grammar": "Inversion with negative adverbials",
+          "phonics": "Sentence stress with contrastive emphasis"
+        },
+        {
+          "unit": 6,
+          "title": "Artificial Intelligence",
+          "titleVi": "Trí tuệ nhân tạo",
+          "theme": "AI, Automation & Ethics",
+          "semester": 2,
+          "bookId": "sgk-12",
+          "grammar": "Passive voice in complex sentences",
+          "phonics": "Intonation in complex sentences"
+        },
+        {
+          "unit": 7,
+          "title": "The World of Mass Media",
+          "titleVi": "Thế giới truyền thông đại chúng",
+          "theme": "Journalism & Social Platforms",
+          "semester": 2,
+          "bookId": "sgk-12",
+          "grammar": "Prepositions following verbs and adjectives",
+          "phonics": "Elision and assimilation in connected speech"
+        },
+        {
+          "unit": 8,
+          "title": "Wildlife Conservation",
+          "titleVi": "Bảo tồn động vật hoang dã",
+          "theme": "Endangered Species & Sanctuaries",
+          "semester": 2,
+          "bookId": "sgk-12",
+          "grammar": "Modals in the past (must have, should have)",
+          "phonics": "Rhythm in poetry and expressive reading"
+        },
+        {
+          "unit": 9,
+          "title": "Career Paths",
+          "titleVi": "Con đường nghề nghiệp",
+          "theme": "Professional Development",
+          "semester": 2,
+          "bookId": "sgk-12",
+          "grammar": "Phrasal verbs with multiple particles",
+          "phonics": "Tone and pitch range in formal interviews"
+        },
+        {
+          "unit": 10,
+          "title": "Lifelong Learning",
+          "titleVi": "Học tập suốt đời",
+          "theme": "Continuous Growth & Future Skills",
+          "semester": 2,
+          "bookId": "sgk-12",
+          "grammar": "Ellipsis and substitution",
+          "phonics": "High-level discourse intonation"
+        }
+      ]
+    }
+  ]
+}
