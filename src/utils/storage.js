@@ -35,7 +35,7 @@ export const DEFAULT_STUDENTS = [
   { id: 'stu_10', username: 'tu6a1', name: 'Trịnh Cẩm Tú', class: '6A1', password: '123', avatar: '🎒' },
 ];
 
-export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true };
+export const DEFAULT_SETTINGS = { lang: 'en-GB', rate: 0.85, sound: true, selectedGrade: 6 };
 
 // Ghi chú: KHÔNG còn tài khoản giáo viên mặc định trên máy. Đăng nhập giáo viên do máy chủ kiểm tra (src/utils/api.js).
 

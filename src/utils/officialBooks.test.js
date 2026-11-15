@@ -14,10 +14,10 @@ import {
   pdfPageForUnit,
 } from '../components/PdfReaderModal.jsx';
 
-describe('Official Textbook Assets & Metadata (14 Books)', () => {
-  it('contains exactly 14 official textbooks', () => {
-    expect(OFFICIAL_BOOKS).toHaveLength(14);
-    expect(RE_EXPORTED_BOOKS).toHaveLength(14);
+describe('Official Textbook Assets & Metadata (15 Books)', () => {
+  it('contains exactly 15 official textbooks', () => {
+    expect(OFFICIAL_BOOKS).toHaveLength(15);
+    expect(RE_EXPORTED_BOOKS).toHaveLength(15);
   });
 
   it('validates each textbook has all required schema properties', () => {
@@ -57,13 +57,13 @@ describe('Official Textbook Assets & Metadata (14 Books)', () => {
     });
   });
 
-  it('correctly categorizes books by school level (7 Primary, 4 Secondary, 3 High)', () => {
+  it('correctly categorizes books by school level (7 Primary, 5 Secondary, 3 High)', () => {
     const primary = getBooksBySchoolLevel('primary');
     const secondary = getBooksBySchoolLevel('secondary');
     const high = getBooksBySchoolLevel('high');
 
     expect(primary).toHaveLength(7); // Grades 1, 2, 3(T2), 4(T1), 4(T2), 5(T1), 5(T2)
-    expect(secondary).toHaveLength(4); // Grades 6(T1), 6(T2), 7, 8
+    expect(secondary).toHaveLength(5); // Grades 6(T1), 6(T2), 7, 8, 9
     expect(high).toHaveLength(3); // Grades 10, 11, 12
   });
 
@@ -97,6 +97,7 @@ describe('Official Textbook Assets & Metadata (14 Books)', () => {
     // Secondary & High
     expect(findOfficialBook('sgk-7').grade).toBe(7);
     expect(findOfficialBook('sgk-8').grade).toBe(8);
+    expect(findOfficialBook('sgk-9').grade).toBe(9);
     expect(findOfficialBook('sgk-10').grade).toBe(10);
     expect(findOfficialBook('sgk-11').grade).toBe(11);
     expect(findOfficialBook('sgk-12').grade).toBe(12);

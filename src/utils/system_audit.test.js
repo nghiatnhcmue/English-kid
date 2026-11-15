@@ -2,8 +2,8 @@
  * System Audit & Verification Suite (10-Point Checklist)
  *
  * 1. Grade 6 Units (12 units) standard structure & content completeness.
- * 2. Official Textbooks (14 books) metadata, schema, and PDF file existence.
- * 3. Multi-grade curriculum (158 units across 11 grades).
+ * 2. Official Textbooks (15 books) metadata, schema, and PDF file existence.
+ * 3. Multi-grade curriculum (170 units across 12 grades).
  * 4. Speech recognition controller (STT) lifecycle, interim results, and methods.
  * 5. Speech fallback scoring and word matching engine.
  * 6. Dialogue turn structure and multi-turn conversations.
@@ -133,19 +133,19 @@ describe('System Audit Checklist (10-Point Verification)', () => {
   });
 
   // =========================================================================
-  // CHECKPOINT 2: Official Textbooks (14 Books Metadata & Assets)
+  // CHECKPOINT 2: Official Textbooks (15 Books Metadata & Assets)
   // =========================================================================
-  describe('Checkpoint 2: Official Textbooks (14 Books) Metadata and Files', () => {
-    it('contains exactly 14 official textbooks covering Primary, Secondary, and High School', () => {
-      expect(OFFICIAL_BOOKS).toHaveLength(14);
+  describe('Checkpoint 2: Official Textbooks (15 Books) Metadata and Files', () => {
+    it('contains exactly 15 official textbooks covering Primary, Secondary, and High School', () => {
+      expect(OFFICIAL_BOOKS).toHaveLength(15);
       const primary = getBooksBySchoolLevel('primary');
       const secondary = getBooksBySchoolLevel('secondary');
       const high = getBooksBySchoolLevel('high');
 
       expect(primary).toHaveLength(7);
-      expect(secondary).toHaveLength(4);
+      expect(secondary).toHaveLength(5);
       expect(high).toHaveLength(3);
-      expect(primary.length + secondary.length + high.length).toBe(14);
+      expect(primary.length + secondary.length + high.length).toBe(15);
     });
 
     it('each textbook contains valid metadata schema and download info', () => {
@@ -183,21 +183,22 @@ describe('System Audit Checklist (10-Point Verification)', () => {
   });
 
   // =========================================================================
-  // CHECKPOINT 3: Multi-Grade Curriculum (158 Units)
+  // CHECKPOINT 3: Multi-Grade Curriculum (170 Units)
   // =========================================================================
-  describe('Checkpoint 3: Multi-Grade Curriculum 158 Units Catalog', () => {
-    it('contains metadata and exactly 11 grades from Grade 1 to Grade 12', () => {
+  describe('Checkpoint 3: Multi-Grade Curriculum 170 Units Catalog', () => {
+    it('contains metadata and exactly 12 grades from Grade 1 to Grade 12', () => {
       expect(multiGradeCurriculum.metadata).toBeDefined();
-      expect(multiGradeCurriculum.grades).toHaveLength(11);
+      expect(multiGradeCurriculum.metadata.totalGrades).toBe(12);
+      expect(multiGradeCurriculum.grades).toHaveLength(12);
       const gradeNumbers = multiGradeCurriculum.grades.map((g) => g.grade);
-      expect(gradeNumbers).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12]);
+      expect(gradeNumbers).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
     });
 
-    it('totals exactly 158 units across all grades with standard distributions', () => {
+    it('totals exactly 170 units across all grades with standard distributions', () => {
       let totalUnits = 0;
       const expectedCounts = {
         1: 16, 2: 16, 3: 20, 4: 20, 5: 20, // Tiểu học: 92
-        6: 12, 7: 12, 8: 12,               // THCS: 36
+        6: 12, 7: 12, 8: 12, 9: 12,        // THCS: 48
         10: 10, 11: 10, 12: 10,            // THPT: 30
       };
 
@@ -206,7 +207,7 @@ describe('System Audit Checklist (10-Point Verification)', () => {
         totalUnits += g.units.length;
       });
 
-      expect(totalUnits).toBe(158);
+      expect(totalUnits).toBe(170);
     });
 
     it('references valid book IDs from OFFICIAL_BOOKS and correctly flags interactive availability', () => {

@@ -945,6 +945,7 @@ export default function TeacherPage() {
                     <option value={6}>Lớp 6 (12 Units - Tương tác 3D)</option>
                     <option value={7}>Lớp 7 (12 Units)</option>
                     <option value={8}>Lớp 8 (12 Units)</option>
+                    <option value={9}>Lớp 9 (12 Units)</option>
                   </optgroup>
                   <optgroup label="THPT">
                     <option value={10}>Lớp 10 (10 Units)</option>
@@ -980,7 +981,7 @@ export default function TeacherPage() {
 
               <div className="flex flex-wrap items-center gap-2">
                 <span className="text-xs font-black text-ink-soft min-w-16">THCS:</span>
-                {[6, 7, 8].map((g) => (
+                {[6, 7, 8, 9].map((g) => (
                   <button
                     key={g}
                     type="button"
@@ -1392,7 +1393,7 @@ export default function TeacherPage() {
             {[
               { id: 'all', label: 'Tất cả (14)', count: 14 },
               { id: 'primary', label: 'Tiểu học: Lớp 1-5', count: 7 },
-              { id: 'secondary', label: 'THCS: Lớp 6-8', count: 4 },
+              { id: 'secondary', label: 'THCS: Lớp 6-9', count: 4 },
               { id: 'high', label: 'THPT: Lớp 10-12', count: 3 },
             ].map((tab) => (
               <button

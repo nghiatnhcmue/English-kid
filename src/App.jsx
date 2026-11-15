@@ -30,6 +30,65 @@ const NAV = [
   { to: '/settings', label: t.nav.settings, icon: '⚙️' },
 ];
 
+function GradeSwitcher({ compact = false }) {
+  const { settings, update } = useSettings();
+  const currentGrade = settings?.selectedGrade || 6;
+
+  const handleGradeChange = (e) => {
+    const newGrade = Number(e.target.value);
+    update({ selectedGrade: newGrade });
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('grade-changed', { detail: { grade: newGrade } }));
+    }
+    playSfx('click');
+  };
+
+  return (
+    <div
+      className={`relative inline-flex items-center rounded-2xl bg-cream/90 border-2 border-banana-dark/40 shadow-xs hover:border-banana-dark transition-all select-none ${
+        compact ? 'px-2 py-1 text-xs' : 'px-3 py-1.5 text-xs lg:text-sm'
+      }`}
+      title="Đổi khối lớp học tập (Lớp 1 – 12)"
+    >
+      <span className="mr-1.5 text-sm lg:text-base leading-none" aria-hidden>🎓</span>
+      <label htmlFor={compact ? 'mobile-grade-select' : 'desktop-grade-select'} className="sr-only">
+        Chọn khối lớp
+      </label>
+      <select
+        id={compact ? 'mobile-grade-select' : 'desktop-grade-select'}
+        value={currentGrade}
+        onChange={handleGradeChange}
+        className="bg-transparent font-black text-ink cursor-pointer focus:outline-none appearance-none pr-3.5 py-0.5"
+        style={{
+          backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23432818' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'right center',
+          backgroundSize: '10px'
+        }}
+      >
+        <optgroup label="Tiểu học">
+          <option value={1} className="bg-white text-ink font-bold">Lớp 1</option>
+          <option value={2} className="bg-white text-ink font-bold">Lớp 2</option>
+          <option value={3} className="bg-white text-ink font-bold">Lớp 3</option>
+          <option value={4} className="bg-white text-ink font-bold">Lớp 4</option>
+          <option value={5} className="bg-white text-ink font-bold">Lớp 5</option>
+        </optgroup>
+        <optgroup label="THCS">
+          <option value={6} className="bg-white text-ink font-bold">Lớp 6 (★ 3D)</option>
+          <option value={7} className="bg-white text-ink font-bold">Lớp 7</option>
+          <option value={8} className="bg-white text-ink font-bold">Lớp 8</option>
+          <option value={9} className="bg-white text-ink font-bold">Lớp 9</option>
+        </optgroup>
+        <optgroup label="THPT">
+          <option value={10} className="bg-white text-ink font-bold">Lớp 10</option>
+          <option value={11} className="bg-white text-ink font-bold">Lớp 11</option>
+          <option value={12} className="bg-white text-ink font-bold">Lớp 12</option>
+        </optgroup>
+      </select>
+    </div>
+  );
+}
+
 function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
   const { settings, update } = useSettings();
 
@@ -42,23 +101,26 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
   return (
     <header className="no-print sticky top-0 z-40 hidden md:block bg-white/95 border-b-2 border-banana-soft shadow-xs backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 gap-3">
-        {/* Logo / Tên Ứng Dụng */}
-        <NavLink
-          to="/"
-          className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
-        >
-          <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
-            <span>📚</span>
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-xl font-black tracking-tight text-ink">
-              {t.appName}
-            </span>
-            <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
-              Global Success 6
-            </span>
-          </div>
-        </NavLink>
+        {/* Logo / Tên Ứng Dụng & Bộ Chọn Khối Lớp */}
+        <div className="flex items-center gap-2.5">
+          <NavLink
+            to="/"
+            className="group flex shrink-0 items-center gap-3 text-ink transition-transform hover:scale-[1.02] active:scale-95"
+          >
+            <div className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-banana to-banana-dark text-2xl shadow-[0_3px_0_#d8b13c]">
+              <span>📚</span>
+            </div>
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-black tracking-tight text-ink">
+                {t.appName}
+              </span>
+              <span className="text-[10px] font-black uppercase tracking-wider text-sky-dark">
+                Global Success {settings.selectedGrade || 6}
+              </span>
+            </div>
+          </NavLink>
+          <GradeSwitcher />
+        </div>
 
         {/* Thanh Menu Điều Hướng Trung Tâm */}
         <nav aria-label="Điều hướng chính" className="flex items-center">
@@ -167,19 +229,21 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
 
 function MobileTopBar({ currentStudent, onOpenAuthModal, totalStars }) {
   return (
-    <header className="no-print md:hidden sticky top-0 z-40 bg-white/95 border-b-2 border-banana-soft px-3 py-2 flex items-center justify-between shadow-xs backdrop-blur-md">
-      <NavLink to="/" className="flex items-center gap-2">
-        <span className="text-2xl leading-none">📚</span>
-        <span className="text-base font-black text-ink">{t.appName}</span>
-      </NavLink>
-      <div className="flex items-center gap-2">
+    <header className="no-print md:hidden sticky top-0 z-40 bg-white/95 border-b-2 border-banana-soft px-3 py-2 flex items-center justify-between shadow-xs backdrop-blur-md gap-2">
+      <div className="flex items-center gap-2 min-w-0">
+        <NavLink to="/" className="flex items-center gap-1.5 shrink-0">
+          <span className="text-2xl leading-none">📚</span>
+        </NavLink>
+        <GradeSwitcher compact />
+      </div>
+      <div className="flex items-center gap-1.5 shrink-0">
         <button
           type="button"
           onClick={() => {
             playSfx('click');
             onOpenAuthModal();
           }}
-          className="flex items-center gap-1.5 rounded-xl bg-cream px-2.5 py-1 text-xs font-black text-ink border border-banana-soft max-w-[150px] truncate shadow-2xs"
+          className="flex items-center gap-1.5 rounded-xl bg-cream px-2 py-1 text-xs font-black text-ink border border-banana-soft max-w-[130px] truncate shadow-2xs"
         >
           <span>{currentStudent ? (currentStudent.avatar || '🦁') : '👤'}</span>
           <span className="truncate">{currentStudent ? currentStudent.name : 'Đăng nhập'}</span>

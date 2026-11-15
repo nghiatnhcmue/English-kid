@@ -1,12 +1,12 @@
 /**
- * Danh mục 14 Sách Giáo Khoa Tiếng Anh (Global Success) chính thức
- * Bao gồm đầy đủ các khối lớp từ Tiểu học (Lớp 1-5), THCS (Lớp 6-8), THPT (Lớp 10-12).
+ * Danh mục 15 Sách Giáo Khoa Tiếng Anh (Global Success) chính thức
+ * Bao gồm đầy đủ các khối lớp từ Tiểu học (Lớp 1-5), THCS (Lớp 6-9), THPT (Lớp 10-12).
  */
 
 export const SCHOOL_LEVELS = [
-  { id: 'all', label: 'Tất cả', shortLabel: 'Tất cả (14)', tone: 'bg-ink text-white' },
+  { id: 'all', label: 'Tất cả', shortLabel: 'Tất cả (15)', tone: 'bg-ink text-white' },
   { id: 'primary', label: 'Tiểu học', shortLabel: 'Tiểu học (Lớp 1-5)', tone: 'bg-emerald-600 text-white', grades: [1, 2, 3, 4, 5] },
-  { id: 'secondary', label: 'THCS', shortLabel: 'THCS (Lớp 6-8)', tone: 'bg-banana text-ink', grades: [6, 7, 8] },
+  { id: 'secondary', label: 'THCS (Lớp 6-9)', shortLabel: 'THCS (Lớp 6-9)', tone: 'bg-banana text-ink', grades: [6, 7, 8, 9] },
   { id: 'high', label: 'THPT', shortLabel: 'THPT (Lớp 10-12)', tone: 'bg-rose-600 text-white', grades: [10, 11, 12] },
 ];
 
@@ -193,6 +193,22 @@ export const OFFICIAL_BOOKS = [
     downloadName: 'SGK-Tieng-Anh-8-Global-Success.pdf',
     fileSize: '35.1 MB',
     pages: '141 trang',
+  },
+  {
+    id: 'sgk-9',
+    code: 'sgk-9',
+    aliases: ['sgk-9', 'lop9', 'g9'],
+    grade: 9,
+    schoolLevel: 'secondary',
+    title: 'SGK Tiếng Anh 9 – Global Success',
+    shortTitle: 'Lớp 9',
+    semester: 'Cả năm',
+    badgeTone: 'bg-teal-600 text-white',
+    desc: 'Trọn bộ SGK Tiếng Anh 9 Global Success (Unit 1 đến Unit 12, Review 1–4). Nâng cao năng lực ngôn ngữ, ngữ pháp trọng điểm và chuẩn bị thi tuyển sinh lớp 10.',
+    src: '/pdf/sgk-tieng-anh-9.pdf',
+    downloadName: 'SGK-Tieng-Anh-9-Global-Success.pdf',
+    fileSize: '36.8 MB',
+    pages: '144 trang',
   },
 
   // ==========================================

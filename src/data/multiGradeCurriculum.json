@@ -4,7 +4,8 @@
     "series": "Global Success - Tiếng Anh GDPT 2018",
     "publisher": "Nhà Xuất Bản Giáo Dục Việt Nam",
     "updatedAt": "2026-11-15",
-    "description": "Lộ trình khung chương trình Sách Giáo Khoa Tiếng Anh chuẩn từ Lớp 1 đến Lớp 12 với liên kết tài liệu PDF và các trạm học tập."
+    "description": "Lộ trình khung chương trình Sách Giáo Khoa Tiếng Anh chuẩn từ Lớp 1 đến Lớp 12 với liên kết tài liệu PDF và các trạm học tập.",
+    "totalGrades": 12
   },
   "schoolLevels": [
     {
@@ -19,6 +20,7 @@
         6,
         7,
         8,
+        9,
         10,
         11,
         12
@@ -43,7 +45,8 @@
       "grades": [
         6,
         7,
-        8
+        8,
+        9
       ],
       "badgeTone": "bg-banana text-ink",
       "description": "Phát triển 4 kỹ năng Nghe - Nói - Đọc - Viết toàn diện, làm chủ ngữ pháp trọng tâm và vốn từ phong phú."
@@ -1682,6 +1685,273 @@
           "bookId": "sgk-8",
           "grammar": "Reported speech (questions)",
           "phonics": "Intonation in questions"
+        }
+      ]
+    },
+    {
+      "grade": 9,
+      "gradeName": "Lớp 9",
+      "level": "secondary",
+      "levelName": "THCS",
+      "title": "SGK Tiếng Anh 9 – Global Success",
+      "totalUnits": 12,
+      "interactiveAvailable": false,
+      "interactiveNote": "Bản PDF tra cứu chuẩn trọn bộ cả năm. Đang tích lũy học liệu tương tác.",
+      "bookIds": [
+        "sgk-9"
+      ],
+      "textbooks": [
+        {
+          "bookId": "sgk-9",
+          "title": "SGK Tiếng Anh 9 – Global Success",
+          "semester": "Cả năm",
+          "src": "/pdf/sgk-tieng-anh-9.pdf",
+          "downloadName": "SGK-Tieng-Anh-9-Global-Success.pdf",
+          "fileSize": "36.8 MB",
+          "pages": 144
+        }
+      ],
+      "description": "Chương trình Tiếng Anh 9 Global Success. Hoàn thiện năng lực giao tiếp, ngữ pháp nâng cao và kỹ năng làm bài thi chuyển cấp vào 10.",
+      "units": [
+        {
+          "unit": 1,
+          "title": "Local Community",
+          "titleVi": "Cộng đồng địa phương",
+          "theme": "Community & Society",
+          "semester": 1,
+          "bookId": "sgk-9",
+          "grammar": "Question words before to-infinitives",
+          "phonics": "/aʊ/ and /aɪ/",
+          "keyVocab": [
+            "artisan",
+            "community helper",
+            "craft village",
+            "handicraft",
+            "pottery",
+            "suburb",
+            "preserve",
+            "authentic"
+          ]
+        },
+        {
+          "unit": 2,
+          "title": "City Life",
+          "titleVi": "Cuộc sống thành thị",
+          "theme": "Urban Life & Infrastructure",
+          "semester": 1,
+          "bookId": "sgk-9",
+          "grammar": "Double comparatives (the more... the more...)",
+          "phonics": "/eə/ and /ɪə/",
+          "keyVocab": [
+            "bustling",
+            "cosmopolitan",
+            "metro",
+            "skyscrapers",
+            "congested",
+            "liveable",
+            "urban sprawl",
+            "amenity"
+          ]
+        },
+        {
+          "unit": 3,
+          "title": "Healthy Living for Teens",
+          "titleVi": "Lối sống lành mạnh cho tuổi thanh thiếu niên",
+          "theme": "Teen Health & Well-being",
+          "semester": 1,
+          "bookId": "sgk-9",
+          "grammar": "Modal verbs with modal adverbs",
+          "phonics": "/ɔɪ/ and /əʊ/",
+          "keyVocab": [
+            "counsellor",
+            "well-balanced",
+            "physical health",
+            "mental well-being",
+            "dietary",
+            "anxiety",
+            "cope with",
+            "priority"
+          ]
+        },
+        {
+          "unit": 4,
+          "title": "Remembering the Past",
+          "titleVi": "Nhớ về quá khứ",
+          "theme": "History & Heritage",
+          "semester": 1,
+          "bookId": "sgk-9",
+          "grammar": "Past continuous with while / when",
+          "phonics": "Sentence stress on content words",
+          "keyVocab": [
+            "extended family",
+            "nuclear family",
+            "generation gap",
+            "tradition",
+            "custom",
+            "heritage",
+            "pastime",
+            "values"
+          ]
+        },
+        {
+          "unit": 5,
+          "title": "Our Experiences",
+          "titleVi": "Những trải nghiệm của chúng ta",
+          "theme": "Travel & Life Experiences",
+          "semester": 1,
+          "bookId": "sgk-9",
+          "grammar": "Present perfect with already, yet, just, ever",
+          "phonics": "Rhythm in English sentences",
+          "keyVocab": [
+            "backpacking",
+            "homestay",
+            "cultural exchange",
+            "breathtaking",
+            "unforgettable",
+            "adventure",
+            "safari",
+            "memorable"
+          ]
+        },
+        {
+          "unit": 6,
+          "title": "Viet Nam: Then and Now",
+          "titleVi": "Việt Nam: Ngày xưa và nay",
+          "theme": "Vietnamese Transformation",
+          "semester": 1,
+          "bookId": "sgk-9",
+          "grammar": "Past perfect vs Past simple",
+          "phonics": "Intonation in statements vs questions",
+          "keyVocab": [
+            "tram",
+            "trench",
+            "thatched house",
+            "pedestrian zone",
+            "infrastructure",
+            "modernisation",
+            "historic",
+            "renovate"
+          ]
+        },
+        {
+          "unit": 7,
+          "title": "Natural Wonders of the World",
+          "titleVi": "Kỳ quan thiên nhiên thế giới",
+          "theme": "Nature & Wonders",
+          "semester": 2,
+          "bookId": "sgk-9",
+          "grammar": "Passive voice with modal verbs",
+          "phonics": "Intonation in choice questions",
+          "keyVocab": [
+            "limestone",
+            "biodiversity",
+            "cavern",
+            "stalactite",
+            "breathtaking",
+            "marine life",
+            "heritage site",
+            "geological"
+          ]
+        },
+        {
+          "unit": 8,
+          "title": "Tourism",
+          "titleVi": "Du lịch",
+          "theme": "Tourism & Hospitality",
+          "semester": 2,
+          "bookId": "sgk-9",
+          "grammar": "Articles (a/an, the, zero article)",
+          "phonics": "Intonation in echo questions",
+          "keyVocab": [
+            "ecotourism",
+            "package tour",
+            "destination",
+            "itinerary",
+            "sightseeing",
+            "souvenir",
+            "travel agency",
+            "hospitality"
+          ]
+        },
+        {
+          "unit": 9,
+          "title": "World Englishes",
+          "titleVi": "Tiếng Anh trên thế giới",
+          "theme": "Global Language & Accents",
+          "semester": 2,
+          "bookId": "sgk-9",
+          "grammar": "Defining relative clauses (who, which, that)",
+          "phonics": "Connected speech (linking sounds)",
+          "keyVocab": [
+            "bilingual",
+            "fluent",
+            "official language",
+            "accent",
+            "dialect",
+            "vocabulary",
+            "mother tongue",
+            "global language"
+          ]
+        },
+        {
+          "unit": 10,
+          "title": "Planet Earth",
+          "titleVi": "Hành tinh Trái Đất",
+          "theme": "Environment & Ecology",
+          "semester": 2,
+          "bookId": "sgk-9",
+          "grammar": "Non-defining relative clauses (who, which, whose)",
+          "phonics": "Intonation in question tags",
+          "keyVocab": [
+            "atmosphere",
+            "ecosystem",
+            "deforestation",
+            "habitat",
+            "renewable energy",
+            "conservation",
+            "endangered species",
+            "pollution"
+          ]
+        },
+        {
+          "unit": 11,
+          "title": "Electronic Devices",
+          "titleVi": "Thiết bị điện tử",
+          "theme": "Technology & AI",
+          "semester": 2,
+          "bookId": "sgk-9",
+          "grammar": "Reported speech (statements, orders & requests)",
+          "phonics": "Elision of vowels and consonants",
+          "keyVocab": [
+            "gadget",
+            "artificial intelligence",
+            "smart device",
+            "application",
+            "touchscreen",
+            "wireless",
+            "virtual reality",
+            "breakthrough"
+          ]
+        },
+        {
+          "unit": 12,
+          "title": "Career Paths",
+          "titleVi": "Định hướng nghề nghiệp",
+          "theme": "Careers & Vocations",
+          "semester": 2,
+          "bookId": "sgk-9",
+          "grammar": "Adverbial clauses of concession (although, despite)",
+          "phonics": "Sentence stress & intonation patterns",
+          "keyVocab": [
+            "profession",
+            "vocational training",
+            "qualification",
+            "career path",
+            "apprentice",
+            "job prospects",
+            "soft skills",
+            "entrepreneur"
+          ]
         }
       ]
     },
