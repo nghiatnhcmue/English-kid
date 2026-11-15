@@ -139,4 +139,22 @@ describe('Speaking & Textbook Getting Started Dialogues Suite', () => {
     expect(prog.units[1]).toBeDefined();
     expect(prog.units[1].modes.speaking).toBe(3);
   });
+
+  it('8. Role-play logic ensures valid turn partition for Computer and Student in all 12 units', () => {
+    units.forEach((summary) => {
+      const u = getUnit(summary.unitId);
+      const lines = u.speaking.dialogueLines;
+      const speakers = [...new Set(lines.map((l) => l.speaker))];
+      expect(speakers.length).toBeGreaterThanOrEqual(2);
+
+      // Pick any speaker as student's role
+      const studentRole = speakers[0];
+      const studentLines = lines.filter((l) => l.speaker === studentRole);
+      const computerLines = lines.filter((l) => l.speaker !== studentRole);
+
+      expect(studentLines.length).toBeGreaterThan(0);
+      expect(computerLines.length).toBeGreaterThan(0);
+      expect(studentLines.length + computerLines.length).toBe(lines.length);
+    });
+  });
 });

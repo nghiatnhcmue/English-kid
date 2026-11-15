@@ -33,7 +33,7 @@ export default function SpeakingPage() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <PageHeader
           title="🎙️ Phòng Luyện Nói & Chấm Điểm AI"
-          subtitle="Luyện đọc hội thoại SGK (Getting Started) · Mẫu câu giao tiếp & Từ vựng · Chấm điểm AI từng từ & nghe lại giọng"
+          subtitle="🎭 Đối đáp phân vai cùng Máy theo hội thoại SGK · Máy nói 1 vai, em nói 1 vai · Chấm điểm AI & nghe lại giọng"
           backTo={`/unit/${selectedUnitId}`}
           backLabel={`Về Unit ${selectedUnitId}`}
         />
@@ -49,13 +49,13 @@ export default function SpeakingPage() {
 
       {/* Hướng dẫn phương pháp Luyện Nói cho học sinh */}
       <section className="flex items-center gap-3.5 rounded-3xl bg-gradient-to-r from-peach-soft via-cream to-banana-soft p-4 sm:p-5 border-2 border-peach/30 shadow-xs">
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-2xl shadow-xs" aria-hidden>
-          🎙️
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-peach text-white text-2xl shadow-xs" aria-hidden>
+          🎭
         </span>
         <div className="flex-1 text-sm sm:text-base font-bold text-ink">
-          <p className="font-black text-peach-dark">Phương pháp Nhại giọng (Shadowing) hiệu quả:</p>
+          <p className="font-black text-peach-dark">Chế độ Đối đáp Phân vai cùng Máy (Interactive Role-Play):</p>
           <p className="text-ink-soft mt-0.5">
-            1. Bấm loa nghe bản xứ đọc mẫu ➔ 2. Bấm Micro đọc to, tự tin theo phiên âm ➔ 3. Xem AI phân tích từng từ và bấm <strong>&quot;▶️ Nghe lại giọng của em&quot;</strong> để so sánh!
+            1. Chọn nhân vật em muốn đóng vai ➔ 2. Máy tự động đọc vai của máy ➔ 3. Đến lượt em, bấm Micro đọc câu thoại theo phiên âm ➔ 4. Máy chấm điểm AI và tiếp tục đối đáp cùng em!
           </p>
         </div>
       </section>
