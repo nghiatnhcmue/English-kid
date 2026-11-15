@@ -297,7 +297,7 @@
     {
       "id": "u1_22",
       "word": "favourite",
-      "phonetic": "/ˈfeɪvərɪt/",
+      "phonetic": "/ˈfeɪvrɪt/",
       "wordType": "Tính từ",
       "meaning": "Được yêu thích nhất",
       "hint": "Viết kiểu Anh – Anh có chữ u: favourite",
@@ -529,14 +529,14 @@
       {
         "id": "u1_d1",
         "speaker": "Phong",
-        "sentenceEn": "Hi, Duy.",
-        "phonetic": "/haɪ duːi/",
-        "meaningVi": "Chào Duy.",
-        "tipsVi": "Chào hỏi thân mật, giọng vui tươi hào hứng."
+        "sentenceEn": "Hi, Vy.",
+        "phonetic": "/haɪ vaɪ/",
+        "meaningVi": "Chào Vy.",
+        "tipsVi": "Chào hỏi thân mật, ngữ điệu vui tươi, tự nhiên."
       },
       {
         "id": "u1_d2",
-        "speaker": "Duy",
+        "speaker": "Vy",
         "sentenceEn": "Hi, Phong. Are you ready?",
         "phonetic": "/haɪ fɒŋ ɑː juː ˈredi/",
         "meaningVi": "Chào Phong. Cậu đã sẵn sàng chưa?",
@@ -545,14 +545,14 @@
       {
         "id": "u1_d3",
         "speaker": "Phong",
-        "sentenceEn": "Yes, just a minute.",
-        "phonetic": "/jes dʒʌst ə ˈmɪnɪt/",
-        "meaningVi": "Rồi, đợi tớ một lát nhé.",
+        "sentenceEn": "Just a minute.",
+        "phonetic": "/dʒʌst ə ˈmɪnɪt/",
+        "meaningVi": "Đợi tớ một lát nhé.",
         "tipsVi": "Nối âm nhẹ: \"just_a\" (/dʒʌstə/)."
       },
       {
         "id": "u1_d4",
-        "speaker": "Phong",
+        "speaker": "Vy",
         "sentenceEn": "Oh, this is Duy, my new friend.",
         "phonetic": "/əʊ ðɪs ɪz duːi maɪ njuː frend/",
         "meaningVi": "Ồ, đây là Duy, bạn mới của mình.",
@@ -560,7 +560,7 @@
       },
       {
         "id": "u1_d5",
-        "speaker": "Vy",
+        "speaker": "Phong",
         "sentenceEn": "Hi, Duy. Nice to meet you.",
         "phonetic": "/haɪ duːi naɪs tuː miːt juː/",
         "meaningVi": "Chào Duy. Rất vui được gặp bạn.",
@@ -569,58 +569,58 @@
       {
         "id": "u1_d6",
         "speaker": "Duy",
-        "sentenceEn": "Nice to meet you, too.",
-        "phonetic": "/naɪs tuː miːt juː tuː/",
-        "meaningVi": "Mình cũng rất vui được gặp bạn.",
-        "tipsVi": "Nhấn giọng vào \"too\" ở cuối câu để biểu lộ sự đồng tình."
+        "sentenceEn": "Hi, Phong. I live near here, and we go to the same school!",
+        "phonetic": "/haɪ fɒŋ aɪ lɪv nɪə hɪə ænd wiː ɡəʊ tuː ðə seɪm skuːl/",
+        "meaningVi": "Chào Phong. Tớ sống gần đây và chúng mình học cùng trường đấy!",
+        "tipsVi": "Ngắt nghỉ tự nhiên sau dấu phẩy, nhấn mạnh \"same school\"."
       },
       {
         "id": "u1_d7",
-        "speaker": "Duy",
-        "sentenceEn": "I live near here, and we go to the same school.",
-        "phonetic": "/aɪ lɪv nɪə hɪə ænd wiː ɡəʊ tuː ðə seɪm skuːl/",
-        "meaningVi": "Tớ sống gần đây và chúng mình học cùng trường đấy.",
-        "tipsVi": "Chú ý phát âm rõ âm /l/ ở cuối từ \"school\"."
+        "speaker": "Phong",
+        "sentenceEn": "Good. Hmm, your school bag looks heavy.",
+        "phonetic": "/ɡʊd hmm jɔː skuːl bæɡ lʊks ˈhevi/",
+        "meaningVi": "Tốt quá. Chà, cặp sách của cậu trông có vẻ nặng nhỉ.",
+        "tipsVi": "Phát âm rõ âm đuôi /ks/ trong \"looks\"."
       },
       {
         "id": "u1_d8",
-        "speaker": "Phong",
-        "sentenceEn": "Good. Your school bag looks heavy.",
-        "phonetic": "/ɡʊd jɔː skuːl bæɡ lʊks ˈhevi/",
-        "meaningVi": "Tốt quá. Cặp sách của cậu trông có vẻ nặng nhỉ.",
-        "tipsVi": "Nhấn giọng vào tính từ \"heavy\" để thể hiện sự quan tâm."
-      },
-      {
-        "id": "u1_d9",
         "speaker": "Duy",
         "sentenceEn": "Yes, it is. I have new books, a calculator, and new pens.",
         "phonetic": "/jes ɪt ɪz aɪ hæv njuː bʊks ə ˈkælkjuleɪtə ænd njuː penz/",
-        "meaningVi": "Ừ, nặng thật. Tớ có sách mới, máy tính cầm tay và bút mới.",
-        "tipsVi": "Liệt kê đồ dùng: lên giọng ở \"books↗\", \"calculator↗\" và xuống giọng ở \"pens↘\"."
+        "meaningVi": "Ừ, đúng vậy. Tớ có sách mới, máy tính cầm tay và bút mới.",
+        "tipsVi": "Phát âm rõ trọng âm của \"calculator\" (/ˈkælkjuleɪtə/)."
       },
       {
-        "id": "u1_d10",
+        "id": "u1_d9",
         "speaker": "Vy",
         "sentenceEn": "And you are wearing the new uniform, Duy!",
         "phonetic": "/ænd juː ɑː ˈweərɪŋ ðə njuː ˈjuːnɪfɔːm duːi/",
         "meaningVi": "Và cậu đang mặc bộ đồng phục mới nữa kìa, Duy!",
-        "tipsVi": "Ngắt nhịp tự nhiên sau \"uniform\" và biểu cảm ngạc nhiên vui vẻ."
+        "tipsVi": "Nhấn mạnh vào \"new uniform\"."
+      },
+      {
+        "id": "u1_d10",
+        "speaker": "Duy",
+        "sentenceEn": "Thanks, Phong. We always look smart in our uniforms.",
+        "phonetic": "/θæŋks fɒŋ wiː ˈɔːlweɪz lʊk smɑːt ɪn ˈaʊə ˈjuːnɪfɔːmz/",
+        "meaningVi": "Cảm ơn Phong. Chúng mình luôn trông thật bảnh bao trong bộ đồng phục.",
+        "tipsVi": "Phát âm chuẩn âm A dài /ɑː/ trong \"smart\"."
       },
       {
         "id": "u1_d11",
-        "speaker": "Duy",
-        "sentenceEn": "Yes, I look smart!",
-        "phonetic": "/jes aɪ lʊk smɑːt/",
-        "meaningVi": "Đúng vậy, trông tớ bảnh bao chứ!",
-        "tipsVi": "Âm /ɑː/ trong \"smart\" kéo dài sâu trong vòm họng."
+        "speaker": "Phong",
+        "sentenceEn": "Let me put on my uniform. Then we can go.",
+        "phonetic": "/let miː pʊt ɒn maɪ ˈjuːnɪfɔːm ðen wiː kæn ɡəʊ/",
+        "meaningVi": "Để tớ mặc đồng phục đã nhé. Rồi chúng mình cùng đi.",
+        "tipsVi": "Nối âm: \"put_on\" (/pʊtɒn/)."
       },
       {
         "id": "u1_d12",
-        "speaker": "Phong",
+        "speaker": "Duy",
         "sentenceEn": "Let's go!",
         "phonetic": "/lets ɡəʊ/",
         "meaningVi": "Chúng mình đi thôi nào!",
-        "tipsVi": "Dứt khoát, hào hứng và sẵn sàng bắt đầu ngày học mới."
+        "tipsVi": "Hào hứng, dứt khoát với âm /ts/ trong \"Let's\"."
       }
     ]
   },

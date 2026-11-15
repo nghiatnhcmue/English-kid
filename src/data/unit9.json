@@ -407,87 +407,103 @@
     ],
     "audio": "/assets/audio/unit9/speaking-target.mp3",
     "dialogueTitle": "Getting Started: What Nice Photos!",
-    "dialogueContext": "Mai và Tom cùng ngắm các tấm bưu thiếp chụp các thành phố nổi tiếng trên thế giới.",
+    "dialogueContext": "Mai và Tom đang cùng nhau xem các bức ảnh chụp các kỳ nghỉ của Tom tại những thành phố nổi tiếng như Sydney, London và New York.",
     "dialogueLines": [
       {
         "id": "u9_d1",
-        "speaker": "Tom",
-        "sentenceEn": "Mai, have a look at these postcards from my uncle.",
-        "phonetic": "/maɪ hæv ə lʊk æt ðiːz ˈpəʊstkɑːdz frəm maɪ ˈʌŋkl/",
-        "meaningVi": "Mai ơi, xem mấy tấm bưu thiếp của chú tớ gửi này.",
-        "tipsVi": "Rủ bạn cùng xem: \"have a look at...\"."
+        "speaker": "Mai",
+        "sentenceEn": "Tom, are these photos from your holidays?",
+        "phonetic": "/tɒm ɑː ðiːz ˈfəʊtəʊz frəm jɔː ˈhɒlədeɪz/",
+        "meaningVi": "Tom ơi, những bức ảnh này chụp từ các kỳ nghỉ của bạn à?",
+        "tipsVi": "Lên giọng ở cuối câu hỏi Yes/No: \"holidays↗\"."
       },
       {
         "id": "u9_d2",
-        "speaker": "Mai",
-        "sentenceEn": "Wow, what nice photos! Which city is this?",
-        "phonetic": "/waʊ wɒt naɪs ˈfəʊtəʊz wɪtʃ ˈsɪti ɪz ðɪs/",
-        "meaningVi": "Chà, ảnh chụp đẹp quá! Đây là thành phố nào vậy?",
-        "tipsVi": "Câu cảm thán: \"What nice photos!\"."
+        "speaker": "Tom",
+        "sentenceEn": "Yes, they are. This is Sydney, a city in Australia.",
+        "phonetic": "/jes ðeɪ ɑː ðɪs ɪz ˈsɪdni ə ˈsɪti ɪn ɒˈstreɪliə/",
+        "meaningVi": "Đúng rồi bạn. Đây là Sydney, một thành phố ở nước Úc.",
+        "tipsVi": "Giới thiệu địa danh rõ ràng: \"Sydney\" (/ˈsɪdni/) và \"Australia\" (/ɒˈstreɪliə/)."
       },
       {
         "id": "u9_d3",
-        "speaker": "Tom",
-        "sentenceEn": "It is Sydney. That is the famous Sydney Opera House.",
-        "phonetic": "/ɪt ɪz ˈsɪdni ðæt ɪz ðə ˈfeɪməs ˈsɪdni ˈɒprə haʊs/",
-        "meaningVi": "Đó là Sydney. Kia là Nhà hát Con Sò nổi tiếng của Sydney đấy.",
-        "tipsVi": "Phát âm rõ danh từ riêng \"Sydney Opera House\"."
+        "speaker": "Mai",
+        "sentenceEn": "What's it like?",
+        "phonetic": "/wɒts ɪt laɪk/",
+        "meaningVi": "Thành phố đó như thế nào?",
+        "tipsVi": "Hỏi miêu tả đặc điểm: \"What's it like?\"."
       },
       {
         "id": "u9_d4",
-        "speaker": "Mai",
-        "sentenceEn": "I know it! It looks like huge white sea shells.",
-        "phonetic": "/aɪ nəʊ ɪt ɪt lʊks laɪk hjuːdʒ waɪt siː ʃelz/",
-        "meaningVi": "Mình biết nơi này! Trông nó giống như những chiếc vỏ sò khổng lồ màu trắng.",
-        "tipsVi": "So sánh hình tượng: \"looks like huge white sea shells\"."
+        "speaker": "Tom",
+        "sentenceEn": "It's exciting with a lot of beaches.",
+        "phonetic": "/ɪts ɪkˈsaɪtɪŋ wɪð ə lɒt əv ˈbiːtʃɪz/",
+        "meaningVi": "Nó rất náo nhiệt với nhiều bãi biển đẹp.",
+        "tipsVi": "Từ \"beaches\" có âm đuôi /ɪz/: /ˈbiːtʃɪz/."
       },
       {
         "id": "u9_d5",
-        "speaker": "Tom",
-        "sentenceEn": "And this one is London, the capital of the United Kingdom.",
-        "phonetic": "/ænd ðɪs wʌn ɪz ˈlʌndən ðə ˈkæpɪtl əv ðə juːˈnaɪtɪd ˈkɪŋdəm/",
-        "meaningVi": "Còn tấm này là London, thủ đô của Vương quốc Anh.",
-        "tipsVi": "Từ \"capital\" (thủ đô) nhấn trọng âm đầu: /ˈkæpɪtl/."
+        "speaker": "Mai",
+        "sentenceEn": "What a beautiful place!",
+        "phonetic": "/wɒt ə ˈbjuːtɪfl pleɪs/",
+        "meaningVi": "Thật là một nơi tuyệt đẹp!",
+        "tipsVi": "Câu cảm thán với What: \"What a beautiful place!\"."
       },
       {
         "id": "u9_d6",
-        "speaker": "Mai",
-        "sentenceEn": "Look at the big clock tower. Is that Big Ben?",
-        "phonetic": "/lʊk æt ðə bɪɡ klɒk ˈtaʊə ɪz ðæt bɪɡ ben/",
-        "meaningVi": "Nhìn tháp đồng hồ to lớn kìa. Đó là Big Ben phải không?",
-        "tipsVi": "Lên giọng ở cuối câu hỏi: \"Big Ben↗\"."
+        "speaker": "Tom",
+        "sentenceEn": "Yes, its beaches are very clean.",
+        "phonetic": "/jes ɪts ˈbiːtʃɪz ɑː ˈveri kliːn/",
+        "meaningVi": "Đúng thế, các bãi biển ở đó rất sạch sẽ.",
+        "tipsVi": "Tính từ sở hữu \"its\" (của nó) không có dấu nháy đơn."
       },
       {
         "id": "u9_d7",
-        "speaker": "Tom",
-        "sentenceEn": "Yes! And there is the red double-decker bus on the road.",
-        "phonetic": "/jes ænd ðeər ɪz ðə red ˌdʌbl ˈdekə bʌs ɒn ðə rəʊd/",
-        "meaningVi": "Đúng rồi! Và kia là chiếc xe buýt hai tầng màu đỏ trên đường phố.",
-        "tipsVi": "Biểu tượng London: \"double-decker bus\" (/ˌdʌbl ˈdekə bʌs/)."
+        "speaker": "Mai",
+        "sentenceEn": "Wonderful. Oh, this is London. Isn't it raining? What bad weather!",
+        "phonetic": "/ˈwʌndəfl əʊ ðɪs ɪz ˈlʌndən ˈɪznt ɪt ˈreɪnɪŋ wɒt bæd ˈweðə/",
+        "meaningVi": "Tuyệt quá. Ồ, đây là London. Trời đang mưa phải không? Thời tiết xấu quá nhỉ!",
+        "tipsVi": "Câu cảm thán với danh từ không đếm được: \"What bad weather!\"."
       },
       {
         "id": "u9_d8",
-        "speaker": "Mai",
-        "sentenceEn": "Which city is the cleanest and most peaceful?",
-        "phonetic": "/wɪtʃ ˈsɪti ɪz ðə ˈkliːnɪst ænd məʊst ˈpiːsfl/",
-        "meaningVi": "Thành phố nào là sạch sẽ và yên bình nhất vậy Tom?",
-        "tipsVi": "So sánh nhất: \"the cleanest\" và \"most peaceful\"."
+        "speaker": "Tom",
+        "sentenceEn": "Yes, it rains all the time. Can you see Big Ben?",
+        "phonetic": "/jes ɪt reɪnz ɔːl ðə taɪm kæn juː siː bɪɡ ben/",
+        "meaningVi": "Đúng vậy, trời mưa suốt thôi. Bạn có nhìn thấy tháp Big Ben không?",
+        "tipsVi": "Hỏi thấy điểm nhấn: lên giọng ở \"Big Ben↗\"."
       },
       {
         "id": "u9_d9",
-        "speaker": "Tom",
-        "sentenceEn": "Stockholm in Sweden! It has lots of parks and canals.",
-        "phonetic": "/ˈstɒkhəʊm ɪn ˈswiːdn ɪt hæz lɒts əv pɑːks ænd kəˈnælz/",
-        "meaningVi": "Là Stockholm ở Thụy Điển đấy! Nơi đó có rất nhiều công viên và kênh đào.",
-        "tipsVi": "Tên riêng quốc tế: \"Stockholm\" (/ˈstɒkhəʊm/)."
+        "speaker": "Mai",
+        "sentenceEn": "Yeah, on the River Thames. It's a landmark of London.",
+        "phonetic": "/jeə ɒn ðə ˈrɪvə temz ɪts ə ˈlændmɑːk əv ˈlʌndən/",
+        "meaningVi": "Có chứ, bên bờ sông Thames. Đó là thắng cảnh biểu tượng của London.",
+        "tipsVi": "Tên sông Thames phát âm là /temz/, từ \"landmark\" phát âm là /ˈlændmɑːk/."
       },
       {
         "id": "u9_d10",
+        "speaker": "Tom",
+        "sentenceEn": "It is. And this is Times Square in New York, crowded but interesting.",
+        "phonetic": "/ɪt ɪz ænd ðɪs ɪz taɪmz skweə ɪn njuː jɔːk ˈkraʊdɪd bʌt ˈɪntrəstɪŋ/",
+        "meaningVi": "Đúng thế. Và đây là Quảng trường Thời đại ở New York, đông đúc nhưng rất thú vị.",
+        "tipsVi": "Địa danh \"Times Square\" (/taɪmz skweə/) và từ \"crowded\" (/ˈkraʊdɪd/)."
+      },
+      {
+        "id": "u9_d11",
         "speaker": "Mai",
-        "sentenceEn": "I hope I can travel around the world one day!",
-        "phonetic": "/aɪ həʊp aɪ kæn ˈtrævl əˈraʊnd ðə wɜːld wʌn deɪ/",
-        "meaningVi": "Mình ước một ngày nào đó được đi du lịch vòng quanh thế giới!",
-        "tipsVi": "Ước mơ chân thành: \"travel around the world\"."
+        "sentenceEn": "You're lucky to visit many places.",
+        "phonetic": "/jɔː ˈlʌki tuː ˈvɪzɪt ˈmeni ˈpleɪsɪz/",
+        "meaningVi": "Bạn thật may mắn khi được tham quan nhiều nơi như vậy.",
+        "tipsVi": "Bày tỏ cảm nghĩ: \"You're lucky to visit...\"."
+      },
+      {
+        "id": "u9_d12",
+        "speaker": "Tom",
+        "sentenceEn": "I am. What about your holidays?",
+        "phonetic": "/aɪ æm wɒt əˈbaʊt jɔː ˈhɒlədeɪz/",
+        "meaningVi": "Ừ đúng thế. Còn các kỳ nghỉ của bạn thì sao?",
+        "tipsVi": "Chuyển hướng hỏi tự nhiên: \"What about your holidays?\"."
       }
     ]
   },

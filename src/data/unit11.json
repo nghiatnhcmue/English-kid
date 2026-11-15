@@ -418,88 +418,112 @@
       }
     ],
     "audio": "/assets/audio/unit11/speaking-target.mp3",
-    "dialogueTitle": "Getting Started: The 3Rs Club",
-    "dialogueContext": "Mi và Nick cùng đọc áp phích về Câu lạc bộ 3Rs trên bảng tin trường và lên kế hoạch tham gia.",
+    "dialogueTitle": "Getting Started: Let's Go Green!",
+    "dialogueContext": "Mi và Nick tình cờ gặp nhau tại siêu thị và cùng chia sẻ các bí quyết sống xanh như dùng túi tái sử dụng và đi xe đạp bảo vệ môi trường.",
     "dialogueLines": [
       {
         "id": "u11_d1",
         "speaker": "Mi",
-        "sentenceEn": "Nick, look at this club poster on the school notice board.",
-        "phonetic": "/nɪk lʊk æt ðɪs klʌb ˈpəʊstər ɒn ðə skuːl ˈnəʊtɪs bɔːd/",
-        "meaningVi": "Nick ơi, nhìn tấm áp phích câu lạc bộ trên bảng tin trường kìa.",
-        "tipsVi": "Gây sự chú ý cho bạn: \"look at this poster\"."
+        "sentenceEn": "Hi, Nick.",
+        "phonetic": "/haɪ nɪk/",
+        "meaningVi": "Chào Nick.",
+        "tipsVi": "Chào hỏi thân mật vui tươi."
       },
       {
         "id": "u11_d2",
         "speaker": "Nick",
-        "sentenceEn": "The 3Rs Club? What does 3Rs stand for?",
-        "phonetic": "/ðə θriː ɑːz klʌb wɒt dʌz θriː ɑːz stænd fɔː/",
-        "meaningVi": "Câu lạc bộ 3Rs à? 3Rs là viết tắt của những từ gì thế bạn?",
-        "tipsVi": "Cụm từ hỏi nghĩa viết tắt: \"stand for\"."
+        "sentenceEn": "Hello, Mi.",
+        "phonetic": "/həˈləʊ miː/",
+        "meaningVi": "Chào Mi.",
+        "tipsVi": "Lời chào đáp lại tự nhiên."
       },
       {
         "id": "u11_d3",
         "speaker": "Mi",
-        "sentenceEn": "It stands for Reduce, Reuse, and Recycle.",
-        "phonetic": "/ɪt stændz fɔː rɪˈdjuːs ˌriːˈjuːz ænd ˌriːˈsaɪkl/",
-        "meaningVi": "Là viết tắt của Giảm thiểu, Tái sử dụng và Tái chế đấy.",
-        "tipsVi": "Phát âm rõ ràng 3 từ vàng bảo vệ môi trường: Reduce, Reuse, Recycle."
+        "sentenceEn": "You've bought a lot of things.",
+        "phonetic": "/juːv bɔːt ə lɒt əv θɪŋz/",
+        "meaningVi": "Cậu mua nhiều đồ thế.",
+        "tipsVi": "Dạng rút gọn \"You've\" (/juːv/) và động từ quá khứ \"bought\" (/bɔːt/)."
       },
       {
         "id": "u11_d4",
         "speaker": "Nick",
-        "sentenceEn": "How can secondary students become greener?",
-        "phonetic": "/haʊ kæn ˈsekəndri ˈstjuːdnts bɪˈkʌm ˈɡriːnə/",
-        "meaningVi": "Học sinh trung học cơ sở chúng mình có thể sống xanh hơn bằng cách nào?",
-        "tipsVi": "Tính từ so sánh hơn: \"greener\" (/ˈɡriːnə/)."
+        "sentenceEn": "Yes. We're going on a picnic tomorrow. What are you doing at the supermarket, Mi?",
+        "phonetic": "/jes wɪə ˈɡəʊɪŋ ɒn ə ˈpɪknɪk təˈmɒrəʊ wɒt ɑː juː ˈduːɪŋ æt ðə ˈsuːpəmɑːkɪt miː/",
+        "meaningVi": "Ừ. Ngày mai cả nhà tớ đi dã ngoại. Cậu đang làm gì ở siêu thị thế Mi?",
+        "tipsVi": "Cụm từ \"go on a picnic\" và từ \"supermarket\" (/ˈsuːpəmɑːkɪt/)."
       },
       {
         "id": "u11_d5",
         "speaker": "Mi",
-        "sentenceEn": "If we recycle used paper and plastic bottles, we will save trees and energy.",
-        "phonetic": "/ɪf wiː ˌriːˈsaɪkl juːzd ˈpeɪpər ænd ˈplæstɪk ˈbɒtlz wiː wɪl seɪv triːz ænd ˈenədʒi/",
-        "meaningVi": "Nếu chúng ta tái chế giấy đã dùng và chai nhựa, chúng ta sẽ cứu được cây xanh và năng lượng.",
-        "tipsVi": "Câu điều kiện loại 1: ngắt nhịp nhẹ ở dấu phẩy sau mệnh đề If."
+        "sentenceEn": "I'm buying some eggs. Hey, what's this?",
+        "phonetic": "/aɪm ˈbaɪɪŋ sʌm eɡz heɪ wɒts ðɪs/",
+        "meaningVi": "Tớ đi mua ít trứng. Này, cái gì đây thế cậu?",
+        "tipsVi": "Hỏi tò mò hào hứng: \"Hey, what's this?\"."
       },
       {
         "id": "u11_d6",
         "speaker": "Nick",
-        "sentenceEn": "Can we reuse plastic bags for shopping?",
-        "phonetic": "/kæn wiː ˌriːˈjuːz ˈplæstɪk bæɡz fɔː ˈʃɒpɪŋ/",
-        "meaningVi": "Chúng mình có thể tái sử dụng túi nilon để đi mua sắm không?",
-        "tipsVi": "Hỏi xin ý kiến: lên giọng ở cuối câu: \"shopping↗\"."
+        "sentenceEn": "It's a reusable shopping bag.",
+        "phonetic": "/ɪts ə ˌriːˈjuːzəbl ˈʃɒpɪŋ bæɡ/",
+        "meaningVi": "Đó là chiếc túi đi chợ tái sử dụng được.",
+        "tipsVi": "Phát âm chuẩn tính từ \"reusable\" (/ˌriːˈjuːzəbl/)."
       },
       {
         "id": "u11_d7",
         "speaker": "Mi",
-        "sentenceEn": "Better still, bring your own cloth reusable shopping bag!",
-        "phonetic": "/ˈbetə stɪl brɪŋ jɔːr əʊn klɒθ ˌriːˈjuːzəbl ˈʃɒpɪŋ bæɡ/",
-        "meaningVi": "Tốt hơn nữa là hãy mang theo túi vải tái sử dụng của riêng bạn!",
-        "tipsVi": "Đề xuất giải pháp hay hơn: \"Better still, bring...\"."
+        "sentenceEn": "Do you always use it?",
+        "phonetic": "/duː juː ˈɔːlweɪz juːz ɪt/",
+        "meaningVi": "Lúc nào cậu cũng dùng chiếc túi này à?",
+        "tipsVi": "Lên giọng cuối câu hỏi Yes/No: \"use it↗\"."
       },
       {
         "id": "u11_d8",
         "speaker": "Nick",
-        "sentenceEn": "What about saving clean water at school?",
-        "phonetic": "/wɒt əˈbaʊt ˈseɪvɪŋ kliːn ˈwɔːtər æt skuːl/",
-        "meaningVi": "Còn việc tiết kiệm nước sạch ở trường thì sao bạn?",
-        "tipsVi": "Đưa ra chủ đề mới: \"What about saving clean water...?\"."
+        "sentenceEn": "Yes. It's better than a plastic one. If we all use this kind of bag, we will help the environment.",
+        "phonetic": "/jes ɪts ˈbetə ðæn ə ˈplæstɪk wʌn ɪf wiː ɔːl juːz ðɪs kaɪnd əv bæɡ wiː wɪl help ðɪ ɪnˈvaɪrənmənt/",
+        "meaningVi": "Đúng vậy. Nó tốt hơn nhiều so với túi ni lông. Nếu tất cả chúng ta đều dùng loại túi này, chúng ta sẽ giúp bảo vệ môi trường.",
+        "tipsVi": "Câu điều kiện loại 1: Mệnh đề If dùng hiện tại đơn, mệnh đề chính dùng will + V."
       },
       {
         "id": "u11_d9",
         "speaker": "Mi",
-        "sentenceEn": "Turn off taps tightly after washing your hands.",
-        "phonetic": "/tɜːn ɒf tæps ˈtaɪtli ˈɑːftə ˈwɒʃɪŋ jɔː hændz/",
-        "meaningVi": "Hãy vặn chặt vòi nước sau khi rửa tay xong nhé.",
-        "tipsVi": "Lời nhắc nhở dứt khoát: \"Turn off taps tightly\"."
+        "sentenceEn": "I see. I'll buy one for my mum. Where can I buy one?",
+        "phonetic": "/aɪ siː aɪl baɪ wʌn fɔː maɪ mʌm weə kæn aɪ baɪ wʌn/",
+        "meaningVi": "Tớ hiểu rồi. Tớ sẽ mua một chiếc cho mẹ tớ. Mình có thể mua nó ở đâu nhỉ?",
+        "tipsVi": "Hỏi nơi bán: \"Where can I buy one?\"."
       },
       {
         "id": "u11_d10",
         "speaker": "Nick",
-        "sentenceEn": "I will definitely join the 3Rs club this afternoon!",
-        "phonetic": "/aɪ wɪl ˈdefɪnətli dʒɔɪn ðə θriː ɑːz klʌb ðɪs ˌɑːftəˈnuːn/",
-        "meaningVi": "Chắc chắn chiều nay tớ sẽ đăng ký tham gia câu lạc bộ 3Rs!",
-        "tipsVi": "Quyết tâm mạnh mẽ, nhấn trạng từ \"definitely\"."
+        "sentenceEn": "At the check-out. By the way, you're also green. You're cycling.",
+        "phonetic": "/æt ðə ˈtʃekaʊt baɪ ðə weɪ jɔːr ˈɔːlsəʊ ɡriːn jɔː ˈsaɪklɪŋ/",
+        "meaningVi": "Ở ngay quầy thanh toán ấy. Nhân tiện thì cậu cũng đang sống xanh đấy chứ. Cậu đi xe đạp mà.",
+        "tipsVi": "Từ \"check-out\" (/ˈtʃekaʊt/) và cụm \"go green\" nghĩa là thân thiện với môi trường."
+      },
+      {
+        "id": "u11_d11",
+        "speaker": "Mi",
+        "sentenceEn": "You're right. If more people cycle, the air will be cleaner. Right?",
+        "phonetic": "/jɔː raɪt ɪf mɔː ˈpiːpl ˈsaɪkl ðɪ eə wɪl biː ˈkliːnə raɪt/",
+        "meaningVi": "Cậu nói đúng đấy. Nếu có nhiều người đi xe đạp hơn thì không khí sẽ trong lành hơn. Phải không?",
+        "tipsVi": "Hỏi xác nhận: lên giọng ở \"Right?↗\"."
+      },
+      {
+        "id": "u11_d12",
+        "speaker": "Nick",
+        "sentenceEn": "Yes. Oh, it's 5 o'clock already. I have to go now. See you later.",
+        "phonetic": "/jes əʊ ɪts faɪv əˈklɒk ɔːlˈredi aɪ hæv tuː ɡəʊ naʊ siː juː ˈleɪtə/",
+        "meaningVi": "Đúng thế. Ồ, đã 5 giờ rồi cơ à. Tớ phải về bây giờ đây. Hẹn gặp lại cậu sau nhé.",
+        "tipsVi": "Chào tạm biệt hẹn gặp: \"See you later\"."
+      },
+      {
+        "id": "u11_d13",
+        "speaker": "Mi",
+        "sentenceEn": "See you, Nick. Bye.",
+        "phonetic": "/siː juː nɪk baɪ/",
+        "meaningVi": "Tạm biệt Nick nhé. Bye.",
+        "tipsVi": "Chào tạm biệt bạn."
       }
     ]
   },

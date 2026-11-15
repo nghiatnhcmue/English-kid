@@ -434,87 +434,119 @@
     ],
     "audio": "/assets/audio/unit10/speaking-target.mp3",
     "dialogueTitle": "Getting Started: My Future House",
-    "dialogueContext": "Phong và Nick cùng phác thảo và tưởng tượng về ngôi nhà thông minh trong tương lai.",
+    "dialogueContext": "Nick và Phong đang say sưa trò chuyện về bức tranh vẽ ngôi nhà mơ ước trong tương lai với hình dáng độc đáo như một chiếc đĩa bay UFO.",
     "dialogueLines": [
       {
         "id": "u10_d1",
         "speaker": "Nick",
-        "sentenceEn": "What are you drawing, Phong?",
-        "phonetic": "/wɒt ɑː juː ˈdrɔːɪŋ fɒŋ/",
-        "meaningVi": "Cậu đang vẽ gì thế Phong?",
-        "tipsVi": "Hỏi bạn thân thiện: \"What are you drawing...?\"."
+        "sentenceEn": "What are you doing, Phong?",
+        "phonetic": "/wɒt ɑː juː ˈduːɪŋ fɒŋ/",
+        "meaningVi": "Cậu đang làm gì đấy Phong?",
+        "tipsVi": "Hỏi tự nhiên, xuống giọng cuối câu hỏi Wh-."
       },
       {
         "id": "u10_d2",
         "speaker": "Phong",
-        "sentenceEn": "I am drawing my dream house in the year 2050.",
-        "phonetic": "/aɪ æm ˈdrɔːɪŋ maɪ driːm haʊs ɪn ðə jɪə ˈtwenti ˈfɪfti/",
-        "meaningVi": "Tớ đang vẽ ngôi nhà mơ ước của mình vào năm 2050.",
-        "tipsVi": "Năm 2050 đọc là \"twenty fifty\" (/ˈtwenti ˈfɪfti/)."
+        "sentenceEn": "I'm painting a picture of my house.",
+        "phonetic": "/aɪm ˈpeɪntɪŋ ə ˈpɪktʃər əv maɪ haʊs/",
+        "meaningVi": "Tớ đang vẽ một bức tranh về ngôi nhà của tớ.",
+        "tipsVi": "Phát âm rõ từ \"painting\" (/ˈpeɪntɪŋ/) và \"picture\" (/ˈpɪktʃə/)."
       },
       {
         "id": "u10_d3",
         "speaker": "Nick",
-        "sentenceEn": "Where will your house be located?",
-        "phonetic": "/weə wɪl jɔː haʊs biː ləʊˈkeɪtɪd/",
-        "meaningVi": "Ngôi nhà của cậu sẽ nằm ở vị trí nào?",
-        "tipsVi": "Thì tương lai đơn với \"will\": \"Where will your house be...\"."
+        "sentenceEn": "Your house! That's a UFO.",
+        "phonetic": "/jɔː haʊs ðæts ə ˌjuː ef ˈəʊ/",
+        "meaningVi": "Nhà của cậu á! Trông như một chiếc đĩa bay UFO vậy.",
+        "tipsVi": "Ngạc nhiên thốt lên, đọc tên các chữ cái: \"U-F-O\" (/ˌjuː ef ˈəʊ/)."
       },
       {
         "id": "u10_d4",
         "speaker": "Phong",
-        "sentenceEn": "It will be on an island in the middle of the blue ocean.",
-        "phonetic": "/ɪt wɪl biː ɒn ən ˈaɪlənd ɪn ðə ˈmɪdl əv ðə bluː ˈəʊʃn/",
-        "meaningVi": "Nó sẽ toạ lạc trên một hòn đảo ở giữa đại dương xanh thẳm.",
-        "tipsVi": "Cụm vị trí độc đáo: \"in the middle of the blue ocean\"."
+        "sentenceEn": "It looks like a UFO but it's my house in the future.",
+        "phonetic": "/ɪt lʊks laɪk ə ˌjuː ef ˈəʊ bʌt ɪts maɪ haʊs ɪn ðə ˈfjuːtʃə/",
+        "meaningVi": "Nó trông giống đĩa bay thật nhưng đó là ngôi nhà tương lai của tớ đấy.",
+        "tipsVi": "Từ \"future\" nhấn âm đầu: /ˈfjuːtʃə/."
       },
       {
         "id": "u10_d5",
         "speaker": "Nick",
-        "sentenceEn": "What will your house look like?",
-        "phonetic": "/wɒt wɪl jɔː haʊs lʊk laɪk/",
-        "meaningVi": "Trông ngôi nhà của cậu sẽ như thế nào?",
-        "tipsVi": "Hỏi về diện mạo: \"What will it look like?\"."
+        "sentenceEn": "Where will it be?",
+        "phonetic": "/weə wɪl ɪt biː/",
+        "meaningVi": "Nó sẽ nằm ở đâu vậy?",
+        "tipsVi": "Hỏi tương lai với will: \"Where will it be?\"."
       },
       {
         "id": "u10_d6",
         "speaker": "Phong",
-        "sentenceEn": "It will look like a spaceship, surrounded by tall solar trees.",
-        "phonetic": "/ɪt wɪl lʊk laɪk ə ˈspeɪsʃɪp səˈraʊndɪd baɪ tɔːl ˈsəʊlə triːz/",
-        "meaningVi": "Nó sẽ trông giống một phi thuyền, được bao quanh bởi cây năng lượng mặt trời.",
-        "tipsVi": "Phát âm rõ cụm \"solar trees\" (/ˈsəʊlə triːz/)."
+        "sentenceEn": "It'll be in the mountains.",
+        "phonetic": "/ˈɪtl biː ɪn ðə ˈmaʊntɪnz/",
+        "meaningVi": "Nó sẽ tọa lạc ở trên các ngọn núi.",
+        "tipsVi": "Dạng viết tắt \"It'll\" phát âm là /ˈɪtl/."
       },
       {
         "id": "u10_d7",
         "speaker": "Nick",
-        "sentenceEn": "Will there be smart appliances inside?",
-        "phonetic": "/wɪl ðeə biː smɑːt əˈplaɪənsɪz ɪnˈsaɪd/",
-        "meaningVi": "Bên trong sẽ có các thiết bị gia dụng thông minh chứ?",
-        "tipsVi": "Lên giọng ở cuối câu hỏi Yes/No: \"inside↗\"."
+        "sentenceEn": "What will it be like?",
+        "phonetic": "/wɒt wɪl ɪt biː laɪk/",
+        "meaningVi": "Nó sẽ trông như thế nào?",
+        "tipsVi": "Hỏi miêu tả đặc điểm trong tương lai."
       },
       {
         "id": "u10_d8",
         "speaker": "Phong",
-        "sentenceEn": "Yes! Robots will cook meals, clean floors, and wash clothes.",
-        "phonetic": "/jes ˈrəʊbɒts wɪl kʊk miːlz kliːn flɔːz ænd wɒʃ kləʊðz/",
-        "meaningVi": "Có chứ! Robot sẽ nấu các bữa ăn, lau sàn và giặt quần áo.",
-        "tipsVi": "Liệt kê ba hành động tiện ích của robot trong tương lai."
+        "sentenceEn": "It'll be a large house. It'll have twenty rooms.",
+        "phonetic": "/ˈɪtl biː ə lɑːdʒ haʊs ˈɪtl hæv ˈtwenti ruːmz/",
+        "meaningVi": "Đó sẽ là một ngôi nhà rất rộng lớn. Nó sẽ có hai mươi phòng.",
+        "tipsVi": "Nhấn mạnh số lượng: \"twenty rooms\"."
       },
       {
         "id": "u10_d9",
         "speaker": "Nick",
-        "sentenceEn": "Will you have an automatic super car?",
-        "phonetic": "/wɪl juː hæv ən ˌɔːtəˈmætɪk ˈsuːpə kɑː/",
-        "meaningVi": "Cậu sẽ có một chiếc siêu xe tự lái chứ?",
-        "tipsVi": "Từ \"automatic\" (/ˌɔːtəˈmætɪk/) nhấn âm tiết thứ ba."
+        "sentenceEn": "Twenty rooms!",
+        "phonetic": "/ˈtwenti ruːmz/",
+        "meaningVi": "Hai mươi phòng cơ á!",
+        "tipsVi": "Biểu cảm vô cùng ngạc nhiên, lên giọng."
       },
       {
         "id": "u10_d10",
         "speaker": "Phong",
-        "sentenceEn": "Of course! It might even fly over mountains and seas!",
-        "phonetic": "/əv kɔːs ɪt maɪt ˈiːvn flaɪ ˈəʊvə ˈmaʊntɪnz ænd siːz/",
-        "meaningVi": "Tất nhiên rồi! Nó thậm chí có thể bay qua núi và biển nữa đấy!",
-        "tipsVi": "Diễn tả khả năng với \"might\": nhấn \"fly over mountains\"."
+        "sentenceEn": "Yes, and it'll have solar energy and solar trees.",
+        "phonetic": "/jes ænd ˈɪtl hæv ˈsəʊlər ˈenədʒi ænd ˈsəʊlə triːz/",
+        "meaningVi": "Đúng vậy, và ngôi nhà sẽ sử dụng năng lượng mặt trời và các cây năng lượng mặt trời.",
+        "tipsVi": "Cụm danh từ 'solar energy' (/ˈsəʊlər ˈenədʒi/) và 'solar trees' (/ˈsəʊlə triːz/)."
+      },
+      {
+        "id": "u10_d11",
+        "speaker": "Nick",
+        "sentenceEn": "Fantastic! Which room will you like best?",
+        "phonetic": "/fænˈtæstɪk wɪtʃ ruːm wɪl juː laɪk best/",
+        "meaningVi": "Tuyệt diệu thật! Cậu sẽ thích căn phòng nào nhất?",
+        "tipsVi": "Khen ngợi nhiệt tình: \"Fantastic!\" (/fænˈtæstɪk/)."
+      },
+      {
+        "id": "u10_d12",
+        "speaker": "Phong",
+        "sentenceEn": "My bedroom, of course.",
+        "phonetic": "/maɪ ˈbedruːm əv kɔːs/",
+        "meaningVi": "Đương nhiên là phòng ngủ của tớ rồi.",
+        "tipsVi": "Cụm từ quen thuộc: \"of course\" (/əv kɔːs/)."
+      },
+      {
+        "id": "u10_d13",
+        "speaker": "Nick",
+        "sentenceEn": "What appliances might the house have?",
+        "phonetic": "/wɒt əˈplaɪənsɪz maɪt ðə haʊs hæv/",
+        "meaningVi": "Ngôi nhà có thể sẽ có những thiết bị gia dụng hiện đại nào?",
+        "tipsVi": "Từ \"appliances\" (/əˈplaɪənsɪz/) nhấn trọng âm hai."
+      },
+      {
+        "id": "u10_d14",
+        "speaker": "Phong",
+        "sentenceEn": "My house might have some smart TVs and ten robots.",
+        "phonetic": "/maɪ haʊs maɪt hæv sʌm smɑːt ˌtiː ˈviːz ænd ten ˈrəʊbɒts/",
+        "meaningVi": "Nhà tớ có thể sẽ có vài chiếc tivi thông minh và mười chú người máy giúp việc.",
+        "tipsVi": "Dùng \"might\" để diễn tả khả năng có thể xảy ra trong tương lai."
       }
     ]
   },

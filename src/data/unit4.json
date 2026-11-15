@@ -429,88 +429,88 @@
       }
     ],
     "audio": "/assets/audio/unit4/speaking-target.mp3",
-    "dialogueTitle": "Getting Started: Lost in the Old Town",
-    "dialogueContext": "Phong và Nick cùng đi dạo trong phố cổ Hội An và tìm đường đến Nhà cổ Tấn Ký.",
+    "dialogueTitle": "Getting Started: Lost in the Old Town!",
+    "dialogueContext": "Phong và Nick đang đi dạo ở phố cổ Hội An và tìm đường đến Nhà cổ Tấn Ký.",
     "dialogueLines": [
       {
         "id": "u4_d1",
-        "speaker": "Nick",
-        "sentenceEn": "Phong, where are we going now?",
-        "phonetic": "/fɒŋ weər ɑː wiː ˈɡəʊɪŋ naʊ/",
-        "meaningVi": "Phong ơi, bây giờ chúng mình đang đi đâu thế?",
-        "tipsVi": "Câu hỏi hỏi đường tự nhiên: \"where are we going now\"."
+        "speaker": "Phong",
+        "sentenceEn": "Wow! We're in Hoi An. I'm so excited.",
+        "phonetic": "/waʊ wɪər ɪn hɔɪ æn aɪm səʊ ɪkˈsaɪtɪd/",
+        "meaningVi": "Oa! Chúng ta đang ở Hội An rồi. Tớ hào hứng quá.",
+        "tipsVi": "Giọng phấn khởi, phát âm đúng trọng âm \"excited\" (/ɪkˈsaɪtɪd/)."
       },
       {
         "id": "u4_d2",
-        "speaker": "Phong",
-        "sentenceEn": "We are going to Tan Ky House in the old town.",
-        "phonetic": "/wiː ɑː ˈɡəʊɪŋ tuː tæn kiː haʊs ɪn ðə əʊld taʊn/",
-        "meaningVi": "Chúng mình đang đến Nhà cổ Tấn Ký trong khu phố cổ.",
-        "tipsVi": "Phát âm rõ tên riêng \"Tan Ky House\" và cụm \"old town\"."
+        "speaker": "Nick",
+        "sentenceEn": "Me too. It's so beautiful. Where shall we go first?",
+        "phonetic": "/miː tuː ɪts səʊ ˈbjuːtɪfl weə ʃæl wiː ɡəʊ fɜːst/",
+        "meaningVi": "Tớ cũng vậy. Nơi này đẹp quá. Chúng ta nên đi đâu trước nhỉ?",
+        "tipsVi": "Đưa ra gợi ý mở: \"Where shall we go first?\""
       },
       {
         "id": "u4_d3",
-        "speaker": "Nick",
-        "sentenceEn": "Is it far from here?",
-        "phonetic": "/ɪz ɪt fɑː frəm hɪə/",
-        "meaningVi": "Nơi đó có xa đây không?",
-        "tipsVi": "Lên giọng ở cuối câu hỏi Yes/No: \"here↗\"."
+        "speaker": "Phong",
+        "sentenceEn": "Tan Ky House is nearer. Shall we go there first?",
+        "phonetic": "/tæn kiː haʊs ɪz ˈnɪərə ʃæl wiː ɡəʊ ðeə fɜːst/",
+        "meaningVi": "Nhà cổ Tấn Ký gần hơn đấy. Chúng ta đến đó trước nhé?",
+        "tipsVi": "Phát âm tính từ so sánh hơn \"nearer\" (/ˈnɪərə/)."
       },
       {
         "id": "u4_d4",
-        "speaker": "Phong",
-        "sentenceEn": "No, it is quite near. But I think we are lost!",
-        "phonetic": "/nəʊ ɪt ɪz kwaɪt nɪə bʌt aɪ θɪŋk wiː ɑː lɒst/",
-        "meaningVi": "Không, khá gần thôi. Nhưng tớ nghĩ chúng mình bị lạc rồi!",
-        "tipsVi": "Âm /θ/ trong \"think\" và phát âm dứt khoát \"lost\"."
+        "speaker": "Nick",
+        "sentenceEn": "OK, sure. First, cross the road, and then turn left.",
+        "phonetic": "/ˌəʊˈkeɪ ʃʊə fɜːst krɒs ðə rəʊd ænd ðen tɜːn left/",
+        "meaningVi": "Được rồi, nhất trí. Đầu tiên, băng qua đường rồi sau đó rẽ trái nhé.",
+        "tipsVi": "Chỉ dẫn đường đi rõ ràng: \"cross the road\", \"turn left\"."
       },
       {
         "id": "u4_d5",
-        "speaker": "Nick",
-        "sentenceEn": "Look at the map! The street here is narrower.",
-        "phonetic": "/lʊk æt ðə mæp ðə striːt hɪər ɪz ˈnærəʊə/",
-        "meaningVi": "Nhìn vào bản đồ xem! Con phố ở đây hẹp hơn.",
-        "tipsVi": "Tính từ so sánh hơn: \"narrower\" (/ˈnærəʊə/)."
+        "speaker": "Phong",
+        "sentenceEn": "Wait. I think we're lost!",
+        "phonetic": "/weɪt aɪ θɪŋk wɪə lɒst/",
+        "meaningVi": "Khoan đã. Tớ nghĩ chúng mình bị lạc đường rồi!",
+        "tipsVi": "Ngạc nhiên và lo lắng nhẹ: \"Wait. I think we're lost!\""
       },
       {
         "id": "u4_d6",
-        "speaker": "Phong",
-        "sentenceEn": "Yes, and the houses here are older and more historic.",
-        "phonetic": "/jes ænd ðə ˈhaʊzɪz hɪər ɑːr ˈəʊldər ænd mɔː hɪˈstɒrɪk/",
-        "meaningVi": "Đúng rồi, và những ngôi nhà ở đây cổ kính và mang nhiều tính lịch sử hơn.",
-        "tipsVi": "So sánh hơn: \"older\" và \"more historic\"."
+        "speaker": "Nick",
+        "sentenceEn": "Look, there's a girl over there. Let's ask her.",
+        "phonetic": "/lʊk ðeəz ə ɡɜːl ˈəʊvə ðeə lets ɑːsk hɜː/",
+        "meaningVi": "Nhìn kìa, có một bạn gái ở đằng kia. Chúng mình hãy đến hỏi bạn ấy xem.",
+        "tipsVi": "Chỉ về phía bạn gái, ngữ điệu gợi ý: \"Let's ask her.\""
       },
       {
         "id": "u4_d7",
-        "speaker": "Nick",
-        "sentenceEn": "Let's ask that woman for directions.",
-        "phonetic": "/lets ɑːsk ðæt ˈwʊmən fɔː dəˈrekʃnz/",
-        "meaningVi": "Chúng mình hãy hỏi đường cô kia nhé.",
-        "tipsVi": "Cụm từ \"ask for directions\" (hỏi đường đi)."
+        "speaker": "Phong",
+        "sentenceEn": "Excuse me? Can you tell us the way to Tan Ky House?",
+        "phonetic": "/ɪkˈskjuːz miː kæn juː tel ʌs ðə weɪ tuː tæn kiː haʊs/",
+        "meaningVi": "Xin lỗi bạn ơi? Bạn có thể chỉ đường cho chúng mình đến Nhà cổ Tấn Ký được không?",
+        "tipsVi": "Mẫu câu hỏi đường lịch sự: \"Excuse me? Can you tell us the way to...\""
       },
       {
         "id": "u4_d8",
-        "speaker": "Phong",
-        "sentenceEn": "Excuse me, could you tell us the way to Tan Ky House?",
-        "phonetic": "/ɪkˈskjuːz miː kʊd juː tel ʌs ðə weɪ tuː tæn kiː haʊs/",
-        "meaningVi": "Xin lỗi cô, cô có thể chỉ đường cho chúng cháu đến Nhà cổ Tấn Ký không ạ?",
-        "tipsVi": "Cách mở lời hỏi đường lịch sự chuẩn bản xứ: \"Excuse me, could you...\"."
+        "speaker": "Cô gái",
+        "sentenceEn": "Sure! Go straight. Take the second turning on the left, and then turn right.",
+        "phonetic": "/ʃʊə ɡəʊ streɪt teɪk ðə ˈsekənd ˈtɜːnɪŋ ɒn ðə left ænd ðen tɜːn raɪt/",
+        "meaningVi": "Được chứ! Các bạn cứ đi thẳng. Rẽ ở ngã rẽ thứ hai bên tay trái, rồi sau đó rẽ phải nhé.",
+        "tipsVi": "Hướng dẫn rành mạch: \"Go straight\", \"second turning on the left\"."
       },
       {
         "id": "u4_d9",
-        "speaker": "Người dân",
-        "sentenceEn": "Go straight, then turn left at the corner.",
-        "phonetic": "/ɡəʊ streɪt ðen tɜːn left æt ðə ˈkɔːnə/",
-        "meaningVi": "Các cháu cứ đi thẳng rồi rẽ trái ở góc phố nhé.",
-        "tipsVi": "Chỉ dẫn đường: \"Go straight\" và \"turn left\"."
+        "speaker": "Nick",
+        "sentenceEn": "Thank you very much!",
+        "phonetic": "/θæŋk juː ˈveri mʌtʃ/",
+        "meaningVi": "Cảm ơn bạn rất nhiều!",
+        "tipsVi": "Lời cảm ơn chân thành, giọng ấm áp."
       },
       {
         "id": "u4_d10",
-        "speaker": "Nick",
-        "sentenceEn": "Thank you very much. Hoi An people are so helpful!",
-        "phonetic": "/θæŋk juː ˈveri mʌtʃ hɔɪ æn ˈpiːpl ɑː səʊ ˈhelpfl/",
-        "meaningVi": "Cháu cảm ơn cô rất nhiều. Người dân Hội An thật nhiệt tình!",
-        "tipsVi": "Khen ngợi chân thành, nhấn tính từ \"helpful\"."
+        "speaker": "Cô gái",
+        "sentenceEn": "You're welcome. Have a wonderful time in Hoi An!",
+        "phonetic": "/jɔː ˈwelkəm hæv ə ˈwʌndəfl taɪm ɪn hɔɪ æn/",
+        "meaningVi": "Không có gì đâu. Chúc các bạn có khoảng thời gian tuyệt vời ở Hội An nhé!",
+        "tipsVi": "Thân thiện, mến khách: \"Have a wonderful time!\""
       }
     ]
   },

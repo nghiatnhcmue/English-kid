@@ -417,87 +417,103 @@
     ],
     "audio": "/assets/audio/unit8/speaking-target.mp3",
     "dialogueTitle": "Getting Started: At the Gym",
-    "dialogueContext": "Dương và Mai gặp nhau tại phòng tập thể thao của trường và hào hứng trò chuyện.",
+    "dialogueContext": "Dương và Mai gặp nhau tại phòng tập thể thao trường và hào hứng chia sẻ về các môn thể thao yêu thích cùng câu lạc bộ karate.",
     "dialogueLines": [
       {
         "id": "u8_d1",
-        "speaker": "Dương",
-        "sentenceEn": "Hi, Mai. You look very sporty today!",
-        "phonetic": "/haɪ maɪ juː lʊk ˈveri ˈspɔːti təˈdeɪ/",
-        "meaningVi": "Chào Mai. Hôm nay trông bạn rất khỏe khoắn và năng động đấy!",
-        "tipsVi": "Khen ngợi bạn bè: nhấn tính từ \"sporty\" (/ˈspɔːti/)."
+        "speaker": "Duong",
+        "sentenceEn": "Wow! This gym is big!",
+        "phonetic": "/waʊ ðɪs dʒɪm ɪz bɪɡ/",
+        "meaningVi": "Oa! Phòng tập thể thao này to thật đấy!",
+        "tipsVi": "Thốt lên biểu cảm ngạc nhiên: \"Wow!\"."
       },
       {
         "id": "u8_d2",
         "speaker": "Mai",
-        "sentenceEn": "Thanks, Duong. I come here to do karate twice a week.",
-        "phonetic": "/θæŋks duːəŋ aɪ kʌm hɪə tuː duː kəˈrɑːti twaɪs ə wiːk/",
-        "meaningVi": "Cảm ơn Dương. Mình đến đây tập võ karate hai lần một tuần.",
-        "tipsVi": "Cụm từ \"do karate\" và tần suất \"twice a week\"."
+        "sentenceEn": "Yeah. The equipment is great. What sports do you do, Duong?",
+        "phonetic": "/jeə ðɪ ɪˈkwɪpmənt ɪz ɡreɪt wɒt spɔːts duː juː duː duːəŋ/",
+        "meaningVi": "Ừ. Trang thiết bị ở đây tuyệt thật. Cậu tập những môn thể thao nào thế Dương?",
+        "tipsVi": "Từ \"equipment\" (/ɪˈkwɪpmənt/) nhấn trọng âm ở âm tiết thứ hai."
       },
       {
         "id": "u8_d3",
-        "speaker": "Dương",
-        "sentenceEn": "Karate? Wow, you are so strong and cool!",
-        "phonetic": "/kəˈrɑːti waʊ juː ɑː səʊ strɒŋ ænd kuːl/",
-        "meaningVi": "Karate á? Chà, bạn khỏe khoắn và ngầu quá đi!",
-        "tipsVi": "Trầm trồ ngưỡng mộ: \"strong and cool\"."
+        "speaker": "Duong",
+        "sentenceEn": "Well, I do karate, and I play table tennis. Yesterday I played with Duy, and I won!",
+        "phonetic": "/wel aɪ duː kəˈrɑːti ænd aɪ pleɪ ˈteɪbl ˈtenɪs ˈjestədeɪ aɪ pleɪd wɪð duːi ænd aɪ wʌn/",
+        "meaningVi": "À, tớ tập karate, và tớ chơi bóng bàn. Hôm qua tớ đánh bóng bàn với Duy, và tớ đã thắng đấy!",
+        "tipsVi": "Phát âm rõ đuôi thì quá khứ đơn: \"played\" (/pleɪd/) và \"won\" (/wʌn/)."
       },
       {
         "id": "u8_d4",
         "speaker": "Mai",
-        "sentenceEn": "What sports do you play, Duong?",
-        "phonetic": "/wɒt spɔːts duː juː pleɪ duːəŋ/",
-        "meaningVi": "Thế bạn thường chơi môn thể thao nào vậy Dương?",
-        "tipsVi": "Hỏi han bạn bè tự nhiên với câu hỏi Wh-."
+        "sentenceEn": "Congratulations! You look fit! I'm not good at sports.",
+        "phonetic": "/kənˌɡrætʃuˈleɪʃnz juː lʊk fɪt aɪm nɒt ɡʊd æt spɔːts/",
+        "meaningVi": "Chúc mừng cậu nhé! Trông cậu rất cân đối khỏe khoắn! Tớ thì chẳng giỏi thể thao chút nào.",
+        "tipsVi": "Chúc mừng bạn: \"Congratulations!\" (/kənˌɡrætʃuˈleɪʃnz/)."
       },
       {
         "id": "u8_d5",
-        "speaker": "Dương",
-        "sentenceEn": "I usually play table tennis with my brother on Sundays.",
-        "phonetic": "/aɪ ˈjuːʒuəli pleɪ ˈteɪbl ˈtenɪs wɪð maɪ ˈbrʌðər ɒn ˈsʌndeɪz/",
-        "meaningVi": "Mình thường chơi bóng bàn với anh trai vào các ngày Chủ nhật.",
-        "tipsVi": "Cụm danh từ \"table tennis\" và giới từ \"on Sundays\"."
+        "speaker": "Duong",
+        "sentenceEn": "I have an idea. You can go to the karate club with me.",
+        "phonetic": "/aɪ hæv ən aɪˈdɪə juː kæn ɡəʊ tuː ðə kəˈrɑːti klʌb wɪð miː/",
+        "meaningVi": "Tớ có ý này hay lắm. Cậu có thể đến câu lạc bộ karate cùng tớ.",
+        "tipsVi": "Đưa ra gợi ý thân thiện: \"I have an idea\"."
       },
       {
         "id": "u8_d6",
         "speaker": "Mai",
-        "sentenceEn": "Did you watch the football match on TV last night?",
-        "phonetic": "/dɪd juː wɒtʃ ðə ˈfʊtbɔːl mætʃ ɒn ˌtiːˈviː lɑːst naɪt/",
-        "meaningVi": "Tối qua bạn có xem trận bóng đá trên ti vi không?",
-        "tipsVi": "Câu hỏi quá khứ đơn: lên giọng ở cuối câu: \"last night↗\"."
+        "sentenceEn": "No, I can't do karate.",
+        "phonetic": "/nəʊ aɪ kɑːnt duː kəˈrɑːti/",
+        "meaningVi": "Thôi, tớ không biết tập karate đâu.",
+        "tipsVi": "Phát âm chuẩn từ \"can't\" theo Anh-Anh là /kɑːnt/."
       },
       {
         "id": "u8_d7",
-        "speaker": "Dương",
-        "sentenceEn": "Yes, I did! Our school team played brilliantly and won!",
-        "phonetic": "/jes aɪ dɪd ˈaʊə skuːl tiːm pleɪd ˈbrɪljəntli ænd wʌn/",
-        "meaningVi": "Có chứ! Đội bóng trường mình đã thi đấu xuất sắc và giành chiến thắng!",
-        "tipsVi": "Phát âm rõ động từ quá khứ \"played\" (/pleɪd/) và \"won\" (/wʌn/)."
+        "speaker": "Duong",
+        "sentenceEn": "But you can learn! You'll love it.",
+        "phonetic": "/bʌt juː kæn lɜːn juːl lʌv ɪt/",
+        "meaningVi": "Nhưng cậu có thể học mà! Rồi cậu sẽ mê môn này cho xem.",
+        "tipsVi": "Động viên nhiệt tình: \"You'll love it!\"."
       },
       {
         "id": "u8_d8",
         "speaker": "Mai",
-        "sentenceEn": "Who scored the winning goal?",
-        "phonetic": "/huː skɔːd ðə ˈwɪnɪŋ ɡəʊl/",
-        "meaningVi": "Ai là người đã ghi bàn thắng quyết định thế bạn?",
-        "tipsVi": "Hỏi về người ghi bàn: \"scored the winning goal\"."
+        "sentenceEn": "Well, OK.",
+        "phonetic": "/wel ˌəʊˈkeɪ/",
+        "meaningVi": "Ừm, được thôi.",
+        "tipsVi": "Đồng ý tự nhiên."
       },
       {
         "id": "u8_d9",
-        "speaker": "Dương",
-        "sentenceEn": "Phong did! He kicked the ball straight into the top corner.",
-        "phonetic": "/fɒŋ dɪd hiː kɪkt ðə bɔːl streɪt ˈɪntuː ðə tɒp ˈkɔːnə/",
-        "meaningVi": "Là bạn Phong đấy! Cậu ấy sút bóng thẳng vào góc cao khung thành.",
-        "tipsVi": "Âm đuôi -ed trong \"kicked\" phát âm là /t/ (/kɪkt/)."
+        "speaker": "Duong",
+        "sentenceEn": "Great! I'll meet you there at 10 am on Sunday.",
+        "phonetic": "/ɡreɪt aɪl miːt juː ðeər æt ten eɪ ˈem ɒn ˈsʌndeɪ/",
+        "meaningVi": "Tuyệt vời! Tớ sẽ hẹn gặp cậu ở đó lúc 10 giờ sáng Chủ nhật nhé.",
+        "tipsVi": "Nhấn mạnh thời gian hẹn gặp: \"10 am on Sunday\"."
       },
       {
         "id": "u8_d10",
         "speaker": "Mai",
-        "sentenceEn": "Great! Playing sports keeps us healthy and fit.",
-        "phonetic": "/ɡreɪt ˈpleɪɪŋ spɔːts kiːps ʌs ˈhelθi ænd fɪt/",
-        "meaningVi": "Tuyệt vời! Chơi thể thao giúp chúng mình luôn khỏe mạnh và cân đối.",
-        "tipsVi": "Kết luận đầy cảm hứng: \"healthy and fit\"."
+        "sentenceEn": "Where's the club?",
+        "phonetic": "/weəz ðə klʌb/",
+        "meaningVi": "Câu lạc bộ đó ở đâu vậy?",
+        "tipsVi": "Xuống giọng ở cuối câu hỏi Wh-."
+      },
+      {
+        "id": "u8_d11",
+        "speaker": "Duong",
+        "sentenceEn": "It's Superfit Club, in Pham Hung Road. You can cycle there.",
+        "phonetic": "/ɪts ˈsuːpəfɪt klʌb ɪn fɑːm hʊŋ rəʊd juː kæn ˈsaɪkl ðeə/",
+        "meaningVi": "Đó là Câu lạc bộ Superfit, ở đường Phạm Hùng. Cậu có thể đạp xe đến đó.",
+        "tipsVi": "Từ \"cycle\" phát âm là /ˈsaɪkl/."
+      },
+      {
+        "id": "u8_d12",
+        "speaker": "Mai",
+        "sentenceEn": "OK. See you then.",
+        "phonetic": "/ˌəʊˈkeɪ siː juː ðen/",
+        "meaningVi": "Được rồi. Hẹn gặp lại cậu lúc đó nhé.",
+        "tipsVi": "Hẹn gặp lại: \"See you then\"."
       }
     ]
   },

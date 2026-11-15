@@ -166,7 +166,7 @@
     {
       "id": "u3_13",
       "word": "caring",
-      "phonetic": "/ˈkeərɪŋ/",
+      "phonetic": "/ˈkeə.rɪŋ/",
       "wordType": "Tính từ",
       "meaning": "Chu đáo, biết quan tâm",
       "hint": "Hay giúp đỡ và lo lắng cho người khác",
@@ -218,7 +218,7 @@
     {
       "id": "u3_17",
       "word": "appearance",
-      "phonetic": "/əˈpɪərəns/",
+      "phonetic": "/əˈpɪə.rəns/",
       "wordType": "Danh từ",
       "meaning": "Ngoại hình, bề ngoài",
       "hint": "Miêu tả tóc, mắt, mũi, dáng người",
@@ -446,87 +446,103 @@
     ],
     "audio": "/assets/audio/unit3/speaking-target.mp3",
     "dialogueTitle": "Getting Started: A Surprise Guest",
-    "dialogueContext": "Phong và Nam đang có buổi dã ngoại tại công viên thì Châu và Mai xuất hiện.",
+    "dialogueContext": "Phong và Nam đang có buổi dã ngoại tại công viên thì Mai dẫn theo người bạn mới tên là Châu tới.",
     "dialogueLines": [
       {
         "id": "u3_d1",
         "speaker": "Phong",
-        "sentenceEn": "Hi, Nam. The weather is so nice today!",
-        "phonetic": "/haɪ næm ðə ˈweðər ɪz səʊ naɪs təˈdeɪ/",
-        "meaningVi": "Chào Nam. Thời tiết hôm nay đẹp thật đấy!",
-        "tipsVi": "Âm /ð/ trong \"weather\" rung nhẹ dây thanh quản."
+        "sentenceEn": "That was a great idea, Nam. I love picnics!",
+        "phonetic": "/ðæt wɒz ə ɡreɪt aɪˈdɪə næm aɪ lʌv ˈpɪknɪks/",
+        "meaningVi": "Ý kiến đó thật tuyệt đấy Nam. Tớ rất thích những buổi dã ngoại!",
+        "tipsVi": "Giọng hào hứng, phát âm rõ âm cuối /ks/ trong \"picnics\"."
       },
       {
         "id": "u3_d2",
         "speaker": "Nam",
-        "sentenceEn": "Yes, it is great for a picnic in the park.",
-        "phonetic": "/jes ɪt ɪz ɡreɪt fɔːr ə ˈpɪknɪk ɪn ðə pɑːk/",
-        "meaningVi": "Ừ, rất tuyệt cho một buổi dã ngoại ở công viên.",
-        "tipsVi": "Nhấn vào tính từ \"great\" và danh từ \"picnic\"."
+        "sentenceEn": "Please pass me the biscuits.",
+        "phonetic": "/pliːz pɑːs miː ðə ˈbɪskɪts/",
+        "meaningVi": "Làm ơn chuyển cho tớ đĩa bánh quy với.",
+        "tipsVi": "Lịch sự, phát âm nhẹ nhàng âm /z/ trong \"Please\" và /ts/ trong \"biscuits\"."
       },
       {
         "id": "u3_d3",
         "speaker": "Phong",
-        "sentenceEn": "Look! Who is that girl with long black hair?",
-        "phonetic": "/lʊk huː ɪz ðæt ɡɜːl wɪð lɒŋ blæk heə/",
-        "meaningVi": "Nhìn kìa! Cô bạn có mái tóc đen dài kia là ai thế?",
-        "tipsVi": "Cụm miêu tả ngoại hình: \"long black hair\" nối tự nhiên."
+        "sentenceEn": "Sure. Here you are.",
+        "phonetic": "/ʃʊə hɪə juː ɑː/",
+        "meaningVi": "Chắc chắn rồi. Của cậu đây.",
+        "tipsVi": "Thân thiện, phát âm chuẩn âm /ʃ/ trong \"Sure\"."
       },
       {
         "id": "u3_d4",
         "speaker": "Nam",
-        "sentenceEn": "That is Chau. She is in class 6A.",
-        "phonetic": "/ðæt ɪz tʃaʊ ʃiː ɪz ɪn klɑːs sɪks eɪ/",
-        "meaningVi": "Đó là Châu. Bạn ấy học lớp 6A.",
-        "tipsVi": "Giới thiệu bạn bè tự nhiên, rõ ràng."
+        "sentenceEn": "Thanks. What are you reading, Phong?",
+        "phonetic": "/θæŋks wɒt ɑː juː ˈriːdɪŋ fɒŋ/",
+        "meaningVi": "Cảm ơn nhé. Cậu đang đọc gì thế Phong?",
+        "tipsVi": "Thì hiện tại tiếp diễn với câu hỏi: \"are you reading↘\"."
       },
       {
         "id": "u3_d5",
         "speaker": "Phong",
-        "sentenceEn": "She looks very friendly and sporty.",
-        "phonetic": "/ʃiː lʊks ˈveri ˈfrendli ænd ˈspɔːti/",
-        "meaningVi": "Trông bạn ấy rất thân thiện và yêu thể thao.",
-        "tipsVi": "Các tính từ chỉ tính cách: \"friendly\" và \"sporty\"."
+        "sentenceEn": "4Teen. It's my favourite magazine!",
+        "phonetic": "/fɔːˈtiːn ɪts maɪ ˈfeɪvrɪt ˌmæɡəˈziːn/",
+        "meaningVi": "Tạp chí 4Teen. Đó là tạp chí tớ yêu thích nhất!",
+        "tipsVi": "Nhấn mạnh trọng âm ở \"favourite\" (/ˈfeɪvrɪt/) và âm cuối của \"magazine\"."
       },
       {
         "id": "u3_d6",
         "speaker": "Nam",
-        "sentenceEn": "Yes, she plays basketball very well.",
-        "phonetic": "/jes ʃiː pleɪz ˈbɑːskɪtbɔːl ˈveri wel/",
-        "meaningVi": "Đúng rồi, bạn ấy chơi bóng rổ rất cừ khôi.",
-        "tipsVi": "Nhấn giọng vào trạng từ \"very well\"."
+        "sentenceEn": "Look! It's Mai. And she is with someone.",
+        "phonetic": "/lʊk ɪts maɪ ænd ʃiː ɪz wɪð ˈsʌmwʌn/",
+        "meaningVi": "Nhìn kìa! Là Mai. Và bạn ấy đang đi cùng ai đó.",
+        "tipsVi": "Ngạc nhiên, tạo sự chú ý: \"Look!\" (/lʊk/)."
       },
       {
         "id": "u3_d7",
-        "speaker": "Chau",
-        "sentenceEn": "Hi, Phong! Hi, Nam! Can we sit here?",
-        "phonetic": "/haɪ fɒŋ haɪ næm kæn wiː sɪt hɪə/",
-        "meaningVi": "Chào Phong! Chào Nam! Chúng mình ngồi cùng ở đây được không?",
-        "tipsVi": "Câu xin phép lịch sự: lên giọng ở cuối \"here↗\"."
+        "speaker": "Phong",
+        "sentenceEn": "Oh, who's that? She has glasses and long black hair.",
+        "phonetic": "/əʊ huːz ðæt ʃiː hæz ˈɡlɑːsɪz ænd lɒŋ blæk heə/",
+        "meaningVi": "Ồ, ai thế nhỉ? Bạn ấy đeo kính và có mái tóc đen dài.",
+        "tipsVi": "Phát âm rõ âm đuôi /ɪz/ trong \"glasses\" (/ˈɡlɑːsɪz/)."
       },
       {
         "id": "u3_d8",
-        "speaker": "Phong",
-        "sentenceEn": "Sure! Please have some biscuits and fruit.",
-        "phonetic": "/ʃʊə pliːz hæv sʌm ˈbɪskɪts ænd fruːt/",
-        "meaningVi": "Chắc chắn rồi! Mời các bạn dùng bánh quy và hoa quả.",
-        "tipsVi": "Hiếu khách, ấm áp: nhấn \"Sure!\" và \"Please\"."
+        "speaker": "Nam",
+        "sentenceEn": "I don't know. They're coming over.",
+        "phonetic": "/aɪ dəʊnt nəʊ ðeə ˈkʌmɪŋ ˈəʊvə/",
+        "meaningVi": "Tớ không biết. Các bạn ấy đang đi lại phía này.",
+        "tipsVi": "Thì hiện tại tiếp diễn: \"coming over\" (/ˈkʌmɪŋ ˈəʊvə/)."
       },
       {
         "id": "u3_d9",
         "speaker": "Chau",
-        "sentenceEn": "Thank you. You are so kind!",
-        "phonetic": "/θæŋk juː juː ɑː səʊ kaɪnd/",
-        "meaningVi": "Cảm ơn các bạn. Các bạn thật tốt bụng!",
-        "tipsVi": "Biểu lộ sự biết ơn chân thành, nhấn vào \"kind\"."
+        "sentenceEn": "Hi there! Nice to meet you.",
+        "phonetic": "/haɪ ðeə naɪs tuː miːt juː/",
+        "meaningVi": "Chào các bạn! Rất vui được gặp các bạn.",
+        "tipsVi": "Tươi cười, phát âm rõ âm /s/ trong \"Nice\"."
       },
       {
         "id": "u3_d10",
+        "speaker": "Phong",
+        "sentenceEn": "Hi, Chau. Nice to meet you, too. Would you like to sit down?",
+        "phonetic": "/haɪ tʃaʊ naɪs tuː miːt juː tuː wʊd juː laɪk tuː sɪt daʊn/",
+        "meaningVi": "Chào Châu. Mình cũng rất vui được gặp bạn. Các bạn có muốn ngồi cùng không?",
+        "tipsVi": "Mời mọc lịch sự: \"Would you like to...\""
+      },
+      {
+        "id": "u3_d11",
+        "speaker": "Chau",
+        "sentenceEn": "Thank you, but we're going to the bookshop now. Bye bye!",
+        "phonetic": "/θæŋk juː bʌt wɪə ˈɡəʊɪŋ tuː ðə ˈbʊkʃɒp naʊ baɪ baɪ/",
+        "meaningVi": "Cảm ơn các bạn, nhưng chúng mình sắp đi hiệu sách bây giờ. Tạm biệt nhé!",
+        "tipsVi": "Lời từ chối khéo léo và tạm biệt thân ái."
+      },
+      {
+        "id": "u3_d12",
         "speaker": "Nam",
-        "sentenceEn": "Let's play badminton together after eating.",
-        "phonetic": "/lets pleɪ ˈbædmɪntən təˈɡeðər ˈɑːftər ˈiːtɪŋ/",
-        "meaningVi": "Ăn xong chúng mình cùng chơi cầu lông nhé.",
-        "tipsVi": "Rủ rê bạn bè: \"Let's play... together\"."
+        "sentenceEn": "Bye for now!",
+        "phonetic": "/baɪ fɔː naʊ/",
+        "meaningVi": "Tạm biệt các bạn nhé!",
+        "tipsVi": "Đáp lại lời chào vui vẻ, thoải mái."
       }
     ]
   },

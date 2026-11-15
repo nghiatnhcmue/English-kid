@@ -390,87 +390,87 @@
     ],
     "audio": "/assets/audio/unit5/speaking-target.mp3",
     "dialogueTitle": "Getting Started: Geography Club",
-    "dialogueContext": "Cô giáo phụ trách và các bạn Nick, Mai đang lên kế hoạch cho chuyến đi thực tế của CLB Địa lý.",
+    "dialogueContext": "Các bạn học sinh cùng cô giáo trong Câu lạc bộ Địa lý thảo luận về các kỳ quan thiên nhiên Việt Nam.",
     "dialogueLines": [
       {
         "id": "u5_d1",
-        "speaker": "Cô giáo",
-        "sentenceEn": "Welcome back to our Geography Club members!",
-        "phonetic": "/ˈwelkəm bæk tuː ˈaʊə dʒiˈɒɡrəfi klʌb ˈmembəz/",
-        "meaningVi": "Chào mừng các thành viên quay lại Câu lạc bộ Địa lý!",
-        "tipsVi": "Lời chào đón nồng hậu, giọng tự tin phấn khởi."
+        "speaker": "Alice",
+        "sentenceEn": "Hello, welcome to our Geography Club!",
+        "phonetic": "/həˈləʊ ˈwelkəm tuː ˈaʊə dʒiˈɒɡrəfi klʌb/",
+        "meaningVi": "Xin chào, chào mừng các em đến với Câu lạc bộ Địa lý của chúng ta!",
+        "tipsVi": "Giọng chào đón nồng nhiệt, phát âm chuẩn \"Geography\" (/dʒiˈɒɡrəfi/)."
       },
       {
         "id": "u5_d2",
-        "speaker": "Nick",
-        "sentenceEn": "Hello, teacher. What are we discussing today?",
-        "phonetic": "/həˈləʊ ˈtiːtʃə wɒt ɑː wiː dɪˈskʌsɪŋ təˈdeɪ/",
-        "meaningVi": "Chào cô ạ. Hôm nay chúng ta thảo luận về điều gì ạ?",
-        "tipsVi": "Lễ phép, phát âm rõ động từ \"discussing\"."
+        "speaker": "Elena",
+        "sentenceEn": "Sorry I'm late! May I come in?",
+        "phonetic": "/ˈsɒri aɪm leɪt meɪ aɪ kʌm ɪn/",
+        "meaningVi": "Xin lỗi cô em đến muộn ạ! Em có thể vào lớp được không ạ?",
+        "tipsVi": "Lịch sự xin phép: \"May I come in?↗\""
       },
       {
         "id": "u5_d3",
-        "speaker": "Cô giáo",
-        "sentenceEn": "We are choosing a natural wonder in Viet Nam for our field trip.",
-        "phonetic": "/wiː ɑː ˈtʃuːzɪŋ ə ˈnætʃrəl ˈwʌndər ɪn vjet næm fɔːr ˈaʊə fiːld trɪp/",
-        "meaningVi": "Chúng ta sẽ chọn một kỳ quan thiên nhiên ở Việt Nam cho chuyến đi dã ngoại.",
-        "tipsVi": "Cụm danh từ cốt lõi: \"natural wonder\" và \"field trip\"."
+        "speaker": "Alice",
+        "sentenceEn": "Come in, Elena. Remember you must always be on time.",
+        "phonetic": "/kʌm ɪn ɪˈleɪnə rɪˈmembə juː mʌst ˈɔːlweɪz biː ɒn taɪm/",
+        "meaningVi": "Vào đi Elena. Nhưng em phải nhớ luôn luôn đúng giờ nhé.",
+        "tipsVi": "Nhấn mạnh động từ khuyết thiếu \"must\" chỉ quy định bắt buộc."
       },
       {
         "id": "u5_d4",
-        "speaker": "Mai",
-        "sentenceEn": "I suggest Ha Long Bay! It has thousands of limestone islands.",
-        "phonetic": "/aɪ səˈdʒest hɑː lɒŋ beɪ ɪt hæz ˈθaʊzndz əv ˈlaɪmstəʊn ˈaɪləndz/",
-        "meaningVi": "Em đề xuất Vịnh Hạ Long ạ! Nơi đó có hàng nghìn hòn đảo đá vôi.",
-        "tipsVi": "Từ \"islands\" câm chữ s: phát âm là /ˈaɪləndz/."
+        "speaker": "Alice",
+        "sentenceEn": "Today I'm going to talk about some natural wonders of Viet Nam.",
+        "phonetic": "/təˈdeɪ aɪm ˈɡəʊɪŋ tuː tɔːk əˈbaʊt sʌm ˈnætʃrəl ˈwʌndəz əv vjet næm/",
+        "meaningVi": "Hôm nay cô sẽ nói về một số kỳ quan thiên nhiên của Việt Nam.",
+        "tipsVi": "Phát âm rõ cụm \"natural wonders\" (/ˈnætʃrəl ˈwʌndəz/)."
       },
       {
         "id": "u5_d5",
         "speaker": "Nick",
-        "sentenceEn": "That sounds amazing. What about Mount Fansipan?",
-        "phonetic": "/ðæt saʊndz əˈmeɪzɪŋ wɒt əˈbaʊt maʊnt ˈfænsɪpæn/",
-        "meaningVi": "Nghe tuyệt quá. Còn đỉnh Phan-xi-păng thì sao ạ?",
-        "tipsVi": "Đưa ra gợi ý: \"What about...?\"."
+        "sentenceEn": "Great! What's that in the first picture?",
+        "phonetic": "/ɡreɪt wɒts ðæt ɪn ðə fɜːst ˈpɪktʃə/",
+        "meaningVi": "Tuyệt quá! Cảnh gì trong bức tranh thứ nhất vậy cô?",
+        "tipsVi": "Tò mò, hào hứng: \"Great! What's that...\""
       },
       {
         "id": "u5_d6",
-        "speaker": "Cô giáo",
-        "sentenceEn": "Fansipan is the highest peak in Indochina.",
-        "phonetic": "/ˈfænsɪpæn ɪz ðə ˈhaɪɪst piːk ɪn ˌɪndəʊtʃaɪnə/",
-        "meaningVi": "Phan-xi-păng là đỉnh núi cao nhất khu vực Đông Dương.",
-        "tipsVi": "So sánh nhất: \"the highest peak\" (/ðə ˈhaɪɪst piːk/)."
+        "speaker": "Alice",
+        "sentenceEn": "It's Ganh Da Dia in Phu Yen. It looks amazing!",
+        "phonetic": "/ɪts ɡæɲ daː diə ɪn fuː iən ɪt lʊks əˈmeɪzɪŋ/",
+        "meaningVi": "Đó là Ghềnh Đá Đĩa ở Phú Yên. Trông thật kỳ vĩ!",
+        "tipsVi": "Nhấn mạnh từ cảm thán \"amazing!\" (/əˈmeɪzɪŋ/)."
       },
       {
         "id": "u5_d7",
-        "speaker": "Mai",
-        "sentenceEn": "What must we bring when traveling there?",
-        "phonetic": "/wɒt mʌst wiː brɪŋ wen ˈtrævlɪŋ ðeə/",
-        "meaningVi": "Chúng ta phải mang theo những đồ dùng gì khi đi đến đó ạ?",
-        "tipsVi": "Động từ khuyết thiếu \"must\" thể hiện sự bắt buộc cần thiết."
+        "speaker": "Nick",
+        "sentenceEn": "Is picture 2 Ha Long Bay? It has many islands.",
+        "phonetic": "/ɪz ˈpɪktʃə tuː hɑː lɒŋ beɪ ɪt hæz ˈmeni ˈaɪləndz/",
+        "meaningVi": "Bức tranh thứ 2 có phải là Vịnh Hạ Long không ạ? Nơi đó có rất nhiều hòn đảo.",
+        "tipsVi": "Phát âm chuẩn âm câm chữ 's' trong \"islands\" (/ˈaɪləndz/)."
       },
       {
         "id": "u5_d8",
-        "speaker": "Cô giáo",
-        "sentenceEn": "You must bring warm clothes, a waterproof coat, and good walking boots.",
-        "phonetic": "/juː mʌst brɪŋ wɔːm kləʊðz ə ˈwɔːtəpruːf kəʊt ænd ɡʊd ˈwɔːkɪŋ buːts/",
-        "meaningVi": "Các em phải mang quần áo ấm, áo mưa chống thấm và giày đi bộ tốt.",
-        "tipsVi": "Liệt kê các đồ dùng: lên giọng ở từng món và hạ giọng ở cuối."
+        "speaker": "Alice",
+        "sentenceEn": "Right! The scenery is wonderful. This picture shows Tuan Chau island.",
+        "phonetic": "/raɪt ðə ˈsiːnəri ɪz ˈwʌndəfl ðɪs ˈpɪktʃə ʃəʊz tuən tʃaʊ ˈaɪlənd/",
+        "meaningVi": "Đúng rồi! Cảnh quan ở đó rất tuyệt đẹp. Bức hình này chụp đảo Tuần Châu.",
+        "tipsVi": "Phát âm rõ âm đầu /s/ trong \"scenery\" (/ˈsiːnəri/)."
       },
       {
         "id": "u5_d9",
         "speaker": "Nick",
-        "sentenceEn": "Must we bring a compass and a sleeping bag?",
-        "phonetic": "/mʌst wiː brɪŋ ə ˈkʌmpəs ænd ə ˈsliːpɪŋ bæɡ/",
-        "meaningVi": "Chúng em có phải mang theo com-pa la bàn và túi ngủ không ạ?",
-        "tipsVi": "Lên giọng ở cuối câu hỏi Yes/No với Must: \"sleeping bag↗\"."
+        "sentenceEn": "What must we bring when traveling there?",
+        "phonetic": "/wɒt mʌst wiː brɪŋ wen ˈtrævlɪŋ ðeə/",
+        "meaningVi": "Chúng em phải mang theo những gì khi đi du lịch tới đó ạ?",
+        "tipsVi": "Sử dụng câu hỏi với must: \"What must we bring...?\""
       },
       {
         "id": "u5_d10",
-        "speaker": "Cô giáo",
-        "sentenceEn": "Yes, you must. But you mustn't litter in the national park!",
-        "phonetic": "/jes juː mʌst bʌt juː ˈmʌsnt ˈlɪtər ɪn ðə ˈnæʃnəl pɑːk/",
-        "meaningVi": "Có chứ. Nhưng các em tuyệt đối không được xả rác trong vườn quốc gia!",
-        "tipsVi": "Nhấn mạnh lệnh cấm đoán: \"mustn't litter\" (/ˈmʌsnt ˈlɪtə/)."
+        "speaker": "Alice",
+        "sentenceEn": "You must bring suncream and water, but you mustn't litter in the national park!",
+        "phonetic": "/juː mʌst brɪŋ ˈsʌnkriːm ænd ˈwɔːtə bʌt juː ˈmʌsnt ˈlɪtər ɪn ðə ˈnæʃnəl pɑːk/",
+        "meaningVi": "Các em phải mang kem chống nắng và nước, nhưng tuyệt đối không được xả rác trong công viên quốc gia!",
+        "tipsVi": "Đối lập giữa \"must\" (phải làm) và \"mustn't\" (/ˈmʌsnt/ - cấm không được làm)."
       }
     ]
   },
