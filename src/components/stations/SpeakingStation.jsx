@@ -84,6 +84,8 @@ export default function SpeakingStation({ unit, onFinish }) {
   // Ghi âm và chấm điểm
   const recorder = useRef(null);
   const sttControllerRef = useRef(null);
+  const sttTranscriptsRef = useRef([]);
+  const autoStopTimerRef = useRef(null);
   const recordedAudioUrlRef = useRef(null);
   const recordStartTimeRef = useRef(0);
   const recordingStatusRef = useRef('idle');
@@ -106,6 +108,7 @@ export default function SpeakingStation({ unit, onFinish }) {
   useEffect(() => {
     recorder.current = createRecorder();
     return () => {
+      if (autoStopTimerRef.current) clearTimeout(autoStopTimerRef.current);
       sttControllerRef.current?.abort?.();
       recorder.current?.release();
       stopSpeaking();
@@ -172,8 +175,13 @@ export default function SpeakingStation({ unit, onFinish }) {
   const resetRecordingState = () => {
     // 1. Tăng sttRun để vô hiệu hóa lập tức mọi callback Promise/setTimeout đang bay từ lượt trước
     sttRun.current += 1;
+    if (autoStopTimerRef.current) {
+      clearTimeout(autoStopTimerRef.current);
+      autoStopTimerRef.current = null;
+    }
     sttControllerRef.current?.abort?.();
     sttControllerRef.current = null;
+    sttTranscriptsRef.current = [];
     recordedAudioUrlRef.current = null;
 
     // 2. Dừng micro an toàn nếu đang chạy
@@ -347,43 +355,39 @@ export default function SpeakingStation({ unit, onFinish }) {
     const run = ++sttRun.current;
     const sentenceToEvaluate = currentTarget.sentenceEn;
 
-    // Nhận diện giọng nói STT
+    // Nhận diện giọng nói STT (chạy song song thu thập kết quả, TUYỆT ĐỐI KHÔNG tự ý ngắt lượt thu của học sinh)
     if (sttAvailable) {
-      const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 10000 });
+      const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 15000 });
       sttControllerRef.current = ctrl;
 
-      ctrl.promise.then(async (r) => {
+      ctrl.promise.then((r) => {
         if (run !== sttRun.current) return;
-        // Dừng audio recorder một lần duy nhất nếu chưa dừng
-        let url = recordedAudioUrlRef.current;
-        if (!url && recorder.current && recorderStarted) {
-          try {
-            url = await recorder.current.stop();
-          } catch {
-            url = null;
-          }
-          recordedAudioUrlRef.current = url;
-          setAudioUrl(url);
+        if (r?.transcripts?.length) {
+          sttTranscriptsRef.current = r.transcripts;
         }
-        evaluateSpokenResult(r?.transcripts || [], url, sentenceToEvaluate);
       });
-    } else {
-      setTimeout(async () => {
-        if (run !== sttRun.current) return;
-        if (recordingStatusRef.current === 'recording') {
-          await stopRecord();
-        }
-      }, 5500);
     }
+
+    // Tự động dừng sau 7.5 giây nếu học sinh không bấm nút đỏ
+    autoStopTimerRef.current = setTimeout(() => {
+      if (run === sttRun.current && recordingStatusRef.current === 'recording') {
+        stopRecord();
+      }
+    }, 7500);
   };
 
-  // Dừng ghi âm thủ công
+  // Dừng ghi âm thủ công và đánh giá
   const stopRecord = async () => {
     if (recordingStatusRef.current !== 'recording') return;
+    if (autoStopTimerRef.current) {
+      clearTimeout(autoStopTimerRef.current);
+      autoStopTimerRef.current = null;
+    }
     updateRecordingStatus('evaluating');
+    const run = sttRun.current;
     const sentenceToEvaluate = currentTarget.sentenceEn;
 
-    // Dừng thu âm một lần duy nhất và lưu audioUrl
+    // 1. Dừng audio recorder một lần duy nhất và lưu audioUrl
     let url = recordedAudioUrlRef.current;
     if (!url && recorder.current) {
       try {
@@ -395,18 +399,21 @@ export default function SpeakingStation({ unit, onFinish }) {
       setAudioUrl(url);
     }
 
+    // 2. Dừng STT controller và thu thập transcript cuối cùng
+    let transcripts = sttTranscriptsRef.current || [];
     if (sttControllerRef.current) {
-      // Yêu cầu STT controller dừng và xả kết quả cuối cùng
-      sttControllerRef.current.stop();
-      // Đảm bảo không bị treo trạng thái 'evaluating' nếu STT phản hồi chậm
-      const run = sttRun.current;
-      setTimeout(() => {
-        if (run === sttRun.current && recordingStatusRef.current === 'evaluating') {
-          evaluateSpokenResult([], recordedAudioUrlRef.current, sentenceToEvaluate);
+      try {
+        const res = await sttControllerRef.current.stop();
+        if (res?.transcripts?.length) {
+          transcripts = res.transcripts;
         }
-      }, 2500);
-    } else {
-      evaluateSpokenResult([], url, sentenceToEvaluate);
+      } catch {
+        /* bỏ qua */
+      }
+    }
+
+    if (run === sttRun.current) {
+      evaluateSpokenResult(transcripts, url, sentenceToEvaluate);
     }
   };
 
@@ -441,10 +448,10 @@ export default function SpeakingStation({ unit, onFinish }) {
 
     // Khi STT không có transcript (Google Speech API bị chặn mạng ở VN, STT tắt hoặc rỗng)
     if (!transcripts || !transcripts.length) {
-      // Nếu học sinh đã thực sự thu âm tiếng nói (có audio URL hoặc đã ghi >= 400ms)
-      if (resolvedUrl || duration >= 400) {
+      // Nếu học sinh đã thực sự thu âm tiếng nói ít nhất 1.2 giây (thực sự có đọc)
+      if (duration >= 1200) {
         const targetWords = (target || '').split(/\s+/).filter(Boolean);
-        const minExpected = Math.max(800, targetWords.length * 280);
+        const minExpected = Math.max(1500, targetWords.length * 280);
         const effortScore = duration >= minExpected ? 85 : 80;
         const earnedStars = effortScore >= 80 ? 3 : 2;
 
@@ -462,11 +469,11 @@ export default function SpeakingStation({ unit, onFinish }) {
         return;
       }
 
-      // Không có âm thanh (bị chặn quyền micro hoặc tắt ngay chưa kịp nói)
+      // Quá ngắn (< 1.2s): Bấm nhầm hoặc chưa kịp nói
       setRecognizedText('(Chưa nhận diện rõ âm thanh, em thử nói to và gần micro hơn nhé)');
       setScorePercent(40);
       setStars(1);
-      setFeedback('Chưa nghe rõ giọng em. Đừng nản nhé, hãy nghe loa mẫu và thử lại!');
+      setFeedback('Chưa nghe rõ giọng em. Em hãy bấm Micro, đọc to câu trên rồi bấm Dừng nhé!');
       playSfx('wrong');
       saveResultForCurrentTurn(40, 1, '', null, resolvedUrl);
       return;

@@ -412,6 +412,7 @@ export function recognizeOnce({ lang = 'en-GB', timeoutMs = 8000 } = {}) {
   try {
     rec = new Recognition();
     rec.lang = lang;
+    rec.continuous = true;
     rec.interimResults = true;
     rec.maxAlternatives = 5;
 

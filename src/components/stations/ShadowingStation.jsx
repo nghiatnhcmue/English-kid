@@ -19,6 +19,8 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
   // Ghi âm luyện nói
   const recorder = useRef(null);
   const sttControllerRef = useRef(null);
+  const sttTranscriptsRef = useRef([]);
+  const autoStopTimerRef = useRef(null);
   const recordedAudioUrlRef = useRef(null);
   const recordStartTimeRef = useRef(0);
   const recordingStatusRef = useRef('idle');
@@ -38,6 +40,7 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
   useEffect(() => {
     recorder.current = createRecorder();
     return () => {
+      if (autoStopTimerRef.current) clearTimeout(autoStopTimerRef.current);
       sttControllerRef.current?.abort?.();
       recorder.current?.release();
       stopSpeaking();
@@ -59,7 +62,7 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     const resolvedUrl = url || recordedAudioUrlRef.current;
 
     if (!transcripts || !transcripts.length) {
-      if (resolvedUrl || duration >= 400) {
+      if (duration >= 1200) {
         setRecognizedText(target);
         setSpeakScore(0.85);
         setStars(3);
@@ -99,6 +102,11 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     stopSpeaking();
     sttControllerRef.current?.abort?.();
     sttControllerRef.current = null;
+    sttTranscriptsRef.current = [];
+    if (autoStopTimerRef.current) {
+      clearTimeout(autoStopTimerRef.current);
+      autoStopTimerRef.current = null;
+    }
     recordedAudioUrlRef.current = null;
     recordStartTimeRef.current = Date.now();
 
@@ -131,36 +139,33 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     const run = ++sttRun.current;
 
     if (sttAvailable) {
-      const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 9000 });
+      const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 15000 });
       sttControllerRef.current = ctrl;
 
-      ctrl.promise.then(async (r) => {
+      ctrl.promise.then((r) => {
         if (run !== sttRun.current) return;
-        let url = recordedAudioUrlRef.current;
-        if (!url && recorder.current && recorderStarted) {
-          try {
-            url = await recorder.current.stop();
-          } catch {
-            url = null;
-          }
-          recordedAudioUrlRef.current = url;
-          setAudioUrl(url);
+        if (r?.transcripts?.length) {
+          sttTranscriptsRef.current = r.transcripts;
         }
-        evaluateSpokenResult(r?.transcripts || [], url);
       });
-    } else {
-      setTimeout(async () => {
-        if (run !== sttRun.current) return;
-        if (recordingStatusRef.current === 'recording') {
-          await stopRecord();
-        }
-      }, 5500);
     }
+
+    // Tự động dừng sau 7.5 giây nếu học sinh không bấm nút dừng
+    autoStopTimerRef.current = setTimeout(() => {
+      if (run === sttRun.current && recordingStatusRef.current === 'recording') {
+        stopRecord();
+      }
+    }, 7500);
   };
 
   const stopRecord = async () => {
     if (recordingStatusRef.current !== 'recording') return;
+    if (autoStopTimerRef.current) {
+      clearTimeout(autoStopTimerRef.current);
+      autoStopTimerRef.current = null;
+    }
     updateRecordingStatus('evaluating');
+    const run = sttRun.current;
 
     let url = recordedAudioUrlRef.current;
     if (!url && recorder.current) {
@@ -173,16 +178,20 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
       setAudioUrl(url);
     }
 
+    let transcripts = sttTranscriptsRef.current || [];
     if (sttControllerRef.current) {
-      sttControllerRef.current.stop();
-      const run = sttRun.current;
-      setTimeout(() => {
-        if (run === sttRun.current && recordingStatusRef.current === 'evaluating') {
-          evaluateSpokenResult([], recordedAudioUrlRef.current);
+      try {
+        const res = await sttControllerRef.current.stop();
+        if (res?.transcripts?.length) {
+          transcripts = res.transcripts;
         }
-      }, 2500);
-    } else {
-      evaluateSpokenResult([], url);
+      } catch {
+        /* bỏ qua */
+      }
+    }
+
+    if (run === sttRun.current) {
+      evaluateSpokenResult(transcripts, url);
     }
   };
 
