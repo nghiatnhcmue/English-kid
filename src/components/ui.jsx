@@ -71,20 +71,23 @@ export function SpeakerButton({
   const play = async () => {
     if (!target) return;
     setPlaying(true);
-    if (slow) {
-      if (typeof target === 'object') {
-        await sayWord(target, settings, { slow: true });
+    try {
+      if (slow) {
+        if (typeof target === 'object') {
+          await sayWord(target, settings, { slow: true });
+        } else {
+          await speak(target, { ...settings, rate: 0.65, audio });
+        }
       } else {
-        await speak(target, { ...settings, rate: 0.65, audio });
+        if (typeof target === 'object') {
+          await sayWord(target, settings, { slowToo });
+        } else {
+          await speak(target, { ...settings, audio });
+        }
       }
-    } else {
-      if (typeof target === 'object') {
-        await sayWord(target, settings, { slowToo });
-      } else {
-        await speak(target, { ...settings, audio });
-      }
+    } finally {
+      setPlaying(false);
     }
-    setPlaying(false);
   };
 
   useEffect(() => {
@@ -131,15 +134,18 @@ export function SlowSpeakerButton({ word, text, audio, size = 'sm', className = 
   const target = word ?? text;
 
   const play = async (e) => {
-    e.stopPropagation();
+    if (e?.stopPropagation) e.stopPropagation();
     if (!target) return;
     setPlaying(true);
-    if (typeof target === 'object') {
-      await sayWord(target, settings, { slow: true });
-    } else {
-      await speak(target, { ...settings, rate: 0.65, audio });
+    try {
+      if (typeof target === 'object') {
+        await sayWord(target, settings, { slow: true });
+      } else {
+        await speak(target, { ...settings, rate: 0.65, audio });
+      }
+    } finally {
+      setPlaying(false);
     }
-    setPlaying(false);
   };
 
   const dims = size === 'md' ? 'h-14 px-4 text-base' : 'h-11 px-3 text-sm';

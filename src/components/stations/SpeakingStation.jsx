@@ -195,11 +195,14 @@ export default function SpeakingStation({ unit, onFinish }) {
   const playComputerLine = useCallback(async (line) => {
     if (!line) return;
     setIsComputerSpeaking(true);
-    await speak(line.sentenceEn, {
-      lang: settings.lang || 'en-GB',
-      audio: line.audio || null,
-    });
-    setIsComputerSpeaking(false);
+    try {
+      await speak(line.sentenceEn, {
+        lang: settings.lang || 'en-GB',
+        audio: line.audio || null,
+      });
+    } finally {
+      setIsComputerSpeaking(false);
+    }
   }, [settings.lang]);
 
   // Tự động phát âm khi tới lượt máy trong chế độ Roleplay
@@ -269,6 +272,7 @@ export default function SpeakingStation({ unit, onFinish }) {
   const startRecord = async () => {
     playSfx('click');
     stopSpeaking();
+    setIsComputerSpeaking(false);
     sttControllerRef.current?.abort?.();
     sttControllerRef.current = null;
     recordedAudioUrlRef.current = null;
@@ -279,18 +283,41 @@ export default function SpeakingStation({ unit, onFinish }) {
     setScorePercent(null);
     setMicError(null);
 
-    const res = await recorder.current?.start();
-    if (!res.ok) {
-      setMicError(res.message);
+    const sttAvailable = isSttSupported();
+    let recorderStarted = false;
+    let recErrorMsg = null;
+
+    if (recorder.current) {
+      try {
+        const res = await recorder.current.start();
+        if (res && res.ok) {
+          recorderStarted = true;
+        } else {
+          recErrorMsg = res?.message || 'Không thể ghi âm giọng nói.';
+        }
+      } catch (err) {
+        recErrorMsg = err?.message || 'Lỗi khởi động ghi âm.';
+      }
+    }
+
+    // Nếu cả recorder lẫn STT đều không hoạt động
+    if (!recorderStarted && !sttAvailable) {
+      setMicError(recErrorMsg || 'Không thể truy cập micro. Em hãy kiểm tra quyền micro của trình duyệt và thử lại nhé!');
       updateRecordingStatus('done');
       return;
     }
+
+    // Nếu recorder lỗi nhưng STT vẫn hỗ trợ -> cho phép học sinh đọc bình thường, chỉ báo nhẹ không có phát lại âm thanh
+    if (!recorderStarted && sttAvailable) {
+      setMicError('Lưu ý: Không thể lưu file nghe lại, nhưng AI vẫn đang lắng nghe và chấm điểm phát âm cho em!');
+    }
+
     updateRecordingStatus('recording');
 
     const run = ++sttRun.current;
 
     // Nhận diện giọng nói STT
-    if (isSttSupported()) {
+    if (sttAvailable) {
       const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 10000 });
       sttControllerRef.current = ctrl;
 
@@ -298,8 +325,12 @@ export default function SpeakingStation({ unit, onFinish }) {
         if (run !== sttRun.current) return;
         // Dừng audio recorder một lần duy nhất nếu chưa dừng
         let url = recordedAudioUrlRef.current;
-        if (!url && recorder.current) {
-          url = await recorder.current.stop();
+        if (!url && recorder.current && recorderStarted) {
+          try {
+            url = await recorder.current.stop();
+          } catch {
+            url = null;
+          }
           recordedAudioUrlRef.current = url;
           setAudioUrl(url);
         }
@@ -323,7 +354,11 @@ export default function SpeakingStation({ unit, onFinish }) {
     // Dừng thu âm một lần duy nhất và lưu audioUrl
     let url = recordedAudioUrlRef.current;
     if (!url && recorder.current) {
-      url = await recorder.current.stop();
+      try {
+        url = await recorder.current.stop();
+      } catch {
+        url = null;
+      }
       recordedAudioUrlRef.current = url;
       setAudioUrl(url);
     }
@@ -924,13 +959,8 @@ export default function SpeakingStation({ unit, onFinish }) {
                           <div className="flex flex-col items-center gap-3">
                             <button
                               type="button"
-                              disabled={isComputerSpeaking}
                               onClick={startRecord}
-                              className={`inline-flex h-24 w-24 items-center justify-center rounded-full text-white shadow-[0_7px_0_var(--color-peach-dark)] transition-all cursor-pointer ${
-                                isComputerSpeaking
-                                  ? 'bg-ink/30 cursor-not-allowed opacity-50'
-                                  : 'bg-peach hover:-translate-y-1 active:translate-y-1 active:shadow-none'
-                              }`}
+                              className="inline-flex h-24 w-24 items-center justify-center rounded-full text-white shadow-[0_7px_0_var(--color-peach-dark)] transition-all cursor-pointer bg-peach hover:-translate-y-1 active:translate-y-1 active:shadow-none"
                               title="Bấm vào micro để nói"
                             >
                               <Mic className="h-11 w-11" />

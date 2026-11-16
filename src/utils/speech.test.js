@@ -25,7 +25,8 @@ class FakeAudio {
 }
 globalThis.Audio = FakeAudio;
 
-const { sayWord, speak, stopSpeaking, mp3Rate, recognizeOnce, isSttSupported } = await import('./speech.js');
+const { sayWord, speak, stopSpeaking, mp3Rate, recognizeOnce, isSttSupported, playAudioFile } = await import('./speech.js');
+import { createRecorder } from './recorder.js';
 const tick = () => new Promise((r) => setTimeout(r, 0));
 
 beforeEach(() => {
@@ -82,6 +83,12 @@ describe('speech: điều phối lượt phát', () => {
     expect(played[1].src).toContain('dictvoice'); // cụm ngắn → thử Youdao
     played[1].emit('ended');
     expect(await p).toBe(true);
+  });
+
+  it('sayWord tôn trọng settings.sound === false', async () => {
+    const res = await sayWord({ word: 'cat', audio: '/assets/audio/cat.mp3' }, { sound: false });
+    expect(res).toBe(false);
+    expect(played).toHaveLength(0);
   });
 });
 
@@ -167,5 +174,164 @@ describe('speech: recognizeOnce STT controller', () => {
     expect(result).toBeNull();
 
     delete globalThis.SpeechRecognition;
+  });
+});
+
+describe('speech: audio timeout and fast fallback', () => {
+  it('remote HTTP audio times out after 2200ms and returns false without hanging', async () => {
+    vi.useFakeTimers();
+    let resolved = false;
+    let res = null;
+    playAudioFile('https://dict.youdao.com/dictvoice?audio=pencil').then((val) => {
+      resolved = true;
+      res = val;
+    });
+
+    // Advance 2100ms: still waiting
+    await vi.advanceTimersByTimeAsync(2100);
+    expect(resolved).toBe(false);
+
+    // Advance past 2200ms: timeout fires and resolves false
+    await vi.advanceTimersByTimeAsync(200);
+    expect(resolved).toBe(true);
+    expect(res).toBe(false);
+
+    vi.useRealTimers();
+  });
+
+  it('local audio file timeout allows up to 6000ms', async () => {
+    vi.useFakeTimers();
+    let resolved = false;
+    let res = null;
+    playAudioFile('/assets/audio/unit1/pencil.mp3').then((val) => {
+      resolved = true;
+      res = val;
+    });
+
+    // Advance 2500ms: local file should not time out
+    await vi.advanceTimersByTimeAsync(2500);
+    expect(resolved).toBe(false);
+
+    // Advance past 6000ms: timeout fires
+    await vi.advanceTimersByTimeAsync(3600);
+    expect(resolved).toBe(true);
+    expect(res).toBe(false);
+
+    vi.useRealTimers();
+  });
+});
+
+describe('speech: speech cancellation recovery & keepalive', () => {
+  it('recovers from pause state, waits 40ms to settle Chromium cancel race, and runs keepalive', async () => {
+    let resumeCount = 0;
+    let spokeUtterance = null;
+    const mockSynth = {
+      speaking: false,
+      pending: false,
+      paused: true,
+      resume: vi.fn(() => {
+        resumeCount++;
+        mockSynth.paused = false;
+      }),
+      cancel: vi.fn(),
+      speak: vi.fn((u) => {
+        spokeUtterance = u;
+      }),
+      getVoices: () => [{ lang: 'en-GB', name: 'Google UK English' }],
+    };
+
+    class MockUtterance {
+      constructor(text) {
+        this.text = text;
+        this.onstart = null;
+        this.onend = null;
+        this.onerror = null;
+      }
+    }
+
+    globalThis.speechSynthesis = mockSynth;
+    globalThis.SpeechSynthesisUtterance = MockUtterance;
+
+    const p = speak('Testing speech cancellation recovery and keepalive');
+    await new Promise((r) => setTimeout(r, 60));
+
+    expect(mockSynth.resume).toHaveBeenCalled();
+    expect(mockSynth.speak).toHaveBeenCalled();
+    expect(spokeUtterance).not.toBeNull();
+
+    // Trigger onstart -> keepalive should be scheduled
+    mockSynth.paused = true;
+    spokeUtterance.onstart?.();
+
+    // Advance time to verify keepalive interval fires
+    await new Promise((r) => setTimeout(r, 2100));
+    expect(resumeCount).toBeGreaterThanOrEqual(2);
+
+    // End utterance
+    spokeUtterance.onend?.();
+    const result = await p;
+    expect(result).toBe(true);
+
+    delete globalThis.speechSynthesis;
+    delete globalThis.SpeechSynthesisUtterance;
+  });
+});
+
+describe('speech: recorder live track handling', () => {
+  it('requests new media stream if current tracks are ended, and reuses when live', async () => {
+    let getUserMediaCalls = 0;
+    const track = {
+      kind: 'audio',
+      readyState: 'ended',
+      stop: vi.fn(),
+    };
+    const origNav = globalThis.navigator;
+    const origMR = globalThis.MediaRecorder;
+
+    Object.defineProperty(globalThis, 'navigator', {
+      value: {
+        mediaDevices: {
+          getUserMedia: vi.fn(async () => {
+            getUserMediaCalls++;
+            return {
+              getAudioTracks: () => [track],
+              getTracks: () => [track],
+            };
+          }),
+        },
+      },
+      configurable: true,
+      writable: true,
+    });
+    globalThis.MediaRecorder = class {
+      constructor() {
+        this.state = 'inactive';
+      }
+      start() { this.state = 'recording'; }
+      stop() { this.state = 'inactive'; }
+      static isTypeSupported() { return true; }
+    };
+
+    const rec = createRecorder();
+    await rec.start();
+    expect(getUserMediaCalls).toBe(1);
+
+    // Still ended -> calling start again must re-acquire getUserMedia
+    track.readyState = 'ended';
+    await rec.start();
+    expect(getUserMediaCalls).toBe(2);
+
+    // Live track -> calling start again reuses without re-acquiring
+    track.readyState = 'live';
+    await rec.start();
+    expect(getUserMediaCalls).toBe(2);
+
+    rec.release();
+    Object.defineProperty(globalThis, 'navigator', {
+      value: origNav,
+      configurable: true,
+      writable: true,
+    });
+    globalThis.MediaRecorder = origMR;
   });
 });

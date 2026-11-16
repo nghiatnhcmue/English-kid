@@ -8,7 +8,7 @@ import { playSfx } from '../utils/sfx.js';
 import { Button3D } from '../components/ui.jsx';
 import { t } from '../i18n/vi.js';
 import { useSettings } from '../settings.jsx';
-import { sayWord } from '../utils/speech.js';
+import { sayWord, speak } from '../utils/speech.js';
 import PdfReaderModal from '../components/PdfReaderModal.jsx';
 import multiGradeCurriculum from '../data/multiGradeCurriculum.json';
 
@@ -17,8 +17,9 @@ import AssignmentQuizModal from '../components/AssignmentQuizModal.jsx';
 
 const ALL_GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-const speakWord = (word) => {
-  sayWord(word, { lang: 'en-GB', rate: 0.85 });
+export const speakWord = async (word) => {
+  if (!word) return;
+  return speak(word, { lang: 'en-GB', rate: 0.85 });
 };
 
 export default function HomePage() {
@@ -36,6 +37,17 @@ export default function HomePage() {
   const [semesterFilter, setSemesterFilter] = useState('all'); // 'all' | 1 | 2
   const [showPdfReaderModal, setShowPdfReaderModal] = useState(false);
   const [selectedBookForReader, setSelectedBookForReader] = useState('tap1');
+  const [activeSpeakingWord, setActiveSpeakingWord] = useState(null);
+
+  const handleSpeakWord = async (word) => {
+    if (!word) return;
+    setActiveSpeakingWord(word);
+    try {
+      await speakWord(word);
+    } finally {
+      setActiveSpeakingWord(null);
+    }
+  };
 
   useEffect(() => {
     setSemesterFilter('all');
@@ -618,23 +630,35 @@ export default function HomePage() {
                             <span>Từ vựng trọng tâm ({u.keyVocab.length} từ):</span>
                           </div>
                           <div className="flex flex-wrap gap-1.5">
-                            {u.keyVocab.map((word, idx) => (
-                              <button
-                                key={idx}
-                                type="button"
-                                onClick={() => {
-                                  speakWord(word);
-                                  playSfx('click');
-                                }}
-                                title={`Bấm để nghe phát âm Anh - Anh: "${word}"`}
-                                className="group inline-flex items-center gap-1.5 rounded-xl bg-white px-2.5 py-1 text-xs font-extrabold text-ink border border-banana-soft shadow-2xs hover:bg-banana hover:border-banana-dark hover:scale-105 active:scale-95 transition-all cursor-pointer"
-                              >
-                                <span>{word}</span>
-                                <span className="text-[11px] text-peach-dark group-hover:text-ink transition-colors" aria-hidden>
-                                  🔊
-                                </span>
-                              </button>
-                            ))}
+                            {u.keyVocab.map((word, idx) => {
+                              const isSpeaking = activeSpeakingWord === word;
+                              return (
+                                <button
+                                  key={idx}
+                                  type="button"
+                                  onClick={() => {
+                                    handleSpeakWord(word);
+                                    playSfx('click');
+                                  }}
+                                  title={`Bấm để nghe phát âm Anh - Anh: "${word}"`}
+                                  className={`group inline-flex items-center gap-1.5 rounded-xl px-2.5 py-1 text-xs font-extrabold border shadow-2xs hover:scale-105 active:scale-95 transition-all cursor-pointer ${
+                                    isSpeaking
+                                      ? 'bg-peach text-white border-peach-dark scale-105 animate-pulse'
+                                      : 'bg-white text-ink border-banana-soft hover:bg-banana hover:border-banana-dark'
+                                  }`}
+                                >
+                                  <span>{word}</span>
+                                  <span
+                                    className={`text-[11px] ${
+                                      isSpeaking ? 'text-white' : 'text-peach-dark group-hover:text-ink'
+                                    } transition-colors`}
+                                    aria-hidden
+                                  >
+                                    🔊
+                                  </span>
+                                </button>
+                              );
+                            })}
                           </div>
                         </div>
                       )}

@@ -40,7 +40,8 @@ import {
 import multiGradeCurriculum from '../data/multiGradeCurriculum.json';
 
 // Speech & Scoring
-import { recognizeOnce, isSttSupported, stopSpeaking } from './speech.js';
+import { recognizeOnce, isSttSupported, stopSpeaking, playAudioFile, speak } from './speech.js';
+import { createRecorder } from './recorder.js';
 import { similarity, speakingLevel } from './scene.js';
 import { compareWords } from '../components/stations/SpeakingStation.jsx';
 
@@ -297,6 +298,150 @@ describe('System Audit Checklist (10-Point Verification)', () => {
       } finally {
         delete globalThis.SpeechRecognition;
       }
+    });
+
+    it('enforces fast 2.2s timeout on remote audio vs 6.0s on local audio to prevent hanging', async () => {
+      const origAudio = globalThis.Audio;
+      class AuditFakeAudio {
+        constructor(src) {
+          this.src = src;
+          this.listeners = {};
+          this.playbackRate = 1;
+        }
+        addEventListener(type, fn) {
+          (this.listeners[type] ||= []).push(fn);
+        }
+        play() {
+          return Promise.resolve();
+        }
+        pause() {}
+      }
+      globalThis.Audio = AuditFakeAudio;
+
+      vi.useFakeTimers();
+      let remoteResolved = false;
+      playAudioFile('https://dict.youdao.com/dictvoice?audio=umbrella').then(() => {
+        remoteResolved = true;
+      });
+
+      await vi.advanceTimersByTimeAsync(2100);
+      expect(remoteResolved).toBe(false);
+
+      await vi.advanceTimersByTimeAsync(150);
+      expect(remoteResolved).toBe(true);
+
+      let localResolved = false;
+      playAudioFile('/assets/audio/unit1/umbrella.mp3').then(() => {
+        localResolved = true;
+      });
+
+      await vi.advanceTimersByTimeAsync(2500);
+      expect(localResolved).toBe(false);
+
+      await vi.advanceTimersByTimeAsync(3600);
+      expect(localResolved).toBe(true);
+
+      vi.useRealTimers();
+      globalThis.Audio = origAudio;
+    });
+
+    it('recovers speech synthesis from pause and sets keepalive interval', async () => {
+      let resumed = false;
+      let spokenUtterance = null;
+      const mockSynth = {
+        speaking: false,
+        pending: false,
+        paused: true,
+        resume: vi.fn(() => {
+          resumed = true;
+          mockSynth.paused = false;
+        }),
+        cancel: vi.fn(),
+        speak: vi.fn((u) => {
+          spokenUtterance = u;
+        }),
+        getVoices: () => [{ lang: 'en-GB', name: 'Google UK English' }],
+      };
+
+      class MockUtterance {
+        constructor(text) {
+          this.text = text;
+        }
+      }
+
+      globalThis.speechSynthesis = mockSynth;
+      globalThis.SpeechSynthesisUtterance = MockUtterance;
+
+      const p = speak('Verification of speech cancellation recovery in system audit');
+      await new Promise((r) => setTimeout(r, 60));
+
+      expect(mockSynth.resume).toHaveBeenCalled();
+      expect(mockSynth.speak).toHaveBeenCalled();
+      expect(resumed).toBe(true);
+
+      spokenUtterance?.onend?.();
+      await p;
+
+      delete globalThis.speechSynthesis;
+      delete globalThis.SpeechSynthesisUtterance;
+    });
+
+    it('recorder checks for live track and does not reuse ended streams', async () => {
+      let getUserMediaCount = 0;
+      const track = {
+        kind: 'audio',
+        readyState: 'ended',
+        stop: vi.fn(),
+      };
+      const origNav = globalThis.navigator;
+      const origMR = globalThis.MediaRecorder;
+
+      Object.defineProperty(globalThis, 'navigator', {
+        value: {
+          mediaDevices: {
+            getUserMedia: vi.fn(async () => {
+              getUserMediaCount++;
+              return {
+                getAudioTracks: () => [track],
+                getTracks: () => [track],
+              };
+            }),
+          },
+        },
+        configurable: true,
+        writable: true,
+      });
+
+      globalThis.MediaRecorder = class {
+        constructor() {
+          this.state = 'inactive';
+        }
+        start() { this.state = 'recording'; }
+        stop() { this.state = 'inactive'; }
+        static isTypeSupported() { return true; }
+      };
+
+      const recorder = createRecorder();
+      await recorder.start();
+      expect(getUserMediaCount).toBe(1);
+
+      // Dead track -> start() must call getUserMedia again
+      track.readyState = 'ended';
+      await recorder.start();
+      expect(getUserMediaCount).toBe(2);
+
+      // Live track -> start() reuses stream
+      track.readyState = 'live';
+      await recorder.start();
+      expect(getUserMediaCount).toBe(2);
+
+      recorder.release();
+      Object.defineProperty(globalThis, 'navigator', {
+        value: origNav,
+        configurable: true,
+        writable: true,
+      });
+      globalThis.MediaRecorder = origMR;
     });
   });
 

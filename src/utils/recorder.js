@@ -14,15 +14,28 @@ export function createRecorder() {
   let recorder = null;
   let chunks = [];
   let lastUrl = null;
+  let activeMimeType = null;
 
   return {
     /** Bắt đầu ghi. Trả về { ok: true } hoặc { ok: false, message }. */
     async start() {
       if (!isRecordingSupported()) return { ok: false, message: MESSAGES.default };
       try {
-        stream ??= await navigator.mediaDevices.getUserMedia({ audio: true });
+        const isLive = stream && stream.getAudioTracks().some((t) => t.readyState === 'live');
+        if (!isLive) {
+          stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        }
         chunks = [];
-        recorder = new MediaRecorder(stream);
+        const candidateTypes = [
+          'audio/webm;codecs=opus',
+          'audio/webm',
+          'audio/mp4',
+          'audio/aac',
+          'audio/ogg;codecs=opus',
+        ];
+        const mimeType = candidateTypes.find((t) => typeof MediaRecorder !== 'undefined' && MediaRecorder.isTypeSupported?.(t));
+        activeMimeType = mimeType;
+        recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined);
         recorder.ondataavailable = (e) => e.data.size && chunks.push(e.data);
         recorder.start();
         return { ok: true };
@@ -36,7 +49,8 @@ export function createRecorder() {
         if (!recorder || recorder.state === 'inactive') return resolve(null);
         recorder.onstop = () => {
           if (lastUrl) URL.revokeObjectURL(lastUrl);
-          lastUrl = chunks.length ? URL.createObjectURL(new Blob(chunks, { type: recorder.mimeType || 'audio/webm' })) : null;
+          const type = recorder.mimeType || activeMimeType || 'audio/webm';
+          lastUrl = chunks.length ? URL.createObjectURL(new Blob(chunks, { type })) : null;
           resolve(lastUrl);
         };
         recorder.stop();

@@ -6,9 +6,20 @@
 // Mỗi lần bấm loa tạo một "lượt" mới. Lượt cũ bị hủy ngay (kể cả lần đọc chậm slowToo đang chờ),
 // nên lướt thẻ nhanh không bao giờ làm từ cũ tự phát lại sau đó.
 
-const synth = typeof window !== 'undefined' ? window.speechSynthesis : undefined;
+const getSynth = () => {
+  if (typeof window !== 'undefined' && window.speechSynthesis) return window.speechSynthesis;
+  if (typeof globalThis !== 'undefined' && globalThis.speechSynthesis) return globalThis.speechSynthesis;
+  return undefined;
+};
 
-export const isTtsSupported = () => !!synth && typeof SpeechSynthesisUtterance !== 'undefined';
+const getUtteranceClass = () => {
+  if (typeof SpeechSynthesisUtterance !== 'undefined') return SpeechSynthesisUtterance;
+  if (typeof window !== 'undefined' && window.SpeechSynthesisUtterance) return window.SpeechSynthesisUtterance;
+  if (typeof globalThis !== 'undefined' && globalThis.SpeechSynthesisUtterance) return globalThis.SpeechSynthesisUtterance;
+  return undefined;
+};
+
+export const isTtsSupported = () => !!getSynth() && !!getUtteranceClass();
 
 const DEFAULT_RATE = 0.85; // tốc độ TTS mặc định trong Cài đặt
 const SLOW_MP3_RATE = 0.7;
@@ -32,6 +43,7 @@ function haltCurrent() {
     currentAudio = null;
   }
   try {
+    const synth = getSynth();
     if (synth && (synth.speaking || synth.pending)) synth.cancel();
   } catch {
     /* bỏ qua */
@@ -64,11 +76,12 @@ let voicesPromise;
 export function loadVoices() {
   if (!isTtsSupported()) return Promise.resolve([]);
   if (voicesPromise) return voicesPromise;
+  const synth = getSynth();
   voicesPromise = new Promise((resolve) => {
-    const now = synth.getVoices();
+    const now = synth?.getVoices?.() || [];
     if (now.length) return resolve(now);
-    const done = () => resolve(synth.getVoices());
-    synth.addEventListener?.('voiceschanged', done, { once: true });
+    const done = () => resolve(synth?.getVoices?.() || []);
+    synth?.addEventListener?.('voiceschanged', done, { once: true });
     setTimeout(done, 1500);
   }).then((voices) => {
     if (!voices.length) voicesPromise = undefined;
@@ -117,7 +130,7 @@ function warmCache(src) {
 }
 
 /** Phát một file / stream. Kết quả: true (xong), false (lỗi nguồn), null (bị hủy) */
-function playAudioFile(src, playbackRate = 1) {
+export function playAudioFile(src, playbackRate = 1) {
   return new Promise((resolve) => {
     if (!src) {
       resolve(false);
@@ -125,6 +138,7 @@ function playAudioFile(src, playbackRate = 1) {
     }
     haltCurrent();
 
+    const isRemote = /^https?:\/\//i.test(src);
     const a = new Audio(src);
     currentAudio = a;
     let timer = null;
@@ -135,6 +149,11 @@ function playAudioFile(src, playbackRate = 1) {
       if (settleCurrent === finish) settleCurrent = null;
       clearTimeout(timer);
       if (currentAudio === a) currentAudio = null;
+      try {
+        a.pause();
+      } catch {
+        /* bỏ qua */
+      }
       resolve(value);
     };
     settleCurrent = finish;
@@ -147,8 +166,8 @@ function playAudioFile(src, playbackRate = 1) {
       }
     };
     applyRate();
-    // Chờ tải tối đa 12 giây; biết thời lượng rồi thì chờ đúng thời lượng + 2 giây
-    timer = setTimeout(() => finish(false), 12000);
+    // Chờ tải tối đa: URL từ xa (Youdao...) chờ tối đa 2200ms để fallback nhanh sang TTS; file nội bộ (/assets/audio/...) chờ 6000ms
+    timer = setTimeout(() => finish(false), isRemote ? 2200 : 6000);
     a.addEventListener('loadedmetadata', () => {
       applyRate();
       if (Number.isFinite(a.duration) && a.duration > 0) {
@@ -169,32 +188,71 @@ function playAudioFile(src, playbackRate = 1) {
 /** Đọc bằng Web Speech API. Kết quả: true / false / null (bị hủy) */
 async function speakTts(text, { lang = 'en-GB', rate = DEFAULT_RATE } = {}, alive = () => true) {
   if (!isTtsSupported() || !text) return false;
-  let voices = synth.getVoices();
+  const synth = getSynth();
+  const Utterance = getUtteranceClass();
+  let voices = synth?.getVoices?.() || [];
   if (!voices.length) voices = await loadVoices();
   if (!alive()) return CANCELLED;
   haltCurrent();
+  // Fix Chromium synth.cancel() bug: khi hủy lượt phát trước, synth giải phóng bất đồng bộ.
+  // Thêm một khoảng chờ 40ms trước synth.speak(u) để Chrome không tự động hủy utterance mới.
+  await new Promise((r) => setTimeout(r, 40));
+  if (!alive()) return CANCELLED;
+
   return new Promise((resolve) => {
-    const u = new SpeechSynthesisUtterance(text);
+    const u = new Utterance(text);
     activeUtterance = u;
     const voice = pickVoice(voices, lang);
     if (voice) u.voice = voice;
     u.lang = voice?.lang ?? lang;
     u.rate = Math.min(1.5, Math.max(0.5, rate));
+
     let timer = null;
+    let keepAliveTimer = null;
     let done = false;
+
+    const cleanup = () => {
+      clearTimeout(timer);
+      clearInterval(keepAliveTimer);
+      timer = null;
+      keepAliveTimer = null;
+      if (u) {
+        u.onstart = null;
+        u.onend = null;
+        u.onerror = null;
+      }
+    };
+
     const finish = (value) => {
       if (done) return;
       done = true;
+      cleanup();
       if (settleCurrent === finish) settleCurrent = null;
-      clearTimeout(timer);
       if (activeUtterance === u) activeUtterance = null;
       resolve(value);
     };
     settleCurrent = finish;
+
+    // Giữ kết nối TTS trên Chrome: các đoạn đọc dài (>15s) thường bị Chrome tự động tạm dừng.
+    // Interval 2000ms gọi resume() duy trì mạch phát đến khi onend/onerror.
+    u.onstart = () => {
+      if (done) return;
+      clearInterval(keepAliveTimer);
+      keepAliveTimer = setInterval(() => {
+        try {
+          const s = getSynth();
+          if (s && s.paused) s.resume();
+        } catch {
+          /* bỏ qua */
+        }
+      }, 2000);
+    };
+
     u.onend = () => finish(true);
     u.onerror = (e) => finish(e?.error === 'interrupted' || e?.error === 'canceled' ? CANCELLED : false);
+
     try {
-      if (synth.paused) synth.resume();
+      if (synth && synth.paused) synth.resume();
       synth.speak(u);
     } catch {
       finish(false);
@@ -211,7 +269,8 @@ const isShort = (text) => text.trim().split(/\s+/).length <= 3;
  * Đọc câu / đoạn văn: file mp3 (nếu có) → Youdao (cụm ≤ 3 từ) → TTS.
  * `slow: true` hoặc rate ≤ 0.7 = đọc chậm.
  */
-export async function speak(text, { lang = 'en-GB', rate = DEFAULT_RATE, audio = null, slow = false } = {}) {
+export async function speak(text, { lang = 'en-GB', rate = DEFAULT_RATE, audio = null, slow = false, sound = true } = {}) {
+  if (sound === false) return false;
   const clean = (text || '').trim();
   if (!clean && !audio) return false;
   const alive = beginTurn();
@@ -237,11 +296,12 @@ const pause = (ms) => new Promise((r) => setTimeout(r, ms));
  * slowToo: đọc thường xong đọc chậm thêm một lần; bị hủy giữa chừng thì không đọc lần 2.
  */
 export async function sayWord(word, settings = {}, { slowToo = false, slow = false } = {}) {
+  if (settings && settings.sound === false) return false;
   const text = (typeof word === 'string' ? word : word?.word || '').trim();
   const audio = typeof word === 'object' ? word?.audio || null : null;
   if (!text && !audio) return false;
-  const lang = settings.lang || 'en-GB';
-  const rate = settings.rate || DEFAULT_RATE;
+  const lang = settings?.lang || 'en-GB';
+  const rate = settings?.rate || DEFAULT_RATE;
   const alive = beginTurn();
 
   const sources = [audio, text && getCloudTtsUrl(text, lang)].filter(Boolean);

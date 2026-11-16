@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Mic, Volume2, RotateCcw, Check, Sparkles } from 'lucide-react';
 import { Button3D, SpeakerButton, SlowSpeakerButton, Stars } from '../ui.jsx';
 import { createRecorder, isRecordingSupported } from '../../utils/recorder.js';
-import { isSttSupported, recognizeOnce, speak, playRecording } from '../../utils/speech.js';
+import { isSttSupported, recognizeOnce, speak, stopSpeaking, playRecording } from '../../utils/speech.js';
 import { similarity, speakingLevel } from '../../utils/scene.js';
 import { playSfx } from '../../utils/sfx.js';
 import { useSettings } from '../../settings.jsx';
@@ -40,6 +40,7 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     return () => {
       sttControllerRef.current?.abort?.();
       recorder.current?.release();
+      stopSpeaking();
     };
   }, []);
 
@@ -95,6 +96,7 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
 
   const startRecord = async () => {
     playSfx('click');
+    stopSpeaking();
     sttControllerRef.current?.abort?.();
     sttControllerRef.current = null;
     recordedAudioUrlRef.current = null;
@@ -104,24 +106,43 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     setRecognizedText(null);
     setSpeakScore(null);
 
-    const res = await recorder.current?.start();
-    if (!res.ok) {
+    const sttAvailable = isSttSupported();
+    let recorderStarted = false;
+
+    if (recorder.current) {
+      try {
+        const res = await recorder.current.start();
+        if (res && res.ok) {
+          recorderStarted = true;
+        }
+      } catch (err) {
+        console.warn('Recorder start error:', err);
+      }
+    }
+
+    // Nếu cả recorder lẫn STT đều không hoạt động
+    if (!recorderStarted && !sttAvailable) {
       updateRecordingStatus('done');
       return;
     }
+
     updateRecordingStatus('recording');
 
     const run = ++sttRun.current;
 
-    if (isSttSupported()) {
+    if (sttAvailable) {
       const ctrl = recognizeOnce({ lang: settings.lang || 'en-GB', timeoutMs: 9000 });
       sttControllerRef.current = ctrl;
 
       ctrl.promise.then(async (r) => {
         if (run !== sttRun.current) return;
         let url = recordedAudioUrlRef.current;
-        if (!url && recorder.current) {
-          url = await recorder.current.stop();
+        if (!url && recorder.current && recorderStarted) {
+          try {
+            url = await recorder.current.stop();
+          } catch {
+            url = null;
+          }
           recordedAudioUrlRef.current = url;
           setAudioUrl(url);
         }
@@ -143,7 +164,11 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
 
     let url = recordedAudioUrlRef.current;
     if (!url && recorder.current) {
-      url = await recorder.current.stop();
+      try {
+        url = await recorder.current.stop();
+      } catch {
+        url = null;
+      }
       recordedAudioUrlRef.current = url;
       setAudioUrl(url);
     }
