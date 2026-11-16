@@ -311,46 +311,46 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
           </div>
 
           {/* Nút bấm ghi âm */}
-          {recordingStatus !== 'done' && (
-            <div className="flex flex-col items-center gap-3 py-4">
-              {recordingStatus === 'evaluating' ? (
-                <div className="flex flex-col items-center gap-3 py-2">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
-                    <Sparkles className="h-8 w-8 text-peach animate-spin" />
-                  </div>
-                  <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
-                    <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
-                    <span>Đang chấm điểm AI... Em chờ một chút nhé! 🤖✨</span>
-                  </div>
+          <div className="flex flex-col items-center gap-3 py-4">
+            {recordingStatus === 'evaluating' ? (
+              <div className="flex flex-col items-center gap-3 py-2">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                  <Sparkles className="h-8 w-8 text-peach animate-spin" />
                 </div>
-              ) : recordingStatus === 'recording' ? (
-                <button
-                  type="button"
-                  onClick={stopRecord}
-                  className="animate-pulse inline-flex h-20 w-20 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg cursor-pointer touch-manipulation select-none"
-                  title="Bấm để dừng ghi âm"
-                >
-                  <div className="h-7 w-7 rounded-md bg-white" />
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={startRecord}
-                  className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-peach text-white shadow-[0_6px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
-                  title="Bấm vào để đọc"
-                >
-                  <Mic className="h-9 w-9" />
-                </button>
-              )}
-              <p className="text-sm font-bold text-ink-soft">
-                {recordingStatus === 'evaluating'
-                  ? 'Đang phân tích phát âm...'
-                  : recordingStatus === 'recording'
-                  ? '🔴 Đang lắng nghe... Em nói to vào micro nhé!'
-                  : 'Bấm vào Micro và đọc to câu trên'}
-              </p>
-            </div>
-          )}
+                <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                  <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
+                  <span>Đang chấm điểm AI... Em chờ một chút nhé! 🤖✨</span>
+                </div>
+              </div>
+            ) : recordingStatus === 'recording' ? (
+              <button
+                type="button"
+                onClick={stopRecord}
+                className="animate-pulse inline-flex h-20 w-20 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg cursor-pointer touch-manipulation select-none"
+                title="Bấm để dừng ghi âm"
+              >
+                <div className="h-7 w-7 rounded-md bg-white" />
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={startRecord}
+                className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-peach text-white shadow-[0_6px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
+                title={recordingStatus === 'done' ? "Bấm vào để đọc lại" : "Bấm vào để đọc"}
+              >
+                <Mic className="h-9 w-9" />
+              </button>
+            )}
+            <p className="text-sm font-bold text-ink-soft">
+              {recordingStatus === 'evaluating'
+                ? 'Đang phân tích phát âm...'
+                : recordingStatus === 'recording'
+                ? '🔴 Đang lắng nghe... Em nói to vào micro nhé!'
+                : recordingStatus === 'done'
+                ? 'Bấm vào Micro để luyện đọc lại'
+                : 'Bấm vào Micro và đọc to câu trên'}
+            </p>
+          </div>
 
           {/* Kết quả nhận diện & Nghe lại giọng mình */}
           {recordingStatus === 'done' && (

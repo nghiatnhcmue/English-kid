@@ -170,9 +170,22 @@ export default function SpeakingStation({ unit, onFinish }) {
 
   // Reset trạng thái chấm điểm khi chuyển câu
   const resetRecordingState = () => {
+    // 1. Tăng sttRun để vô hiệu hóa lập tức mọi callback Promise/setTimeout đang bay từ lượt trước
+    sttRun.current += 1;
     sttControllerRef.current?.abort?.();
     sttControllerRef.current = null;
     recordedAudioUrlRef.current = null;
+
+    // 2. Dừng micro an toàn nếu đang chạy
+    if (recorder.current) {
+      try {
+        recorder.current.stop();
+      } catch {
+        /* bỏ qua */
+      }
+    }
+
+    // 3. Khôi phục trạng thái chuẩn bị thu âm cho lượt mới
     updateRecordingStatus('idle');
     setAudioUrl(null);
     setRecognizedText(null);
@@ -226,6 +239,14 @@ export default function SpeakingStation({ unit, onFinish }) {
     stopSpeaking();
     setSelectedDialogueIdx(idx);
     resetRecordingState();
+    const prevTurn = turnScores[idx];
+    if (prevTurn) {
+      setScorePercent(prevTurn.score);
+      setStars(prevTurn.stars);
+      setRecognizedText(prevTurn.spokenText);
+      setAudioUrl(prevTurn.audioUrl);
+      updateRecordingStatus('done');
+    }
   };
 
   const handleSelectSentence = (idx) => {
@@ -247,8 +268,17 @@ export default function SpeakingStation({ unit, onFinish }) {
     playSfx('click');
     stopSpeaking();
     if (selectedDialogueIdx + 1 < dialogueLines.length) {
-      setSelectedDialogueIdx((prev) => prev + 1);
+      const nextIdx = selectedDialogueIdx + 1;
+      setSelectedDialogueIdx(nextIdx);
       resetRecordingState();
+      const prevTurn = turnScores[nextIdx];
+      if (prevTurn) {
+        setScorePercent(prevTurn.score);
+        setStars(prevTurn.stars);
+        setRecognizedText(prevTurn.spokenText);
+        setAudioUrl(prevTurn.audioUrl);
+        updateRecordingStatus('done');
+      }
     } else {
       // Đã hoàn thành toàn bộ đoạn hội thoại
       setIsRoleplayFinished(true);
@@ -315,6 +345,7 @@ export default function SpeakingStation({ unit, onFinish }) {
     }
 
     const run = ++sttRun.current;
+    const sentenceToEvaluate = currentTarget.sentenceEn;
 
     // Nhận diện giọng nói STT
     if (sttAvailable) {
@@ -334,7 +365,7 @@ export default function SpeakingStation({ unit, onFinish }) {
           recordedAudioUrlRef.current = url;
           setAudioUrl(url);
         }
-        evaluateSpokenResult(r?.transcripts || [], url);
+        evaluateSpokenResult(r?.transcripts || [], url, sentenceToEvaluate);
       });
     } else {
       setTimeout(async () => {
@@ -350,6 +381,7 @@ export default function SpeakingStation({ unit, onFinish }) {
   const stopRecord = async () => {
     if (recordingStatusRef.current !== 'recording') return;
     updateRecordingStatus('evaluating');
+    const sentenceToEvaluate = currentTarget.sentenceEn;
 
     // Dừng thu âm một lần duy nhất và lưu audioUrl
     let url = recordedAudioUrlRef.current;
@@ -370,11 +402,11 @@ export default function SpeakingStation({ unit, onFinish }) {
       const run = sttRun.current;
       setTimeout(() => {
         if (run === sttRun.current && recordingStatusRef.current === 'evaluating') {
-          evaluateSpokenResult([], recordedAudioUrlRef.current);
+          evaluateSpokenResult([], recordedAudioUrlRef.current, sentenceToEvaluate);
         }
       }, 2500);
     } else {
-      evaluateSpokenResult([], url);
+      evaluateSpokenResult([], url, sentenceToEvaluate);
     }
   };
 
@@ -401,9 +433,9 @@ export default function SpeakingStation({ unit, onFinish }) {
   };
 
   // Đánh giá kết quả nhận diện giọng nói
-  const evaluateSpokenResult = (transcripts, url) => {
+  const evaluateSpokenResult = (transcripts, url, explicitTarget = null) => {
     updateRecordingStatus('done');
-    const target = currentTarget.sentenceEn;
+    const target = explicitTarget || currentTarget.sentenceEn;
     const duration = Date.now() - recordStartTimeRef.current;
     const resolvedUrl = url || recordedAudioUrlRef.current;
 
@@ -915,14 +947,18 @@ export default function SpeakingStation({ unit, onFinish }) {
 
                       {/* Nghe mẫu trước */}
                       <div className="flex flex-wrap items-center justify-center gap-3">
-                        <div className="flex items-center gap-2 rounded-2xl bg-cream p-2 border border-banana-soft shadow-xs">
-                          <SpeakerButton text={currentTarget.sentenceEn} audio={currentTarget.audio} size="md" />
-                          <span className="text-xs sm:text-sm font-black text-ink pr-2">Nghe bản xứ mẫu</span>
-                        </div>
                         <button
                           type="button"
-                          onClick={() => speak(currentTarget.sentenceEn, { rate: 0.65, audio: currentTarget.audio })}
-                          className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-white px-4 text-xs sm:text-sm font-black text-ink shadow-xs border border-banana-soft hover:bg-cream cursor-pointer"
+                          onClick={() => speak(currentTarget.sentenceEn, { lang: settings.lang || 'en-GB', audio: currentTarget.audio })}
+                          className="flex items-center gap-2 rounded-2xl bg-cream p-2 border border-banana-soft shadow-xs cursor-pointer hover:bg-banana-soft transition-all touch-manipulation select-none"
+                        >
+                          <SpeakerButton text={currentTarget.sentenceEn} audio={currentTarget.audio} size="md" />
+                          <span className="text-xs sm:text-sm font-black text-ink pr-2">Nghe bản xứ mẫu</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => speak(currentTarget.sentenceEn, { lang: settings.lang || 'en-GB', rate: 0.65, audio: currentTarget.audio })}
+                          className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-white px-4 text-xs sm:text-sm font-black text-ink shadow-xs border border-banana-soft hover:bg-cream cursor-pointer transition-all touch-manipulation select-none"
                         >
                           <span>🐢 Nghe chậm</span>
                         </button>
@@ -955,18 +991,20 @@ export default function SpeakingStation({ unit, onFinish }) {
                               <span>Đang thu âm... Em đọc to câu trên vào micro nhé!</span>
                             </div>
                           </div>
-                        ) : recordingStatus === 'done' ? null : (
+                        ) : (
                           <div className="flex flex-col items-center gap-3">
                             <button
                               type="button"
                               onClick={startRecord}
                               className="inline-flex h-24 w-24 items-center justify-center rounded-full text-white shadow-[0_7px_0_var(--color-peach-dark)] transition-all cursor-pointer bg-peach hover:-translate-y-1 active:translate-y-1 active:shadow-none touch-manipulation select-none"
-                              title="Bấm vào micro để nói"
+                              title={recordingStatus === 'done' ? "Bấm vào micro để đọc lại" : "Bấm vào micro để nói"}
                             >
                               <Mic className="h-11 w-11" />
                             </button>
                             <span className="text-base font-black text-ink">
-                              Bấm vào chiếc Micro màu cam và đọc to lời của em
+                              {recordingStatus === 'done'
+                                ? 'Bấm vào chiếc Micro màu cam để luyện đọc lại câu này'
+                                : 'Bấm vào chiếc Micro màu cam và đọc to lời của em'}
                             </span>
                             <span className="text-xs font-bold text-ink-soft">
                               (Máy sẽ tự động lắng nghe và chấm điểm phát âm cho em)
@@ -1208,16 +1246,19 @@ export default function SpeakingStation({ unit, onFinish }) {
                         <span>Đang thu âm... Em nói to vào micro nhé!</span>
                       </div>
                     </div>
-                  ) : recordingStatus === 'done' ? null : (
+                  ) : (
                     <div className="flex flex-col items-center gap-3">
                       <button
                         type="button"
                         onClick={startRecord}
                         className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-peach text-white shadow-[0_7px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
+                        title={recordingStatus === 'done' ? "Bấm micro để đọc lại" : "Bấm micro để nói"}
                       >
                         <Mic className="h-11 w-11" />
                       </button>
-                      <span className="text-base font-black text-ink">Bấm micro để đọc</span>
+                      <span className="text-base font-black text-ink">
+                        {recordingStatus === 'done' ? 'Bấm micro để đọc lại' : 'Bấm micro để đọc'}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -1374,16 +1415,19 @@ export default function SpeakingStation({ unit, onFinish }) {
                     <span>Đang thu âm... Em nói to vào micro nhé!</span>
                   </div>
                 </div>
-              ) : recordingStatus === 'done' ? null : (
+              ) : (
                 <div className="flex flex-col items-center gap-3">
                   <button
                     type="button"
                     onClick={startRecord}
                     className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-peach text-white shadow-[0_7px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
+                    title={recordingStatus === 'done' ? "Bấm micro để đọc lại" : "Bấm micro để nói"}
                   >
                     <Mic className="h-11 w-11" />
                   </button>
-                  <span className="text-base font-black text-ink">Bấm micro để nói</span>
+                  <span className="text-base font-black text-ink">
+                    {recordingStatus === 'done' ? 'Bấm micro để đọc lại' : 'Bấm micro để nói'}
+                  </span>
                 </div>
               )}
             </div>
@@ -1536,16 +1580,19 @@ export default function SpeakingStation({ unit, onFinish }) {
                   </button>
                   <span className="text-rose-600 font-black">Đang thu âm từ vựng...</span>
                 </div>
-              ) : recordingStatus === 'done' ? null : (
+              ) : (
                 <div className="flex flex-col items-center gap-3">
                   <button
                     type="button"
                     onClick={startRecord}
                     className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-banana text-ink shadow-[0_7px_0_#d8b13c] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
+                    title={recordingStatus === 'done' ? "Bấm micro để đọc lại" : "Bấm micro để nói"}
                   >
                     <Mic className="h-11 w-11" />
                   </button>
-                  <span className="text-base font-black text-ink">Bấm micro để đọc từ này</span>
+                  <span className="text-base font-black text-ink">
+                    {recordingStatus === 'done' ? 'Bấm micro để đọc lại từ này' : 'Bấm micro để đọc từ này'}
+                  </span>
                 </div>
               )}
             </div>
