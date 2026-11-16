@@ -141,4 +141,84 @@ describe('recorder: createRecorder & stream management', () => {
     expect(mockTracks[0].stop).toHaveBeenCalled();
     expect(globalThis.URL.revokeObjectURL).toHaveBeenCalledWith('blob:mock-audio-url');
   });
+
+  it('getAudioStats() trả về trạng thái hasVoice false ban đầu hoặc khi môi trường không có tiếng nói', async () => {
+    const rec = createRecorder();
+    await rec.start();
+    const stats = rec.getAudioStats();
+    expect(stats).toHaveProperty('hasVoice');
+    expect(stats).toHaveProperty('peakVolume');
+    expect(stats).toHaveProperty('voiceFrames');
+    expect(stats).toHaveProperty('totalFrames');
+    expect(stats.hasVoice).toBe(false);
+    rec.release();
+  });
+
+  it('tích hợp Web Audio API đo năng lượng âm thanh và phát hiện tiếng nói (VAD)', async () => {
+    let intervalCallback = null;
+    const originalSetInterval = globalThis.setInterval;
+    const originalAudioContext = globalThis.AudioContext;
+
+    class MockAnalyser {
+      constructor() {
+        this.fftSize = 256;
+        this.frequencyBinCount = 128;
+        this.smoothingTimeConstant = 0.2;
+      }
+      getByteFrequencyData(array) {
+        // Giả lập giọng nói có biên độ cao (avg = 20, max = 55)
+        for (let i = 0; i < array.length; i++) array[i] = 20;
+        array[0] = 60;
+      }
+    }
+
+    class MockAudioContext {
+      constructor() {
+        this.state = 'running';
+      }
+      createMediaStreamSource() {
+        return {
+          connect: vi.fn(),
+          disconnect: vi.fn(),
+        };
+      }
+      createAnalyser() {
+        return new MockAnalyser();
+      }
+      close() {
+        this.state = 'closed';
+      }
+    }
+
+    globalThis.AudioContext = MockAudioContext;
+    globalThis.setInterval = vi.fn((cb) => {
+      intervalCallback = cb;
+      return 1234;
+    });
+
+    try {
+      const rec = createRecorder();
+      await rec.start();
+
+      expect(rec.getAudioStats().hasVoice).toBe(false);
+
+      // Kích hoạt 4 khung hình âm thanh (vượt ngưỡng >= 3 khung hình)
+      if (intervalCallback) {
+        intervalCallback();
+        intervalCallback();
+        intervalCallback();
+        intervalCallback();
+      }
+
+      const stats = rec.getAudioStats();
+      expect(stats.hasVoice).toBe(true);
+      expect(stats.voiceFrames).toBe(4);
+      expect(stats.peakVolume).toBeGreaterThan(15);
+
+      rec.release();
+    } finally {
+      globalThis.AudioContext = originalAudioContext;
+      globalThis.setInterval = originalSetInterval;
+    }
+  });
 });

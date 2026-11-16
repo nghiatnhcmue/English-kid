@@ -55,27 +55,29 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     playSfx(correct ? 'correct' : 'wrong');
   };
 
-  const evaluateSpokenResult = (transcripts, url) => {
+  const evaluateSpokenResult = (transcripts, url, audioStats = null) => {
     updateRecordingStatus('done');
     const target = speaking?.targetSentence ?? '';
-    const duration = Date.now() - recordStartTimeRef.current;
-    const resolvedUrl = url || recordedAudioUrlRef.current;
+    const stats = audioStats || recorder.current?.getAudioStats?.() || { hasVoice: false };
 
+    // 1. Khi không có STT transcripts (im lặng hoặc mic bị tắt)
     if (!transcripts || !transcripts.length) {
-      if (duration >= 1200) {
-        setRecognizedText(target);
-        setSpeakScore(0.85);
-        setStars(3);
-        playSfx('correct');
-      } else {
-        setRecognizedText('(Chưa nhận diện rõ âm thanh, em thử nói lại nhé)');
-        setSpeakScore(0.4);
-        setStars(1);
+      if (!stats.hasVoice) {
+        setRecognizedText('(Không phát hiện giọng nói)');
+        setSpeakScore(0);
+        setStars(0);
         playSfx('wrong');
+        return;
       }
+
+      setRecognizedText('(Đã thu âm nhưng chưa nhận diện rõ từ tiếng Anh)');
+      setSpeakScore(0.35);
+      setStars(1);
+      playSfx('wrong');
       return;
     }
 
+    // 2. Chấm điểm thực tế 100%, KHÔNG nâng điểm khống
     const best = transcripts.reduce(
       (acc, tr) => {
         const s = similarity(tr, target);
@@ -84,15 +86,11 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
       { s: -1, tr: transcripts[0] },
     );
 
-    let score = best.s;
-    if (score < 0.5 && (resolvedUrl || duration >= 600)) {
-      score = 0.6;
-    }
-
+    const score = best.s;
     setRecognizedText(best.tr);
     setSpeakScore(score);
     const lvl = speakingLevel(score);
-    const earnedStars = lvl === 'great' ? 3 : lvl === 'close' ? 2 : 1;
+    const earnedStars = score === 0 ? 0 : lvl === 'great' ? 3 : lvl === 'close' ? 2 : 1;
     setStars(earnedStars);
     playSfx(lvl === 'retry' ? 'wrong' : 'correct');
   };
@@ -191,7 +189,8 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     }
 
     if (run === sttRun.current) {
-      evaluateSpokenResult(transcripts, url);
+      const stats = recorder.current?.getAudioStats?.() || { hasVoice: false };
+      evaluateSpokenResult(transcripts, url, stats);
     }
   };
 

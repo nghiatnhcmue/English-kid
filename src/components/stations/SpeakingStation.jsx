@@ -413,7 +413,8 @@ export default function SpeakingStation({ unit, onFinish }) {
     }
 
     if (run === sttRun.current) {
-      evaluateSpokenResult(transcripts, url, sentenceToEvaluate);
+      const stats = recorder.current?.getAudioStats?.() || { hasVoice: false };
+      evaluateSpokenResult(transcripts, url, sentenceToEvaluate, stats);
     }
   };
 
@@ -440,46 +441,47 @@ export default function SpeakingStation({ unit, onFinish }) {
   };
 
   // Đánh giá kết quả nhận diện giọng nói
-  const evaluateSpokenResult = (transcripts, url, explicitTarget = null) => {
+  const evaluateSpokenResult = (transcripts, url, explicitTarget = null, audioStats = null) => {
     updateRecordingStatus('done');
     const target = explicitTarget || currentTarget.sentenceEn;
-    const duration = Date.now() - recordStartTimeRef.current;
     const resolvedUrl = url || recordedAudioUrlRef.current;
+    const stats = audioStats || recorder.current?.getAudioStats?.() || { hasVoice: false };
+    const targetWords = (target || '').split(/\s+/).filter(Boolean);
 
-    // Khi STT không có transcript (Google Speech API bị chặn mạng ở VN, STT tắt hoặc rỗng)
+    // 1. Khi STT không có transcript (học sinh im lặng, tắt mic, hoặc STT không nghe được)
     if (!transcripts || !transcripts.length) {
-      // Nếu học sinh đã thực sự thu âm tiếng nói ít nhất 1.2 giây (thực sự có đọc)
-      if (duration >= 1200) {
-        const targetWords = (target || '').split(/\s+/).filter(Boolean);
-        const minExpected = Math.max(1500, targetWords.length * 280);
-        const effortScore = duration >= minExpected ? 85 : 80;
-        const earnedStars = effortScore >= 80 ? 3 : 2;
-
+      // VAD xác nhận KHÔNG CÓ GIỌNG NÓI (im lặng, tiếng ồn phòng nhỏ, hoặc chưa nói gì)
+      if (!stats.hasVoice) {
         const analysis = targetWords.map((origWord) => ({
           word: origWord,
-          matched: true,
+          matched: false,
         }));
 
-        setRecognizedText(target);
-        setScorePercent(effortScore);
-        setStars(earnedStars);
-        setFeedback('🌟 Đã ghi nhận giọng đọc của em! Âm lượng rõ ràng, phát âm rất tốt!');
-        playSfx('correct');
-        saveResultForCurrentTurn(effortScore, earnedStars, target, analysis, resolvedUrl);
+        setRecognizedText('(Không phát hiện giọng nói)');
+        setScorePercent(0);
+        setStars(0);
+        setFeedback('Micro chưa nghe thấy giọng của em. Em hãy kiểm tra micro và đọc to câu trên nhé!');
+        playSfx('wrong');
+        saveResultForCurrentTurn(0, 0, '', analysis, resolvedUrl);
         return;
       }
 
-      // Quá ngắn (< 1.2s): Bấm nhầm hoặc chưa kịp nói
-      setRecognizedText('(Chưa nhận diện rõ âm thanh, em thử nói to và gần micro hơn nhé)');
-      setScorePercent(40);
+      // Có giọng nói nhưng STT không phiên âm được từ tiếng Anh
+      const analysis = targetWords.map((origWord) => ({
+        word: origWord,
+        matched: false,
+      }));
+
+      setRecognizedText('(Đã thu âm nhưng chưa nhận diện rõ từ tiếng Anh)');
+      setScorePercent(35);
       setStars(1);
-      setFeedback('Chưa nghe rõ giọng em. Em hãy bấm Micro, đọc to câu trên rồi bấm Dừng nhé!');
+      setFeedback('Đã ghi nhận giọng đọc nhưng AI chưa nhận diện rõ từng từ tiếng Anh. Em hãy nói to, chậm rãi hơn nhé!');
       playSfx('wrong');
-      saveResultForCurrentTurn(40, 1, '', null, resolvedUrl);
+      saveResultForCurrentTurn(35, 1, '', analysis, resolvedUrl);
       return;
     }
 
-    // Tìm phương án phiên âm có độ tương đồng cao nhất
+    // 2. STT có kết quả transcripts: Chấm điểm thực tế 100%, KHÔNG nâng điểm khống
     const best = transcripts.reduce(
       (acc, tr) => {
         const s = similarity(tr, target);
@@ -488,17 +490,13 @@ export default function SpeakingStation({ unit, onFinish }) {
       { s: -1, tr: transcripts[0] },
     );
 
-    let percent = Math.round(best.s * 100);
-    // Nếu học sinh đã thu âm tiếng nói và STT nghe bị méo tiếng quá thấp, cộng điểm nỗ lực sàn 60%
-    if (percent < 50 && (resolvedUrl || duration >= 600)) {
-      percent = 60;
-    }
+    const percent = Math.round(best.s * 100);
     const analysis = compareWords(target, best.tr);
 
     setRecognizedText(best.tr);
     setScorePercent(percent);
 
-    const earnedStars = percent >= 80 ? 3 : percent >= 50 ? 2 : 1;
+    const earnedStars = percent >= 80 ? 3 : percent >= 50 ? 2 : percent >= 20 ? 1 : 0;
     setStars(earnedStars);
 
     if (percent >= 80) {

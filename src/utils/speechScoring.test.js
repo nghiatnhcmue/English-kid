@@ -105,42 +105,39 @@ describe('Speech Scoring & Word Comparison Engine', () => {
     /**
      * Replicates the exact evaluation logic in SpeakingStation
      */
-    function evaluateSpeaking({ transcripts, audioUrl, durationMs, targetSentence }) {
+    function evaluateSpeaking({ transcripts, audioUrl, durationMs, targetSentence, audioStats }) {
       const target = targetSentence || '';
       const resolvedUrl = audioUrl;
-      const duration = durationMs || 0;
+      const stats = audioStats || { hasVoice: false };
+      const targetWords = (target || '').split(/\s+/).filter(Boolean);
 
-      // 1. Khi không có STT transcripts (bị chặn mạng, lỗi kết nối)
+      // 1. Khi không có STT transcripts (im lặng, tắt mic, hoặc STT không nghe được)
       if (!transcripts || !transcripts.length) {
-        if (resolvedUrl || duration >= 400) {
-          const targetWords = (target || '').split(/\s+/).filter(Boolean);
-          const minExpected = Math.max(800, targetWords.length * 280);
-          const effortScore = duration >= minExpected ? 85 : 80;
-          const earnedStars = effortScore >= 80 ? 3 : 2;
-          const analysis = targetWords.map((origWord) => ({ word: origWord, matched: true }));
-
+        if (!stats.hasVoice) {
+          const analysis = targetWords.map((origWord) => ({ word: origWord, matched: false }));
           return {
-            status: 'fallback_effort',
-            score: effortScore,
-            stars: earnedStars,
-            recognizedText: target,
+            status: 'no_voice',
+            score: 0,
+            stars: 0,
+            recognizedText: '(Không phát hiện giọng nói)',
             analysis,
-            feedbackType: 'positive',
+            feedbackType: 'silence',
           };
         }
 
-        // Không có âm thanh (nhấn nhầm hoặc không cấp quyền mic)
+        // Có tiếng nói nhưng STT không nhận diện được
+        const analysis = targetWords.map((origWord) => ({ word: origWord, matched: false }));
         return {
-          status: 'no_audio',
-          score: 40,
+          status: 'voice_no_stt',
+          score: 35,
           stars: 1,
-          recognizedText: '(Chưa nhận diện rõ âm thanh, em thử nói to và gần micro hơn nhé)',
-          analysis: null,
+          recognizedText: '(Đã thu âm nhưng chưa nhận diện rõ từ tiếng Anh)',
+          analysis,
           feedbackType: 'retry',
         };
       }
 
-      // 2. Có STT transcripts
+      // 2. Có STT transcripts: Chấm điểm thực tế 100%, không nâng khống 60%
       const best = transcripts.reduce(
         (acc, tr) => {
           const s = similarity(tr, target);
@@ -149,13 +146,8 @@ describe('Speech Scoring & Word Comparison Engine', () => {
         { s: -1, tr: transcripts[0] },
       );
 
-      let percent = Math.round(best.s * 100);
-      // Bảo vệ điểm nỗ lực khi học sinh đã ghi âm nhưng STT nhận diện sai quá thấp
-      if (percent < 50 && (resolvedUrl || duration >= 600)) {
-        percent = 60;
-      }
-
-      const earnedStars = percent >= 80 ? 3 : percent >= 50 ? 2 : 1;
+      const percent = Math.round(best.s * 100);
+      const earnedStars = percent >= 80 ? 3 : percent >= 50 ? 2 : percent >= 20 ? 1 : 0;
       const analysis = compareWords(target, best.tr);
 
       return {
@@ -168,61 +160,54 @@ describe('Speech Scoring & Word Comparison Engine', () => {
       };
     }
 
-    it('awards positive effort score (80-85%, 2-3 stars) when student speaks but STT returns empty', () => {
+    it('awards 0% and 0 stars when student does not say anything (silence / hasVoice false)', () => {
       const result = evaluateSpeaking({
         transcripts: [],
-        audioUrl: 'blob:https://english-kid.example/record-1',
+        audioUrl: 'blob:https://english-kid.example/record-silence',
         durationMs: 2500,
         targetSentence: 'My new school has a large library.',
+        audioStats: { hasVoice: false, peakVolume: 5 },
       });
 
-      expect(result.status).toBe('fallback_effort');
-      expect(result.score).toBe(85);
-      expect(result.stars).toBe(3);
-      expect(result.recognizedText).toBe('My new school has a large library.');
-      expect(result.analysis.every((w) => w.matched)).toBe(true);
-      expect(result.feedbackType).toBe('positive');
+      expect(result.status).toBe('no_voice');
+      expect(result.score).toBe(0);
+      expect(result.stars).toBe(0);
+      expect(result.recognizedText).toBe('(Không phát hiện giọng nói)');
+      expect(result.analysis.every((w) => w.matched === false)).toBe(true);
+      expect(result.feedbackType).toBe('silence');
     });
 
-    it('awards 80% (3 stars) when student recorded shorter voice without STT', () => {
+    it('awards 35% (1 star) and marks words unmatched when voice is detected but STT returns empty', () => {
       const result = evaluateSpeaking({
         transcripts: [],
-        audioUrl: 'blob:https://english-kid.example/record-2',
-        durationMs: 600,
+        audioUrl: 'blob:https://english-kid.example/record-voice',
+        durationMs: 1500,
         targetSentence: 'My new school has a very large and modern library.',
+        audioStats: { hasVoice: true, peakVolume: 35 },
       });
 
-      expect(result.status).toBe('fallback_effort');
-      expect(result.score).toBe(80);
-      expect(result.stars).toBe(3);
-    });
-
-    it('awards 40% and retry prompt when recording had 0 duration and no audio', () => {
-      const result = evaluateSpeaking({
-        transcripts: [],
-        audioUrl: null,
-        durationMs: 50,
-        targetSentence: 'Hello teacher.',
-      });
-
-      expect(result.status).toBe('no_audio');
-      expect(result.score).toBe(40);
+      expect(result.status).toBe('voice_no_stt');
+      expect(result.score).toBe(35);
       expect(result.stars).toBe(1);
+      expect(result.recognizedText).toBe('(Đã thu âm nhưng chưa nhận diện rõ từ tiếng Anh)');
+      expect(result.analysis.every((w) => w.matched === false)).toBe(true);
       expect(result.feedbackType).toBe('retry');
     });
 
-    it('boosts distorted STT score (<50%) to floor 60% when valid student audio exists', () => {
+    it('does not boost distorted STT score (<50%) to floor 60%, grades strictly by actual similarity', () => {
       const result = evaluateSpeaking({
         transcripts: ['random noise here'],
         audioUrl: 'blob:https://english-kid.example/record-3',
         durationMs: 1200,
         targetSentence: 'There is a big clock on the wall.',
+        audioStats: { hasVoice: true, peakVolume: 30 },
       });
 
       expect(result.status).toBe('evaluated');
-      expect(result.score).toBe(60); // Boosted from <50% to floor 60%
-      expect(result.stars).toBe(2);
-      expect(result.feedbackType).toBe('good');
+      expect(result.score).toBe(0); // Zero similarity for unrelated words
+      expect(result.stars).toBe(0);
+      expect(result.feedbackType).toBe('retry');
+      expect(result.analysis.every((w) => w.matched === false)).toBe(true);
     });
 
     it('accurately grades high similarity speech (>80%) with excellent feedback', () => {
@@ -231,12 +216,33 @@ describe('Speech Scoring & Word Comparison Engine', () => {
         audioUrl: 'blob:https://english-kid.example/record-4',
         durationMs: 1500,
         targetSentence: 'There is a big clock on the wall.',
+        audioStats: { hasVoice: true, peakVolume: 40 },
       });
 
       expect(result.status).toBe('evaluated');
       expect(result.score).toBe(100);
       expect(result.stars).toBe(3);
       expect(result.feedbackType).toBe('excellent');
+      expect(result.analysis.every((w) => w.matched === true)).toBe(true);
+    });
+
+    it('accurately grades partial matches with only matched words green', () => {
+      const result = evaluateSpeaking({
+        transcripts: ['There is a big clock'],
+        audioUrl: 'blob:https://english-kid.example/record-5',
+        durationMs: 1500,
+        targetSentence: 'There is a big clock on the wall.',
+        audioStats: { hasVoice: true, peakVolume: 40 },
+      });
+
+      expect(result.status).toBe('evaluated');
+      expect(result.score).toBe(63); // 5 out of 8 words matched
+      expect(result.stars).toBe(2);
+      expect(result.feedbackType).toBe('good');
+      const matchedWords = result.analysis.filter((w) => w.matched).map((w) => w.word);
+      expect(matchedWords).toEqual(['There', 'is', 'a', 'big', 'clock']);
+      const unmatchedWords = result.analysis.filter((w) => !w.matched).map((w) => w.word);
+      expect(unmatchedWords).toEqual(['on', 'the', 'wall.']);
     });
   });
 
