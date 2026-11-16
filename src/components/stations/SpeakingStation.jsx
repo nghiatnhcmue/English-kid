@@ -282,6 +282,8 @@ export default function SpeakingStation({ unit, onFinish }) {
     setRecognizedText(null);
     setScorePercent(null);
     setMicError(null);
+    // Phản hồi tức thì trên giao diện cảm ứng điện thoại
+    updateRecordingStatus('recording');
 
     const sttAvailable = isSttSupported();
     let recorderStarted = false;
@@ -311,8 +313,6 @@ export default function SpeakingStation({ unit, onFinish }) {
     if (!recorderStarted && sttAvailable) {
       setMicError('Lưu ý: Không thể lưu file nghe lại, nhưng AI vẫn đang lắng nghe và chấm điểm phát âm cho em!');
     }
-
-    updateRecordingStatus('recording');
 
     const run = ++sttRun.current;
 
@@ -945,7 +945,7 @@ export default function SpeakingStation({ unit, onFinish }) {
                             <button
                               type="button"
                               onClick={stopRecord}
-                              className="animate-pulse inline-flex h-24 w-24 items-center justify-center rounded-full bg-rose-500 text-white shadow-[0_6px_0_#b91c1c] hover:bg-rose-600 cursor-pointer transition-all"
+                              className="animate-pulse inline-flex h-24 w-24 items-center justify-center rounded-full bg-rose-500 text-white shadow-[0_6px_0_#b91c1c] hover:bg-rose-600 cursor-pointer transition-all touch-manipulation select-none"
                               title="Bấm để kết thúc và xem điểm"
                             >
                               <div className="h-8 w-8 rounded-lg bg-white" />
@@ -955,12 +955,12 @@ export default function SpeakingStation({ unit, onFinish }) {
                               <span>Đang thu âm... Em đọc to câu trên vào micro nhé!</span>
                             </div>
                           </div>
-                        ) : (
+                        ) : recordingStatus === 'done' ? null : (
                           <div className="flex flex-col items-center gap-3">
                             <button
                               type="button"
                               onClick={startRecord}
-                              className="inline-flex h-24 w-24 items-center justify-center rounded-full text-white shadow-[0_7px_0_var(--color-peach-dark)] transition-all cursor-pointer bg-peach hover:-translate-y-1 active:translate-y-1 active:shadow-none"
+                              className="inline-flex h-24 w-24 items-center justify-center rounded-full text-white shadow-[0_7px_0_var(--color-peach-dark)] transition-all cursor-pointer bg-peach hover:-translate-y-1 active:translate-y-1 active:shadow-none touch-manipulation select-none"
                               title="Bấm vào micro để nói"
                             >
                               <Mic className="h-11 w-11" />
@@ -1036,7 +1036,7 @@ export default function SpeakingStation({ unit, onFinish }) {
                               <button
                                 type="button"
                                 onClick={() => playRecording(audioUrl)}
-                                className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-peach px-5 text-sm font-black text-white shadow-[0_3px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none cursor-pointer"
+                                className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-peach px-5 text-sm sm:text-base font-black text-white shadow-[0_3px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-1 active:shadow-none cursor-pointer touch-manipulation select-none"
                               >
                                 <Play className="h-4 w-4 fill-current" />
                                 <span>▶️ Nghe lại giọng em</span>
@@ -1045,15 +1045,15 @@ export default function SpeakingStation({ unit, onFinish }) {
                             <button
                               type="button"
                               onClick={startRecord}
-                              className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-banana px-4 text-xs sm:text-sm font-black text-ink shadow-[0_3px_0_#d8b13c] hover:bg-banana-dark hover:text-white cursor-pointer"
+                              className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-sky-dark px-5 text-sm sm:text-base font-black text-white shadow-[0_4px_0_#0284c7] hover:bg-sky-600 active:translate-y-1 active:shadow-none cursor-pointer touch-manipulation select-none"
                             >
-                              <RotateCcw className="h-3.5 w-3.5" /> Nói lại
+                              <Mic className="h-5 w-5" /> <span>Luyện đọc lại</span>
                             </button>
 
                             <Button3D
                               tone="mint"
                               onClick={advanceDialogueTurn}
-                              className="px-6 py-2.5 text-sm sm:text-base"
+                              className="px-6 py-2.5 text-sm sm:text-base touch-manipulation select-none"
                             >
                               <span>
                                 {selectedDialogueIdx + 1 < dialogueLines.length
@@ -1208,12 +1208,12 @@ export default function SpeakingStation({ unit, onFinish }) {
                         <span>Đang thu âm... Em nói to vào micro nhé!</span>
                       </div>
                     </div>
-                  ) : (
+                  ) : recordingStatus === 'done' ? null : (
                     <div className="flex flex-col items-center gap-3">
                       <button
                         type="button"
                         onClick={startRecord}
-                        className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-peach text-white shadow-[0_7px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
+                        className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-peach text-white shadow-[0_7px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
                       >
                         <Mic className="h-11 w-11" />
                       </button>
@@ -1234,16 +1234,25 @@ export default function SpeakingStation({ unit, onFinish }) {
                       )}
                     </div>
                     <p className="font-black text-peach-dark">{feedback}</p>
-                    {audioUrl && (
+                    <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                      {audioUrl && (
+                        <button
+                          type="button"
+                          onClick={() => playRecording(audioUrl)}
+                          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-peach px-5 py-2.5 text-sm font-black text-white shadow-xs cursor-pointer touch-manipulation select-none"
+                        >
+                          <Play className="h-4 w-4 fill-current" />
+                          <span>Nghe lại giọng của em</span>
+                        </button>
+                      )}
                       <button
                         type="button"
-                        onClick={() => playRecording(audioUrl)}
-                        className="inline-flex items-center justify-center gap-2 self-center rounded-2xl bg-peach px-5 py-2.5 text-sm font-black text-white shadow-xs cursor-pointer"
+                        onClick={startRecord}
+                        className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-sky-dark px-5 text-sm font-black text-white shadow-[0_3px_0_#0284c7] hover:bg-sky-600 active:translate-y-1 active:shadow-none cursor-pointer touch-manipulation select-none"
                       >
-                        <Play className="h-4 w-4 fill-current" />
-                        <span>Nghe lại giọng của em</span>
+                        <Mic className="h-4 w-4" /> <span>Luyện đọc lại</span>
                       </button>
-                    )}
+                    </div>
                   </div>
                 )}
               </section>
@@ -1365,12 +1374,12 @@ export default function SpeakingStation({ unit, onFinish }) {
                     <span>Đang thu âm... Em nói to vào micro nhé!</span>
                   </div>
                 </div>
-              ) : (
+              ) : recordingStatus === 'done' ? null : (
                 <div className="flex flex-col items-center gap-3">
                   <button
                     type="button"
                     onClick={startRecord}
-                    className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-peach text-white shadow-[0_7px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
+                    className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-peach text-white shadow-[0_7px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
                   >
                     <Mic className="h-11 w-11" />
                   </button>
@@ -1391,16 +1400,25 @@ export default function SpeakingStation({ unit, onFinish }) {
                   )}
                 </div>
                 <p className="text-base sm:text-lg font-black text-peach-dark">{feedback}</p>
-                {audioUrl && (
+                <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                  {audioUrl && (
+                    <button
+                      type="button"
+                      onClick={() => playRecording(audioUrl)}
+                      className="inline-flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-peach px-6 text-sm font-black text-white shadow-xs cursor-pointer touch-manipulation select-none"
+                    >
+                      <Play className="h-4 w-4 fill-current" />
+                      <span>▶️ Nghe lại giọng của em</span>
+                    </button>
+                  )}
                   <button
                     type="button"
-                    onClick={() => playRecording(audioUrl)}
-                    className="inline-flex min-h-11 items-center justify-center gap-2 self-center rounded-2xl bg-peach px-6 text-sm font-black text-white shadow-xs cursor-pointer"
+                    onClick={startRecord}
+                    className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-sky-dark px-5 text-sm font-black text-white shadow-[0_3px_0_#0284c7] hover:bg-sky-600 active:translate-y-1 active:shadow-none cursor-pointer touch-manipulation select-none"
                   >
-                    <Play className="h-4 w-4 fill-current" />
-                    <span>▶️ Nghe lại giọng của em</span>
+                    <Mic className="h-4 w-4" /> <span>Luyện đọc lại</span>
                   </button>
-                )}
+                </div>
               </div>
             )}
 
@@ -1518,12 +1536,12 @@ export default function SpeakingStation({ unit, onFinish }) {
                   </button>
                   <span className="text-rose-600 font-black">Đang thu âm từ vựng...</span>
                 </div>
-              ) : (
+              ) : recordingStatus === 'done' ? null : (
                 <div className="flex flex-col items-center gap-3">
                   <button
                     type="button"
                     onClick={startRecord}
-                    className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-banana text-ink shadow-[0_7px_0_#d8b13c] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
+                    className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-banana text-ink shadow-[0_7px_0_#d8b13c] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
                   >
                     <Mic className="h-11 w-11" />
                   </button>
@@ -1543,16 +1561,25 @@ export default function SpeakingStation({ unit, onFinish }) {
                   )}
                 </div>
                 <p className="font-black text-peach-dark">{feedback}</p>
-                {audioUrl && (
+                <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                  {audioUrl && (
+                    <button
+                      type="button"
+                      onClick={() => playRecording(audioUrl)}
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl bg-peach px-5 py-2.5 text-sm font-black text-white shadow-xs cursor-pointer touch-manipulation select-none"
+                    >
+                      <Play className="h-4 w-4 fill-current" />
+                      <span>Nghe lại giọng của em</span>
+                    </button>
+                  )}
                   <button
                     type="button"
-                    onClick={() => playRecording(audioUrl)}
-                    className="inline-flex items-center justify-center gap-2 self-center rounded-2xl bg-peach px-5 py-2.5 text-sm font-black text-white shadow-xs cursor-pointer"
+                    onClick={startRecord}
+                    className="inline-flex min-h-11 items-center gap-2 rounded-2xl bg-sky-dark px-5 text-sm font-black text-white shadow-[0_3px_0_#0284c7] hover:bg-sky-600 active:translate-y-1 active:shadow-none cursor-pointer touch-manipulation select-none"
                   >
-                    <Play className="h-4 w-4 fill-current" />
-                    <span>Nghe lại giọng của em</span>
+                    <Mic className="h-4 w-4" /> <span>Luyện đọc lại</span>
                   </button>
-                )}
+                </div>
               </div>
             )}
 

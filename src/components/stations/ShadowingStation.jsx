@@ -105,6 +105,8 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
     setAudioUrl(null);
     setRecognizedText(null);
     setSpeakScore(null);
+    // Cập nhật giao diện ngay lập tức để học sinh thấy phản hồi
+    updateRecordingStatus('recording');
 
     const sttAvailable = isSttSupported();
     let recorderStarted = false;
@@ -125,8 +127,6 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
       updateRecordingStatus('done');
       return;
     }
-
-    updateRecordingStatus('recording');
 
     const run = ++sttRun.current;
 
@@ -311,44 +311,46 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
           </div>
 
           {/* Nút bấm ghi âm */}
-          <div className="flex flex-col items-center gap-3 py-4">
-            {recordingStatus === 'evaluating' ? (
-              <div className="flex flex-col items-center gap-3 py-2">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
-                  <Sparkles className="h-8 w-8 text-peach animate-spin" />
+          {recordingStatus !== 'done' && (
+            <div className="flex flex-col items-center gap-3 py-4">
+              {recordingStatus === 'evaluating' ? (
+                <div className="flex flex-col items-center gap-3 py-2">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-banana-soft text-ink animate-pulse shadow-md border-2 border-banana">
+                    <Sparkles className="h-8 w-8 text-peach animate-spin" />
+                  </div>
+                  <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
+                    <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
+                    <span>Đang chấm điểm AI... Em chờ một chút nhé! 🤖✨</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 text-peach-dark font-black text-sm sm:text-base animate-pulse">
-                  <span className="h-2.5 w-2.5 rounded-full bg-peach animate-ping" />
-                  <span>Đang chấm điểm AI... Em chờ một chút nhé! 🤖✨</span>
-                </div>
-              </div>
-            ) : recordingStatus === 'recording' ? (
-              <button
-                type="button"
-                onClick={stopRecord}
-                className="animate-pulse inline-flex h-20 w-20 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg cursor-pointer"
-                title="Bấm để dừng ghi âm"
-              >
-                <div className="h-7 w-7 rounded-md bg-white" />
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={startRecord}
-                className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-peach text-white shadow-[0_6px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer"
-                title="Bấm vào để đọc"
-              >
-                <Mic className="h-9 w-9" />
-              </button>
-            )}
-            <p className="text-sm font-bold text-ink-soft">
-              {recordingStatus === 'evaluating'
-                ? 'Đang phân tích phát âm...'
-                : recordingStatus === 'recording'
-                ? '🔴 Đang lắng nghe... Em nói to vào micro nhé!'
-                : 'Bấm vào Micro và đọc to câu trên'}
-            </p>
-          </div>
+              ) : recordingStatus === 'recording' ? (
+                <button
+                  type="button"
+                  onClick={stopRecord}
+                  className="animate-pulse inline-flex h-20 w-20 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg cursor-pointer touch-manipulation select-none"
+                  title="Bấm để dừng ghi âm"
+                >
+                  <div className="h-7 w-7 rounded-md bg-white" />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={startRecord}
+                  className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-peach text-white shadow-[0_6px_0_var(--color-peach-dark)] hover:-translate-y-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer touch-manipulation select-none"
+                  title="Bấm vào để đọc"
+                >
+                  <Mic className="h-9 w-9" />
+                </button>
+              )}
+              <p className="text-sm font-bold text-ink-soft">
+                {recordingStatus === 'evaluating'
+                  ? 'Đang phân tích phát âm...'
+                  : recordingStatus === 'recording'
+                  ? '🔴 Đang lắng nghe... Em nói to vào micro nhé!'
+                  : 'Bấm vào Micro và đọc to câu trên'}
+              </p>
+            </div>
+          )}
 
           {/* Kết quả nhận diện & Nghe lại giọng mình */}
           {recordingStatus === 'done' && (
@@ -371,26 +373,26 @@ export default function ShadowingStation({ unit, initialTab = 'listening', onFin
                 </div>
               )}
 
-              {audioUrl && (
-                <div className="flex items-center justify-center gap-3 pt-2 border-t border-banana-soft">
+              <div className="flex flex-wrap items-center justify-center gap-3 pt-2 border-t border-banana-soft">
+                {audioUrl && (
                   <button
                     type="button"
                     onClick={() => {
                       playRecording(audioUrl);
                     }}
-                    className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-white px-5 text-sm font-black text-ink shadow-sm border border-[#efe3cc] hover:bg-cream active:translate-y-0.5 cursor-pointer"
+                    className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-white px-5 text-sm font-black text-ink shadow-sm border border-[#efe3cc] hover:bg-cream active:translate-y-0.5 cursor-pointer touch-manipulation select-none"
                   >
                     <span>▶️ Nghe lại giọng của em</span>
                   </button>
-                  <button
-                    type="button"
-                    onClick={startRecord}
-                    className="inline-flex min-h-12 items-center gap-1.5 rounded-2xl bg-banana-soft px-4 text-sm font-black text-ink hover:bg-banana cursor-pointer"
-                  >
-                    <RotateCcw className="h-4 w-4" /> Nói lại
-                  </button>
-                </div>
-              )}
+                )}
+                <button
+                  type="button"
+                  onClick={startRecord}
+                  className="inline-flex min-h-12 items-center gap-2 rounded-2xl bg-sky-dark px-5 text-sm font-black text-white shadow-[0_3px_0_#0284c7] hover:bg-sky-600 active:translate-y-1 active:shadow-none cursor-pointer touch-manipulation select-none"
+                >
+                  <Mic className="h-4 w-4" /> <span>Luyện đọc lại câu này</span>
+                </button>
+              </div>
             </div>
           )}
 
