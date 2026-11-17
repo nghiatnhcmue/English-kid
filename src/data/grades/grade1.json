@@ -1,0 +1,3580 @@
+{
+  "grade": 1,
+  "gradeName": "Lớp 1",
+  "level": "primary",
+  "levelName": "Tiểu học",
+  "title": "SGK Tiếng Anh 1 – Global Success",
+  "totalUnits": 16,
+  "interactiveAvailable": true,
+  "interactiveNote": "Hệ thống trạm học tương tác 7 kỹ năng chuẩn SGK Lớp 1",
+  "units": [
+    {
+      "unitId": "g1_u1",
+      "grade": 1,
+      "unit": 1,
+      "unitTitle": "Unit 1: In the school playground",
+      "unitNameVi": "Ở sân trường",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 6 – 9",
+      "vocabularies": [
+        {
+          "id": "g1_u1_01",
+          "word": "Bill",
+          "phonetic": "/bill/",
+          "wordType": "Danh từ",
+          "meaning": "Bill trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở sân trường",
+          "exampleEn": "Look at the Bill.",
+          "exampleVi": "Hãy nhìn vào Bill.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u1_02",
+          "word": "book",
+          "phonetic": "/book/",
+          "wordType": "Danh từ",
+          "meaning": "Book trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở sân trường",
+          "exampleEn": "Look at the book.",
+          "exampleVi": "Hãy nhìn vào book.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u1_03",
+          "word": "ball",
+          "phonetic": "/ball/",
+          "wordType": "Danh từ",
+          "meaning": "Ball trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở sân trường",
+          "exampleEn": "Look at the ball.",
+          "exampleVi": "Hãy nhìn vào ball.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u1_04",
+          "word": "bike",
+          "phonetic": "/bike/",
+          "wordType": "Danh từ",
+          "meaning": "Bike trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở sân trường",
+          "exampleEn": "Look at the bike.",
+          "exampleVi": "Hãy nhìn vào bike.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'Bill'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /b/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "Bill",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'Bill' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/b/ (Letter B)",
+        "title": "Học phát âm chữ cái và âm /b/",
+        "sound1": {
+          "symbol": "/b/",
+          "name": "Âm /b/ chuẩn bản ngữ",
+          "words": [
+            "Bill",
+            "book"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "Bill",
+            "correctSound": "/b/",
+            "options": [
+              "/b/",
+              "/s/"
+            ],
+            "meaningVi": "Bill"
+          }
+        ],
+        "tongueTwister": "Look at the Bill on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the Bill!",
+        "phonetic": "/lʊk æt ðə bill/",
+        "meaningVi": "Hãy nhìn vào Bill kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở sân trường",
+        "dialogueTitle": "Lesson 1: In the school playground",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở sân trường.",
+        "dialogueLines": [
+          {
+            "id": "g1_u1_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u1_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u1_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A Bill.",
+            "phonetic": "/lʊk ə bill/",
+            "meaningVi": "Nhìn kìa! Một Bill.",
+            "tipsVi": "Nhấn giọng vào Bill."
+          },
+          {
+            "id": "g1_u1_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a Bill!",
+            "phonetic": "/jes ɪt ɪz ə bill/",
+            "meaningVi": "Đúng rồi, đó là Bill!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a Bill.",
+            "phonetic": "/aɪ kæn siː ə bill/",
+            "meaningVi": "Mình có thể nhìn thấy Bill."
+          },
+          {
+            "sentenceEn": "Touch the bike.",
+            "phonetic": "/tʌtʃ ðə bike/",
+            "meaningVi": "Chạm vào bike nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở sân trường",
+        "transcript": "Hello, I am Bill. Look at my Bill. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Bill",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the school playground",
+        "passage": "This is my school. Look at the playground. Bill has a Bill. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có Bill. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u1_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Bill",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a Bill.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the Bill",
+        "meaningVi": "Hãy nhìn vào Bill.",
+        "items": [
+          {
+            "id": "g1_u1_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "Bill"
+            ],
+            "correctSentence": "Look at the Bill",
+            "meaningVi": "Hãy nhìn vào Bill.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u2",
+      "grade": 1,
+      "unit": 2,
+      "unitTitle": "Unit 2: In the dining room",
+      "unitNameVi": "Ở phòng ăn",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 10 – 13",
+      "vocabularies": [
+        {
+          "id": "g1_u2_01",
+          "word": "cake",
+          "phonetic": "/cake/",
+          "wordType": "Danh từ",
+          "meaning": "Cake trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở phòng ăn",
+          "exampleEn": "Look at the cake.",
+          "exampleVi": "Hãy nhìn vào cake.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u2_02",
+          "word": "car",
+          "phonetic": "/car/",
+          "wordType": "Danh từ",
+          "meaning": "Car trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở phòng ăn",
+          "exampleEn": "Look at the car.",
+          "exampleVi": "Hãy nhìn vào car.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u2_03",
+          "word": "cat",
+          "phonetic": "/cat/",
+          "wordType": "Danh từ",
+          "meaning": "Cat trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở phòng ăn",
+          "exampleEn": "Look at the cat.",
+          "exampleVi": "Hãy nhìn vào cat.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u2_04",
+          "word": "cup",
+          "phonetic": "/cup/",
+          "wordType": "Danh từ",
+          "meaning": "Cup trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở phòng ăn",
+          "exampleEn": "Look at the cup.",
+          "exampleVi": "Hãy nhìn vào cup.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'cake'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /k/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "cake",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'cake' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/k/ (Letter C)",
+        "title": "Học phát âm chữ cái và âm /k/",
+        "sound1": {
+          "symbol": "/k/",
+          "name": "Âm /k/ chuẩn bản ngữ",
+          "words": [
+            "cake",
+            "car"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cake",
+            "correctSound": "/k/",
+            "options": [
+              "/k/",
+              "/s/"
+            ],
+            "meaningVi": "cake"
+          }
+        ],
+        "tongueTwister": "Look at the cake on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the cake!",
+        "phonetic": "/lʊk æt ðə cake/",
+        "meaningVi": "Hãy nhìn vào cake kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở phòng ăn",
+        "dialogueTitle": "Lesson 1: In the dining room",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở phòng ăn.",
+        "dialogueLines": [
+          {
+            "id": "g1_u2_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u2_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u2_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A cake.",
+            "phonetic": "/lʊk ə cake/",
+            "meaningVi": "Nhìn kìa! Một cake.",
+            "tipsVi": "Nhấn giọng vào cake."
+          },
+          {
+            "id": "g1_u2_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a cake!",
+            "phonetic": "/jes ɪt ɪz ə cake/",
+            "meaningVi": "Đúng rồi, đó là cake!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a cake.",
+            "phonetic": "/aɪ kæn siː ə cake/",
+            "meaningVi": "Mình có thể nhìn thấy cake."
+          },
+          {
+            "sentenceEn": "Touch the cup.",
+            "phonetic": "/tʌtʃ ðə cup/",
+            "meaningVi": "Chạm vào cup nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở phòng ăn",
+        "transcript": "Hello, I am Bill. Look at my cake. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Cake",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the dining room",
+        "passage": "This is my school. Look at the playground. Bill has a cake. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có cake. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u2_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Cake",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a cake.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the cake",
+        "meaningVi": "Hãy nhìn vào cake.",
+        "items": [
+          {
+            "id": "g1_u2_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "cake"
+            ],
+            "correctSentence": "Look at the cake",
+            "meaningVi": "Hãy nhìn vào cake.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u3",
+      "grade": 1,
+      "unit": 3,
+      "unitTitle": "Unit 3: At the street market",
+      "unitNameVi": "Ở chợ phố",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 14 – 17",
+      "vocabularies": [
+        {
+          "id": "g1_u3_01",
+          "word": "apple",
+          "phonetic": "/apple/",
+          "wordType": "Danh từ",
+          "meaning": "Apple trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở chợ phố",
+          "exampleEn": "Look at the apple.",
+          "exampleVi": "Hãy nhìn vào apple.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u3_02",
+          "word": "bag",
+          "phonetic": "/bag/",
+          "wordType": "Danh từ",
+          "meaning": "Bag trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở chợ phố",
+          "exampleEn": "Look at the bag.",
+          "exampleVi": "Hãy nhìn vào bag.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u3_03",
+          "word": "can",
+          "phonetic": "/can/",
+          "wordType": "Danh từ",
+          "meaning": "Can trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở chợ phố",
+          "exampleEn": "Look at the can.",
+          "exampleVi": "Hãy nhìn vào can.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u3_04",
+          "word": "hat",
+          "phonetic": "/hat/",
+          "wordType": "Danh từ",
+          "meaning": "Hat trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở chợ phố",
+          "exampleEn": "Look at the hat.",
+          "exampleVi": "Hãy nhìn vào hat.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'apple'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /æ/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "apple",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'apple' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/æ/ (Letter A)",
+        "title": "Học phát âm chữ cái và âm /æ/",
+        "sound1": {
+          "symbol": "/æ/",
+          "name": "Âm /æ/ chuẩn bản ngữ",
+          "words": [
+            "apple",
+            "bag"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "apple",
+            "correctSound": "/æ/",
+            "options": [
+              "/æ/",
+              "/s/"
+            ],
+            "meaningVi": "apple"
+          }
+        ],
+        "tongueTwister": "Look at the apple on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the apple!",
+        "phonetic": "/lʊk æt ðə apple/",
+        "meaningVi": "Hãy nhìn vào apple kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở chợ phố",
+        "dialogueTitle": "Lesson 1: At the street market",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở chợ phố.",
+        "dialogueLines": [
+          {
+            "id": "g1_u3_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u3_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u3_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A apple.",
+            "phonetic": "/lʊk ə apple/",
+            "meaningVi": "Nhìn kìa! Một apple.",
+            "tipsVi": "Nhấn giọng vào apple."
+          },
+          {
+            "id": "g1_u3_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a apple!",
+            "phonetic": "/jes ɪt ɪz ə apple/",
+            "meaningVi": "Đúng rồi, đó là apple!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a apple.",
+            "phonetic": "/aɪ kæn siː ə apple/",
+            "meaningVi": "Mình có thể nhìn thấy apple."
+          },
+          {
+            "sentenceEn": "Touch the hat.",
+            "phonetic": "/tʌtʃ ðə hat/",
+            "meaningVi": "Chạm vào hat nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở chợ phố",
+        "transcript": "Hello, I am Bill. Look at my apple. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Apple",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At the street market",
+        "passage": "This is my school. Look at the playground. Bill has a apple. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có apple. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u3_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Apple",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a apple.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the apple",
+        "meaningVi": "Hãy nhìn vào apple.",
+        "items": [
+          {
+            "id": "g1_u3_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "apple"
+            ],
+            "correctSentence": "Look at the apple",
+            "meaningVi": "Hãy nhìn vào apple.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u4",
+      "grade": 1,
+      "unit": 4,
+      "unitTitle": "Unit 4: In the bedroom",
+      "unitNameVi": "Ở phòng ngủ",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 18 – 21",
+      "vocabularies": [
+        {
+          "id": "g1_u4_01",
+          "word": "dog",
+          "phonetic": "/dog/",
+          "wordType": "Danh từ",
+          "meaning": "Dog trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở phòng ngủ",
+          "exampleEn": "Look at the dog.",
+          "exampleVi": "Hãy nhìn vào dog.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u4_02",
+          "word": "doll",
+          "phonetic": "/doll/",
+          "wordType": "Danh từ",
+          "meaning": "Doll trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở phòng ngủ",
+          "exampleEn": "Look at the doll.",
+          "exampleVi": "Hãy nhìn vào doll.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u4_03",
+          "word": "door",
+          "phonetic": "/door/",
+          "wordType": "Danh từ",
+          "meaning": "Door trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở phòng ngủ",
+          "exampleEn": "Look at the door.",
+          "exampleVi": "Hãy nhìn vào door.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u4_04",
+          "word": "duck",
+          "phonetic": "/duck/",
+          "wordType": "Danh từ",
+          "meaning": "Duck trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở phòng ngủ",
+          "exampleEn": "Look at the duck.",
+          "exampleVi": "Hãy nhìn vào duck.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'dog'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /d/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "dog",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'dog' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/d/ (Letter D)",
+        "title": "Học phát âm chữ cái và âm /d/",
+        "sound1": {
+          "symbol": "/d/",
+          "name": "Âm /d/ chuẩn bản ngữ",
+          "words": [
+            "dog",
+            "doll"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "dog",
+            "correctSound": "/d/",
+            "options": [
+              "/d/",
+              "/s/"
+            ],
+            "meaningVi": "dog"
+          }
+        ],
+        "tongueTwister": "Look at the dog on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the dog!",
+        "phonetic": "/lʊk æt ðə dog/",
+        "meaningVi": "Hãy nhìn vào dog kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở phòng ngủ",
+        "dialogueTitle": "Lesson 1: In the bedroom",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở phòng ngủ.",
+        "dialogueLines": [
+          {
+            "id": "g1_u4_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u4_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u4_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A dog.",
+            "phonetic": "/lʊk ə dog/",
+            "meaningVi": "Nhìn kìa! Một dog.",
+            "tipsVi": "Nhấn giọng vào dog."
+          },
+          {
+            "id": "g1_u4_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a dog!",
+            "phonetic": "/jes ɪt ɪz ə dog/",
+            "meaningVi": "Đúng rồi, đó là dog!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a dog.",
+            "phonetic": "/aɪ kæn siː ə dog/",
+            "meaningVi": "Mình có thể nhìn thấy dog."
+          },
+          {
+            "sentenceEn": "Touch the duck.",
+            "phonetic": "/tʌtʃ ðə duck/",
+            "meaningVi": "Chạm vào duck nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở phòng ngủ",
+        "transcript": "Hello, I am Bill. Look at my dog. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Dog",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the bedroom",
+        "passage": "This is my school. Look at the playground. Bill has a dog. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có dog. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u4_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Dog",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a dog.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the dog",
+        "meaningVi": "Hãy nhìn vào dog.",
+        "items": [
+          {
+            "id": "g1_u4_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "dog"
+            ],
+            "correctSentence": "Look at the dog",
+            "meaningVi": "Hãy nhìn vào dog.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u5",
+      "grade": 1,
+      "unit": 5,
+      "unitTitle": "Unit 5: At the fish and chip shop",
+      "unitNameVi": "Ở tiệm cá và khoai tây chiên",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 22 – 25",
+      "vocabularies": [
+        {
+          "id": "g1_u5_01",
+          "word": "fish",
+          "phonetic": "/fish/",
+          "wordType": "Danh từ",
+          "meaning": "Fish trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở tiệm cá và khoai tây chiên",
+          "exampleEn": "Look at the fish.",
+          "exampleVi": "Hãy nhìn vào fish.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u5_02",
+          "word": "fan",
+          "phonetic": "/fan/",
+          "wordType": "Danh từ",
+          "meaning": "Fan trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở tiệm cá và khoai tây chiên",
+          "exampleEn": "Look at the fan.",
+          "exampleVi": "Hãy nhìn vào fan.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u5_03",
+          "word": "fox",
+          "phonetic": "/fox/",
+          "wordType": "Danh từ",
+          "meaning": "Fox trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở tiệm cá và khoai tây chiên",
+          "exampleEn": "Look at the fox.",
+          "exampleVi": "Hãy nhìn vào fox.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u5_04",
+          "word": "face",
+          "phonetic": "/face/",
+          "wordType": "Danh từ",
+          "meaning": "Face trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở tiệm cá và khoai tây chiên",
+          "exampleEn": "Look at the face.",
+          "exampleVi": "Hãy nhìn vào face.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'fish'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /f/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "fish",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'fish' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/f/ (Letter F)",
+        "title": "Học phát âm chữ cái và âm /f/",
+        "sound1": {
+          "symbol": "/f/",
+          "name": "Âm /f/ chuẩn bản ngữ",
+          "words": [
+            "fish",
+            "fan"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "fish",
+            "correctSound": "/f/",
+            "options": [
+              "/f/",
+              "/s/"
+            ],
+            "meaningVi": "fish"
+          }
+        ],
+        "tongueTwister": "Look at the fish on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the fish!",
+        "phonetic": "/lʊk æt ðə fish/",
+        "meaningVi": "Hãy nhìn vào fish kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở tiệm cá và khoai tây chiên",
+        "dialogueTitle": "Lesson 1: At the fish and chip shop",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở tiệm cá và khoai tây chiên.",
+        "dialogueLines": [
+          {
+            "id": "g1_u5_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u5_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u5_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A fish.",
+            "phonetic": "/lʊk ə fish/",
+            "meaningVi": "Nhìn kìa! Một fish.",
+            "tipsVi": "Nhấn giọng vào fish."
+          },
+          {
+            "id": "g1_u5_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a fish!",
+            "phonetic": "/jes ɪt ɪz ə fish/",
+            "meaningVi": "Đúng rồi, đó là fish!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a fish.",
+            "phonetic": "/aɪ kæn siː ə fish/",
+            "meaningVi": "Mình có thể nhìn thấy fish."
+          },
+          {
+            "sentenceEn": "Touch the face.",
+            "phonetic": "/tʌtʃ ðə face/",
+            "meaningVi": "Chạm vào face nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở tiệm cá và khoai tây chiên",
+        "transcript": "Hello, I am Bill. Look at my fish. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Fish",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At the fish and chip shop",
+        "passage": "This is my school. Look at the playground. Bill has a fish. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có fish. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u5_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Fish",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a fish.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the fish",
+        "meaningVi": "Hãy nhìn vào fish.",
+        "items": [
+          {
+            "id": "g1_u5_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "fish"
+            ],
+            "correctSentence": "Look at the fish",
+            "meaningVi": "Hãy nhìn vào fish.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u6",
+      "grade": 1,
+      "unit": 6,
+      "unitTitle": "Unit 6: In the classroom",
+      "unitNameVi": "Ở trong lớp học",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 26 – 29",
+      "vocabularies": [
+        {
+          "id": "g1_u6_01",
+          "word": "girl",
+          "phonetic": "/girl/",
+          "wordType": "Danh từ",
+          "meaning": "Girl trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở trong lớp học",
+          "exampleEn": "Look at the girl.",
+          "exampleVi": "Hãy nhìn vào girl.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u6_02",
+          "word": "gate",
+          "phonetic": "/gate/",
+          "wordType": "Danh từ",
+          "meaning": "Gate trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở trong lớp học",
+          "exampleEn": "Look at the gate.",
+          "exampleVi": "Hãy nhìn vào gate.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u6_03",
+          "word": "goat",
+          "phonetic": "/goat/",
+          "wordType": "Danh từ",
+          "meaning": "Goat trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở trong lớp học",
+          "exampleEn": "Look at the goat.",
+          "exampleVi": "Hãy nhìn vào goat.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u6_04",
+          "word": "guitar",
+          "phonetic": "/guitar/",
+          "wordType": "Danh từ",
+          "meaning": "Guitar trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở trong lớp học",
+          "exampleEn": "Look at the guitar.",
+          "exampleVi": "Hãy nhìn vào guitar.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'girl'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /ɡ/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "girl",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'girl' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/ɡ/ (Letter G)",
+        "title": "Học phát âm chữ cái và âm /ɡ/",
+        "sound1": {
+          "symbol": "/ɡ/",
+          "name": "Âm /ɡ/ chuẩn bản ngữ",
+          "words": [
+            "girl",
+            "gate"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "girl",
+            "correctSound": "/ɡ/",
+            "options": [
+              "/ɡ/",
+              "/s/"
+            ],
+            "meaningVi": "girl"
+          }
+        ],
+        "tongueTwister": "Look at the girl on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the girl!",
+        "phonetic": "/lʊk æt ðə girl/",
+        "meaningVi": "Hãy nhìn vào girl kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở trong lớp học",
+        "dialogueTitle": "Lesson 1: In the classroom",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở trong lớp học.",
+        "dialogueLines": [
+          {
+            "id": "g1_u6_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u6_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u6_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A girl.",
+            "phonetic": "/lʊk ə girl/",
+            "meaningVi": "Nhìn kìa! Một girl.",
+            "tipsVi": "Nhấn giọng vào girl."
+          },
+          {
+            "id": "g1_u6_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a girl!",
+            "phonetic": "/jes ɪt ɪz ə girl/",
+            "meaningVi": "Đúng rồi, đó là girl!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a girl.",
+            "phonetic": "/aɪ kæn siː ə girl/",
+            "meaningVi": "Mình có thể nhìn thấy girl."
+          },
+          {
+            "sentenceEn": "Touch the guitar.",
+            "phonetic": "/tʌtʃ ðə guitar/",
+            "meaningVi": "Chạm vào guitar nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở trong lớp học",
+        "transcript": "Hello, I am Bill. Look at my girl. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Girl",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the classroom",
+        "passage": "This is my school. Look at the playground. Bill has a girl. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có girl. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u6_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Girl",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a girl.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the girl",
+        "meaningVi": "Hãy nhìn vào girl.",
+        "items": [
+          {
+            "id": "g1_u6_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "girl"
+            ],
+            "correctSentence": "Look at the girl",
+            "meaningVi": "Hãy nhìn vào girl.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u7",
+      "grade": 1,
+      "unit": 7,
+      "unitTitle": "Unit 7: In the garden",
+      "unitNameVi": "Ở trong vườn",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 30 – 33",
+      "vocabularies": [
+        {
+          "id": "g1_u7_01",
+          "word": "hat",
+          "phonetic": "/hat/",
+          "wordType": "Danh từ",
+          "meaning": "Hat trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong vườn",
+          "exampleEn": "Look at the hat.",
+          "exampleVi": "Hãy nhìn vào hat.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u7_02",
+          "word": "hand",
+          "phonetic": "/hand/",
+          "wordType": "Danh từ",
+          "meaning": "Hand trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong vườn",
+          "exampleEn": "Look at the hand.",
+          "exampleVi": "Hãy nhìn vào hand.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u7_03",
+          "word": "horse",
+          "phonetic": "/horse/",
+          "wordType": "Danh từ",
+          "meaning": "Horse trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong vườn",
+          "exampleEn": "Look at the horse.",
+          "exampleVi": "Hãy nhìn vào horse.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u7_04",
+          "word": "house",
+          "phonetic": "/house/",
+          "wordType": "Danh từ",
+          "meaning": "House trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong vườn",
+          "exampleEn": "Look at the house.",
+          "exampleVi": "Hãy nhìn vào house.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'hat'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /h/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "hat",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'hat' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/h/ (Letter H)",
+        "title": "Học phát âm chữ cái và âm /h/",
+        "sound1": {
+          "symbol": "/h/",
+          "name": "Âm /h/ chuẩn bản ngữ",
+          "words": [
+            "hat",
+            "hand"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "hat",
+            "correctSound": "/h/",
+            "options": [
+              "/h/",
+              "/s/"
+            ],
+            "meaningVi": "hat"
+          }
+        ],
+        "tongueTwister": "Look at the hat on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the hat!",
+        "phonetic": "/lʊk æt ðə hat/",
+        "meaningVi": "Hãy nhìn vào hat kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở trong vườn",
+        "dialogueTitle": "Lesson 1: In the garden",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở trong vườn.",
+        "dialogueLines": [
+          {
+            "id": "g1_u7_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u7_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u7_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A hat.",
+            "phonetic": "/lʊk ə hat/",
+            "meaningVi": "Nhìn kìa! Một hat.",
+            "tipsVi": "Nhấn giọng vào hat."
+          },
+          {
+            "id": "g1_u7_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a hat!",
+            "phonetic": "/jes ɪt ɪz ə hat/",
+            "meaningVi": "Đúng rồi, đó là hat!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a hat.",
+            "phonetic": "/aɪ kæn siː ə hat/",
+            "meaningVi": "Mình có thể nhìn thấy hat."
+          },
+          {
+            "sentenceEn": "Touch the house.",
+            "phonetic": "/tʌtʃ ðə house/",
+            "meaningVi": "Chạm vào house nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở trong vườn",
+        "transcript": "Hello, I am Bill. Look at my hat. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Hat",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the garden",
+        "passage": "This is my school. Look at the playground. Bill has a hat. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có hat. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u7_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Hat",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a hat.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the hat",
+        "meaningVi": "Hãy nhìn vào hat.",
+        "items": [
+          {
+            "id": "g1_u7_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "hat"
+            ],
+            "correctSentence": "Look at the hat",
+            "meaningVi": "Hãy nhìn vào hat.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u8",
+      "grade": 1,
+      "unit": 8,
+      "unitTitle": "Unit 8: In the park",
+      "unitNameVi": "Ở công viên",
+      "theme": "School & Daily Life",
+      "semester": 1,
+      "bookPages": "Trang 34 – 37",
+      "vocabularies": [
+        {
+          "id": "g1_u8_01",
+          "word": "kite",
+          "phonetic": "/kite/",
+          "wordType": "Danh từ",
+          "meaning": "Kite trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở công viên",
+          "exampleEn": "Look at the kite.",
+          "exampleVi": "Hãy nhìn vào kite.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u8_02",
+          "word": "bike",
+          "phonetic": "/bike/",
+          "wordType": "Danh từ",
+          "meaning": "Bike trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở công viên",
+          "exampleEn": "Look at the bike.",
+          "exampleVi": "Hãy nhìn vào bike.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u8_03",
+          "word": "ride",
+          "phonetic": "/ride/",
+          "wordType": "Danh từ",
+          "meaning": "Ride trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở công viên",
+          "exampleEn": "Look at the ride.",
+          "exampleVi": "Hãy nhìn vào ride.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u8_04",
+          "word": "fly",
+          "phonetic": "/fly/",
+          "wordType": "Danh từ",
+          "meaning": "Fly trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở công viên",
+          "exampleEn": "Look at the fly.",
+          "exampleVi": "Hãy nhìn vào fly.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'kite'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /aɪ/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "kite",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'kite' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/aɪ/ (Letter I)",
+        "title": "Học phát âm chữ cái và âm /aɪ/",
+        "sound1": {
+          "symbol": "/aɪ/",
+          "name": "Âm /aɪ/ chuẩn bản ngữ",
+          "words": [
+            "kite",
+            "bike"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "kite",
+            "correctSound": "/aɪ/",
+            "options": [
+              "/aɪ/",
+              "/s/"
+            ],
+            "meaningVi": "kite"
+          }
+        ],
+        "tongueTwister": "Look at the kite on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the kite!",
+        "phonetic": "/lʊk æt ðə kite/",
+        "meaningVi": "Hãy nhìn vào kite kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở công viên",
+        "dialogueTitle": "Lesson 1: In the park",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở công viên.",
+        "dialogueLines": [
+          {
+            "id": "g1_u8_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u8_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u8_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A kite.",
+            "phonetic": "/lʊk ə kite/",
+            "meaningVi": "Nhìn kìa! Một kite.",
+            "tipsVi": "Nhấn giọng vào kite."
+          },
+          {
+            "id": "g1_u8_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a kite!",
+            "phonetic": "/jes ɪt ɪz ə kite/",
+            "meaningVi": "Đúng rồi, đó là kite!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a kite.",
+            "phonetic": "/aɪ kæn siː ə kite/",
+            "meaningVi": "Mình có thể nhìn thấy kite."
+          },
+          {
+            "sentenceEn": "Touch the fly.",
+            "phonetic": "/tʌtʃ ðə fly/",
+            "meaningVi": "Chạm vào fly nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở công viên",
+        "transcript": "Hello, I am Bill. Look at my kite. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Kite",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the park",
+        "passage": "This is my school. Look at the playground. Bill has a kite. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có kite. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u8_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Kite",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a kite.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the kite",
+        "meaningVi": "Hãy nhìn vào kite.",
+        "items": [
+          {
+            "id": "g1_u8_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "kite"
+            ],
+            "correctSentence": "Look at the kite",
+            "meaningVi": "Hãy nhìn vào kite.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u9",
+      "grade": 1,
+      "unit": 9,
+      "unitTitle": "Unit 9: In the grocery store",
+      "unitNameVi": "Ở cửa hàng tạp hóa",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 38 – 41",
+      "vocabularies": [
+        {
+          "id": "g1_u9_01",
+          "word": "tea",
+          "phonetic": "/tea/",
+          "wordType": "Danh từ",
+          "meaning": "Tea trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "Look at the tea.",
+          "exampleVi": "Hãy nhìn vào tea.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u9_02",
+          "word": "pea",
+          "phonetic": "/pea/",
+          "wordType": "Danh từ",
+          "meaning": "Pea trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "Look at the pea.",
+          "exampleVi": "Hãy nhìn vào pea.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u9_03",
+          "word": "see",
+          "phonetic": "/see/",
+          "wordType": "Danh từ",
+          "meaning": "See trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "Look at the see.",
+          "exampleVi": "Hãy nhìn vào see.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u9_04",
+          "word": "bee",
+          "phonetic": "/bee/",
+          "wordType": "Danh từ",
+          "meaning": "Bee trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "Look at the bee.",
+          "exampleVi": "Hãy nhìn vào bee.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'tea'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /iː/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "tea",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'tea' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/iː/ (Letter E/EA)",
+        "title": "Học phát âm chữ cái và âm /iː/",
+        "sound1": {
+          "symbol": "/iː/",
+          "name": "Âm /iː/ chuẩn bản ngữ",
+          "words": [
+            "tea",
+            "pea"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "tea",
+            "correctSound": "/iː/",
+            "options": [
+              "/iː/",
+              "/s/"
+            ],
+            "meaningVi": "tea"
+          }
+        ],
+        "tongueTwister": "Look at the tea on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the tea!",
+        "phonetic": "/lʊk æt ðə tea/",
+        "meaningVi": "Hãy nhìn vào tea kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở cửa hàng tạp hóa",
+        "dialogueTitle": "Lesson 1: In the grocery store",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở cửa hàng tạp hóa.",
+        "dialogueLines": [
+          {
+            "id": "g1_u9_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u9_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u9_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A tea.",
+            "phonetic": "/lʊk ə tea/",
+            "meaningVi": "Nhìn kìa! Một tea.",
+            "tipsVi": "Nhấn giọng vào tea."
+          },
+          {
+            "id": "g1_u9_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a tea!",
+            "phonetic": "/jes ɪt ɪz ə tea/",
+            "meaningVi": "Đúng rồi, đó là tea!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a tea.",
+            "phonetic": "/aɪ kæn siː ə tea/",
+            "meaningVi": "Mình có thể nhìn thấy tea."
+          },
+          {
+            "sentenceEn": "Touch the bee.",
+            "phonetic": "/tʌtʃ ðə bee/",
+            "meaningVi": "Chạm vào bee nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở cửa hàng tạp hóa",
+        "transcript": "Hello, I am Bill. Look at my tea. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Tea",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the grocery store",
+        "passage": "This is my school. Look at the playground. Bill has a tea. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có tea. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u9_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Tea",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a tea.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the tea",
+        "meaningVi": "Hãy nhìn vào tea.",
+        "items": [
+          {
+            "id": "g1_u9_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "tea"
+            ],
+            "correctSentence": "Look at the tea",
+            "meaningVi": "Hãy nhìn vào tea.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u10",
+      "grade": 1,
+      "unit": 10,
+      "unitTitle": "Unit 10: At the zoo",
+      "unitNameVi": "Ở sở thú",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 42 – 45",
+      "vocabularies": [
+        {
+          "id": "g1_u10_01",
+          "word": "monkey",
+          "phonetic": "/monkey/",
+          "wordType": "Danh từ",
+          "meaning": "Monkey trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "Look at the monkey.",
+          "exampleVi": "Hãy nhìn vào monkey.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u10_02",
+          "word": "mother",
+          "phonetic": "/mother/",
+          "wordType": "Danh từ",
+          "meaning": "Mother trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "Look at the mother.",
+          "exampleVi": "Hãy nhìn vào mother.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u10_03",
+          "word": "mouse",
+          "phonetic": "/mouse/",
+          "wordType": "Danh từ",
+          "meaning": "Mouse trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "Look at the mouse.",
+          "exampleVi": "Hãy nhìn vào mouse.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u10_04",
+          "word": "mango",
+          "phonetic": "/mango/",
+          "wordType": "Danh từ",
+          "meaning": "Mango trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "Look at the mango.",
+          "exampleVi": "Hãy nhìn vào mango.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'monkey'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /m/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "monkey",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'monkey' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/m/ (Letter M)",
+        "title": "Học phát âm chữ cái và âm /m/",
+        "sound1": {
+          "symbol": "/m/",
+          "name": "Âm /m/ chuẩn bản ngữ",
+          "words": [
+            "monkey",
+            "mother"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "monkey",
+            "correctSound": "/m/",
+            "options": [
+              "/m/",
+              "/s/"
+            ],
+            "meaningVi": "monkey"
+          }
+        ],
+        "tongueTwister": "Look at the monkey on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the monkey!",
+        "phonetic": "/lʊk æt ðə monkey/",
+        "meaningVi": "Hãy nhìn vào monkey kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở sở thú",
+        "dialogueTitle": "Lesson 1: At the zoo",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở sở thú.",
+        "dialogueLines": [
+          {
+            "id": "g1_u10_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u10_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u10_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A monkey.",
+            "phonetic": "/lʊk ə monkey/",
+            "meaningVi": "Nhìn kìa! Một monkey.",
+            "tipsVi": "Nhấn giọng vào monkey."
+          },
+          {
+            "id": "g1_u10_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a monkey!",
+            "phonetic": "/jes ɪt ɪz ə monkey/",
+            "meaningVi": "Đúng rồi, đó là monkey!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a monkey.",
+            "phonetic": "/aɪ kæn siː ə monkey/",
+            "meaningVi": "Mình có thể nhìn thấy monkey."
+          },
+          {
+            "sentenceEn": "Touch the mango.",
+            "phonetic": "/tʌtʃ ðə mango/",
+            "meaningVi": "Chạm vào mango nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở sở thú",
+        "transcript": "Hello, I am Bill. Look at my monkey. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Monkey",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At the zoo",
+        "passage": "This is my school. Look at the playground. Bill has a monkey. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có monkey. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u10_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Monkey",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a monkey.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the monkey",
+        "meaningVi": "Hãy nhìn vào monkey.",
+        "items": [
+          {
+            "id": "g1_u10_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "monkey"
+            ],
+            "correctSentence": "Look at the monkey",
+            "meaningVi": "Hãy nhìn vào monkey.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u11",
+      "grade": 1,
+      "unit": 11,
+      "unitTitle": "Unit 11: At the bus stop",
+      "unitNameVi": "Ở trạm xe buýt",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 46 – 49",
+      "vocabularies": [
+        {
+          "id": "g1_u11_01",
+          "word": "bus",
+          "phonetic": "/bus/",
+          "wordType": "Danh từ",
+          "meaning": "Bus trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở trạm xe buýt",
+          "exampleEn": "Look at the bus.",
+          "exampleVi": "Hãy nhìn vào bus.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u11_02",
+          "word": "pen",
+          "phonetic": "/pen/",
+          "wordType": "Danh từ",
+          "meaning": "Pen trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở trạm xe buýt",
+          "exampleEn": "Look at the pen.",
+          "exampleVi": "Hãy nhìn vào pen.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u11_03",
+          "word": "pencil",
+          "phonetic": "/pencil/",
+          "wordType": "Danh từ",
+          "meaning": "Pencil trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở trạm xe buýt",
+          "exampleEn": "Look at the pencil.",
+          "exampleVi": "Hãy nhìn vào pencil.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u11_04",
+          "word": "pig",
+          "phonetic": "/pig/",
+          "wordType": "Danh từ",
+          "meaning": "Pig trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở trạm xe buýt",
+          "exampleEn": "Look at the pig.",
+          "exampleVi": "Hãy nhìn vào pig.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'bus'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /p/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "bus",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'bus' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/p/ & /b/ (Letter P)",
+        "title": "Học phát âm chữ cái và âm /p/",
+        "sound1": {
+          "symbol": "/p/",
+          "name": "Âm /p/ chuẩn bản ngữ",
+          "words": [
+            "bus",
+            "pen"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "bus",
+            "correctSound": "/p/",
+            "options": [
+              "/p/",
+              "/s/"
+            ],
+            "meaningVi": "bus"
+          }
+        ],
+        "tongueTwister": "Look at the bus on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the bus!",
+        "phonetic": "/lʊk æt ðə bus/",
+        "meaningVi": "Hãy nhìn vào bus kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở trạm xe buýt",
+        "dialogueTitle": "Lesson 1: At the bus stop",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở trạm xe buýt.",
+        "dialogueLines": [
+          {
+            "id": "g1_u11_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u11_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u11_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A bus.",
+            "phonetic": "/lʊk ə bus/",
+            "meaningVi": "Nhìn kìa! Một bus.",
+            "tipsVi": "Nhấn giọng vào bus."
+          },
+          {
+            "id": "g1_u11_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a bus!",
+            "phonetic": "/jes ɪt ɪz ə bus/",
+            "meaningVi": "Đúng rồi, đó là bus!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a bus.",
+            "phonetic": "/aɪ kæn siː ə bus/",
+            "meaningVi": "Mình có thể nhìn thấy bus."
+          },
+          {
+            "sentenceEn": "Touch the pig.",
+            "phonetic": "/tʌtʃ ðə pig/",
+            "meaningVi": "Chạm vào pig nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở trạm xe buýt",
+        "transcript": "Hello, I am Bill. Look at my bus. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Bus",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At the bus stop",
+        "passage": "This is my school. Look at the playground. Bill has a bus. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có bus. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u11_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Bus",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a bus.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the bus",
+        "meaningVi": "Hãy nhìn vào bus.",
+        "items": [
+          {
+            "id": "g1_u11_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "bus"
+            ],
+            "correctSentence": "Look at the bus",
+            "meaningVi": "Hãy nhìn vào bus.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u12",
+      "grade": 1,
+      "unit": 12,
+      "unitTitle": "Unit 12: At the lake",
+      "unitNameVi": "Ở bờ hồ",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 50 – 53",
+      "vocabularies": [
+        {
+          "id": "g1_u12_01",
+          "word": "lake",
+          "phonetic": "/lake/",
+          "wordType": "Danh từ",
+          "meaning": "Lake trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở bờ hồ",
+          "exampleEn": "Look at the lake.",
+          "exampleVi": "Hãy nhìn vào lake.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u12_02",
+          "word": "leaf",
+          "phonetic": "/leaf/",
+          "wordType": "Danh từ",
+          "meaning": "Leaf trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở bờ hồ",
+          "exampleEn": "Look at the leaf.",
+          "exampleVi": "Hãy nhìn vào leaf.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u12_03",
+          "word": "lock",
+          "phonetic": "/lock/",
+          "wordType": "Danh từ",
+          "meaning": "Lock trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở bờ hồ",
+          "exampleEn": "Look at the lock.",
+          "exampleVi": "Hãy nhìn vào lock.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u12_04",
+          "word": "leg",
+          "phonetic": "/leg/",
+          "wordType": "Danh từ",
+          "meaning": "Leg trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở bờ hồ",
+          "exampleEn": "Look at the leg.",
+          "exampleVi": "Hãy nhìn vào leg.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'lake'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /l/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "lake",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'lake' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/l/ (Letter L)",
+        "title": "Học phát âm chữ cái và âm /l/",
+        "sound1": {
+          "symbol": "/l/",
+          "name": "Âm /l/ chuẩn bản ngữ",
+          "words": [
+            "lake",
+            "leaf"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "lake",
+            "correctSound": "/l/",
+            "options": [
+              "/l/",
+              "/s/"
+            ],
+            "meaningVi": "lake"
+          }
+        ],
+        "tongueTwister": "Look at the lake on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the lake!",
+        "phonetic": "/lʊk æt ðə lake/",
+        "meaningVi": "Hãy nhìn vào lake kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở bờ hồ",
+        "dialogueTitle": "Lesson 1: At the lake",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở bờ hồ.",
+        "dialogueLines": [
+          {
+            "id": "g1_u12_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u12_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u12_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A lake.",
+            "phonetic": "/lʊk ə lake/",
+            "meaningVi": "Nhìn kìa! Một lake.",
+            "tipsVi": "Nhấn giọng vào lake."
+          },
+          {
+            "id": "g1_u12_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a lake!",
+            "phonetic": "/jes ɪt ɪz ə lake/",
+            "meaningVi": "Đúng rồi, đó là lake!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a lake.",
+            "phonetic": "/aɪ kæn siː ə lake/",
+            "meaningVi": "Mình có thể nhìn thấy lake."
+          },
+          {
+            "sentenceEn": "Touch the leg.",
+            "phonetic": "/tʌtʃ ðə leg/",
+            "meaningVi": "Chạm vào leg nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở bờ hồ",
+        "transcript": "Hello, I am Bill. Look at my lake. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Lake",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At the lake",
+        "passage": "This is my school. Look at the playground. Bill has a lake. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có lake. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u12_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Lake",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a lake.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the lake",
+        "meaningVi": "Hãy nhìn vào lake.",
+        "items": [
+          {
+            "id": "g1_u12_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "lake"
+            ],
+            "correctSentence": "Look at the lake",
+            "meaningVi": "Hãy nhìn vào lake.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u13",
+      "grade": 1,
+      "unit": 13,
+      "unitTitle": "Unit 13: In the school canteen",
+      "unitNameVi": "Ở căng tin trường",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 54 – 57",
+      "vocabularies": [
+        {
+          "id": "g1_u13_01",
+          "word": "noodles",
+          "phonetic": "/noodles/",
+          "wordType": "Danh từ",
+          "meaning": "Noodles trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở căng tin trường",
+          "exampleEn": "Look at the noodles.",
+          "exampleVi": "Hãy nhìn vào noodles.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u13_02",
+          "word": "nuts",
+          "phonetic": "/nuts/",
+          "wordType": "Danh từ",
+          "meaning": "Nuts trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở căng tin trường",
+          "exampleEn": "Look at the nuts.",
+          "exampleVi": "Hãy nhìn vào nuts.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u13_03",
+          "word": "neck",
+          "phonetic": "/neck/",
+          "wordType": "Danh từ",
+          "meaning": "Neck trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở căng tin trường",
+          "exampleEn": "Look at the neck.",
+          "exampleVi": "Hãy nhìn vào neck.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u13_04",
+          "word": "nose",
+          "phonetic": "/nose/",
+          "wordType": "Danh từ",
+          "meaning": "Nose trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở căng tin trường",
+          "exampleEn": "Look at the nose.",
+          "exampleVi": "Hãy nhìn vào nose.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'noodles'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /n/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "noodles",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'noodles' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/n/ (Letter N)",
+        "title": "Học phát âm chữ cái và âm /n/",
+        "sound1": {
+          "symbol": "/n/",
+          "name": "Âm /n/ chuẩn bản ngữ",
+          "words": [
+            "noodles",
+            "nuts"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "noodles",
+            "correctSound": "/n/",
+            "options": [
+              "/n/",
+              "/s/"
+            ],
+            "meaningVi": "noodles"
+          }
+        ],
+        "tongueTwister": "Look at the noodles on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the noodles!",
+        "phonetic": "/lʊk æt ðə noodles/",
+        "meaningVi": "Hãy nhìn vào noodles kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở căng tin trường",
+        "dialogueTitle": "Lesson 1: In the school canteen",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở căng tin trường.",
+        "dialogueLines": [
+          {
+            "id": "g1_u13_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u13_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u13_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A noodles.",
+            "phonetic": "/lʊk ə noodles/",
+            "meaningVi": "Nhìn kìa! Một noodles.",
+            "tipsVi": "Nhấn giọng vào noodles."
+          },
+          {
+            "id": "g1_u13_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a noodles!",
+            "phonetic": "/jes ɪt ɪz ə noodles/",
+            "meaningVi": "Đúng rồi, đó là noodles!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a noodles.",
+            "phonetic": "/aɪ kæn siː ə noodles/",
+            "meaningVi": "Mình có thể nhìn thấy noodles."
+          },
+          {
+            "sentenceEn": "Touch the nose.",
+            "phonetic": "/tʌtʃ ðə nose/",
+            "meaningVi": "Chạm vào nose nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở căng tin trường",
+        "transcript": "Hello, I am Bill. Look at my noodles. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Noodles",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the school canteen",
+        "passage": "This is my school. Look at the playground. Bill has a noodles. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có noodles. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u13_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Noodles",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a noodles.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the noodles",
+        "meaningVi": "Hãy nhìn vào noodles.",
+        "items": [
+          {
+            "id": "g1_u13_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "noodles"
+            ],
+            "correctSentence": "Look at the noodles",
+            "meaningVi": "Hãy nhìn vào noodles.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u14",
+      "grade": 1,
+      "unit": 14,
+      "unitTitle": "Unit 14: In the toy shop",
+      "unitNameVi": "Ở cửa hàng đồ chơi",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 58 – 61",
+      "vocabularies": [
+        {
+          "id": "g1_u14_01",
+          "word": "tiger",
+          "phonetic": "/tiger/",
+          "wordType": "Danh từ",
+          "meaning": "Tiger trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở cửa hàng đồ chơi",
+          "exampleEn": "Look at the tiger.",
+          "exampleVi": "Hãy nhìn vào tiger.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u14_02",
+          "word": "teddy bear",
+          "phonetic": "/teddy bear/",
+          "wordType": "Danh từ",
+          "meaning": "Teddy bear trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở cửa hàng đồ chơi",
+          "exampleEn": "Look at the teddy bear.",
+          "exampleVi": "Hãy nhìn vào teddy bear.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u14_03",
+          "word": "top",
+          "phonetic": "/top/",
+          "wordType": "Danh từ",
+          "meaning": "Top trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở cửa hàng đồ chơi",
+          "exampleEn": "Look at the top.",
+          "exampleVi": "Hãy nhìn vào top.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u14_04",
+          "word": "train",
+          "phonetic": "/train/",
+          "wordType": "Danh từ",
+          "meaning": "Train trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở cửa hàng đồ chơi",
+          "exampleEn": "Look at the train.",
+          "exampleVi": "Hãy nhìn vào train.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'tiger'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /t/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "tiger",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'tiger' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/t/ (Letter T)",
+        "title": "Học phát âm chữ cái và âm /t/",
+        "sound1": {
+          "symbol": "/t/",
+          "name": "Âm /t/ chuẩn bản ngữ",
+          "words": [
+            "tiger",
+            "teddy bear"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "tiger",
+            "correctSound": "/t/",
+            "options": [
+              "/t/",
+              "/s/"
+            ],
+            "meaningVi": "tiger"
+          }
+        ],
+        "tongueTwister": "Look at the tiger on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the tiger!",
+        "phonetic": "/lʊk æt ðə tiger/",
+        "meaningVi": "Hãy nhìn vào tiger kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở cửa hàng đồ chơi",
+        "dialogueTitle": "Lesson 1: In the toy shop",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở cửa hàng đồ chơi.",
+        "dialogueLines": [
+          {
+            "id": "g1_u14_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u14_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u14_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A tiger.",
+            "phonetic": "/lʊk ə tiger/",
+            "meaningVi": "Nhìn kìa! Một tiger.",
+            "tipsVi": "Nhấn giọng vào tiger."
+          },
+          {
+            "id": "g1_u14_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a tiger!",
+            "phonetic": "/jes ɪt ɪz ə tiger/",
+            "meaningVi": "Đúng rồi, đó là tiger!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a tiger.",
+            "phonetic": "/aɪ kæn siː ə tiger/",
+            "meaningVi": "Mình có thể nhìn thấy tiger."
+          },
+          {
+            "sentenceEn": "Touch the train.",
+            "phonetic": "/tʌtʃ ðə train/",
+            "meaningVi": "Chạm vào train nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở cửa hàng đồ chơi",
+        "transcript": "Hello, I am Bill. Look at my tiger. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Tiger",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: In the toy shop",
+        "passage": "This is my school. Look at the playground. Bill has a tiger. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có tiger. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u14_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Tiger",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a tiger.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the tiger",
+        "meaningVi": "Hãy nhìn vào tiger.",
+        "items": [
+          {
+            "id": "g1_u14_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "tiger"
+            ],
+            "correctSentence": "Look at the tiger",
+            "meaningVi": "Hãy nhìn vào tiger.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u15",
+      "grade": 1,
+      "unit": 15,
+      "unitTitle": "Unit 15: At the football match",
+      "unitNameVi": "Ở trận bóng đá",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 62 – 65",
+      "vocabularies": [
+        {
+          "id": "g1_u15_01",
+          "word": "football",
+          "phonetic": "/football/",
+          "wordType": "Danh từ",
+          "meaning": "Football trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở trận bóng đá",
+          "exampleEn": "Look at the football.",
+          "exampleVi": "Hãy nhìn vào football.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u15_02",
+          "word": "friend",
+          "phonetic": "/friend/",
+          "wordType": "Danh từ",
+          "meaning": "Friend trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở trận bóng đá",
+          "exampleEn": "Look at the friend.",
+          "exampleVi": "Hãy nhìn vào friend.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u15_03",
+          "word": "kick",
+          "phonetic": "/kick/",
+          "wordType": "Danh từ",
+          "meaning": "Kick trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở trận bóng đá",
+          "exampleEn": "Look at the kick.",
+          "exampleVi": "Hãy nhìn vào kick.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u15_04",
+          "word": "team",
+          "phonetic": "/team/",
+          "wordType": "Danh từ",
+          "meaning": "Team trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở trận bóng đá",
+          "exampleEn": "Look at the team.",
+          "exampleVi": "Hãy nhìn vào team.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'football'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /f/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "football",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'football' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/f/ & /m/",
+        "title": "Học phát âm chữ cái và âm /f/",
+        "sound1": {
+          "symbol": "/f/",
+          "name": "Âm /f/ chuẩn bản ngữ",
+          "words": [
+            "football",
+            "friend"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "football",
+            "correctSound": "/f/",
+            "options": [
+              "/f/",
+              "/s/"
+            ],
+            "meaningVi": "football"
+          }
+        ],
+        "tongueTwister": "Look at the football on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the football!",
+        "phonetic": "/lʊk æt ðə football/",
+        "meaningVi": "Hãy nhìn vào football kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở trận bóng đá",
+        "dialogueTitle": "Lesson 1: At the football match",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở trận bóng đá.",
+        "dialogueLines": [
+          {
+            "id": "g1_u15_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u15_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u15_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A football.",
+            "phonetic": "/lʊk ə football/",
+            "meaningVi": "Nhìn kìa! Một football.",
+            "tipsVi": "Nhấn giọng vào football."
+          },
+          {
+            "id": "g1_u15_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a football!",
+            "phonetic": "/jes ɪt ɪz ə football/",
+            "meaningVi": "Đúng rồi, đó là football!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a football.",
+            "phonetic": "/aɪ kæn siː ə football/",
+            "meaningVi": "Mình có thể nhìn thấy football."
+          },
+          {
+            "sentenceEn": "Touch the team.",
+            "phonetic": "/tʌtʃ ðə team/",
+            "meaningVi": "Chạm vào team nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở trận bóng đá",
+        "transcript": "Hello, I am Bill. Look at my football. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Football",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At the football match",
+        "passage": "This is my school. Look at the playground. Bill has a football. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có football. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u15_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Football",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a football.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the football",
+        "meaningVi": "Hãy nhìn vào football.",
+        "items": [
+          {
+            "id": "g1_u15_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "football"
+            ],
+            "correctSentence": "Look at the football",
+            "meaningVi": "Hãy nhìn vào football.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g1_u16",
+      "grade": 1,
+      "unit": 16,
+      "unitTitle": "Unit 16: At home",
+      "unitNameVi": "Ở nhà",
+      "theme": "School & Daily Life",
+      "semester": 2,
+      "bookPages": "Trang 66 – 69",
+      "vocabularies": [
+        {
+          "id": "g1_u16_01",
+          "word": "window",
+          "phonetic": "/window/",
+          "wordType": "Danh từ",
+          "meaning": "Window trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở nhà",
+          "exampleEn": "Look at the window.",
+          "exampleVi": "Hãy nhìn vào window.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u16_02",
+          "word": "water",
+          "phonetic": "/water/",
+          "wordType": "Danh từ",
+          "meaning": "Water trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở nhà",
+          "exampleEn": "Look at the water.",
+          "exampleVi": "Hãy nhìn vào water.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u16_03",
+          "word": "watch",
+          "phonetic": "/watch/",
+          "wordType": "Danh từ",
+          "meaning": "Watch trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở nhà",
+          "exampleEn": "Look at the watch.",
+          "exampleVi": "Hãy nhìn vào watch.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g1_u16_04",
+          "word": "wall",
+          "phonetic": "/wall/",
+          "wordType": "Danh từ",
+          "meaning": "Wall trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở nhà",
+          "exampleEn": "Look at the wall.",
+          "exampleVi": "Hãy nhìn vào wall.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với 'window'",
+        "ruleVi": "Dùng cấu trúc 'Look at the...' để hướng sự chú ý của bạn bè vào đồ vật xung quanh.",
+        "formula": "Look at the + Danh từ / Point to the + Danh từ",
+        "quickTip": "Phát âm rõ ràng âm đầu /w/.",
+        "quiz": [
+          {
+            "question": "Look at the ______.",
+            "options": [
+              "window",
+              "goodbye",
+              "hello",
+              "yes"
+            ],
+            "answerIndex": 0,
+            "explain": "Dùng danh từ 'window' để chỉ đồ vật."
+          },
+          {
+            "question": "Point to the ball. -> Em hãy ______ vào quả bóng.",
+            "options": [
+              "chỉ",
+              "đá",
+              "ném",
+              "vẽ"
+            ],
+            "answerIndex": 0,
+            "explain": "'Point to' nghĩa là chỉ tay vào."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/w/ (Letter W)",
+        "title": "Học phát âm chữ cái và âm /w/",
+        "sound1": {
+          "symbol": "/w/",
+          "name": "Âm /w/ chuẩn bản ngữ",
+          "words": [
+            "window",
+            "water"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Âm schwa nhẹ trong từ",
+          "words": [
+            "the",
+            "a"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "window",
+            "correctSound": "/w/",
+            "options": [
+              "/w/",
+              "/s/"
+            ],
+            "meaningVi": "window"
+          }
+        ],
+        "tongueTwister": "Look at the window on the table."
+      },
+      "speaking": {
+        "targetSentence": "Look at the window!",
+        "phonetic": "/lʊk æt ðə window/",
+        "meaningVi": "Hãy nhìn vào window kìa!",
+        "situationalTopic": "Chỉ và gọi tên đồ vật: Ở nhà",
+        "dialogueTitle": "Lesson 1: At home",
+        "dialogueContext": "Hai bạn học sinh chỉ cho nhau xem Ở nhà.",
+        "dialogueLines": [
+          {
+            "id": "g1_u16_d1",
+            "speaker": "Bill",
+            "sentenceEn": "Hello, Ba.",
+            "phonetic": "/həˈləʊ bɑː/",
+            "meaningVi": "Chào Ba.",
+            "tipsVi": "Chào thân mật, vui tươi."
+          },
+          {
+            "id": "g1_u16_d2",
+            "speaker": "Ba",
+            "sentenceEn": "Hi, Bill.",
+            "phonetic": "/haɪ bɪl/",
+            "meaningVi": "Chào Bill.",
+            "tipsVi": "Cười tươi đáp lời."
+          },
+          {
+            "id": "g1_u16_d3",
+            "speaker": "Bill",
+            "sentenceEn": "Look! A window.",
+            "phonetic": "/lʊk ə window/",
+            "meaningVi": "Nhìn kìa! Một window.",
+            "tipsVi": "Nhấn giọng vào window."
+          },
+          {
+            "id": "g1_u16_d4",
+            "speaker": "Ba",
+            "sentenceEn": "Yes, it is a window!",
+            "phonetic": "/jes ɪt ɪz ə window/",
+            "meaningVi": "Đúng rồi, đó là window!",
+            "tipsVi": "Gật đầu đồng tình."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I can see a window.",
+            "phonetic": "/aɪ kæn siː ə window/",
+            "meaningVi": "Mình có thể nhìn thấy window."
+          },
+          {
+            "sentenceEn": "Touch the wall.",
+            "phonetic": "/tʌtʃ ðə wall/",
+            "meaningVi": "Chạm vào wall nào."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nhận biết đồ vật: Ở nhà",
+        "transcript": "Hello, I am Bill. Look at my window. It is very nice.",
+        "question": "What does Bill have?",
+        "options": [
+          "Window",
+          "An apple",
+          "A cat",
+          "A dog"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Fun Time: At home",
+        "passage": "This is my school. Look at the playground. Bill has a window. We play together and have fun.",
+        "translation": "Đây là trường của em. Hãy nhìn vào sân trường. Bạn Bill có window. Chúng em cùng chơi đùa rất vui.",
+        "questions": [
+          {
+            "id": "g1_u16_r1",
+            "type": "multiple_choice",
+            "question": "What does Bill have?",
+            "options": [
+              "Window",
+              "A bike",
+              "A hat",
+              "A doll"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Bill has a window.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "Look at the window",
+        "meaningVi": "Hãy nhìn vào window.",
+        "items": [
+          {
+            "id": "g1_u16_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "Look",
+              "at",
+              "the",
+              "window"
+            ],
+            "correctSentence": "Look at the window",
+            "meaningVi": "Hãy nhìn vào window.",
+            "hint": "Bắt đầu bằng chữ 'Look'..."
+          }
+        ]
+      }
+    }
+  ]
+}

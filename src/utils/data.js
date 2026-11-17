@@ -2,12 +2,31 @@ import units from '../data/units.json';
 import { store } from './storage.js';
 import { prepareUnitForPractice } from './quiz.js';
 
-// Tự nạp mọi file unitN.json: thêm Unit mới chỉ cần thêm file dữ liệu.
+// Tự nạp mọi file unitN.json (Lớp 6 chuẩn)
 const modules = import.meta.glob('../data/unit*.json', { eager: true, import: 'default' });
+// Tự nạp toàn bộ học liệu 12 khối lớp chuẩn SGK GDPT 2018
+const gradeModules = import.meta.glob('../data/grades/grade*.json', { eager: true, import: 'default' });
 
 const baseUnitData = {};
 for (const mod of Object.values(modules)) {
   if (mod && typeof mod.unitId === 'number') baseUnitData[mod.unitId] = mod;
+}
+
+const allGradesData = {};
+const allUnitsMap = {};
+
+for (const mod of Object.values(gradeModules)) {
+  if (mod && typeof mod.grade === 'number') {
+    allGradesData[mod.grade] = mod;
+    for (const u of mod.units || []) {
+      const uId = u.unitId || `g${mod.grade}_u${u.unit}`;
+      allUnitsMap[uId] = u;
+      if (mod.grade === 6) {
+        allUnitsMap[u.unit] = u;
+        allUnitsMap[String(u.unit)] = u;
+      }
+    }
+  }
 }
 
 const isPlainObject = (v) => v && typeof v === 'object' && !Array.isArray(v);
@@ -54,7 +73,33 @@ function getMergedData(numId) {
   }
 }
 
-export function listUnits() {
+export function listUnits(grade = null) {
+  let targetGrade = grade;
+  if (!targetGrade) {
+    try {
+      targetGrade = store().getSettings()?.selectedGrade || 6;
+    } catch {
+      targetGrade = 6;
+    }
+  }
+
+  // Nếu người dùng chọn một khối lớp khác Lớp 6 và có dữ liệu trong allGradesData
+  if (targetGrade !== 6 && allGradesData[targetGrade]) {
+    const gData = allGradesData[targetGrade];
+    return (gData.units || []).map((u) => ({
+      unitId: u.unitId || `g${targetGrade}_u${u.unit}`,
+      unit: u.unit,
+      grade: targetGrade,
+      title: u.unitTitle?.replace(/^Unit \d+:\s*/, '') || u.title || `Unit ${u.unit}`,
+      titleEn: u.unitTitle?.replace(/^Unit \d+:\s*/, '') || u.title || `Unit ${u.unit}`,
+      titleVi: u.unitNameVi || u.titleVi || '',
+      emoji: '📘',
+      color: '#FFC83D',
+      available: true,
+    }));
+  }
+
+  // Mặc định cho Lớp 6
   let customList = [];
   try {
     customList = store().getCreatedUnits() || [];
@@ -90,8 +135,50 @@ export function getUnit(unitId) {
 
 /** Unit đúng như dữ liệu đã lưu (cho trình soạn của giáo viên – sửa/lưu không bị xáo trộn). */
 export function getUnitRaw(unitId) {
+  if (!unitId && unitId !== 0) return null;
+  const strId = String(unitId).trim();
   const numId = Number(unitId);
-  const all = listUnits();
+
+  // 1. Kiểm tra trực tiếp trong allUnitsMap (ví dụ 'g7_u1' hoặc 'g10_u2')
+  if (allUnitsMap[strId]) {
+    const raw = allUnitsMap[strId];
+    const isGrade6 = raw.grade === 6 || !raw.grade;
+    return {
+      ...raw,
+      unitId: isGrade6 ? (raw.unit || (Number.isFinite(numId) ? numId : 1)) : (raw.unitId || strId),
+      titleEn: raw.unitTitle?.replace(/^Unit \d+:\s*/, '') || raw.title || `Unit ${raw.unit}`,
+      title: raw.unitTitle?.replace(/^Unit \d+:\s*/, '') || raw.title || `Unit ${raw.unit}`,
+      titleVi: raw.unitNameVi || raw.titleVi || '',
+      emoji: raw.emoji || '📘',
+      color: raw.color || '#FFC83D',
+      available: true,
+    };
+  }
+
+  // 2. Nếu là dạng số (ví dụ unitId = 1):
+  // Xem học sinh / giáo viên đang chọn Lớp mấy trong settings
+  let currentGrade = 6;
+  try {
+    currentGrade = store().getSettings()?.selectedGrade || 6;
+  } catch {}
+
+  const gradeUnitKey = `g${currentGrade}_u${numId}`;
+  if (currentGrade !== 6 && allUnitsMap[gradeUnitKey]) {
+    const raw = allUnitsMap[gradeUnitKey];
+    return {
+      ...raw,
+      unitId: raw.unitId || gradeUnitKey,
+      titleEn: raw.unitTitle?.replace(/^Unit \d+:\s*/, '') || raw.title || `Unit ${raw.unit}`,
+      title: raw.unitTitle?.replace(/^Unit \d+:\s*/, '') || raw.title || `Unit ${raw.unit}`,
+      titleVi: raw.unitNameVi || raw.titleVi || '',
+      emoji: '📘',
+      color: '#FFC83D',
+      available: true,
+    };
+  }
+
+  // 3. Fallback về Lớp 6 chuẩn (baseUnitData) và custom units của giáo viên
+  const all = listUnits(6);
   const meta = all.find((u) => u.unitId === numId);
   const data = getMergedData(numId);
   if (!meta && !data) return null;

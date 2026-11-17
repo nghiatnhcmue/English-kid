@@ -214,11 +214,7 @@ describe('System Audit Checklist (10-Point Verification)', () => {
     it('references valid book IDs from OFFICIAL_BOOKS and correctly flags interactive availability', () => {
       const validBookIds = new Set(OFFICIAL_BOOKS.map((b) => b.id));
       multiGradeCurriculum.grades.forEach((g) => {
-        if (g.grade === 6) {
-          expect(g.interactiveAvailable).toBe(true);
-        } else {
-          expect(g.interactiveAvailable).toBe(false);
-        }
+        expect(g.interactiveAvailable).toBe(true);
 
         g.textbooks.forEach((tb) => {
           expect(validBookIds.has(tb.bookId), `Invalid textbook id ${tb.bookId} in grade ${g.grade}`).toBe(true);

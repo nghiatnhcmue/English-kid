@@ -10,3 +10,5 @@ Thumbs.db
 !public/pdf/
 .dev.vars
 .wrangler
+__pycache__/
+*.pyc

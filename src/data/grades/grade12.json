@@ -1,0 +1,2536 @@
+{
+  "grade": 12,
+  "gradeName": "Lớp 12",
+  "level": "high",
+  "levelName": "THPT",
+  "title": "SGK Tiếng Anh 12 – Global Success",
+  "totalUnits": 10,
+  "interactiveAvailable": true,
+  "interactiveNote": "Hệ thống trạm học tương tác 7 kỹ năng chuẩn SGK Lớp 12",
+  "units": [
+    {
+      "unitId": "g12_u1",
+      "grade": 12,
+      "unit": 1,
+      "unitTitle": "Unit 1: Life Stories We Admire",
+      "unitNameVi": "Những tấm gương cuộc đời đáng ngưỡng mộ",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 1,
+      "bookPages": "Trang 8 – 19",
+      "vocabularies": [
+        {
+          "id": "g12_u1_01",
+          "word": "admire",
+          "phonetic": "/admire/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Admire - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of admire is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm admire rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u1_02",
+          "word": "biography",
+          "phonetic": "/biography/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Biography - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of biography is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm biography rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u1_03",
+          "word": "dedication",
+          "phonetic": "/dedication/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Dedication - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of dedication is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm dedication rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u1_04",
+          "word": "persevere",
+          "phonetic": "/persevere/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Persevere - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of persevere is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm persevere rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u1_05",
+          "word": "resilience",
+          "phonetic": "/resilience/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Resilience - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of resilience is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm resilience rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u1_06",
+          "word": "legacy",
+          "phonetic": "/legacy/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Legacy - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of legacy is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm legacy rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u1_07",
+          "word": "pioneer",
+          "phonetic": "/pioneer/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Pioneer - chủ đề Những tấm gương cuộc đời đáng ngưỡng mộ",
+          "hint": "Tiếng Anh 12 Global Success - Unit 1",
+          "exampleEn": "The concept of pioneer is essential in understanding life stories we admire.",
+          "exampleVi": "Khái niệm pioneer rất cần thiết để thấu hiểu chủ đề những tấm gương cuộc đời đáng ngưỡng mộ.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Past simple vs Past continuous, used to/would",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Past simple vs Past continuous, used to/would.",
+        "formula": "Past simple vs Past continuous, used to/would",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 1:",
+            "options": [
+              "In modern society, admire requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Life Stories We Admire?",
+            "options": [
+              "admire",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'admire' là từ vựng cốt lõi của Unit 1 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Weak and strong forms of prepositions",
+        "title": "Ngữ âm & Trọng âm nâng cao: Weak and strong forms of prepositions",
+        "sound1": {
+          "symbol": "Weak",
+          "name": "Quy tắc Weak",
+          "words": [
+            "admire",
+            "biography"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "admire",
+            "correctSound": "Weak",
+            "options": [
+              "Weak",
+              "/b/"
+            ],
+            "meaningVi": "admire"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as admire with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining những tấm gương cuộc đời đáng ngưỡng mộ to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ admire tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về những tấm gương cuộc đời đáng ngưỡng mộ nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Những tấm gương cuộc đời đáng ngưỡng mộ",
+        "dialogueTitle": "Getting Started: Life Stories We Admire",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Những tấm gương cuộc đời đáng ngưỡng mộ trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u1_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our life stories we admire seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về những tấm gương cuộc đời đáng ngưỡng mộ chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u1_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how admire influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của admire đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u1_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u1_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of những tấm gương cuộc đời đáng ngưỡng mộ in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của những tấm gương cuộc đời đáng ngưỡng mộ trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of admire prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về admire chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Life Stories We Admire",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Life Stories We Admire. As research indicates, admire represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Life Stories We Admire?",
+        "options": [
+          "Admire",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Life Stories We Admire",
+        "passage": "In an increasingly interconnected world, understanding những tấm gương cuộc đời đáng ngưỡng mộ is essential for high school graduates. Recent studies demonstrate that admire plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to life stories we admire.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu những tấm gương cuộc đời đáng ngưỡng mộ là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng admire đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u1_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Admire",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating life stories we admire to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về những tấm gương cuộc đời đáng ngưỡng mộ để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u1_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Life",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Life to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Life để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u2",
+      "grade": 12,
+      "unit": 2,
+      "unitTitle": "Unit 2: A Multicultural World",
+      "unitNameVi": "Thế giới đa văn hóa",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 1,
+      "bookPages": "Trang 20 – 31",
+      "vocabularies": [
+        {
+          "id": "g12_u2_01",
+          "word": "multicultural",
+          "phonetic": "/multicultural/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Multicultural - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of multicultural is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm multicultural rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u2_02",
+          "word": "identity",
+          "phonetic": "/identity/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Identity - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of identity is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm identity rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u2_03",
+          "word": "diversity",
+          "phonetic": "/diversity/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Diversity - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of diversity is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm diversity rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u2_04",
+          "word": "assimilation",
+          "phonetic": "/assimilation/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Assimilation - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of assimilation is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm assimilation rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u2_05",
+          "word": "integration",
+          "phonetic": "/integration/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Integration - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of integration is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm integration rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u2_06",
+          "word": "customs",
+          "phonetic": "/customs/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Customs - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of customs is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm customs rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u2_07",
+          "word": "global citizen",
+          "phonetic": "/global citizen/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Global citizen - chủ đề Thế giới đa văn hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 2",
+          "exampleEn": "The concept of global citizen is essential in understanding a multicultural world.",
+          "exampleVi": "Khái niệm global citizen rất cần thiết để thấu hiểu chủ đề thế giới đa văn hóa.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Articles: definite, indefinite, zero article",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Articles: definite, indefinite, zero article.",
+        "formula": "Articles: definite, indefinite, zero article",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 2:",
+            "options": [
+              "In modern society, multicultural requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with A Multicultural World?",
+            "options": [
+              "multicultural",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'multicultural' là từ vựng cốt lõi của Unit 2 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Intonation in statements used as questions",
+        "title": "Ngữ âm & Trọng âm nâng cao: Intonation in statements used as questions",
+        "sound1": {
+          "symbol": "Intonation",
+          "name": "Quy tắc Intonation",
+          "words": [
+            "multicultural",
+            "identity"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "multicultural",
+            "correctSound": "Intonation",
+            "options": [
+              "Intonation",
+              "/b/"
+            ],
+            "meaningVi": "multicultural"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as multicultural with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining thế giới đa văn hóa to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ multicultural tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về thế giới đa văn hóa nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Thế giới đa văn hóa",
+        "dialogueTitle": "Getting Started: A Multicultural World",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Thế giới đa văn hóa trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u2_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our a multicultural world seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về thế giới đa văn hóa chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u2_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how multicultural influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của multicultural đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u2_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u2_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of thế giới đa văn hóa in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của thế giới đa văn hóa trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of multicultural prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về multicultural chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: A Multicultural World",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine A Multicultural World. As research indicates, multicultural represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on A Multicultural World?",
+        "options": [
+          "Multicultural",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: A Multicultural World",
+        "passage": "In an increasingly interconnected world, understanding thế giới đa văn hóa is essential for high school graduates. Recent studies demonstrate that multicultural plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to a multicultural world.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu thế giới đa văn hóa là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng multicultural đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u2_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Multicultural",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating a multicultural world to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về thế giới đa văn hóa để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u2_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "A",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating A to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu A để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u3",
+      "grade": 12,
+      "unit": 3,
+      "unitTitle": "Unit 3: Green Living",
+      "unitNameVi": "Lối sống xanh",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 1,
+      "bookPages": "Trang 32 – 43",
+      "vocabularies": [
+        {
+          "id": "g12_u3_01",
+          "word": "eco-friendly",
+          "phonetic": "/eco-friendly/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Eco-friendly - chủ đề Lối sống xanh",
+          "hint": "Tiếng Anh 12 Global Success - Unit 3",
+          "exampleEn": "The concept of eco-friendly is essential in understanding green living.",
+          "exampleVi": "Khái niệm eco-friendly rất cần thiết để thấu hiểu chủ đề lối sống xanh.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u3_02",
+          "word": "zero-waste",
+          "phonetic": "/zero-waste/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Zero-waste - chủ đề Lối sống xanh",
+          "hint": "Tiếng Anh 12 Global Success - Unit 3",
+          "exampleEn": "The concept of zero-waste is essential in understanding green living.",
+          "exampleVi": "Khái niệm zero-waste rất cần thiết để thấu hiểu chủ đề lối sống xanh.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u3_03",
+          "word": "compost",
+          "phonetic": "/compost/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Compost - chủ đề Lối sống xanh",
+          "hint": "Tiếng Anh 12 Global Success - Unit 3",
+          "exampleEn": "The concept of compost is essential in understanding green living.",
+          "exampleVi": "Khái niệm compost rất cần thiết để thấu hiểu chủ đề lối sống xanh.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u3_04",
+          "word": "biodegradable",
+          "phonetic": "/biodegradable/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Biodegradable - chủ đề Lối sống xanh",
+          "hint": "Tiếng Anh 12 Global Success - Unit 3",
+          "exampleEn": "The concept of biodegradable is essential in understanding green living.",
+          "exampleVi": "Khái niệm biodegradable rất cần thiết để thấu hiểu chủ đề lối sống xanh.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u3_05",
+          "word": "solar panel",
+          "phonetic": "/solar panel/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Solar panel - chủ đề Lối sống xanh",
+          "hint": "Tiếng Anh 12 Global Success - Unit 3",
+          "exampleEn": "The concept of solar panel is essential in understanding green living.",
+          "exampleVi": "Khái niệm solar panel rất cần thiết để thấu hiểu chủ đề lối sống xanh.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u3_06",
+          "word": "sustainability",
+          "phonetic": "/sustainability/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Sustainability - chủ đề Lối sống xanh",
+          "hint": "Tiếng Anh 12 Global Success - Unit 3",
+          "exampleEn": "The concept of sustainability is essential in understanding green living.",
+          "exampleVi": "Khái niệm sustainability rất cần thiết để thấu hiểu chủ đề lối sống xanh.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Gerunds and to-infinitives review",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Gerunds and to-infinitives review.",
+        "formula": "Gerunds and to-infinitives review",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 3:",
+            "options": [
+              "In modern society, eco-friendly requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Green Living?",
+            "options": [
+              "eco-friendly",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'eco-friendly' là từ vựng cốt lõi của Unit 3 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Contracted forms of modal verbs",
+        "title": "Ngữ âm & Trọng âm nâng cao: Contracted forms of modal verbs",
+        "sound1": {
+          "symbol": "Contracted",
+          "name": "Quy tắc Contracted",
+          "words": [
+            "eco-friendly",
+            "zero-waste"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "eco-friendly",
+            "correctSound": "Contracted",
+            "options": [
+              "Contracted",
+              "/b/"
+            ],
+            "meaningVi": "eco-friendly"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as eco-friendly with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining lối sống xanh to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ eco-friendly tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về lối sống xanh nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Lối sống xanh",
+        "dialogueTitle": "Getting Started: Green Living",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Lối sống xanh trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u3_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our green living seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về lối sống xanh chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u3_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how eco-friendly influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của eco-friendly đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u3_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u3_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of lối sống xanh in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của lối sống xanh trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of eco-friendly prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về eco-friendly chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Green Living",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Green Living. As research indicates, eco-friendly represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Green Living?",
+        "options": [
+          "Eco-friendly",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Green Living",
+        "passage": "In an increasingly interconnected world, understanding lối sống xanh is essential for high school graduates. Recent studies demonstrate that eco-friendly plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to green living.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu lối sống xanh là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng eco-friendly đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u3_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Eco-friendly",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating green living to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về lối sống xanh để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u3_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Green",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Green to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Green để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u4",
+      "grade": 12,
+      "unit": 4,
+      "unitTitle": "Unit 4: Urbanisation",
+      "unitNameVi": "Đô thị hóa",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 1,
+      "bookPages": "Trang 44 – 55",
+      "vocabularies": [
+        {
+          "id": "g12_u4_01",
+          "word": "urbanisation",
+          "phonetic": "/urbanisation/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Urbanisation - chủ đề Đô thị hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 4",
+          "exampleEn": "The concept of urbanisation is essential in understanding urbanisation.",
+          "exampleVi": "Khái niệm urbanisation rất cần thiết để thấu hiểu chủ đề đô thị hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u4_02",
+          "word": "rural-to-urban",
+          "phonetic": "/rural-to-urban/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Rural-to-urban - chủ đề Đô thị hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 4",
+          "exampleEn": "The concept of rural-to-urban is essential in understanding urbanisation.",
+          "exampleVi": "Khái niệm rural-to-urban rất cần thiết để thấu hiểu chủ đề đô thị hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u4_03",
+          "word": "mega-city",
+          "phonetic": "/mega-city/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Mega-city - chủ đề Đô thị hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 4",
+          "exampleEn": "The concept of mega-city is essential in understanding urbanisation.",
+          "exampleVi": "Khái niệm mega-city rất cần thiết để thấu hiểu chủ đề đô thị hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u4_04",
+          "word": "slum",
+          "phonetic": "/slum/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Slum - chủ đề Đô thị hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 4",
+          "exampleEn": "The concept of slum is essential in understanding urbanisation.",
+          "exampleVi": "Khái niệm slum rất cần thiết để thấu hiểu chủ đề đô thị hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u4_05",
+          "word": "industrialisation",
+          "phonetic": "/industrialisation/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Industrialisation - chủ đề Đô thị hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 4",
+          "exampleEn": "The concept of industrialisation is essential in understanding urbanisation.",
+          "exampleVi": "Khái niệm industrialisation rất cần thiết để thấu hiểu chủ đề đô thị hóa.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u4_06",
+          "word": "municipal",
+          "phonetic": "/municipal/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Municipal - chủ đề Đô thị hóa",
+          "hint": "Tiếng Anh 12 Global Success - Unit 4",
+          "exampleEn": "The concept of municipal is essential in understanding urbanisation.",
+          "exampleVi": "Khái niệm municipal rất cần thiết để thấu hiểu chủ đề đô thị hóa.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Compound adjectives, Subjunctive mood",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Compound adjectives, Subjunctive mood.",
+        "formula": "Compound adjectives, Subjunctive mood",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 4:",
+            "options": [
+              "In modern society, urbanisation requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Urbanisation?",
+            "options": [
+              "urbanisation",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'urbanisation' là từ vựng cốt lõi của Unit 4 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Linking consonant to vowel across words",
+        "title": "Ngữ âm & Trọng âm nâng cao: Linking consonant to vowel across words",
+        "sound1": {
+          "symbol": "Linking",
+          "name": "Quy tắc Linking",
+          "words": [
+            "urbanisation",
+            "rural-to-urban"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "urbanisation",
+            "correctSound": "Linking",
+            "options": [
+              "Linking",
+              "/b/"
+            ],
+            "meaningVi": "urbanisation"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as urbanisation with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining đô thị hóa to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ urbanisation tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về đô thị hóa nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Đô thị hóa",
+        "dialogueTitle": "Getting Started: Urbanisation",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Đô thị hóa trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u4_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our urbanisation seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về đô thị hóa chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u4_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how urbanisation influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của urbanisation đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u4_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u4_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of đô thị hóa in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của đô thị hóa trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of urbanisation prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về urbanisation chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Urbanisation",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Urbanisation. As research indicates, urbanisation represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Urbanisation?",
+        "options": [
+          "Urbanisation",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Urbanisation",
+        "passage": "In an increasingly interconnected world, understanding đô thị hóa is essential for high school graduates. Recent studies demonstrate that urbanisation plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to urbanisation.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu đô thị hóa là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng urbanisation đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u4_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Urbanisation",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating urbanisation to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về đô thị hóa để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u4_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Urbanisation",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Urbanisation to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Urbanisation để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u5",
+      "grade": 12,
+      "unit": 5,
+      "unitTitle": "Unit 5: The World of Work",
+      "unitNameVi": "Thế giới việc làm",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 1,
+      "bookPages": "Trang 56 – 67",
+      "vocabularies": [
+        {
+          "id": "g12_u5_01",
+          "word": "internship",
+          "phonetic": "/internship/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Internship - chủ đề Thế giới việc làm",
+          "hint": "Tiếng Anh 12 Global Success - Unit 5",
+          "exampleEn": "The concept of internship is essential in understanding the world of work.",
+          "exampleVi": "Khái niệm internship rất cần thiết để thấu hiểu chủ đề thế giới việc làm.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u5_02",
+          "word": "recruitment",
+          "phonetic": "/recruitment/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Recruitment - chủ đề Thế giới việc làm",
+          "hint": "Tiếng Anh 12 Global Success - Unit 5",
+          "exampleEn": "The concept of recruitment is essential in understanding the world of work.",
+          "exampleVi": "Khái niệm recruitment rất cần thiết để thấu hiểu chủ đề thế giới việc làm.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u5_03",
+          "word": "curriculum vitae",
+          "phonetic": "/curriculum vitae/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Curriculum vitae - chủ đề Thế giới việc làm",
+          "hint": "Tiếng Anh 12 Global Success - Unit 5",
+          "exampleEn": "The concept of curriculum vitae is essential in understanding the world of work.",
+          "exampleVi": "Khái niệm curriculum vitae rất cần thiết để thấu hiểu chủ đề thế giới việc làm.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u5_04",
+          "word": "soft skills",
+          "phonetic": "/soft skills/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Soft skills - chủ đề Thế giới việc làm",
+          "hint": "Tiếng Anh 12 Global Success - Unit 5",
+          "exampleEn": "The concept of soft skills is essential in understanding the world of work.",
+          "exampleVi": "Khái niệm soft skills rất cần thiết để thấu hiểu chủ đề thế giới việc làm.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u5_05",
+          "word": "probationary",
+          "phonetic": "/probationary/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Probationary - chủ đề Thế giới việc làm",
+          "hint": "Tiếng Anh 12 Global Success - Unit 5",
+          "exampleEn": "The concept of probationary is essential in understanding the world of work.",
+          "exampleVi": "Khái niệm probationary rất cần thiết để thấu hiểu chủ đề thế giới việc làm.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u5_06",
+          "word": "remuneration",
+          "phonetic": "/remuneration/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Remuneration - chủ đề Thế giới việc làm",
+          "hint": "Tiếng Anh 12 Global Success - Unit 5",
+          "exampleEn": "The concept of remuneration is essential in understanding the world of work.",
+          "exampleVi": "Khái niệm remuneration rất cần thiết để thấu hiểu chủ đề thế giới việc làm.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Reported speech with reporting verbs (suggest, recommend)",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Reported speech with reporting verbs (suggest, recommend).",
+        "formula": "Reported speech with reporting verbs (suggest, recommend)",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 5:",
+            "options": [
+              "In modern society, internship requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with The World of Work?",
+            "options": [
+              "internship",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'internship' là từ vựng cốt lõi của Unit 5 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Intonation in question tags",
+        "title": "Ngữ âm & Trọng âm nâng cao: Intonation in question tags",
+        "sound1": {
+          "symbol": "Intonation",
+          "name": "Quy tắc Intonation",
+          "words": [
+            "internship",
+            "recruitment"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "internship",
+            "correctSound": "Intonation",
+            "options": [
+              "Intonation",
+              "/b/"
+            ],
+            "meaningVi": "internship"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as internship with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining thế giới việc làm to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ internship tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về thế giới việc làm nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Thế giới việc làm",
+        "dialogueTitle": "Getting Started: The World of Work",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Thế giới việc làm trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u5_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our the world of work seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về thế giới việc làm chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u5_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how internship influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của internship đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u5_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u5_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of thế giới việc làm in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của thế giới việc làm trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of internship prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về internship chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: The World of Work",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine The World of Work. As research indicates, internship represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on The World of Work?",
+        "options": [
+          "Internship",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: The World of Work",
+        "passage": "In an increasingly interconnected world, understanding thế giới việc làm is essential for high school graduates. Recent studies demonstrate that internship plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to the world of work.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu thế giới việc làm là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng internship đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u5_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Internship",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating the world of work to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về thế giới việc làm để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u5_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "The",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating The to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu The để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u6",
+      "grade": 12,
+      "unit": 6,
+      "unitTitle": "Unit 6: Artificial Intelligence",
+      "unitNameVi": "Trí tuệ nhân tạo",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 2,
+      "bookPages": "Trang 68 – 79",
+      "vocabularies": [
+        {
+          "id": "g12_u6_01",
+          "word": "machine learning",
+          "phonetic": "/machine learning/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Machine learning - chủ đề Trí tuệ nhân tạo",
+          "hint": "Tiếng Anh 12 Global Success - Unit 6",
+          "exampleEn": "The concept of machine learning is essential in understanding artificial intelligence.",
+          "exampleVi": "Khái niệm machine learning rất cần thiết để thấu hiểu chủ đề trí tuệ nhân tạo.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u6_02",
+          "word": "algorithm",
+          "phonetic": "/algorithm/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Algorithm - chủ đề Trí tuệ nhân tạo",
+          "hint": "Tiếng Anh 12 Global Success - Unit 6",
+          "exampleEn": "The concept of algorithm is essential in understanding artificial intelligence.",
+          "exampleVi": "Khái niệm algorithm rất cần thiết để thấu hiểu chủ đề trí tuệ nhân tạo.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u6_03",
+          "word": "automation",
+          "phonetic": "/automation/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Automation - chủ đề Trí tuệ nhân tạo",
+          "hint": "Tiếng Anh 12 Global Success - Unit 6",
+          "exampleEn": "The concept of automation is essential in understanding artificial intelligence.",
+          "exampleVi": "Khái niệm automation rất cần thiết để thấu hiểu chủ đề trí tuệ nhân tạo.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u6_04",
+          "word": "neural network",
+          "phonetic": "/neural network/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Neural network - chủ đề Trí tuệ nhân tạo",
+          "hint": "Tiếng Anh 12 Global Success - Unit 6",
+          "exampleEn": "The concept of neural network is essential in understanding artificial intelligence.",
+          "exampleVi": "Khái niệm neural network rất cần thiết để thấu hiểu chủ đề trí tuệ nhân tạo.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u6_05",
+          "word": "robotic",
+          "phonetic": "/robotic/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Robotic - chủ đề Trí tuệ nhân tạo",
+          "hint": "Tiếng Anh 12 Global Success - Unit 6",
+          "exampleEn": "The concept of robotic is essential in understanding artificial intelligence.",
+          "exampleVi": "Khái niệm robotic rất cần thiết để thấu hiểu chủ đề trí tuệ nhân tạo.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u6_06",
+          "word": "ethics",
+          "phonetic": "/ethics/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Ethics - chủ đề Trí tuệ nhân tạo",
+          "hint": "Tiếng Anh 12 Global Success - Unit 6",
+          "exampleEn": "The concept of ethics is essential in understanding artificial intelligence.",
+          "exampleVi": "Khái niệm ethics rất cần thiết để thấu hiểu chủ đề trí tuệ nhân tạo.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Passive voice in advanced structures, Causative have/get",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Passive voice in advanced structures, Causative have/get.",
+        "formula": "Passive voice in advanced structures, Causative have/get",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 6:",
+            "options": [
+              "In modern society, machine learning requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Artificial Intelligence?",
+            "options": [
+              "machine learning",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'machine learning' là từ vựng cốt lõi của Unit 6 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Intonation in cleft sentences",
+        "title": "Ngữ âm & Trọng âm nâng cao: Intonation in cleft sentences",
+        "sound1": {
+          "symbol": "Intonation",
+          "name": "Quy tắc Intonation",
+          "words": [
+            "machine learning",
+            "algorithm"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "machine learning",
+            "correctSound": "Intonation",
+            "options": [
+              "Intonation",
+              "/b/"
+            ],
+            "meaningVi": "machine learning"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as machine learning with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining trí tuệ nhân tạo to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ machine learning tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về trí tuệ nhân tạo nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Trí tuệ nhân tạo",
+        "dialogueTitle": "Getting Started: Artificial Intelligence",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Trí tuệ nhân tạo trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u6_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our artificial intelligence seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về trí tuệ nhân tạo chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u6_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how machine learning influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của machine learning đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u6_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u6_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of trí tuệ nhân tạo in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của trí tuệ nhân tạo trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of machine learning prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về machine learning chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Artificial Intelligence",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Artificial Intelligence. As research indicates, machine learning represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Artificial Intelligence?",
+        "options": [
+          "Machine learning",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Artificial Intelligence",
+        "passage": "In an increasingly interconnected world, understanding trí tuệ nhân tạo is essential for high school graduates. Recent studies demonstrate that machine learning plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to artificial intelligence.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu trí tuệ nhân tạo là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng machine learning đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u6_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Machine learning",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating artificial intelligence to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về trí tuệ nhân tạo để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u6_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Artificial",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Artificial to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Artificial để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u7",
+      "grade": 12,
+      "unit": 7,
+      "unitTitle": "Unit 7: The World of Mass Media",
+      "unitNameVi": "Thế giới truyền thông đại chúng",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 2,
+      "bookPages": "Trang 80 – 91",
+      "vocabularies": [
+        {
+          "id": "g12_u7_01",
+          "word": "mass media",
+          "phonetic": "/mass media/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Mass media - chủ đề Thế giới truyền thông đại chúng",
+          "hint": "Tiếng Anh 12 Global Success - Unit 7",
+          "exampleEn": "The concept of mass media is essential in understanding the world of mass media.",
+          "exampleVi": "Khái niệm mass media rất cần thiết để thấu hiểu chủ đề thế giới truyền thông đại chúng.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u7_02",
+          "word": "journalism",
+          "phonetic": "/journalism/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Journalism - chủ đề Thế giới truyền thông đại chúng",
+          "hint": "Tiếng Anh 12 Global Success - Unit 7",
+          "exampleEn": "The concept of journalism is essential in understanding the world of mass media.",
+          "exampleVi": "Khái niệm journalism rất cần thiết để thấu hiểu chủ đề thế giới truyền thông đại chúng.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u7_03",
+          "word": "censorship",
+          "phonetic": "/censorship/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Censorship - chủ đề Thế giới truyền thông đại chúng",
+          "hint": "Tiếng Anh 12 Global Success - Unit 7",
+          "exampleEn": "The concept of censorship is essential in understanding the world of mass media.",
+          "exampleVi": "Khái niệm censorship rất cần thiết để thấu hiểu chủ đề thế giới truyền thông đại chúng.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u7_04",
+          "word": "broadcast",
+          "phonetic": "/broadcast/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Broadcast - chủ đề Thế giới truyền thông đại chúng",
+          "hint": "Tiếng Anh 12 Global Success - Unit 7",
+          "exampleEn": "The concept of broadcast is essential in understanding the world of mass media.",
+          "exampleVi": "Khái niệm broadcast rất cần thiết để thấu hiểu chủ đề thế giới truyền thông đại chúng.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u7_05",
+          "word": "digital platform",
+          "phonetic": "/digital platform/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Digital platform - chủ đề Thế giới truyền thông đại chúng",
+          "hint": "Tiếng Anh 12 Global Success - Unit 7",
+          "exampleEn": "The concept of digital platform is essential in understanding the world of mass media.",
+          "exampleVi": "Khái niệm digital platform rất cần thiết để thấu hiểu chủ đề thế giới truyền thông đại chúng.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u7_06",
+          "word": "sensationalism",
+          "phonetic": "/sensationalism/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Sensationalism - chủ đề Thế giới truyền thông đại chúng",
+          "hint": "Tiếng Anh 12 Global Success - Unit 7",
+          "exampleEn": "The concept of sensationalism is essential in understanding the world of mass media.",
+          "exampleVi": "Khái niệm sensationalism rất cần thiết để thấu hiểu chủ đề thế giới truyền thông đại chúng.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Prepositions after verbs and adjectives",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Prepositions after verbs and adjectives.",
+        "formula": "Prepositions after verbs and adjectives",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 7:",
+            "options": [
+              "In modern society, mass media requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with The World of Mass Media?",
+            "options": [
+              "mass media",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'mass media' là từ vựng cốt lõi của Unit 7 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Stress in multi-syllable academic words",
+        "title": "Ngữ âm & Trọng âm nâng cao: Stress in multi-syllable academic words",
+        "sound1": {
+          "symbol": "Stress",
+          "name": "Quy tắc Stress",
+          "words": [
+            "mass media",
+            "journalism"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "mass media",
+            "correctSound": "Stress",
+            "options": [
+              "Stress",
+              "/b/"
+            ],
+            "meaningVi": "mass media"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as mass media with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining thế giới truyền thông đại chúng to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ mass media tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về thế giới truyền thông đại chúng nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Thế giới truyền thông đại chúng",
+        "dialogueTitle": "Getting Started: The World of Mass Media",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Thế giới truyền thông đại chúng trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u7_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our the world of mass media seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về thế giới truyền thông đại chúng chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u7_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how mass media influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của mass media đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u7_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u7_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of thế giới truyền thông đại chúng in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của thế giới truyền thông đại chúng trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of mass media prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về mass media chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: The World of Mass Media",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine The World of Mass Media. As research indicates, mass media represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on The World of Mass Media?",
+        "options": [
+          "Mass media",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: The World of Mass Media",
+        "passage": "In an increasingly interconnected world, understanding thế giới truyền thông đại chúng is essential for high school graduates. Recent studies demonstrate that mass media plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to the world of mass media.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu thế giới truyền thông đại chúng là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng mass media đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u7_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Mass media",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating the world of mass media to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về thế giới truyền thông đại chúng để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u7_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "The",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating The to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu The để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u8",
+      "grade": 12,
+      "unit": 8,
+      "unitTitle": "Unit 8: Wildlife Conservation",
+      "unitNameVi": "Bảo tồn động vật hoang dã",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 2,
+      "bookPages": "Trang 92 – 103",
+      "vocabularies": [
+        {
+          "id": "g12_u8_01",
+          "word": "poaching",
+          "phonetic": "/poaching/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Poaching - chủ đề Bảo tồn động vật hoang dã",
+          "hint": "Tiếng Anh 12 Global Success - Unit 8",
+          "exampleEn": "The concept of poaching is essential in understanding wildlife conservation.",
+          "exampleVi": "Khái niệm poaching rất cần thiết để thấu hiểu chủ đề bảo tồn động vật hoang dã.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u8_02",
+          "word": "extinct",
+          "phonetic": "/extinct/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Extinct - chủ đề Bảo tồn động vật hoang dã",
+          "hint": "Tiếng Anh 12 Global Success - Unit 8",
+          "exampleEn": "The concept of extinct is essential in understanding wildlife conservation.",
+          "exampleVi": "Khái niệm extinct rất cần thiết để thấu hiểu chủ đề bảo tồn động vật hoang dã.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u8_03",
+          "word": "sanctuary",
+          "phonetic": "/sanctuary/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Sanctuary - chủ đề Bảo tồn động vật hoang dã",
+          "hint": "Tiếng Anh 12 Global Success - Unit 8",
+          "exampleEn": "The concept of sanctuary is essential in understanding wildlife conservation.",
+          "exampleVi": "Khái niệm sanctuary rất cần thiết để thấu hiểu chủ đề bảo tồn động vật hoang dã.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u8_04",
+          "word": "biodiversity",
+          "phonetic": "/biodiversity/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Biodiversity - chủ đề Bảo tồn động vật hoang dã",
+          "hint": "Tiếng Anh 12 Global Success - Unit 8",
+          "exampleEn": "The concept of biodiversity is essential in understanding wildlife conservation.",
+          "exampleVi": "Khái niệm biodiversity rất cần thiết để thấu hiểu chủ đề bảo tồn động vật hoang dã.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u8_05",
+          "word": "endangered species",
+          "phonetic": "/endangered species/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Endangered species - chủ đề Bảo tồn động vật hoang dã",
+          "hint": "Tiếng Anh 12 Global Success - Unit 8",
+          "exampleEn": "The concept of endangered species is essential in understanding wildlife conservation.",
+          "exampleVi": "Khái niệm endangered species rất cần thiết để thấu hiểu chủ đề bảo tồn động vật hoang dã.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u8_06",
+          "word": "captivity",
+          "phonetic": "/captivity/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Captivity - chủ đề Bảo tồn động vật hoang dã",
+          "hint": "Tiếng Anh 12 Global Success - Unit 8",
+          "exampleEn": "The concept of captivity is essential in understanding wildlife conservation.",
+          "exampleVi": "Khái niệm captivity rất cần thiết để thấu hiểu chủ đề bảo tồn động vật hoang dã.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Conditionals review: mixed conditionals",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Conditionals review: mixed conditionals.",
+        "formula": "Conditionals review: mixed conditionals",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 8:",
+            "options": [
+              "In modern society, poaching requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Wildlife Conservation?",
+            "options": [
+              "poaching",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'poaching' là từ vựng cốt lõi của Unit 8 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Connected speech in rapid dialogue",
+        "title": "Ngữ âm & Trọng âm nâng cao: Connected speech in rapid dialogue",
+        "sound1": {
+          "symbol": "Connected",
+          "name": "Quy tắc Connected",
+          "words": [
+            "poaching",
+            "extinct"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "poaching",
+            "correctSound": "Connected",
+            "options": [
+              "Connected",
+              "/b/"
+            ],
+            "meaningVi": "poaching"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as poaching with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining bảo tồn động vật hoang dã to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ poaching tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về bảo tồn động vật hoang dã nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Bảo tồn động vật hoang dã",
+        "dialogueTitle": "Getting Started: Wildlife Conservation",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Bảo tồn động vật hoang dã trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u8_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our wildlife conservation seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về bảo tồn động vật hoang dã chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u8_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how poaching influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của poaching đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u8_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u8_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of bảo tồn động vật hoang dã in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của bảo tồn động vật hoang dã trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of poaching prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về poaching chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Wildlife Conservation",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Wildlife Conservation. As research indicates, poaching represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Wildlife Conservation?",
+        "options": [
+          "Poaching",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Wildlife Conservation",
+        "passage": "In an increasingly interconnected world, understanding bảo tồn động vật hoang dã is essential for high school graduates. Recent studies demonstrate that poaching plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to wildlife conservation.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu bảo tồn động vật hoang dã là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng poaching đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u8_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Poaching",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating wildlife conservation to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về bảo tồn động vật hoang dã để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u8_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Wildlife",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Wildlife to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Wildlife để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u9",
+      "grade": 12,
+      "unit": 9,
+      "unitTitle": "Unit 9: Career Paths",
+      "unitNameVi": "Con đường sự nghiệp",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 2,
+      "bookPages": "Trang 104 – 115",
+      "vocabularies": [
+        {
+          "id": "g12_u9_01",
+          "word": "entrepreneur",
+          "phonetic": "/entrepreneur/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Entrepreneur - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of entrepreneur is essential in understanding career paths.",
+          "exampleVi": "Khái niệm entrepreneur rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u9_02",
+          "word": "vocation",
+          "phonetic": "/vocation/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Vocation - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of vocation is essential in understanding career paths.",
+          "exampleVi": "Khái niệm vocation rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u9_03",
+          "word": "trajectory",
+          "phonetic": "/trajectory/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Trajectory - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of trajectory is essential in understanding career paths.",
+          "exampleVi": "Khái niệm trajectory rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u9_04",
+          "word": "lifelong",
+          "phonetic": "/lifelong/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Lifelong - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of lifelong is essential in understanding career paths.",
+          "exampleVi": "Khái niệm lifelong rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u9_05",
+          "word": "promotion",
+          "phonetic": "/promotion/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Promotion - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of promotion is essential in understanding career paths.",
+          "exampleVi": "Khái niệm promotion rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u9_06",
+          "word": "ambition",
+          "phonetic": "/ambition/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Ambition - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of ambition is essential in understanding career paths.",
+          "exampleVi": "Khái niệm ambition rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u9_07",
+          "word": "mentoring",
+          "phonetic": "/mentoring/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Mentoring - chủ đề Con đường sự nghiệp",
+          "hint": "Tiếng Anh 12 Global Success - Unit 9",
+          "exampleEn": "The concept of mentoring is essential in understanding career paths.",
+          "exampleVi": "Khái niệm mentoring rất cần thiết để thấu hiểu chủ đề con đường sự nghiệp.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Relative clauses review",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Relative clauses review.",
+        "formula": "Relative clauses review",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 9:",
+            "options": [
+              "In modern society, entrepreneur requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Career Paths?",
+            "options": [
+              "entrepreneur",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'entrepreneur' là từ vựng cốt lõi của Unit 9 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Stress in derived nouns and adjectives",
+        "title": "Ngữ âm & Trọng âm nâng cao: Stress in derived nouns and adjectives",
+        "sound1": {
+          "symbol": "Stress",
+          "name": "Quy tắc Stress",
+          "words": [
+            "entrepreneur",
+            "vocation"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "entrepreneur",
+            "correctSound": "Stress",
+            "options": [
+              "Stress",
+              "/b/"
+            ],
+            "meaningVi": "entrepreneur"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as entrepreneur with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining con đường sự nghiệp to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ entrepreneur tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về con đường sự nghiệp nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Con đường sự nghiệp",
+        "dialogueTitle": "Getting Started: Career Paths",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Con đường sự nghiệp trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u9_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our career paths seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về con đường sự nghiệp chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u9_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how entrepreneur influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của entrepreneur đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u9_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u9_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of con đường sự nghiệp in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của con đường sự nghiệp trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of entrepreneur prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về entrepreneur chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Career Paths",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Career Paths. As research indicates, entrepreneur represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Career Paths?",
+        "options": [
+          "Entrepreneur",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Career Paths",
+        "passage": "In an increasingly interconnected world, understanding con đường sự nghiệp is essential for high school graduates. Recent studies demonstrate that entrepreneur plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to career paths.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu con đường sự nghiệp là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng entrepreneur đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u9_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Entrepreneur",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating career paths to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về con đường sự nghiệp để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u9_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Career",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Career to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Career để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g12_u10",
+      "grade": 12,
+      "unit": 10,
+      "unitTitle": "Unit 10: Lifelong Learning",
+      "unitNameVi": "Học tập suốt đời",
+      "theme": "High School Academic & Career Readiness",
+      "semester": 2,
+      "bookPages": "Trang 116 – 127",
+      "vocabularies": [
+        {
+          "id": "g12_u10_01",
+          "word": "lifelong learning",
+          "phonetic": "/lifelong learning/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Lifelong learning - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of lifelong learning is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm lifelong learning rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u10_02",
+          "word": "self-directed",
+          "phonetic": "/self-directed/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Self-directed - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of self-directed is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm self-directed rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u10_03",
+          "word": "cognitive",
+          "phonetic": "/cognitive/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Cognitive - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of cognitive is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm cognitive rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u10_04",
+          "word": "agility",
+          "phonetic": "/agility/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Agility - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of agility is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm agility rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u10_05",
+          "word": "upskill",
+          "phonetic": "/upskill/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Upskill - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of upskill is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm upskill rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u10_06",
+          "word": "reskill",
+          "phonetic": "/reskill/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Reskill - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of reskill is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm reskill rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        },
+        {
+          "id": "g12_u10_07",
+          "word": "mindset",
+          "phonetic": "/mindset/",
+          "wordType": "Thuật ngữ học thuật THPT",
+          "meaning": "Mindset - chủ đề Học tập suốt đời",
+          "hint": "Tiếng Anh 12 Global Success - Unit 10",
+          "exampleEn": "The concept of mindset is essential in understanding lifelong learning.",
+          "exampleVi": "Khái niệm mindset rất cần thiết để thấu hiểu chủ đề học tập suốt đời.",
+          "emoji": "🎓"
+        }
+      ],
+      "grammar": {
+        "title": "Chuyên đề ngữ pháp THPT: Inversion with negative adverbials (Not only... but also)",
+        "ruleVi": "Ngữ pháp trọng tâm kỳ thi Tốt nghiệp THPT & chứng chỉ quốc tế: Inversion with negative adverbials (Not only... but also).",
+        "formula": "Inversion with negative adverbials (Not only... but also)",
+        "quickTip": "Nắm vững bản chất ngữ pháp để giải quyết các câu phân loại điểm 9-10 trong đề thi.",
+        "quiz": [
+          {
+            "question": "Identify the sentence demonstrating the correct structure for Unit 10:",
+            "options": [
+              "In modern society, lifelong learning requires comprehensive attention and dedication.",
+              "She are studying very hard for the upcoming exam.",
+              "They does not understand the primary rule.",
+              "He have completed the task yesterday."
+            ],
+            "answerIndex": 0,
+            "explain": "Câu đúng cấu trúc ngữ pháp và phù hợp văn phong học thuật THPT."
+          },
+          {
+            "question": "Which term is most strongly associated with Lifelong Learning?",
+            "options": [
+              "lifelong learning",
+              "pencil box",
+              "doll house",
+              "toy train"
+            ],
+            "answerIndex": 0,
+            "explain": "Thuật ngữ 'lifelong learning' là từ vựng cốt lõi của Unit 10 Lớp 12."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Rhetorical intonation",
+        "title": "Ngữ âm & Trọng âm nâng cao: Rhetorical intonation",
+        "sound1": {
+          "symbol": "Rhetorical",
+          "name": "Quy tắc Rhetorical",
+          "words": [
+            "lifelong learning",
+            "self-directed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ə/",
+          "name": "Nguyên âm trung tính /ə/",
+          "words": [
+            "development",
+            "perspective"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "lifelong learning",
+            "correctSound": "Rhetorical",
+            "options": [
+              "Rhetorical",
+              "/b/"
+            ],
+            "meaningVi": "lifelong learning"
+          }
+        ],
+        "tongueTwister": "High school scholars master academic vocabulary such as lifelong learning with confidence."
+      },
+      "speaking": {
+        "targetSentence": "We are examining học tập suốt đời to develop our critical thinking and presentation skills.",
+        "phonetic": "/wiː ɑːr ɪɡˈzæmɪnɪŋ lifelong learning tuː dɪˈveləp ˈaʊə ˈkrɪtɪkl ˈθɪŋkɪŋ/",
+        "meaningVi": "Chúng mình đang nghiên cứu về học tập suốt đời nhằm phát triển tư duy phản biện và kỹ năng thuyết trình.",
+        "situationalTopic": "Thuyết trình & Tranh biện học thuật: Học tập suốt đời",
+        "dialogueTitle": "Getting Started: Lifelong Learning",
+        "dialogueContext": "Hai học sinh THPT thảo luận chuyên sâu về Học tập suốt đời trong dự án nghiên cứu học tập.",
+        "dialogueLines": [
+          {
+            "id": "g12_u10_d1",
+            "speaker": "Lan",
+            "sentenceEn": "Good morning, Nam. Have you analyzed the background data for our lifelong learning seminar?",
+            "phonetic": "/ɡʊd ˈmɔːnɪŋ næm/",
+            "meaningVi": "Chào Nam. Cậu đã phân tích dữ liệu cho hội thảo về học tập suốt đời chưa?",
+            "tipsVi": "Phong thái học thuật tự tin."
+          },
+          {
+            "id": "g12_u10_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, Lan. I focused on how lifelong learning influences contemporary society.",
+            "phonetic": "/jes læn aɪ ˈfəʊkəst ɒn/",
+            "meaningVi": "Rồi Lan. Mình tập trung vào tầm ảnh hưởng của lifelong learning đối với xã hội đương đại.",
+            "tipsVi": "Nhấn mạnh từ khóa học thuật."
+          },
+          {
+            "id": "g12_u10_d3",
+            "speaker": "Lan",
+            "sentenceEn": "Excellent! That perspective will definitely enrich our class presentation.",
+            "phonetic": "/ˈeksələnt ðæt pəˈspektɪv/",
+            "meaningVi": "Tuyệt vời! Góc nhìn đó chắc chắn sẽ làm phong phú bài thuyết trình của chúng ta.",
+            "tipsVi": "Tán thành và khích lệ."
+          },
+          {
+            "id": "g12_u10_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Let's review the final slides together to ensure our arguments are convincing.",
+            "phonetic": "/lets rɪˈvjuː ðə ˈfaɪnl slaɪdz/",
+            "meaningVi": "Cùng rà soát các slide cuối để đảm bảo lập luận thuyết phục nhất nhé.",
+            "tipsVi": "Giọng điệu nghiêm túc và chủ động."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Scholars emphasize the role of học tập suốt đời in modern national development.",
+            "phonetic": "/.../",
+            "meaningVi": "Các học giả nhấn mạnh vai trò của học tập suốt đời trong sự phát triển quốc gia hiện đại."
+          },
+          {
+            "sentenceEn": "Critical understanding of lifelong learning prepares students for global integration.",
+            "phonetic": "/.../",
+            "meaningVi": "Sự hiểu biết sâu sắc về lifelong learning chuẩn bị hành trang hội nhập quốc tế cho học sinh."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Academic Lecture: Lifelong Learning",
+        "transcript": "Good afternoon everyone. In today's lecture, we examine Lifelong Learning. As research indicates, lifelong learning represents a key factor in our ongoing strategic development.",
+        "question": "What key factor is highlighted in the opening lecture on Lifelong Learning?",
+        "options": [
+          "Lifelong learning",
+          "Weather forecast",
+          "Traffic light",
+          "Movie ticket"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading & Academic Analysis: Lifelong Learning",
+        "passage": "In an increasingly interconnected world, understanding học tập suốt đời is essential for high school graduates. Recent studies demonstrate that lifelong learning plays a transformative role in driving sustainable progress. Educational institutions worldwide are adapting curricula to equip learners with competencies relevant to lifelong learning.",
+        "translation": "Trong một thế giới ngày càng gắn kết, việc thấu hiểu học tập suốt đời là vô cùng quan trọng đối với học sinh tốt nghiệp THPT. Các nghiên cứu gần đây chứng minh rằng lifelong learning đóng vai trò chuyển biến trong việc thúc đẩy tiến bộ bền vững.",
+        "questions": [
+          {
+            "id": "g12_u10_r1",
+            "type": "multiple_choice",
+            "question": "According to the text, what plays a transformative role in driving sustainable progress?",
+            "options": [
+              "Lifelong learning",
+              "Traditional farming only",
+              "Passive entertainment",
+              "Ignoring social changes"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'Recent studies demonstrate that [term] plays a transformative role in driving sustainable progress.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are investigating lifelong learning to enhance our academic competence",
+        "meaningVi": "Chúng mình đang nghiên cứu về học tập suốt đời để nâng cao năng lực học thuật.",
+        "items": [
+          {
+            "id": "g12_u10_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "investigating",
+              "Lifelong",
+              "to",
+              "enhance",
+              "competence"
+            ],
+            "correctSentence": "We are investigating Lifelong to enhance competence",
+            "meaningVi": "Chúng mình đang nghiên cứu Lifelong để nâng cao năng lực.",
+            "hint": "Bắt đầu bằng 'We are investigating...'"
+          }
+        ]
+      }
+    }
+  ]
+}

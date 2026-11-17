@@ -10,17 +10,19 @@ import { BookOpen } from 'lucide-react';
 export default function SpeakingPage() {
   const units = listUnits();
   const [searchParams, setSearchParams] = useSearchParams();
-  const paramUnit = parseInt(searchParams.get('unit'), 10);
+  const rawParam = searchParams.get('unit');
 
-  const initialId = Number.isFinite(paramUnit) && paramUnit >= 1 && units.some((u) => u.unitId === paramUnit) ? paramUnit : 1;
+  const initialId = rawParam && (units.some((u) => String(u.unitId) === String(rawParam)) || getUnit(rawParam))
+    ? rawParam
+    : (units[0]?.unitId || 1);
   const [selectedUnitId, setSelectedUnitId] = useState(initialId);
   const currentUnit = getUnit(selectedUnitId);
 
   useEffect(() => {
-    if (Number.isFinite(paramUnit) && paramUnit >= 1 && units.some((u) => u.unitId === paramUnit) && paramUnit !== selectedUnitId) {
-      setSelectedUnitId(paramUnit);
+    if (rawParam && rawParam !== selectedUnitId && (units.some((u) => String(u.unitId) === String(rawParam)) || getUnit(rawParam))) {
+      setSelectedUnitId(rawParam);
     }
-  }, [paramUnit, selectedUnitId]);
+  }, [rawParam, selectedUnitId, units]);
 
   const handleSelectUnit = (unitId) => {
     playSfx('click');

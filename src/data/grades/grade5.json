@@ -1,0 +1,4555 @@
+{
+  "grade": 5,
+  "gradeName": "Lớp 5",
+  "level": "primary",
+  "levelName": "Tiểu học",
+  "title": "SGK Tiếng Anh 5 – Global Success",
+  "totalUnits": 20,
+  "interactiveAvailable": true,
+  "interactiveNote": "Hệ thống trạm học tương tác 7 kỹ năng chuẩn SGK Lớp 5",
+  "units": [
+    {
+      "unitId": "g5_u1",
+      "grade": 5,
+      "unit": 1,
+      "unitTitle": "Unit 1: All about me!",
+      "unitNameVi": "Tất cả về tôi!",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 6 – 11",
+      "vocabularies": [
+        {
+          "id": "g5_u1_01",
+          "word": "friendly",
+          "phonetic": "/friendly/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Friendly - chủ đề Tất cả về tôi!",
+          "hint": "Tiếng Anh 5 - Unit 1",
+          "exampleEn": "We are talking about friendly.",
+          "exampleVi": "Chúng mình đang nói về friendly.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u1_02",
+          "word": "hard-working",
+          "phonetic": "/hard-working/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Hard-working - chủ đề Tất cả về tôi!",
+          "hint": "Tiếng Anh 5 - Unit 1",
+          "exampleEn": "We are talking about hard-working.",
+          "exampleVi": "Chúng mình đang nói về hard-working.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u1_03",
+          "word": "active",
+          "phonetic": "/active/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Active - chủ đề Tất cả về tôi!",
+          "hint": "Tiếng Anh 5 - Unit 1",
+          "exampleEn": "We are talking about active.",
+          "exampleVi": "Chúng mình đang nói về active.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u1_04",
+          "word": "helpful",
+          "phonetic": "/helpful/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Helpful - chủ đề Tất cả về tôi!",
+          "hint": "Tiếng Anh 5 - Unit 1",
+          "exampleEn": "We are talking about helpful.",
+          "exampleVi": "Chúng mình đang nói về helpful.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u1_05",
+          "word": "kind",
+          "phonetic": "/kind/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Kind - chủ đề Tất cả về tôi!",
+          "hint": "Tiếng Anh 5 - Unit 1",
+          "exampleEn": "We are talking about kind.",
+          "exampleVi": "Chúng mình đang nói về kind.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u1_06",
+          "word": "clever",
+          "phonetic": "/clever/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Clever - chủ đề Tất cả về tôi!",
+          "hint": "Tiếng Anh 5 - Unit 1",
+          "exampleEn": "We are talking about clever.",
+          "exampleVi": "Chúng mình đang nói về clever.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 1",
+        "ruleVi": "What are you like? - I'm friendly and hard-working.",
+        "formula": "What are you like?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 1: 'What are you like?'",
+            "options": [
+              "working.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about tất cả về tôi! in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt friendly ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về tất cả về tôi! trong môn tiếng Anh.",
+        "situationalTopic": "Tất cả về tôi!",
+        "dialogueTitle": "Getting Started: All about me!",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Tất cả về tôi!.",
+        "dialogueLines": [
+          {
+            "id": "g5_u1_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about all about me!.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về tất cả về tôi! nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u1_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u1_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What are you like?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u1_d4",
+            "speaker": "Tony",
+            "sentenceEn": "working.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about tất cả về tôi! every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về tất cả về tôi! mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Tất cả về tôi!",
+        "transcript": "Good morning class. Today we explore our lesson on All about me!. Please listen and note down the key ideas about friendly.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "All about me!",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: All about me!",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about tất cả về tôi!. Many students find that friendly is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về tất cả về tôi!.",
+        "questions": [
+          {
+            "id": "g5_u1_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about all about me! today",
+        "meaningVi": "Hôm nay chúng mình đang học về tất cả về tôi!.",
+        "items": [
+          {
+            "id": "g5_u1_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "All",
+              "today"
+            ],
+            "correctSentence": "We are learning about All today",
+            "meaningVi": "Hôm nay chúng mình học về All.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u2",
+      "grade": 5,
+      "unit": 2,
+      "unitTitle": "Unit 2: Our homes",
+      "unitNameVi": "Ngôi nhà của chúng mình",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 12 – 17",
+      "vocabularies": [
+        {
+          "id": "g5_u2_01",
+          "word": "address",
+          "phonetic": "/address/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Address - chủ đề Ngôi nhà của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 2",
+          "exampleEn": "We are talking about address.",
+          "exampleVi": "Chúng mình đang nói về address.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u2_02",
+          "word": "lane",
+          "phonetic": "/lane/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Lane - chủ đề Ngôi nhà của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 2",
+          "exampleEn": "We are talking about lane.",
+          "exampleVi": "Chúng mình đang nói về lane.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u2_03",
+          "word": "street",
+          "phonetic": "/street/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Street - chủ đề Ngôi nhà của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 2",
+          "exampleEn": "We are talking about street.",
+          "exampleVi": "Chúng mình đang nói về street.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u2_04",
+          "word": "avenue",
+          "phonetic": "/avenue/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Avenue - chủ đề Ngôi nhà của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 2",
+          "exampleEn": "We are talking about avenue.",
+          "exampleVi": "Chúng mình đang nói về avenue.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u2_05",
+          "word": "quiet",
+          "phonetic": "/quiet/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Quiet - chủ đề Ngôi nhà của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 2",
+          "exampleEn": "We are talking about quiet.",
+          "exampleVi": "Chúng mình đang nói về quiet.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u2_06",
+          "word": "crowded",
+          "phonetic": "/crowded/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Crowded - chủ đề Ngôi nhà của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 2",
+          "exampleEn": "We are talking about crowded.",
+          "exampleVi": "Chúng mình đang nói về crowded.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 2",
+        "ruleVi": "What's your address? - It's 105 Hoa Binh Lane.",
+        "formula": "What's your address?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 2: 'What's your address?'",
+            "options": [
+              "It's 105 Hoa Binh Lane.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about ngôi nhà của chúng mình in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt address ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về ngôi nhà của chúng mình trong môn tiếng Anh.",
+        "situationalTopic": "Ngôi nhà của chúng mình",
+        "dialogueTitle": "Getting Started: Our homes",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Ngôi nhà của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g5_u2_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our homes.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về ngôi nhà của chúng mình nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u2_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u2_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What's your address?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u2_d4",
+            "speaker": "Tony",
+            "sentenceEn": "It's 105 Hoa Binh Lane.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about ngôi nhà của chúng mình every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về ngôi nhà của chúng mình mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Ngôi nhà của chúng mình",
+        "transcript": "Good morning class. Today we explore our lesson on Our homes. Please listen and note down the key ideas about address.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our homes",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our homes",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about ngôi nhà của chúng mình. Many students find that address is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về ngôi nhà của chúng mình.",
+        "questions": [
+          {
+            "id": "g5_u2_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our homes today",
+        "meaningVi": "Hôm nay chúng mình đang học về ngôi nhà của chúng mình.",
+        "items": [
+          {
+            "id": "g5_u2_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u3",
+      "grade": 5,
+      "unit": 3,
+      "unitTitle": "Unit 3: My foreign friends",
+      "unitNameVi": "Những người bạn nước ngoài",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 18 – 23",
+      "vocabularies": [
+        {
+          "id": "g5_u3_01",
+          "word": "country",
+          "phonetic": "/country/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Country - chủ đề Những người bạn nước ngoài",
+          "hint": "Tiếng Anh 5 - Unit 3",
+          "exampleEn": "We are talking about country.",
+          "exampleVi": "Chúng mình đang nói về country.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u3_02",
+          "word": "nationality",
+          "phonetic": "/nationality/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Nationality - chủ đề Những người bạn nước ngoài",
+          "hint": "Tiếng Anh 5 - Unit 3",
+          "exampleEn": "We are talking about nationality.",
+          "exampleVi": "Chúng mình đang nói về nationality.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u3_03",
+          "word": "English",
+          "phonetic": "/english/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "English - chủ đề Những người bạn nước ngoài",
+          "hint": "Tiếng Anh 5 - Unit 3",
+          "exampleEn": "We are talking about English.",
+          "exampleVi": "Chúng mình đang nói về English.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u3_04",
+          "word": "American",
+          "phonetic": "/american/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "American - chủ đề Những người bạn nước ngoài",
+          "hint": "Tiếng Anh 5 - Unit 3",
+          "exampleEn": "We are talking about American.",
+          "exampleVi": "Chúng mình đang nói về American.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u3_05",
+          "word": "Australian",
+          "phonetic": "/australian/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Australian - chủ đề Những người bạn nước ngoài",
+          "hint": "Tiếng Anh 5 - Unit 3",
+          "exampleEn": "We are talking about Australian.",
+          "exampleVi": "Chúng mình đang nói về Australian.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u3_06",
+          "word": "Japanese",
+          "phonetic": "/japanese/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Japanese - chủ đề Những người bạn nước ngoài",
+          "hint": "Tiếng Anh 5 - Unit 3",
+          "exampleEn": "We are talking about Japanese.",
+          "exampleVi": "Chúng mình đang nói về Japanese.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 3",
+        "ruleVi": "Where does he come from? - He's from London.",
+        "formula": "Where does he come from?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 3: 'Where does he come from?'",
+            "options": [
+              "He's from London.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about những người bạn nước ngoài in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt country ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về những người bạn nước ngoài trong môn tiếng Anh.",
+        "situationalTopic": "Những người bạn nước ngoài",
+        "dialogueTitle": "Getting Started: My foreign friends",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Những người bạn nước ngoài.",
+        "dialogueLines": [
+          {
+            "id": "g5_u3_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about my foreign friends.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về những người bạn nước ngoài nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u3_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u3_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Where does he come from?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u3_d4",
+            "speaker": "Tony",
+            "sentenceEn": "He's from London.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about những người bạn nước ngoài every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về những người bạn nước ngoài mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Những người bạn nước ngoài",
+        "transcript": "Good morning class. Today we explore our lesson on My foreign friends. Please listen and note down the key ideas about country.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "My foreign friends",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: My foreign friends",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about những người bạn nước ngoài. Many students find that country is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về những người bạn nước ngoài.",
+        "questions": [
+          {
+            "id": "g5_u3_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about my foreign friends today",
+        "meaningVi": "Hôm nay chúng mình đang học về những người bạn nước ngoài.",
+        "items": [
+          {
+            "id": "g5_u3_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "My",
+              "today"
+            ],
+            "correctSentence": "We are learning about My today",
+            "meaningVi": "Hôm nay chúng mình học về My.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u4",
+      "grade": 5,
+      "unit": 4,
+      "unitTitle": "Unit 4: Our free-time activities",
+      "unitNameVi": "Hoạt động lúc rảnh rỗi",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 24 – 29",
+      "vocabularies": [
+        {
+          "id": "g5_u4_01",
+          "word": "surf the Internet",
+          "phonetic": "/surf the internet/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Surf the internet - chủ đề Hoạt động lúc rảnh rỗi",
+          "hint": "Tiếng Anh 5 - Unit 4",
+          "exampleEn": "We are talking about surf the Internet.",
+          "exampleVi": "Chúng mình đang nói về surf the Internet.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u4_02",
+          "word": "read comic books",
+          "phonetic": "/read comic books/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Read comic books - chủ đề Hoạt động lúc rảnh rỗi",
+          "hint": "Tiếng Anh 5 - Unit 4",
+          "exampleEn": "We are talking about read comic books.",
+          "exampleVi": "Chúng mình đang nói về read comic books.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u4_03",
+          "word": "clean the house",
+          "phonetic": "/clean the house/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Clean the house - chủ đề Hoạt động lúc rảnh rỗi",
+          "hint": "Tiếng Anh 5 - Unit 4",
+          "exampleEn": "We are talking about clean the house.",
+          "exampleVi": "Chúng mình đang nói về clean the house.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u4_04",
+          "word": "skate",
+          "phonetic": "/skate/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Skate - chủ đề Hoạt động lúc rảnh rỗi",
+          "hint": "Tiếng Anh 5 - Unit 4",
+          "exampleEn": "We are talking about skate.",
+          "exampleVi": "Chúng mình đang nói về skate.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 4",
+        "ruleVi": "What do you do in your free time? - I surf the Internet.",
+        "formula": "What do you do in your free time?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 4: 'What do you do in your free time?'",
+            "options": [
+              "I surf the Internet.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about hoạt động lúc rảnh rỗi in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt surf the internet ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về hoạt động lúc rảnh rỗi trong môn tiếng Anh.",
+        "situationalTopic": "Hoạt động lúc rảnh rỗi",
+        "dialogueTitle": "Getting Started: Our free-time activities",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Hoạt động lúc rảnh rỗi.",
+        "dialogueLines": [
+          {
+            "id": "g5_u4_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our free-time activities.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về hoạt động lúc rảnh rỗi nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u4_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u4_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What do you do in your free time?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u4_d4",
+            "speaker": "Tony",
+            "sentenceEn": "I surf the Internet.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about hoạt động lúc rảnh rỗi every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về hoạt động lúc rảnh rỗi mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Hoạt động lúc rảnh rỗi",
+        "transcript": "Good morning class. Today we explore our lesson on Our free-time activities. Please listen and note down the key ideas about surf the Internet.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our free-time activities",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our free-time activities",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about hoạt động lúc rảnh rỗi. Many students find that surf the Internet is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về hoạt động lúc rảnh rỗi.",
+        "questions": [
+          {
+            "id": "g5_u4_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our free-time activities today",
+        "meaningVi": "Hôm nay chúng mình đang học về hoạt động lúc rảnh rỗi.",
+        "items": [
+          {
+            "id": "g5_u4_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u5",
+      "grade": 5,
+      "unit": 5,
+      "unitTitle": "Unit 5: My future job",
+      "unitNameVi": "Nghề nghiệp tương lai",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 30 – 35",
+      "vocabularies": [
+        {
+          "id": "g5_u5_01",
+          "word": "architect",
+          "phonetic": "/architect/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Architect - chủ đề Nghề nghiệp tương lai",
+          "hint": "Tiếng Anh 5 - Unit 5",
+          "exampleEn": "We are talking about architect.",
+          "exampleVi": "Chúng mình đang nói về architect.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u5_02",
+          "word": "pilot",
+          "phonetic": "/pilot/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Pilot - chủ đề Nghề nghiệp tương lai",
+          "hint": "Tiếng Anh 5 - Unit 5",
+          "exampleEn": "We are talking about pilot.",
+          "exampleVi": "Chúng mình đang nói về pilot.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u5_03",
+          "word": "writer",
+          "phonetic": "/writer/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Writer - chủ đề Nghề nghiệp tương lai",
+          "hint": "Tiếng Anh 5 - Unit 5",
+          "exampleEn": "We are talking about writer.",
+          "exampleVi": "Chúng mình đang nói về writer.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u5_04",
+          "word": "astronaut",
+          "phonetic": "/astronaut/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Astronaut - chủ đề Nghề nghiệp tương lai",
+          "hint": "Tiếng Anh 5 - Unit 5",
+          "exampleEn": "We are talking about astronaut.",
+          "exampleVi": "Chúng mình đang nói về astronaut.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u5_05",
+          "word": "engineer",
+          "phonetic": "/engineer/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Engineer - chủ đề Nghề nghiệp tương lai",
+          "hint": "Tiếng Anh 5 - Unit 5",
+          "exampleEn": "We are talking about engineer.",
+          "exampleVi": "Chúng mình đang nói về engineer.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u5_06",
+          "word": "artist",
+          "phonetic": "/artist/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Artist - chủ đề Nghề nghiệp tương lai",
+          "hint": "Tiếng Anh 5 - Unit 5",
+          "exampleEn": "We are talking about artist.",
+          "exampleVi": "Chúng mình đang nói về artist.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 5",
+        "ruleVi": "What would you like to be in the future? - An architect.",
+        "formula": "What would you like to be in the future?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 5: 'What would you like to be in the future?'",
+            "options": [
+              "An architect.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about nghề nghiệp tương lai in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt architect ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về nghề nghiệp tương lai trong môn tiếng Anh.",
+        "situationalTopic": "Nghề nghiệp tương lai",
+        "dialogueTitle": "Getting Started: My future job",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Nghề nghiệp tương lai.",
+        "dialogueLines": [
+          {
+            "id": "g5_u5_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about my future job.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về nghề nghiệp tương lai nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u5_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u5_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What would you like to be in the future?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u5_d4",
+            "speaker": "Tony",
+            "sentenceEn": "An architect.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about nghề nghiệp tương lai every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về nghề nghiệp tương lai mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Nghề nghiệp tương lai",
+        "transcript": "Good morning class. Today we explore our lesson on My future job. Please listen and note down the key ideas about architect.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "My future job",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: My future job",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about nghề nghiệp tương lai. Many students find that architect is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về nghề nghiệp tương lai.",
+        "questions": [
+          {
+            "id": "g5_u5_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about my future job today",
+        "meaningVi": "Hôm nay chúng mình đang học về nghề nghiệp tương lai.",
+        "items": [
+          {
+            "id": "g5_u5_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "My",
+              "today"
+            ],
+            "correctSentence": "We are learning about My today",
+            "meaningVi": "Hôm nay chúng mình học về My.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u6",
+      "grade": 5,
+      "unit": 6,
+      "unitTitle": "Unit 6: Our school rooms",
+      "unitNameVi": "Các phòng chức năng ở trường",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 36 – 41",
+      "vocabularies": [
+        {
+          "id": "g5_u6_01",
+          "word": "first floor",
+          "phonetic": "/first floor/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "First floor - chủ đề Các phòng chức năng ở trường",
+          "hint": "Tiếng Anh 5 - Unit 6",
+          "exampleEn": "We are talking about first floor.",
+          "exampleVi": "Chúng mình đang nói về first floor.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u6_02",
+          "word": "second floor",
+          "phonetic": "/second floor/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Second floor - chủ đề Các phòng chức năng ở trường",
+          "hint": "Tiếng Anh 5 - Unit 6",
+          "exampleEn": "We are talking about second floor.",
+          "exampleVi": "Chúng mình đang nói về second floor.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u6_03",
+          "word": "third floor",
+          "phonetic": "/third floor/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Third floor - chủ đề Các phòng chức năng ở trường",
+          "hint": "Tiếng Anh 5 - Unit 6",
+          "exampleEn": "We are talking about third floor.",
+          "exampleVi": "Chúng mình đang nói về third floor.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u6_04",
+          "word": "science lab",
+          "phonetic": "/science lab/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Science lab - chủ đề Các phòng chức năng ở trường",
+          "hint": "Tiếng Anh 5 - Unit 6",
+          "exampleEn": "We are talking about science lab.",
+          "exampleVi": "Chúng mình đang nói về science lab.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u6_05",
+          "word": "art room",
+          "phonetic": "/art room/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Art room - chủ đề Các phòng chức năng ở trường",
+          "hint": "Tiếng Anh 5 - Unit 6",
+          "exampleEn": "We are talking about art room.",
+          "exampleVi": "Chúng mình đang nói về art room.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 6",
+        "ruleVi": "Which room is on the second floor? - The library.",
+        "formula": "Which room is on the second floor?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 6: 'Which room is on the second floor?'",
+            "options": [
+              "The library.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about các phòng chức năng ở trường in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt first floor ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về các phòng chức năng ở trường trong môn tiếng Anh.",
+        "situationalTopic": "Các phòng chức năng ở trường",
+        "dialogueTitle": "Getting Started: Our school rooms",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Các phòng chức năng ở trường.",
+        "dialogueLines": [
+          {
+            "id": "g5_u6_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our school rooms.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về các phòng chức năng ở trường nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u6_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u6_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Which room is on the second floor?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u6_d4",
+            "speaker": "Tony",
+            "sentenceEn": "The library.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about các phòng chức năng ở trường every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về các phòng chức năng ở trường mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Các phòng chức năng ở trường",
+        "transcript": "Good morning class. Today we explore our lesson on Our school rooms. Please listen and note down the key ideas about first floor.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our school rooms",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our school rooms",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about các phòng chức năng ở trường. Many students find that first floor is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về các phòng chức năng ở trường.",
+        "questions": [
+          {
+            "id": "g5_u6_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our school rooms today",
+        "meaningVi": "Hôm nay chúng mình đang học về các phòng chức năng ở trường.",
+        "items": [
+          {
+            "id": "g5_u6_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u7",
+      "grade": 5,
+      "unit": 7,
+      "unitTitle": "Unit 7: Our favourite school activities",
+      "unitNameVi": "Hoạt động học tập yêu thích",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 42 – 47",
+      "vocabularies": [
+        {
+          "id": "g5_u7_01",
+          "word": "project",
+          "phonetic": "/project/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Project - chủ đề Hoạt động học tập yêu thích",
+          "hint": "Tiếng Anh 5 - Unit 7",
+          "exampleEn": "We are talking about project.",
+          "exampleVi": "Chúng mình đang nói về project.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u7_02",
+          "word": "experiment",
+          "phonetic": "/experiment/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Experiment - chủ đề Hoạt động học tập yêu thích",
+          "hint": "Tiếng Anh 5 - Unit 7",
+          "exampleEn": "We are talking about experiment.",
+          "exampleVi": "Chúng mình đang nói về experiment.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u7_03",
+          "word": "presentation",
+          "phonetic": "/presentation/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Presentation - chủ đề Hoạt động học tập yêu thích",
+          "hint": "Tiếng Anh 5 - Unit 7",
+          "exampleEn": "We are talking about presentation.",
+          "exampleVi": "Chúng mình đang nói về presentation.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u7_04",
+          "word": "debate",
+          "phonetic": "/debate/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Debate - chủ đề Hoạt động học tập yêu thích",
+          "hint": "Tiếng Anh 5 - Unit 7",
+          "exampleEn": "We are talking about debate.",
+          "exampleVi": "Chúng mình đang nói về debate.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u7_05",
+          "word": "exhibition",
+          "phonetic": "/exhibition/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Exhibition - chủ đề Hoạt động học tập yêu thích",
+          "hint": "Tiếng Anh 5 - Unit 7",
+          "exampleEn": "We are talking about exhibition.",
+          "exampleVi": "Chúng mình đang nói về exhibition.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 7",
+        "ruleVi": "What school activity do you like best? - Science club.",
+        "formula": "What school activity do you like best?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 7: 'What school activity do you like best?'",
+            "options": [
+              "Science club.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about hoạt động học tập yêu thích in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt project ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về hoạt động học tập yêu thích trong môn tiếng Anh.",
+        "situationalTopic": "Hoạt động học tập yêu thích",
+        "dialogueTitle": "Getting Started: Our favourite school activities",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Hoạt động học tập yêu thích.",
+        "dialogueLines": [
+          {
+            "id": "g5_u7_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our favourite school activities.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về hoạt động học tập yêu thích nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u7_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u7_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What school activity do you like best?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u7_d4",
+            "speaker": "Tony",
+            "sentenceEn": "Science club.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about hoạt động học tập yêu thích every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về hoạt động học tập yêu thích mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Hoạt động học tập yêu thích",
+        "transcript": "Good morning class. Today we explore our lesson on Our favourite school activities. Please listen and note down the key ideas about project.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our favourite school activities",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our favourite school activities",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about hoạt động học tập yêu thích. Many students find that project is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về hoạt động học tập yêu thích.",
+        "questions": [
+          {
+            "id": "g5_u7_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our favourite school activities today",
+        "meaningVi": "Hôm nay chúng mình đang học về hoạt động học tập yêu thích.",
+        "items": [
+          {
+            "id": "g5_u7_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u8",
+      "grade": 5,
+      "unit": 8,
+      "unitTitle": "Unit 8: School subjects",
+      "unitNameVi": "Các môn học",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 48 – 53",
+      "vocabularies": [
+        {
+          "id": "g5_u8_01",
+          "word": "once",
+          "phonetic": "/once/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Once - chủ đề Các môn học",
+          "hint": "Tiếng Anh 5 - Unit 8",
+          "exampleEn": "We are talking about once.",
+          "exampleVi": "Chúng mình đang nói về once.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u8_02",
+          "word": "twice",
+          "phonetic": "/twice/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Twice - chủ đề Các môn học",
+          "hint": "Tiếng Anh 5 - Unit 8",
+          "exampleEn": "We are talking about twice.",
+          "exampleVi": "Chúng mình đang nói về twice.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u8_03",
+          "word": "three times",
+          "phonetic": "/three times/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Three times - chủ đề Các môn học",
+          "hint": "Tiếng Anh 5 - Unit 8",
+          "exampleEn": "We are talking about three times.",
+          "exampleVi": "Chúng mình đang nói về three times.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u8_04",
+          "word": "four times",
+          "phonetic": "/four times/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Four times - chủ đề Các môn học",
+          "hint": "Tiếng Anh 5 - Unit 8",
+          "exampleEn": "We are talking about four times.",
+          "exampleVi": "Chúng mình đang nói về four times.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u8_05",
+          "word": "every school day",
+          "phonetic": "/every school day/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Every school day - chủ đề Các môn học",
+          "hint": "Tiếng Anh 5 - Unit 8",
+          "exampleEn": "We are talking about every school day.",
+          "exampleVi": "Chúng mình đang nói về every school day.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 8",
+        "ruleVi": "How often do you have English? - Four times a week.",
+        "formula": "How often do you have English?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 8: 'How often do you have English?'",
+            "options": [
+              "Four times a week.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about các môn học in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt once ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về các môn học trong môn tiếng Anh.",
+        "situationalTopic": "Các môn học",
+        "dialogueTitle": "Getting Started: School subjects",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Các môn học.",
+        "dialogueLines": [
+          {
+            "id": "g5_u8_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about school subjects.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về các môn học nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u8_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u8_d3",
+            "speaker": "Mai",
+            "sentenceEn": "How often do you have English?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u8_d4",
+            "speaker": "Tony",
+            "sentenceEn": "Four times a week.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about các môn học every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về các môn học mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Các môn học",
+        "transcript": "Good morning class. Today we explore our lesson on School subjects. Please listen and note down the key ideas about once.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "School subjects",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: School subjects",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about các môn học. Many students find that once is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về các môn học.",
+        "questions": [
+          {
+            "id": "g5_u8_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about school subjects today",
+        "meaningVi": "Hôm nay chúng mình đang học về các môn học.",
+        "items": [
+          {
+            "id": "g5_u8_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "School",
+              "today"
+            ],
+            "correctSentence": "We are learning about School today",
+            "meaningVi": "Hôm nay chúng mình học về School.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u9",
+      "grade": 5,
+      "unit": 9,
+      "unitTitle": "Unit 9: Our outdoor activities",
+      "unitNameVi": "Hoạt động ngoài trời",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 54 – 59",
+      "vocabularies": [
+        {
+          "id": "g5_u9_01",
+          "word": "badminton",
+          "phonetic": "/badminton/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Badminton - chủ đề Hoạt động ngoài trời",
+          "hint": "Tiếng Anh 5 - Unit 9",
+          "exampleEn": "We are talking about badminton.",
+          "exampleVi": "Chúng mình đang nói về badminton.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u9_02",
+          "word": "volleyball",
+          "phonetic": "/volleyball/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Volleyball - chủ đề Hoạt động ngoài trời",
+          "hint": "Tiếng Anh 5 - Unit 9",
+          "exampleEn": "We are talking about volleyball.",
+          "exampleVi": "Chúng mình đang nói về volleyball.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u9_03",
+          "word": "hide-and-seek",
+          "phonetic": "/hide-and-seek/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Hide-and-seek - chủ đề Hoạt động ngoài trời",
+          "hint": "Tiếng Anh 5 - Unit 9",
+          "exampleEn": "We are talking about hide-and-seek.",
+          "exampleVi": "Chúng mình đang nói về hide-and-seek.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u9_04",
+          "word": "cycling",
+          "phonetic": "/cycling/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Cycling - chủ đề Hoạt động ngoài trời",
+          "hint": "Tiếng Anh 5 - Unit 9",
+          "exampleEn": "We are talking about cycling.",
+          "exampleVi": "Chúng mình đang nói về cycling.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u9_05",
+          "word": "walking",
+          "phonetic": "/walking/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Walking - chủ đề Hoạt động ngoài trời",
+          "hint": "Tiếng Anh 5 - Unit 9",
+          "exampleEn": "We are talking about walking.",
+          "exampleVi": "Chúng mình đang nói về walking.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 9",
+        "ruleVi": "What were you doing yesterday afternoon? - Playing badminton.",
+        "formula": "What were you doing yesterday afternoon?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 9: 'What were you doing yesterday afternoon?'",
+            "options": [
+              "Playing badminton.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about hoạt động ngoài trời in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt badminton ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về hoạt động ngoài trời trong môn tiếng Anh.",
+        "situationalTopic": "Hoạt động ngoài trời",
+        "dialogueTitle": "Getting Started: Our outdoor activities",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Hoạt động ngoài trời.",
+        "dialogueLines": [
+          {
+            "id": "g5_u9_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our outdoor activities.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về hoạt động ngoài trời nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u9_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u9_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What were you doing yesterday afternoon?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u9_d4",
+            "speaker": "Tony",
+            "sentenceEn": "Playing badminton.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about hoạt động ngoài trời every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về hoạt động ngoài trời mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Hoạt động ngoài trời",
+        "transcript": "Good morning class. Today we explore our lesson on Our outdoor activities. Please listen and note down the key ideas about badminton.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our outdoor activities",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our outdoor activities",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about hoạt động ngoài trời. Many students find that badminton is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về hoạt động ngoài trời.",
+        "questions": [
+          {
+            "id": "g5_u9_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our outdoor activities today",
+        "meaningVi": "Hôm nay chúng mình đang học về hoạt động ngoài trời.",
+        "items": [
+          {
+            "id": "g5_u9_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u10",
+      "grade": 5,
+      "unit": 10,
+      "unitTitle": "Unit 10: Our school trip",
+      "unitNameVi": "Chuyến dã ngoại của trường",
+      "theme": "Community & Life Skills",
+      "semester": 1,
+      "bookPages": "Trang 60 – 65",
+      "vocabularies": [
+        {
+          "id": "g5_u10_01",
+          "word": "school trip",
+          "phonetic": "/school trip/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "School trip - chủ đề Chuyến dã ngoại của trường",
+          "hint": "Tiếng Anh 5 - Unit 10",
+          "exampleEn": "We are talking about school trip.",
+          "exampleVi": "Chúng mình đang nói về school trip.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u10_02",
+          "word": "national park",
+          "phonetic": "/national park/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "National park - chủ đề Chuyến dã ngoại của trường",
+          "hint": "Tiếng Anh 5 - Unit 10",
+          "exampleEn": "We are talking about national park.",
+          "exampleVi": "Chúng mình đang nói về national park.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u10_03",
+          "word": "museum",
+          "phonetic": "/museum/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Museum - chủ đề Chuyến dã ngoại của trường",
+          "hint": "Tiếng Anh 5 - Unit 10",
+          "exampleEn": "We are talking about museum.",
+          "exampleVi": "Chúng mình đang nói về museum.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u10_04",
+          "word": "countryside",
+          "phonetic": "/countryside/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Countryside - chủ đề Chuyến dã ngoại của trường",
+          "hint": "Tiếng Anh 5 - Unit 10",
+          "exampleEn": "We are talking about countryside.",
+          "exampleVi": "Chúng mình đang nói về countryside.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u10_05",
+          "word": "lake",
+          "phonetic": "/lake/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Lake - chủ đề Chuyến dã ngoại của trường",
+          "hint": "Tiếng Anh 5 - Unit 10",
+          "exampleEn": "We are talking about lake.",
+          "exampleVi": "Chúng mình đang nói về lake.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 10",
+        "ruleVi": "Where did you go on your school trip? - Cuc Phuong National Park.",
+        "formula": "Where did you go on your school trip?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 10: 'Where did you go on your school trip?'",
+            "options": [
+              "Cuc Phuong National Park.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about chuyến dã ngoại của trường in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt school trip ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về chuyến dã ngoại của trường trong môn tiếng Anh.",
+        "situationalTopic": "Chuyến dã ngoại của trường",
+        "dialogueTitle": "Getting Started: Our school trip",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Chuyến dã ngoại của trường.",
+        "dialogueLines": [
+          {
+            "id": "g5_u10_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our school trip.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về chuyến dã ngoại của trường nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u10_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u10_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Where did you go on your school trip?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u10_d4",
+            "speaker": "Tony",
+            "sentenceEn": "Cuc Phuong National Park.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about chuyến dã ngoại của trường every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về chuyến dã ngoại của trường mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Chuyến dã ngoại của trường",
+        "transcript": "Good morning class. Today we explore our lesson on Our school trip. Please listen and note down the key ideas about school trip.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our school trip",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our school trip",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about chuyến dã ngoại của trường. Many students find that school trip is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về chuyến dã ngoại của trường.",
+        "questions": [
+          {
+            "id": "g5_u10_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our school trip today",
+        "meaningVi": "Hôm nay chúng mình đang học về chuyến dã ngoại của trường.",
+        "items": [
+          {
+            "id": "g5_u10_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u11",
+      "grade": 5,
+      "unit": 11,
+      "unitTitle": "Unit 11: Family health",
+      "unitNameVi": "Sức khỏe gia đình",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 66 – 71",
+      "vocabularies": [
+        {
+          "id": "g5_u11_01",
+          "word": "headache",
+          "phonetic": "/headache/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Headache - chủ đề Sức khỏe gia đình",
+          "hint": "Tiếng Anh 5 - Unit 11",
+          "exampleEn": "We are talking about headache.",
+          "exampleVi": "Chúng mình đang nói về headache.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u11_02",
+          "word": "toothache",
+          "phonetic": "/toothache/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Toothache - chủ đề Sức khỏe gia đình",
+          "hint": "Tiếng Anh 5 - Unit 11",
+          "exampleEn": "We are talking about toothache.",
+          "exampleVi": "Chúng mình đang nói về toothache.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u11_03",
+          "word": "stomach ache",
+          "phonetic": "/stomach ache/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Stomach ache - chủ đề Sức khỏe gia đình",
+          "hint": "Tiếng Anh 5 - Unit 11",
+          "exampleEn": "We are talking about stomach ache.",
+          "exampleVi": "Chúng mình đang nói về stomach ache.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u11_04",
+          "word": "fever",
+          "phonetic": "/fever/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Fever - chủ đề Sức khỏe gia đình",
+          "hint": "Tiếng Anh 5 - Unit 11",
+          "exampleEn": "We are talking about fever.",
+          "exampleVi": "Chúng mình đang nói về fever.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u11_05",
+          "word": "cough",
+          "phonetic": "/cough/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Cough - chủ đề Sức khỏe gia đình",
+          "hint": "Tiếng Anh 5 - Unit 11",
+          "exampleEn": "We are talking about cough.",
+          "exampleVi": "Chúng mình đang nói về cough.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u11_06",
+          "word": "sore throat",
+          "phonetic": "/sore throat/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Sore throat - chủ đề Sức khỏe gia đình",
+          "hint": "Tiếng Anh 5 - Unit 11",
+          "exampleEn": "We are talking about sore throat.",
+          "exampleVi": "Chúng mình đang nói về sore throat.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 11",
+        "ruleVi": "What's the matter with you? - I have a headache.",
+        "formula": "What's the matter with you?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 11: 'What's the matter with you?'",
+            "options": [
+              "I have a headache.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about sức khỏe gia đình in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt headache ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về sức khỏe gia đình trong môn tiếng Anh.",
+        "situationalTopic": "Sức khỏe gia đình",
+        "dialogueTitle": "Getting Started: Family health",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Sức khỏe gia đình.",
+        "dialogueLines": [
+          {
+            "id": "g5_u11_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about family health.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về sức khỏe gia đình nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u11_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u11_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What's the matter with you?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u11_d4",
+            "speaker": "Tony",
+            "sentenceEn": "I have a headache.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about sức khỏe gia đình every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về sức khỏe gia đình mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Sức khỏe gia đình",
+        "transcript": "Good morning class. Today we explore our lesson on Family health. Please listen and note down the key ideas about headache.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Family health",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Family health",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about sức khỏe gia đình. Many students find that headache is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về sức khỏe gia đình.",
+        "questions": [
+          {
+            "id": "g5_u11_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about family health today",
+        "meaningVi": "Hôm nay chúng mình đang học về sức khỏe gia đình.",
+        "items": [
+          {
+            "id": "g5_u11_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Family",
+              "today"
+            ],
+            "correctSentence": "We are learning about Family today",
+            "meaningVi": "Hôm nay chúng mình học về Family.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u12",
+      "grade": 5,
+      "unit": 12,
+      "unitTitle": "Unit 12: Our responsibilities",
+      "unitNameVi": "Trách nhiệm của chúng mình",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 72 – 77",
+      "vocabularies": [
+        {
+          "id": "g5_u12_01",
+          "word": "danger",
+          "phonetic": "/danger/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Danger - chủ đề Trách nhiệm của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 12",
+          "exampleEn": "We are talking about danger.",
+          "exampleVi": "Chúng mình đang nói về danger.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u12_02",
+          "word": "knife",
+          "phonetic": "/knife/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Knife - chủ đề Trách nhiệm của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 12",
+          "exampleEn": "We are talking about knife.",
+          "exampleVi": "Chúng mình đang nói về knife.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u12_03",
+          "word": "stairs",
+          "phonetic": "/stairs/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Stairs - chủ đề Trách nhiệm của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 12",
+          "exampleEn": "We are talking about stairs.",
+          "exampleVi": "Chúng mình đang nói về stairs.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u12_04",
+          "word": "fire",
+          "phonetic": "/fire/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Fire - chủ đề Trách nhiệm của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 12",
+          "exampleEn": "We are talking about fire.",
+          "exampleVi": "Chúng mình đang nói về fire.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u12_05",
+          "word": "ride fast",
+          "phonetic": "/ride fast/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Ride fast - chủ đề Trách nhiệm của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 12",
+          "exampleEn": "We are talking about ride fast.",
+          "exampleVi": "Chúng mình đang nói về ride fast.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u12_06",
+          "word": "touch the stove",
+          "phonetic": "/touch the stove/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Touch the stove - chủ đề Trách nhiệm của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 12",
+          "exampleEn": "We are talking about touch the stove.",
+          "exampleVi": "Chúng mình đang nói về touch the stove.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 12",
+        "ruleVi": "Don't ride your bike too fast! - OK, I won't.",
+        "formula": "Don't ride your bike too fast!",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 12: 'Don't ride your bike too fast! - OK, I won't.?'",
+            "options": [
+              "OK, I won't.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about trách nhiệm của chúng mình in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt danger ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về trách nhiệm của chúng mình trong môn tiếng Anh.",
+        "situationalTopic": "Trách nhiệm của chúng mình",
+        "dialogueTitle": "Getting Started: Our responsibilities",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Trách nhiệm của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g5_u12_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our responsibilities.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về trách nhiệm của chúng mình nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u12_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u12_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Don't ride your bike too fast!",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u12_d4",
+            "speaker": "Tony",
+            "sentenceEn": "OK, I won't.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about trách nhiệm của chúng mình every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về trách nhiệm của chúng mình mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Trách nhiệm của chúng mình",
+        "transcript": "Good morning class. Today we explore our lesson on Our responsibilities. Please listen and note down the key ideas about danger.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our responsibilities",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our responsibilities",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about trách nhiệm của chúng mình. Many students find that danger is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về trách nhiệm của chúng mình.",
+        "questions": [
+          {
+            "id": "g5_u12_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our responsibilities today",
+        "meaningVi": "Hôm nay chúng mình đang học về trách nhiệm của chúng mình.",
+        "items": [
+          {
+            "id": "g5_u12_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u13",
+      "grade": 5,
+      "unit": 13,
+      "unitTitle": "Unit 13: Our special days",
+      "unitNameVi": "Những ngày đặc biệt",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 78 – 83",
+      "vocabularies": [
+        {
+          "id": "g5_u13_01",
+          "word": "Teachers' Day",
+          "phonetic": "/teachers' day/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Teachers' day - chủ đề Những ngày đặc biệt",
+          "hint": "Tiếng Anh 5 - Unit 13",
+          "exampleEn": "We are talking about Teachers' Day.",
+          "exampleVi": "Chúng mình đang nói về Teachers' Day.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u13_02",
+          "word": "Children's Day",
+          "phonetic": "/children's day/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Children's day - chủ đề Những ngày đặc biệt",
+          "hint": "Tiếng Anh 5 - Unit 13",
+          "exampleEn": "We are talking about Children's Day.",
+          "exampleVi": "Chúng mình đang nói về Children's Day.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u13_03",
+          "word": "Sports Day",
+          "phonetic": "/sports day/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Sports day - chủ đề Những ngày đặc biệt",
+          "hint": "Tiếng Anh 5 - Unit 13",
+          "exampleEn": "We are talking about Sports Day.",
+          "exampleVi": "Chúng mình đang nói về Sports Day.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u13_04",
+          "word": "celebration",
+          "phonetic": "/celebration/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Celebration - chủ đề Những ngày đặc biệt",
+          "hint": "Tiếng Anh 5 - Unit 13",
+          "exampleEn": "We are talking about celebration.",
+          "exampleVi": "Chúng mình đang nói về celebration.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 13",
+        "ruleVi": "When will Teachers' Day be? - It'll be next Wednesday.",
+        "formula": "When will Teachers' Day be?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 13: 'When will Teachers' Day be?'",
+            "options": [
+              "It'll be next Wednesday.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about những ngày đặc biệt in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt teachers' day ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về những ngày đặc biệt trong môn tiếng Anh.",
+        "situationalTopic": "Những ngày đặc biệt",
+        "dialogueTitle": "Getting Started: Our special days",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Những ngày đặc biệt.",
+        "dialogueLines": [
+          {
+            "id": "g5_u13_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our special days.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về những ngày đặc biệt nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u13_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u13_d3",
+            "speaker": "Mai",
+            "sentenceEn": "When will Teachers' Day be?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u13_d4",
+            "speaker": "Tony",
+            "sentenceEn": "It'll be next Wednesday.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about những ngày đặc biệt every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về những ngày đặc biệt mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Những ngày đặc biệt",
+        "transcript": "Good morning class. Today we explore our lesson on Our special days. Please listen and note down the key ideas about Teachers' Day.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our special days",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our special days",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about những ngày đặc biệt. Many students find that Teachers' Day is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về những ngày đặc biệt.",
+        "questions": [
+          {
+            "id": "g5_u13_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our special days today",
+        "meaningVi": "Hôm nay chúng mình đang học về những ngày đặc biệt.",
+        "items": [
+          {
+            "id": "g5_u13_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u14",
+      "grade": 5,
+      "unit": 14,
+      "unitTitle": "Unit 14: Staying healthy",
+      "unitNameVi": "Giữ gìn sức khỏe",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 84 – 89",
+      "vocabularies": [
+        {
+          "id": "g5_u14_01",
+          "word": "healthy",
+          "phonetic": "/healthy/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Healthy - chủ đề Giữ gìn sức khỏe",
+          "hint": "Tiếng Anh 5 - Unit 14",
+          "exampleEn": "We are talking about healthy.",
+          "exampleVi": "Chúng mình đang nói về healthy.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u14_02",
+          "word": "fruit",
+          "phonetic": "/fruit/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Fruit - chủ đề Giữ gìn sức khỏe",
+          "hint": "Tiếng Anh 5 - Unit 14",
+          "exampleEn": "We are talking about fruit.",
+          "exampleVi": "Chúng mình đang nói về fruit.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u14_03",
+          "word": "vegetables",
+          "phonetic": "/vegetables/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Vegetables - chủ đề Giữ gìn sức khỏe",
+          "hint": "Tiếng Anh 5 - Unit 14",
+          "exampleEn": "We are talking about vegetables.",
+          "exampleVi": "Chúng mình đang nói về vegetables.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u14_04",
+          "word": "drink water",
+          "phonetic": "/drink water/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Drink water - chủ đề Giữ gìn sức khỏe",
+          "hint": "Tiếng Anh 5 - Unit 14",
+          "exampleEn": "We are talking about drink water.",
+          "exampleVi": "Chúng mình đang nói về drink water.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u14_05",
+          "word": "do exercise",
+          "phonetic": "/do exercise/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Do exercise - chủ đề Giữ gìn sức khỏe",
+          "hint": "Tiếng Anh 5 - Unit 14",
+          "exampleEn": "We are talking about do exercise.",
+          "exampleVi": "Chúng mình đang nói về do exercise.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u14_06",
+          "word": "sleep early",
+          "phonetic": "/sleep early/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Sleep early - chủ đề Giữ gìn sức khỏe",
+          "hint": "Tiếng Anh 5 - Unit 14",
+          "exampleEn": "We are talking about sleep early.",
+          "exampleVi": "Chúng mình đang nói về sleep early.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 14",
+        "ruleVi": "What should you eat to stay healthy? - More vegetables.",
+        "formula": "What should you eat to stay healthy?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 14: 'What should you eat to stay healthy?'",
+            "options": [
+              "More vegetables.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about giữ gìn sức khỏe in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt healthy ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về giữ gìn sức khỏe trong môn tiếng Anh.",
+        "situationalTopic": "Giữ gìn sức khỏe",
+        "dialogueTitle": "Getting Started: Staying healthy",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Giữ gìn sức khỏe.",
+        "dialogueLines": [
+          {
+            "id": "g5_u14_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about staying healthy.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về giữ gìn sức khỏe nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u14_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u14_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What should you eat to stay healthy?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u14_d4",
+            "speaker": "Tony",
+            "sentenceEn": "More vegetables.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about giữ gìn sức khỏe every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về giữ gìn sức khỏe mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Giữ gìn sức khỏe",
+        "transcript": "Good morning class. Today we explore our lesson on Staying healthy. Please listen and note down the key ideas about healthy.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Staying healthy",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Staying healthy",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about giữ gìn sức khỏe. Many students find that healthy is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về giữ gìn sức khỏe.",
+        "questions": [
+          {
+            "id": "g5_u14_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about staying healthy today",
+        "meaningVi": "Hôm nay chúng mình đang học về giữ gìn sức khỏe.",
+        "items": [
+          {
+            "id": "g5_u14_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Staying",
+              "today"
+            ],
+            "correctSentence": "We are learning about Staying today",
+            "meaningVi": "Hôm nay chúng mình học về Staying.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u15",
+      "grade": 5,
+      "unit": 15,
+      "unitTitle": "Unit 15: Life stories",
+      "unitNameVi": "Những câu chuyện cuộc sống",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 90 – 95",
+      "vocabularies": [
+        {
+          "id": "g5_u15_01",
+          "word": "character",
+          "phonetic": "/character/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Character - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about character.",
+          "exampleVi": "Chúng mình đang nói về character.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u15_02",
+          "word": "plot",
+          "phonetic": "/plot/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Plot - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about plot.",
+          "exampleVi": "Chúng mình đang nói về plot.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u15_03",
+          "word": "fairy tale",
+          "phonetic": "/fairy tale/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Fairy tale - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about fairy tale.",
+          "exampleVi": "Chúng mình đang nói về fairy tale.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u15_04",
+          "word": "fox",
+          "phonetic": "/fox/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Fox - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about fox.",
+          "exampleVi": "Chúng mình đang nói về fox.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u15_05",
+          "word": "crow",
+          "phonetic": "/crow/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Crow - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about crow.",
+          "exampleVi": "Chúng mình đang nói về crow.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u15_06",
+          "word": "prince",
+          "phonetic": "/prince/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Prince - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about prince.",
+          "exampleVi": "Chúng mình đang nói về prince.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u15_07",
+          "word": "princess",
+          "phonetic": "/princess/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Princess - chủ đề Những câu chuyện cuộc sống",
+          "hint": "Tiếng Anh 5 - Unit 15",
+          "exampleEn": "We are talking about princess.",
+          "exampleVi": "Chúng mình đang nói về princess.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 15",
+        "ruleVi": "What happened in the story? - First,... Then,... Finally,...",
+        "formula": "What happened in the story?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 15: 'What happened in the story?'",
+            "options": [
+              "First,... Then,... Finally,...",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about những câu chuyện cuộc sống in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt character ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về những câu chuyện cuộc sống trong môn tiếng Anh.",
+        "situationalTopic": "Những câu chuyện cuộc sống",
+        "dialogueTitle": "Getting Started: Life stories",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Những câu chuyện cuộc sống.",
+        "dialogueLines": [
+          {
+            "id": "g5_u15_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about life stories.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về những câu chuyện cuộc sống nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u15_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u15_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What happened in the story?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u15_d4",
+            "speaker": "Tony",
+            "sentenceEn": "First,... Then,... Finally,...",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about những câu chuyện cuộc sống every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về những câu chuyện cuộc sống mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Những câu chuyện cuộc sống",
+        "transcript": "Good morning class. Today we explore our lesson on Life stories. Please listen and note down the key ideas about character.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Life stories",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Life stories",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about những câu chuyện cuộc sống. Many students find that character is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về những câu chuyện cuộc sống.",
+        "questions": [
+          {
+            "id": "g5_u15_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about life stories today",
+        "meaningVi": "Hôm nay chúng mình đang học về những câu chuyện cuộc sống.",
+        "items": [
+          {
+            "id": "g5_u15_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Life",
+              "today"
+            ],
+            "correctSentence": "We are learning about Life today",
+            "meaningVi": "Hôm nay chúng mình học về Life.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u16",
+      "grade": 5,
+      "unit": 16,
+      "unitTitle": "Unit 16: Seasons and weather",
+      "unitNameVi": "Các mùa và thời tiết",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 96 – 101",
+      "vocabularies": [
+        {
+          "id": "g5_u16_01",
+          "word": "spring",
+          "phonetic": "/spring/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Spring - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about spring.",
+          "exampleVi": "Chúng mình đang nói về spring.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u16_02",
+          "word": "summer",
+          "phonetic": "/summer/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Summer - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about summer.",
+          "exampleVi": "Chúng mình đang nói về summer.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u16_03",
+          "word": "autumn",
+          "phonetic": "/autumn/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Autumn - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about autumn.",
+          "exampleVi": "Chúng mình đang nói về autumn.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u16_04",
+          "word": "winter",
+          "phonetic": "/winter/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Winter - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about winter.",
+          "exampleVi": "Chúng mình đang nói về winter.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u16_05",
+          "word": "warm",
+          "phonetic": "/warm/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Warm - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about warm.",
+          "exampleVi": "Chúng mình đang nói về warm.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u16_06",
+          "word": "cool",
+          "phonetic": "/cool/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Cool - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about cool.",
+          "exampleVi": "Chúng mình đang nói về cool.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u16_07",
+          "word": "freezing",
+          "phonetic": "/freezing/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Freezing - chủ đề Các mùa và thời tiết",
+          "hint": "Tiếng Anh 5 - Unit 16",
+          "exampleEn": "We are talking about freezing.",
+          "exampleVi": "Chúng mình đang nói về freezing.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 16",
+        "ruleVi": "What will the weather be like tomorrow? - Warm and sunny.",
+        "formula": "What will the weather be like tomorrow?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 16: 'What will the weather be like tomorrow?'",
+            "options": [
+              "Warm and sunny.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about các mùa và thời tiết in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt spring ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về các mùa và thời tiết trong môn tiếng Anh.",
+        "situationalTopic": "Các mùa và thời tiết",
+        "dialogueTitle": "Getting Started: Seasons and weather",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Các mùa và thời tiết.",
+        "dialogueLines": [
+          {
+            "id": "g5_u16_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about seasons and weather.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về các mùa và thời tiết nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u16_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u16_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What will the weather be like tomorrow?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u16_d4",
+            "speaker": "Tony",
+            "sentenceEn": "Warm and sunny.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about các mùa và thời tiết every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về các mùa và thời tiết mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Các mùa và thời tiết",
+        "transcript": "Good morning class. Today we explore our lesson on Seasons and weather. Please listen and note down the key ideas about spring.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Seasons and weather",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Seasons and weather",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about các mùa và thời tiết. Many students find that spring is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về các mùa và thời tiết.",
+        "questions": [
+          {
+            "id": "g5_u16_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about seasons and weather today",
+        "meaningVi": "Hôm nay chúng mình đang học về các mùa và thời tiết.",
+        "items": [
+          {
+            "id": "g5_u16_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Seasons",
+              "today"
+            ],
+            "correctSentence": "We are learning about Seasons today",
+            "meaningVi": "Hôm nay chúng mình học về Seasons.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u17",
+      "grade": 5,
+      "unit": 17,
+      "unitTitle": "Unit 17: Stories for children",
+      "unitNameVi": "Truyện đọc thiếu nhi",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 102 – 107",
+      "vocabularies": [
+        {
+          "id": "g5_u17_01",
+          "word": "clever",
+          "phonetic": "/clever/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Clever - chủ đề Truyện đọc thiếu nhi",
+          "hint": "Tiếng Anh 5 - Unit 17",
+          "exampleEn": "We are talking about clever.",
+          "exampleVi": "Chúng mình đang nói về clever.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u17_02",
+          "word": "greedy",
+          "phonetic": "/greedy/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Greedy - chủ đề Truyện đọc thiếu nhi",
+          "hint": "Tiếng Anh 5 - Unit 17",
+          "exampleEn": "We are talking about greedy.",
+          "exampleVi": "Chúng mình đang nói về greedy.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u17_03",
+          "word": "kind",
+          "phonetic": "/kind/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Kind - chủ đề Truyện đọc thiếu nhi",
+          "hint": "Tiếng Anh 5 - Unit 17",
+          "exampleEn": "We are talking about kind.",
+          "exampleVi": "Chúng mình đang nói về kind.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u17_04",
+          "word": "gentle",
+          "phonetic": "/gentle/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Gentle - chủ đề Truyện đọc thiếu nhi",
+          "hint": "Tiếng Anh 5 - Unit 17",
+          "exampleEn": "We are talking about gentle.",
+          "exampleVi": "Chúng mình đang nói về gentle.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u17_05",
+          "word": "hard-working",
+          "phonetic": "/hard-working/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Hard-working - chủ đề Truyện đọc thiếu nhi",
+          "hint": "Tiếng Anh 5 - Unit 17",
+          "exampleEn": "We are talking about hard-working.",
+          "exampleVi": "Chúng mình đang nói về hard-working.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u17_06",
+          "word": "honest",
+          "phonetic": "/honest/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Honest - chủ đề Truyện đọc thiếu nhi",
+          "hint": "Tiếng Anh 5 - Unit 17",
+          "exampleEn": "We are talking about honest.",
+          "exampleVi": "Chúng mình đang nói về honest.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 17",
+        "ruleVi": "What do you think of the Fox? - He is clever.",
+        "formula": "What do you think of the Fox?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 17: 'What do you think of the Fox?'",
+            "options": [
+              "He is clever.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about truyện đọc thiếu nhi in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt clever ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về truyện đọc thiếu nhi trong môn tiếng Anh.",
+        "situationalTopic": "Truyện đọc thiếu nhi",
+        "dialogueTitle": "Getting Started: Stories for children",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Truyện đọc thiếu nhi.",
+        "dialogueLines": [
+          {
+            "id": "g5_u17_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about stories for children.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về truyện đọc thiếu nhi nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u17_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u17_d3",
+            "speaker": "Mai",
+            "sentenceEn": "What do you think of the Fox?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u17_d4",
+            "speaker": "Tony",
+            "sentenceEn": "He is clever.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about truyện đọc thiếu nhi every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về truyện đọc thiếu nhi mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Truyện đọc thiếu nhi",
+        "transcript": "Good morning class. Today we explore our lesson on Stories for children. Please listen and note down the key ideas about clever.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Stories for children",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Stories for children",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about truyện đọc thiếu nhi. Many students find that clever is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về truyện đọc thiếu nhi.",
+        "questions": [
+          {
+            "id": "g5_u17_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about stories for children today",
+        "meaningVi": "Hôm nay chúng mình đang học về truyện đọc thiếu nhi.",
+        "items": [
+          {
+            "id": "g5_u17_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Stories",
+              "today"
+            ],
+            "correctSentence": "We are learning about Stories today",
+            "meaningVi": "Hôm nay chúng mình học về Stories.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u18",
+      "grade": 5,
+      "unit": 18,
+      "unitTitle": "Unit 18: Means of transport",
+      "unitNameVi": "Phương tiện giao thông",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 108 – 113",
+      "vocabularies": [
+        {
+          "id": "g5_u18_01",
+          "word": "plane",
+          "phonetic": "/plane/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Plane - chủ đề Phương tiện giao thông",
+          "hint": "Tiếng Anh 5 - Unit 18",
+          "exampleEn": "We are talking about plane.",
+          "exampleVi": "Chúng mình đang nói về plane.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u18_02",
+          "word": "train",
+          "phonetic": "/train/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Train - chủ đề Phương tiện giao thông",
+          "hint": "Tiếng Anh 5 - Unit 18",
+          "exampleEn": "We are talking about train.",
+          "exampleVi": "Chúng mình đang nói về train.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u18_03",
+          "word": "coach",
+          "phonetic": "/coach/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Coach - chủ đề Phương tiện giao thông",
+          "hint": "Tiếng Anh 5 - Unit 18",
+          "exampleEn": "We are talking about coach.",
+          "exampleVi": "Chúng mình đang nói về coach.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u18_04",
+          "word": "underground",
+          "phonetic": "/underground/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Underground - chủ đề Phương tiện giao thông",
+          "hint": "Tiếng Anh 5 - Unit 18",
+          "exampleEn": "We are talking about underground.",
+          "exampleVi": "Chúng mình đang nói về underground.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u18_05",
+          "word": "boat",
+          "phonetic": "/boat/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Boat - chủ đề Phương tiện giao thông",
+          "hint": "Tiếng Anh 5 - Unit 18",
+          "exampleEn": "We are talking about boat.",
+          "exampleVi": "Chúng mình đang nói về boat.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u18_06",
+          "word": "motorbike",
+          "phonetic": "/motorbike/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Motorbike - chủ đề Phương tiện giao thông",
+          "hint": "Tiếng Anh 5 - Unit 18",
+          "exampleEn": "We are talking about motorbike.",
+          "exampleVi": "Chúng mình đang nói về motorbike.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 18",
+        "ruleVi": "How can I get to Da Nang? - You can go by plane.",
+        "formula": "How can I get to Da Nang?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 18: 'How can I get to Da Nang?'",
+            "options": [
+              "You can go by plane.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about phương tiện giao thông in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt plane ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về phương tiện giao thông trong môn tiếng Anh.",
+        "situationalTopic": "Phương tiện giao thông",
+        "dialogueTitle": "Getting Started: Means of transport",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Phương tiện giao thông.",
+        "dialogueLines": [
+          {
+            "id": "g5_u18_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about means of transport.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về phương tiện giao thông nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u18_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u18_d3",
+            "speaker": "Mai",
+            "sentenceEn": "How can I get to Da Nang?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u18_d4",
+            "speaker": "Tony",
+            "sentenceEn": "You can go by plane.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about phương tiện giao thông every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về phương tiện giao thông mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Phương tiện giao thông",
+        "transcript": "Good morning class. Today we explore our lesson on Means of transport. Please listen and note down the key ideas about plane.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Means of transport",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Means of transport",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about phương tiện giao thông. Many students find that plane is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về phương tiện giao thông.",
+        "questions": [
+          {
+            "id": "g5_u18_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about means of transport today",
+        "meaningVi": "Hôm nay chúng mình đang học về phương tiện giao thông.",
+        "items": [
+          {
+            "id": "g5_u18_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Means",
+              "today"
+            ],
+            "correctSentence": "We are learning about Means today",
+            "meaningVi": "Hôm nay chúng mình học về Means.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u19",
+      "grade": 5,
+      "unit": 19,
+      "unitTitle": "Unit 19: Places of interest",
+      "unitNameVi": "Danh lam thắng cảnh",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 114 – 119",
+      "vocabularies": [
+        {
+          "id": "g5_u19_01",
+          "word": "pagoda",
+          "phonetic": "/pagoda/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Pagoda - chủ đề Danh lam thắng cảnh",
+          "hint": "Tiếng Anh 5 - Unit 19",
+          "exampleEn": "We are talking about pagoda.",
+          "exampleVi": "Chúng mình đang nói về pagoda.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u19_02",
+          "word": "bridge",
+          "phonetic": "/bridge/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Bridge - chủ đề Danh lam thắng cảnh",
+          "hint": "Tiếng Anh 5 - Unit 19",
+          "exampleEn": "We are talking about bridge.",
+          "exampleVi": "Chúng mình đang nói về bridge.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u19_03",
+          "word": "bay",
+          "phonetic": "/bay/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Bay - chủ đề Danh lam thắng cảnh",
+          "hint": "Tiếng Anh 5 - Unit 19",
+          "exampleEn": "We are talking about bay.",
+          "exampleVi": "Chúng mình đang nói về bay.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u19_04",
+          "word": "island",
+          "phonetic": "/island/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Island - chủ đề Danh lam thắng cảnh",
+          "hint": "Tiếng Anh 5 - Unit 19",
+          "exampleEn": "We are talking about island.",
+          "exampleVi": "Chúng mình đang nói về island.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u19_05",
+          "word": "temple",
+          "phonetic": "/temple/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Temple - chủ đề Danh lam thắng cảnh",
+          "hint": "Tiếng Anh 5 - Unit 19",
+          "exampleEn": "We are talking about temple.",
+          "exampleVi": "Chúng mình đang nói về temple.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u19_06",
+          "word": "palace",
+          "phonetic": "/palace/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Palace - chủ đề Danh lam thắng cảnh",
+          "hint": "Tiếng Anh 5 - Unit 19",
+          "exampleEn": "We are talking about palace.",
+          "exampleVi": "Chúng mình đang nói về palace.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 19",
+        "ruleVi": "Which place would you like to visit: Trang An or Bai Dinh?",
+        "formula": "Which place would you like to visit: Trang An or Bai Dinh?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 19: 'Which place would you like to visit: Trang An or Bai Dinh?'",
+            "options": [
+              "pagoda",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about danh lam thắng cảnh in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt pagoda ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về danh lam thắng cảnh trong môn tiếng Anh.",
+        "situationalTopic": "Danh lam thắng cảnh",
+        "dialogueTitle": "Getting Started: Places of interest",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Danh lam thắng cảnh.",
+        "dialogueLines": [
+          {
+            "id": "g5_u19_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about places of interest.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về danh lam thắng cảnh nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u19_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u19_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Which place would you like to visit: Trang An or Bai Dinh?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u19_d4",
+            "speaker": "Tony",
+            "sentenceEn": "Sure!",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about danh lam thắng cảnh every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về danh lam thắng cảnh mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Danh lam thắng cảnh",
+        "transcript": "Good morning class. Today we explore our lesson on Places of interest. Please listen and note down the key ideas about pagoda.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Places of interest",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Places of interest",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about danh lam thắng cảnh. Many students find that pagoda is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về danh lam thắng cảnh.",
+        "questions": [
+          {
+            "id": "g5_u19_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about places of interest today",
+        "meaningVi": "Hôm nay chúng mình đang học về danh lam thắng cảnh.",
+        "items": [
+          {
+            "id": "g5_u19_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Places",
+              "today"
+            ],
+            "correctSentence": "We are learning about Places today",
+            "meaningVi": "Hôm nay chúng mình học về Places.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g5_u20",
+      "grade": 5,
+      "unit": 20,
+      "unitTitle": "Unit 20: Our summer holiday",
+      "unitNameVi": "Kỳ nghỉ hè của chúng mình",
+      "theme": "Community & Life Skills",
+      "semester": 2,
+      "bookPages": "Trang 120 – 125",
+      "vocabularies": [
+        {
+          "id": "g5_u20_01",
+          "word": "holiday",
+          "phonetic": "/holiday/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Holiday - chủ đề Kỳ nghỉ hè của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 20",
+          "exampleEn": "We are talking about holiday.",
+          "exampleVi": "Chúng mình đang nói về holiday.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u20_02",
+          "word": "beach",
+          "phonetic": "/beach/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Beach - chủ đề Kỳ nghỉ hè của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 20",
+          "exampleEn": "We are talking about beach.",
+          "exampleVi": "Chúng mình đang nói về beach.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u20_03",
+          "word": "resort",
+          "phonetic": "/resort/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Resort - chủ đề Kỳ nghỉ hè của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 20",
+          "exampleEn": "We are talking about resort.",
+          "exampleVi": "Chúng mình đang nói về resort.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u20_04",
+          "word": "seafood",
+          "phonetic": "/seafood/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Seafood - chủ đề Kỳ nghỉ hè của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 20",
+          "exampleEn": "We are talking about seafood.",
+          "exampleVi": "Chúng mình đang nói về seafood.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u20_05",
+          "word": "swimming",
+          "phonetic": "/swimming/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Swimming - chủ đề Kỳ nghỉ hè của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 20",
+          "exampleEn": "We are talking about swimming.",
+          "exampleVi": "Chúng mình đang nói về swimming.",
+          "emoji": "🌟"
+        },
+        {
+          "id": "g5_u20_06",
+          "word": "castle",
+          "phonetic": "/castle/",
+          "wordType": "Từ vựng trọng tâm",
+          "meaning": "Castle - chủ đề Kỳ nghỉ hè của chúng mình",
+          "hint": "Tiếng Anh 5 - Unit 20",
+          "exampleEn": "We are talking about castle.",
+          "exampleVi": "Chúng mình đang nói về castle.",
+          "emoji": "🌟"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu trọng tâm Unit 20",
+        "ruleVi": "Where did you go on holiday? - I went to Ha Long Bay.",
+        "formula": "Where did you go on holiday?",
+        "quickTip": "Áp dụng cấu trúc câu chuẩn xác theo ngữ cảnh giao tiếp thực tế.",
+        "quiz": [
+          {
+            "question": "Choose the best answer for Unit 20: 'Where did you go on holiday?'",
+            "options": [
+              "I went to Ha Long Bay.",
+              "Yes, I am",
+              "No, I didn't",
+              "It is 9 o'clock"
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng câu trả lời mẫu chuẩn SGK."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/e/ và /æ/",
+        "title": "Ngữ âm chuẩn bản ngữ",
+        "sound1": {
+          "symbol": "/e/",
+          "name": "Nguyên âm /e/",
+          "words": [
+            "pen",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/æ/",
+          "name": "Nguyên âm /æ/",
+          "words": [
+            "cat",
+            "bag"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cat",
+            "correctSound": "/æ/",
+            "options": [
+              "/e/",
+              "/æ/"
+            ],
+            "meaningVi": "Con mèo"
+          }
+        ],
+        "tongueTwister": "Ten red pens are on the desk."
+      },
+      "speaking": {
+        "targetSentence": "We enjoy learning about kỳ nghỉ hè của chúng mình in English.",
+        "phonetic": "/wiː ɪnˈdʒɔɪ ˈlɜːnɪŋ əˈbaʊt holiday ɪn ˈɪŋɡlɪʃ/",
+        "meaningVi": "Chúng mình rất thích học về kỳ nghỉ hè của chúng mình trong môn tiếng Anh.",
+        "situationalTopic": "Kỳ nghỉ hè của chúng mình",
+        "dialogueTitle": "Getting Started: Our summer holiday",
+        "dialogueContext": "Các bạn học sinh cùng trao đổi và phỏng vấn nhau về Kỳ nghỉ hè của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g5_u20_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Tony. Let's talk about our summer holiday.",
+            "phonetic": "/həˈləʊ ˈtəʊni lets tɔːk əˈbaʊt/",
+            "meaningVi": "Chào Tony. Chúng mình cùng nói về kỳ nghỉ hè của chúng mình nhé.",
+            "tipsVi": "Mở đầu tự nhiên."
+          },
+          {
+            "id": "g5_u20_d2",
+            "speaker": "Tony",
+            "sentenceEn": "That's a great idea! I'm ready.",
+            "phonetic": "/ðæts ə ɡreɪt aɪˈdɪə aɪm ˈredi/",
+            "meaningVi": "Ý kiến hay đó! Mình đã sẵn sàng.",
+            "tipsVi": "Hào hứng đón nhận."
+          },
+          {
+            "id": "g5_u20_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Where did you go on holiday?",
+            "phonetic": "/.../",
+            "meaningVi": "Hỏi câu trọng tâm.",
+            "tipsVi": "Phát âm rõ ràng."
+          },
+          {
+            "id": "g5_u20_d4",
+            "speaker": "Tony",
+            "sentenceEn": "I went to Ha Long Bay.",
+            "phonetic": "/.../",
+            "meaningVi": "Đáp lại chuẩn xác.",
+            "tipsVi": "Tự tin và chuẩn ngữ điệu."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Practice speaking about kỳ nghỉ hè của chúng mình every day.",
+            "phonetic": "/.../",
+            "meaningVi": "Luyện tập nói về kỳ nghỉ hè của chúng mình mỗi ngày."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Bài nghe chủ đề: Kỳ nghỉ hè của chúng mình",
+        "transcript": "Good morning class. Today we explore our lesson on Our summer holiday. Please listen and note down the key ideas about holiday.",
+        "question": "What is the main topic of today's lesson?",
+        "options": [
+          "Our summer holiday",
+          "Maths lesson",
+          "Art lesson",
+          "Sports day"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "Reading: Our summer holiday",
+        "passage": "Learning English helps us connect with friends around the world. In this unit, we learn about kỳ nghỉ hè của chúng mình. Many students find that holiday is very interesting and practical in daily life.",
+        "translation": "Học tiếng Anh giúp chúng mình kết nối với bạn bè khắp nơi trên thế giới. Trong bài học này, chúng mình học về kỳ nghỉ hè của chúng mình.",
+        "questions": [
+          {
+            "id": "g5_u20_r1",
+            "type": "multiple_choice",
+            "question": "What helps students connect with friends around the world?",
+            "options": [
+              "Learning English",
+              "Playing games",
+              "Sleeping late",
+              "Watching television"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn 1 nêu rõ: 'Learning English helps us connect with friends around the world.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "We are learning about our summer holiday today",
+        "meaningVi": "Hôm nay chúng mình đang học về kỳ nghỉ hè của chúng mình.",
+        "items": [
+          {
+            "id": "g5_u20_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "We",
+              "are",
+              "learning",
+              "about",
+              "Our",
+              "today"
+            ],
+            "correctSentence": "We are learning about Our today",
+            "meaningVi": "Hôm nay chúng mình học về Our.",
+            "hint": "Bắt đầu bằng 'We are...'"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -37,13 +37,9 @@ describe('multiGradeCurriculum catalog and integrity', () => {
     expect(totalUnits).toBe(170);
   });
 
-  it('should mark Grade 6 as interactiveAvailable = true and other grades false', () => {
-    const grade6 = multiGradeCurriculum.grades.find((g) => g.grade === 6);
-    expect(grade6.interactiveAvailable).toBe(true);
-
-    const otherGrades = multiGradeCurriculum.grades.filter((g) => g.grade !== 6);
-    for (const g of otherGrades) {
-      expect(g.interactiveAvailable).toBe(false);
+  it('should mark all 12 grades as interactiveAvailable = true', () => {
+    for (const g of multiGradeCurriculum.grades) {
+      expect(g.interactiveAvailable).toBe(true);
     }
   });
 

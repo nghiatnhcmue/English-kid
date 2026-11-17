@@ -567,6 +567,7 @@ export default function HomePage() {
               {filteredCurriculumUnits.map((u) => {
                 const targetPhonicsVal = u.targetPhonics || u.phonics;
                 const bookToOpen = u.bookId || gradeData.bookIds?.[0] || `sgk-${activeGrade}`;
+                const targetUnitId = u.unitId || `g${activeGrade}_u${u.unit}`;
 
                 return (
                   <div
@@ -664,22 +665,58 @@ export default function HomePage() {
                       )}
                     </div>
 
-                    {/* Nút Direct Mở SGK điện tử */}
-                    <div className="flex items-center justify-between pt-3 border-t border-banana-soft/60 mt-2">
-                      <span className="text-xs font-bold text-ink-soft">
-                        {gradeData.title.split('–')[0]}
-                      </span>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setSelectedBookForReader(bookToOpen);
-                          setShowPdfReaderModal(true);
-                          playSfx('click');
-                        }}
-                        className="inline-flex items-center gap-1.5 rounded-2xl bg-peach px-4 py-2 text-xs sm:text-sm font-black text-white shadow-[0_3px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all cursor-pointer"
-                      >
-                        <span>📖 Mở SGK điện tử</span>
-                      </button>
+                    {/* Nút hành động học tập & Mở SGK */}
+                    <div className="flex flex-col gap-2.5 pt-3 border-t border-banana-soft/60 mt-2">
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        <Link
+                          to={`/unit/${targetUnitId}`}
+                          onClick={() => playSfx('click')}
+                          className="inline-flex flex-1 min-w-[120px] items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all text-center"
+                        >
+                          <span>🚀 Vào bài học</span>
+                        </Link>
+                        <Link
+                          to={`/speaking?unit=${targetUnitId}`}
+                          onClick={() => playSfx('click')}
+                          className="inline-flex items-center gap-1 rounded-xl bg-banana px-2.5 py-2 text-xs font-black text-ink shadow-[0_2px_0_var(--color-banana-dark)] hover:bg-banana-dark hover:text-white transition-all"
+                          title="Luyện nói AI & Phân vai"
+                        >
+                          <span>🎙️ Nói AI</span>
+                        </Link>
+                        <Link
+                          to={`/grammar?unit=${targetUnitId}`}
+                          onClick={() => playSfx('click')}
+                          className="inline-flex items-center gap-1 rounded-xl bg-sky-100 text-sky-900 border border-sky-300 px-2.5 py-2 text-xs font-black hover:bg-sky-200 transition-all"
+                          title="Ngữ pháp & Trắc nghiệm"
+                        >
+                          <span>📐 Ngữ pháp</span>
+                        </Link>
+                        <Link
+                          to={`/reading?unit=${targetUnitId}`}
+                          onClick={() => playSfx('click')}
+                          className="inline-flex items-center gap-1 rounded-xl bg-emerald-100 text-emerald-900 border border-emerald-300 px-2.5 py-2 text-xs font-black hover:bg-emerald-200 transition-all"
+                          title="Đọc hiểu & Dịch bài"
+                        >
+                          <span>📖 Đọc hiểu</span>
+                        </Link>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-1">
+                        <span className="text-[11px] font-bold text-ink-soft">
+                          {gradeData.title.split('–')[0]}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedBookForReader(bookToOpen);
+                            setShowPdfReaderModal(true);
+                            playSfx('click');
+                          }}
+                          className="inline-flex items-center gap-1 text-xs font-black text-peach-dark hover:underline cursor-pointer"
+                        >
+                          <span>📖 Mở SGK điện tử →</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 );

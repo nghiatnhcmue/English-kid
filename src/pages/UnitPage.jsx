@@ -73,7 +73,7 @@ export default function UnitPage() {
           <div>
             <div className="flex items-center gap-2">
               <span className="rounded-full bg-cream px-2.5 py-0.5 text-xs font-black text-ink-soft">
-                SGK Tiếng Anh 6 Global Success · {unit.bookVolume === 2 ? 'Tập 2' : 'Tập 1'}
+                {unit.grade ? `SGK Tiếng Anh ${unit.grade} Global Success` : 'SGK Tiếng Anh 6 Global Success'} · {unit.semester === 2 || unit.bookVolume === 2 ? 'Học kỳ 2' : 'Học kỳ 1'}
               </span>
               <strong className="text-sm sm:text-base font-black text-peach-dark">
                 {unit.bookPages || 'Trang 6 – 15'}

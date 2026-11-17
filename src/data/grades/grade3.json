@@ -1,0 +1,4425 @@
+{
+  "grade": 3,
+  "gradeName": "Lớp 3",
+  "level": "primary",
+  "levelName": "Tiểu học",
+  "title": "SGK Tiếng Anh 3 – Global Success",
+  "totalUnits": 20,
+  "interactiveAvailable": true,
+  "interactiveNote": "Hệ thống trạm học tương tác 7 kỹ năng chuẩn SGK Lớp 3",
+  "units": [
+    {
+      "unitId": "g3_u1",
+      "grade": 3,
+      "unit": 1,
+      "unitTitle": "Unit 1: Hello",
+      "unitNameVi": "Xin chào",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 6 – 11",
+      "vocabularies": [
+        {
+          "id": "g3_u1_01",
+          "word": "hello",
+          "phonetic": "/hello/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Hello trong tiếng Anh",
+          "hint": "Chủ đề: Xin chào",
+          "exampleEn": "This is hello.",
+          "exampleVi": "Đây là hello.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u1_02",
+          "word": "hi",
+          "phonetic": "/hi/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Hi trong tiếng Anh",
+          "hint": "Chủ đề: Xin chào",
+          "exampleEn": "This is hi.",
+          "exampleVi": "Đây là hi.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u1_03",
+          "word": "fine",
+          "phonetic": "/fine/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Fine trong tiếng Anh",
+          "hint": "Chủ đề: Xin chào",
+          "exampleEn": "This is fine.",
+          "exampleVi": "Đây là fine.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u1_04",
+          "word": "thank you",
+          "phonetic": "/thank you/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Thank you trong tiếng Anh",
+          "hint": "Chủ đề: Xin chào",
+          "exampleEn": "This is thank you.",
+          "exampleVi": "Đây là thank you.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 1: Hello",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Hello/Hi, I'm... / How are you?",
+        "formula": "Hello/Hi, I'm... / How are you?",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "hello",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'hello' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our hello at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə hello æt skuːl/",
+        "meaningVi": "Đây là hello của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Xin chào",
+        "dialogueTitle": "Lesson 1: Hello",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Xin chào.",
+        "dialogueLines": [
+          {
+            "id": "g3_u1_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u1_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u1_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the hello.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə hello/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào hello này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u1_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new hello.",
+            "phonetic": "/aɪ hæv ə njuː hello/",
+            "meaningVi": "Mình có một hello mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Xin chào",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about hello.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Hello",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Hello",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about hello.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u1_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new hello",
+        "meaningVi": "Đây là hello mới của mình.",
+        "items": [
+          {
+            "id": "g3_u1_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "hello"
+            ],
+            "correctSentence": "This is my new hello",
+            "meaningVi": "Đây là hello mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u2",
+      "grade": 3,
+      "unit": 2,
+      "unitTitle": "Unit 2: Our names",
+      "unitNameVi": "Tên của chúng mình",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 12 – 17",
+      "vocabularies": [
+        {
+          "id": "g3_u2_01",
+          "word": "name",
+          "phonetic": "/name/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Name trong tiếng Anh",
+          "hint": "Chủ đề: Tên của chúng mình",
+          "exampleEn": "This is name.",
+          "exampleVi": "Đây là name.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u2_02",
+          "word": "spell",
+          "phonetic": "/spell/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Spell trong tiếng Anh",
+          "hint": "Chủ đề: Tên của chúng mình",
+          "exampleEn": "This is spell.",
+          "exampleVi": "Đây là spell.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u2_03",
+          "word": "what",
+          "phonetic": "/what/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "What trong tiếng Anh",
+          "hint": "Chủ đề: Tên của chúng mình",
+          "exampleEn": "This is what.",
+          "exampleVi": "Đây là what.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u2_04",
+          "word": "how",
+          "phonetic": "/how/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "How trong tiếng Anh",
+          "hint": "Chủ đề: Tên của chúng mình",
+          "exampleEn": "This is how.",
+          "exampleVi": "Đây là how.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 2: What's your name? - My name is...",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What's your name? - My name is...",
+        "formula": "What's your name? - My name is...",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "name",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'name' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our name at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə name æt skuːl/",
+        "meaningVi": "Đây là name của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Tên của chúng mình",
+        "dialogueTitle": "Lesson 1: Our names",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Tên của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u2_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u2_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u2_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the name.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə name/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào name này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u2_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new name.",
+            "phonetic": "/aɪ hæv ə njuː name/",
+            "meaningVi": "Mình có một name mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Tên của chúng mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about name.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Name",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Our names",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about name.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u2_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new name",
+        "meaningVi": "Đây là name mới của mình.",
+        "items": [
+          {
+            "id": "g3_u2_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "name"
+            ],
+            "correctSentence": "This is my new name",
+            "meaningVi": "Đây là name mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u3",
+      "grade": 3,
+      "unit": 3,
+      "unitTitle": "Unit 3: Our friends",
+      "unitNameVi": "Bạn bè của chúng mình",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 18 – 23",
+      "vocabularies": [
+        {
+          "id": "g3_u3_01",
+          "word": "friend",
+          "phonetic": "/friend/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Friend trong tiếng Anh",
+          "hint": "Chủ đề: Bạn bè của chúng mình",
+          "exampleEn": "This is friend.",
+          "exampleVi": "Đây là friend.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u3_02",
+          "word": "this",
+          "phonetic": "/this/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "This trong tiếng Anh",
+          "hint": "Chủ đề: Bạn bè của chúng mình",
+          "exampleEn": "This is this.",
+          "exampleVi": "Đây là this.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u3_03",
+          "word": "that",
+          "phonetic": "/that/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "That trong tiếng Anh",
+          "hint": "Chủ đề: Bạn bè của chúng mình",
+          "exampleEn": "This is that.",
+          "exampleVi": "Đây là that.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u3_04",
+          "word": "yes",
+          "phonetic": "/yes/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Yes trong tiếng Anh",
+          "hint": "Chủ đề: Bạn bè của chúng mình",
+          "exampleEn": "This is yes.",
+          "exampleVi": "Đây là yes.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u3_05",
+          "word": "no",
+          "phonetic": "/no/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "No trong tiếng Anh",
+          "hint": "Chủ đề: Bạn bè của chúng mình",
+          "exampleEn": "This is no.",
+          "exampleVi": "Đây là no.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 3: This is... ",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: This is... / Is this...? - Yes, it is.",
+        "formula": "This is... / Is this...? - Yes, it is.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "friend",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'friend' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our friend at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə friend æt skuːl/",
+        "meaningVi": "Đây là friend của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Bạn bè của chúng mình",
+        "dialogueTitle": "Lesson 1: Our friends",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Bạn bè của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u3_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u3_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u3_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the friend.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə friend/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào friend này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u3_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new friend.",
+            "phonetic": "/aɪ hæv ə njuː friend/",
+            "meaningVi": "Mình có một friend mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Bạn bè của chúng mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about friend.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Friend",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Our friends",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about friend.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u3_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new friend",
+        "meaningVi": "Đây là friend mới của mình.",
+        "items": [
+          {
+            "id": "g3_u3_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "friend"
+            ],
+            "correctSentence": "This is my new friend",
+            "meaningVi": "Đây là friend mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u4",
+      "grade": 3,
+      "unit": 4,
+      "unitTitle": "Unit 4: Our bodies",
+      "unitNameVi": "Cơ thể của chúng mình",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 24 – 29",
+      "vocabularies": [
+        {
+          "id": "g3_u4_01",
+          "word": "eye",
+          "phonetic": "/eye/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Eye trong tiếng Anh",
+          "hint": "Chủ đề: Cơ thể của chúng mình",
+          "exampleEn": "This is eye.",
+          "exampleVi": "Đây là eye.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u4_02",
+          "word": "ear",
+          "phonetic": "/ear/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Ear trong tiếng Anh",
+          "hint": "Chủ đề: Cơ thể của chúng mình",
+          "exampleEn": "This is ear.",
+          "exampleVi": "Đây là ear.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u4_03",
+          "word": "nose",
+          "phonetic": "/nose/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Nose trong tiếng Anh",
+          "hint": "Chủ đề: Cơ thể của chúng mình",
+          "exampleEn": "This is nose.",
+          "exampleVi": "Đây là nose.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u4_04",
+          "word": "mouth",
+          "phonetic": "/mouth/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Mouth trong tiếng Anh",
+          "hint": "Chủ đề: Cơ thể của chúng mình",
+          "exampleEn": "This is mouth.",
+          "exampleVi": "Đây là mouth.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u4_05",
+          "word": "face",
+          "phonetic": "/face/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Face trong tiếng Anh",
+          "hint": "Chủ đề: Cơ thể của chúng mình",
+          "exampleEn": "This is face.",
+          "exampleVi": "Đây là face.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u4_06",
+          "word": "hand",
+          "phonetic": "/hand/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Hand trong tiếng Anh",
+          "hint": "Chủ đề: Cơ thể của chúng mình",
+          "exampleEn": "This is hand.",
+          "exampleVi": "Đây là hand.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 4: Touch your... ",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Touch your... / Open your...",
+        "formula": "Touch your... / Open your...",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "eye",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'eye' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our eye at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə eye æt skuːl/",
+        "meaningVi": "Đây là eye của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Cơ thể của chúng mình",
+        "dialogueTitle": "Lesson 1: Our bodies",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Cơ thể của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u4_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u4_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u4_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the eye.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə eye/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào eye này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u4_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new eye.",
+            "phonetic": "/aɪ hæv ə njuː eye/",
+            "meaningVi": "Mình có một eye mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Cơ thể của chúng mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about eye.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Eye",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Our bodies",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about eye.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u4_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new eye",
+        "meaningVi": "Đây là eye mới của mình.",
+        "items": [
+          {
+            "id": "g3_u4_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "eye"
+            ],
+            "correctSentence": "This is my new eye",
+            "meaningVi": "Đây là eye mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u5",
+      "grade": 3,
+      "unit": 5,
+      "unitTitle": "Unit 5: My hobbies",
+      "unitNameVi": "Sở thích của mình",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 30 – 35",
+      "vocabularies": [
+        {
+          "id": "g3_u5_01",
+          "word": "singing",
+          "phonetic": "/singing/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Singing trong tiếng Anh",
+          "hint": "Chủ đề: Sở thích của mình",
+          "exampleEn": "This is singing.",
+          "exampleVi": "Đây là singing.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u5_02",
+          "word": "dancing",
+          "phonetic": "/dancing/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Dancing trong tiếng Anh",
+          "hint": "Chủ đề: Sở thích của mình",
+          "exampleEn": "This is dancing.",
+          "exampleVi": "Đây là dancing.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u5_03",
+          "word": "drawing",
+          "phonetic": "/drawing/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Drawing trong tiếng Anh",
+          "hint": "Chủ đề: Sở thích của mình",
+          "exampleEn": "This is drawing.",
+          "exampleVi": "Đây là drawing.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u5_04",
+          "word": "swimming",
+          "phonetic": "/swimming/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Swimming trong tiếng Anh",
+          "hint": "Chủ đề: Sở thích của mình",
+          "exampleEn": "This is swimming.",
+          "exampleVi": "Đây là swimming.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 5: What's your hobby? - I like...",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What's your hobby? - I like...",
+        "formula": "What's your hobby? - I like...",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "singing",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'singing' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our singing at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə singing æt skuːl/",
+        "meaningVi": "Đây là singing của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Sở thích của mình",
+        "dialogueTitle": "Lesson 1: My hobbies",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Sở thích của mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u5_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u5_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u5_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the singing.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə singing/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào singing này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u5_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new singing.",
+            "phonetic": "/aɪ hæv ə njuː singing/",
+            "meaningVi": "Mình có một singing mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Sở thích của mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about singing.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Singing",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite My hobbies",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about singing.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u5_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new singing",
+        "meaningVi": "Đây là singing mới của mình.",
+        "items": [
+          {
+            "id": "g3_u5_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "singing"
+            ],
+            "correctSentence": "This is my new singing",
+            "meaningVi": "Đây là singing mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u6",
+      "grade": 3,
+      "unit": 6,
+      "unitTitle": "Unit 6: Our school",
+      "unitNameVi": "Trường học của chúng mình",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 40 – 45",
+      "vocabularies": [
+        {
+          "id": "g3_u6_01",
+          "word": "school",
+          "phonetic": "/school/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "School trong tiếng Anh",
+          "hint": "Chủ đề: Trường học của chúng mình",
+          "exampleEn": "This is school.",
+          "exampleVi": "Đây là school.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u6_02",
+          "word": "classroom",
+          "phonetic": "/classroom/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Classroom trong tiếng Anh",
+          "hint": "Chủ đề: Trường học của chúng mình",
+          "exampleEn": "This is classroom.",
+          "exampleVi": "Đây là classroom.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u6_03",
+          "word": "library",
+          "phonetic": "/library/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Library trong tiếng Anh",
+          "hint": "Chủ đề: Trường học của chúng mình",
+          "exampleEn": "This is library.",
+          "exampleVi": "Đây là library.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u6_04",
+          "word": "playground",
+          "phonetic": "/playground/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Playground trong tiếng Anh",
+          "hint": "Chủ đề: Trường học của chúng mình",
+          "exampleEn": "This is playground.",
+          "exampleVi": "Đây là playground.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u6_05",
+          "word": "gym",
+          "phonetic": "/gym/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Gym trong tiếng Anh",
+          "hint": "Chủ đề: Trường học của chúng mình",
+          "exampleEn": "This is gym.",
+          "exampleVi": "Đây là gym.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 6: Is that your school? - Yes, it is.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Is that your school? - Yes, it is.",
+        "formula": "Is that your school? - Yes, it is.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "school",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'school' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our school at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə school æt skuːl/",
+        "meaningVi": "Đây là school của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Trường học của chúng mình",
+        "dialogueTitle": "Lesson 1: Our school",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Trường học của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u6_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u6_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u6_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the school.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə school/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào school này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u6_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new school.",
+            "phonetic": "/aɪ hæv ə njuː school/",
+            "meaningVi": "Mình có một school mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Trường học của chúng mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about school.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "School",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Our school",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about school.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u6_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new school",
+        "meaningVi": "Đây là school mới của mình.",
+        "items": [
+          {
+            "id": "g3_u6_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "school"
+            ],
+            "correctSentence": "This is my new school",
+            "meaningVi": "Đây là school mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u7",
+      "grade": 3,
+      "unit": 7,
+      "unitTitle": "Unit 7: Classroom instructions",
+      "unitNameVi": "Lời chỉ dẫn trong lớp học",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 46 – 51",
+      "vocabularies": [
+        {
+          "id": "g3_u7_01",
+          "word": "open",
+          "phonetic": "/open/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Open trong tiếng Anh",
+          "hint": "Chủ đề: Lời chỉ dẫn trong lớp học",
+          "exampleEn": "This is open.",
+          "exampleVi": "Đây là open.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u7_02",
+          "word": "close",
+          "phonetic": "/close/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Close trong tiếng Anh",
+          "hint": "Chủ đề: Lời chỉ dẫn trong lớp học",
+          "exampleEn": "This is close.",
+          "exampleVi": "Đây là close.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u7_03",
+          "word": "stand up",
+          "phonetic": "/stand up/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Stand up trong tiếng Anh",
+          "hint": "Chủ đề: Lời chỉ dẫn trong lớp học",
+          "exampleEn": "This is stand up.",
+          "exampleVi": "Đây là stand up.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u7_04",
+          "word": "sit down",
+          "phonetic": "/sit down/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Sit down trong tiếng Anh",
+          "hint": "Chủ đề: Lời chỉ dẫn trong lớp học",
+          "exampleEn": "This is sit down.",
+          "exampleVi": "Đây là sit down.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u7_05",
+          "word": "speak",
+          "phonetic": "/speak/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Speak trong tiếng Anh",
+          "hint": "Chủ đề: Lời chỉ dẫn trong lớp học",
+          "exampleEn": "This is speak.",
+          "exampleVi": "Đây là speak.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 7: Open your book. ",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Open your book. / May I come in?",
+        "formula": "Open your book. / May I come in?",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "open",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'open' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our open at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə open æt skuːl/",
+        "meaningVi": "Đây là open của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Lời chỉ dẫn trong lớp học",
+        "dialogueTitle": "Lesson 1: Classroom instructions",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Lời chỉ dẫn trong lớp học.",
+        "dialogueLines": [
+          {
+            "id": "g3_u7_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u7_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u7_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the open.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə open/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào open này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u7_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new open.",
+            "phonetic": "/aɪ hæv ə njuː open/",
+            "meaningVi": "Mình có một open mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Lời chỉ dẫn trong lớp học",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about open.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Open",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Classroom instructions",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about open.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u7_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new open",
+        "meaningVi": "Đây là open mới của mình.",
+        "items": [
+          {
+            "id": "g3_u7_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "open"
+            ],
+            "correctSentence": "This is my new open",
+            "meaningVi": "Đây là open mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u8",
+      "grade": 3,
+      "unit": 8,
+      "unitTitle": "Unit 8: My school things",
+      "unitNameVi": "Đồ dùng học tập của mình",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 52 – 57",
+      "vocabularies": [
+        {
+          "id": "g3_u8_01",
+          "word": "pen",
+          "phonetic": "/pen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Pen trong tiếng Anh",
+          "hint": "Chủ đề: Đồ dùng học tập của mình",
+          "exampleEn": "This is pen.",
+          "exampleVi": "Đây là pen.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u8_02",
+          "word": "pencil",
+          "phonetic": "/pencil/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Pencil trong tiếng Anh",
+          "hint": "Chủ đề: Đồ dùng học tập của mình",
+          "exampleEn": "This is pencil.",
+          "exampleVi": "Đây là pencil.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u8_03",
+          "word": "ruler",
+          "phonetic": "/ruler/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Ruler trong tiếng Anh",
+          "hint": "Chủ đề: Đồ dùng học tập của mình",
+          "exampleEn": "This is ruler.",
+          "exampleVi": "Đây là ruler.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u8_04",
+          "word": "rubber",
+          "phonetic": "/rubber/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Rubber trong tiếng Anh",
+          "hint": "Chủ đề: Đồ dùng học tập của mình",
+          "exampleEn": "This is rubber.",
+          "exampleVi": "Đây là rubber.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u8_05",
+          "word": "pencil case",
+          "phonetic": "/pencil case/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Pencil case trong tiếng Anh",
+          "hint": "Chủ đề: Đồ dùng học tập của mình",
+          "exampleEn": "This is pencil case.",
+          "exampleVi": "Đây là pencil case.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 8: I have a... ",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: I have a... / Do you have a...?",
+        "formula": "I have a... / Do you have a...?",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "pen",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'pen' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our pen at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə pen æt skuːl/",
+        "meaningVi": "Đây là pen của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Đồ dùng học tập của mình",
+        "dialogueTitle": "Lesson 1: My school things",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Đồ dùng học tập của mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u8_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u8_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u8_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the pen.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə pen/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào pen này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u8_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new pen.",
+            "phonetic": "/aɪ hæv ə njuː pen/",
+            "meaningVi": "Mình có một pen mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Đồ dùng học tập của mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about pen.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Pen",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite My school things",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about pen.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u8_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new pen",
+        "meaningVi": "Đây là pen mới của mình.",
+        "items": [
+          {
+            "id": "g3_u8_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "pen"
+            ],
+            "correctSentence": "This is my new pen",
+            "meaningVi": "Đây là pen mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u9",
+      "grade": 3,
+      "unit": 9,
+      "unitTitle": "Unit 9: Colours",
+      "unitNameVi": "Màu sắc",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 58 – 63",
+      "vocabularies": [
+        {
+          "id": "g3_u9_01",
+          "word": "red",
+          "phonetic": "/red/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Red trong tiếng Anh",
+          "hint": "Chủ đề: Màu sắc",
+          "exampleEn": "This is red.",
+          "exampleVi": "Đây là red.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u9_02",
+          "word": "blue",
+          "phonetic": "/blue/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Blue trong tiếng Anh",
+          "hint": "Chủ đề: Màu sắc",
+          "exampleEn": "This is blue.",
+          "exampleVi": "Đây là blue.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u9_03",
+          "word": "yellow",
+          "phonetic": "/yellow/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Yellow trong tiếng Anh",
+          "hint": "Chủ đề: Màu sắc",
+          "exampleEn": "This is yellow.",
+          "exampleVi": "Đây là yellow.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u9_04",
+          "word": "green",
+          "phonetic": "/green/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Green trong tiếng Anh",
+          "hint": "Chủ đề: Màu sắc",
+          "exampleEn": "This is green.",
+          "exampleVi": "Đây là green.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u9_05",
+          "word": "black",
+          "phonetic": "/black/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Black trong tiếng Anh",
+          "hint": "Chủ đề: Màu sắc",
+          "exampleEn": "This is black.",
+          "exampleVi": "Đây là black.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u9_06",
+          "word": "white",
+          "phonetic": "/white/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "White trong tiếng Anh",
+          "hint": "Chủ đề: Màu sắc",
+          "exampleEn": "This is white.",
+          "exampleVi": "Đây là white.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 9: What colour is it? - It's...",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What colour is it? - It's...",
+        "formula": "What colour is it? - It's...",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "red",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'red' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our red at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə red æt skuːl/",
+        "meaningVi": "Đây là red của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Màu sắc",
+        "dialogueTitle": "Lesson 1: Colours",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Màu sắc.",
+        "dialogueLines": [
+          {
+            "id": "g3_u9_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u9_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u9_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the red.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə red/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào red này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u9_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new red.",
+            "phonetic": "/aɪ hæv ə njuː red/",
+            "meaningVi": "Mình có một red mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Màu sắc",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about red.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Red",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Colours",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about red.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u9_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new red",
+        "meaningVi": "Đây là red mới của mình.",
+        "items": [
+          {
+            "id": "g3_u9_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "red"
+            ],
+            "correctSentence": "This is my new red",
+            "meaningVi": "Đây là red mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u10",
+      "grade": 3,
+      "unit": 10,
+      "unitTitle": "Unit 10: Break time activities",
+      "unitNameVi": "Hoạt động giờ ra chơi",
+      "theme": "Me and My World",
+      "semester": 1,
+      "bookPages": "Trang 64 – 69",
+      "vocabularies": [
+        {
+          "id": "g3_u10_01",
+          "word": "play",
+          "phonetic": "/play/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Play trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động giờ ra chơi",
+          "exampleEn": "This is play.",
+          "exampleVi": "Đây là play.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u10_02",
+          "word": "football",
+          "phonetic": "/football/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Football trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động giờ ra chơi",
+          "exampleEn": "This is football.",
+          "exampleVi": "Đây là football.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u10_03",
+          "word": "basketball",
+          "phonetic": "/basketball/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Basketball trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động giờ ra chơi",
+          "exampleEn": "This is basketball.",
+          "exampleVi": "Đây là basketball.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u10_04",
+          "word": "chess",
+          "phonetic": "/chess/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Chess trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động giờ ra chơi",
+          "exampleEn": "This is chess.",
+          "exampleVi": "Đây là chess.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u10_05",
+          "word": "badminton",
+          "phonetic": "/badminton/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Badminton trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động giờ ra chơi",
+          "exampleEn": "This is badminton.",
+          "exampleVi": "Đây là badminton.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 10: What do you do at break time?",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What do you do at break time?",
+        "formula": "What do you do at break time?",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "play",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'play' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our play at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə play æt skuːl/",
+        "meaningVi": "Đây là play của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Hoạt động giờ ra chơi",
+        "dialogueTitle": "Lesson 1: Break time activities",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Hoạt động giờ ra chơi.",
+        "dialogueLines": [
+          {
+            "id": "g3_u10_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u10_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u10_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the play.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə play/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào play này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u10_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new play.",
+            "phonetic": "/aɪ hæv ə njuː play/",
+            "meaningVi": "Mình có một play mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Hoạt động giờ ra chơi",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about play.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Play",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Break time activities",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about play.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u10_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new play",
+        "meaningVi": "Đây là play mới của mình.",
+        "items": [
+          {
+            "id": "g3_u10_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "play"
+            ],
+            "correctSentence": "This is my new play",
+            "meaningVi": "Đây là play mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u11",
+      "grade": 3,
+      "unit": 11,
+      "unitTitle": "Unit 11: My family",
+      "unitNameVi": "Gia đình của mình",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 6 – 11",
+      "vocabularies": [
+        {
+          "id": "g3_u11_01",
+          "word": "father",
+          "phonetic": "/father/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Father trong tiếng Anh",
+          "hint": "Chủ đề: Gia đình của mình",
+          "exampleEn": "This is father.",
+          "exampleVi": "Đây là father.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u11_02",
+          "word": "mother",
+          "phonetic": "/mother/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Mother trong tiếng Anh",
+          "hint": "Chủ đề: Gia đình của mình",
+          "exampleEn": "This is mother.",
+          "exampleVi": "Đây là mother.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u11_03",
+          "word": "brother",
+          "phonetic": "/brother/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Brother trong tiếng Anh",
+          "hint": "Chủ đề: Gia đình của mình",
+          "exampleEn": "This is brother.",
+          "exampleVi": "Đây là brother.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u11_04",
+          "word": "sister",
+          "phonetic": "/sister/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Sister trong tiếng Anh",
+          "hint": "Chủ đề: Gia đình của mình",
+          "exampleEn": "This is sister.",
+          "exampleVi": "Đây là sister.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u11_05",
+          "word": "grandmother",
+          "phonetic": "/grandmother/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Grandmother trong tiếng Anh",
+          "hint": "Chủ đề: Gia đình của mình",
+          "exampleEn": "This is grandmother.",
+          "exampleVi": "Đây là grandmother.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 11: Who's that? - It's my father",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Who's that? - It's my father/mother.",
+        "formula": "Who's that? - It's my father/mother.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "father",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'father' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our father at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə father æt skuːl/",
+        "meaningVi": "Đây là father của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Gia đình của mình",
+        "dialogueTitle": "Lesson 1: My family",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Gia đình của mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u11_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u11_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u11_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the father.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə father/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào father này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u11_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new father.",
+            "phonetic": "/aɪ hæv ə njuː father/",
+            "meaningVi": "Mình có một father mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Gia đình của mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about father.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Father",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite My family",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about father.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u11_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new father",
+        "meaningVi": "Đây là father mới của mình.",
+        "items": [
+          {
+            "id": "g3_u11_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "father"
+            ],
+            "correctSentence": "This is my new father",
+            "meaningVi": "Đây là father mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u12",
+      "grade": 3,
+      "unit": 12,
+      "unitTitle": "Unit 12: Jobs",
+      "unitNameVi": "Nghề nghiệp",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 12 – 17",
+      "vocabularies": [
+        {
+          "id": "g3_u12_01",
+          "word": "teacher",
+          "phonetic": "/teacher/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Teacher trong tiếng Anh",
+          "hint": "Chủ đề: Nghề nghiệp",
+          "exampleEn": "This is teacher.",
+          "exampleVi": "Đây là teacher.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u12_02",
+          "word": "doctor",
+          "phonetic": "/doctor/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Doctor trong tiếng Anh",
+          "hint": "Chủ đề: Nghề nghiệp",
+          "exampleEn": "This is doctor.",
+          "exampleVi": "Đây là doctor.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u12_03",
+          "word": "nurse",
+          "phonetic": "/nurse/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Nurse trong tiếng Anh",
+          "hint": "Chủ đề: Nghề nghiệp",
+          "exampleEn": "This is nurse.",
+          "exampleVi": "Đây là nurse.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u12_04",
+          "word": "driver",
+          "phonetic": "/driver/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Driver trong tiếng Anh",
+          "hint": "Chủ đề: Nghề nghiệp",
+          "exampleEn": "This is driver.",
+          "exampleVi": "Đây là driver.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u12_05",
+          "word": "worker",
+          "phonetic": "/worker/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Worker trong tiếng Anh",
+          "hint": "Chủ đề: Nghề nghiệp",
+          "exampleEn": "This is worker.",
+          "exampleVi": "Đây là worker.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 12: What's his",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What's his/her job? - He's a teacher.",
+        "formula": "What's his/her job? - He's a teacher.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "teacher",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'teacher' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our teacher at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə teacher æt skuːl/",
+        "meaningVi": "Đây là teacher của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Nghề nghiệp",
+        "dialogueTitle": "Lesson 1: Jobs",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Nghề nghiệp.",
+        "dialogueLines": [
+          {
+            "id": "g3_u12_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u12_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u12_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the teacher.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə teacher/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào teacher này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u12_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new teacher.",
+            "phonetic": "/aɪ hæv ə njuː teacher/",
+            "meaningVi": "Mình có một teacher mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Nghề nghiệp",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about teacher.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Teacher",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Jobs",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about teacher.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u12_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new teacher",
+        "meaningVi": "Đây là teacher mới của mình.",
+        "items": [
+          {
+            "id": "g3_u12_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "teacher"
+            ],
+            "correctSentence": "This is my new teacher",
+            "meaningVi": "Đây là teacher mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u13",
+      "grade": 3,
+      "unit": 13,
+      "unitTitle": "Unit 13: My house",
+      "unitNameVi": "Ngôi nhà của mình",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 18 – 23",
+      "vocabularies": [
+        {
+          "id": "g3_u13_01",
+          "word": "living room",
+          "phonetic": "/living room/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Living room trong tiếng Anh",
+          "hint": "Chủ đề: Ngôi nhà của mình",
+          "exampleEn": "This is living room.",
+          "exampleVi": "Đây là living room.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u13_02",
+          "word": "bedroom",
+          "phonetic": "/bedroom/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bedroom trong tiếng Anh",
+          "hint": "Chủ đề: Ngôi nhà của mình",
+          "exampleEn": "This is bedroom.",
+          "exampleVi": "Đây là bedroom.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u13_03",
+          "word": "kitchen",
+          "phonetic": "/kitchen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Kitchen trong tiếng Anh",
+          "hint": "Chủ đề: Ngôi nhà của mình",
+          "exampleEn": "This is kitchen.",
+          "exampleVi": "Đây là kitchen.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u13_04",
+          "word": "bathroom",
+          "phonetic": "/bathroom/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bathroom trong tiếng Anh",
+          "hint": "Chủ đề: Ngôi nhà của mình",
+          "exampleEn": "This is bathroom.",
+          "exampleVi": "Đây là bathroom.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u13_05",
+          "word": "garden",
+          "phonetic": "/garden/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Garden trong tiếng Anh",
+          "hint": "Chủ đề: Ngôi nhà của mình",
+          "exampleEn": "This is garden.",
+          "exampleVi": "Đây là garden.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 13: Where's the living room? - It's here.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Where's the living room? - It's here.",
+        "formula": "Where's the living room? - It's here.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "living room",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'living room' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our living room at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə living room æt skuːl/",
+        "meaningVi": "Đây là living room của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Ngôi nhà của mình",
+        "dialogueTitle": "Lesson 1: My house",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Ngôi nhà của mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u13_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u13_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u13_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the living room.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə living room/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào living room này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u13_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new living room.",
+            "phonetic": "/aɪ hæv ə njuː living room/",
+            "meaningVi": "Mình có một living room mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Ngôi nhà của mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about living room.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Living room",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite My house",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about living room.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u13_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new living room",
+        "meaningVi": "Đây là living room mới của mình.",
+        "items": [
+          {
+            "id": "g3_u13_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "living room"
+            ],
+            "correctSentence": "This is my new living room",
+            "meaningVi": "Đây là living room mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u14",
+      "grade": 3,
+      "unit": 14,
+      "unitTitle": "Unit 14: My bedroom",
+      "unitNameVi": "Phòng ngủ của mình",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 24 – 29",
+      "vocabularies": [
+        {
+          "id": "g3_u14_01",
+          "word": "bed",
+          "phonetic": "/bed/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bed trong tiếng Anh",
+          "hint": "Chủ đề: Phòng ngủ của mình",
+          "exampleEn": "This is bed.",
+          "exampleVi": "Đây là bed.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u14_02",
+          "word": "desk",
+          "phonetic": "/desk/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Desk trong tiếng Anh",
+          "hint": "Chủ đề: Phòng ngủ của mình",
+          "exampleEn": "This is desk.",
+          "exampleVi": "Đây là desk.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u14_03",
+          "word": "chair",
+          "phonetic": "/chair/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Chair trong tiếng Anh",
+          "hint": "Chủ đề: Phòng ngủ của mình",
+          "exampleEn": "This is chair.",
+          "exampleVi": "Đây là chair.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u14_04",
+          "word": "door",
+          "phonetic": "/door/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Door trong tiếng Anh",
+          "hint": "Chủ đề: Phòng ngủ của mình",
+          "exampleEn": "This is door.",
+          "exampleVi": "Đây là door.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u14_05",
+          "word": "window",
+          "phonetic": "/window/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Window trong tiếng Anh",
+          "hint": "Chủ đề: Phòng ngủ của mình",
+          "exampleEn": "This is window.",
+          "exampleVi": "Đây là window.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 14: There is a bed. ",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: There is a bed. / There are two chairs.",
+        "formula": "There is a bed. / There are two chairs.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "bed",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'bed' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our bed at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə bed æt skuːl/",
+        "meaningVi": "Đây là bed của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Phòng ngủ của mình",
+        "dialogueTitle": "Lesson 1: My bedroom",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Phòng ngủ của mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u14_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u14_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u14_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the bed.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə bed/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào bed này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u14_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new bed.",
+            "phonetic": "/aɪ hæv ə njuː bed/",
+            "meaningVi": "Mình có một bed mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Phòng ngủ của mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about bed.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Bed",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite My bedroom",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about bed.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u14_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new bed",
+        "meaningVi": "Đây là bed mới của mình.",
+        "items": [
+          {
+            "id": "g3_u14_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "bed"
+            ],
+            "correctSentence": "This is my new bed",
+            "meaningVi": "Đây là bed mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u15",
+      "grade": 3,
+      "unit": 15,
+      "unitTitle": "Unit 15: At the dining table",
+      "unitNameVi": "Bên bàn ăn",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 30 – 35",
+      "vocabularies": [
+        {
+          "id": "g3_u15_01",
+          "word": "bread",
+          "phonetic": "/bread/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bread trong tiếng Anh",
+          "hint": "Chủ đề: Bên bàn ăn",
+          "exampleEn": "This is bread.",
+          "exampleVi": "Đây là bread.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u15_02",
+          "word": "egg",
+          "phonetic": "/egg/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Egg trong tiếng Anh",
+          "hint": "Chủ đề: Bên bàn ăn",
+          "exampleEn": "This is egg.",
+          "exampleVi": "Đây là egg.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u15_03",
+          "word": "rice",
+          "phonetic": "/rice/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Rice trong tiếng Anh",
+          "hint": "Chủ đề: Bên bàn ăn",
+          "exampleEn": "This is rice.",
+          "exampleVi": "Đây là rice.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u15_04",
+          "word": "fish",
+          "phonetic": "/fish/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Fish trong tiếng Anh",
+          "hint": "Chủ đề: Bên bàn ăn",
+          "exampleEn": "This is fish.",
+          "exampleVi": "Đây là fish.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u15_05",
+          "word": "milk",
+          "phonetic": "/milk/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Milk trong tiếng Anh",
+          "hint": "Chủ đề: Bên bàn ăn",
+          "exampleEn": "This is milk.",
+          "exampleVi": "Đây là milk.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u15_06",
+          "word": "water",
+          "phonetic": "/water/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Water trong tiếng Anh",
+          "hint": "Chủ đề: Bên bàn ăn",
+          "exampleEn": "This is water.",
+          "exampleVi": "Đây là water.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 15: Would you like some milk? - Yes, please.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Would you like some milk? - Yes, please.",
+        "formula": "Would you like some milk? - Yes, please.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "bread",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'bread' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our bread at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə bread æt skuːl/",
+        "meaningVi": "Đây là bread của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Bên bàn ăn",
+        "dialogueTitle": "Lesson 1: At the dining table",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Bên bàn ăn.",
+        "dialogueLines": [
+          {
+            "id": "g3_u15_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u15_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u15_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the bread.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə bread/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào bread này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u15_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new bread.",
+            "phonetic": "/aɪ hæv ə njuː bread/",
+            "meaningVi": "Mình có một bread mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Bên bàn ăn",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about bread.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Bread",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite At the dining table",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about bread.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u15_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new bread",
+        "meaningVi": "Đây là bread mới của mình.",
+        "items": [
+          {
+            "id": "g3_u15_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "bread"
+            ],
+            "correctSentence": "This is my new bread",
+            "meaningVi": "Đây là bread mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u16",
+      "grade": 3,
+      "unit": 16,
+      "unitTitle": "Unit 16: My pets",
+      "unitNameVi": "Thú cưng của mình",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 40 – 45",
+      "vocabularies": [
+        {
+          "id": "g3_u16_01",
+          "word": "dog",
+          "phonetic": "/dog/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Dog trong tiếng Anh",
+          "hint": "Chủ đề: Thú cưng của mình",
+          "exampleEn": "This is dog.",
+          "exampleVi": "Đây là dog.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u16_02",
+          "word": "cat",
+          "phonetic": "/cat/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cat trong tiếng Anh",
+          "hint": "Chủ đề: Thú cưng của mình",
+          "exampleEn": "This is cat.",
+          "exampleVi": "Đây là cat.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u16_03",
+          "word": "bird",
+          "phonetic": "/bird/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bird trong tiếng Anh",
+          "hint": "Chủ đề: Thú cưng của mình",
+          "exampleEn": "This is bird.",
+          "exampleVi": "Đây là bird.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u16_04",
+          "word": "parrot",
+          "phonetic": "/parrot/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Parrot trong tiếng Anh",
+          "hint": "Chủ đề: Thú cưng của mình",
+          "exampleEn": "This is parrot.",
+          "exampleVi": "Đây là parrot.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u16_05",
+          "word": "goldfish",
+          "phonetic": "/goldfish/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Goldfish trong tiếng Anh",
+          "hint": "Chủ đề: Thú cưng của mình",
+          "exampleEn": "This is goldfish.",
+          "exampleVi": "Đây là goldfish.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u16_06",
+          "word": "rabbit",
+          "phonetic": "/rabbit/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Rabbit trong tiếng Anh",
+          "hint": "Chủ đề: Thú cưng của mình",
+          "exampleEn": "This is rabbit.",
+          "exampleVi": "Đây là rabbit.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 16: Do you have any dogs? - Yes, I do.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: Do you have any dogs? - Yes, I do.",
+        "formula": "Do you have any dogs? - Yes, I do.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "dog",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'dog' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our dog at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə dog æt skuːl/",
+        "meaningVi": "Đây là dog của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Thú cưng của mình",
+        "dialogueTitle": "Lesson 1: My pets",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Thú cưng của mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u16_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u16_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u16_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the dog.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə dog/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào dog này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u16_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new dog.",
+            "phonetic": "/aɪ hæv ə njuː dog/",
+            "meaningVi": "Mình có một dog mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Thú cưng của mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about dog.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Dog",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite My pets",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about dog.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u16_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new dog",
+        "meaningVi": "Đây là dog mới của mình.",
+        "items": [
+          {
+            "id": "g3_u16_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "dog"
+            ],
+            "correctSentence": "This is my new dog",
+            "meaningVi": "Đây là dog mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u17",
+      "grade": 3,
+      "unit": 17,
+      "unitTitle": "Unit 17: Our toys",
+      "unitNameVi": "Đồ chơi của chúng mình",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 46 – 51",
+      "vocabularies": [
+        {
+          "id": "g3_u17_01",
+          "word": "toy",
+          "phonetic": "/toy/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Toy trong tiếng Anh",
+          "hint": "Chủ đề: Đồ chơi của chúng mình",
+          "exampleEn": "This is toy.",
+          "exampleVi": "Đây là toy.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u17_02",
+          "word": "doll",
+          "phonetic": "/doll/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Doll trong tiếng Anh",
+          "hint": "Chủ đề: Đồ chơi của chúng mình",
+          "exampleEn": "This is doll.",
+          "exampleVi": "Đây là doll.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u17_03",
+          "word": "teddy bear",
+          "phonetic": "/teddy bear/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Teddy bear trong tiếng Anh",
+          "hint": "Chủ đề: Đồ chơi của chúng mình",
+          "exampleEn": "This is teddy bear.",
+          "exampleVi": "Đây là teddy bear.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u17_04",
+          "word": "car",
+          "phonetic": "/car/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Car trong tiếng Anh",
+          "hint": "Chủ đề: Đồ chơi của chúng mình",
+          "exampleEn": "This is car.",
+          "exampleVi": "Đây là car.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u17_05",
+          "word": "plane",
+          "phonetic": "/plane/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Plane trong tiếng Anh",
+          "hint": "Chủ đề: Đồ chơi của chúng mình",
+          "exampleEn": "This is plane.",
+          "exampleVi": "Đây là plane.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u17_06",
+          "word": "kite",
+          "phonetic": "/kite/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Kite trong tiếng Anh",
+          "hint": "Chủ đề: Đồ chơi của chúng mình",
+          "exampleEn": "This is kite.",
+          "exampleVi": "Đây là kite.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 17: How many cars do you have? - I have three.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: How many cars do you have? - I have three.",
+        "formula": "How many cars do you have? - I have three.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "toy",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'toy' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our toy at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə toy æt skuːl/",
+        "meaningVi": "Đây là toy của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Đồ chơi của chúng mình",
+        "dialogueTitle": "Lesson 1: Our toys",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Đồ chơi của chúng mình.",
+        "dialogueLines": [
+          {
+            "id": "g3_u17_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u17_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u17_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the toy.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə toy/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào toy này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u17_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new toy.",
+            "phonetic": "/aɪ hæv ə njuː toy/",
+            "meaningVi": "Mình có một toy mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Đồ chơi của chúng mình",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about toy.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Toy",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Our toys",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about toy.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u17_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new toy",
+        "meaningVi": "Đây là toy mới của mình.",
+        "items": [
+          {
+            "id": "g3_u17_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "toy"
+            ],
+            "correctSentence": "This is my new toy",
+            "meaningVi": "Đây là toy mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u18",
+      "grade": 3,
+      "unit": 18,
+      "unitTitle": "Unit 18: Playing and doing",
+      "unitNameVi": "Đang chơi và đang làm",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 52 – 57",
+      "vocabularies": [
+        {
+          "id": "g3_u18_01",
+          "word": "reading",
+          "phonetic": "/reading/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Reading trong tiếng Anh",
+          "hint": "Chủ đề: Đang chơi và đang làm",
+          "exampleEn": "This is reading.",
+          "exampleVi": "Đây là reading.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u18_02",
+          "word": "writing",
+          "phonetic": "/writing/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Writing trong tiếng Anh",
+          "hint": "Chủ đề: Đang chơi và đang làm",
+          "exampleEn": "This is writing.",
+          "exampleVi": "Đây là writing.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u18_03",
+          "word": "singing",
+          "phonetic": "/singing/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Singing trong tiếng Anh",
+          "hint": "Chủ đề: Đang chơi và đang làm",
+          "exampleEn": "This is singing.",
+          "exampleVi": "Đây là singing.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u18_04",
+          "word": "drawing",
+          "phonetic": "/drawing/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Drawing trong tiếng Anh",
+          "hint": "Chủ đề: Đang chơi và đang làm",
+          "exampleEn": "This is drawing.",
+          "exampleVi": "Đây là drawing.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u18_05",
+          "word": "cooking",
+          "phonetic": "/cooking/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cooking trong tiếng Anh",
+          "hint": "Chủ đề: Đang chơi và đang làm",
+          "exampleEn": "This is cooking.",
+          "exampleVi": "Đây là cooking.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 18: What are you doing? - I'm reading.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What are you doing? - I'm reading.",
+        "formula": "What are you doing? - I'm reading.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "reading",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'reading' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our reading at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə reading æt skuːl/",
+        "meaningVi": "Đây là reading của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Đang chơi và đang làm",
+        "dialogueTitle": "Lesson 1: Playing and doing",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Đang chơi và đang làm.",
+        "dialogueLines": [
+          {
+            "id": "g3_u18_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u18_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u18_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the reading.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə reading/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào reading này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u18_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new reading.",
+            "phonetic": "/aɪ hæv ə njuː reading/",
+            "meaningVi": "Mình có một reading mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Đang chơi và đang làm",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about reading.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Reading",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Playing and doing",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about reading.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u18_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new reading",
+        "meaningVi": "Đây là reading mới của mình.",
+        "items": [
+          {
+            "id": "g3_u18_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "reading"
+            ],
+            "correctSentence": "This is my new reading",
+            "meaningVi": "Đây là reading mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u19",
+      "grade": 3,
+      "unit": 19,
+      "unitTitle": "Unit 19: Outdoor activities",
+      "unitNameVi": "Hoạt động ngoài trời",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 58 – 63",
+      "vocabularies": [
+        {
+          "id": "g3_u19_01",
+          "word": "cycling",
+          "phonetic": "/cycling/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cycling trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động ngoài trời",
+          "exampleEn": "This is cycling.",
+          "exampleVi": "Đây là cycling.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u19_02",
+          "word": "skating",
+          "phonetic": "/skating/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Skating trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động ngoài trời",
+          "exampleEn": "This is skating.",
+          "exampleVi": "Đây là skating.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u19_03",
+          "word": "running",
+          "phonetic": "/running/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Running trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động ngoài trời",
+          "exampleEn": "This is running.",
+          "exampleVi": "Đây là running.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u19_04",
+          "word": "walking",
+          "phonetic": "/walking/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Walking trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động ngoài trời",
+          "exampleEn": "This is walking.",
+          "exampleVi": "Đây là walking.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u19_05",
+          "word": "skipping",
+          "phonetic": "/skipping/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Skipping trong tiếng Anh",
+          "hint": "Chủ đề: Hoạt động ngoài trời",
+          "exampleEn": "This is skipping.",
+          "exampleVi": "Đây là skipping.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 19: What is he doing? - He's cycling.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What is he doing? - He's cycling.",
+        "formula": "What is he doing? - He's cycling.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "cycling",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'cycling' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our cycling at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə cycling æt skuːl/",
+        "meaningVi": "Đây là cycling của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Hoạt động ngoài trời",
+        "dialogueTitle": "Lesson 1: Outdoor activities",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Hoạt động ngoài trời.",
+        "dialogueLines": [
+          {
+            "id": "g3_u19_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u19_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u19_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the cycling.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə cycling/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào cycling này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u19_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new cycling.",
+            "phonetic": "/aɪ hæv ə njuː cycling/",
+            "meaningVi": "Mình có một cycling mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Hoạt động ngoài trời",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about cycling.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Cycling",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite Outdoor activities",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about cycling.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u19_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new cycling",
+        "meaningVi": "Đây là cycling mới của mình.",
+        "items": [
+          {
+            "id": "g3_u19_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "cycling"
+            ],
+            "correctSentence": "This is my new cycling",
+            "meaningVi": "Đây là cycling mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g3_u20",
+      "grade": 3,
+      "unit": 20,
+      "unitTitle": "Unit 20: At the zoo",
+      "unitNameVi": "Ở sở thú",
+      "theme": "Me and My World",
+      "semester": 2,
+      "bookPages": "Trang 64 – 69",
+      "vocabularies": [
+        {
+          "id": "g3_u20_01",
+          "word": "zoo",
+          "phonetic": "/zoo/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Zoo trong tiếng Anh",
+          "hint": "Chủ đề: Ở sở thú",
+          "exampleEn": "This is zoo.",
+          "exampleVi": "Đây là zoo.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u20_02",
+          "word": "monkey",
+          "phonetic": "/monkey/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Monkey trong tiếng Anh",
+          "hint": "Chủ đề: Ở sở thú",
+          "exampleEn": "This is monkey.",
+          "exampleVi": "Đây là monkey.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u20_03",
+          "word": "elephant",
+          "phonetic": "/elephant/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Elephant trong tiếng Anh",
+          "hint": "Chủ đề: Ở sở thú",
+          "exampleEn": "This is elephant.",
+          "exampleVi": "Đây là elephant.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u20_04",
+          "word": "tiger",
+          "phonetic": "/tiger/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Tiger trong tiếng Anh",
+          "hint": "Chủ đề: Ở sở thú",
+          "exampleEn": "This is tiger.",
+          "exampleVi": "Đây là tiger.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u20_05",
+          "word": "horse",
+          "phonetic": "/horse/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Horse trong tiếng Anh",
+          "hint": "Chủ đề: Ở sở thú",
+          "exampleEn": "This is horse.",
+          "exampleVi": "Đây là horse.",
+          "emoji": "📘"
+        },
+        {
+          "id": "g3_u20_06",
+          "word": "giraffe",
+          "phonetic": "/giraffe/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Giraffe trong tiếng Anh",
+          "hint": "Chủ đề: Ở sở thú",
+          "exampleEn": "This is giraffe.",
+          "exampleVi": "Đây là giraffe.",
+          "emoji": "📘"
+        }
+      ],
+      "grammar": {
+        "title": "Ngữ pháp Unit 20: What can you see? - I can see an elephant.",
+        "ruleVi": "Mẫu câu chuẩn SGK Tiếng Anh 3: What can you see? - I can see an elephant.",
+        "formula": "What can you see? - I can see an elephant.",
+        "quickTip": "Chú ý đại từ nhân xưng và động từ to be (I am, You are, He is, She is).",
+        "quiz": [
+          {
+            "question": "What's this? - It is a ______.",
+            "options": [
+              "zoo",
+              "pencil",
+              "pen",
+              "desk"
+            ],
+            "answerIndex": 0,
+            "explain": "Đáp án là 'zoo' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ và /ʃ/",
+        "title": "Phát âm các phụ âm cơ bản",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/",
+          "words": [
+            "see",
+            "sit"
+          ]
+        },
+        "sound2": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/",
+          "words": [
+            "she",
+            "shop"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "see",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/ʃ/"
+            ],
+            "meaningVi": "Nhìn thấy"
+          }
+        ],
+        "tongueTwister": "Sam sees seven school things in the classroom."
+      },
+      "speaking": {
+        "targetSentence": "This is our zoo at school.",
+        "phonetic": "/ðɪs ɪz ˈaʊə zoo æt skuːl/",
+        "meaningVi": "Đây là zoo của chúng mình ở trường.",
+        "situationalTopic": "Hội thoại chủ đề: Ở sở thú",
+        "dialogueTitle": "Lesson 1: At the zoo",
+        "dialogueContext": "Các bạn học sinh cùng luyện tập câu giao tiếp Ở sở thú.",
+        "dialogueLines": [
+          {
+            "id": "g3_u20_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Hello, Nam. How are you?",
+            "phonetic": "/həˈləʊ næm haʊ ɑː juː/",
+            "meaningVi": "Chào Nam. Bạn có khỏe không?",
+            "tipsVi": "Giọng chào ấm áp."
+          },
+          {
+            "id": "g3_u20_d2",
+            "speaker": "Nam",
+            "sentenceEn": "I'm fine, thank you. And you?",
+            "phonetic": "/aɪm faɪn θæŋk juː ænd juː/",
+            "meaningVi": "Mình khỏe, cảm ơn bạn. Còn bạn?",
+            "tipsVi": "Lên giọng ở 'And you?'."
+          },
+          {
+            "id": "g3_u20_d3",
+            "speaker": "Mai",
+            "sentenceEn": "Fine, thanks. Look at the zoo.",
+            "phonetic": "/faɪn θæŋks lʊk æt ðə zoo/",
+            "meaningVi": "Mình cũng khỏe. Nhìn vào zoo này.",
+            "tipsVi": "Chỉ tay vào hình ảnh."
+          },
+          {
+            "id": "g3_u20_d4",
+            "speaker": "Nam",
+            "sentenceEn": "Wow, it's very nice!",
+            "phonetic": "/waʊ ɪts ˈveri naɪs/",
+            "meaningVi": "Oa, đẹp quá!",
+            "tipsVi": "Khen ngợi chân thành."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "I have a new zoo.",
+            "phonetic": "/aɪ hæv ə njuː zoo/",
+            "meaningVi": "Mình có một zoo mới."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Nghe đoạn hội thoại về Ở sở thú",
+        "transcript": "Hi everyone, my name is Mai. I go to school every day. Today we are learning about zoo.",
+        "question": "What is Mai learning about today?",
+        "options": [
+          "Zoo",
+          "Animals",
+          "Colours",
+          "Toys"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Favorite At the zoo",
+        "passage": "Hello, my name is Linh. I am in class 3A. My school is big and beautiful. We love learning English. Today we talk about zoo.",
+        "translation": "Xin chào, tên mình là Linh. Mình học lớp 3A. Trường của mình rất to và đẹp. Chúng mình rất thích học tiếng Anh.",
+        "questions": [
+          {
+            "id": "g3_u20_r1",
+            "type": "multiple_choice",
+            "question": "What class is Linh in?",
+            "options": [
+              "Class 3A",
+              "Class 3B",
+              "Class 4A",
+              "Class 5A"
+            ],
+            "answerIndex": 0,
+            "explain": "Đoạn văn viết: 'I am in class 3A.'"
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "This is my new zoo",
+        "meaningVi": "Đây là zoo mới của mình.",
+        "items": [
+          {
+            "id": "g3_u20_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "This",
+              "is",
+              "my",
+              "new",
+              "zoo"
+            ],
+            "correctSentence": "This is my new zoo",
+            "meaningVi": "Đây là zoo mới của mình.",
+            "hint": "Bắt đầu bằng 'This is...'"
+          }
+        ]
+      }
+    }
+  ]
+}

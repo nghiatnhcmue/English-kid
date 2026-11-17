@@ -1,0 +1,3095 @@
+{
+  "grade": 2,
+  "gradeName": "Lớp 2",
+  "level": "primary",
+  "levelName": "Tiểu học",
+  "title": "SGK Tiếng Anh 2 – Global Success",
+  "totalUnits": 16,
+  "interactiveAvailable": true,
+  "interactiveNote": "Hệ thống trạm học tương tác 7 kỹ năng chuẩn SGK Lớp 2",
+  "units": [
+    {
+      "unitId": "g2_u1",
+      "grade": 2,
+      "unit": 1,
+      "unitTitle": "Unit 1: At my birthday party",
+      "unitNameVi": "Ở tiệc sinh nhật của tôi",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 6 – 9",
+      "vocabularies": [
+        {
+          "id": "g2_u1_01",
+          "word": "popcorn",
+          "phonetic": "/popcorn/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Popcorn trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
+          "exampleEn": "I like popcorn.",
+          "exampleVi": "Mình thích popcorn.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u1_02",
+          "word": "pizza",
+          "phonetic": "/pizza/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Pizza trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
+          "exampleEn": "I like pizza.",
+          "exampleVi": "Mình thích pizza.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u1_03",
+          "word": "pasta",
+          "phonetic": "/pasta/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Pasta trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
+          "exampleEn": "I like pasta.",
+          "exampleVi": "Mình thích pasta.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u1_04",
+          "word": "party",
+          "phonetic": "/party/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Party trong tiếng Anh",
+          "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
+          "exampleEn": "I like party.",
+          "exampleVi": "Mình thích party.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'popcorn'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /p/ (Letter P).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "popcorn",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'popcorn' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/p/ (Letter P)",
+        "title": "Luyện âm /p/ (Letter P)",
+        "sound1": {
+          "symbol": "/p/",
+          "name": "Âm /p/ (Letter P)",
+          "words": [
+            "popcorn",
+            "pizza"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "popcorn",
+            "correctSound": "/p/",
+            "options": [
+              "/p/",
+              "/m/"
+            ],
+            "meaningVi": "popcorn"
+          }
+        ],
+        "tongueTwister": "Peter likes popcorn at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some popcorn, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm popcorn pliːz/",
+        "meaningVi": "Cho mình một chút popcorn với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở tiệc sinh nhật của tôi",
+        "dialogueTitle": "Lesson 1: At my birthday party",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở tiệc sinh nhật của tôi.",
+        "dialogueLines": [
+          {
+            "id": "g2_u1_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like popcorn?",
+            "phonetic": "/duː juː laɪk popcorn/",
+            "meaningVi": "Bạn có thích popcorn không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u1_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the popcorn, please.",
+            "phonetic": "/pɑːs miː ðə popcorn pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình popcorn nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở tiệc sinh nhật của tôi",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with popcorn.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Popcorn",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: At my birthday party",
+        "passage": "Welcome to our at my birthday party. We have delicious popcorn and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở tiệc sinh nhật của tôi của chúng mình. Chúng mình có popcorn rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u1_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Popcorn",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến popcorn."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like popcorn very much",
+        "meaningVi": "Mình rất thích popcorn.",
+        "items": [
+          {
+            "id": "g2_u1_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "popcorn",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like popcorn very much",
+            "meaningVi": "Mình rất thích popcorn.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u2",
+      "grade": 2,
+      "unit": 2,
+      "unitTitle": "Unit 2: In the backyard",
+      "unitNameVi": "Ở sân sau",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 10 – 13",
+      "vocabularies": [
+        {
+          "id": "g2_u2_01",
+          "word": "kitten",
+          "phonetic": "/kitten/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Kitten trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở sân sau",
+          "exampleEn": "I like kitten.",
+          "exampleVi": "Mình thích kitten.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u2_02",
+          "word": "kite",
+          "phonetic": "/kite/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Kite trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở sân sau",
+          "exampleEn": "I like kite.",
+          "exampleVi": "Mình thích kite.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u2_03",
+          "word": "kitchen",
+          "phonetic": "/kitchen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Kitchen trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở sân sau",
+          "exampleEn": "I like kitchen.",
+          "exampleVi": "Mình thích kitchen.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u2_04",
+          "word": "bike",
+          "phonetic": "/bike/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bike trong tiếng Anh",
+          "hint": "Từ vựng bài 2: Ở sân sau",
+          "exampleEn": "I like bike.",
+          "exampleVi": "Mình thích bike.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'kitten'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /k/ (Letter K).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "kitten",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'kitten' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/k/ (Letter K)",
+        "title": "Luyện âm /k/ (Letter K)",
+        "sound1": {
+          "symbol": "/k/",
+          "name": "Âm /k/ (Letter K)",
+          "words": [
+            "kitten",
+            "kite"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "kitten",
+            "correctSound": "/k/",
+            "options": [
+              "/k/",
+              "/m/"
+            ],
+            "meaningVi": "kitten"
+          }
+        ],
+        "tongueTwister": "Peter likes kitten at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some kitten, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm kitten pliːz/",
+        "meaningVi": "Cho mình một chút kitten với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở sân sau",
+        "dialogueTitle": "Lesson 1: In the backyard",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở sân sau.",
+        "dialogueLines": [
+          {
+            "id": "g2_u2_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like kitten?",
+            "phonetic": "/duː juː laɪk kitten/",
+            "meaningVi": "Bạn có thích kitten không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u2_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the kitten, please.",
+            "phonetic": "/pɑːs miː ðə kitten pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình kitten nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở sân sau",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with kitten.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Kitten",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the backyard",
+        "passage": "Welcome to our in the backyard. We have delicious kitten and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở sân sau của chúng mình. Chúng mình có kitten rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u2_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Kitten",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến kitten."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like kitten very much",
+        "meaningVi": "Mình rất thích kitten.",
+        "items": [
+          {
+            "id": "g2_u2_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "kitten",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like kitten very much",
+            "meaningVi": "Mình rất thích kitten.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u3",
+      "grade": 2,
+      "unit": 3,
+      "unitTitle": "Unit 3: At the seaside",
+      "unitNameVi": "Ở bờ biển",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 14 – 17",
+      "vocabularies": [
+        {
+          "id": "g2_u3_01",
+          "word": "sand",
+          "phonetic": "/sand/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Sand trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở bờ biển",
+          "exampleEn": "I like sand.",
+          "exampleVi": "Mình thích sand.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u3_02",
+          "word": "sea",
+          "phonetic": "/sea/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Sea trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở bờ biển",
+          "exampleEn": "I like sea.",
+          "exampleVi": "Mình thích sea.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u3_03",
+          "word": "sun",
+          "phonetic": "/sun/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Sun trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở bờ biển",
+          "exampleEn": "I like sun.",
+          "exampleVi": "Mình thích sun.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u3_04",
+          "word": "sail",
+          "phonetic": "/sail/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Sail trong tiếng Anh",
+          "hint": "Từ vựng bài 3: Ở bờ biển",
+          "exampleEn": "I like sail.",
+          "exampleVi": "Mình thích sail.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'sand'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /s/ (Letter S).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "sand",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'sand' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/s/ (Letter S)",
+        "title": "Luyện âm /s/ (Letter S)",
+        "sound1": {
+          "symbol": "/s/",
+          "name": "Âm /s/ (Letter S)",
+          "words": [
+            "sand",
+            "sea"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "sand",
+            "correctSound": "/s/",
+            "options": [
+              "/s/",
+              "/m/"
+            ],
+            "meaningVi": "sand"
+          }
+        ],
+        "tongueTwister": "Peter likes sand at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some sand, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm sand pliːz/",
+        "meaningVi": "Cho mình một chút sand với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở bờ biển",
+        "dialogueTitle": "Lesson 1: At the seaside",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở bờ biển.",
+        "dialogueLines": [
+          {
+            "id": "g2_u3_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like sand?",
+            "phonetic": "/duː juː laɪk sand/",
+            "meaningVi": "Bạn có thích sand không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u3_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the sand, please.",
+            "phonetic": "/pɑːs miː ðə sand pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình sand nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở bờ biển",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with sand.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Sand",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: At the seaside",
+        "passage": "Welcome to our at the seaside. We have delicious sand and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở bờ biển của chúng mình. Chúng mình có sand rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u3_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Sand",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến sand."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like sand very much",
+        "meaningVi": "Mình rất thích sand.",
+        "items": [
+          {
+            "id": "g2_u3_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "sand",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like sand very much",
+            "meaningVi": "Mình rất thích sand.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u4",
+      "grade": 2,
+      "unit": 4,
+      "unitTitle": "Unit 4: In the countryside",
+      "unitNameVi": "Ở vùng nông thôn",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 18 – 21",
+      "vocabularies": [
+        {
+          "id": "g2_u4_01",
+          "word": "rainbow",
+          "phonetic": "/rainbow/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Rainbow trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở vùng nông thôn",
+          "exampleEn": "I like rainbow.",
+          "exampleVi": "Mình thích rainbow.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u4_02",
+          "word": "river",
+          "phonetic": "/river/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "River trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở vùng nông thôn",
+          "exampleEn": "I like river.",
+          "exampleVi": "Mình thích river.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u4_03",
+          "word": "road",
+          "phonetic": "/road/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Road trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở vùng nông thôn",
+          "exampleEn": "I like road.",
+          "exampleVi": "Mình thích road.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u4_04",
+          "word": "run",
+          "phonetic": "/run/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Run trong tiếng Anh",
+          "hint": "Từ vựng bài 4: Ở vùng nông thôn",
+          "exampleEn": "I like run.",
+          "exampleVi": "Mình thích run.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'rainbow'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /r/ (Letter R).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "rainbow",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'rainbow' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/r/ (Letter R)",
+        "title": "Luyện âm /r/ (Letter R)",
+        "sound1": {
+          "symbol": "/r/",
+          "name": "Âm /r/ (Letter R)",
+          "words": [
+            "rainbow",
+            "river"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "rainbow",
+            "correctSound": "/r/",
+            "options": [
+              "/r/",
+              "/m/"
+            ],
+            "meaningVi": "rainbow"
+          }
+        ],
+        "tongueTwister": "Peter likes rainbow at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some rainbow, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm rainbow pliːz/",
+        "meaningVi": "Cho mình một chút rainbow với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở vùng nông thôn",
+        "dialogueTitle": "Lesson 1: In the countryside",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở vùng nông thôn.",
+        "dialogueLines": [
+          {
+            "id": "g2_u4_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like rainbow?",
+            "phonetic": "/duː juː laɪk rainbow/",
+            "meaningVi": "Bạn có thích rainbow không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u4_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the rainbow, please.",
+            "phonetic": "/pɑːs miː ðə rainbow pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình rainbow nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở vùng nông thôn",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with rainbow.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Rainbow",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the countryside",
+        "passage": "Welcome to our in the countryside. We have delicious rainbow and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở vùng nông thôn của chúng mình. Chúng mình có rainbow rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u4_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Rainbow",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến rainbow."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like rainbow very much",
+        "meaningVi": "Mình rất thích rainbow.",
+        "items": [
+          {
+            "id": "g2_u4_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "rainbow",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like rainbow very much",
+            "meaningVi": "Mình rất thích rainbow.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u5",
+      "grade": 2,
+      "unit": 5,
+      "unitTitle": "Unit 5: In the classroom",
+      "unitNameVi": "Ở trong lớp học",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 22 – 25",
+      "vocabularies": [
+        {
+          "id": "g2_u5_01",
+          "word": "bird",
+          "phonetic": "/bird/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bird trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở trong lớp học",
+          "exampleEn": "I like bird.",
+          "exampleVi": "Mình thích bird.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u5_02",
+          "word": "bed",
+          "phonetic": "/bed/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bed trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở trong lớp học",
+          "exampleEn": "I like bed.",
+          "exampleVi": "Mình thích bed.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u5_03",
+          "word": "bell",
+          "phonetic": "/bell/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Bell trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở trong lớp học",
+          "exampleEn": "I like bell.",
+          "exampleVi": "Mình thích bell.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u5_04",
+          "word": "box",
+          "phonetic": "/box/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Box trong tiếng Anh",
+          "hint": "Từ vựng bài 5: Ở trong lớp học",
+          "exampleEn": "I like box.",
+          "exampleVi": "Mình thích box.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'bird'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /b/ (Letter B).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "bird",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'bird' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/b/ (Letter B)",
+        "title": "Luyện âm /b/ (Letter B)",
+        "sound1": {
+          "symbol": "/b/",
+          "name": "Âm /b/ (Letter B)",
+          "words": [
+            "bird",
+            "bed"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "bird",
+            "correctSound": "/b/",
+            "options": [
+              "/b/",
+              "/m/"
+            ],
+            "meaningVi": "bird"
+          }
+        ],
+        "tongueTwister": "Peter likes bird at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some bird, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm bird pliːz/",
+        "meaningVi": "Cho mình một chút bird với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở trong lớp học",
+        "dialogueTitle": "Lesson 1: In the classroom",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở trong lớp học.",
+        "dialogueLines": [
+          {
+            "id": "g2_u5_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like bird?",
+            "phonetic": "/duː juː laɪk bird/",
+            "meaningVi": "Bạn có thích bird không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u5_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the bird, please.",
+            "phonetic": "/pɑːs miː ðə bird pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình bird nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở trong lớp học",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with bird.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Bird",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the classroom",
+        "passage": "Welcome to our in the classroom. We have delicious bird and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở trong lớp học của chúng mình. Chúng mình có bird rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u5_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Bird",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến bird."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like bird very much",
+        "meaningVi": "Mình rất thích bird.",
+        "items": [
+          {
+            "id": "g2_u5_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "bird",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like bird very much",
+            "meaningVi": "Mình rất thích bird.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u6",
+      "grade": 2,
+      "unit": 6,
+      "unitTitle": "Unit 6: On the farm",
+      "unitNameVi": "Ở nông trại",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 26 – 29",
+      "vocabularies": [
+        {
+          "id": "g2_u6_01",
+          "word": "horse",
+          "phonetic": "/horse/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Horse trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở nông trại",
+          "exampleEn": "I like horse.",
+          "exampleVi": "Mình thích horse.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u6_02",
+          "word": "hen",
+          "phonetic": "/hen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Hen trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở nông trại",
+          "exampleEn": "I like hen.",
+          "exampleVi": "Mình thích hen.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u6_03",
+          "word": "house",
+          "phonetic": "/house/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "House trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở nông trại",
+          "exampleEn": "I like house.",
+          "exampleVi": "Mình thích house.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u6_04",
+          "word": "hat",
+          "phonetic": "/hat/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Hat trong tiếng Anh",
+          "hint": "Từ vựng bài 6: Ở nông trại",
+          "exampleEn": "I like hat.",
+          "exampleVi": "Mình thích hat.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'horse'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /h/ (Letter H).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "horse",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'horse' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/h/ (Letter H)",
+        "title": "Luyện âm /h/ (Letter H)",
+        "sound1": {
+          "symbol": "/h/",
+          "name": "Âm /h/ (Letter H)",
+          "words": [
+            "horse",
+            "hen"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "horse",
+            "correctSound": "/h/",
+            "options": [
+              "/h/",
+              "/m/"
+            ],
+            "meaningVi": "horse"
+          }
+        ],
+        "tongueTwister": "Peter likes horse at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some horse, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm horse pliːz/",
+        "meaningVi": "Cho mình một chút horse với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở nông trại",
+        "dialogueTitle": "Lesson 1: On the farm",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở nông trại.",
+        "dialogueLines": [
+          {
+            "id": "g2_u6_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like horse?",
+            "phonetic": "/duː juː laɪk horse/",
+            "meaningVi": "Bạn có thích horse không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u6_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the horse, please.",
+            "phonetic": "/pɑːs miː ðə horse pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình horse nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở nông trại",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with horse.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Horse",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: On the farm",
+        "passage": "Welcome to our on the farm. We have delicious horse and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở nông trại của chúng mình. Chúng mình có horse rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u6_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Horse",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến horse."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like horse very much",
+        "meaningVi": "Mình rất thích horse.",
+        "items": [
+          {
+            "id": "g2_u6_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "horse",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like horse very much",
+            "meaningVi": "Mình rất thích horse.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u7",
+      "grade": 2,
+      "unit": 7,
+      "unitTitle": "Unit 7: In the kitchen",
+      "unitNameVi": "Ở trong bếp",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 30 – 33",
+      "vocabularies": [
+        {
+          "id": "g2_u7_01",
+          "word": "chicken",
+          "phonetic": "/chicken/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Chicken trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong bếp",
+          "exampleEn": "I like chicken.",
+          "exampleVi": "Mình thích chicken.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u7_02",
+          "word": "cheese",
+          "phonetic": "/cheese/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cheese trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong bếp",
+          "exampleEn": "I like cheese.",
+          "exampleVi": "Mình thích cheese.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u7_03",
+          "word": "chair",
+          "phonetic": "/chair/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Chair trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong bếp",
+          "exampleEn": "I like chair.",
+          "exampleVi": "Mình thích chair.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u7_04",
+          "word": "cherry",
+          "phonetic": "/cherry/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cherry trong tiếng Anh",
+          "hint": "Từ vựng bài 7: Ở trong bếp",
+          "exampleEn": "I like cherry.",
+          "exampleVi": "Mình thích cherry.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'chicken'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /tʃ/ (Letter CH).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "chicken",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'chicken' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/tʃ/ (Letter CH)",
+        "title": "Luyện âm /tʃ/ (Letter CH)",
+        "sound1": {
+          "symbol": "/tʃ/",
+          "name": "Âm /tʃ/ (Letter CH)",
+          "words": [
+            "chicken",
+            "cheese"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "chicken",
+            "correctSound": "/tʃ/",
+            "options": [
+              "/tʃ/",
+              "/m/"
+            ],
+            "meaningVi": "chicken"
+          }
+        ],
+        "tongueTwister": "Peter likes chicken at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some chicken, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm chicken pliːz/",
+        "meaningVi": "Cho mình một chút chicken với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở trong bếp",
+        "dialogueTitle": "Lesson 1: In the kitchen",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở trong bếp.",
+        "dialogueLines": [
+          {
+            "id": "g2_u7_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like chicken?",
+            "phonetic": "/duː juː laɪk chicken/",
+            "meaningVi": "Bạn có thích chicken không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u7_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the chicken, please.",
+            "phonetic": "/pɑːs miː ðə chicken pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình chicken nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở trong bếp",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with chicken.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Chicken",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the kitchen",
+        "passage": "Welcome to our in the kitchen. We have delicious chicken and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở trong bếp của chúng mình. Chúng mình có chicken rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u7_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Chicken",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến chicken."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like chicken very much",
+        "meaningVi": "Mình rất thích chicken.",
+        "items": [
+          {
+            "id": "g2_u7_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "chicken",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like chicken very much",
+            "meaningVi": "Mình rất thích chicken.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u8",
+      "grade": 2,
+      "unit": 8,
+      "unitTitle": "Unit 8: In the village",
+      "unitNameVi": "Ở trong làng",
+      "theme": "Family & Friends",
+      "semester": 1,
+      "bookPages": "Trang 34 – 37",
+      "vocabularies": [
+        {
+          "id": "g2_u8_01",
+          "word": "village",
+          "phonetic": "/village/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Village trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở trong làng",
+          "exampleEn": "I like village.",
+          "exampleVi": "Mình thích village.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u8_02",
+          "word": "van",
+          "phonetic": "/van/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Van trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở trong làng",
+          "exampleEn": "I like van.",
+          "exampleVi": "Mình thích van.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u8_03",
+          "word": "volleyball",
+          "phonetic": "/volleyball/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Volleyball trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở trong làng",
+          "exampleEn": "I like volleyball.",
+          "exampleVi": "Mình thích volleyball.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u8_04",
+          "word": "vase",
+          "phonetic": "/vase/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Vase trong tiếng Anh",
+          "hint": "Từ vựng bài 8: Ở trong làng",
+          "exampleEn": "I like vase.",
+          "exampleVi": "Mình thích vase.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'village'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /v/ (Letter V).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "village",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'village' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/v/ (Letter V)",
+        "title": "Luyện âm /v/ (Letter V)",
+        "sound1": {
+          "symbol": "/v/",
+          "name": "Âm /v/ (Letter V)",
+          "words": [
+            "village",
+            "van"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "village",
+            "correctSound": "/v/",
+            "options": [
+              "/v/",
+              "/m/"
+            ],
+            "meaningVi": "village"
+          }
+        ],
+        "tongueTwister": "Peter likes village at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some village, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm village pliːz/",
+        "meaningVi": "Cho mình một chút village với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở trong làng",
+        "dialogueTitle": "Lesson 1: In the village",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở trong làng.",
+        "dialogueLines": [
+          {
+            "id": "g2_u8_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like village?",
+            "phonetic": "/duː juː laɪk village/",
+            "meaningVi": "Bạn có thích village không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u8_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the village, please.",
+            "phonetic": "/pɑːs miː ðə village pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình village nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở trong làng",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with village.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Village",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the village",
+        "passage": "Welcome to our in the village. We have delicious village and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở trong làng của chúng mình. Chúng mình có village rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u8_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Village",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến village."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like village very much",
+        "meaningVi": "Mình rất thích village.",
+        "items": [
+          {
+            "id": "g2_u8_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "village",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like village very much",
+            "meaningVi": "Mình rất thích village.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u9",
+      "grade": 2,
+      "unit": 9,
+      "unitTitle": "Unit 9: In the grocery store",
+      "unitNameVi": "Ở cửa hàng tạp hóa",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 38 – 41",
+      "vocabularies": [
+        {
+          "id": "g2_u9_01",
+          "word": "yogurt",
+          "phonetic": "/yogurt/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Yogurt trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "I like yogurt.",
+          "exampleVi": "Mình thích yogurt.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u9_02",
+          "word": "yam",
+          "phonetic": "/yam/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Yam trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "I like yam.",
+          "exampleVi": "Mình thích yam.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u9_03",
+          "word": "yellow",
+          "phonetic": "/yellow/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Yellow trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "I like yellow.",
+          "exampleVi": "Mình thích yellow.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u9_04",
+          "word": "yo-yo",
+          "phonetic": "/yo-yo/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Yo-yo trong tiếng Anh",
+          "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
+          "exampleEn": "I like yo-yo.",
+          "exampleVi": "Mình thích yo-yo.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'yogurt'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /j/ (Letter Y).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "yogurt",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'yogurt' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/j/ (Letter Y)",
+        "title": "Luyện âm /j/ (Letter Y)",
+        "sound1": {
+          "symbol": "/j/",
+          "name": "Âm /j/ (Letter Y)",
+          "words": [
+            "yogurt",
+            "yam"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "yogurt",
+            "correctSound": "/j/",
+            "options": [
+              "/j/",
+              "/m/"
+            ],
+            "meaningVi": "yogurt"
+          }
+        ],
+        "tongueTwister": "Peter likes yogurt at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some yogurt, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm yogurt pliːz/",
+        "meaningVi": "Cho mình một chút yogurt với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở cửa hàng tạp hóa",
+        "dialogueTitle": "Lesson 1: In the grocery store",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở cửa hàng tạp hóa.",
+        "dialogueLines": [
+          {
+            "id": "g2_u9_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like yogurt?",
+            "phonetic": "/duː juː laɪk yogurt/",
+            "meaningVi": "Bạn có thích yogurt không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u9_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the yogurt, please.",
+            "phonetic": "/pɑːs miː ðə yogurt pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình yogurt nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở cửa hàng tạp hóa",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with yogurt.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Yogurt",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the grocery store",
+        "passage": "Welcome to our in the grocery store. We have delicious yogurt and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở cửa hàng tạp hóa của chúng mình. Chúng mình có yogurt rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u9_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Yogurt",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến yogurt."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like yogurt very much",
+        "meaningVi": "Mình rất thích yogurt.",
+        "items": [
+          {
+            "id": "g2_u9_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "yogurt",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like yogurt very much",
+            "meaningVi": "Mình rất thích yogurt.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u10",
+      "grade": 2,
+      "unit": 10,
+      "unitTitle": "Unit 10: At the zoo",
+      "unitNameVi": "Ở sở thú",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 42 – 45",
+      "vocabularies": [
+        {
+          "id": "g2_u10_01",
+          "word": "zebra",
+          "phonetic": "/zebra/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Zebra trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "I like zebra.",
+          "exampleVi": "Mình thích zebra.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u10_02",
+          "word": "zoo",
+          "phonetic": "/zoo/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Zoo trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "I like zoo.",
+          "exampleVi": "Mình thích zoo.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u10_03",
+          "word": "zero",
+          "phonetic": "/zero/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Zero trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "I like zero.",
+          "exampleVi": "Mình thích zero.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u10_04",
+          "word": "zip",
+          "phonetic": "/zip/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Zip trong tiếng Anh",
+          "hint": "Từ vựng bài 10: Ở sở thú",
+          "exampleEn": "I like zip.",
+          "exampleVi": "Mình thích zip.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'zebra'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /z/ (Letter Z).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "zebra",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'zebra' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/z/ (Letter Z)",
+        "title": "Luyện âm /z/ (Letter Z)",
+        "sound1": {
+          "symbol": "/z/",
+          "name": "Âm /z/ (Letter Z)",
+          "words": [
+            "zebra",
+            "zoo"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "zebra",
+            "correctSound": "/z/",
+            "options": [
+              "/z/",
+              "/m/"
+            ],
+            "meaningVi": "zebra"
+          }
+        ],
+        "tongueTwister": "Peter likes zebra at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some zebra, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm zebra pliːz/",
+        "meaningVi": "Cho mình một chút zebra với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở sở thú",
+        "dialogueTitle": "Lesson 1: At the zoo",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở sở thú.",
+        "dialogueLines": [
+          {
+            "id": "g2_u10_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like zebra?",
+            "phonetic": "/duː juː laɪk zebra/",
+            "meaningVi": "Bạn có thích zebra không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u10_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the zebra, please.",
+            "phonetic": "/pɑːs miː ðə zebra pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình zebra nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở sở thú",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with zebra.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Zebra",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: At the zoo",
+        "passage": "Welcome to our at the zoo. We have delicious zebra and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở sở thú của chúng mình. Chúng mình có zebra rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u10_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Zebra",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến zebra."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like zebra very much",
+        "meaningVi": "Mình rất thích zebra.",
+        "items": [
+          {
+            "id": "g2_u10_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "zebra",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like zebra very much",
+            "meaningVi": "Mình rất thích zebra.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u11",
+      "grade": 2,
+      "unit": 11,
+      "unitTitle": "Unit 11: In the playground",
+      "unitNameVi": "Ở sân chơi",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 46 – 49",
+      "vocabularies": [
+        {
+          "id": "g2_u11_01",
+          "word": "jump",
+          "phonetic": "/jump/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Jump trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở sân chơi",
+          "exampleEn": "I like jump.",
+          "exampleVi": "Mình thích jump.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u11_02",
+          "word": "jacket",
+          "phonetic": "/jacket/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Jacket trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở sân chơi",
+          "exampleEn": "I like jacket.",
+          "exampleVi": "Mình thích jacket.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u11_03",
+          "word": "jeans",
+          "phonetic": "/jeans/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Jeans trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở sân chơi",
+          "exampleEn": "I like jeans.",
+          "exampleVi": "Mình thích jeans.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u11_04",
+          "word": "juice",
+          "phonetic": "/juice/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Juice trong tiếng Anh",
+          "hint": "Từ vựng bài 11: Ở sân chơi",
+          "exampleEn": "I like juice.",
+          "exampleVi": "Mình thích juice.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'jump'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /dʒ/ (Letter J).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "jump",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'jump' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/dʒ/ (Letter J)",
+        "title": "Luyện âm /dʒ/ (Letter J)",
+        "sound1": {
+          "symbol": "/dʒ/",
+          "name": "Âm /dʒ/ (Letter J)",
+          "words": [
+            "jump",
+            "jacket"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "jump",
+            "correctSound": "/dʒ/",
+            "options": [
+              "/dʒ/",
+              "/m/"
+            ],
+            "meaningVi": "jump"
+          }
+        ],
+        "tongueTwister": "Peter likes jump at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some jump, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm jump pliːz/",
+        "meaningVi": "Cho mình một chút jump với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở sân chơi",
+        "dialogueTitle": "Lesson 1: In the playground",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở sân chơi.",
+        "dialogueLines": [
+          {
+            "id": "g2_u11_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like jump?",
+            "phonetic": "/duː juː laɪk jump/",
+            "meaningVi": "Bạn có thích jump không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u11_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the jump, please.",
+            "phonetic": "/pɑːs miː ðə jump pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình jump nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở sân chơi",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with jump.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Jump",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the playground",
+        "passage": "Welcome to our in the playground. We have delicious jump and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở sân chơi của chúng mình. Chúng mình có jump rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u11_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Jump",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến jump."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like jump very much",
+        "meaningVi": "Mình rất thích jump.",
+        "items": [
+          {
+            "id": "g2_u11_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "jump",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like jump very much",
+            "meaningVi": "Mình rất thích jump.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u12",
+      "grade": 2,
+      "unit": 12,
+      "unitTitle": "Unit 12: At the cafe",
+      "unitNameVi": "Ở quán cà phê",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 50 – 53",
+      "vocabularies": [
+        {
+          "id": "g2_u12_01",
+          "word": "cake",
+          "phonetic": "/cake/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cake trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở quán cà phê",
+          "exampleEn": "I like cake.",
+          "exampleVi": "Mình thích cake.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u12_02",
+          "word": "table",
+          "phonetic": "/table/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Table trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở quán cà phê",
+          "exampleEn": "I like table.",
+          "exampleVi": "Mình thích table.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u12_03",
+          "word": "baby",
+          "phonetic": "/baby/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Baby trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở quán cà phê",
+          "exampleEn": "I like baby.",
+          "exampleVi": "Mình thích baby.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u12_04",
+          "word": "grapes",
+          "phonetic": "/grapes/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Grapes trong tiếng Anh",
+          "hint": "Từ vựng bài 12: Ở quán cà phê",
+          "exampleEn": "I like grapes.",
+          "exampleVi": "Mình thích grapes.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'cake'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /eɪ/ (Letter A_E).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "cake",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'cake' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/eɪ/ (Letter A_E)",
+        "title": "Luyện âm /eɪ/ (Letter A_E)",
+        "sound1": {
+          "symbol": "/eɪ/",
+          "name": "Âm /eɪ/ (Letter A_E)",
+          "words": [
+            "cake",
+            "table"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cake",
+            "correctSound": "/eɪ/",
+            "options": [
+              "/eɪ/",
+              "/m/"
+            ],
+            "meaningVi": "cake"
+          }
+        ],
+        "tongueTwister": "Peter likes cake at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some cake, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm cake pliːz/",
+        "meaningVi": "Cho mình một chút cake với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở quán cà phê",
+        "dialogueTitle": "Lesson 1: At the cafe",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở quán cà phê.",
+        "dialogueLines": [
+          {
+            "id": "g2_u12_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like cake?",
+            "phonetic": "/duː juː laɪk cake/",
+            "meaningVi": "Bạn có thích cake không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u12_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the cake, please.",
+            "phonetic": "/pɑːs miː ðə cake pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình cake nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở quán cà phê",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with cake.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Cake",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: At the cafe",
+        "passage": "Welcome to our at the cafe. We have delicious cake and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở quán cà phê của chúng mình. Chúng mình có cake rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u12_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Cake",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến cake."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like cake very much",
+        "meaningVi": "Mình rất thích cake.",
+        "items": [
+          {
+            "id": "g2_u12_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "cake",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like cake very much",
+            "meaningVi": "Mình rất thích cake.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u13",
+      "grade": 2,
+      "unit": 13,
+      "unitTitle": "Unit 13: In the maths class",
+      "unitNameVi": "Ở lớp học toán",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 54 – 57",
+      "vocabularies": [
+        {
+          "id": "g2_u13_01",
+          "word": "eleven",
+          "phonetic": "/eleven/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Eleven trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở lớp học toán",
+          "exampleEn": "I like eleven.",
+          "exampleVi": "Mình thích eleven.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u13_02",
+          "word": "twelve",
+          "phonetic": "/twelve/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Twelve trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở lớp học toán",
+          "exampleEn": "I like twelve.",
+          "exampleVi": "Mình thích twelve.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u13_03",
+          "word": "thirteen",
+          "phonetic": "/thirteen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Thirteen trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở lớp học toán",
+          "exampleEn": "I like thirteen.",
+          "exampleVi": "Mình thích thirteen.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u13_04",
+          "word": "fourteen",
+          "phonetic": "/fourteen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Fourteen trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở lớp học toán",
+          "exampleEn": "I like fourteen.",
+          "exampleVi": "Mình thích fourteen.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u13_05",
+          "word": "fifteen",
+          "phonetic": "/fifteen/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Fifteen trong tiếng Anh",
+          "hint": "Từ vựng bài 13: Ở lớp học toán",
+          "exampleEn": "I like fifteen.",
+          "exampleVi": "Mình thích fifteen.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'eleven'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm Numbers 11-20.",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "eleven",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'eleven' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "Numbers 11-20",
+        "title": "Luyện âm Numbers 11-20",
+        "sound1": {
+          "symbol": "Numbers",
+          "name": "Âm Numbers 11-20",
+          "words": [
+            "eleven",
+            "twelve"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "eleven",
+            "correctSound": "Numbers",
+            "options": [
+              "Numbers",
+              "/m/"
+            ],
+            "meaningVi": "eleven"
+          }
+        ],
+        "tongueTwister": "Peter likes eleven at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some eleven, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm eleven pliːz/",
+        "meaningVi": "Cho mình một chút eleven với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở lớp học toán",
+        "dialogueTitle": "Lesson 1: In the maths class",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở lớp học toán.",
+        "dialogueLines": [
+          {
+            "id": "g2_u13_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like eleven?",
+            "phonetic": "/duː juː laɪk eleven/",
+            "meaningVi": "Bạn có thích eleven không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u13_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the eleven, please.",
+            "phonetic": "/pɑːs miː ðə eleven pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình eleven nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở lớp học toán",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with eleven.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Eleven",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the maths class",
+        "passage": "Welcome to our in the maths class. We have delicious eleven and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở lớp học toán của chúng mình. Chúng mình có eleven rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u13_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Eleven",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến eleven."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like eleven very much",
+        "meaningVi": "Mình rất thích eleven.",
+        "items": [
+          {
+            "id": "g2_u13_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "eleven",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like eleven very much",
+            "meaningVi": "Mình rất thích eleven.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u14",
+      "grade": 2,
+      "unit": 14,
+      "unitTitle": "Unit 14: At the campsite",
+      "unitNameVi": "Ở khu cắm trại",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 58 – 61",
+      "vocabularies": [
+        {
+          "id": "g2_u14_01",
+          "word": "cow",
+          "phonetic": "/cow/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cow trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở khu cắm trại",
+          "exampleEn": "I like cow.",
+          "exampleVi": "Mình thích cow.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u14_02",
+          "word": "house",
+          "phonetic": "/house/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "House trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở khu cắm trại",
+          "exampleEn": "I like house.",
+          "exampleVi": "Mình thích house.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u14_03",
+          "word": "mouse",
+          "phonetic": "/mouse/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Mouse trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở khu cắm trại",
+          "exampleEn": "I like mouse.",
+          "exampleVi": "Mình thích mouse.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u14_04",
+          "word": "cloud",
+          "phonetic": "/cloud/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Cloud trong tiếng Anh",
+          "hint": "Từ vựng bài 14: Ở khu cắm trại",
+          "exampleEn": "I like cloud.",
+          "exampleVi": "Mình thích cloud.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'cow'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /aʊ/ (Letter OU/OW).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "cow",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'cow' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/aʊ/ (Letter OU/OW)",
+        "title": "Luyện âm /aʊ/ (Letter OU/OW)",
+        "sound1": {
+          "symbol": "/aʊ/",
+          "name": "Âm /aʊ/ (Letter OU/OW)",
+          "words": [
+            "cow",
+            "house"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "cow",
+            "correctSound": "/aʊ/",
+            "options": [
+              "/aʊ/",
+              "/m/"
+            ],
+            "meaningVi": "cow"
+          }
+        ],
+        "tongueTwister": "Peter likes cow at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some cow, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm cow pliːz/",
+        "meaningVi": "Cho mình một chút cow với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở khu cắm trại",
+        "dialogueTitle": "Lesson 1: At the campsite",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở khu cắm trại.",
+        "dialogueLines": [
+          {
+            "id": "g2_u14_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like cow?",
+            "phonetic": "/duː juː laɪk cow/",
+            "meaningVi": "Bạn có thích cow không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u14_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the cow, please.",
+            "phonetic": "/pɑːs miː ðə cow pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình cow nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở khu cắm trại",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with cow.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Cow",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: At the campsite",
+        "passage": "Welcome to our at the campsite. We have delicious cow and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở khu cắm trại của chúng mình. Chúng mình có cow rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u14_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Cow",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến cow."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like cow very much",
+        "meaningVi": "Mình rất thích cow.",
+        "items": [
+          {
+            "id": "g2_u14_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "cow",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like cow very much",
+            "meaningVi": "Mình rất thích cow.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u15",
+      "grade": 2,
+      "unit": 15,
+      "unitTitle": "Unit 15: In the clothes shop",
+      "unitNameVi": "Ở cửa hàng quần áo",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 62 – 65",
+      "vocabularies": [
+        {
+          "id": "g2_u15_01",
+          "word": "shirt",
+          "phonetic": "/shirt/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Shirt trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
+          "exampleEn": "I like shirt.",
+          "exampleVi": "Mình thích shirt.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u15_02",
+          "word": "shorts",
+          "phonetic": "/shorts/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Shorts trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
+          "exampleEn": "I like shorts.",
+          "exampleVi": "Mình thích shorts.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u15_03",
+          "word": "shoes",
+          "phonetic": "/shoes/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Shoes trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
+          "exampleEn": "I like shoes.",
+          "exampleVi": "Mình thích shoes.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u15_04",
+          "word": "skirt",
+          "phonetic": "/skirt/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Skirt trong tiếng Anh",
+          "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
+          "exampleEn": "I like skirt.",
+          "exampleVi": "Mình thích skirt.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'shirt'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /ʃ/ (Letter SH).",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "shirt",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'shirt' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/ʃ/ (Letter SH)",
+        "title": "Luyện âm /ʃ/ (Letter SH)",
+        "sound1": {
+          "symbol": "/ʃ/",
+          "name": "Âm /ʃ/ (Letter SH)",
+          "words": [
+            "shirt",
+            "shorts"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "shirt",
+            "correctSound": "/ʃ/",
+            "options": [
+              "/ʃ/",
+              "/m/"
+            ],
+            "meaningVi": "shirt"
+          }
+        ],
+        "tongueTwister": "Peter likes shirt at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some shirt, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm shirt pliːz/",
+        "meaningVi": "Cho mình một chút shirt với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở cửa hàng quần áo",
+        "dialogueTitle": "Lesson 1: In the clothes shop",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở cửa hàng quần áo.",
+        "dialogueLines": [
+          {
+            "id": "g2_u15_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like shirt?",
+            "phonetic": "/duː juː laɪk shirt/",
+            "meaningVi": "Bạn có thích shirt không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u15_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the shirt, please.",
+            "phonetic": "/pɑːs miː ðə shirt pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình shirt nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở cửa hàng quần áo",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with shirt.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Shirt",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: In the clothes shop",
+        "passage": "Welcome to our in the clothes shop. We have delicious shirt and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở cửa hàng quần áo của chúng mình. Chúng mình có shirt rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u15_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Shirt",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến shirt."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like shirt very much",
+        "meaningVi": "Mình rất thích shirt.",
+        "items": [
+          {
+            "id": "g2_u15_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "shirt",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like shirt very much",
+            "meaningVi": "Mình rất thích shirt.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    },
+    {
+      "unitId": "g2_u16",
+      "grade": 2,
+      "unit": 16,
+      "unitTitle": "Unit 16: At the hospital",
+      "unitNameVi": "Ở bệnh viện",
+      "theme": "Family & Friends",
+      "semester": 2,
+      "bookPages": "Trang 66 – 69",
+      "vocabularies": [
+        {
+          "id": "g2_u16_01",
+          "word": "doctor",
+          "phonetic": "/doctor/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Doctor trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở bệnh viện",
+          "exampleEn": "I like doctor.",
+          "exampleVi": "Mình thích doctor.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u16_02",
+          "word": "nurse",
+          "phonetic": "/nurse/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Nurse trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở bệnh viện",
+          "exampleEn": "I like nurse.",
+          "exampleVi": "Mình thích nurse.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u16_03",
+          "word": "hospital",
+          "phonetic": "/hospital/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Hospital trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở bệnh viện",
+          "exampleEn": "I like hospital.",
+          "exampleVi": "Mình thích hospital.",
+          "emoji": "🎈"
+        },
+        {
+          "id": "g2_u16_04",
+          "word": "healthy",
+          "phonetic": "/healthy/",
+          "wordType": "Danh từ / Động từ",
+          "meaning": "Healthy trong tiếng Anh",
+          "hint": "Từ vựng bài 16: Ở bệnh viện",
+          "exampleEn": "I like healthy.",
+          "exampleVi": "Mình thích healthy.",
+          "emoji": "🎈"
+        }
+      ],
+      "grammar": {
+        "title": "Mẫu câu: Bày tỏ sở thích và sự có mặt với 'doctor'",
+        "ruleVi": "Cấu trúc 'I have...' (Tôi có) hoặc 'I like...' (Tôi thích).",
+        "formula": "I have / I like + Danh từ",
+        "quickTip": "Chú ý âm ngữ âm /h/ & /d/.",
+        "quiz": [
+          {
+            "question": "I like ______.",
+            "options": [
+              "doctor",
+              "table",
+              "chair",
+              "bed"
+            ],
+            "answerIndex": 0,
+            "explain": "Chọn từ 'doctor' theo chủ đề bài học."
+          }
+        ]
+      },
+      "pronunciation": {
+        "pair": "/h/ & /d/",
+        "title": "Luyện âm /h/ & /d/",
+        "sound1": {
+          "symbol": "/h/",
+          "name": "Âm /h/ & /d/",
+          "words": [
+            "doctor",
+            "nurse"
+          ]
+        },
+        "sound2": {
+          "symbol": "/t/",
+          "name": "Âm /t/",
+          "words": [
+            "two",
+            "ten"
+          ]
+        },
+        "practiceQuiz": [
+          {
+            "word": "doctor",
+            "correctSound": "/h/",
+            "options": [
+              "/h/",
+              "/m/"
+            ],
+            "meaningVi": "doctor"
+          }
+        ],
+        "tongueTwister": "Peter likes doctor at the party."
+      },
+      "speaking": {
+        "targetSentence": "I would like some doctor, please.",
+        "phonetic": "/aɪ wʊd laɪk sʌm doctor pliːz/",
+        "meaningVi": "Cho mình một chút doctor với, cảm ơn bạn.",
+        "situationalTopic": "Giao tiếp thường ngày: Ở bệnh viện",
+        "dialogueTitle": "Lesson 1: At the hospital",
+        "dialogueContext": "Các bạn nhỏ cùng nhau trò chuyện về Ở bệnh viện.",
+        "dialogueLines": [
+          {
+            "id": "g2_u16_d1",
+            "speaker": "Mai",
+            "sentenceEn": "Do you like doctor?",
+            "phonetic": "/duː juː laɪk doctor/",
+            "meaningVi": "Bạn có thích doctor không?",
+            "tipsVi": "Lên giọng cuối câu hỏi."
+          },
+          {
+            "id": "g2_u16_d2",
+            "speaker": "Nam",
+            "sentenceEn": "Yes, I do! It is yummy.",
+            "phonetic": "/jes aɪ duː ɪt ɪz ˈjʌmi/",
+            "meaningVi": "Có chứ! Rất ngon.",
+            "tipsVi": "Hào hứng vui vẻ."
+          }
+        ],
+        "challenges": [
+          {
+            "sentenceEn": "Pass me the doctor, please.",
+            "phonetic": "/pɑːs miː ðə doctor pliːz/",
+            "meaningVi": "Làm ơn chuyền cho mình doctor nhé."
+          }
+        ]
+      },
+      "listening": {
+        "topic": "Lắng nghe bạn Nam nói về Ở bệnh viện",
+        "transcript": "Hi, I am Nam. Today is a sunny day. I am having fun with doctor.",
+        "question": "What is Nam enjoying?",
+        "options": [
+          "Doctor",
+          "Juice",
+          "Water",
+          "Milk"
+        ],
+        "answerIndex": 0
+      },
+      "reading": {
+        "title": "My Day: At the hospital",
+        "passage": "Welcome to our at the hospital. We have delicious doctor and games. Everyone is smiling and happy.",
+        "translation": "Chào mừng bạn đến với ở bệnh viện của chúng mình. Chúng mình có doctor rất ngon và nhiều trò chơi.",
+        "questions": [
+          {
+            "id": "g2_u16_r1",
+            "type": "multiple_choice",
+            "question": "What delicious thing do they have?",
+            "options": [
+              "Doctor",
+              "Tea",
+              "Coffee",
+              "Fish"
+            ],
+            "answerIndex": 0,
+            "explain": "Trong bài có nhắc đến doctor."
+          }
+        ]
+      },
+      "writing": {
+        "correctSentence": "I like doctor very much",
+        "meaningVi": "Mình rất thích doctor.",
+        "items": [
+          {
+            "id": "g2_u16_w1",
+            "type": "unscramble",
+            "scrambledWords": [
+              "I",
+              "like",
+              "doctor",
+              "very",
+              "much"
+            ],
+            "correctSentence": "I like doctor very much",
+            "meaningVi": "Mình rất thích doctor.",
+            "hint": "Bắt đầu bằng chữ 'I'..."
+          }
+        ]
+      }
+    }
+  ]
+}

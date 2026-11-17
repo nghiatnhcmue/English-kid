@@ -24,6 +24,7 @@ export default defineConfig({
         ],
       },
       workbox: {
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         skipWaiting: true,
         clientsClaim: true,
         cleanupOutdatedCaches: true,
@@ -76,8 +77,17 @@ export default defineConfig({
   ],
   base: '/',
   build: {
-    // model-viewer là chunk tải lười, chỉ dùng khi từ có mô hình 3D
-    chunkSizeWarningLimit: 1200,
+    // Tách riêng chunk dữ liệu 12 khối và nới giới hạn cảnh báo
+    chunkSizeWarningLimit: 3000,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('src/data/grades/')) {
+            return 'curriculum-grades';
+          }
+        },
+      },
+    },
   },
   test: {
     environment: 'node',
