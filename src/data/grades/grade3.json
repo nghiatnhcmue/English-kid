@@ -17,6 +17,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 6 – 11",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u1_01",
@@ -225,6 +226,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 12 – 17",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u2_01",
@@ -433,6 +435,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 18 – 23",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u3_01",
@@ -652,6 +655,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 24 – 29",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u4_01",
@@ -882,6 +886,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 30 – 35",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u5_01",
@@ -1090,6 +1095,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 40 – 45",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u6_01",
@@ -1309,6 +1315,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 46 – 51",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u7_01",
@@ -1528,6 +1535,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 52 – 57",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u8_01",
@@ -1747,6 +1755,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 58 – 63",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u9_01",
@@ -1977,6 +1986,7 @@
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 64 – 69",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u10_01",
@@ -2196,6 +2206,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 6 – 11",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u11_01",
@@ -2415,6 +2426,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 12 – 17",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u12_01",
@@ -2634,6 +2646,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 18 – 23",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u13_01",
@@ -2853,6 +2866,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 24 – 29",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u14_01",
@@ -3072,6 +3086,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 30 – 35",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u15_01",
@@ -3302,6 +3317,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 40 – 45",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u16_01",
@@ -3532,6 +3548,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 46 – 51",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u17_01",
@@ -3762,6 +3779,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 52 – 57",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u18_01",
@@ -3981,6 +3999,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 58 – 63",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u19_01",
@@ -4200,6 +4219,7 @@
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 64 – 69",
+      "bookId": "sgk-1",
       "vocabularies": [
         {
           "id": "g3_u20_01",

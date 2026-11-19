@@ -20,7 +20,17 @@ const norm = (s) => String(s ?? '').trim().toLowerCase();
 export function shuffleOptions(q, salt = '') {
   if (!q || !Array.isArray(q.options) || q.options.length < 2) return q;
   let answerIndex = Number.isInteger(q.answerIndex) ? q.answerIndex : -1;
-  if (answerIndex < 0 && q.blankWord) answerIndex = q.options.findIndex((o) => norm(o) === norm(q.blankWord));
+  if (answerIndex < 0 && q.blankWord) {
+    answerIndex = q.options.findIndex((o) => norm(o) === norm(q.blankWord));
+  }
+  if (answerIndex < 0 && q.answer !== undefined) {
+    if (Number.isInteger(q.answer)) answerIndex = q.answer;
+    else answerIndex = q.options.findIndex((o) => norm(o) === norm(q.answer));
+  }
+  if (answerIndex < 0 && q.correctAnswer !== undefined) {
+    if (Number.isInteger(q.correctAnswer)) answerIndex = q.correctAnswer;
+    else answerIndex = q.options.findIndex((o) => norm(o) === norm(q.correctAnswer));
+  }
   if (answerIndex < 0 || answerIndex >= q.options.length) return q;
   const rng = createRng(hashSeed(`${salt}|${q.question ?? q.sentence ?? ''}|${q.options.join('|')}`));
   const order = shuffle(

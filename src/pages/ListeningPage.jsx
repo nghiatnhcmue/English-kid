@@ -35,9 +35,9 @@ export default function ListeningPage() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <PageHeader
           title="👂 Phòng Luyện Nghe Hội Thoại SGK"
-          subtitle="12 bài hội thoại học đường SGK Global Success 6 (Skills 2) · Có hỗ trợ nghe chậm 0.65x cho người mới học"
+          subtitle={`${units.length} bài hội thoại học đường SGK Global Success (Skills 2) · Có hỗ trợ nghe chậm 0.65x cho người mới học`}
           backTo={`/unit/${selectedUnitId}`}
-          backLabel={`Về Unit ${selectedUnitId}`}
+          backLabel={`Về Unit ${currentUnit?.unit || selectedUnitId}`}
         />
         <Button3D
           to={`/unit/${selectedUnitId}`}
@@ -45,7 +45,7 @@ export default function ListeningPage() {
           className="px-4 py-2 text-sm hidden sm:inline-flex"
         >
           <BookOpen className="h-4 w-4" />
-          <span>Về bài học Unit {selectedUnitId}</span>
+          <span>Về bài học Unit ${currentUnit?.unit || selectedUnitId}</span>
         </Button3D>
       </div>
 
@@ -62,10 +62,10 @@ export default function ListeningPage() {
         </div>
       </section>
 
-      {/* Thanh chọn 12 Unit dạng cuộn ngang */}
+      {/* Thanh chọn Unit dạng cuộn ngang */}
       <nav aria-label="Chọn bài học luyện nghe" className="flex flex-col gap-2">
         <span className="text-xs font-black uppercase text-ink-soft tracking-wider">
-          Chọn Unit để luyện nghe (12 bài học):
+          Chọn bài học để luyện nghe ({units.length} bài học):
         </span>
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
           {units.map((u) => {
@@ -82,7 +82,7 @@ export default function ListeningPage() {
                 }`}
               >
                 <span className="text-lg leading-none" aria-hidden>{u.emoji}</span>
-                <span>Unit {u.unitId}</span>
+                <span>Unit {u.unit || u.unitId}</span>
               </button>
             );
           })}

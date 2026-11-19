@@ -58,7 +58,7 @@ export default function UnitPage() {
   return (
     <div className="flex flex-col gap-6">
       <PageHeader
-        title={`${unit.emoji} Unit ${unit.unitId}: ${unit.titleEn}`}
+        title={`${unit.emoji} Unit ${unit.unit || unit.unitId}: ${unit.titleEn || unit.title}`}
         subtitle={unit.titleVi}
         backTo="/"
         backLabel={t.nav.home}

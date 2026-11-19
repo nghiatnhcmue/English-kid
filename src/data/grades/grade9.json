@@ -17,93 +17,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 8 – 17",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u1_01",
           "word": "artisan",
-          "phonetic": "/artisan/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Artisan - chủ đề Cộng đồng địa phương",
-          "hint": "Tiếng Anh 9 Global Success - Unit 1",
-          "exampleEn": "We explore artisan in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về artisan trong tiết học tiếng Anh.",
+          "phonetic": "/ˌɑːtɪˈzæn/",
+          "wordType": "Danh từ",
+          "meaning": "Nghệ nhân",
+          "hint": "Thợ thủ công tay nghề giỏi",
+          "exampleEn": "Bat Trang artisans create exquisite ceramic bowls.",
+          "exampleVi": "Các nghệ nhân Bát Tràng tạo ra những chiếc bát gốm sứ tinh xảo.",
           "emoji": "✨"
         },
         {
           "id": "g9_u1_02",
           "word": "handicraft",
-          "phonetic": "/handicraft/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Handicraft - chủ đề Cộng đồng địa phương",
-          "hint": "Tiếng Anh 9 Global Success - Unit 1",
-          "exampleEn": "We explore handicraft in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về handicraft trong tiết học tiếng Anh.",
+          "phonetic": "/ˈhændikrɑːft/",
+          "wordType": "Danh từ",
+          "meaning": "Hàng thủ công mỹ nghệ",
+          "hint": "Sản phẩm làm thủ công khéo léo",
+          "exampleEn": "Foreign tourists admire Vietnamese lacquerware handicrafts.",
+          "exampleVi": "Khách du lịch nước ngoài trầm trồ trước các món đồ thủ công sơn mài Việt Nam.",
           "emoji": "✨"
         },
         {
           "id": "g9_u1_03",
           "word": "pottery",
-          "phonetic": "/pottery/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Pottery - chủ đề Cộng đồng địa phương",
-          "hint": "Tiếng Anh 9 Global Success - Unit 1",
-          "exampleEn": "We explore pottery in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về pottery trong tiết học tiếng Anh.",
+          "phonetic": "/ˈpɒtəri/",
+          "wordType": "Danh từ",
+          "meaning": "Đồ gốm",
+          "hint": "Sản phẩm nung từ đất sét",
+          "exampleEn": "Pottery making has thrived in this village for five centuries.",
+          "exampleVi": "Nghề làm đồ gốm đã phát triển rực rỡ ở ngôi làng này suốt 5 thế kỷ.",
           "emoji": "✨"
         },
         {
           "id": "g9_u1_04",
           "word": "workshop",
-          "phonetic": "/workshop/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Workshop - chủ đề Cộng đồng địa phương",
-          "hint": "Tiếng Anh 9 Global Success - Unit 1",
-          "exampleEn": "We explore workshop in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về workshop trong tiết học tiếng Anh.",
+          "phonetic": "/ˈwɜːkʃɒp/",
+          "wordType": "Danh từ",
+          "meaning": "Xưởng thủ công / Buổi tập huấn",
+          "hint": "Nơi thợ gia công sản xuất",
+          "exampleEn": "The master opened a carpentry workshop to train young villagers.",
+          "exampleVi": "Vị nghệ nhân đã mở một xưởng mộc để đào tạo cho các thanh niên trong làng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u1_05",
           "word": "suburb",
-          "phonetic": "/suburb/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Suburb - chủ đề Cộng đồng địa phương",
-          "hint": "Tiếng Anh 9 Global Success - Unit 1",
-          "exampleEn": "We explore suburb in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về suburb trong tiết học tiếng Anh.",
+          "phonetic": "/ˈsʌbɜːb/",
+          "wordType": "Danh từ",
+          "meaning": "Vùng ngoại ô",
+          "hint": "Khu vực ven rìa thành phố",
+          "exampleEn": "Many families prefer living in the quiet suburbs of Ha Noi.",
+          "exampleVi": "Nhiều gia đình thích sinh sống ở vùng ngoại ô yên tĩnh của Hà Nội.",
           "emoji": "✨"
         },
         {
           "id": "g9_u1_06",
           "word": "facility",
-          "phonetic": "/facility/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Facility - chủ đề Cộng đồng địa phương",
-          "hint": "Tiếng Anh 9 Global Success - Unit 1",
-          "exampleEn": "We explore facility in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về facility trong tiết học tiếng Anh.",
+          "phonetic": "/fəˈsɪləti/",
+          "wordType": "Danh từ",
+          "meaning": "Cơ sở vật chất, tiện ích",
+          "hint": "Trang thiết bị phục vụ đời sống",
+          "exampleEn": "The local community center provides sports facilities for youth.",
+          "exampleVi": "Nhà văn hóa cộng đồng địa phương cung cấp các cơ sở vật chất thể thao cho giới trẻ.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Question words before to-infinitives, Phrasal verbs",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Question words before to-infinitives, Phrasal verbs.",
-        "formula": "Question words before to-infinitives, Phrasal verbs",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Từ để hỏi đứng trước To-Infinitive & Cụm động từ (Phrasal Verbs)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 1: Từ để hỏi đứng trước To-Infinitive & Cụm động từ (Phrasal Verbs).",
+        "formula": "Từ để hỏi đứng trước To-Infinitive & Cụm động từ (Phrasal Verbs)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 1?",
-            "options": [
-              "We learn about artisan.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Local Community:",
+            "question": "Which word from Unit 1 means 'Nghệ nhân'?",
             "options": [
               "artisan",
               "banana",
@@ -111,7 +101,18 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'artisan' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'artisan' có phiên âm /ˌɑːtɪˈzæn/ mang nghĩa là 'Nghệ nhân'."
+          },
+          {
+            "question": "Choose the correct sentence related to Local Community:",
+            "options": [
+              "Students learn about artisan in Unit 1.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
@@ -122,13 +123,12 @@
           "symbol": "/aʊ/",
           "name": "Âm /aʊ/",
           "words": [
-            "artisan",
-            "handicraft"
+            "artisan"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -142,15 +142,17 @@
               "/aʊ/",
               "/k/"
             ],
-            "meaningVi": "artisan"
+            "meaningVi": "Nghệ nhân",
+            "phonetic": "/ˌɑːtɪˈzæn/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice artisan perfectly."
+        "tongueTwister": "Smart students pronounce artisan perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss cộng đồng địa phương and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs artisan/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về cộng đồng địa phương và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing cộng đồng địa phương in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ artisan təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về cộng đồng địa phương trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Cộng đồng địa phương",
         "dialogueTitle": "Getting Started: Local Community",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Cộng đồng địa phương trong bài học SGK.",
@@ -158,9 +160,9 @@
           {
             "id": "g9_u1_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our local community project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our local community project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án cộng đồng địa phương chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án cộng đồng địa phương chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -168,7 +170,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about artisan.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về artisan.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về nghệ nhân.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -190,20 +192,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding cộng đồng địa phương broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding cộng đồng địa phương broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về cộng đồng địa phương giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về cộng đồng địa phương giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using artisan in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng artisan trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ artisan trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Cộng đồng địa phương",
-        "transcript": "Welcome to our podcast about Local Community. Today our guest speaker explains how artisan affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Local Community. Today our guest speaker explains how artisan affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Local Community",
@@ -215,21 +223,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Local Community",
-        "passage": "Throughout the country, students are learning about cộng đồng địa phương. This topic provides essential insights into social development. Experts emphasize that artisan plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về cộng đồng địa phương. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng artisan đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore cộng đồng địa phương. This lesson provides essential knowledge about modern life. Educators emphasize that understanding artisan (nghệ nhân) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về cộng đồng địa phương. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu nghệ nhân (artisan) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u1_r1",
             "type": "multiple_choice",
-            "question": "What vital role does artisan play according to experts?",
+            "question": "What vital role does understanding artisan play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -243,15 +251,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Local",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "artisan"
             ],
-            "correctSentence": "We are discussing Local in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Local trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about artisan",
+            "meaningVi": "Chúng mình đang tìm hiểu về nghệ nhân.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -265,93 +271,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 18 – 27",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u2_01",
           "word": "metro",
-          "phonetic": "/metro/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Metro - chủ đề Cuộc sống thành thị",
-          "hint": "Tiếng Anh 9 Global Success - Unit 2",
-          "exampleEn": "We explore metro in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về metro trong tiết học tiếng Anh.",
+          "phonetic": "/ˈmetrəʊ/",
+          "wordType": "Danh từ",
+          "meaning": "Tàu điện ngầm, đường sắt đô thị",
+          "hint": "Hệ thống tàu điện trong thành phố",
+          "exampleEn": "The new metro system helps commuters avoid morning traffic jams.",
+          "exampleVi": "Hệ thống tàu điện đô thị mới giúp người đi làm tránh được cảnh tắc đường buổi sáng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u2_02",
           "word": "bustling",
-          "phonetic": "/bustling/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Bustling - chủ đề Cuộc sống thành thị",
-          "hint": "Tiếng Anh 9 Global Success - Unit 2",
-          "exampleEn": "We explore bustling in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về bustling trong tiết học tiếng Anh.",
+          "phonetic": "/ˈbʌslɪŋ/",
+          "wordType": "Tính từ",
+          "meaning": "Nhộn nhịp, hối hả náo nhiệt",
+          "hint": "Đông vui tấp nập người qua lại",
+          "exampleEn": "Ben Thanh Market is always bustling with shoppers and vendors.",
+          "exampleVi": "Chợ Bến Thành luôn nhộn nhịp người mua sắm và những người bán hàng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u2_03",
           "word": "skyscraper",
-          "phonetic": "/skyscraper/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Skyscraper - chủ đề Cuộc sống thành thị",
-          "hint": "Tiếng Anh 9 Global Success - Unit 2",
-          "exampleEn": "We explore skyscraper in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về skyscraper trong tiết học tiếng Anh.",
+          "phonetic": "/ˈskaɪskreɪpə/",
+          "wordType": "Danh từ",
+          "meaning": "Tòa nhà chọc trời",
+          "hint": "Tòa tháp cao vút tầng mây",
+          "exampleEn": "Landmark 81 is the tallest skyscraper in Ho Chi Minh City.",
+          "exampleVi": "Landmark 81 là tòa nhà chọc trời cao nhất tại Thành phố Hồ Chí Minh.",
           "emoji": "✨"
         },
         {
           "id": "g9_u2_04",
           "word": "congestion",
-          "phonetic": "/congestion/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Congestion - chủ đề Cuộc sống thành thị",
-          "hint": "Tiếng Anh 9 Global Success - Unit 2",
-          "exampleEn": "We explore congestion in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về congestion trong tiết học tiếng Anh.",
+          "phonetic": "/kənˈdʒestʃən/",
+          "wordType": "Danh từ",
+          "meaning": "Sự ùn tắc, nghẽn xe",
+          "hint": "Tình trạng đông nghẹt cản trở giao thông",
+          "exampleEn": "Expanding public transit is vital to alleviate city congestion.",
+          "exampleVi": "Mở rộng giao thông công cộng là điều cấp thiết để giảm bớt ùn tắc đô thị.",
           "emoji": "✨"
         },
         {
           "id": "g9_u2_05",
           "word": "urban",
-          "phonetic": "/urban/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Urban - chủ đề Cuộc sống thành thị",
-          "hint": "Tiếng Anh 9 Global Success - Unit 2",
-          "exampleEn": "We explore urban in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về urban trong tiết học tiếng Anh.",
+          "phonetic": "/ˈɜːbən/",
+          "wordType": "Tính từ",
+          "meaning": "Thuộc đô thị, thành phố",
+          "hint": "Liên quan đến khu vực thành thị",
+          "exampleEn": "Urban planning ensures sustainable development for modern cities.",
+          "exampleVi": "Quy hoạch đô thị bảo đảm sự phát triển bền vững cho các thành phố hiện đại.",
           "emoji": "✨"
         },
         {
           "id": "g9_u2_06",
           "word": "liveable",
-          "phonetic": "/liveable/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Liveable - chủ đề Cuộc sống thành thị",
-          "hint": "Tiếng Anh 9 Global Success - Unit 2",
-          "exampleEn": "We explore liveable in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về liveable trong tiết học tiếng Anh.",
+          "phonetic": "/ˈlɪvəbl/",
+          "wordType": "Tính từ",
+          "meaning": "Đáng sống",
+          "hint": "Có môi trường và điều kiện sống lý tưởng",
+          "exampleEn": "Da Nang is widely regarded as the most liveable city in Viet Nam.",
+          "exampleVi": "Đà Nẵng được đông đảo mọi người xem là thành phố đáng sống nhất ở Việt Nam.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Double comparatives: The more... the better...",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Double comparatives: The more... the better....",
-        "formula": "Double comparatives: The more... the better...",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Cấu trúc so sánh kép (Double Comparatives: The more... the better...)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 2: Cấu trúc so sánh kép (Double Comparatives: The more... the better...).",
+        "formula": "Cấu trúc so sánh kép (Double Comparatives: The more... the better...)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 2?",
-            "options": [
-              "We learn about metro.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to City Life:",
+            "question": "Which word from Unit 2 means 'Tàu điện ngầm, đường sắt đô thị'?",
             "options": [
               "metro",
               "banana",
@@ -359,7 +355,18 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'metro' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'metro' có phiên âm /ˈmetrəʊ/ mang nghĩa là 'Tàu điện ngầm, đường sắt đô thị'."
+          },
+          {
+            "question": "Choose the correct sentence related to City Life:",
+            "options": [
+              "Students learn about metro in Unit 2.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
@@ -370,13 +377,12 @@
           "symbol": "/h/",
           "name": "Âm /h/",
           "words": [
-            "metro",
-            "bustling"
+            "metro"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -390,15 +396,17 @@
               "/h/",
               "/k/"
             ],
-            "meaningVi": "metro"
+            "meaningVi": "Tàu điện ngầm, đường sắt đô thị",
+            "phonetic": "/ˈmetrəʊ/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice metro perfectly."
+        "tongueTwister": "Smart students pronounce metro perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss cuộc sống thành thị and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs metro/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về cuộc sống thành thị và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing cuộc sống thành thị in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ metro təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về cuộc sống thành thị trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Cuộc sống thành thị",
         "dialogueTitle": "Getting Started: City Life",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Cuộc sống thành thị trong bài học SGK.",
@@ -406,9 +414,9 @@
           {
             "id": "g9_u2_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our city life project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our city life project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án cuộc sống thành thị chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án cuộc sống thành thị chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -416,7 +424,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about metro.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về metro.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về tàu điện ngầm, đường sắt đô thị.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -438,20 +446,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding cuộc sống thành thị broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding cuộc sống thành thị broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về cuộc sống thành thị giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về cuộc sống thành thị giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using metro in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng metro trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ metro trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Cuộc sống thành thị",
-        "transcript": "Welcome to our podcast about City Life. Today our guest speaker explains how metro affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about City Life. Today our guest speaker explains how metro affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "City Life",
@@ -463,21 +477,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: City Life",
-        "passage": "Throughout the country, students are learning about cuộc sống thành thị. This topic provides essential insights into social development. Experts emphasize that metro plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về cuộc sống thành thị. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng metro đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore cuộc sống thành thị. This lesson provides essential knowledge about modern life. Educators emphasize that understanding metro (tàu điện ngầm, đường sắt đô thị) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về cuộc sống thành thị. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu tàu điện ngầm, đường sắt đô thị (metro) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u2_r1",
             "type": "multiple_choice",
-            "question": "What vital role does metro play according to experts?",
+            "question": "What vital role does understanding metro play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -491,15 +505,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "City",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "metro"
             ],
-            "correctSentence": "We are discussing City in our project",
-            "meaningVi": "Chúng mình đang thảo luận về City trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about metro",
+            "meaningVi": "Chúng mình đang tìm hiểu về tàu điện ngầm, đường sắt đô thị.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -513,82 +525,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 28 – 37",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u3_01",
           "word": "well-balanced",
-          "phonetic": "/well-balanced/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Well-balanced - chủ đề Lối sống lành mạnh cho thanh thiếu niên",
-          "hint": "Tiếng Anh 9 Global Success - Unit 3",
-          "exampleEn": "We explore well-balanced in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về well-balanced trong tiết học tiếng Anh.",
+          "phonetic": "/ˌwel ˈbælənst/",
+          "wordType": "Tính từ",
+          "meaning": "Cân bằng, hài hòa",
+          "hint": "Phân bổ hợp lý các mặt",
+          "exampleEn": "A well-balanced routine includes study, rest, and sports.",
+          "exampleVi": "Một thời gian biểu cân bằng bao gồm việc học tập, nghỉ ngơi và chơi thể thao.",
           "emoji": "✨"
         },
         {
           "id": "g9_u3_02",
           "word": "anxiety",
-          "phonetic": "/anxiety/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Anxiety - chủ đề Lối sống lành mạnh cho thanh thiếu niên",
-          "hint": "Tiếng Anh 9 Global Success - Unit 3",
-          "exampleEn": "We explore anxiety in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về anxiety trong tiết học tiếng Anh.",
+          "phonetic": "/æŋˈzaɪəti/",
+          "wordType": "Danh từ",
+          "meaning": "Sự lo âu, âu lo",
+          "hint": "Cảm giác bồn chồn lo lắng",
+          "exampleEn": "Deep breathing exercises help ease anxiety before exam periods.",
+          "exampleVi": "Các bài tập hít thở sâu giúp làm dịu bớt sự lo âu trước các kỳ thi cử.",
           "emoji": "✨"
         },
         {
           "id": "g9_u3_03",
           "word": "counsellor",
-          "phonetic": "/counsellor/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Counsellor - chủ đề Lối sống lành mạnh cho thanh thiếu niên",
-          "hint": "Tiếng Anh 9 Global Success - Unit 3",
-          "exampleEn": "We explore counsellor in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về counsellor trong tiết học tiếng Anh.",
+          "phonetic": "/ˈkaʊnsələ/",
+          "wordType": "Danh từ",
+          "meaning": "Chuyên viên tư vấn tâm lý",
+          "hint": "Người hỗ trợ định hướng tâm lý",
+          "exampleEn": "School counsellors provide helpful guidance for stressed teens.",
+          "exampleVi": "Các chuyên viên tư vấn học đường mang lại những lời khuyên bổ ích cho học sinh bị căng thẳng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u3_04",
           "word": "physical health",
-          "phonetic": "/physical health/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Physical health - chủ đề Lối sống lành mạnh cho thanh thiếu niên",
-          "hint": "Tiếng Anh 9 Global Success - Unit 3",
-          "exampleEn": "We explore physical health in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về physical health trong tiết học tiếng Anh.",
+          "phonetic": "/ˈfɪzɪkl helθ/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Sức khỏe thể chất",
+          "hint": "Trạng thái lành mạnh của cơ thể",
+          "exampleEn": "Regular swimming builds cardiovascular strength and physical health.",
+          "exampleVi": "Bơi lội thường xuyên giúp tăng cường hệ tim mạch và sức khỏe thể chất.",
           "emoji": "✨"
         },
         {
           "id": "g9_u3_05",
           "word": "sleep deprivation",
-          "phonetic": "/sleep deprivation/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Sleep deprivation - chủ đề Lối sống lành mạnh cho thanh thiếu niên",
-          "hint": "Tiếng Anh 9 Global Success - Unit 3",
-          "exampleEn": "We explore sleep deprivation in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về sleep deprivation trong tiết học tiếng Anh.",
+          "phonetic": "/sliːp ˌdeprɪˈveɪʃn/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Tình trạng thiếu ngủ",
+          "hint": "Không ngủ đủ số giờ cần thiết",
+          "exampleEn": "Chronic sleep deprivation weakens focus and memorisation.",
+          "exampleVi": "Thiếu ngủ kéo dài làm suy giảm khả năng tập trung và ghi nhớ.",
+          "emoji": "✨"
+        },
+        {
+          "id": "g9_u3_06",
+          "word": "mindfulness",
+          "phonetic": "/ˈmaɪndflnəs/",
+          "wordType": "Danh từ",
+          "meaning": "Sự chú tâm, chánh niệm",
+          "hint": "Trạng thái nhận biết tỉnh thức",
+          "exampleEn": "Practicing mindfulness reduces academic stress effectively.",
+          "exampleVi": "Thực hành sự chú tâm giúp xua tan áp lực bài vở một cách hiệu quả.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Modal verbs in first conditional",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Modal verbs in first conditional.",
-        "formula": "Modal verbs in first conditional",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Động từ khuyết thiếu trong câu điều kiện loại 1",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 3: Động từ khuyết thiếu trong câu điều kiện loại 1.",
+        "formula": "Động từ khuyết thiếu trong câu điều kiện loại 1",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 3?",
-            "options": [
-              "We learn about well-balanced.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Healthy Living for Teens:",
+            "question": "Which word from Unit 3 means 'Cân bằng, hài hòa'?",
             "options": [
               "well-balanced",
               "banana",
@@ -596,24 +609,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'well-balanced' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'well-balanced' có phiên âm /ˌwel ˈbælənst/ mang nghĩa là 'Cân bằng, hài hòa'."
+          },
+          {
+            "question": "Choose the correct sentence related to Healthy Living for Teens:",
+            "options": [
+              "Students learn about well-balanced in Unit 3.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Stress on content words",
-        "title": "Luyện ngữ âm: Stress on content words",
+        "pair": "Trọng âm từ chỉ nội dung (Content Words)",
+        "title": "Luyện ngữ âm: Trọng âm từ chỉ nội dung (Content Words)",
         "sound1": {
-          "symbol": "Stress",
-          "name": "Âm Stress",
+          "symbol": "Trọng",
+          "name": "Âm Trọng",
           "words": [
-            "well-balanced",
-            "anxiety"
+            "well-balanced"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -622,20 +645,22 @@
         "practiceQuiz": [
           {
             "word": "well-balanced",
-            "correctSound": "Stress",
+            "correctSound": "Trọng",
             "options": [
-              "Stress",
+              "Trọng",
               "/k/"
             ],
-            "meaningVi": "well-balanced"
+            "meaningVi": "Cân bằng, hài hòa",
+            "phonetic": "/ˌwel ˈbælənst/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice well-balanced perfectly."
+        "tongueTwister": "Smart students pronounce well-balanced perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss lối sống lành mạnh cho thanh thiếu niên and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs well-balanced/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về lối sống lành mạnh cho thanh thiếu niên và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing lối sống lành mạnh cho thanh thiếu niên in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ well-balanced təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về lối sống lành mạnh cho thanh thiếu niên trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Lối sống lành mạnh cho thanh thiếu niên",
         "dialogueTitle": "Getting Started: Healthy Living for Teens",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Lối sống lành mạnh cho thanh thiếu niên trong bài học SGK.",
@@ -643,9 +668,9 @@
           {
             "id": "g9_u3_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our healthy living for teens project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our healthy living for teens project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án lối sống lành mạnh cho thanh thiếu niên chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án lối sống lành mạnh cho thanh thiếu niên chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -653,7 +678,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about well-balanced.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về well-balanced.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về cân bằng, hài hòa.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -675,20 +700,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding lối sống lành mạnh cho thanh thiếu niên broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding lối sống lành mạnh cho thanh thiếu niên broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về lối sống lành mạnh cho thanh thiếu niên giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về lối sống lành mạnh cho thanh thiếu niên giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using well-balanced in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng well-balanced trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ well-balanced trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Lối sống lành mạnh cho thanh thiếu niên",
-        "transcript": "Welcome to our podcast about Healthy Living for Teens. Today our guest speaker explains how well-balanced affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Healthy Living for Teens. Today our guest speaker explains how well-balanced affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Healthy Living for Teens",
@@ -700,21 +731,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Healthy Living for Teens",
-        "passage": "Throughout the country, students are learning about lối sống lành mạnh cho thanh thiếu niên. This topic provides essential insights into social development. Experts emphasize that well-balanced plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về lối sống lành mạnh cho thanh thiếu niên. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng well-balanced đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore lối sống lành mạnh cho thanh thiếu niên. This lesson provides essential knowledge about modern life. Educators emphasize that understanding well-balanced (cân bằng, hài hòa) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về lối sống lành mạnh cho thanh thiếu niên. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu cân bằng, hài hòa (well-balanced) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u3_r1",
             "type": "multiple_choice",
-            "question": "What vital role does well-balanced play according to experts?",
+            "question": "What vital role does understanding well-balanced play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -728,15 +759,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Healthy",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "well-balanced"
             ],
-            "correctSentence": "We are discussing Healthy in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Healthy trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about well-balanced",
+            "meaningVi": "Chúng mình đang tìm hiểu về cân bằng, hài hòa.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -750,93 +779,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 38 – 47",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u4_01",
           "word": "preservation",
-          "phonetic": "/preservation/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Preservation - chủ đề Nhớ về quá khứ",
-          "hint": "Tiếng Anh 9 Global Success - Unit 4",
-          "exampleEn": "We explore preservation in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về preservation trong tiết học tiếng Anh.",
+          "phonetic": "/ˌprezəˈveɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Sự bảo tồn, gìn giữ",
+          "hint": "Giữ cho không bị mai một",
+          "exampleEn": "The preservation of historic relics preserves national pride.",
+          "exampleVi": "Việc bảo tồn các di tích lịch sử gìn giữ niềm tự hào của dân tộc.",
           "emoji": "✨"
         },
         {
           "id": "g9_u4_02",
           "word": "generation",
-          "phonetic": "/generation/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Generation - chủ đề Nhớ về quá khứ",
-          "hint": "Tiếng Anh 9 Global Success - Unit 4",
-          "exampleEn": "We explore generation in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về generation trong tiết học tiếng Anh.",
+          "phonetic": "/ˌdʒenəˈreɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Thế hệ",
+          "hint": "Các tầng lớp thế hệ con người",
+          "exampleEn": "Our grandparents' generation endured hardship during wartime.",
+          "exampleVi": "Thế hệ ông bà của chúng ta đã kiên cường vượt qua gian nan trong thời chiến.",
           "emoji": "✨"
         },
         {
           "id": "g9_u4_03",
           "word": "barefoot",
-          "phonetic": "/barefoot/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Barefoot - chủ đề Nhớ về quá khứ",
-          "hint": "Tiếng Anh 9 Global Success - Unit 4",
-          "exampleEn": "We explore barefoot in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về barefoot trong tiết học tiếng Anh.",
+          "phonetic": "/ˈbeəfʊt/",
+          "wordType": "Tính từ/Trạng từ",
+          "meaning": "Chân trần",
+          "hint": "Không đi giày dép",
+          "exampleEn": "Decades ago, village children often walked barefoot to school.",
+          "exampleVi": "Nhiều thập kỷ trước, các cô bé cậu bé trong làng thường đi chân trần tới trường.",
           "emoji": "✨"
         },
         {
           "id": "g9_u4_04",
           "word": "illiteracy",
-          "phonetic": "/illiteracy/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Illiteracy - chủ đề Nhớ về quá khứ",
-          "hint": "Tiếng Anh 9 Global Success - Unit 4",
-          "exampleEn": "We explore illiteracy in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về illiteracy trong tiết học tiếng Anh.",
+          "phonetic": "/ɪˈlɪtərəsi/",
+          "wordType": "Danh từ",
+          "meaning": "Nạn mù chữ",
+          "hint": "Tình trạng không biết chữ",
+          "exampleEn": "National campaigns successfully eradicated illiteracy across remote districts.",
+          "exampleVi": "Các chiến dịch toàn quốc đã xóa mù chữ thành công khắp các huyện vùng sâu vùng xa.",
           "emoji": "✨"
         },
         {
           "id": "g9_u4_05",
           "word": "deep-rooted",
-          "phonetic": "/deep-rooted/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Deep-rooted - chủ đề Nhớ về quá khứ",
-          "hint": "Tiếng Anh 9 Global Success - Unit 4",
-          "exampleEn": "We explore deep-rooted in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về deep-rooted trong tiết học tiếng Anh.",
+          "phonetic": "/ˌdiːp ˈruːtɪd/",
+          "wordType": "Tính từ",
+          "meaning": "Bắt rễ sâu xa, lâu đời",
+          "hint": "In sâu vào tâm thức",
+          "exampleEn": "Vietnamese people have a deep-rooted tradition of filial piety.",
+          "exampleVi": "Người Việt Nam có truyền thống hiếu thảo bắt rễ sâu xa tự ngàn đời.",
           "emoji": "✨"
         },
         {
           "id": "g9_u4_06",
           "word": "historic",
-          "phonetic": "/historic/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Historic - chủ đề Nhớ về quá khứ",
-          "hint": "Tiếng Anh 9 Global Success - Unit 4",
-          "exampleEn": "We explore historic in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về historic trong tiết học tiếng Anh.",
+          "phonetic": "/hɪˈstɒrɪk/",
+          "wordType": "Tính từ",
+          "meaning": "Mang tính lịch sử trọng đại",
+          "hint": "Có ý nghĩa quan trọng trong lịch sử",
+          "exampleEn": "The historic Dien Bien Phu victory marked a pivotal triumph.",
+          "exampleVi": "Chiến thắng lịch sử Điện Biên Phủ đã đánh dấu một thắng lợi mang tính bước ngoặt.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Used to + V, Past continuous review",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Used to + V, Past continuous review.",
-        "formula": "Used to + V, Past continuous review",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Cấu trúc Used to + V & Ôn tập thì Quá khứ tiếp diễn",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 4: Cấu trúc Used to + V & Ôn tập thì Quá khứ tiếp diễn.",
+        "formula": "Cấu trúc Used to + V & Ôn tập thì Quá khứ tiếp diễn",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 4?",
-            "options": [
-              "We learn about preservation.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Remembering the Past:",
+            "question": "Which word from Unit 4 means 'Sự bảo tồn, gìn giữ'?",
             "options": [
               "preservation",
               "banana",
@@ -844,24 +863,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'preservation' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'preservation' có phiên âm /ˌprezəˈveɪʃn/ mang nghĩa là 'Sự bảo tồn, gìn giữ'."
+          },
+          {
+            "question": "Choose the correct sentence related to Remembering the Past:",
+            "options": [
+              "Students learn about preservation in Unit 4.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Intonation in exclamations",
-        "title": "Luyện ngữ âm: Intonation in exclamations",
+        "pair": "Ngữ điệu trong câu cảm thán",
+        "title": "Luyện ngữ âm: Ngữ điệu trong câu cảm thán",
         "sound1": {
-          "symbol": "Intonation",
-          "name": "Âm Intonation",
+          "symbol": "Ngữ",
+          "name": "Âm Ngữ",
           "words": [
-            "preservation",
-            "generation"
+            "preservation"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -870,20 +899,22 @@
         "practiceQuiz": [
           {
             "word": "preservation",
-            "correctSound": "Intonation",
+            "correctSound": "Ngữ",
             "options": [
-              "Intonation",
+              "Ngữ",
               "/k/"
             ],
-            "meaningVi": "preservation"
+            "meaningVi": "Sự bảo tồn, gìn giữ",
+            "phonetic": "/ˌprezəˈveɪʃn/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice preservation perfectly."
+        "tongueTwister": "Smart students pronounce preservation perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss nhớ về quá khứ and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs preservation/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về nhớ về quá khứ và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing nhớ về quá khứ in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ preservation təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về nhớ về quá khứ trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Nhớ về quá khứ",
         "dialogueTitle": "Getting Started: Remembering the Past",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Nhớ về quá khứ trong bài học SGK.",
@@ -891,9 +922,9 @@
           {
             "id": "g9_u4_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our remembering the past project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our remembering the past project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án nhớ về quá khứ chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án nhớ về quá khứ chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -901,7 +932,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about preservation.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về preservation.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về sự bảo tồn, gìn giữ.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -923,20 +954,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding nhớ về quá khứ broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding nhớ về quá khứ broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về nhớ về quá khứ giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về nhớ về quá khứ giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using preservation in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng preservation trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ preservation trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Nhớ về quá khứ",
-        "transcript": "Welcome to our podcast about Remembering the Past. Today our guest speaker explains how preservation affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Remembering the Past. Today our guest speaker explains how preservation affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Remembering the Past",
@@ -948,21 +985,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Remembering the Past",
-        "passage": "Throughout the country, students are learning about nhớ về quá khứ. This topic provides essential insights into social development. Experts emphasize that preservation plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về nhớ về quá khứ. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng preservation đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore nhớ về quá khứ. This lesson provides essential knowledge about modern life. Educators emphasize that understanding preservation (sự bảo tồn, gìn giữ) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về nhớ về quá khứ. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu sự bảo tồn, gìn giữ (preservation) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u4_r1",
             "type": "multiple_choice",
-            "question": "What vital role does preservation play according to experts?",
+            "question": "What vital role does understanding preservation play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -976,15 +1013,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Remembering",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "preservation"
             ],
-            "correctSentence": "We are discussing Remembering in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Remembering trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about preservation",
+            "meaningVi": "Chúng mình đang tìm hiểu về sự bảo tồn, gìn giữ.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -998,93 +1033,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 48 – 57",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u5_01",
           "word": "adventure",
-          "phonetic": "/adventure/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Adventure - chủ đề Những trải nghiệm của chúng mình",
-          "hint": "Tiếng Anh 9 Global Success - Unit 5",
-          "exampleEn": "We explore adventure in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về adventure trong tiết học tiếng Anh.",
+          "phonetic": "/ədˈventʃə/",
+          "wordType": "Danh từ",
+          "meaning": "Chuyến phiêu lưu",
+          "hint": "Hành trình khám phá mạo hiểm",
+          "exampleEn": "Climbing Mount Fansipan was an unforgettable adventure for the youth.",
+          "exampleVi": "Leo đỉnh núi Fansipan là một chuyến phiêu lưu không thể nào quên của tuổi trẻ.",
           "emoji": "✨"
         },
         {
           "id": "g9_u5_02",
           "word": "expedition",
-          "phonetic": "/expedition/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Expedition - chủ đề Những trải nghiệm của chúng mình",
-          "hint": "Tiếng Anh 9 Global Success - Unit 5",
-          "exampleEn": "We explore expedition in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về expedition trong tiết học tiếng Anh.",
+          "phonetic": "/ˌekspəˈdɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Cuộc thám hiểm",
+          "hint": "Chuyến đi thám sát khoa học",
+          "exampleEn": "Scientists launched an expedition into Son Doong Cave.",
+          "exampleVi": "Các nhà khoa học đã triển khai một cuộc thám hiểm vào trong hang Sơn Đoòng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u5_03",
           "word": "breathtaking",
-          "phonetic": "/breathtaking/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Breathtaking - chủ đề Những trải nghiệm của chúng mình",
-          "hint": "Tiếng Anh 9 Global Success - Unit 5",
-          "exampleEn": "We explore breathtaking in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về breathtaking trong tiết học tiếng Anh.",
+          "phonetic": "/ˈbreθteɪkɪŋ/",
+          "wordType": "Tính từ",
+          "meaning": "Ngoạn mục, đẹp đến ngạt thở",
+          "hint": "Cảnh đẹp choáng ngợp lòng người",
+          "exampleEn": "The mountain summit offered a breathtaking view of the valley below.",
+          "exampleVi": "Đỉnh núi mở ra một khung cảnh ngoạn mục bao la của thung lũng bên dưới.",
           "emoji": "✨"
         },
         {
           "id": "g9_u5_04",
           "word": "memorable",
-          "phonetic": "/memorable/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Memorable - chủ đề Những trải nghiệm của chúng mình",
-          "hint": "Tiếng Anh 9 Global Success - Unit 5",
-          "exampleEn": "We explore memorable in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về memorable trong tiết học tiếng Anh.",
+          "phonetic": "/ˈmemərəbl/",
+          "wordType": "Tính từ",
+          "meaning": "Đáng nhớ, khó quên",
+          "hint": "Khắc sâu trong ký ức",
+          "exampleEn": "Our school volunteer trip was a deeply memorable milestone.",
+          "exampleVi": "Chuyến đi tình nguyện của trường là một dấu mốc vô cùng đáng nhớ.",
           "emoji": "✨"
         },
         {
           "id": "g9_u5_05",
           "word": "homestay",
-          "phonetic": "/homestay/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Homestay - chủ đề Những trải nghiệm của chúng mình",
-          "hint": "Tiếng Anh 9 Global Success - Unit 5",
-          "exampleEn": "We explore homestay in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về homestay trong tiết học tiếng Anh.",
+          "phonetic": "/ˈhəʊmsteɪ/",
+          "wordType": "Danh từ",
+          "meaning": "Nghỉ trọ nhà dân, homestay",
+          "hint": "Loại hình lưu trú cùng người dân",
+          "exampleEn": "Staying at an ethnic homestay gave us authentic insights into local customs.",
+          "exampleVi": "Nghỉ lại tại một homestay nhà dân bản địa mang lại cho chúng mình những hiểu biết chân thực về phong tục địa phương.",
           "emoji": "✨"
         },
         {
           "id": "g9_u5_06",
           "word": "trek",
           "phonetic": "/trek/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Trek - chủ đề Những trải nghiệm của chúng mình",
-          "hint": "Tiếng Anh 9 Global Success - Unit 5",
-          "exampleEn": "We explore trek in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về trek trong tiết học tiếng Anh.",
+          "wordType": "Động từ/Danh từ",
+          "meaning": "Chuyến đi bộ đường dài dã ngoại",
+          "hint": "Đi bộ vượt địa hình hiểm trở",
+          "exampleEn": "We trekked through dense tropical forests for six hours.",
+          "exampleVi": "Chúng mình đã đi bộ băng qua những cánh rừng nhiệt đới rậm rạp suốt sáu tiếng đồng hồ.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Present perfect with already, yet, just",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Present perfect with already, yet, just.",
-        "formula": "Present perfect with already, yet, just",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Thì Hiện tại hoàn thành với already, yet, just",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 5: Thì Hiện tại hoàn thành với already, yet, just.",
+        "formula": "Thì Hiện tại hoàn thành với already, yet, just",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 5?",
-            "options": [
-              "We learn about adventure.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Our Experiences:",
+            "question": "Which word from Unit 5 means 'Chuyến phiêu lưu'?",
             "options": [
               "adventure",
               "banana",
@@ -1092,24 +1117,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'adventure' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'adventure' có phiên âm /ədˈventʃə/ mang nghĩa là 'Chuyến phiêu lưu'."
+          },
+          {
+            "question": "Choose the correct sentence related to Our Experiences:",
+            "options": [
+              "Students learn about adventure in Unit 5.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Stress in compound nouns",
-        "title": "Luyện ngữ âm: Stress in compound nouns",
+        "pair": "Trọng âm danh từ ghép",
+        "title": "Luyện ngữ âm: Trọng âm danh từ ghép",
         "sound1": {
-          "symbol": "Stress",
-          "name": "Âm Stress",
+          "symbol": "Trọng",
+          "name": "Âm Trọng",
           "words": [
-            "adventure",
-            "expedition"
+            "adventure"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -1118,20 +1153,22 @@
         "practiceQuiz": [
           {
             "word": "adventure",
-            "correctSound": "Stress",
+            "correctSound": "Trọng",
             "options": [
-              "Stress",
+              "Trọng",
               "/k/"
             ],
-            "meaningVi": "adventure"
+            "meaningVi": "Chuyến phiêu lưu",
+            "phonetic": "/ədˈventʃə/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice adventure perfectly."
+        "tongueTwister": "Smart students pronounce adventure perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss những trải nghiệm của chúng mình and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs adventure/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về những trải nghiệm của chúng mình và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing những trải nghiệm của chúng mình in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ adventure təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về những trải nghiệm của chúng mình trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Những trải nghiệm của chúng mình",
         "dialogueTitle": "Getting Started: Our Experiences",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Những trải nghiệm của chúng mình trong bài học SGK.",
@@ -1139,9 +1176,9 @@
           {
             "id": "g9_u5_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our our experiences project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our our experiences project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án những trải nghiệm của chúng mình chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án những trải nghiệm của chúng mình chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -1149,7 +1186,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about adventure.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về adventure.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về chuyến phiêu lưu.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -1171,20 +1208,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding những trải nghiệm của chúng mình broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding những trải nghiệm của chúng mình broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về những trải nghiệm của chúng mình giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về những trải nghiệm của chúng mình giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using adventure in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng adventure trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ adventure trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Những trải nghiệm của chúng mình",
-        "transcript": "Welcome to our podcast about Our Experiences. Today our guest speaker explains how adventure affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Our Experiences. Today our guest speaker explains how adventure affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Our Experiences",
@@ -1196,21 +1239,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Our Experiences",
-        "passage": "Throughout the country, students are learning about những trải nghiệm của chúng mình. This topic provides essential insights into social development. Experts emphasize that adventure plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về những trải nghiệm của chúng mình. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng adventure đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore những trải nghiệm của chúng mình. This lesson provides essential knowledge about modern life. Educators emphasize that understanding adventure (chuyến phiêu lưu) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về những trải nghiệm của chúng mình. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu chuyến phiêu lưu (adventure) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u5_r1",
             "type": "multiple_choice",
-            "question": "What vital role does adventure play according to experts?",
+            "question": "What vital role does understanding adventure play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -1224,15 +1267,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Our",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "adventure"
             ],
-            "correctSentence": "We are discussing Our in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Our trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about adventure",
+            "meaningVi": "Chúng mình đang tìm hiểu về chuyến phiêu lưu.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -1246,93 +1287,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 58 – 67",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u6_01",
           "word": "tramcar",
-          "phonetic": "/tramcar/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Tramcar - chủ đề Việt Nam: Xưa và nay",
-          "hint": "Tiếng Anh 9 Global Success - Unit 6",
-          "exampleEn": "We explore tramcar in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về tramcar trong tiết học tiếng Anh.",
+          "phonetic": "/ˈtræmkɑː/",
+          "wordType": "Danh từ",
+          "meaning": "Xe điện mặt đất",
+          "hint": "Phương tiện chạy đường ray trong phố thời xưa",
+          "exampleEn": "Old Ha Noi had historic tramcars clanging along the streets.",
+          "exampleVi": "Hà Nội xưa từng có những chuyến xe điện leng keng rộn rã dọc theo các phố.",
           "emoji": "✨"
         },
         {
           "id": "g9_u6_02",
           "word": "thatched house",
-          "phonetic": "/thatched house/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Thatched house - chủ đề Việt Nam: Xưa và nay",
-          "hint": "Tiếng Anh 9 Global Success - Unit 6",
-          "exampleEn": "We explore thatched house in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về thatched house trong tiết học tiếng Anh.",
+          "phonetic": "/θætʃt haʊs/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Nhà tranh mái lá",
+          "hint": "Nhà lợp bằng cỏ tranh hoặc lá",
+          "exampleEn": "In the past, poor villagers lived in simple thatched houses.",
+          "exampleVi": "Thời xưa, những người dân nghèo sống trong những ngôi nhà tranh vách đất đơn sơ.",
           "emoji": "✨"
         },
         {
           "id": "g9_u6_03",
           "word": "renovation",
-          "phonetic": "/renovation/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Renovation - chủ đề Việt Nam: Xưa và nay",
-          "hint": "Tiếng Anh 9 Global Success - Unit 6",
-          "exampleEn": "We explore renovation in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về renovation trong tiết học tiếng Anh.",
+          "phonetic": "/ˌrenəˈveɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Công cuộc Đổi Mới / Sự cải tạo",
+          "hint": "Cải cách toàn diện để phát triển",
+          "exampleEn": "The 1986 Doi Moi renovation policy transformed Viet Nam's economy.",
+          "exampleVi": "Chính sách Đổi Mới năm 1986 đã làm biến đổi diện mạo nền kinh tế Việt Nam.",
           "emoji": "✨"
         },
         {
           "id": "g9_u6_04",
           "word": "infrastructure",
-          "phonetic": "/infrastructure/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Infrastructure - chủ đề Việt Nam: Xưa và nay",
-          "hint": "Tiếng Anh 9 Global Success - Unit 6",
-          "exampleEn": "We explore infrastructure in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về infrastructure trong tiết học tiếng Anh.",
+          "phonetic": "/ˈɪnfrəstrʌktʃə/",
+          "wordType": "Danh từ",
+          "meaning": "Cơ sở hạ tầng",
+          "hint": "Hệ thống đường sá cầu cống bến bãi",
+          "exampleEn": "Modern highways and bridges boosted regional economic connectivity.",
+          "exampleVi": "Những tuyến đường cao tốc và cây cầu hiện đại đã thúc đẩy sự kết nối kinh tế giữa các vùng miền.",
           "emoji": "✨"
         },
         {
           "id": "g9_u6_05",
           "word": "flyover",
-          "phonetic": "/flyover/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Flyover - chủ đề Việt Nam: Xưa và nay",
-          "hint": "Tiếng Anh 9 Global Success - Unit 6",
-          "exampleEn": "We explore flyover in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về flyover trong tiết học tiếng Anh.",
+          "phonetic": "/ˈflaɪəʊvə/",
+          "wordType": "Danh từ",
+          "meaning": "Cầu vượt cạn",
+          "hint": "Cầu vượt trên cạn bắc qua ngã tư",
+          "exampleEn": "Construction of new flyovers resolved traffic bottlenecks at junctions.",
+          "exampleVi": "Việc xây dựng các cây cầu vượt mới đã tháo gỡ những điểm nghẽn giao thông tại các nút giao.",
           "emoji": "✨"
         },
         {
           "id": "g9_u6_06",
           "word": "era",
-          "phonetic": "/era/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Era - chủ đề Việt Nam: Xưa và nay",
-          "hint": "Tiếng Anh 9 Global Success - Unit 6",
-          "exampleEn": "We explore era in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về era trong tiết học tiếng Anh.",
+          "phonetic": "/ˈɪərə/",
+          "wordType": "Danh từ",
+          "meaning": "Kỷ nguyên, thời đại",
+          "hint": "Thời kỳ lịch sử lâu dài",
+          "exampleEn": "Viet Nam is stepping into an era of digital modernization.",
+          "exampleVi": "Việt Nam đang vững bước tiến vào một kỷ nguyên hiện đại hóa kỹ thuật số.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Past perfect tense",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Past perfect tense.",
-        "formula": "Past perfect tense",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Thì Quá khứ hoàn thành (Past Perfect Tense)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 6: Thì Quá khứ hoàn thành (Past Perfect Tense).",
+        "formula": "Thì Quá khứ hoàn thành (Past Perfect Tense)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 6?",
-            "options": [
-              "We learn about tramcar.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Viet Nam: Then and Now:",
+            "question": "Which word from Unit 6 means 'Xe điện mặt đất'?",
             "options": [
               "tramcar",
               "banana",
@@ -1340,24 +1371,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'tramcar' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'tramcar' có phiên âm /ˈtræmkɑː/ mang nghĩa là 'Xe điện mặt đất'."
+          },
+          {
+            "question": "Choose the correct sentence related to Viet Nam: Then and Now:",
+            "options": [
+              "Students learn about tramcar in Unit 6.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Intonation in question tags",
-        "title": "Luyện ngữ âm: Intonation in question tags",
+        "pair": "Ngữ điệu trong câu hỏi đuôi (Question Tags)",
+        "title": "Luyện ngữ âm: Ngữ điệu trong câu hỏi đuôi (Question Tags)",
         "sound1": {
-          "symbol": "Intonation",
-          "name": "Âm Intonation",
+          "symbol": "Ngữ",
+          "name": "Âm Ngữ",
           "words": [
-            "tramcar",
-            "thatched house"
+            "tramcar"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -1366,20 +1407,22 @@
         "practiceQuiz": [
           {
             "word": "tramcar",
-            "correctSound": "Intonation",
+            "correctSound": "Ngữ",
             "options": [
-              "Intonation",
+              "Ngữ",
               "/k/"
             ],
-            "meaningVi": "tramcar"
+            "meaningVi": "Xe điện mặt đất",
+            "phonetic": "/ˈtræmkɑː/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice tramcar perfectly."
+        "tongueTwister": "Smart students pronounce tramcar perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss việt nam: xưa và nay and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs tramcar/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về việt nam: xưa và nay và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing việt nam: xưa và nay in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ tramcar təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về việt nam: xưa và nay trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Việt Nam: Xưa và nay",
         "dialogueTitle": "Getting Started: Viet Nam: Then and Now",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Việt Nam: Xưa và nay trong bài học SGK.",
@@ -1387,9 +1430,9 @@
           {
             "id": "g9_u6_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our viet nam: then and now project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our viet nam: then and now project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án việt nam: xưa và nay chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án việt nam: xưa và nay chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -1397,7 +1440,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about tramcar.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về tramcar.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về xe điện mặt đất.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -1419,20 +1462,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding việt nam: xưa và nay broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding việt nam: xưa và nay broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về việt nam: xưa và nay giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về việt nam: xưa và nay giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using tramcar in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng tramcar trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ tramcar trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Việt Nam: Xưa và nay",
-        "transcript": "Welcome to our podcast about Viet Nam: Then and Now. Today our guest speaker explains how tramcar affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Viet Nam: Then and Now. Today our guest speaker explains how tramcar affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Viet Nam: Then and Now",
@@ -1444,21 +1493,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Viet Nam: Then and Now",
-        "passage": "Throughout the country, students are learning about việt nam: xưa và nay. This topic provides essential insights into social development. Experts emphasize that tramcar plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về việt nam: xưa và nay. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng tramcar đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore việt nam: xưa và nay. This lesson provides essential knowledge about modern life. Educators emphasize that understanding tramcar (xe điện mặt đất) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về việt nam: xưa và nay. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu xe điện mặt đất (tramcar) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u6_r1",
             "type": "multiple_choice",
-            "question": "What vital role does tramcar play according to experts?",
+            "question": "What vital role does understanding tramcar play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -1472,15 +1521,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Viet",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "tramcar"
             ],
-            "correctSentence": "We are discussing Viet in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Viet trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about tramcar",
+            "meaningVi": "Chúng mình đang tìm hiểu về xe điện mặt đất.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -1494,93 +1541,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 68 – 77",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u7_01",
           "word": "geological",
-          "phonetic": "/geological/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Geological - chủ đề Kỳ quan thiên nhiên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 7",
-          "exampleEn": "We explore geological in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về geological trong tiết học tiếng Anh.",
+          "phonetic": "/ˌdʒiːəˈlɒdʒɪkl/",
+          "wordType": "Tính từ",
+          "meaning": "Thuộc địa chất",
+          "hint": "Liên quan đến cấu trúc đất đá",
+          "exampleEn": "Ha Long Bay features astonishing geological limestone formations.",
+          "exampleVi": "Vịnh Hạ Long sở hữu những kiến tạo địa chất đá vôi kỳ vĩ đáng kinh ngạc.",
           "emoji": "✨"
         },
         {
           "id": "g9_u7_02",
           "word": "cavern",
-          "phonetic": "/cavern/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Cavern - chủ đề Kỳ quan thiên nhiên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 7",
-          "exampleEn": "We explore cavern in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về cavern trong tiết học tiếng Anh.",
+          "phonetic": "/ˈkævən/",
+          "wordType": "Danh từ",
+          "meaning": "Hang động lớn",
+          "hint": "Hang đá khổng lồ dưới lòng đất",
+          "exampleEn": "Son Doong Cavern possesses its own localized weather climate.",
+          "exampleVi": "Đại hang động Sơn Đoòng sở hữu cả một hệ khí hậu cục bộ riêng biệt bên trong.",
           "emoji": "✨"
         },
         {
           "id": "g9_u7_03",
           "word": "stalagmite",
-          "phonetic": "/stalagmite/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Stalagmite - chủ đề Kỳ quan thiên nhiên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 7",
-          "exampleEn": "We explore stalagmite in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về stalagmite trong tiết học tiếng Anh.",
+          "phonetic": "/ˈstæləɡmaɪt/",
+          "wordType": "Danh từ",
+          "meaning": "Măng đá",
+          "hint": "Cột đá vôi nhô lên từ đáy hang",
+          "exampleEn": "Ancient stalagmites rose dramatically from the cave floor.",
+          "exampleVi": "Những cột măng đá cổ xưa mọc sừng sững lên từ nền hang động.",
           "emoji": "✨"
         },
         {
           "id": "g9_u7_04",
-          "word": "landscape",
-          "phonetic": "/landscape/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Landscape - chủ đề Kỳ quan thiên nhiên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 7",
-          "exampleEn": "We explore landscape in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về landscape trong tiết học tiếng Anh.",
+          "word": "sanctuary",
+          "phonetic": "/ˈsæŋktʃuəri/",
+          "wordType": "Danh từ",
+          "meaning": "Khu bảo tồn thiên nhiên",
+          "hint": "Nơi an toàn cho muôn loài nương náu",
+          "exampleEn": "The national sanctuary shelters hundreds of endangered bird species.",
+          "exampleVi": "Khu bảo tồn thiên nhiên quốc gia che chở cho hàng trăm loài chim quý hiếm.",
           "emoji": "✨"
         },
         {
           "id": "g9_u7_05",
-          "word": "sanctuary",
-          "phonetic": "/sanctuary/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Sanctuary - chủ đề Kỳ quan thiên nhiên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 7",
-          "exampleEn": "We explore sanctuary in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về sanctuary trong tiết học tiếng Anh.",
+          "word": "spectacular",
+          "phonetic": "/spekˈtækjələ/",
+          "wordType": "Tính từ",
+          "meaning": "Hùng vĩ, tráng lệ ngoạn mục",
+          "hint": "Cảnh tượng vô cùng đẹp đẽ",
+          "exampleEn": "The cascading waterfall presented a spectacular sight at dawn.",
+          "exampleVi": "Thác nước cuồn cuộn đổ xuống mở ra một cảnh tượng tráng lệ lúc rạng đông.",
           "emoji": "✨"
         },
         {
           "id": "g9_u7_06",
-          "word": "spectacular",
-          "phonetic": "/spectacular/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Spectacular - chủ đề Kỳ quan thiên nhiên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 7",
-          "exampleEn": "We explore spectacular in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về spectacular trong tiết học tiếng Anh.",
+          "word": "landscape",
+          "phonetic": "/ˈlændskeɪp/",
+          "wordType": "Danh từ",
+          "meaning": "Cảnh quan thiên nhiên",
+          "hint": "Toàn cảnh đất đai thiên nhiên",
+          "exampleEn": "The karst landscape of Phong Nha attracts global spelunkers.",
+          "exampleVi": "Cảnh quan karst của Phong Nha thu hút những nhà thám hiểm hang động toàn cầu.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Passive voice with modal verbs",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Passive voice with modal verbs.",
-        "formula": "Passive voice with modal verbs",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Câu bị động với động từ khuyết thiếu (Modal Passives: must be, can be)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 7: Câu bị động với động từ khuyết thiếu (Modal Passives: must be, can be).",
+        "formula": "Câu bị động với động từ khuyết thiếu (Modal Passives: must be, can be)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 7?",
-            "options": [
-              "We learn about geological.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Natural Wonders of the World:",
+            "question": "Which word from Unit 7 means 'Thuộc địa chất'?",
             "options": [
               "geological",
               "banana",
@@ -1588,24 +1625,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'geological' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'geological' có phiên âm /ˌdʒiːəˈlɒdʒɪkl/ mang nghĩa là 'Thuộc địa chất'."
+          },
+          {
+            "question": "Choose the correct sentence related to Natural Wonders of the World:",
+            "options": [
+              "Students learn about geological in Unit 7.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "/sl/ and /sn/",
-        "title": "Luyện ngữ âm: /sl/ and /sn/",
+        "pair": "/sl/ và /sn/",
+        "title": "Luyện ngữ âm: /sl/ và /sn/",
         "sound1": {
           "symbol": "/sl/",
           "name": "Âm /sl/",
           "words": [
-            "geological",
-            "cavern"
+            "geological"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -1619,15 +1666,17 @@
               "/sl/",
               "/k/"
             ],
-            "meaningVi": "geological"
+            "meaningVi": "Thuộc địa chất",
+            "phonetic": "/ˌdʒiːəˈlɒdʒɪkl/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice geological perfectly."
+        "tongueTwister": "Smart students pronounce geological perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss kỳ quan thiên nhiên thế giới and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs geological/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về kỳ quan thiên nhiên thế giới và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing kỳ quan thiên nhiên thế giới in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ geological təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về kỳ quan thiên nhiên thế giới trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Kỳ quan thiên nhiên thế giới",
         "dialogueTitle": "Getting Started: Natural Wonders of the World",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Kỳ quan thiên nhiên thế giới trong bài học SGK.",
@@ -1635,9 +1684,9 @@
           {
             "id": "g9_u7_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our natural wonders of the world project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our natural wonders of the world project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án kỳ quan thiên nhiên thế giới chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án kỳ quan thiên nhiên thế giới chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -1645,7 +1694,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about geological.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về geological.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về thuộc địa chất.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -1667,20 +1716,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding kỳ quan thiên nhiên thế giới broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding kỳ quan thiên nhiên thế giới broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về kỳ quan thiên nhiên thế giới giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về kỳ quan thiên nhiên thế giới giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using geological in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng geological trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ geological trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Kỳ quan thiên nhiên thế giới",
-        "transcript": "Welcome to our podcast about Natural Wonders of the World. Today our guest speaker explains how geological affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Natural Wonders of the World. Today our guest speaker explains how geological affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Natural Wonders of the World",
@@ -1692,21 +1747,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Natural Wonders of the World",
-        "passage": "Throughout the country, students are learning about kỳ quan thiên nhiên thế giới. This topic provides essential insights into social development. Experts emphasize that geological plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về kỳ quan thiên nhiên thế giới. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng geological đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore kỳ quan thiên nhiên thế giới. This lesson provides essential knowledge about modern life. Educators emphasize that understanding geological (thuộc địa chất) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về kỳ quan thiên nhiên thế giới. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu thuộc địa chất (geological) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u7_r1",
             "type": "multiple_choice",
-            "question": "What vital role does geological play according to experts?",
+            "question": "What vital role does understanding geological play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -1720,15 +1775,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Natural",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "geological"
             ],
-            "correctSentence": "We are discussing Natural in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Natural trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about geological",
+            "meaningVi": "Chúng mình đang tìm hiểu về thuộc địa chất.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -1742,93 +1795,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 78 – 87",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u8_01",
           "word": "eco-tour",
-          "phonetic": "/eco-tour/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Eco-tour - chủ đề Du lịch",
-          "hint": "Tiếng Anh 9 Global Success - Unit 8",
-          "exampleEn": "We explore eco-tour in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về eco-tour trong tiết học tiếng Anh.",
+          "phonetic": "/ˈiːkəʊ tʊə/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Chuyến du lịch sinh thái",
+          "hint": "Du lịch trải nghiệm thiên nhiên bền vững",
+          "exampleEn": "Eco-tours teach tourists to respect natural habitats and local culture.",
+          "exampleVi": "Những chuyến du lịch sinh thái dạy du khách biết tôn trọng môi trường sống tự nhiên và văn hóa bản địa.",
           "emoji": "✨"
         },
         {
           "id": "g9_u8_02",
-          "word": "breathtaking",
-          "phonetic": "/breathtaking/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Breathtaking - chủ đề Du lịch",
-          "hint": "Tiếng Anh 9 Global Success - Unit 8",
-          "exampleEn": "We explore breathtaking in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về breathtaking trong tiết học tiếng Anh.",
+          "word": "luggage",
+          "phonetic": "/ˈlʌɡɪdʒ/",
+          "wordType": "Danh từ",
+          "meaning": "Hành lý",
+          "hint": "Đồ đạc mang theo khi đi xa",
+          "exampleEn": "Passengers must weigh their checked luggage before flight boarding.",
+          "exampleVi": "Hành khách phải cân hành lý ký gửi trước khi làm thủ tục lên máy bay.",
           "emoji": "✨"
         },
         {
           "id": "g9_u8_03",
-          "word": "luggage",
-          "phonetic": "/luggage/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Luggage - chủ đề Du lịch",
-          "hint": "Tiếng Anh 9 Global Success - Unit 8",
-          "exampleEn": "We explore luggage in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về luggage trong tiết học tiếng Anh.",
+          "word": "safari",
+          "phonetic": "/səˈfɑːri/",
+          "wordType": "Danh từ",
+          "meaning": "Chuyến dã ngoại ngắm động vật hoang dã",
+          "hint": "Chuyến đi ngắm muông thú tự nhiên",
+          "exampleEn": "The safari took visitors deep into the savannah to see elephants.",
+          "exampleVi": "Chuyến thám hiểm safari đưa du khách tiến sâu vào thảo nguyên để ngắm đàn voi.",
           "emoji": "✨"
         },
         {
           "id": "g9_u8_04",
-          "word": "safari",
-          "phonetic": "/safari/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Safari - chủ đề Du lịch",
-          "hint": "Tiếng Anh 9 Global Success - Unit 8",
-          "exampleEn": "We explore safari in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về safari trong tiết học tiếng Anh.",
+          "word": "destination",
+          "phonetic": "/ˌdestɪˈneɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Điểm đến du lịch",
+          "hint": "Nơi hướng tới trong chuyến đi",
+          "exampleEn": "Phu Quoc Island is a top beach destination in Southeast Asia.",
+          "exampleVi": "Đảo Phú Quốc là một điểm đến nghỉ dưỡng biển hàng đầu tại Đông Nam Á.",
           "emoji": "✨"
         },
         {
           "id": "g9_u8_05",
-          "word": "destination",
-          "phonetic": "/destination/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Destination - chủ đề Du lịch",
-          "hint": "Tiếng Anh 9 Global Success - Unit 8",
-          "exampleEn": "We explore destination in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về destination trong tiết học tiếng Anh.",
+          "word": "package tour",
+          "phonetic": "/ˈpækɪdʒ tʊə/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Chuyến du lịch trọn gói",
+          "hint": "Tour du lịch bao trọn gói chi phí",
+          "exampleEn": "A package tour covers flight tickets, hotel rooms, and guided tours.",
+          "exampleVi": "Một chuyến du lịch trọn gói bao gồm vé máy bay, phòng khách sạn và hướng dẫn viên.",
           "emoji": "✨"
         },
         {
           "id": "g9_u8_06",
-          "word": "package tour",
-          "phonetic": "/package tour/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Package tour - chủ đề Du lịch",
-          "hint": "Tiếng Anh 9 Global Success - Unit 8",
-          "exampleEn": "We explore package tour in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về package tour trong tiết học tiếng Anh.",
+          "word": "hospitality",
+          "phonetic": "/ˌhɒspɪˈtæləti/",
+          "wordType": "Danh từ",
+          "meaning": "Lòng mến khách / Ngành du lịch khách sạn",
+          "hint": "Sự ân cần chu đáo với khách",
+          "exampleEn": "Vietnamese hospitality leaves a warm lasting impression on travelers.",
+          "exampleVi": "Lòng mến khách của người Việt để lại ấn tượng ấm áp sâu đậm trong lòng lữ khách.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Compound nouns, Articles revision",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Compound nouns, Articles revision.",
-        "formula": "Compound nouns, Articles revision",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Danh từ ghép (Compound Nouns) & Ôn tập mạo từ",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 8: Danh từ ghép (Compound Nouns) & Ôn tập mạo từ.",
+        "formula": "Danh từ ghép (Compound Nouns) & Ôn tập mạo từ",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 8?",
-            "options": [
-              "We learn about eco-tour.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Tourism:",
+            "question": "Which word from Unit 8 means 'Chuyến du lịch sinh thái'?",
             "options": [
               "eco-tour",
               "banana",
@@ -1836,24 +1879,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'eco-tour' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'eco-tour' có phiên âm /ˈiːkəʊ tʊə/ mang nghĩa là 'Chuyến du lịch sinh thái'."
+          },
+          {
+            "question": "Choose the correct sentence related to Tourism:",
+            "options": [
+              "Students learn about eco-tour in Unit 8.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Stress in -ion and -ian",
-        "title": "Luyện ngữ âm: Stress in -ion and -ian",
+        "pair": "Trọng âm từ có đuôi -ion và -ian",
+        "title": "Luyện ngữ âm: Trọng âm từ có đuôi -ion và -ian",
         "sound1": {
-          "symbol": "Stress",
-          "name": "Âm Stress",
+          "symbol": "Trọng",
+          "name": "Âm Trọng",
           "words": [
-            "eco-tour",
-            "breathtaking"
+            "eco-tour"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -1862,20 +1915,22 @@
         "practiceQuiz": [
           {
             "word": "eco-tour",
-            "correctSound": "Stress",
+            "correctSound": "Trọng",
             "options": [
-              "Stress",
+              "Trọng",
               "/k/"
             ],
-            "meaningVi": "eco-tour"
+            "meaningVi": "Chuyến du lịch sinh thái",
+            "phonetic": "/ˈiːkəʊ tʊə/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice eco-tour perfectly."
+        "tongueTwister": "Smart students pronounce eco-tour perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss du lịch and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs eco-tour/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về du lịch và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing du lịch in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ eco-tour təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về du lịch trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Du lịch",
         "dialogueTitle": "Getting Started: Tourism",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Du lịch trong bài học SGK.",
@@ -1883,9 +1938,9 @@
           {
             "id": "g9_u8_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our tourism project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our tourism project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án du lịch chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án du lịch chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -1893,7 +1948,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about eco-tour.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về eco-tour.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về chuyến du lịch sinh thái.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -1915,20 +1970,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding du lịch broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding du lịch broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về du lịch giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về du lịch giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using eco-tour in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng eco-tour trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ eco-tour trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Du lịch",
-        "transcript": "Welcome to our podcast about Tourism. Today our guest speaker explains how eco-tour affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Tourism. Today our guest speaker explains how eco-tour affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Tourism",
@@ -1940,21 +2001,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Tourism",
-        "passage": "Throughout the country, students are learning about du lịch. This topic provides essential insights into social development. Experts emphasize that eco-tour plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về du lịch. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng eco-tour đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore du lịch. This lesson provides essential knowledge about modern life. Educators emphasize that understanding eco-tour (chuyến du lịch sinh thái) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về du lịch. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu chuyến du lịch sinh thái (eco-tour) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u8_r1",
             "type": "multiple_choice",
-            "question": "What vital role does eco-tour play according to experts?",
+            "question": "What vital role does understanding eco-tour play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -1968,15 +2029,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Tourism",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "eco-tour"
             ],
-            "correctSentence": "We are discussing Tourism in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Tourism trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about eco-tour",
+            "meaningVi": "Chúng mình đang tìm hiểu về chuyến du lịch sinh thái.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -1990,93 +2049,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 88 – 97",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u9_01",
           "word": "official language",
-          "phonetic": "/official language/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Official language - chủ đề Tiếng Anh trên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 9",
-          "exampleEn": "We explore official language in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về official language trong tiết học tiếng Anh.",
+          "phonetic": "/əˈfɪʃl ˈlæŋɡwɪdʒ/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Ngôn ngữ chính thức",
+          "hint": "Ngôn ngữ nhà nước quy định dùng",
+          "exampleEn": "English serves as the official language of international aviation.",
+          "exampleVi": "Tiếng Anh đóng vai trò là ngôn ngữ chính thức của ngành hàng không quốc tế.",
           "emoji": "✨"
         },
         {
           "id": "g9_u9_02",
           "word": "accent",
-          "phonetic": "/accent/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Accent - chủ đề Tiếng Anh trên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 9",
-          "exampleEn": "We explore accent in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về accent trong tiết học tiếng Anh.",
+          "phonetic": "/ˈæksent/",
+          "wordType": "Danh từ",
+          "meaning": "Chất giọng, ngữ âm",
+          "hint": "Cách phát âm của từng vùng miền",
+          "exampleEn": "Australian English features a distinctive friendly accent.",
+          "exampleVi": "Tiếng Anh của người Úc mang một chất giọng thân thiện rất đặc trưng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u9_03",
           "word": "bilingual",
-          "phonetic": "/bilingual/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Bilingual - chủ đề Tiếng Anh trên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 9",
-          "exampleEn": "We explore bilingual in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về bilingual trong tiết học tiếng Anh.",
+          "phonetic": "/baɪˈlɪŋɡwəl/",
+          "wordType": "Tính từ",
+          "meaning": "Song ngữ",
+          "hint": "Sử dụng thành thạo hai thứ tiếng",
+          "exampleEn": "Growing up in a bilingual home enriches cognitive versatility.",
+          "exampleVi": "Lớn lên trong một gia đình song ngữ làm phong phú thêm khả năng tư duy ngôn ngữ.",
           "emoji": "✨"
         },
         {
           "id": "g9_u9_04",
           "word": "dialect",
-          "phonetic": "/dialect/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Dialect - chủ đề Tiếng Anh trên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 9",
-          "exampleEn": "We explore dialect in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về dialect trong tiết học tiếng Anh.",
+          "phonetic": "/ˈdaɪəlekt/",
+          "wordType": "Danh từ",
+          "meaning": "Tiếng địa phương, phương ngữ",
+          "hint": "Biến thể ngôn ngữ của từng địa phương",
+          "exampleEn": "The northern dialect has distinct vocabulary from southern speech.",
+          "exampleVi": "Phương ngữ miền Bắc có vốn từ vựng khác biệt so với giọng miền Nam.",
           "emoji": "✨"
         },
         {
           "id": "g9_u9_05",
           "word": "fluent",
-          "phonetic": "/fluent/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Fluent - chủ đề Tiếng Anh trên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 9",
-          "exampleEn": "We explore fluent in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về fluent trong tiết học tiếng Anh.",
+          "phonetic": "/ˈfluːənt/",
+          "wordType": "Tính từ",
+          "meaning": "Lưu loát, trôi chảy",
+          "hint": "Nói năng mượt mà không vấp",
+          "exampleEn": "Practicing every day enables students to become fluent in English.",
+          "exampleVi": "Luyện tập mỗi ngày giúp các bạn học sinh nói tiếng Anh trôi chảy và tự tin.",
           "emoji": "✨"
         },
         {
           "id": "g9_u9_06",
           "word": "terminology",
-          "phonetic": "/terminology/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Terminology - chủ đề Tiếng Anh trên thế giới",
-          "hint": "Tiếng Anh 9 Global Success - Unit 9",
-          "exampleEn": "We explore terminology in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về terminology trong tiết học tiếng Anh.",
+          "phonetic": "/ˌtɜːmɪˈnɒlədʒi/",
+          "wordType": "Danh từ",
+          "meaning": "Thuật ngữ chuyên ngành",
+          "hint": "Từ ngữ chuyên môn của một lĩnh vực",
+          "exampleEn": "Medical terminology requires precise understanding in diagnosis.",
+          "exampleVi": "Thuật ngữ y khoa đòi hỏi sự thấu hiểu chuẩn xác trong chẩn đoán.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Defining relative clauses with who/which/that",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Defining relative clauses with who/which/that.",
-        "formula": "Defining relative clauses with who/which/that",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Mệnh đề quan hệ xác định với who, which, that",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 9: Mệnh đề quan hệ xác định với who, which, that.",
+        "formula": "Mệnh đề quan hệ xác định với who, which, that",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 9?",
-            "options": [
-              "We learn about official language.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to World Englishes:",
+            "question": "Which word from Unit 9 means 'Ngôn ngữ chính thức'?",
             "options": [
               "official language",
               "banana",
@@ -2084,24 +2133,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'official language' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'official language' có phiên âm /əˈfɪʃl ˈlæŋɡwɪdʒ/ mang nghĩa là 'Ngôn ngữ chính thức'."
+          },
+          {
+            "question": "Choose the correct sentence related to World Englishes:",
+            "options": [
+              "Students learn about official language in Unit 9.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Stress in -ic and -ical",
-        "title": "Luyện ngữ âm: Stress in -ic and -ical",
+        "pair": "Trọng âm từ có đuôi -ic và -ical",
+        "title": "Luyện ngữ âm: Trọng âm từ có đuôi -ic và -ical",
         "sound1": {
-          "symbol": "Stress",
-          "name": "Âm Stress",
+          "symbol": "Trọng",
+          "name": "Âm Trọng",
           "words": [
-            "official language",
-            "accent"
+            "official language"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -2110,20 +2169,22 @@
         "practiceQuiz": [
           {
             "word": "official language",
-            "correctSound": "Stress",
+            "correctSound": "Trọng",
             "options": [
-              "Stress",
+              "Trọng",
               "/k/"
             ],
-            "meaningVi": "official language"
+            "meaningVi": "Ngôn ngữ chính thức",
+            "phonetic": "/əˈfɪʃl ˈlæŋɡwɪdʒ/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice official language perfectly."
+        "tongueTwister": "Smart students pronounce official language perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss tiếng anh trên thế giới and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs official language/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về tiếng anh trên thế giới và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing tiếng anh trên thế giới in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ official language təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về tiếng anh trên thế giới trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Tiếng Anh trên thế giới",
         "dialogueTitle": "Getting Started: World Englishes",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Tiếng Anh trên thế giới trong bài học SGK.",
@@ -2131,9 +2192,9 @@
           {
             "id": "g9_u9_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our world englishes project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our world englishes project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án tiếng anh trên thế giới chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án tiếng anh trên thế giới chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -2141,7 +2202,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about official language.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về official language.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về ngôn ngữ chính thức.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -2163,20 +2224,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding tiếng anh trên thế giới broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding tiếng anh trên thế giới broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về tiếng anh trên thế giới giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về tiếng anh trên thế giới giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using official language in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng official language trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ official language trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Tiếng Anh trên thế giới",
-        "transcript": "Welcome to our podcast about World Englishes. Today our guest speaker explains how official language affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about World Englishes. Today our guest speaker explains how official language affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "World Englishes",
@@ -2188,21 +2255,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: World Englishes",
-        "passage": "Throughout the country, students are learning about tiếng anh trên thế giới. This topic provides essential insights into social development. Experts emphasize that official language plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về tiếng anh trên thế giới. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng official language đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore tiếng anh trên thế giới. This lesson provides essential knowledge about modern life. Educators emphasize that understanding official language (ngôn ngữ chính thức) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về tiếng anh trên thế giới. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu ngôn ngữ chính thức (official language) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u9_r1",
             "type": "multiple_choice",
-            "question": "What vital role does official language play according to experts?",
+            "question": "What vital role does understanding official language play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -2216,15 +2283,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "World",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "official language"
             ],
-            "correctSentence": "We are discussing World in our project",
-            "meaningVi": "Chúng mình đang thảo luận về World trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about official language",
+            "meaningVi": "Chúng mình đang tìm hiểu về ngôn ngữ chính thức.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -2238,93 +2303,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 98 – 107",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u10_01",
           "word": "atmosphere",
-          "phonetic": "/atmosphere/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Atmosphere - chủ đề Hành tinh Trái Đất",
-          "hint": "Tiếng Anh 9 Global Success - Unit 10",
-          "exampleEn": "We explore atmosphere in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về atmosphere trong tiết học tiếng Anh.",
+          "phonetic": "/ˈætməsfɪə/",
+          "wordType": "Danh từ",
+          "meaning": "Khí quyển",
+          "hint": "Tầng không khí bao quanh hành tinh",
+          "exampleEn": "The Earth's atmosphere shields us from harmful solar radiation.",
+          "exampleVi": "Bầu khí quyển của Trái Đất che chắn cho chúng ta khỏi bức xạ mặt trời độc hại.",
           "emoji": "✨"
         },
         {
           "id": "g9_u10_02",
           "word": "ozone layer",
-          "phonetic": "/ozone layer/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Ozone layer - chủ đề Hành tinh Trái Đất",
-          "hint": "Tiếng Anh 9 Global Success - Unit 10",
-          "exampleEn": "We explore ozone layer in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về ozone layer trong tiết học tiếng Anh.",
+          "phonetic": "/ˈəʊzəʊn ˈleɪə/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Tầng ozon",
+          "hint": "Lớp khí bảo vệ sự sống trên trái đất",
+          "exampleEn": "The ozone layer absorbs most of the sun's ultraviolet rays.",
+          "exampleVi": "Tầng ozon hấp thụ phần lớn các tia cực tím nguy hiểm từ ánh mặt trời.",
           "emoji": "✨"
         },
         {
           "id": "g9_u10_03",
           "word": "biodiversity",
-          "phonetic": "/biodiversity/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Biodiversity - chủ đề Hành tinh Trái Đất",
-          "hint": "Tiếng Anh 9 Global Success - Unit 10",
-          "exampleEn": "We explore biodiversity in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về biodiversity trong tiết học tiếng Anh.",
+          "phonetic": "/ˌbaɪəʊdaɪˈvɜːsəti/",
+          "wordType": "Danh từ",
+          "meaning": "Đa dạng sinh học",
+          "hint": "Sự phong phú của các loài sinh vật",
+          "exampleEn": "Tropical rainforests harbor the richest biodiversity on the planet.",
+          "exampleVi": "Các khu rừng mưa nhiệt đới lưu giữ nguồn đa dạng sinh học phong phú nhất trên hành tinh.",
           "emoji": "✨"
         },
         {
           "id": "g9_u10_04",
           "word": "deforestation",
-          "phonetic": "/deforestation/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Deforestation - chủ đề Hành tinh Trái Đất",
-          "hint": "Tiếng Anh 9 Global Success - Unit 10",
-          "exampleEn": "We explore deforestation in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về deforestation trong tiết học tiếng Anh.",
+          "phonetic": "/diːˌfɒrɪˈsteɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Nạn phá rừng",
+          "hint": "Việc chặt phá rừng bừa bãi",
+          "exampleEn": "Deforestation accelerates soil erosion and greenhouse gas build-up.",
+          "exampleVi": "Nạn phá rừng làm đẩy nhanh quá trình xói mòn đất và sự tích tụ khí nhà kính.",
           "emoji": "✨"
         },
         {
           "id": "g9_u10_05",
           "word": "renewable",
-          "phonetic": "/renewable/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Renewable - chủ đề Hành tinh Trái Đất",
-          "hint": "Tiếng Anh 9 Global Success - Unit 10",
-          "exampleEn": "We explore renewable in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về renewable trong tiết học tiếng Anh.",
+          "phonetic": "/rɪˈnjuːəbl/",
+          "wordType": "Tính từ",
+          "meaning": "Tái tạo được",
+          "hint": "Có thể hồi phục tự nhiên",
+          "exampleEn": "Wind and sunshine provide infinite renewable power sources.",
+          "exampleVi": "Gió và ánh nắng mặt trời mang đến những nguồn năng lượng tái tạo vô tận.",
           "emoji": "✨"
         },
         {
           "id": "g9_u10_06",
           "word": "catastrophe",
-          "phonetic": "/catastrophe/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Catastrophe - chủ đề Hành tinh Trái Đất",
-          "hint": "Tiếng Anh 9 Global Success - Unit 10",
-          "exampleEn": "We explore catastrophe in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về catastrophe trong tiết học tiếng Anh.",
+          "phonetic": "/kəˈtæstrəfi/",
+          "wordType": "Danh từ",
+          "meaning": "Thảm họa thiên nhiên",
+          "hint": "Biến cố thảm khốc gây thiệt hại lớn",
+          "exampleEn": "Global warming could trigger ecological catastrophes if left unchecked.",
+          "exampleVi": "Sự nóng lên toàn cầu có thể gây ra những thảm họa sinh thái nếu không được kiềm chế.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Non-defining relative clauses",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Non-defining relative clauses.",
-        "formula": "Non-defining relative clauses",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Mệnh đề quan hệ không xác định (Non-defining Relative Clauses)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 10: Mệnh đề quan hệ không xác định (Non-defining Relative Clauses).",
+        "formula": "Mệnh đề quan hệ không xác định (Non-defining Relative Clauses)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 10?",
-            "options": [
-              "We learn about atmosphere.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Planet Earth:",
+            "question": "Which word from Unit 10 means 'Khí quyển'?",
             "options": [
               "atmosphere",
               "banana",
@@ -2332,24 +2387,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'atmosphere' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'atmosphere' có phiên âm /ˈætməsfɪə/ mang nghĩa là 'Khí quyển'."
+          },
+          {
+            "question": "Choose the correct sentence related to Planet Earth:",
+            "options": [
+              "Students learn about atmosphere in Unit 10.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Intonation in lists",
-        "title": "Luyện ngữ âm: Intonation in lists",
+        "pair": "Ngữ điệu trong danh sách liệt kê",
+        "title": "Luyện ngữ âm: Ngữ điệu trong danh sách liệt kê",
         "sound1": {
-          "symbol": "Intonation",
-          "name": "Âm Intonation",
+          "symbol": "Ngữ",
+          "name": "Âm Ngữ",
           "words": [
-            "atmosphere",
-            "ozone layer"
+            "atmosphere"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -2358,20 +2423,22 @@
         "practiceQuiz": [
           {
             "word": "atmosphere",
-            "correctSound": "Intonation",
+            "correctSound": "Ngữ",
             "options": [
-              "Intonation",
+              "Ngữ",
               "/k/"
             ],
-            "meaningVi": "atmosphere"
+            "meaningVi": "Khí quyển",
+            "phonetic": "/ˈætməsfɪə/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice atmosphere perfectly."
+        "tongueTwister": "Smart students pronounce atmosphere perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss hành tinh trái đất and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs atmosphere/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về hành tinh trái đất và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing hành tinh trái đất in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ atmosphere təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về hành tinh trái đất trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Hành tinh Trái Đất",
         "dialogueTitle": "Getting Started: Planet Earth",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Hành tinh Trái Đất trong bài học SGK.",
@@ -2379,9 +2446,9 @@
           {
             "id": "g9_u10_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our planet earth project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our planet earth project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án hành tinh trái đất chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án hành tinh trái đất chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -2389,7 +2456,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about atmosphere.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về atmosphere.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về khí quyển.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -2411,20 +2478,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding hành tinh trái đất broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding hành tinh trái đất broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về hành tinh trái đất giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về hành tinh trái đất giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using atmosphere in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng atmosphere trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ atmosphere trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Hành tinh Trái Đất",
-        "transcript": "Welcome to our podcast about Planet Earth. Today our guest speaker explains how atmosphere affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Planet Earth. Today our guest speaker explains how atmosphere affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Planet Earth",
@@ -2436,21 +2509,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Planet Earth",
-        "passage": "Throughout the country, students are learning about hành tinh trái đất. This topic provides essential insights into social development. Experts emphasize that atmosphere plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về hành tinh trái đất. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng atmosphere đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore hành tinh trái đất. This lesson provides essential knowledge about modern life. Educators emphasize that understanding atmosphere (khí quyển) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về hành tinh trái đất. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu khí quyển (atmosphere) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u10_r1",
             "type": "multiple_choice",
-            "question": "What vital role does atmosphere play according to experts?",
+            "question": "What vital role does understanding atmosphere play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -2464,15 +2537,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Planet",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "atmosphere"
             ],
-            "correctSentence": "We are discussing Planet in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Planet trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about atmosphere",
+            "meaningVi": "Chúng mình đang tìm hiểu về khí quyển.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -2486,93 +2557,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 108 – 117",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u11_01",
           "word": "gadget",
-          "phonetic": "/gadget/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Gadget - chủ đề Thiết bị điện tử",
-          "hint": "Tiếng Anh 9 Global Success - Unit 11",
-          "exampleEn": "We explore gadget in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về gadget trong tiết học tiếng Anh.",
+          "phonetic": "/ˈɡædʒɪt/",
+          "wordType": "Danh từ",
+          "meaning": "Thiết bị công nghệ tiện ích",
+          "hint": "Dụng cụ điện tử thông minh nhỏ gọn",
+          "exampleEn": "Smart watches are handy gadgets for tracking physical workouts.",
+          "exampleVi": "Đồng hồ thông minh là những thiết bị tiện ích tuyệt vời để theo dõi quá trình tập luyện.",
           "emoji": "✨"
         },
         {
           "id": "g9_u11_02",
-          "word": "touch screen",
-          "phonetic": "/touch screen/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Touch screen - chủ đề Thiết bị điện tử",
-          "hint": "Tiếng Anh 9 Global Success - Unit 11",
-          "exampleEn": "We explore touch screen in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về touch screen trong tiết học tiếng Anh.",
+          "word": "touchscreen",
+          "phonetic": "/ˈtʌtʃskriːn/",
+          "wordType": "Danh từ",
+          "meaning": "Màn hình cảm ứng",
+          "hint": "Màn hình chạm điều khiển trực tiếp",
+          "exampleEn": "Tablets feature responsive touchscreens for digital drawing.",
+          "exampleVi": "Máy tính bảng sở hữu màn hình cảm ứng nhạy bén để vẽ tranh kỹ thuật số.",
           "emoji": "✨"
         },
         {
           "id": "g9_u11_03",
           "word": "portable",
-          "phonetic": "/portable/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Portable - chủ đề Thiết bị điện tử",
-          "hint": "Tiếng Anh 9 Global Success - Unit 11",
-          "exampleEn": "We explore portable in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về portable trong tiết học tiếng Anh.",
+          "phonetic": "/ˈpɔːtəbl/",
+          "wordType": "Tính từ",
+          "meaning": "Di động, có thể mang theo",
+          "hint": "Dễ dàng cầm theo mọi nơi",
+          "exampleEn": "Laptops are lightweight and portable for students on the move.",
+          "exampleVi": "Máy tính xách tay có trọng lượng nhẹ và tiện lợi mang theo cho học sinh di chuyển.",
           "emoji": "✨"
         },
         {
           "id": "g9_u11_04",
           "word": "rechargeable",
-          "phonetic": "/rechargeable/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Rechargeable - chủ đề Thiết bị điện tử",
-          "hint": "Tiếng Anh 9 Global Success - Unit 11",
-          "exampleEn": "We explore rechargeable in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về rechargeable trong tiết học tiếng Anh.",
+          "phonetic": "/ˌriːˈtʃɑːdʒəbl/",
+          "wordType": "Tính từ",
+          "meaning": "Có thể sạc lại điện",
+          "hint": "Nạp lại điện nhiều lần",
+          "exampleEn": "Rechargeable batteries save money and reduce electronic waste.",
+          "exampleVi": "Pin sạc lại được giúp tiết kiệm tiền bạc và giảm bớt rác thải điện tử.",
           "emoji": "✨"
         },
         {
           "id": "g9_u11_05",
           "word": "processor",
-          "phonetic": "/processor/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Processor - chủ đề Thiết bị điện tử",
-          "hint": "Tiếng Anh 9 Global Success - Unit 11",
-          "exampleEn": "We explore processor in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về processor trong tiết học tiếng Anh.",
+          "phonetic": "/ˈprəʊsesə/",
+          "wordType": "Danh từ",
+          "meaning": "Bộ vi xử lý máy tính (Chip CPU)",
+          "hint": "Bộ não tính toán của thiết bị",
+          "exampleEn": "A powerful processor ensures seamless multi-tasking on computers.",
+          "exampleVi": "Một bộ vi xử lý mạnh mẽ bảo đảm việc chạy đa nhiệm mượt mà trên máy tính.",
           "emoji": "✨"
         },
         {
           "id": "g9_u11_06",
           "word": "interactive",
-          "phonetic": "/interactive/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Interactive - chủ đề Thiết bị điện tử",
-          "hint": "Tiếng Anh 9 Global Success - Unit 11",
-          "exampleEn": "We explore interactive in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về interactive trong tiết học tiếng Anh.",
+          "phonetic": "/ˌɪntərˈæktɪv/",
+          "wordType": "Tính từ",
+          "meaning": "Tương tác",
+          "hint": "Có sự phản hồi hai chiều qua lại",
+          "exampleEn": "Interactive learning software makes grammar study engaging.",
+          "exampleVi": "Phần mềm học tập tương tác giúp cho việc học ngữ pháp trở nên vô cùng cuốn hút.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Adverbial clauses of concession (although, though)",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Adverbial clauses of concession (although, though).",
-        "formula": "Adverbial clauses of concession (although, though)",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Mệnh đề trạng ngữ chỉ sự nhượng bộ (although, though, even though)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 11: Mệnh đề trạng ngữ chỉ sự nhượng bộ (although, though, even though).",
+        "formula": "Mệnh đề trạng ngữ chỉ sự nhượng bộ (although, though, even though)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 11?",
-            "options": [
-              "We learn about gadget.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Electronic Devices:",
+            "question": "Which word from Unit 11 means 'Thiết bị công nghệ tiện ích'?",
             "options": [
               "gadget",
               "banana",
@@ -2580,24 +2641,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'gadget' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'gadget' có phiên âm /ˈɡædʒɪt/ mang nghĩa là 'Thiết bị công nghệ tiện ích'."
+          },
+          {
+            "question": "Choose the correct sentence related to Electronic Devices:",
+            "options": [
+              "Students learn about gadget in Unit 11.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Connected speech: elision",
-        "title": "Luyện ngữ âm: Connected speech: elision",
+        "pair": "Hiện tượng nuốt âm trong lời nói nối (Elision)",
+        "title": "Luyện ngữ âm: Hiện tượng nuốt âm trong lời nói nối (Elision)",
         "sound1": {
-          "symbol": "Connected",
-          "name": "Âm Connected",
+          "symbol": "Hiện",
+          "name": "Âm Hiện",
           "words": [
-            "gadget",
-            "touch screen"
+            "gadget"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -2606,20 +2677,22 @@
         "practiceQuiz": [
           {
             "word": "gadget",
-            "correctSound": "Connected",
+            "correctSound": "Hiện",
             "options": [
-              "Connected",
+              "Hiện",
               "/k/"
             ],
-            "meaningVi": "gadget"
+            "meaningVi": "Thiết bị công nghệ tiện ích",
+            "phonetic": "/ˈɡædʒɪt/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice gadget perfectly."
+        "tongueTwister": "Smart students pronounce gadget perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss thiết bị điện tử and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs gadget/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về thiết bị điện tử và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing thiết bị điện tử in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ gadget təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về thiết bị điện tử trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Thiết bị điện tử",
         "dialogueTitle": "Getting Started: Electronic Devices",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Thiết bị điện tử trong bài học SGK.",
@@ -2627,9 +2700,9 @@
           {
             "id": "g9_u11_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our electronic devices project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our electronic devices project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án thiết bị điện tử chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án thiết bị điện tử chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -2637,7 +2710,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about gadget.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về gadget.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về thiết bị công nghệ tiện ích.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -2659,20 +2732,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding thiết bị điện tử broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding thiết bị điện tử broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về thiết bị điện tử giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về thiết bị điện tử giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using gadget in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng gadget trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ gadget trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Thiết bị điện tử",
-        "transcript": "Welcome to our podcast about Electronic Devices. Today our guest speaker explains how gadget affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Electronic Devices. Today our guest speaker explains how gadget affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Electronic Devices",
@@ -2684,21 +2763,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Electronic Devices",
-        "passage": "Throughout the country, students are learning about thiết bị điện tử. This topic provides essential insights into social development. Experts emphasize that gadget plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về thiết bị điện tử. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng gadget đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore thiết bị điện tử. This lesson provides essential knowledge about modern life. Educators emphasize that understanding gadget (thiết bị công nghệ tiện ích) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về thiết bị điện tử. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu thiết bị công nghệ tiện ích (gadget) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u11_r1",
             "type": "multiple_choice",
-            "question": "What vital role does gadget play according to experts?",
+            "question": "What vital role does understanding gadget play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -2712,15 +2791,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Electronic",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "gadget"
             ],
-            "correctSentence": "We are discussing Electronic in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Electronic trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about gadget",
+            "meaningVi": "Chúng mình đang tìm hiểu về thiết bị công nghệ tiện ích.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }
@@ -2734,93 +2811,83 @@
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 118 – 127",
+      "bookId": "sgk-9",
       "vocabularies": [
         {
           "id": "g9_u12_01",
           "word": "vocation",
-          "phonetic": "/vocation/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Vocation - chủ đề Lựa chọn nghề nghiệp",
-          "hint": "Tiếng Anh 9 Global Success - Unit 12",
-          "exampleEn": "We explore vocation in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về vocation trong tiết học tiếng Anh.",
+          "phonetic": "/vəʊˈkeɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Thiên hướng nghề nghiệp, nghề nghiệp",
+          "hint": "Nghề nghiệp phù hợp với đam mê",
+          "exampleEn": "Teaching is not merely a job; it is a heartfelt vocation.",
+          "exampleVi": "Nghề dạy học không đơn thuần là một công việc; đó là một thiên hướng thiêng liêng từ trái tim.",
           "emoji": "✨"
         },
         {
           "id": "g9_u12_02",
           "word": "qualification",
-          "phonetic": "/qualification/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Qualification - chủ đề Lựa chọn nghề nghiệp",
-          "hint": "Tiếng Anh 9 Global Success - Unit 12",
-          "exampleEn": "We explore qualification in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về qualification trong tiết học tiếng Anh.",
+          "phonetic": "/ˌkwɒlɪfɪˈkeɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Bằng cấp, chứng chỉ chuyên môn",
+          "hint": "Chứng chỉ xác nhận năng lực",
+          "exampleEn": "Higher qualifications open doors to senior professional roles.",
+          "exampleVi": "Bằng cấp chuyên môn cao mở ra những cánh cửa dẫn tới các vị trí nghề nghiệp cao cấp.",
           "emoji": "✨"
         },
         {
           "id": "g9_u12_03",
           "word": "apprenticeship",
-          "phonetic": "/apprenticeship/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Apprenticeship - chủ đề Lựa chọn nghề nghiệp",
-          "hint": "Tiếng Anh 9 Global Success - Unit 12",
-          "exampleEn": "We explore apprenticeship in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về apprenticeship trong tiết học tiếng Anh.",
+          "phonetic": "/əˈprentɪsʃɪp/",
+          "wordType": "Danh từ",
+          "meaning": "Thời gian học nghề, kỳ thực tập nghề",
+          "hint": "Quá trình vừa học vừa làm thực tế",
+          "exampleEn": "The automotive factory offers paid apprenticeships for high school graduates.",
+          "exampleVi": "Nhà máy ô tô cung cấp những kỳ học nghề có trả lương cho các bạn tốt nghiệp THPT.",
           "emoji": "✨"
         },
         {
           "id": "g9_u12_04",
           "word": "career adviser",
-          "phonetic": "/career adviser/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Career adviser - chủ đề Lựa chọn nghề nghiệp",
-          "hint": "Tiếng Anh 9 Global Success - Unit 12",
-          "exampleEn": "We explore career adviser in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về career adviser trong tiết học tiếng Anh.",
+          "phonetic": "/kəˈrɪər ədˈvaɪzə/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Chuyên viên tư vấn hướng nghiệp",
+          "hint": "Người định hướng tương lai nghề nghiệp",
+          "exampleEn": "A career adviser helps students align talents with market needs.",
+          "exampleVi": "Một chuyên viên tư vấn hướng nghiệp giúp học sinh gắn kết tài năng với nhu cầu thị trường.",
           "emoji": "✨"
         },
         {
           "id": "g9_u12_05",
           "word": "job market",
-          "phonetic": "/job market/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Job market - chủ đề Lựa chọn nghề nghiệp",
-          "hint": "Tiếng Anh 9 Global Success - Unit 12",
-          "exampleEn": "We explore job market in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về job market trong tiết học tiếng Anh.",
+          "phonetic": "/dʒɒb ˈmɑːkɪt/",
+          "wordType": "Cụm danh từ",
+          "meaning": "Thị trường lao động, thị trường việc làm",
+          "hint": "Nơi cung cầu về việc làm",
+          "exampleEn": "The modern job market demands strong digital and language capabilities.",
+          "exampleVi": "Thị trường việc làm hiện đại đòi hỏi năng lực kỹ thuật số và ngoại ngữ vững vàng.",
           "emoji": "✨"
         },
         {
           "id": "g9_u12_06",
           "word": "ambition",
-          "phonetic": "/ambition/",
-          "wordType": "Từ vựng trọng tâm SGK",
-          "meaning": "Ambition - chủ đề Lựa chọn nghề nghiệp",
-          "hint": "Tiếng Anh 9 Global Success - Unit 12",
-          "exampleEn": "We explore ambition in our English class.",
-          "exampleVi": "Chúng mình tìm hiểu về ambition trong tiết học tiếng Anh.",
+          "phonetic": "/æmˈbɪʃn/",
+          "wordType": "Danh từ",
+          "meaning": "Hoài bão, ước vọng lớn",
+          "hint": "Ý chí khát vọng vươn tới đỉnh cao",
+          "exampleEn": "Her ambition is to become an aerospace engineer at NASA.",
+          "exampleVi": "Hoài bão lớn của cô ấy là trở thành một kỹ sư hàng không vũ trụ tại NASA.",
           "emoji": "✨"
         }
       ],
       "grammar": {
-        "title": "Ngữ pháp trọng tâm: Adverbial clauses of condition (provided that)",
-        "ruleVi": "Quy tắc ngữ pháp chuẩn SGK Tiếng Anh 9: Adverbial clauses of condition (provided that).",
-        "formula": "Adverbial clauses of condition (provided that)",
-        "quickTip": "Ghi nhớ cấu trúc và áp dụng giải bài tập trắc nghiệm & viết lại câu.",
+        "title": "Ngữ pháp trọng tâm: Mệnh đề trạng ngữ chỉ điều kiện (provided that, as long as)",
+        "ruleVi": "Điểm ngữ pháp chuẩn SGK Tiếng Anh 9 Global Success - Unit 12: Mệnh đề trạng ngữ chỉ điều kiện (provided that, as long as).",
+        "formula": "Mệnh đề trạng ngữ chỉ điều kiện (provided that, as long as)",
+        "quickTip": "Ghi nhớ cấu trúc ngữ pháp và áp dụng làm các câu hỏi trắc nghiệm bên dưới.",
         "quiz": [
           {
-            "question": "Which of the following is correct for Unit 12?",
-            "options": [
-              "We learn about vocation.",
-              "They does not study.",
-              "She go to school.",
-              "I are playing."
-            ],
-            "answerIndex": 0,
-            "explain": "Áp dụng ngữ pháp chuẩn xác của Unit."
-          },
-          {
-            "question": "Choose the word related to Career Choices:",
+            "question": "Which word from Unit 12 means 'Thiên hướng nghề nghiệp, nghề nghiệp'?",
             "options": [
               "vocation",
               "banana",
@@ -2828,24 +2895,34 @@
               "pencil"
             ],
             "answerIndex": 0,
-            "explain": "Từ 'vocation' là từ khóa trọng tâm của bài học."
+            "explain": "Từ 'vocation' có phiên âm /vəʊˈkeɪʃn/ mang nghĩa là 'Thiên hướng nghề nghiệp, nghề nghiệp'."
+          },
+          {
+            "question": "Choose the correct sentence related to Career Choices:",
+            "options": [
+              "Students learn about vocation in Unit 12.",
+              "They does not study.",
+              "She go to school.",
+              "I are playing."
+            ],
+            "answerIndex": 0,
+            "explain": "Áp dụng ngữ pháp và từ vựng chuẩn xác của Unit."
           }
         ]
       },
       "pronunciation": {
-        "pair": "Intonation in polite requests",
-        "title": "Luyện ngữ âm: Intonation in polite requests",
+        "pair": "Ngữ điệu trong lời đề nghị lịch sự",
+        "title": "Luyện ngữ âm: Ngữ điệu trong lời đề nghị lịch sự",
         "sound1": {
-          "symbol": "Intonation",
-          "name": "Âm Intonation",
+          "symbol": "Ngữ",
+          "name": "Âm Ngữ",
           "words": [
-            "vocation",
-            "qualification"
+            "vocation"
           ]
         },
         "sound2": {
           "symbol": "/ə/",
-          "name": "Âm nguyên âm /ə/",
+          "name": "Nguyên âm /ə/",
           "words": [
             "together",
             "standard"
@@ -2854,20 +2931,22 @@
         "practiceQuiz": [
           {
             "word": "vocation",
-            "correctSound": "Intonation",
+            "correctSound": "Ngữ",
             "options": [
-              "Intonation",
+              "Ngữ",
               "/k/"
             ],
-            "meaningVi": "vocation"
+            "meaningVi": "Thiên hướng nghề nghiệp, nghề nghiệp",
+            "phonetic": "/vəʊˈkeɪʃn/",
+            "answerIndex": 0
           }
         ],
-        "tongueTwister": "Smart students practice vocation perfectly."
+        "tongueTwister": "Smart students pronounce vocation perfectly in English."
       },
       "speaking": {
-        "targetSentence": "In our English lesson today, we discuss lựa chọn nghề nghiệp and its importance.",
-        "phonetic": "/ɪn ˈaʊə ˈɪŋɡlɪʃ ˈlesn təˈdeɪ wiː dɪˈskʌs vocation/",
-        "meaningVi": "Trong tiết tiếng Anh hôm nay, chúng mình thảo luận về lựa chọn nghề nghiệp và tầm quan trọng của nó.",
+        "targetSentence": "We are discussing lựa chọn nghề nghiệp in our English lesson today.",
+        "phonetic": "/wiː ɑː dɪˈskʌsɪŋ vocation təˈdeɪ/",
+        "meaningVi": "Chúng mình đang thảo luận về lựa chọn nghề nghiệp trong tiết học tiếng Anh hôm nay.",
         "situationalTopic": "Lựa chọn nghề nghiệp",
         "dialogueTitle": "Getting Started: Career Choices",
         "dialogueContext": "Các bạn học sinh trao đổi về chủ đề Lựa chọn nghề nghiệp trong bài học SGK.",
@@ -2875,9 +2954,9 @@
           {
             "id": "g9_u12_d1",
             "speaker": "Phong",
-            "sentenceEn": "Hi, Nick. Have you prepared for our career choices project?",
+            "sentenceEn": "Hi, Nick! Have you prepared for our career choices project?",
             "phonetic": "/haɪ nɪk hæv juː prɪˈpeəd/",
-            "meaningVi": "Chào Nick. Cậu đã chuẩn bị cho dự án lựa chọn nghề nghiệp chưa?",
+            "meaningVi": "Chào Nick! Cậu đã chuẩn bị cho dự án lựa chọn nghề nghiệp chưa?",
             "tipsVi": "Giọng chào hào hứng."
           },
           {
@@ -2885,7 +2964,7 @@
             "speaker": "Nick",
             "sentenceEn": "Yes, I have! I found many interesting facts about vocation.",
             "phonetic": "/jes aɪ hæv/",
-            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về vocation.",
+            "meaningVi": "Rồi chứ! Mình đã tìm thấy rất nhiều thông tin thú vị về thiên hướng nghề nghiệp, nghề nghiệp.",
             "tipsVi": "Tự tin và nhấn trọng âm."
           },
           {
@@ -2907,20 +2986,26 @@
         ],
         "challenges": [
           {
-            "sentenceEn": "Understanding lựa chọn nghề nghiệp broadens our knowledge.",
+            "id": 1,
+            "level": "Mẫu câu cốt lõi",
+            "sentenceEn": "Understanding lựa chọn nghề nghiệp broadens our global knowledge.",
             "phonetic": "/.../",
-            "meaningVi": "Hiểu biết về lựa chọn nghề nghiệp giúp mở rộng kiến thức của chúng mình."
+            "meaningVi": "Hiểu biết về lựa chọn nghề nghiệp giúp mở rộng tri thức của chúng mình.",
+            "tipsVi": "Nói to rõ ràng."
           },
           {
+            "id": 2,
+            "level": "Thực hành phản xạ",
             "sentenceEn": "We can practice using vocation in daily communication.",
             "phonetic": "/.../",
-            "meaningVi": "Chúng mình có thể thực hành dùng vocation trong giao tiếp hàng ngày."
+            "meaningVi": "Chúng mình có thể thực hành dùng từ vocation trong giao tiếp hàng ngày.",
+            "tipsVi": "Nhấn vào từ khóa chính."
           }
         ]
       },
       "listening": {
         "topic": "Chủ đề nghe hiểu: Lựa chọn nghề nghiệp",
-        "transcript": "Welcome to our podcast about Career Choices. Today our guest speaker explains how vocation affects our daily lives and community.",
+        "transcript": "Welcome to our podcast about Career Choices. Today our guest speaker explains how vocation affects our daily lives and helps our community grow.",
         "question": "What is the main focus of the podcast discussion?",
         "options": [
           "Career Choices",
@@ -2932,21 +3017,21 @@
       },
       "reading": {
         "title": "Skills 1 - Reading: Career Choices",
-        "passage": "Throughout the country, students are learning about lựa chọn nghề nghiệp. This topic provides essential insights into social development. Experts emphasize that vocation plays a vital role in our modern world, helping youngsters develop critical thinking and problem-solving skills.",
-        "translation": "Trên khắp cả nước, các bạn học sinh đang học về lựa chọn nghề nghiệp. Chủ đề này mang đến những hiểu biết thiết thực về sự phát triển xã hội. Các chuyên gia nhấn mạnh rằng vocation đóng vai trò quan trọng trong thế giới hiện đại.",
+        "passage": "Throughout the school year, students explore lựa chọn nghề nghiệp. This lesson provides essential knowledge about modern life. Educators emphasize that understanding vocation (thiên hướng nghề nghiệp, nghề nghiệp) plays a vital role in developing communication skills and critical thinking for secondary students.",
+        "translation": "Trong suốt năm học, các bạn học sinh tìm hiểu về lựa chọn nghề nghiệp. Bài học này mang lại những kiến thức thiết thực về đời sống hiện đại. Các nhà giáo dục nhấn mạnh rằng việc thấu hiểu thiên hướng nghề nghiệp, nghề nghiệp (vocation) đóng vai trò then chốt trong việc phát triển kỹ năng giao tiếp và tư duy phản biện cho học sinh THCS.",
         "questions": [
           {
             "id": "g9_u12_r1",
             "type": "multiple_choice",
-            "question": "What vital role does vocation play according to experts?",
+            "question": "What vital role does understanding vocation play according to the text?",
             "options": [
-              "It helps youngsters develop critical thinking",
+              "It develops communication skills and critical thinking",
               "It causes problems",
               "It has no effect",
               "It is only for elderly people"
             ],
             "answerIndex": 0,
-            "explain": "Đoạn văn nêu rõ: 'helps youngsters develop critical thinking and problem-solving skills.'"
+            "explain": "Đoạn văn nêu rõ: 'plays a vital role in developing communication skills and critical thinking'."
           }
         ]
       },
@@ -2960,15 +3045,13 @@
             "scrambledWords": [
               "We",
               "are",
-              "discussing",
-              "Career",
-              "in",
-              "our",
-              "project"
+              "learning",
+              "about",
+              "vocation"
             ],
-            "correctSentence": "We are discussing Career in our project",
-            "meaningVi": "Chúng mình đang thảo luận về Career trong dự án.",
-            "hint": "Bắt đầu bằng 'We are discussing...'"
+            "correctSentence": "We are learning about vocation",
+            "meaningVi": "Chúng mình đang tìm hiểu về thiên hướng nghề nghiệp, nghề nghiệp.",
+            "hint": "Bắt đầu bằng 'We are learning...'"
           }
         ]
       }

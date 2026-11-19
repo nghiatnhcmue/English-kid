@@ -383,6 +383,11 @@ export default function SpeakingStation({ unit, onFinish }) {
       clearTimeout(autoStopTimerRef.current);
       autoStopTimerRef.current = null;
     }
+    // Chống chạm nhầm siêu tốc (< 500ms): đảm bảo đệm đủ thời gian cho micro và engine nhận diện
+    const elapsed = Date.now() - (recordStartTimeRef.current || 0);
+    if (elapsed < 500) {
+      await new Promise((r) => setTimeout(r, 500 - elapsed));
+    }
     updateRecordingStatus('evaluating');
     const run = sttRun.current;
     const sentenceToEvaluate = currentTarget.sentenceEn;

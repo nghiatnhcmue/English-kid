@@ -105,4 +105,23 @@ describe('All 12 Grades Comprehensive Curriculum Suite', () => {
     expect(u12.unitId).toBe(12);
     expect(u12.titleEn).toContain('Robots');
   });
+
+  it('8. bookIdForUnit maps correctly across all school levels and grades', async () => {
+    const { bookIdForUnit } = await import('../components/PdfReaderModal.jsx');
+    expect(bookIdForUnit({ grade: 1 })).toBe('sgk-1');
+    expect(bookIdForUnit({ grade: 2 })).toBe('sgk-2');
+    expect(bookIdForUnit({ grade: 3 })).toBe('sgk-3-tap2');
+    expect(bookIdForUnit({ grade: 4, semester: 1 })).toBe('sgk-4-tap1');
+    expect(bookIdForUnit({ grade: 4, semester: 2 })).toBe('sgk-4-tap2');
+    expect(bookIdForUnit({ grade: 5, semester: 1 })).toBe('sgk-5-tap1');
+    expect(bookIdForUnit({ grade: 5, semester: 2 })).toBe('sgk-5-tap2');
+    expect(bookIdForUnit({ grade: 6, semester: 1 })).toBe('tap1');
+    expect(bookIdForUnit({ grade: 6, semester: 2 })).toBe('tap2');
+    expect(bookIdForUnit({ grade: 7 })).toBe('sgk-7');
+    expect(bookIdForUnit({ grade: 8 })).toBe('sgk-8');
+    expect(bookIdForUnit({ grade: 9 })).toBe('sgk-9');
+    expect(bookIdForUnit({ grade: 10 })).toBe('sgk-10');
+    expect(bookIdForUnit({ grade: 11 })).toBe('sgk-11');
+    expect(bookIdForUnit({ grade: 12 })).toBe('sgk-12');
+  });
 });

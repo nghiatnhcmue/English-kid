@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { listUnits, getUnit } from '../utils/data.js';
 import { PageHeader, Button3D } from '../components/ui.jsx';
 import WritingStation from '../components/stations/WritingStation.jsx';
@@ -7,17 +8,35 @@ import { playSfx } from '../utils/sfx.js';
 import { PenTool } from 'lucide-react';
 
 export default function WritingPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const rawParam = searchParams.get('unit');
   const units = listUnits();
-  const [selectedUnitId, setSelectedUnitId] = useState(1);
+
+  const initialId = rawParam && (units.some((u) => String(u.unitId) === String(rawParam)) || getUnit(rawParam))
+    ? rawParam
+    : (units[0]?.unitId || 1);
+  const [selectedUnitId, setSelectedUnitId] = useState(initialId);
   const currentUnit = getUnit(selectedUnitId);
+
+  useEffect(() => {
+    if (rawParam && rawParam !== selectedUnitId && (units.some((u) => String(u.unitId) === String(rawParam)) || getUnit(rawParam))) {
+      setSelectedUnitId(rawParam);
+    }
+  }, [rawParam, selectedUnitId, units]);
+
+  const handleSelectUnit = (unitId) => {
+    playSfx('click');
+    setSelectedUnitId(unitId);
+    setSearchParams({ unit: String(unitId) });
+  };
 
   return (
     <div className="flex flex-col gap-6">
       <PageHeader
         title="✍️ Phòng Luyện Viết & Sắp xếp câu"
-        subtitle="12 bài tập sắp xếp khối từ xáo trộn thành câu hoàn chỉnh · Củng cố cấu trúc ngữ pháp chuẩn SGK"
-        backTo="/"
-        backLabel="Trang chủ"
+        subtitle={`${units.length} bài tập sắp xếp khối từ xáo trộn thành câu hoàn chỉnh · Củng cố cấu trúc ngữ pháp chuẩn SGK`}
+        backTo={`/unit/${selectedUnitId}`}
+        backLabel={`Về Unit ${currentUnit?.unit || selectedUnitId}`}
       />
 
       {/* Hướng dẫn phương pháp Luyện Viết cho học sinh mất gốc */}
@@ -33,10 +52,10 @@ export default function WritingPage() {
         </div>
       </section>
 
-      {/* Thanh chọn 12 Unit dạng cuộn ngang */}
+      {/* Thanh chọn Unit dạng cuộn ngang */}
       <nav aria-label="Chọn bài học luyện viết" className="flex flex-col gap-2">
         <span className="text-xs font-black uppercase text-ink-soft tracking-wider">
-          Chọn Unit để luyện viết câu (12 bài học):
+          Chọn bài học luyện viết câu ({units.length} bài học):
         </span>
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
           {units.map((u) => {
@@ -45,10 +64,7 @@ export default function WritingPage() {
               <button
                 key={u.unitId}
                 type="button"
-                onClick={() => {
-                  playSfx('click');
-                  setSelectedUnitId(u.unitId);
-                }}
+                onClick={() => handleSelectUnit(u.unitId)}
                 className={`flex shrink-0 items-center gap-2 rounded-2xl px-4 py-2.5 text-sm sm:text-base font-black transition-all cursor-pointer select-none ${
                   isSelected
                     ? 'bg-mint text-white shadow-[0_4px_0_var(--color-mint-dark)] scale-105 ring-2 ring-mint-dark/30'
@@ -56,7 +72,7 @@ export default function WritingPage() {
                 }`}
               >
                 <span className="text-lg leading-none" aria-hidden>{u.emoji}</span>
-                <span>Unit {u.unitId}</span>
+                <span>Unit {u.unit || u.unitId}</span>
               </button>
             );
           })}
@@ -69,7 +85,7 @@ export default function WritingPage() {
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl bg-white p-4 shadow-xs border-2 border-banana-soft">
             <div>
               <span className="rounded-full bg-cream px-3 py-1 text-xs font-black text-ink-soft">
-                Unit {currentUnit.unitId}: {currentUnit.titleEn}
+                Unit {currentUnit.unit || currentUnit.unitId}: {currentUnit.titleEn}
               </span>
               <h2 className="mt-1 text-xl sm:text-2xl font-black text-ink">
                 {currentUnit.titleVi}

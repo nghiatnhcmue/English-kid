@@ -11,7 +11,7 @@ import { t } from '../i18n/vi.js';
 export default function UnitSwitcher({ className = 'flex' }) {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const current = pathname.match(/^\/unit\/(\d+)/)?.[1] ?? '';
+  const current = pathname.match(/^\/unit\/([a-zA-Z0-9_]+)/)?.[1] ?? '';
   const units = listUnits();
 
   return (
@@ -29,7 +29,7 @@ export default function UnitSwitcher({ className = 'flex' }) {
         <option value="">📚 Chọn bài học…</option>
         {units.map((u) => (
           <option key={u.unitId} value={u.unitId} disabled={!u.available}>
-            {u.available ? '' : '🔒 '}Unit {u.unitId}: {u.titleEn}
+            {u.available ? '' : '🔒 '}Unit {u.unit || u.unitId}: {u.titleEn}
           </option>
         ))}
       </select>

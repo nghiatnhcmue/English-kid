@@ -18,6 +18,22 @@ describe('shuffleOptions', () => {
     expect(r.options[r.answerIndex]).toBe('tennis');
   });
 
+  it('suy ra answerIndex từ answer dạng chuỗi hoặc dạng số nguyên', () => {
+    const qStr = { question: 'She likes ___ books.', options: ['reading', 'read', 'reads'], answer: 'reading' };
+    const rStr = shuffleOptions(qStr);
+    expect(rStr.options[rStr.answerIndex]).toBe('reading');
+
+    const qNum = { question: 'Select option', options: ['A', 'B', 'C'], answer: 1 };
+    const rNum = shuffleOptions(qNum);
+    expect(rNum.options[rNum.answerIndex]).toBe('B');
+  });
+
+  it('suy ra answerIndex từ correctAnswer khi có', () => {
+    const qCorrect = { question: 'What is it?', options: ['cat', 'dog', 'bird'], correctAnswer: 'dog' };
+    const rCorrect = shuffleOptions(qCorrect);
+    expect(rCorrect.options[rCorrect.answerIndex]).toBe('dog');
+  });
+
   it('bỏ qua câu hỏi không hợp lệ', () => {
     const q = { question: 'x', options: ['a', 'b'], answerIndex: 5 };
     expect(shuffleOptions(q)).toBe(q);

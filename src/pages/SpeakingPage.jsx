@@ -37,7 +37,7 @@ export default function SpeakingPage() {
           title="🎙️ Phòng Luyện Nói & Chấm Điểm AI"
           subtitle="🎭 Đối đáp phân vai cùng Máy theo hội thoại SGK · Máy nói 1 vai, em nói 1 vai · Chấm điểm AI & nghe lại giọng"
           backTo={`/unit/${selectedUnitId}`}
-          backLabel={`Về Unit ${selectedUnitId}`}
+          backLabel={`Về Unit ${currentUnit?.unit || selectedUnitId}`}
         />
         <Button3D
           to={`/unit/${selectedUnitId}`}
@@ -45,7 +45,7 @@ export default function SpeakingPage() {
           className="px-4 py-2 text-sm hidden sm:inline-flex"
         >
           <BookOpen className="h-4 w-4" />
-          <span>Về bài học Unit {selectedUnitId}</span>
+          <span>Về bài học Unit {currentUnit?.unit || selectedUnitId}</span>
         </Button3D>
       </div>
 
@@ -65,7 +65,7 @@ export default function SpeakingPage() {
       {/* Thanh chọn 12 Unit dạng cuộn ngang */}
       <nav aria-label="Chọn bài học luyện nói" className="flex flex-col gap-2">
         <span className="text-xs font-black uppercase text-ink-soft tracking-wider">
-          Chọn bài học để luyện nói (12 Unit Global Success):
+          Chọn bài học để luyện nói ({units.length} Unit Global Success):
         </span>
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none">
           {units.map((u) => {
@@ -82,7 +82,7 @@ export default function SpeakingPage() {
                 }`}
               >
                 <span className="text-lg leading-none" aria-hidden>{u.emoji}</span>
-                <span>Unit {u.unitId}</span>
+                <span>Unit {u.unit || u.unitId}</span>
               </button>
             );
           })}

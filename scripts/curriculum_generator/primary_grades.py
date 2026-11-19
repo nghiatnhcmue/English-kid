@@ -10,6 +10,17 @@ primary_grades.py
 Mỗi Unit có đầy đủ 7 trạm: Từ vựng (vocabularies), Ngữ pháp (grammar), Phát âm (pronunciation),
 Luyện nói (speaking & dialogueLines), Đọc hiểu (reading), Luyện nghe (listening), Viết câu (writing).
 """
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+from primary_vocab_db import lookup_primary_word
+
+def get_primary_book_id(grade, sem):
+    if grade == 1: return "sgk-1"
+    if grade == 2: return "sgk-2"
+    if grade == 3: return "sgk-3-tap2"
+    if grade == 4: return "sgk-4-tap1" if sem == 1 else "sgk-4-tap2"
+    if grade == 5: return "sgk-5-tap1" if sem == 1 else "sgk-5-tap2"
+    return f"sgk-{grade}"
 
 def generate_primary_grades():
     grades = {}
@@ -41,15 +52,16 @@ def generate_primary_grades():
         word_list = [w.strip() for w in words_str.split(",")]
         vocab_items = []
         for idx, w in enumerate(word_list):
+            ipa, mean, ex_en, ex_vi, hint = lookup_primary_word(w)
             vocab_items.append({
                 "id": f"g1_u{u_num}_{idx+1:02d}",
                 "word": w,
-                "phonetic": f"/{w.lower()}/",
-                "wordType": "Danh từ",
-                "meaning": f"{w.capitalize()} trong tiếng Anh",
-                "hint": f"Từ vựng bài {u_num}: {title_vi}",
-                "exampleEn": f"Look at the {w}.",
-                "exampleVi": f"Hãy nhìn vào {w}.",
+                "phonetic": ipa,
+                "wordType": "Danh từ" if not mean.startswith("Bạn") else "Tên riêng",
+                "meaning": mean,
+                "hint": hint,
+                "exampleEn": ex_en,
+                "exampleVi": ex_vi,
                 "emoji": "🌟"
             })
 
@@ -65,6 +77,7 @@ def generate_primary_grades():
             "theme": "School & Daily Life",
             "semester": sem,
             "bookPages": pages,
+            "bookId": "sgk-1",
             "vocabularies": vocab_items,
             "grammar": {
                 "title": f"Mẫu câu giao tiếp: Chỉ và gọi tên đồ vật với '{main_word}'",
@@ -225,6 +238,7 @@ def generate_primary_grades():
             "theme": "Family & Friends",
             "semester": sem,
             "bookPages": pages,
+            "bookId": "sgk-1",
             "vocabularies": vocab_items,
             "grammar": {
                 "title": f"Mẫu câu: Bày tỏ sở thích và sự có mặt với '{main_word}'",
@@ -367,6 +381,7 @@ def generate_primary_grades():
             "theme": "Me and My World",
             "semester": sem,
             "bookPages": pages,
+            "bookId": "sgk-1",
             "vocabularies": vocab_items,
             "grammar": {
                 "title": f"Ngữ pháp Unit {u_num}: {grammar_point.split('/')[0]}",
@@ -513,15 +528,16 @@ def generate_primary_grades():
             word_list = [w.strip() for w in words_str.split(",")]
             vocab_items = []
             for idx, w in enumerate(word_list):
+                ipa, mean, ex_en, ex_vi, hint = lookup_primary_word(w)
                 vocab_items.append({
                     "id": f"g{g_num}_u{u_num}_{idx+1:02d}",
                     "word": w,
-                    "phonetic": f"/{w.lower()}/",
+                    "phonetic": ipa,
                     "wordType": "Từ vựng trọng tâm",
-                    "meaning": f"{w.capitalize()} - chủ đề {title_vi}",
-                    "hint": f"Tiếng Anh {g_num} - Unit {u_num}",
-                    "exampleEn": f"We are talking about {w}.",
-                    "exampleVi": f"Chúng mình đang nói về {w}.",
+                    "meaning": mean,
+                    "hint": hint,
+                    "exampleEn": ex_en,
+                    "exampleVi": ex_vi,
                     "emoji": "🌟"
                 })
             main_word = word_list[0]
@@ -534,6 +550,7 @@ def generate_primary_grades():
                 "theme": "Community & Life Skills",
                 "semester": sem,
                 "bookPages": f"Trang {(u_num-1)*6 + 6} – {u_num*6 + 5}",
+                "bookId": get_primary_book_id(g_num, sem),
                 "vocabularies": vocab_items,
                 "grammar": {
                     "title": f"Mẫu câu trọng tâm Unit {u_num}",

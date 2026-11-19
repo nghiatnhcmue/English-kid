@@ -14,7 +14,18 @@ export { OFFICIAL_BOOKS, SCHOOL_LEVELS, findOfficialBook, getBooksBySchoolLevel,
 
 // Bản scan SGK: trang PDF = trang in trên sách + 1 (trang 1 của file là bìa).
 export const PDF_PAGE_OFFSET = 1;
-export const bookIdForUnit = (unit) => (Number(unit?.bookVolume) === 2 ? 'tap2' : 'tap1');
+export const bookIdForUnit = (unit) => {
+  if (unit?.bookId) return unit.bookId;
+  const grade = Number(unit?.grade) || 6;
+  const sem = Number(unit?.semester) || Number(unit?.bookVolume) || 1;
+  if (grade === 6) return sem === 2 ? 'tap2' : 'tap1';
+  if (grade === 1) return 'sgk-1';
+  if (grade === 2) return 'sgk-2';
+  if (grade === 3) return 'sgk-3-tap2';
+  if (grade === 4) return sem === 2 ? 'sgk-4-tap2' : 'sgk-4-tap1';
+  if (grade === 5) return sem === 2 ? 'sgk-5-tap2' : 'sgk-5-tap1';
+  return `sgk-${grade}`;
+};
 export const pdfPageForUnit = (unit) => {
   const start = Number(unit?.bookStartPage) || Number(String(unit?.bookPages || '').match(/\d+/)?.[0]) || 1;
   return start + PDF_PAGE_OFFSET;
