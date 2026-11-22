@@ -1,21 +1,40 @@
 import { useMemo, useRef, useState, useEffect, useCallback } from 'react';
 import { shuffle } from '../utils/random.js';
 import { playSfx } from '../utils/sfx.js';
+import { allWords } from '../utils/data.js';
 import { ProgressBar, SpeakerButton, SlowSpeakerButton, WordImage, InstructionBanner, starsFromMistakes } from './ui.jsx';
 import { t } from '../i18n/vi.js';
 
 const MAX_ROUNDS = 8;
 
-/** 1 đáp án + 3 hình nhiễu (khác emoji/hình), lấy từ pool. */
-function makeOptions(word, pool) {
-  const seen = new Set([word.emoji]);
+/** 1 đáp án đúng + 3 lựa chọn nhiễu lấy từ pool, đảm bảo luôn đủ 4 đáp án */
+export function makeOptions(word, pool) {
+  if (!word) return [];
+  const validPool = Array.isArray(pool) ? pool : [];
+  const candidateList = shuffle(validPool.filter((w) => w && w.id !== word.id));
   const others = [];
-  for (const w of shuffle(pool)) {
-    if (w.id === word.id || seen.has(w.emoji)) continue;
-    seen.add(w.emoji);
+
+  // Pass 1: Ưu tiên các từ có hình ảnh/emoji khác biệt
+  const seenVisuals = new Set([word.image || word.emoji || word.id]);
+  for (const w of candidateList) {
+    const visual = w.image || w.emoji;
+    if (visual && seenVisuals.has(visual)) continue;
+    if (visual) seenVisuals.add(visual);
     others.push(w);
     if (others.length === 3) break;
   }
+
+  // Pass 2: Nếu chưa đủ 3 từ nhiễu (do trùng emoji hoặc thiếu hình), bổ sung các từ khác trong pool theo id
+  if (others.length < 3) {
+    const chosenIds = new Set([word.id, ...others.map((o) => o.id)]);
+    for (const w of candidateList) {
+      if (chosenIds.has(w.id)) continue;
+      chosenIds.add(w.id);
+      others.push(w);
+      if (others.length === 3) break;
+    }
+  }
+
   return shuffle([word, ...others]);
 }
 
@@ -126,7 +145,18 @@ function Round({ word, pool, onDone }) {
 
 export default function ListeningQuiz({ words, pool, onFinish }) {
   const list = useMemo(() => shuffle(words).slice(0, MAX_ROUNDS), [words]);
-  const optionPool = pool?.length >= 4 ? pool : words;
+  const optionPool = useMemo(() => {
+    const base = pool?.length >= 4 ? pool : (words?.length >= 4 ? words : pool || words || []);
+    if (base.length >= 4) return base;
+    try {
+      const all = allWords() || [];
+      const baseIds = new Set(base.map((w) => w.id));
+      const extra = all.filter((w) => !baseIds.has(w.id));
+      return [...base, ...extra];
+    } catch {
+      return base;
+    }
+  }, [pool, words]);
   const [index, setIndex] = useState(0);
   const mistakes = useRef(0);
 

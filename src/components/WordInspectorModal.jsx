@@ -67,11 +67,11 @@ export default function WordInspectorModal({ word, onClose }) {
         <div className="flex items-center justify-between gap-3 border-b-2 border-banana-soft px-6 py-4 bg-cream/70">
           <div className="flex items-center gap-2.5">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-banana text-ink shadow-xs">
-              <Rotate3d className="h-5 w-5" />
+              {word.model3d ? <Rotate3d className="h-5 w-5" /> : <span className="text-xl">🖼️</span>}
             </span>
             <div>
               <span className="text-xs font-black uppercase text-ink-soft">
-                {word.model3d ? 'Mô hình 3D tương tác 360°' : 'Hình ảnh từ vựng'}
+                {word.model3d ? 'Mô hình 3D tương tác 360°' : 'Hình ảnh từ vựng trực quan'}
               </span>
               <h2 className="text-lg font-black text-ink">{word.word}</h2>
             </div>
@@ -113,9 +113,9 @@ export default function WordInspectorModal({ word, onClose }) {
               👆 Chạm & kéo để xoay 360° · Cuộn để phóng to
             </div>
           ) : (
-            <p className="absolute bottom-3 text-center text-xs font-bold text-ink-soft">
-              Đồ vật này chưa có file 3D, em xem hình vẽ minh họa nhé!
-            </p>
+            <div className="pointer-events-none absolute bottom-3 rounded-full bg-white/90 px-3 py-1 text-xs font-black text-ink-soft shadow-xs border border-banana-soft">
+              🎨 Hình ảnh minh họa trực quan chuẩn bài học
+            </div>
           )}
         </div>
 

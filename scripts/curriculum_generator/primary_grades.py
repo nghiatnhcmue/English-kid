@@ -13,6 +13,10 @@ Luyện nói (speaking & dialogueLines), Đọc hiểu (reading), Luyện nghe (
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
 from primary_vocab_db import lookup_primary_word
+try:
+    from .emoji_lookup import lookup_emoji
+except ImportError:
+    from emoji_lookup import lookup_emoji
 
 def get_primary_book_id(grade, sem):
     if grade == 1: return "sgk-1"
@@ -62,7 +66,7 @@ def generate_primary_grades():
                 "hint": hint,
                 "exampleEn": ex_en,
                 "exampleVi": ex_vi,
-                "emoji": "🌟"
+                "emoji": lookup_emoji(w, mean)
             })
 
         main_word = word_list[0]
@@ -74,6 +78,9 @@ def generate_primary_grades():
             "unit": u_num,
             "unitTitle": f"Unit {u_num}: {title}",
             "unitNameVi": title_vi,
+            "title": title,
+            "titleEn": title,
+            "titleVi": title_vi,
             "theme": "School & Daily Life",
             "semester": sem,
             "bookPages": pages,
@@ -226,7 +233,7 @@ def generate_primary_grades():
                 "hint": f"Từ vựng bài {u_num}: {title_vi}",
                 "exampleEn": f"I like {w}.",
                 "exampleVi": f"Mình thích {w}.",
-                "emoji": "🎈"
+                "emoji": lookup_emoji(w, title_vi)
             })
         main_word = word_list[0]
         g2_units.append({
@@ -235,6 +242,9 @@ def generate_primary_grades():
             "unit": u_num,
             "unitTitle": f"Unit {u_num}: {title}",
             "unitNameVi": title_vi,
+            "title": title,
+            "titleEn": title,
+            "titleVi": title_vi,
             "theme": "Family & Friends",
             "semester": sem,
             "bookPages": pages,
@@ -369,7 +379,7 @@ def generate_primary_grades():
                 "hint": f"Chủ đề: {title_vi}",
                 "exampleEn": f"This is {w}.",
                 "exampleVi": f"Đây là {w}.",
-                "emoji": "📘"
+                "emoji": lookup_emoji(w, title_vi)
             })
         main_word = word_list[0]
         g3_units.append({
@@ -378,6 +388,9 @@ def generate_primary_grades():
             "unit": u_num,
             "unitTitle": f"Unit {u_num}: {title}",
             "unitNameVi": title_vi,
+            "title": title,
+            "titleEn": title,
+            "titleVi": title_vi,
             "theme": "Me and My World",
             "semester": sem,
             "bookPages": pages,
@@ -538,7 +551,7 @@ def generate_primary_grades():
                     "hint": hint,
                     "exampleEn": ex_en,
                     "exampleVi": ex_vi,
-                    "emoji": "🌟"
+                    "emoji": lookup_emoji(w, mean)
                 })
             main_word = word_list[0]
             g_units.append({
@@ -547,6 +560,9 @@ def generate_primary_grades():
                 "unit": u_num,
                 "unitTitle": f"Unit {u_num}: {title}",
                 "unitNameVi": title_vi,
+                "title": title,
+                "titleEn": title,
+                "titleVi": title_vi,
                 "theme": "Community & Life Skills",
                 "semester": sem,
                 "bookPages": f"Trang {(u_num-1)*6 + 6} – {u_num*6 + 5}",

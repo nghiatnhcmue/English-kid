@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: At my birthday party",
       "unitNameVi": "Ở tiệc sinh nhật của tôi",
+      "title": "At my birthday party",
+      "titleEn": "At my birthday party",
+      "titleVi": "Ở tiệc sinh nhật của tôi",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 6 – 9",
@@ -28,7 +31,7 @@
           "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
           "exampleEn": "I like popcorn.",
           "exampleVi": "Mình thích popcorn.",
-          "emoji": "🎈"
+          "emoji": "🍿"
         },
         {
           "id": "g2_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
           "exampleEn": "I like pizza.",
           "exampleVi": "Mình thích pizza.",
-          "emoji": "🎈"
+          "emoji": "🍕"
         },
         {
           "id": "g2_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
           "exampleEn": "I like pasta.",
           "exampleVi": "Mình thích pasta.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Từ vựng bài 1: Ở tiệc sinh nhật của tôi",
           "exampleEn": "I like party.",
           "exampleVi": "Mình thích party.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -207,6 +210,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: In the backyard",
       "unitNameVi": "Ở sân sau",
+      "title": "In the backyard",
+      "titleEn": "In the backyard",
+      "titleVi": "Ở sân sau",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 10 – 13",
@@ -221,7 +227,7 @@
           "hint": "Từ vựng bài 2: Ở sân sau",
           "exampleEn": "I like kitten.",
           "exampleVi": "Mình thích kitten.",
-          "emoji": "🎈"
+          "emoji": "🐱"
         },
         {
           "id": "g2_u2_02",
@@ -232,7 +238,7 @@
           "hint": "Từ vựng bài 2: Ở sân sau",
           "exampleEn": "I like kite.",
           "exampleVi": "Mình thích kite.",
-          "emoji": "🎈"
+          "emoji": "🪁"
         },
         {
           "id": "g2_u2_03",
@@ -243,7 +249,7 @@
           "hint": "Từ vựng bài 2: Ở sân sau",
           "exampleEn": "I like kitchen.",
           "exampleVi": "Mình thích kitchen.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u2_04",
@@ -254,7 +260,7 @@
           "hint": "Từ vựng bài 2: Ở sân sau",
           "exampleEn": "I like bike.",
           "exampleVi": "Mình thích bike.",
-          "emoji": "🎈"
+          "emoji": "🚴"
         }
       ],
       "grammar": {
@@ -400,6 +406,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: At the seaside",
       "unitNameVi": "Ở bờ biển",
+      "title": "At the seaside",
+      "titleEn": "At the seaside",
+      "titleVi": "Ở bờ biển",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 14 – 17",
@@ -414,7 +423,7 @@
           "hint": "Từ vựng bài 3: Ở bờ biển",
           "exampleEn": "I like sand.",
           "exampleVi": "Mình thích sand.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u3_02",
@@ -425,7 +434,7 @@
           "hint": "Từ vựng bài 3: Ở bờ biển",
           "exampleEn": "I like sea.",
           "exampleVi": "Mình thích sea.",
-          "emoji": "🎈"
+          "emoji": "🌊"
         },
         {
           "id": "g2_u3_03",
@@ -436,7 +445,7 @@
           "hint": "Từ vựng bài 3: Ở bờ biển",
           "exampleEn": "I like sun.",
           "exampleVi": "Mình thích sun.",
-          "emoji": "🎈"
+          "emoji": "☀️"
         },
         {
           "id": "g2_u3_04",
@@ -447,7 +456,7 @@
           "hint": "Từ vựng bài 3: Ở bờ biển",
           "exampleEn": "I like sail.",
           "exampleVi": "Mình thích sail.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -593,6 +602,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: In the countryside",
       "unitNameVi": "Ở vùng nông thôn",
+      "title": "In the countryside",
+      "titleEn": "In the countryside",
+      "titleVi": "Ở vùng nông thôn",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 18 – 21",
@@ -607,7 +619,7 @@
           "hint": "Từ vựng bài 4: Ở vùng nông thôn",
           "exampleEn": "I like rainbow.",
           "exampleVi": "Mình thích rainbow.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u4_02",
@@ -618,7 +630,7 @@
           "hint": "Từ vựng bài 4: Ở vùng nông thôn",
           "exampleEn": "I like river.",
           "exampleVi": "Mình thích river.",
-          "emoji": "🎈"
+          "emoji": "🌊"
         },
         {
           "id": "g2_u4_03",
@@ -629,7 +641,7 @@
           "hint": "Từ vựng bài 4: Ở vùng nông thôn",
           "exampleEn": "I like road.",
           "exampleVi": "Mình thích road.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u4_04",
@@ -640,7 +652,7 @@
           "hint": "Từ vựng bài 4: Ở vùng nông thôn",
           "exampleEn": "I like run.",
           "exampleVi": "Mình thích run.",
-          "emoji": "🎈"
+          "emoji": "🏃"
         }
       ],
       "grammar": {
@@ -786,6 +798,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: In the classroom",
       "unitNameVi": "Ở trong lớp học",
+      "title": "In the classroom",
+      "titleEn": "In the classroom",
+      "titleVi": "Ở trong lớp học",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 22 – 25",
@@ -800,7 +815,7 @@
           "hint": "Từ vựng bài 5: Ở trong lớp học",
           "exampleEn": "I like bird.",
           "exampleVi": "Mình thích bird.",
-          "emoji": "🎈"
+          "emoji": "🐦"
         },
         {
           "id": "g2_u5_02",
@@ -811,7 +826,7 @@
           "hint": "Từ vựng bài 5: Ở trong lớp học",
           "exampleEn": "I like bed.",
           "exampleVi": "Mình thích bed.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u5_03",
@@ -822,7 +837,7 @@
           "hint": "Từ vựng bài 5: Ở trong lớp học",
           "exampleEn": "I like bell.",
           "exampleVi": "Mình thích bell.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u5_04",
@@ -833,7 +848,7 @@
           "hint": "Từ vựng bài 5: Ở trong lớp học",
           "exampleEn": "I like box.",
           "exampleVi": "Mình thích box.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -979,6 +994,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: On the farm",
       "unitNameVi": "Ở nông trại",
+      "title": "On the farm",
+      "titleEn": "On the farm",
+      "titleVi": "Ở nông trại",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 26 – 29",
@@ -993,7 +1011,7 @@
           "hint": "Từ vựng bài 6: Ở nông trại",
           "exampleEn": "I like horse.",
           "exampleVi": "Mình thích horse.",
-          "emoji": "🎈"
+          "emoji": "🐴"
         },
         {
           "id": "g2_u6_02",
@@ -1004,7 +1022,7 @@
           "hint": "Từ vựng bài 6: Ở nông trại",
           "exampleEn": "I like hen.",
           "exampleVi": "Mình thích hen.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u6_03",
@@ -1015,7 +1033,7 @@
           "hint": "Từ vựng bài 6: Ở nông trại",
           "exampleEn": "I like house.",
           "exampleVi": "Mình thích house.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u6_04",
@@ -1026,7 +1044,7 @@
           "hint": "Từ vựng bài 6: Ở nông trại",
           "exampleEn": "I like hat.",
           "exampleVi": "Mình thích hat.",
-          "emoji": "🎈"
+          "emoji": "🧢"
         }
       ],
       "grammar": {
@@ -1172,6 +1190,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: In the kitchen",
       "unitNameVi": "Ở trong bếp",
+      "title": "In the kitchen",
+      "titleEn": "In the kitchen",
+      "titleVi": "Ở trong bếp",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 30 – 33",
@@ -1186,7 +1207,7 @@
           "hint": "Từ vựng bài 7: Ở trong bếp",
           "exampleEn": "I like chicken.",
           "exampleVi": "Mình thích chicken.",
-          "emoji": "🎈"
+          "emoji": "🐔"
         },
         {
           "id": "g2_u7_02",
@@ -1197,7 +1218,7 @@
           "hint": "Từ vựng bài 7: Ở trong bếp",
           "exampleEn": "I like cheese.",
           "exampleVi": "Mình thích cheese.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u7_03",
@@ -1208,7 +1229,7 @@
           "hint": "Từ vựng bài 7: Ở trong bếp",
           "exampleEn": "I like chair.",
           "exampleVi": "Mình thích chair.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u7_04",
@@ -1219,7 +1240,7 @@
           "hint": "Từ vựng bài 7: Ở trong bếp",
           "exampleEn": "I like cherry.",
           "exampleVi": "Mình thích cherry.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1365,6 +1386,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: In the village",
       "unitNameVi": "Ở trong làng",
+      "title": "In the village",
+      "titleEn": "In the village",
+      "titleVi": "Ở trong làng",
       "theme": "Family & Friends",
       "semester": 1,
       "bookPages": "Trang 34 – 37",
@@ -1379,7 +1403,7 @@
           "hint": "Từ vựng bài 8: Ở trong làng",
           "exampleEn": "I like village.",
           "exampleVi": "Mình thích village.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u8_02",
@@ -1390,7 +1414,7 @@
           "hint": "Từ vựng bài 8: Ở trong làng",
           "exampleEn": "I like van.",
           "exampleVi": "Mình thích van.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u8_03",
@@ -1401,7 +1425,7 @@
           "hint": "Từ vựng bài 8: Ở trong làng",
           "exampleEn": "I like volleyball.",
           "exampleVi": "Mình thích volleyball.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u8_04",
@@ -1412,7 +1436,7 @@
           "hint": "Từ vựng bài 8: Ở trong làng",
           "exampleEn": "I like vase.",
           "exampleVi": "Mình thích vase.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1558,6 +1582,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: In the grocery store",
       "unitNameVi": "Ở cửa hàng tạp hóa",
+      "title": "In the grocery store",
+      "titleEn": "In the grocery store",
+      "titleVi": "Ở cửa hàng tạp hóa",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 38 – 41",
@@ -1572,7 +1599,7 @@
           "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
           "exampleEn": "I like yogurt.",
           "exampleVi": "Mình thích yogurt.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u9_02",
@@ -1583,7 +1610,7 @@
           "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
           "exampleEn": "I like yam.",
           "exampleVi": "Mình thích yam.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u9_03",
@@ -1594,7 +1621,7 @@
           "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
           "exampleEn": "I like yellow.",
           "exampleVi": "Mình thích yellow.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u9_04",
@@ -1605,7 +1632,7 @@
           "hint": "Từ vựng bài 9: Ở cửa hàng tạp hóa",
           "exampleEn": "I like yo-yo.",
           "exampleVi": "Mình thích yo-yo.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1751,6 +1778,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: At the zoo",
       "unitNameVi": "Ở sở thú",
+      "title": "At the zoo",
+      "titleEn": "At the zoo",
+      "titleVi": "Ở sở thú",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 42 – 45",
@@ -1765,7 +1795,7 @@
           "hint": "Từ vựng bài 10: Ở sở thú",
           "exampleEn": "I like zebra.",
           "exampleVi": "Mình thích zebra.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u10_02",
@@ -1776,7 +1806,7 @@
           "hint": "Từ vựng bài 10: Ở sở thú",
           "exampleEn": "I like zoo.",
           "exampleVi": "Mình thích zoo.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u10_03",
@@ -1787,7 +1817,7 @@
           "hint": "Từ vựng bài 10: Ở sở thú",
           "exampleEn": "I like zero.",
           "exampleVi": "Mình thích zero.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u10_04",
@@ -1798,7 +1828,7 @@
           "hint": "Từ vựng bài 10: Ở sở thú",
           "exampleEn": "I like zip.",
           "exampleVi": "Mình thích zip.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1944,6 +1974,9 @@
       "unit": 11,
       "unitTitle": "Unit 11: In the playground",
       "unitNameVi": "Ở sân chơi",
+      "title": "In the playground",
+      "titleEn": "In the playground",
+      "titleVi": "Ở sân chơi",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 46 – 49",
@@ -1958,7 +1991,7 @@
           "hint": "Từ vựng bài 11: Ở sân chơi",
           "exampleEn": "I like jump.",
           "exampleVi": "Mình thích jump.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u11_02",
@@ -1969,7 +2002,7 @@
           "hint": "Từ vựng bài 11: Ở sân chơi",
           "exampleEn": "I like jacket.",
           "exampleVi": "Mình thích jacket.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u11_03",
@@ -1980,7 +2013,7 @@
           "hint": "Từ vựng bài 11: Ở sân chơi",
           "exampleEn": "I like jeans.",
           "exampleVi": "Mình thích jeans.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u11_04",
@@ -1991,7 +2024,7 @@
           "hint": "Từ vựng bài 11: Ở sân chơi",
           "exampleEn": "I like juice.",
           "exampleVi": "Mình thích juice.",
-          "emoji": "🎈"
+          "emoji": "🧃"
         }
       ],
       "grammar": {
@@ -2137,6 +2170,9 @@
       "unit": 12,
       "unitTitle": "Unit 12: At the cafe",
       "unitNameVi": "Ở quán cà phê",
+      "title": "At the cafe",
+      "titleEn": "At the cafe",
+      "titleVi": "Ở quán cà phê",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 50 – 53",
@@ -2151,7 +2187,7 @@
           "hint": "Từ vựng bài 12: Ở quán cà phê",
           "exampleEn": "I like cake.",
           "exampleVi": "Mình thích cake.",
-          "emoji": "🎈"
+          "emoji": "🍰"
         },
         {
           "id": "g2_u12_02",
@@ -2162,7 +2198,7 @@
           "hint": "Từ vựng bài 12: Ở quán cà phê",
           "exampleEn": "I like table.",
           "exampleVi": "Mình thích table.",
-          "emoji": "🎈"
+          "emoji": "🪑"
         },
         {
           "id": "g2_u12_03",
@@ -2173,7 +2209,7 @@
           "hint": "Từ vựng bài 12: Ở quán cà phê",
           "exampleEn": "I like baby.",
           "exampleVi": "Mình thích baby.",
-          "emoji": "🎈"
+          "emoji": "👶"
         },
         {
           "id": "g2_u12_04",
@@ -2184,7 +2220,7 @@
           "hint": "Từ vựng bài 12: Ở quán cà phê",
           "exampleEn": "I like grapes.",
           "exampleVi": "Mình thích grapes.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2330,6 +2366,9 @@
       "unit": 13,
       "unitTitle": "Unit 13: In the maths class",
       "unitNameVi": "Ở lớp học toán",
+      "title": "In the maths class",
+      "titleEn": "In the maths class",
+      "titleVi": "Ở lớp học toán",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 54 – 57",
@@ -2344,7 +2383,7 @@
           "hint": "Từ vựng bài 13: Ở lớp học toán",
           "exampleEn": "I like eleven.",
           "exampleVi": "Mình thích eleven.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u13_02",
@@ -2355,7 +2394,7 @@
           "hint": "Từ vựng bài 13: Ở lớp học toán",
           "exampleEn": "I like twelve.",
           "exampleVi": "Mình thích twelve.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u13_03",
@@ -2366,7 +2405,7 @@
           "hint": "Từ vựng bài 13: Ở lớp học toán",
           "exampleEn": "I like thirteen.",
           "exampleVi": "Mình thích thirteen.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u13_04",
@@ -2377,7 +2416,7 @@
           "hint": "Từ vựng bài 13: Ở lớp học toán",
           "exampleEn": "I like fourteen.",
           "exampleVi": "Mình thích fourteen.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u13_05",
@@ -2388,7 +2427,7 @@
           "hint": "Từ vựng bài 13: Ở lớp học toán",
           "exampleEn": "I like fifteen.",
           "exampleVi": "Mình thích fifteen.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2534,6 +2573,9 @@
       "unit": 14,
       "unitTitle": "Unit 14: At the campsite",
       "unitNameVi": "Ở khu cắm trại",
+      "title": "At the campsite",
+      "titleEn": "At the campsite",
+      "titleVi": "Ở khu cắm trại",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 58 – 61",
@@ -2548,7 +2590,7 @@
           "hint": "Từ vựng bài 14: Ở khu cắm trại",
           "exampleEn": "I like cow.",
           "exampleVi": "Mình thích cow.",
-          "emoji": "🎈"
+          "emoji": "🐮"
         },
         {
           "id": "g2_u14_02",
@@ -2559,7 +2601,7 @@
           "hint": "Từ vựng bài 14: Ở khu cắm trại",
           "exampleEn": "I like house.",
           "exampleVi": "Mình thích house.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u14_03",
@@ -2570,7 +2612,7 @@
           "hint": "Từ vựng bài 14: Ở khu cắm trại",
           "exampleEn": "I like mouse.",
           "exampleVi": "Mình thích mouse.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u14_04",
@@ -2581,7 +2623,7 @@
           "hint": "Từ vựng bài 14: Ở khu cắm trại",
           "exampleEn": "I like cloud.",
           "exampleVi": "Mình thích cloud.",
-          "emoji": "🎈"
+          "emoji": "☁️"
         }
       ],
       "grammar": {
@@ -2727,6 +2769,9 @@
       "unit": 15,
       "unitTitle": "Unit 15: In the clothes shop",
       "unitNameVi": "Ở cửa hàng quần áo",
+      "title": "In the clothes shop",
+      "titleEn": "In the clothes shop",
+      "titleVi": "Ở cửa hàng quần áo",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 62 – 65",
@@ -2741,7 +2786,7 @@
           "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
           "exampleEn": "I like shirt.",
           "exampleVi": "Mình thích shirt.",
-          "emoji": "🎈"
+          "emoji": "👕"
         },
         {
           "id": "g2_u15_02",
@@ -2752,7 +2797,7 @@
           "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
           "exampleEn": "I like shorts.",
           "exampleVi": "Mình thích shorts.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u15_03",
@@ -2763,7 +2808,7 @@
           "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
           "exampleEn": "I like shoes.",
           "exampleVi": "Mình thích shoes.",
-          "emoji": "🎈"
+          "emoji": "👟"
         },
         {
           "id": "g2_u15_04",
@@ -2774,7 +2819,7 @@
           "hint": "Từ vựng bài 15: Ở cửa hàng quần áo",
           "exampleEn": "I like skirt.",
           "exampleVi": "Mình thích skirt.",
-          "emoji": "🎈"
+          "emoji": "👗"
         }
       ],
       "grammar": {
@@ -2920,6 +2965,9 @@
       "unit": 16,
       "unitTitle": "Unit 16: At the hospital",
       "unitNameVi": "Ở bệnh viện",
+      "title": "At the hospital",
+      "titleEn": "At the hospital",
+      "titleVi": "Ở bệnh viện",
       "theme": "Family & Friends",
       "semester": 2,
       "bookPages": "Trang 66 – 69",
@@ -2934,7 +2982,7 @@
           "hint": "Từ vựng bài 16: Ở bệnh viện",
           "exampleEn": "I like doctor.",
           "exampleVi": "Mình thích doctor.",
-          "emoji": "🎈"
+          "emoji": "🧑‍⚕️"
         },
         {
           "id": "g2_u16_02",
@@ -2945,7 +2993,7 @@
           "hint": "Từ vựng bài 16: Ở bệnh viện",
           "exampleEn": "I like nurse.",
           "exampleVi": "Mình thích nurse.",
-          "emoji": "🎈"
+          "emoji": "🧑‍⚕️"
         },
         {
           "id": "g2_u16_03",
@@ -2956,7 +3004,7 @@
           "hint": "Từ vựng bài 16: Ở bệnh viện",
           "exampleEn": "I like hospital.",
           "exampleVi": "Mình thích hospital.",
-          "emoji": "🎈"
+          "emoji": "📘"
         },
         {
           "id": "g2_u16_04",
@@ -2967,7 +3015,7 @@
           "hint": "Từ vựng bài 16: Ở bệnh viện",
           "exampleEn": "I like healthy.",
           "exampleVi": "Mình thích healthy.",
-          "emoji": "🎈"
+          "emoji": "📘"
         }
       ],
       "grammar": {

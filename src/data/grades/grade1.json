@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: In the school playground",
       "unitNameVi": "Ở sân trường",
+      "title": "In the school playground",
+      "titleEn": "In the school playground",
+      "titleVi": "Ở sân trường",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 6 – 9",
@@ -28,7 +31,7 @@
           "hint": "Tên bạn nhỏ trong SGK",
           "exampleEn": "Bill is riding his bicycle.",
           "exampleVi": "Bill đang đạp chiếc xe đạp của cậu ấy.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Sách vở học bài",
           "exampleEn": "Open your English book to page ten.",
           "exampleVi": "Hãy mở quyển sách tiếng Anh ra trang mười.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Đồ chơi thể thao hình tròn",
           "exampleEn": "The boys kick the ball into the net.",
           "exampleVi": "Các bạn nam sút quả bóng vào lưới.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Xe đạp hai bánh",
           "exampleEn": "He rides his bicycle to school safely.",
           "exampleVi": "Cậu ấy đạp xe đạp tới trường an toàn.",
-          "emoji": "🌟"
+          "emoji": "🚴"
         }
       ],
       "grammar": {
@@ -238,6 +241,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: In the dining room",
       "unitNameVi": "Ở phòng ăn",
+      "title": "In the dining room",
+      "titleEn": "In the dining room",
+      "titleVi": "Ở phòng ăn",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 10 – 13",
@@ -252,7 +258,7 @@
           "hint": "Bánh kem ngọt ngào",
           "exampleEn": "We baked a strawberry cake for her birthday.",
           "exampleVi": "Tụi mình đã nướng một chiếc bánh dâu tây cho sinh nhật bạn ấy.",
-          "emoji": "🌟"
+          "emoji": "🍰"
         },
         {
           "id": "g1_u2_02",
@@ -263,7 +269,7 @@
           "hint": "Xe bốn bánh",
           "exampleEn": "My brother plays with a red toy car.",
           "exampleVi": "Em trai mình chơi với chiếc ô tô đồ chơi màu đỏ.",
-          "emoji": "🌟"
+          "emoji": "🚗"
         },
         {
           "id": "g1_u2_03",
@@ -274,7 +280,7 @@
           "hint": "Loài vật nuôi kêu meo meo",
           "exampleEn": "The cat is sleeping on the chair.",
           "exampleVi": "Con mèo đang ngủ trên chiếc ghế.",
-          "emoji": "🌟"
+          "emoji": "🐱"
         },
         {
           "id": "g1_u2_04",
@@ -285,7 +291,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the cup.",
           "exampleVi": "Hãy nhìn vào cup.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -462,6 +468,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: At the street market",
       "unitNameVi": "Ở chợ phố",
+      "title": "At the street market",
+      "titleEn": "At the street market",
+      "titleVi": "Ở chợ phố",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 14 – 17",
@@ -476,7 +485,7 @@
           "hint": "Trái táo ngọt giòn",
           "exampleEn": "An apple a day keeps the doctor away.",
           "exampleVi": "Mỗi ngày một quả táo giúp cơ thể khỏe mạnh.",
-          "emoji": "🌟"
+          "emoji": "🍎"
         },
         {
           "id": "g1_u3_02",
@@ -487,7 +496,7 @@
           "hint": "Túi đựng đồ",
           "exampleEn": "Put your notebooks into your school bag.",
           "exampleVi": "Hãy bỏ những quyển vở của em vào cặp sách nhé.",
-          "emoji": "🌟"
+          "emoji": "🎒"
         },
         {
           "id": "g1_u3_03",
@@ -498,7 +507,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the can.",
           "exampleVi": "Hãy nhìn vào can.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u3_04",
@@ -509,7 +518,7 @@
           "hint": "Vật đội trên đầu che nắng",
           "exampleEn": "Wear a wide-brimmed hat when going out in the sun.",
           "exampleVi": "Hãy đội mũ rộng vành khi đi ra ngoài trời nắng nhé.",
-          "emoji": "🌟"
+          "emoji": "🧢"
         }
       ],
       "grammar": {
@@ -686,6 +695,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: In the bedroom",
       "unitNameVi": "Ở phòng ngủ",
+      "title": "In the bedroom",
+      "titleEn": "In the bedroom",
+      "titleVi": "Ở phòng ngủ",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 18 – 21",
@@ -700,7 +712,7 @@
           "hint": "Vật nuôi trung thành",
           "exampleEn": "My dog wags its tail happily.",
           "exampleVi": "Chú chó của mình vẫy đuôi vui mừng.",
-          "emoji": "🌟"
+          "emoji": "🐶"
         },
         {
           "id": "g1_u4_02",
@@ -711,7 +723,7 @@
           "hint": "Búp bê xinh xắn",
           "exampleEn": "The little girl dresses her doll in pink.",
           "exampleVi": "Cô bé mặc cho búp bê chiếc váy màu hồng.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u4_03",
@@ -722,7 +734,7 @@
           "hint": "Cửa ra vào",
           "exampleEn": "Please close the door quietly.",
           "exampleVi": "Làm ơn hãy đóng cửa lại thật khẽ nhé.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u4_04",
@@ -733,7 +745,7 @@
           "hint": "Loài thủy cầm kêu cạp cạp",
           "exampleEn": "The little duck swims in the pond.",
           "exampleVi": "Chú vịt nhỏ bơi trong ao nước.",
-          "emoji": "🌟"
+          "emoji": "🦆"
         }
       ],
       "grammar": {
@@ -910,6 +922,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: At the fish and chip shop",
       "unitNameVi": "Ở tiệm cá và khoai tây chiên",
+      "title": "At the fish and chip shop",
+      "titleEn": "At the fish and chip shop",
+      "titleVi": "Ở tiệm cá và khoai tây chiên",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 22 – 25",
@@ -924,7 +939,7 @@
           "hint": "Loài sống dưới nước bơi bằng vây",
           "exampleEn": "Goldfish swim in the glass bowl.",
           "exampleVi": "Những chú cá vàng bơi trong bể thủy tinh.",
-          "emoji": "🌟"
+          "emoji": "🐟"
         },
         {
           "id": "g1_u5_02",
@@ -935,7 +950,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the fan.",
           "exampleVi": "Hãy nhìn vào fan.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u5_03",
@@ -946,7 +961,7 @@
           "hint": "Loài vật tinh ranh",
           "exampleEn": "The clever fox runs into the woods.",
           "exampleVi": "Chú cáo tinh khôn chạy vào rừng.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u5_04",
@@ -957,7 +972,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the face.",
           "exampleVi": "Hãy nhìn vào face.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1134,6 +1149,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: In the classroom",
       "unitNameVi": "Ở trong lớp học",
+      "title": "In the classroom",
+      "titleEn": "In the classroom",
+      "titleVi": "Ở trong lớp học",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 26 – 29",
@@ -1148,7 +1166,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the girl.",
           "exampleVi": "Hãy nhìn vào girl.",
-          "emoji": "🌟"
+          "emoji": "👧"
         },
         {
           "id": "g1_u6_02",
@@ -1159,7 +1177,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the gate.",
           "exampleVi": "Hãy nhìn vào gate.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u6_03",
@@ -1170,7 +1188,7 @@
           "hint": "Loài vật ăn cỏ có râu",
           "exampleEn": "The white goat climbs the hill.",
           "exampleVi": "Chú dê trắng leo lên ngọn đồi.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u6_04",
@@ -1181,7 +1199,7 @@
           "hint": "Nhạc cụ dây gảy",
           "exampleEn": "He plays the acoustic guitar and sings happily.",
           "exampleVi": "Cậu ấy gảy đàn ghi-ta và hát thật vui vẻ.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1358,6 +1376,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: In the garden",
       "unitNameVi": "Ở trong vườn",
+      "title": "In the garden",
+      "titleEn": "In the garden",
+      "titleVi": "Ở trong vườn",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 30 – 33",
@@ -1372,7 +1393,7 @@
           "hint": "Vật đội trên đầu che nắng",
           "exampleEn": "Wear a wide-brimmed hat when going out in the sun.",
           "exampleVi": "Hãy đội mũ rộng vành khi đi ra ngoài trời nắng nhé.",
-          "emoji": "🌟"
+          "emoji": "🧢"
         },
         {
           "id": "g1_u7_02",
@@ -1383,7 +1404,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the hand.",
           "exampleVi": "Hãy nhìn vào hand.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u7_03",
@@ -1394,7 +1415,7 @@
           "hint": "Loài vật bốn chân phi nhanh",
           "exampleEn": "The brown horse runs swiftly.",
           "exampleVi": "Con ngựa màu nâu phi rất nhanh.",
-          "emoji": "🌟"
+          "emoji": "🐴"
         },
         {
           "id": "g1_u7_04",
@@ -1405,7 +1426,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the house.",
           "exampleVi": "Hãy nhìn vào house.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1582,6 +1603,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: In the park",
       "unitNameVi": "Ở công viên",
+      "title": "In the park",
+      "titleEn": "In the park",
+      "titleVi": "Ở công viên",
       "theme": "School & Daily Life",
       "semester": 1,
       "bookPages": "Trang 34 – 37",
@@ -1596,7 +1620,7 @@
           "hint": "Cánh diều bay cao",
           "exampleEn": "Children fly kites in the windy afternoon.",
           "exampleVi": "Trẻ em thả diều vào buổi chiều lộng gió.",
-          "emoji": "🌟"
+          "emoji": "🪁"
         },
         {
           "id": "g1_u8_02",
@@ -1607,7 +1631,7 @@
           "hint": "Xe đạp hai bánh",
           "exampleEn": "He rides his bicycle to school safely.",
           "exampleVi": "Cậu ấy đạp xe đạp tới trường an toàn.",
-          "emoji": "🌟"
+          "emoji": "🚴"
         },
         {
           "id": "g1_u8_03",
@@ -1618,7 +1642,7 @@
           "hint": "Động tác đi xe hai bánh hoặc cưỡi ngựa",
           "exampleEn": "Children ride bikes around the calm lake.",
           "exampleVi": "Trẻ em đạp xe quanh bờ hồ tĩnh lặng.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u8_04",
@@ -1629,7 +1653,7 @@
           "hint": "Chuyển động trên không",
           "exampleEn": "Birds fly high across the blue sky.",
           "exampleVi": "Những chú chim bay vút qua bầu trời xanh.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1806,6 +1830,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: In the grocery store",
       "unitNameVi": "Ở cửa hàng tạp hóa",
+      "title": "In the grocery store",
+      "titleEn": "In the grocery store",
+      "titleVi": "Ở cửa hàng tạp hóa",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 38 – 41",
@@ -1820,7 +1847,7 @@
           "hint": "Nước chè thơm",
           "exampleEn": "Grandpa enjoys drinking hot green tea.",
           "exampleVi": "Ông nội thích uống trà xanh nóng.",
-          "emoji": "🌟"
+          "emoji": "🍵"
         },
         {
           "id": "g1_u9_02",
@@ -1831,7 +1858,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the pea.",
           "exampleVi": "Hãy nhìn vào pea.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u9_03",
@@ -1842,7 +1869,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the see.",
           "exampleVi": "Hãy nhìn vào see.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u9_04",
@@ -1853,7 +1880,7 @@
           "hint": "Loài côn trùng làm mật",
           "exampleEn": "The busy bee collects nectar from blooming flowers.",
           "exampleVi": "Chú ong chăm chỉ thu thập mật hoa từ những bông hoa đang nở.",
-          "emoji": "🌟"
+          "emoji": "🐝"
         }
       ],
       "grammar": {
@@ -2030,6 +2057,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: At the zoo",
       "unitNameVi": "Ở sở thú",
+      "title": "At the zoo",
+      "titleEn": "At the zoo",
+      "titleVi": "Ở sở thú",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 42 – 45",
@@ -2044,7 +2074,7 @@
           "hint": "Loài vật leo trèo thích ăn chuối",
           "exampleEn": "The funny monkey climbs the tree.",
           "exampleVi": "Chú khỉ ngộ nghĩnh trèo lên cây.",
-          "emoji": "🌟"
+          "emoji": "🐵"
         },
         {
           "id": "g1_u10_02",
@@ -2055,7 +2085,7 @@
           "hint": "Người mẹ dịu hiền",
           "exampleEn": "My mother cooks delicious soup for us.",
           "exampleVi": "Mẹ nấu món súp thơm ngon cho chúng mình.",
-          "emoji": "🌟"
+          "emoji": "👩"
         },
         {
           "id": "g1_u10_03",
@@ -2066,7 +2096,7 @@
           "hint": "Loài gặm nhấm nhỏ",
           "exampleEn": "A tiny mouse hides behind the cheese.",
           "exampleVi": "Một chú chuột nhắt trốn sau miếng phô mai.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u10_04",
@@ -2077,7 +2107,7 @@
           "hint": "Trái xoài nhiệt đới",
           "exampleEn": "Sweet mangoes are delicious in summer.",
           "exampleVi": "Những quả xoài ngọt lịm rất ngon vào mùa hè.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2254,6 +2284,9 @@
       "unit": 11,
       "unitTitle": "Unit 11: At the bus stop",
       "unitNameVi": "Ở trạm xe buýt",
+      "title": "At the bus stop",
+      "titleEn": "At the bus stop",
+      "titleVi": "Ở trạm xe buýt",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 46 – 49",
@@ -2268,7 +2301,7 @@
           "hint": "Phương tiện giao thông công cộng",
           "exampleEn": "We take the school bus every morning.",
           "exampleVi": "Chúng mình đi xe buýt của trường vào mỗi sáng.",
-          "emoji": "🌟"
+          "emoji": "🚌"
         },
         {
           "id": "g1_u11_02",
@@ -2279,7 +2312,7 @@
           "hint": "Bút viết bằng mực",
           "exampleEn": "I write my homework with a blue pen.",
           "exampleVi": "Mình làm bài tập về nhà bằng chiếc bút mực xanh.",
-          "emoji": "🌟"
+          "emoji": "✏️"
         },
         {
           "id": "g1_u11_03",
@@ -2290,7 +2323,7 @@
           "hint": "Bút vẽ có thể tẩy được",
           "exampleEn": "Sharpen your pencil before drawing.",
           "exampleVi": "Hãy gọt bút chì trước khi vẽ nhé.",
-          "emoji": "🌟"
+          "emoji": "✏️"
         },
         {
           "id": "g1_u11_04",
@@ -2301,7 +2334,7 @@
           "hint": "Gia súc nuôi lấy thịt",
           "exampleEn": "The pink pig rolls in the mud.",
           "exampleVi": "Chú lợn màu hồng lăn trong bùn.",
-          "emoji": "🌟"
+          "emoji": "🐷"
         }
       ],
       "grammar": {
@@ -2478,6 +2511,9 @@
       "unit": 12,
       "unitTitle": "Unit 12: At the lake",
       "unitNameVi": "Ở bờ hồ",
+      "title": "At the lake",
+      "titleEn": "At the lake",
+      "titleVi": "Ở bờ hồ",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 50 – 53",
@@ -2492,7 +2528,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the lake.",
           "exampleVi": "Hãy nhìn vào lake.",
-          "emoji": "🌟"
+          "emoji": "🌊"
         },
         {
           "id": "g1_u12_02",
@@ -2503,7 +2539,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the leaf.",
           "exampleVi": "Hãy nhìn vào leaf.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u12_03",
@@ -2514,7 +2550,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the lock.",
           "exampleVi": "Hãy nhìn vào lock.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u12_04",
@@ -2525,7 +2561,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the leg.",
           "exampleVi": "Hãy nhìn vào leg.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2702,6 +2738,9 @@
       "unit": 13,
       "unitTitle": "Unit 13: In the school canteen",
       "unitNameVi": "Ở căng tin trường",
+      "title": "In the school canteen",
+      "titleEn": "In the school canteen",
+      "titleVi": "Ở căng tin trường",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 54 – 57",
@@ -2716,7 +2755,7 @@
           "hint": "Sợi mì thơm ngon",
           "exampleEn": "A hot bowl of chicken noodles warms you up.",
           "exampleVi": "Một tô mì gà nóng hổi giúp sưởi ấm cơ thể bạn.",
-          "emoji": "🌟"
+          "emoji": "🍜"
         },
         {
           "id": "g1_u13_02",
@@ -2727,7 +2766,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the nuts.",
           "exampleVi": "Hãy nhìn vào nuts.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u13_03",
@@ -2738,7 +2777,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the neck.",
           "exampleVi": "Hãy nhìn vào neck.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u13_04",
@@ -2749,7 +2788,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the nose.",
           "exampleVi": "Hãy nhìn vào nose.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2926,6 +2965,9 @@
       "unit": 14,
       "unitTitle": "Unit 14: In the toy shop",
       "unitNameVi": "Ở cửa hàng đồ chơi",
+      "title": "In the toy shop",
+      "titleEn": "In the toy shop",
+      "titleVi": "Ở cửa hàng đồ chơi",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 58 – 61",
@@ -2940,7 +2982,7 @@
           "hint": "Chúa sơn lâm",
           "exampleEn": "The strong tiger lives in the jungle.",
           "exampleVi": "Con hổ dũng mãnh sống trong rừng sâu.",
-          "emoji": "🌟"
+          "emoji": "🐯"
         },
         {
           "id": "g1_u14_02",
@@ -2951,7 +2993,7 @@
           "hint": "Gấu nhồi bông dễ thương",
           "exampleEn": "She hugs her soft teddy bear to sleep.",
           "exampleVi": "Cô bé ôm chú gấu bông mềm mại đi ngủ.",
-          "emoji": "🌟"
+          "emoji": "🐻"
         },
         {
           "id": "g1_u14_03",
@@ -2962,7 +3004,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the top.",
           "exampleVi": "Hãy nhìn vào top.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u14_04",
@@ -2973,7 +3015,7 @@
           "hint": "Đoàn tàu hỏa dài",
           "exampleEn": "The toy train runs around the wooden track.",
           "exampleVi": "Đoàn tàu đồ chơi chạy quanh đường ray gỗ.",
-          "emoji": "🌟"
+          "emoji": "🚆"
         }
       ],
       "grammar": {
@@ -3150,6 +3192,9 @@
       "unit": 15,
       "unitTitle": "Unit 15: At the football match",
       "unitNameVi": "Ở trận bóng đá",
+      "title": "At the football match",
+      "titleEn": "At the football match",
+      "titleVi": "Ở trận bóng đá",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 62 – 65",
@@ -3164,7 +3209,7 @@
           "hint": "Môn thể thao vua",
           "exampleEn": "Boys play football in the yard after class.",
           "exampleVi": "Các bạn nam chơi bóng đá ở sân sau giờ học.",
-          "emoji": "🌟"
+          "emoji": "⚽"
         },
         {
           "id": "g1_u15_02",
@@ -3175,7 +3220,7 @@
           "hint": "Bạn bè thân thiết",
           "exampleEn": "Nam is my best friend in class.",
           "exampleVi": "Nam là người bạn thân nhất của mình trong lớp.",
-          "emoji": "🌟"
+          "emoji": "🧑‍🤝‍🧑"
         },
         {
           "id": "g1_u15_03",
@@ -3186,7 +3231,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the kick.",
           "exampleVi": "Hãy nhìn vào kick.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u15_04",
@@ -3197,7 +3242,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the team.",
           "exampleVi": "Hãy nhìn vào team.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -3374,6 +3419,9 @@
       "unit": 16,
       "unitTitle": "Unit 16: At home",
       "unitNameVi": "Ở nhà",
+      "title": "At home",
+      "titleEn": "At home",
+      "titleVi": "Ở nhà",
       "theme": "School & Daily Life",
       "semester": 2,
       "bookPages": "Trang 66 – 69",
@@ -3388,7 +3436,7 @@
           "hint": "Cửa sổ lấy ánh sáng",
           "exampleEn": "The morning sun shines through the window.",
           "exampleVi": "Ánh nắng ban mai chiếu rọi qua khung cửa sổ.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u16_02",
@@ -3399,7 +3447,7 @@
           "hint": "Nước uống tinh khiết",
           "exampleEn": "Drink plenty of clean water every day.",
           "exampleVi": "Hãy uống nhiều nước lọc sạch mỗi ngày nhé.",
-          "emoji": "🌟"
+          "emoji": "💧"
         },
         {
           "id": "g1_u16_03",
@@ -3410,7 +3458,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the watch.",
           "exampleVi": "Hãy nhìn vào watch.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g1_u16_04",
@@ -3421,7 +3469,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the wall.",
           "exampleVi": "Hãy nhìn vào wall.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {

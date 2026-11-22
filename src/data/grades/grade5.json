@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: All about me!",
       "unitNameVi": "Tất cả về tôi!",
+      "title": "All about me!",
+      "titleEn": "All about me!",
+      "titleVi": "Tất cả về tôi!",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 6 – 11",
@@ -28,7 +31,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the friendly.",
           "exampleVi": "Hãy nhìn vào friendly.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the hard-working.",
           "exampleVi": "Hãy nhìn vào hard-working.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Nhanh nhẹn và tháo vát",
           "exampleEn": "Mai is very active in physical games.",
           "exampleVi": "Mai rất năng động trong các trò chơi vận động.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the helpful.",
           "exampleVi": "Hãy nhìn vào helpful.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u1_05",
@@ -72,7 +75,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the kind.",
           "exampleVi": "Hãy nhìn vào kind.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u1_06",
@@ -83,7 +86,7 @@
           "hint": "Sáng dạ và mưu trí",
           "exampleEn": "The clever fox found a way to cross the river.",
           "exampleVi": "Chú cáo thông minh đã tìm ra cách để qua sông.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -246,6 +249,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: Our homes",
       "unitNameVi": "Ngôi nhà của chúng mình",
+      "title": "Our homes",
+      "titleEn": "Our homes",
+      "titleVi": "Ngôi nhà của chúng mình",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 12 – 17",
@@ -260,7 +266,7 @@
           "hint": "Số nhà và tên đường phố",
           "exampleEn": "What is your home address?",
           "exampleVi": "Địa chỉ nhà của bạn là gì?",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u2_02",
@@ -271,7 +277,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the lane.",
           "exampleVi": "Hãy nhìn vào lane.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u2_03",
@@ -282,7 +288,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the street.",
           "exampleVi": "Hãy nhìn vào street.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u2_04",
@@ -293,7 +299,7 @@
           "hint": "Con đường lớn nhiều làn xe",
           "exampleEn": "The presidential palace is located on a grand avenue.",
           "exampleVi": "Dinh thự nằm trên một đại lộ thênh thang.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u2_05",
@@ -304,7 +310,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the quiet.",
           "exampleVi": "Hãy nhìn vào quiet.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u2_06",
@@ -315,7 +321,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the crowded.",
           "exampleVi": "Hãy nhìn vào crowded.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -478,6 +484,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: My foreign friends",
       "unitNameVi": "Những người bạn nước ngoài",
+      "title": "My foreign friends",
+      "titleEn": "My foreign friends",
+      "titleVi": "Những người bạn nước ngoài",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 18 – 23",
@@ -492,7 +501,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the country.",
           "exampleVi": "Hãy nhìn vào country.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u3_02",
@@ -503,7 +512,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the nationality.",
           "exampleVi": "Hãy nhìn vào nationality.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u3_03",
@@ -514,7 +523,7 @@
           "hint": "Ngôn ngữ quốc tế",
           "exampleEn": "We love learning English.",
           "exampleVi": "Chúng mình rất thích học tiếng Anh.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u3_04",
@@ -525,7 +534,7 @@
           "hint": "Quốc tịch Mỹ",
           "exampleEn": "He is American.",
           "exampleVi": "Cậu ấy là người Mỹ.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u3_05",
@@ -536,7 +545,7 @@
           "hint": "Quốc tịch Úc",
           "exampleEn": "My teacher is Australian.",
           "exampleVi": "Thầy giáo của mình là người Úc.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u3_06",
@@ -547,7 +556,7 @@
           "hint": "Thuộc về nước Nhật",
           "exampleEn": "Sushi is a famous Japanese food.",
           "exampleVi": "Sushi là món ăn nổi tiếng của Nhật Bản.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -710,6 +719,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: Our free-time activities",
       "unitNameVi": "Hoạt động lúc rảnh rỗi",
+      "title": "Our free-time activities",
+      "titleEn": "Our free-time activities",
+      "titleVi": "Hoạt động lúc rảnh rỗi",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 24 – 29",
@@ -724,7 +736,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the surf the Internet.",
           "exampleVi": "Hãy nhìn vào surf the Internet.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u4_02",
@@ -735,7 +747,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the read comic books.",
           "exampleVi": "Hãy nhìn vào read comic books.",
-          "emoji": "🌟"
+          "emoji": "📖"
         },
         {
           "id": "g5_u4_03",
@@ -746,7 +758,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the clean the house.",
           "exampleVi": "Hãy nhìn vào clean the house.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u4_04",
@@ -757,7 +769,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the skate.",
           "exampleVi": "Hãy nhìn vào skate.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -920,6 +932,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: My future job",
       "unitNameVi": "Nghề nghiệp tương lai",
+      "title": "My future job",
+      "titleEn": "My future job",
+      "titleVi": "Nghề nghiệp tương lai",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 30 – 35",
@@ -934,7 +949,7 @@
           "hint": "Người vẽ thiết kế nhà cửa",
           "exampleEn": "My uncle is an architect who designs beautiful buildings.",
           "exampleVi": "Chú của mình là một kiến trúc sư thiết kế những tòa nhà đẹp.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u5_02",
@@ -945,7 +960,7 @@
           "hint": "Người điều khiển máy bay",
           "exampleEn": "The brave pilot flies giant passenger airplanes.",
           "exampleVi": "Người phi công dũng cảm lái những chiếc máy bay chở khách khổng lồ.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u5_03",
@@ -956,7 +971,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the writer.",
           "exampleVi": "Hãy nhìn vào writer.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u5_04",
@@ -967,7 +982,7 @@
           "hint": "Người du hành vào vũ trụ",
           "exampleEn": "He dreams of becoming an astronaut flying to Mars.",
           "exampleVi": "Cậu ấy ước mơ trở thành một phi hành gia bay lên sao Hỏa.",
-          "emoji": "🌟"
+          "emoji": "👨‍🚀"
         },
         {
           "id": "g5_u5_05",
@@ -978,7 +993,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the engineer.",
           "exampleVi": "Hãy nhìn vào engineer.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u5_06",
@@ -989,7 +1004,7 @@
           "hint": "Người sáng tạo nghệ thuật",
           "exampleEn": "The talented artist paints a rural landscape.",
           "exampleVi": "Người họa sĩ tài hoa vẽ một bức tranh phong cảnh làng quê.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1152,6 +1167,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: Our school rooms",
       "unitNameVi": "Các phòng chức năng ở trường",
+      "title": "Our school rooms",
+      "titleEn": "Our school rooms",
+      "titleVi": "Các phòng chức năng ở trường",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 36 – 41",
@@ -1166,7 +1184,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the first floor.",
           "exampleVi": "Hãy nhìn vào first floor.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u6_02",
@@ -1177,7 +1195,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the second floor.",
           "exampleVi": "Hãy nhìn vào second floor.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u6_03",
@@ -1188,7 +1206,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the third floor.",
           "exampleVi": "Hãy nhìn vào third floor.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u6_04",
@@ -1199,7 +1217,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the science lab.",
           "exampleVi": "Hãy nhìn vào science lab.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u6_05",
@@ -1210,7 +1228,7 @@
           "hint": "Phòng học vẽ",
           "exampleEn": "Our art room is on the second floor.",
           "exampleVi": "Phòng mĩ thuật của chúng mình ở tầng hai.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1373,6 +1391,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: Our favourite school activities",
       "unitNameVi": "Hoạt động học tập yêu thích",
+      "title": "Our favourite school activities",
+      "titleEn": "Our favourite school activities",
+      "titleVi": "Hoạt động học tập yêu thích",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 42 – 47",
@@ -1387,7 +1408,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the project.",
           "exampleVi": "Hãy nhìn vào project.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u7_02",
@@ -1398,7 +1419,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the experiment.",
           "exampleVi": "Hãy nhìn vào experiment.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u7_03",
@@ -1409,7 +1430,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the presentation.",
           "exampleVi": "Hãy nhìn vào presentation.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u7_04",
@@ -1420,7 +1441,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the debate.",
           "exampleVi": "Hãy nhìn vào debate.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u7_05",
@@ -1431,7 +1452,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the exhibition.",
           "exampleVi": "Hãy nhìn vào exhibition.",
-          "emoji": "🌟"
+          "emoji": "🖼️"
         }
       ],
       "grammar": {
@@ -1594,6 +1615,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: School subjects",
       "unitNameVi": "Các môn học",
+      "title": "School subjects",
+      "titleEn": "School subjects",
+      "titleVi": "Các môn học",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 48 – 53",
@@ -1608,7 +1632,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the once.",
           "exampleVi": "Hãy nhìn vào once.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u8_02",
@@ -1619,7 +1643,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the twice.",
           "exampleVi": "Hãy nhìn vào twice.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u8_03",
@@ -1630,7 +1654,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the three times.",
           "exampleVi": "Hãy nhìn vào three times.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u8_04",
@@ -1641,7 +1665,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the four times.",
           "exampleVi": "Hãy nhìn vào four times.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u8_05",
@@ -1652,7 +1676,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the every school day.",
           "exampleVi": "Hãy nhìn vào every school day.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1815,6 +1839,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: Our outdoor activities",
       "unitNameVi": "Hoạt động ngoài trời",
+      "title": "Our outdoor activities",
+      "titleEn": "Our outdoor activities",
+      "titleVi": "Hoạt động ngoài trời",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 54 – 59",
@@ -1829,7 +1856,7 @@
           "hint": "Môn thể thao dùng vợt đánh cầu",
           "exampleEn": "We play badminton in the gym every afternoon.",
           "exampleVi": "Chúng mình chơi cầu lông trong nhà thi đấu mỗi buổi chiều.",
-          "emoji": "🌟"
+          "emoji": "🏸"
         },
         {
           "id": "g5_u9_02",
@@ -1840,7 +1867,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the volleyball.",
           "exampleVi": "Hãy nhìn vào volleyball.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u9_03",
@@ -1851,7 +1878,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the hide-and-seek.",
           "exampleVi": "Hãy nhìn vào hide-and-seek.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u9_04",
@@ -1862,7 +1889,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the cycling.",
           "exampleVi": "Hãy nhìn vào cycling.",
-          "emoji": "🌟"
+          "emoji": "🚴"
         },
         {
           "id": "g5_u9_05",
@@ -1873,7 +1900,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the walking.",
           "exampleVi": "Hãy nhìn vào walking.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2036,6 +2063,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: Our school trip",
       "unitNameVi": "Chuyến dã ngoại của trường",
+      "title": "Our school trip",
+      "titleEn": "Our school trip",
+      "titleVi": "Chuyến dã ngoại của trường",
       "theme": "Community & Life Skills",
       "semester": 1,
       "bookPages": "Trang 60 – 65",
@@ -2050,7 +2080,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the school trip.",
           "exampleVi": "Hãy nhìn vào school trip.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u10_02",
@@ -2061,7 +2091,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the national park.",
           "exampleVi": "Hãy nhìn vào national park.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u10_03",
@@ -2072,7 +2102,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the museum.",
           "exampleVi": "Hãy nhìn vào museum.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u10_04",
@@ -2083,7 +2113,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the countryside.",
           "exampleVi": "Hãy nhìn vào countryside.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u10_05",
@@ -2094,7 +2124,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the lake.",
           "exampleVi": "Hãy nhìn vào lake.",
-          "emoji": "🌟"
+          "emoji": "🌊"
         }
       ],
       "grammar": {
@@ -2257,6 +2287,9 @@
       "unit": 11,
       "unitTitle": "Unit 11: Family health",
       "unitNameVi": "Sức khỏe gia đình",
+      "title": "Family health",
+      "titleEn": "Family health",
+      "titleVi": "Sức khỏe gia đình",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 66 – 71",
@@ -2271,7 +2304,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the headache.",
           "exampleVi": "Hãy nhìn vào headache.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u11_02",
@@ -2282,7 +2315,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the toothache.",
           "exampleVi": "Hãy nhìn vào toothache.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u11_03",
@@ -2293,7 +2326,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the stomach ache.",
           "exampleVi": "Hãy nhìn vào stomach ache.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u11_04",
@@ -2304,7 +2337,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the fever.",
           "exampleVi": "Hãy nhìn vào fever.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u11_05",
@@ -2315,7 +2348,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the cough.",
           "exampleVi": "Hãy nhìn vào cough.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u11_06",
@@ -2326,7 +2359,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the sore throat.",
           "exampleVi": "Hãy nhìn vào sore throat.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2489,6 +2522,9 @@
       "unit": 12,
       "unitTitle": "Unit 12: Our responsibilities",
       "unitNameVi": "Trách nhiệm của chúng mình",
+      "title": "Our responsibilities",
+      "titleEn": "Our responsibilities",
+      "titleVi": "Trách nhiệm của chúng mình",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 72 – 77",
@@ -2503,7 +2539,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the danger.",
           "exampleVi": "Hãy nhìn vào danger.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u12_02",
@@ -2514,7 +2550,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the knife.",
           "exampleVi": "Hãy nhìn vào knife.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u12_03",
@@ -2525,7 +2561,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the stairs.",
           "exampleVi": "Hãy nhìn vào stairs.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u12_04",
@@ -2536,7 +2572,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the fire.",
           "exampleVi": "Hãy nhìn vào fire.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u12_05",
@@ -2547,7 +2583,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the ride fast.",
           "exampleVi": "Hãy nhìn vào ride fast.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u12_06",
@@ -2558,7 +2594,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the touch the stove.",
           "exampleVi": "Hãy nhìn vào touch the stove.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2721,6 +2757,9 @@
       "unit": 13,
       "unitTitle": "Unit 13: Our special days",
       "unitNameVi": "Những ngày đặc biệt",
+      "title": "Our special days",
+      "titleEn": "Our special days",
+      "titleVi": "Những ngày đặc biệt",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 78 – 83",
@@ -2735,7 +2774,7 @@
           "hint": "Ngày 20 tháng 11",
           "exampleEn": "We give flowers to teachers on Teachers' Day.",
           "exampleVi": "Chúng em tặng hoa cho các thầy cô vào Ngày Nhà giáo.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u13_02",
@@ -2746,7 +2785,7 @@
           "hint": "Ngày hội của trẻ em",
           "exampleEn": "We celebrate Children's Day on June 1st.",
           "exampleVi": "Chúng mình chào mừng ngày Quốc tế Thiếu nhi vào ngày 1 tháng 6.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u13_03",
@@ -2757,7 +2796,7 @@
           "hint": "Ngày thi đấu thể dục thể thao",
           "exampleEn": "Sports Day is held on the school playground.",
           "exampleVi": "Ngày hội thể thao được tổ chức ở sân trường.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u13_04",
@@ -2768,7 +2807,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the celebration.",
           "exampleVi": "Hãy nhìn vào celebration.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2931,6 +2970,9 @@
       "unit": 14,
       "unitTitle": "Unit 14: Staying healthy",
       "unitNameVi": "Giữ gìn sức khỏe",
+      "title": "Staying healthy",
+      "titleEn": "Staying healthy",
+      "titleVi": "Giữ gìn sức khỏe",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 84 – 89",
@@ -2945,7 +2987,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the healthy.",
           "exampleVi": "Hãy nhìn vào healthy.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u14_02",
@@ -2956,7 +2998,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the fruit.",
           "exampleVi": "Hãy nhìn vào fruit.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u14_03",
@@ -2967,7 +3009,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the vegetables.",
           "exampleVi": "Hãy nhìn vào vegetables.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u14_04",
@@ -2978,7 +3020,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the drink water.",
           "exampleVi": "Hãy nhìn vào drink water.",
-          "emoji": "🌟"
+          "emoji": "💧"
         },
         {
           "id": "g5_u14_05",
@@ -2989,7 +3031,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the do exercise.",
           "exampleVi": "Hãy nhìn vào do exercise.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u14_06",
@@ -3000,7 +3042,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the sleep early.",
           "exampleVi": "Hãy nhìn vào sleep early.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -3163,6 +3205,9 @@
       "unit": 15,
       "unitTitle": "Unit 15: Life stories",
       "unitNameVi": "Những câu chuyện cuộc sống",
+      "title": "Life stories",
+      "titleEn": "Life stories",
+      "titleVi": "Những câu chuyện cuộc sống",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 90 – 95",
@@ -3177,7 +3222,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the character.",
           "exampleVi": "Hãy nhìn vào character.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u15_02",
@@ -3188,7 +3233,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the plot.",
           "exampleVi": "Hãy nhìn vào plot.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u15_03",
@@ -3199,7 +3244,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the fairy tale.",
           "exampleVi": "Hãy nhìn vào fairy tale.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u15_04",
@@ -3210,7 +3255,7 @@
           "hint": "Loài vật tinh ranh",
           "exampleEn": "The clever fox runs into the woods.",
           "exampleVi": "Chú cáo tinh khôn chạy vào rừng.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u15_05",
@@ -3221,7 +3266,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the crow.",
           "exampleVi": "Hãy nhìn vào crow.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u15_06",
@@ -3232,7 +3277,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the prince.",
           "exampleVi": "Hãy nhìn vào prince.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u15_07",
@@ -3243,7 +3288,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the princess.",
           "exampleVi": "Hãy nhìn vào princess.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -3406,6 +3451,9 @@
       "unit": 16,
       "unitTitle": "Unit 16: Seasons and weather",
       "unitNameVi": "Các mùa và thời tiết",
+      "title": "Seasons and weather",
+      "titleEn": "Seasons and weather",
+      "titleVi": "Các mùa và thời tiết",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 96 – 101",
@@ -3420,7 +3468,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the spring.",
           "exampleVi": "Hãy nhìn vào spring.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u16_02",
@@ -3431,7 +3479,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the summer.",
           "exampleVi": "Hãy nhìn vào summer.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u16_03",
@@ -3442,7 +3490,7 @@
           "hint": "Mùa thứ ba trong năm",
           "exampleEn": "Autumn has cool winds and golden leaves.",
           "exampleVi": "Mùa thu có những cơn gió mát và lá vàng rơi.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u16_04",
@@ -3453,7 +3501,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the winter.",
           "exampleVi": "Hãy nhìn vào winter.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u16_05",
@@ -3464,7 +3512,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the warm.",
           "exampleVi": "Hãy nhìn vào warm.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u16_06",
@@ -3475,7 +3523,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the cool.",
           "exampleVi": "Hãy nhìn vào cool.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u16_07",
@@ -3486,7 +3534,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the freezing.",
           "exampleVi": "Hãy nhìn vào freezing.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -3649,6 +3697,9 @@
       "unit": 17,
       "unitTitle": "Unit 17: Stories for children",
       "unitNameVi": "Truyện đọc thiếu nhi",
+      "title": "Stories for children",
+      "titleEn": "Stories for children",
+      "titleVi": "Truyện đọc thiếu nhi",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 102 – 107",
@@ -3663,7 +3714,7 @@
           "hint": "Sáng dạ và mưu trí",
           "exampleEn": "The clever fox found a way to cross the river.",
           "exampleVi": "Chú cáo thông minh đã tìm ra cách để qua sông.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u17_02",
@@ -3674,7 +3725,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the greedy.",
           "exampleVi": "Hãy nhìn vào greedy.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u17_03",
@@ -3685,7 +3736,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the kind.",
           "exampleVi": "Hãy nhìn vào kind.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u17_04",
@@ -3696,7 +3747,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the gentle.",
           "exampleVi": "Hãy nhìn vào gentle.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u17_05",
@@ -3707,7 +3758,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the hard-working.",
           "exampleVi": "Hãy nhìn vào hard-working.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u17_06",
@@ -3718,7 +3769,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the honest.",
           "exampleVi": "Hãy nhìn vào honest.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -3881,6 +3932,9 @@
       "unit": 18,
       "unitTitle": "Unit 18: Means of transport",
       "unitNameVi": "Phương tiện giao thông",
+      "title": "Means of transport",
+      "titleEn": "Means of transport",
+      "titleVi": "Phương tiện giao thông",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 108 – 113",
@@ -3895,7 +3949,7 @@
           "hint": "Phương tiện bay trên không",
           "exampleEn": "The silver plane flies high in the sky.",
           "exampleVi": "Chiếc máy bay màu bạc bay vút trên bầu trời.",
-          "emoji": "🌟"
+          "emoji": "✈️"
         },
         {
           "id": "g5_u18_02",
@@ -3906,7 +3960,7 @@
           "hint": "Đoàn tàu hỏa dài",
           "exampleEn": "The toy train runs around the wooden track.",
           "exampleVi": "Đoàn tàu đồ chơi chạy quanh đường ray gỗ.",
-          "emoji": "🌟"
+          "emoji": "🚆"
         },
         {
           "id": "g5_u18_03",
@@ -3917,7 +3971,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the coach.",
           "exampleVi": "Hãy nhìn vào coach.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u18_04",
@@ -3928,7 +3982,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the underground.",
           "exampleVi": "Hãy nhìn vào underground.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u18_05",
@@ -3939,7 +3993,7 @@
           "hint": "Thuyền nan chèo tay",
           "exampleEn": "Row your boat gently down the stream.",
           "exampleVi": "Hãy chèo chiếc thuyền nhỏ nhẹ xuôi dòng suối.",
-          "emoji": "🌟"
+          "emoji": "🚢"
         },
         {
           "id": "g5_u18_06",
@@ -3950,7 +4004,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the motorbike.",
           "exampleVi": "Hãy nhìn vào motorbike.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -4113,6 +4167,9 @@
       "unit": 19,
       "unitTitle": "Unit 19: Places of interest",
       "unitNameVi": "Danh lam thắng cảnh",
+      "title": "Places of interest",
+      "titleEn": "Places of interest",
+      "titleVi": "Danh lam thắng cảnh",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 114 – 119",
@@ -4127,7 +4184,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the pagoda.",
           "exampleVi": "Hãy nhìn vào pagoda.",
-          "emoji": "🌟"
+          "emoji": "⛩️"
         },
         {
           "id": "g5_u19_02",
@@ -4138,7 +4195,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the bridge.",
           "exampleVi": "Hãy nhìn vào bridge.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u19_03",
@@ -4149,7 +4206,7 @@
           "hint": "Vùng biển ăn sâu vào đất liền",
           "exampleEn": "Ha Long Bay is a world natural wonder.",
           "exampleVi": "Vịnh Hạ Long là một kỳ quan thiên nhiên của thế giới.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u19_04",
@@ -4160,7 +4217,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the island.",
           "exampleVi": "Hãy nhìn vào island.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u19_05",
@@ -4171,7 +4228,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the temple.",
           "exampleVi": "Hãy nhìn vào temple.",
-          "emoji": "🌟"
+          "emoji": "⛩️"
         },
         {
           "id": "g5_u19_06",
@@ -4182,7 +4239,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the palace.",
           "exampleVi": "Hãy nhìn vào palace.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -4345,6 +4402,9 @@
       "unit": 20,
       "unitTitle": "Unit 20: Our summer holiday",
       "unitNameVi": "Kỳ nghỉ hè của chúng mình",
+      "title": "Our summer holiday",
+      "titleEn": "Our summer holiday",
+      "titleVi": "Kỳ nghỉ hè của chúng mình",
       "theme": "Community & Life Skills",
       "semester": 2,
       "bookPages": "Trang 120 – 125",
@@ -4359,7 +4419,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the holiday.",
           "exampleVi": "Hãy nhìn vào holiday.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u20_02",
@@ -4370,7 +4430,7 @@
           "hint": "Bãi cát ven biển",
           "exampleEn": "Children build sandcastles on the sunny beach.",
           "exampleVi": "Trẻ em xây lâu đài cát trên bãi biển đầy nắng.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u20_03",
@@ -4381,7 +4441,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the resort.",
           "exampleVi": "Hãy nhìn vào resort.",
-          "emoji": "🌟"
+          "emoji": "🏖️"
         },
         {
           "id": "g5_u20_04",
@@ -4392,7 +4452,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the seafood.",
           "exampleVi": "Hãy nhìn vào seafood.",
-          "emoji": "🌟"
+          "emoji": "📘"
         },
         {
           "id": "g5_u20_05",
@@ -4403,7 +4463,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the swimming.",
           "exampleVi": "Hãy nhìn vào swimming.",
-          "emoji": "🌟"
+          "emoji": "🏊"
         },
         {
           "id": "g5_u20_06",
@@ -4414,7 +4474,7 @@
           "hint": "Từ vựng tiếng Anh tiểu học",
           "exampleEn": "Look at the castle.",
           "exampleVi": "Hãy nhìn vào castle.",
-          "emoji": "🌟"
+          "emoji": "📘"
         }
       ],
       "grammar": {

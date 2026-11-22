@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: Life Stories We Admire",
       "unitNameVi": "Những tấm gương cuộc đời đáng ngưỡng mộ",
+      "title": "Life Stories We Admire",
+      "titleEn": "Life Stories We Admire",
+      "titleVi": "Những tấm gương cuộc đời đáng ngưỡng mộ",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 8 – 19",
@@ -28,7 +31,7 @@
           "hint": "Kính trọng và noi theo",
           "exampleEn": "Millions admire President Ho Chi Minh for his modest lifestyle.",
           "exampleVi": "Hàng triệu con người ngưỡng mộ Chủ tịch Hồ Chí Minh vì lối sống giản dị thanh bạch của Người.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Cuốn sách kể về cuộc đời một nhân vật",
           "exampleEn": "Reading inspirational biographies inspires young leaders.",
           "exampleVi": "Đọc những cuốn tiểu sử truyền cảm hứng khích lệ những nhà lãnh đạo trẻ.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Hết lòng cống hiến",
           "exampleEn": "Her lifelong dedication to curing illnesses earned international acclaim.",
           "exampleVi": "Sự cống hiến trọn đời của bà cho việc chữa bệnh đã nhận được sự tán dương của quốc tế.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Vững lòng không nản chí",
           "exampleEn": "Scientists persevered through hundreds of failed experiments.",
           "exampleVi": "Các nhà khoa học đã bền chí vượt qua hàng trăm thí nghiệm thất bại.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u1_05",
@@ -72,7 +75,7 @@
           "hint": "Sức chịu đựng và hồi phục",
           "exampleEn": "Emotional resilience allows people to overcome severe adversity.",
           "exampleVi": "Sự kiên cường về mặt tâm lý giúp con người vượt qua những nghịch cảnh khắc nghiệt.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u1_06",
@@ -83,7 +86,7 @@
           "hint": "Những giá trị để lại cho đời sau",
           "exampleEn": "General Vo Nguyen Giap left a legendary military and moral legacy.",
           "exampleVi": "Đại tướng Võ Nguyên Giáp đã để lại một di sản quân sự và đạo đức mang tính huyền thoại.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -252,6 +255,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: A Multicultural World",
       "unitNameVi": "Thế giới đa văn hóa",
+      "title": "A Multicultural World",
+      "titleEn": "A Multicultural World",
+      "titleVi": "Thế giới đa văn hóa",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 20 – 31",
@@ -266,7 +272,7 @@
           "hint": "Giao thoa nhiều nền văn hóa",
           "exampleEn": "London is a vibrant multicultural metropolis home to diverse nationalities.",
           "exampleVi": "London là một đại đô thị đa văn hóa sôi động, quê hương của nhiều quốc tịch đa dạng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u2_02",
@@ -277,7 +283,7 @@
           "hint": "Nét riêng biệt nhận diện một dân tộc",
           "exampleEn": "Retaining cultural identity is essential in an era of globalization.",
           "exampleVi": "Gìn giữ bản sắc văn hóa là điều cốt yếu trong kỷ nguyên toàn cầu hóa.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u2_03",
@@ -288,7 +294,7 @@
           "hint": "Sự muôn màu muôn vẻ",
           "exampleEn": "Cultural diversity enriches society with creative perspectives.",
           "exampleVi": "Sự đa dạng văn hóa làm phong phú xã hội với những góc nhìn đầy sáng tạo.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u2_04",
@@ -299,7 +305,7 @@
           "hint": "Hòa tan vào văn hóa đa số",
           "exampleEn": "Sociologists study the assimilation of migrant families into urban life.",
           "exampleVi": "Các nhà xã hội học nghiên cứu sự đồng hóa của những gia đình di cư vào đời sống đô thị.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u2_05",
@@ -310,7 +316,7 @@
           "hint": "Hòa nhập mà không hòa tan",
           "exampleEn": "Integration preserves distinct ethnic customs while sharing national values.",
           "exampleVi": "Hội nhập vừa gìn giữ những phong tục dân tộc đặc thù vừa cùng chia sẻ những giá trị quốc gia.",
-          "emoji": "🎓"
+          "emoji": "🌐"
         },
         {
           "id": "g12_u2_06",
@@ -321,7 +327,7 @@
           "hint": "Lề lối thói quen lâu đời",
           "exampleEn": "Respecting local wedding customs builds cultural goodwill.",
           "exampleVi": "Tôn trọng phong tục cưới hỏi địa phương tạo dựng thiện cảm văn hóa.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -490,6 +496,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: Green Living",
       "unitNameVi": "Lối sống xanh",
+      "title": "Green Living",
+      "titleEn": "Green Living",
+      "titleVi": "Lối sống xanh",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 32 – 43",
@@ -504,7 +513,7 @@
           "hint": "Bảo vệ môi trường",
           "exampleEn": "Eco-friendly lifestyle habits conserve natural resources effectively.",
           "exampleVi": "Những thói quen sống thân thiện với môi trường bảo tồn tài nguyên thiên nhiên hiệu quả.",
-          "emoji": "🎓"
+          "emoji": "🌱"
         },
         {
           "id": "g12_u3_02",
@@ -515,7 +524,7 @@
           "hint": "Giảm thiểu tối đa rác",
           "exampleEn": "Zero-waste advocates bring reusable containers when shopping.",
           "exampleVi": "Những người ủng hộ lối sống không rác thải mang theo hộp đựng tái sử dụng khi đi mua hàng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u3_03",
@@ -526,7 +535,7 @@
           "hint": "Phân bón từ rác hữu cơ",
           "exampleEn": "Kitchen vegetable scraps can be composted into nutrient-rich soil.",
           "exampleVi": "Các mẩu rau củ thừa trong nhà bếp có thể được ủ thành đất giàu dưỡng chất.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u3_04",
@@ -537,7 +546,7 @@
           "hint": "Tự phân hủy an toàn",
           "exampleEn": "Biodegradable shopping bags decompose naturally without toxic residue.",
           "exampleVi": "Túi mua sắm phân hủy sinh học tự tiêu biến trong tự nhiên mà không để lại cặn độc hại.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u3_05",
@@ -548,7 +557,7 @@
           "hint": "Tấm hấp thụ ánh sáng mặt trời",
           "exampleEn": "Installing solar panels on rooftops generates clean green electricity.",
           "exampleVi": "Lắp đặt các tấm pin mặt trời trên mái nhà giúp sản sinh ra nguồn điện xanh sạch.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u3_06",
@@ -559,7 +568,7 @@
           "hint": "Duy trì lâu dài không cạn kiệt",
           "exampleEn": "Corporate sustainability policies prioritize environmental stewardship.",
           "exampleVi": "Các chính sách phát triển bền vững của doanh nghiệp đặt ưu tiên vào việc bảo vệ môi trường.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -728,6 +737,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: Urbanisation",
       "unitNameVi": "Đô thị hóa",
+      "title": "Urbanisation",
+      "titleEn": "Urbanisation",
+      "titleVi": "Đô thị hóa",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 44 – 55",
@@ -742,7 +754,7 @@
           "hint": "Sự mở rộng của các thành phố",
           "exampleEn": "Rapid urbanisation strains housing and transportation systems.",
           "exampleVi": "Quá trình đô thị hóa nhanh chóng gây áp lực lên hệ thống nhà ở và giao thông.",
-          "emoji": "🎓"
+          "emoji": "🏙️"
         },
         {
           "id": "g12_u4_02",
@@ -753,7 +765,7 @@
           "hint": "Chuyển từ quê lên phố",
           "exampleEn": "Rural-to-urban migration drives population growth in capital cities.",
           "exampleVi": "Dòng di cư từ nông thôn ra thành thị thúc đẩy sự tăng trưởng dân số ở các thủ đô.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u4_03",
@@ -764,7 +776,7 @@
           "hint": "Thành phố cực lớn",
           "exampleEn": "Tokyo and Shanghai are colossal Asian mega-cities.",
           "exampleVi": "Tokyo và Thượng Hải là những siêu đô thị khổng lồ ở châu Á.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u4_04",
@@ -775,7 +787,7 @@
           "hint": "Khu dân cư lụp xụp thiếu thốn",
           "exampleEn": "Municipal governments work to upgrade sanitation in peri-urban slums.",
           "exampleVi": "Chính quyền thành phố nỗ lực nâng cấp hệ thống vệ sinh trong các khu ổ chuột ven đô.",
-          "emoji": "🎓"
+          "emoji": "🏚️"
         },
         {
           "id": "g12_u4_05",
@@ -786,7 +798,7 @@
           "hint": "Phát triển công nghiệp quy mô lớn",
           "exampleEn": "Industrialisation created millions of manufacturing jobs nationwide.",
           "exampleVi": "Công nghiệp hóa đã tạo ra hàng triệu việc làm trong ngành sản xuất trên toàn quốc.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u4_06",
@@ -797,7 +809,7 @@
           "hint": "Liên quan đến quản lý đô thị",
           "exampleEn": "Municipal authorities expanded metro lines to ease congestion.",
           "exampleVi": "Chính quyền đô thị đã mở rộng các tuyến tàu điện ngầm để giảm bớt ùn tắc.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -966,6 +978,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: The World of Work",
       "unitNameVi": "Thế giới việc làm",
+      "title": "The World of Work",
+      "titleEn": "The World of Work",
+      "titleVi": "Thế giới việc làm",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 56 – 67",
@@ -980,7 +995,7 @@
           "hint": "Giai đoạn học sinh sinh viên làm thử việc",
           "exampleEn": "A summer corporate internship provides practical workplace exposure.",
           "exampleVi": "Một kỳ thực tập mùa hè tại doanh nghiệp mang lại sự cọ xát thực tế trong môi trường làm việc.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u5_02",
@@ -991,7 +1006,7 @@
           "hint": "Thu nhận nhân viên mới",
           "exampleEn": "Online recruitment platforms streamline the hiring interview process.",
           "exampleVi": "Các nền tảng tuyển dụng trực tuyến giúp tinh gọn quy trình phỏng vấn tuyển người.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u5_03",
@@ -1002,7 +1017,7 @@
           "hint": "Bản tóm tắt quá trình học tập làm việc",
           "exampleEn": "A concise curriculum vitae highlights achievements and core competencies.",
           "exampleVi": "Một bản sơ yếu lý lịch súc tích làm nổi bật các thành tích và năng lực cốt lõi.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u5_04",
@@ -1013,7 +1028,7 @@
           "hint": "Kỹ năng giao tiếp ứng xử",
           "exampleEn": "Employers prize soft skills such as teamwork and active listening.",
           "exampleVi": "Nhà tuyển dụng rất đánh giá cao các kỹ năng mềm như làm việc nhóm và lắng nghe tích cực.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u5_05",
@@ -1024,7 +1039,7 @@
           "hint": "Giai đoạn thử thách công việc",
           "exampleEn": "New hires undergo a three-month probationary employment evaluation.",
           "exampleVi": "Các nhân viên mới trải qua quá trình đánh giá thử việc kéo dài ba tháng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u5_06",
@@ -1035,7 +1050,7 @@
           "hint": "Thu nhập từ công sức lao động",
           "exampleEn": "Competitive remuneration packages attract highly capable specialists.",
           "exampleVi": "Chế độ đãi ngộ lương thưởng cạnh tranh thu hút được những chuyên gia giỏi.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1204,6 +1219,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: Artificial Intelligence",
       "unitNameVi": "Trí tuệ nhân tạo",
+      "title": "Artificial Intelligence",
+      "titleEn": "Artificial Intelligence",
+      "titleVi": "Trí tuệ nhân tạo",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 68 – 79",
@@ -1218,7 +1236,7 @@
           "hint": "Máy tính tự học từ dữ liệu",
           "exampleEn": "Machine learning models analyze patterns in massive datasets.",
           "exampleVi": "Các mô hình học máy phân tích các khuôn mẫu quy luật trong những bộ dữ liệu khổng lồ.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u6_02",
@@ -1229,7 +1247,7 @@
           "hint": "Trình tự giải quyết vấn đề bằng máy tính",
           "exampleEn": "Search engines rely on complex ranking algorithms.",
           "exampleVi": "Các công cụ tìm kiếm dựa trên những thuật toán xếp hạng phức tạp.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u6_03",
@@ -1240,7 +1258,7 @@
           "hint": "Vận hành không cần sức người",
           "exampleEn": "Robotic automation in factories boosts production speed.",
           "exampleVi": "Sự tự động hóa bằng người máy trong các nhà máy giúp tăng tốc độ sản xuất.",
-          "emoji": "🎓"
+          "emoji": "🤖"
         },
         {
           "id": "g12_u6_04",
@@ -1251,7 +1269,7 @@
           "hint": "Hệ thống tính toán phỏng theo não người",
           "exampleEn": "Deep neural networks simulate biological cognitive mechanisms.",
           "exampleVi": "Các mạng nơ-ron sâu mô phỏng những cơ chế nhận thức sinh học của não bộ.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u6_05",
@@ -1262,7 +1280,7 @@
           "hint": "Liên quan đến robot",
           "exampleEn": "Robotic surgical arms assist surgeons in performing microscopic incisions.",
           "exampleVi": "Cánh tay người máy phẫu thuật hỗ trợ các bác sĩ phẫu thuật thực hiện những đường rạch siêu nhỏ.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u6_06",
@@ -1273,7 +1291,7 @@
           "hint": "Các chuẩn mực đạo đức đúng đắn",
           "exampleEn": "AI ethics committees ensure fairness and prevent algorithmic bias.",
           "exampleVi": "Các ủy ban đạo đức AI bảo đảm tính công bằng và ngăn ngừa sự thiên vị trong thuật toán.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1442,6 +1460,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: The World of Mass Media",
       "unitNameVi": "Thế giới truyền thông đại chúng",
+      "title": "The World of Mass Media",
+      "titleEn": "The World of Mass Media",
+      "titleVi": "Thế giới truyền thông đại chúng",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 80 – 91",
@@ -1456,7 +1477,7 @@
           "hint": "Báo chí truyền hình phát thanh mạng",
           "exampleEn": "Mass media channels inform, educate, and entertain audiences globally.",
           "exampleVi": "Các kênh truyền thông đại chúng cung cấp thông tin, giáo dục và giải trí cho khán giả toàn cầu.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u7_02",
@@ -1467,7 +1488,7 @@
           "hint": "Nghề phóng viên nhà báo",
           "exampleEn": "Investigative journalism exposes corruption and protects public interest.",
           "exampleVi": "Báo chí điều tra phanh phui nạn tham nhũng và bảo vệ lợi ích công cộng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u7_03",
@@ -1478,7 +1499,7 @@
           "hint": "Kiểm tra gạn lọc nội dung trước khi phát hành",
           "exampleEn": "Debates continue regarding the balance between freedom of speech and content censorship.",
           "exampleVi": "Những cuộc tranh luận vẫn tiếp diễn xung quanh sự cân bằng giữa tự do ngôn luận và kiểm duyệt nội dung.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u7_04",
@@ -1489,7 +1510,7 @@
           "hint": "Truyền tín hiệu âm thanh hình ảnh",
           "exampleEn": "The national broadcaster transmitted live coverage of the ceremony.",
           "exampleVi": "Đài truyền hình quốc gia đã phát sóng trực tiếp buổi lễ long trọng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u7_05",
@@ -1500,7 +1521,7 @@
           "hint": "Hệ thống ứng dụng trên internet",
           "exampleEn": "Social networks have become dominant digital platforms for news distribution.",
           "exampleVi": "Các mạng xã hội đã trở thành những nền tảng kỹ thuật số chiếm ưu thế trong việc phân phối tin tức.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u7_06",
@@ -1511,7 +1532,7 @@
           "hint": "Thổi phồng gây sốc để thu hút",
           "exampleEn": "Responsible news editors reject cheap sensationalism and sensational headlines.",
           "exampleVi": "Những người biên tập tin tức có trách nhiệm từ chối lối viết giật gân rẻ tiền và những tiêu đề câu khách.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1680,6 +1701,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: Wildlife Conservation",
       "unitNameVi": "Bảo tồn động vật hoang dã",
+      "title": "Wildlife Conservation",
+      "titleEn": "Wildlife Conservation",
+      "titleVi": "Bảo tồn động vật hoang dã",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 92 – 103",
@@ -1694,7 +1718,7 @@
           "hint": "Săn bắt thú quý hiếm trái phép",
           "exampleEn": "Rangers conduct armed patrols to stop illegal tiger poaching.",
           "exampleVi": "Lực lượng kiểm lâm tuần tra vũ trang để ngăn chặn nạn săn trộm hổ trái phép.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u8_02",
@@ -1705,7 +1729,7 @@
           "hint": "Không còn cá thể nào sống sót",
           "exampleEn": "The Javan rhinoceros in Viet Nam was declared officially extinct in 2011.",
           "exampleVi": "Loài tê giác một sừng Java ở Việt Nam đã bị tuyên bố chính thức tuyệt chủng vào năm 2011.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u8_03",
@@ -1716,7 +1740,7 @@
           "hint": "Nơi an toàn che chở muông thú",
           "exampleEn": "The island serves as a protected bird sanctuary for migratory cranes.",
           "exampleVi": "Hòn đảo này đóng vai trò là một khu bảo tồn chim được bảo vệ dành cho loài sếu di cư.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u8_04",
@@ -1727,7 +1751,7 @@
           "hint": "Sự phong phú muôn loài",
           "exampleEn": "Preserving biodiversity ensures resilience against ecological disturbances.",
           "exampleVi": "Bảo tồn sự đa dạng sinh học bảo đảm sức chống chịu trước những xáo trộn sinh thái.",
-          "emoji": "🎓"
+          "emoji": "🐾"
         },
         {
           "id": "g12_u8_05",
@@ -1738,7 +1762,7 @@
           "hint": "Động vật sắp biến mất",
           "exampleEn": "Strict treaties regulate international trade in endangered species products.",
           "exampleVi": "Các hiệp ước nghiêm ngặt quy định việc buôn bán quốc tế các sản phẩm từ động vật có nguy cơ tuyệt chủng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u8_06",
@@ -1749,7 +1773,7 @@
           "hint": "Bị giữ trong chuồng trại sở thú",
           "exampleEn": "Breeding pandas in captivity helps restore dwindled wild numbers.",
           "exampleVi": "Nhân giống gấu trúc trong điều kiện nuôi nhốt giúp phục hồi số lượng cá thể hoang dã bị suy giảm.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1918,6 +1942,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: Career Paths",
       "unitNameVi": "Con đường sự nghiệp",
+      "title": "Career Paths",
+      "titleEn": "Career Paths",
+      "titleVi": "Con đường sự nghiệp",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 104 – 115",
@@ -1932,7 +1959,7 @@
           "hint": "Người thành lập và vận hành doanh nghiệp",
           "exampleEn": "Young entrepreneurs launch innovative tech start-ups to solve real problems.",
           "exampleVi": "Các doanh nhân trẻ khởi nghiệp những công ty công nghệ đổi mới để giải quyết những vấn đề thực tiễn.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u9_02",
@@ -1954,7 +1981,7 @@
           "hint": "Hướng đi và đà tiến lên",
           "exampleEn": "Mentorship accelerates a professional's upward career trajectory.",
           "exampleVi": "Sự hướng dẫn của người đi trước giúp đẩy nhanh lộ trình thăng tiến sự nghiệp của một chuyên gia.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u9_04",
@@ -1965,7 +1992,7 @@
           "hint": "Kéo dài trong cả cuộc đời",
           "exampleEn": "Cultivating lifelong curiosity is the secret to sustained relevance.",
           "exampleVi": "Nuôi dưỡng trí tò mò suốt đời là bí quyết để luôn bắt kịp thời đại.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u9_05",
@@ -1976,7 +2003,7 @@
           "hint": "Được cất nhắc lên vị trí cao hơn",
           "exampleEn": "Exemplary performance earned him a well-deserved senior promotion.",
           "exampleVi": "Hiệu quả công việc xuất sắc đã đem lại cho anh ấy một sự thăng chức cấp cao hoàn toàn xứng đáng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u9_06",
@@ -1987,7 +2014,7 @@
           "hint": "Dẫn dắt truyền đạt kinh nghiệm",
           "exampleEn": "Experienced directors provide one-on-one mentoring for junior staff.",
           "exampleVi": "Những giám đốc giàu kinh nghiệm cung cấp sự cố vấn một kèm một cho nhân viên cấp dưới.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2156,6 +2183,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: Lifelong Learning",
       "unitNameVi": "Học tập suốt đời",
+      "title": "Lifelong Learning",
+      "titleEn": "Lifelong Learning",
+      "titleVi": "Học tập suốt đời",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 116 – 127",
@@ -2170,7 +2200,7 @@
           "hint": "Tinh thần học hỏi không ngừng nghỉ",
           "exampleEn": "Lifelong learning empowers professionals to adapt to technological shifts.",
           "exampleVi": "Học tập suốt đời trao quyền cho người đi làm thích ứng linh hoạt với những chuyển dịch công nghệ.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u10_02",
@@ -2181,7 +2211,7 @@
           "hint": "Chủ động hoàn toàn trong việc học",
           "exampleEn": "Self-directed learners set ambitious goals and track their own milestones.",
           "exampleVi": "Những người học tự định hướng tự đặt ra những mục tiêu lớn và theo dõi các dấu mốc của chính mình.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u10_03",
@@ -2192,7 +2222,7 @@
           "hint": "Liên quan đến hoạt động của não bộ",
           "exampleEn": "Solving logic puzzles keeps cognitive faculties agile in senior years.",
           "exampleVi": "Giải các câu đố tư duy giúp duy trì các năng lực nhận thức luôn nhạy bén khi về già.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u10_04",
@@ -2203,7 +2233,7 @@
           "hint": "Khả năng ứng biến nhanh nhạy",
           "exampleEn": "Mental agility is crucial for navigating dynamic economic landscapes.",
           "exampleVi": "Sự nhạy bén về trí tuệ là điều cốt yếu để điều hướng trong bối cảnh kinh tế đầy biến động.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u10_05",
@@ -2214,7 +2244,7 @@
           "hint": "Học thêm kỹ năng bậc cao hơn",
           "exampleEn": "Workers frequently upskill to operate sophisticated automated machinery.",
           "exampleVi": "Người lao động thường xuyên bồi dưỡng nâng cao tay nghề để vận hành các máy móc tự động hóa tối tân.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g12_u10_06",
@@ -2225,7 +2255,7 @@
           "hint": "Hệ tư tưởng và thái độ tiếp cận",
           "exampleEn": "A growth mindset views setbacks as springboards for improvement.",
           "exampleVi": "Một tư duy cầu tiến nhìn nhận những trở ngại như những bàn đạp để hoàn thiện bản thân.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {

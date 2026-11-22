@@ -8,6 +8,11 @@ high_grades.py
 Mỗi Unit có đầy đủ 7 trạm với IPA chuẩn quốc tế, dịch nghĩa tiếng Việt chính xác, câu hỏi trắc nghiệm kèm answerIndex.
 """
 
+try:
+    from .emoji_lookup import lookup_emoji
+except ImportError:
+    from emoji_lookup import lookup_emoji
+
 def generate_high_grades():
     grades = {}
 
@@ -276,7 +281,7 @@ def generate_high_grades():
                     "hint": hint,
                     "exampleEn": ex_en,
                     "exampleVi": ex_vi,
-                    "emoji": "🎓"
+                    "emoji": lookup_emoji(w, mean)
                 })
 
             main_word = vocab_tuples[0][0]
@@ -289,6 +294,9 @@ def generate_high_grades():
                 "unit": u_num,
                 "unitTitle": f"Unit {u_num}: {title}",
                 "unitNameVi": title_vi,
+                "title": title,
+                "titleEn": title,
+                "titleVi": title_vi,
                 "theme": "High School Academic & Career Readiness",
                 "semester": 1 if u_num <= 5 else 2,
                 "bookPages": f"Trang {(u_num-1)*12 + 8} – {u_num*12 + 7}",

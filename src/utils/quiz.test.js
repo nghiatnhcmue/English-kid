@@ -76,3 +76,34 @@ describe('dữ liệu 12 Unit sau khi chuẩn bị để học', () => {
     expect(shareA).toBeLessThan(0.5);
   });
 });
+
+import { makeOptions } from '../components/ListeningQuiz.jsx';
+import { resolveWordEmoji } from '../components/ui.jsx';
+
+describe('ListeningQuiz makeOptions & Visual Resolution', () => {
+  it('luôn tạo đủ 4 lựa chọn trong Nghe chọn hình kể cả khi tất cả từ có chung emoji', () => {
+    const dummyPool = [
+      { id: 'w1', word: 'gardening', emoji: '🌟', meaning: 'Làm vườn' },
+      { id: 'w2', word: 'collecting', emoji: '🌟', meaning: 'Sưu tầm' },
+      { id: 'w3', word: 'arranging flowers', emoji: '🌟', meaning: 'Cắm hoa' },
+      { id: 'w4', word: 'making models', emoji: '🌟', meaning: 'Làm mô hình' },
+      { id: 'w5', word: 'horse riding', emoji: '🌟', meaning: 'Cưỡi ngựa' },
+      { id: 'w6', word: 'cycling', emoji: '🌟', meaning: 'Đi xe đạp' },
+    ];
+    const targetWord = dummyPool[0];
+    const options = makeOptions(targetWord, dummyPool);
+
+    expect(options.length).toBe(4);
+    expect(options.some((o) => o.id === targetWord.id)).toBe(true);
+    // 4 lựa chọn phải là các từ phân biệt (id khác nhau)
+    const uniqueIds = new Set(options.map((o) => o.id));
+    expect(uniqueIds.size).toBe(4);
+  });
+
+  it('tự động gán emoji trực quan thông minh thay vì icon sao mặc định', () => {
+    expect(resolveWordEmoji({ word: 'gardening', meaning: 'Làm vườn', emoji: '🌟' })).toBe('🧑‍🌾');
+    expect(resolveWordEmoji({ word: 'making models', meaning: 'Làm mô hình', emoji: '🌟' })).toBe('✈️');
+    expect(resolveWordEmoji({ word: 'cycling', meaning: 'Đi xe đạp', emoji: '🌟' })).toBe('🚴');
+    expect(resolveWordEmoji({ word: 'sunburn', meaning: 'Cháy nắng', emoji: '🌟' })).toBe('☀️');
+  });
+});

@@ -55,6 +55,8 @@ export default function UnitPage() {
     );
   }
 
+  const has3D = (unit?.vocabularies || []).some((w) => Boolean(w.model3d));
+
   return (
     <div className="flex flex-col gap-6">
       <PageHeader
@@ -166,19 +168,19 @@ export default function UnitPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-          {/* Trạm 1: Từ vựng & Mô hình 3D */}
+          {/* Trạm 1: Từ vựng & Thẻ Flashcard / 3D */}
           <Button3D
             tone="banana"
             to={`/unit/${unit.unitId}/flashcard`}
             className="min-h-24 flex-col items-start justify-center gap-1! p-4 text-left"
           >
             <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black uppercase text-ink">
-              Trạm 1 · Từ vựng & 3D
+              {has3D ? 'Trạm 1 · Từ vựng & 3D' : 'Trạm 1 · Thẻ Học Từ Vựng'}
             </span>
             <div className="flex items-center gap-3 mt-1">
               <span className="text-3xl shrink-0" aria-hidden>🔤</span>
               <h3 className="text-lg font-black leading-tight text-ink">
-                {unit.vocabularies.length} Từ vựng & Thẻ 3D
+                {unit.vocabularies.length} {has3D ? 'Từ vựng & Thẻ 3D' : 'Từ vựng & Flashcard'}
               </h3>
             </div>
           </Button3D>

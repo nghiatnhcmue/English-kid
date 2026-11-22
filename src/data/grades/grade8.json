@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: Leisure Time",
       "unitNameVi": "Thời gian rảnh rỗi",
+      "title": "Leisure Time",
+      "titleEn": "Leisure Time",
+      "titleVi": "Thời gian rảnh rỗi",
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 8 – 17",
@@ -28,7 +31,7 @@
           "hint": "Môn nghệ thuật tạo hình từ giấy",
           "exampleEn": "Origami is the Japanese art of paper folding.",
           "exampleVi": "Origami là nghệ thuật gấp giấy truyền thống của Nhật Bản.",
-          "emoji": "✨"
+          "emoji": "📄"
         },
         {
           "id": "g8_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Tự tay làm đồ trang trí",
           "exampleEn": "Making paper flowers is a fun DIY project for girls.",
           "exampleVi": "Làm hoa giấy là một dự án tự làm thú vị cho các bạn nữ.",
-          "emoji": "✨"
+          "emoji": "🔨"
         },
         {
           "id": "g8_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Nơi nghỉ ngơi du lịch tiện nghi",
           "exampleEn": "Our family spent the summer at a seaside resort.",
           "exampleVi": "Gia đình mình đã trải qua mùa hè ở một khu nghỉ dưỡng ven biển.",
-          "emoji": "✨"
+          "emoji": "🏖️"
         },
         {
           "id": "g8_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Tin nhắn gửi qua điện thoại",
           "exampleEn": "Send me a message when you arrive home.",
           "exampleVi": "Hãy gửi cho tớ một tin nhắn khi cậu về tới nhà nhé.",
-          "emoji": "✨"
+          "emoji": "💬"
         },
         {
           "id": "g8_u1_05",
@@ -72,7 +75,7 @@
           "hint": "Gặp gỡ bạn bè thư giãn",
           "exampleEn": "Teenagers love to hang out at cafes on weekends.",
           "exampleVi": "Các bạn tuổi teen rất thích tụ tập đi chơi tại các quán cà phê vào cuối tuần.",
-          "emoji": "✨"
+          "emoji": "🧑‍🤝‍🧑"
         },
         {
           "id": "g8_u1_06",
@@ -83,7 +86,7 @@
           "hint": "Hoạt động đan len bằng que đan",
           "exampleEn": "Knitting a warm wool scarf takes patience.",
           "exampleVi": "Đan một chiếc khăn len ấm áp đòi hỏi sự kiên nhẫn.",
-          "emoji": "✨"
+          "emoji": "🧶"
         }
       ],
       "grammar": {
@@ -268,6 +271,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: Life in the Countryside",
       "unitNameVi": "Cuộc sống ở miền quê",
+      "title": "Life in the Countryside",
+      "titleEn": "Life in the Countryside",
+      "titleVi": "Cuộc sống ở miền quê",
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 18 – 27",
@@ -282,7 +288,7 @@
           "hint": "Bát ngát, không gian rộng lớn",
           "exampleEn": "The vast green rice fields stretch to the horizon.",
           "exampleVi": "Những cánh đồng lúa xanh bao la trải dài đến tận chân trời.",
-          "emoji": "✨"
+          "emoji": "🌄"
         },
         {
           "id": "g8_u2_02",
@@ -293,7 +299,7 @@
           "hint": "Đón tiếp khách nhiệt tình chu đáo",
           "exampleEn": "Local villagers are warm and hospitable to visitors.",
           "exampleVi": "Người dân làng rất ấm áp và hiếu khách đối với du khách.",
-          "emoji": "✨"
+          "emoji": "🤝"
         },
         {
           "id": "g8_u2_03",
@@ -304,7 +310,7 @@
           "hint": "Mùa thu hoạch lúa hoa màu",
           "exampleEn": "Farmers work hard from early morning during harvest time.",
           "exampleVi": "Những người nông dân làm việc chăm chỉ từ sáng sớm trong mùa gặt.",
-          "emoji": "✨"
+          "emoji": "🌾"
         },
         {
           "id": "g8_u2_04",
@@ -315,7 +321,7 @@
           "hint": "Đường dẫn nước nhân tạo",
           "exampleEn": "Small boats navigate peacefully along the village canal.",
           "exampleVi": "Những chiếc thuyền nhỏ xuôi mái chèo thanh bình dọc theo con kênh làng.",
-          "emoji": "✨"
+          "emoji": "🛶"
         },
         {
           "id": "g8_u2_05",
@@ -326,7 +332,7 @@
           "hint": "Khu đất trồng cỏ cho bò cừu",
           "exampleEn": "Cattle graze freely on the green pasture.",
           "exampleVi": "Đàn gia súc gặm cỏ tự do trên đồng cỏ xanh mát.",
-          "emoji": "✨"
+          "emoji": "🐄"
         },
         {
           "id": "g8_u2_06",
@@ -337,7 +343,7 @@
           "hint": "Đưa đồ đạc lên phương tiện",
           "exampleEn": "Workers load bundles of golden rice onto the carts.",
           "exampleVi": "Những người thợ chất từng bó lúa vàng óng lên xe kéo.",
-          "emoji": "✨"
+          "emoji": "📦"
         }
       ],
       "grammar": {
@@ -522,6 +528,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: Teenagers",
       "unitNameVi": "Tuổi thanh thiếu niên",
+      "title": "Teenagers",
+      "titleEn": "Teenagers",
+      "titleVi": "Tuổi thanh thiếu niên",
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 28 – 37",
@@ -536,7 +545,7 @@
           "hint": "Cảm giác phải làm theo bạn bè",
           "exampleEn": "Teenagers sometimes face peer pressure at school.",
           "exampleVi": "Các bạn tuổi thiếu niên đôi khi phải đối mặt với áp lực từ bạn bè cùng lứa.",
-          "emoji": "✨"
+          "emoji": "👥"
         },
         {
           "id": "g8_u3_02",
@@ -547,7 +556,7 @@
           "hint": "Nền tảng như Facebook, Zalo",
           "exampleEn": "Using social media sensibly helps teens connect positively.",
           "exampleVi": "Sử dụng mạng xã hội hợp lý giúp giới trẻ kết nối tích cực.",
-          "emoji": "✨"
+          "emoji": "📱"
         },
         {
           "id": "g8_u3_03",
@@ -558,7 +567,7 @@
           "hint": "Xem lướt qua nhiều trang web",
           "exampleEn": "She likes to browse news websites before going to bed.",
           "exampleVi": "Cô ấy thích lướt xem các trang tin tức trước khi đi ngủ.",
-          "emoji": "✨"
+          "emoji": "🌐"
         },
         {
           "id": "g8_u3_04",
@@ -569,7 +578,7 @@
           "hint": "Hội nhóm có chung sở thích",
           "exampleEn": "Joining an English club boosts communication confidence.",
           "exampleVi": "Tham gia câu lạc bộ tiếng Anh giúp nâng cao sự tự tin khi giao tiếp.",
-          "emoji": "✨"
+          "emoji": "🏆"
         },
         {
           "id": "g8_u3_05",
@@ -580,7 +589,7 @@
           "hint": "Đưa tệp dữ liệu lên internet",
           "exampleEn": "He uploaded his musical performance to the school forum.",
           "exampleVi": "Cậu ấy đã đăng tải tiết mục biểu diễn âm nhạc của mình lên diễn đàn trường.",
-          "emoji": "✨"
+          "emoji": "⬆️"
         },
         {
           "id": "g8_u3_06",
@@ -591,7 +600,7 @@
           "hint": "Hành vi ức hiếp người khác",
           "exampleEn": "Schools have strict rules to prevent bullying.",
           "exampleVi": "Các trường học có nội quy nghiêm khắc để ngăn chặn hành vi bắt nạt.",
-          "emoji": "✨"
+          "emoji": "🚫"
         }
       ],
       "grammar": {
@@ -776,6 +785,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: Ethnic Groups of Viet Nam",
       "unitNameVi": "Các dân tộc Việt Nam",
+      "title": "Ethnic Groups of Viet Nam",
+      "titleEn": "Ethnic Groups of Viet Nam",
+      "titleVi": "Các dân tộc Việt Nam",
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 38 – 47",
@@ -790,7 +802,7 @@
           "hint": "Ngôi nhà chung lớn của đồng bào Tây Nguyên",
           "exampleEn": "The communal house is the cultural heart of the village.",
           "exampleVi": "Nhà rông là trái tim văn hóa của cả buôn làng.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u4_02",
@@ -801,7 +813,7 @@
           "hint": "Thửa ruộng xếp tầng trên sườn đồi",
           "exampleEn": "Terraced fields in Mu Cang Chai attract many tourists.",
           "exampleVi": "Những thửa ruộng bậc thang ở Mù Căng Chải thu hút rất nhiều du khách.",
-          "emoji": "✨"
+          "emoji": "🌾"
         },
         {
           "id": "g8_u4_03",
@@ -812,7 +824,7 @@
           "hint": "Nhà dựng trên các cây cột cao",
           "exampleEn": "Many ethnic minorities live in wooden stilt houses.",
           "exampleVi": "Nhiều đồng bào dân tộc thiểu số sinh sống trong những ngôi nhà sàn bằng gỗ.",
-          "emoji": "✨"
+          "emoji": "🛖"
         },
         {
           "id": "g8_u4_04",
@@ -823,7 +835,7 @@
           "hint": "Quần áo lễ hội mang đậm bản sắc",
           "exampleEn": "Ethnic women wear colorful handmade costumes with embroidery.",
           "exampleVi": "Phụ nữ dân tộc mặc những bộ trang phục truyền thống thêu tay sặc sỡ sắc màu.",
-          "emoji": "✨"
+          "emoji": "👘"
         },
         {
           "id": "g8_u4_05",
@@ -834,7 +846,7 @@
           "hint": "Vũ điệu truyền thống dân gian",
           "exampleEn": "The xoe dance of the Thai people is recognized as world heritage.",
           "exampleVi": "Điệu múa xòe của người Thái đã được công nhận là di sản thế giới.",
-          "emoji": "✨"
+          "emoji": "💃"
         },
         {
           "id": "g8_u4_06",
@@ -845,7 +857,7 @@
           "hint": "Nghề đan dệt sợi thành vải",
           "exampleEn": "Weaving brocade is a traditional craft passed down through generations.",
           "exampleVi": "Dệt thổ cẩm là một nghề thủ công truyền thống được lưu truyền qua nhiều thế hệ.",
-          "emoji": "✨"
+          "emoji": "🧵"
         }
       ],
       "grammar": {
@@ -1030,6 +1042,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: Our Customs and Traditions",
       "unitNameVi": "Phong tục và truyền thống",
+      "title": "Our Customs and Traditions",
+      "titleEn": "Our Customs and Traditions",
+      "titleVi": "Phong tục và truyền thống",
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 48 – 57",
@@ -1044,7 +1059,7 @@
           "hint": "Thói quen lâu đời của một cộng đồng",
           "exampleEn": "Giving lucky money at Tet is a widespread Vietnamese custom.",
           "exampleVi": "Mừng tuổi vào dịp Tết là một phong tục phổ biến của người Việt Nam.",
-          "emoji": "✨"
+          "emoji": "🏮"
         },
         {
           "id": "g8_u5_02",
@@ -1055,7 +1070,7 @@
           "hint": "Nét đẹp văn hóa truyền từ đời trước",
           "exampleEn": "Respecting teachers is an honorable tradition of our nation.",
           "exampleVi": "Tôn sư trọng đạo là một truyền thống cao đẹp của dân tộc ta.",
-          "emoji": "✨"
+          "emoji": "📜"
         },
         {
           "id": "g8_u5_03",
@@ -1066,7 +1081,7 @@
           "hint": "Phép lịch sự khi ăn uống",
           "exampleEn": "Good table manners show respect to older family members.",
           "exampleVi": "Quy tắc ứng xử tốt trên bàn ăn thể hiện sự kính trọng đối với người lớn tuổi.",
-          "emoji": "✨"
+          "emoji": "🪑"
         },
         {
           "id": "g8_u5_04",
@@ -1077,7 +1092,7 @@
           "hint": "Tập hợp những người cùng lứa tuổi",
           "exampleEn": "Three generations often live under the same roof in Viet Nam.",
           "exampleVi": "Ba thế hệ thường cùng chung sống dưới một mái nhà ở Việt Nam.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u5_05",
@@ -1088,7 +1103,7 @@
           "hint": "Tỏ lòng thành kính với tổ tiên thần linh",
           "exampleEn": "Families worship ancestors on special memorial days.",
           "exampleVi": "Các gia đình thờ cúng tổ tiên vào những ngày giỗ chạp đặc biệt.",
-          "emoji": "✨"
+          "emoji": "🕯️"
         },
         {
           "id": "g8_u5_06",
@@ -1099,7 +1114,7 @@
           "hint": "Tài sản văn hóa vô giá",
           "exampleEn": "Hoi An Ancient Town is a UNESCO World Cultural Heritage site.",
           "exampleVi": "Phố cổ Hội An là một di sản văn hóa thế giới được UNESCO công nhận.",
-          "emoji": "✨"
+          "emoji": "🏛️"
         }
       ],
       "grammar": {
@@ -1284,6 +1299,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: Lifestyles",
       "unitNameVi": "Phong cách sống",
+      "title": "Lifestyles",
+      "titleEn": "Lifestyles",
+      "titleVi": "Phong cách sống",
       "theme": "Secondary Education & Global Citizen",
       "semester": 1,
       "bookPages": "Trang 58 – 67",
@@ -1298,7 +1316,7 @@
           "hint": "Thực đơn dinh dưỡng hàng ngày",
           "exampleEn": "A balanced diet rich in greens boosts physical endurance.",
           "exampleVi": "Chế độ ăn cân bằng giàu rau xanh giúp tăng cường sức bền thể chất.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u6_02",
@@ -1309,7 +1327,7 @@
           "hint": "Lối sống di chuyển không định cư",
           "exampleEn": "Nomadic tribes travel with their herds across wide grasslands.",
           "exampleVi": "Các bộ tộc du mục di chuyển cùng đàn gia súc của họ qua những thảo nguyên bao la.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u6_03",
@@ -1320,7 +1338,7 @@
           "hint": "Học qua mạng internet",
           "exampleEn": "Online learning allows students to access courses from home.",
           "exampleVi": "Học trực tuyến cho phép học sinh tiếp cận các khóa học ngay tại nhà.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u6_04",
@@ -1331,7 +1349,7 @@
           "hint": "Liên quan đến cộng đồng bộ tộc",
           "exampleEn": "Tribal leaders gather to resolve village disputes peacefully.",
           "exampleVi": "Các thủ lĩnh bộ lạc tụ họp để giải quyết các tranh chấp trong làng một cách hòa bình.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u6_05",
@@ -1342,7 +1360,7 @@
           "hint": "Thợ thủ công tay nghề bậc thầy",
           "exampleEn": "Skilled artisans craft delicate pottery by hand.",
           "exampleVi": "Các nghệ nhân tài hoa chế tác đồ gốm tinh xảo bằng đôi bàn tay.",
-          "emoji": "✨"
+          "emoji": "🧑‍🎨"
         },
         {
           "id": "g8_u6_06",
@@ -1353,7 +1371,7 @@
           "hint": "Không gây hại cho thiên nhiên",
           "exampleEn": "Using canvas bags instead of plastic is an eco-friendly choice.",
           "exampleVi": "Sử dụng túi vải thay vì túi nilon là một lựa chọn thân thiện với môi trường.",
-          "emoji": "✨"
+          "emoji": "🌱"
         }
       ],
       "grammar": {
@@ -1538,6 +1556,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: Environmental Protection",
       "unitNameVi": "Bảo vệ môi trường",
+      "title": "Environmental Protection",
+      "titleEn": "Environmental Protection",
+      "titleVi": "Bảo vệ môi trường",
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 68 – 77",
@@ -1552,7 +1573,7 @@
           "hint": "Động vật quý hiếm sắp biến mất",
           "exampleEn": "The saola is one of the rarest endangered species in Viet Nam.",
           "exampleVi": "Sao la là một trong những loài có nguy cơ tuyệt chủng hiếm nhất ở Việt Nam.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u7_02",
@@ -1563,7 +1584,7 @@
           "hint": "Nơi sinh sống của muôn loài",
           "exampleEn": "Deforestation destroys the natural habitat of wild animals.",
           "exampleVi": "Nạn phá rừng phá hủy môi trường sống tự nhiên của động vật hoang dã.",
-          "emoji": "✨"
+          "emoji": "🏞️"
         },
         {
           "id": "g8_u7_03",
@@ -1574,7 +1595,7 @@
           "hint": "Tình trạng môi trường bị nhiễm bẩn",
           "exampleEn": "Air pollution in urban areas causes respiratory illnesses.",
           "exampleVi": "Ô nhiễm không khí ở các đô thị gây ra các bệnh về đường hô hấp.",
-          "emoji": "✨"
+          "emoji": "🏭"
         },
         {
           "id": "g8_u7_04",
@@ -1585,7 +1606,7 @@
           "hint": "Lượng khí thải nhà kính tạo ra",
           "exampleEn": "Riding a bicycle helps reduce your personal carbon footprint.",
           "exampleVi": "Đi xe đạp giúp giảm dấu chân carbon của cá nhân em.",
-          "emoji": "✨"
+          "emoji": "👣"
         },
         {
           "id": "g8_u7_05",
@@ -1596,7 +1617,7 @@
           "hint": "Hệ thống sinh vật và môi trường sống",
           "exampleEn": "Coral reefs support a vibrant marine ecosystem.",
           "exampleVi": "Những rạn san hô nuôi dưỡng một hệ sinh thái biển vô cùng rực rỡ.",
-          "emoji": "✨"
+          "emoji": "🌿"
         },
         {
           "id": "g8_u7_06",
@@ -1607,7 +1628,7 @@
           "hint": "Các sinh vật sống trong tự nhiên",
           "exampleEn": "National parks protect precious wildlife from hunters.",
           "exampleVi": "Các vườn quốc gia bảo vệ động vật hoang dã quý giá khỏi thợ săn.",
-          "emoji": "✨"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1792,6 +1813,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: Shopping",
       "unitNameVi": "Mua sắm",
+      "title": "Shopping",
+      "titleEn": "Shopping",
+      "titleVi": "Mua sắm",
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 78 – 87",
@@ -1806,7 +1830,7 @@
           "hint": "Thương lượng giá cả khi mua",
           "exampleEn": "Shoppers often bargain for lower prices at local open-air markets.",
           "exampleVi": "Người mua sắm thường mặc cả để có giá thấp hơn tại các chợ ngoài trời.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u8_02",
@@ -1817,7 +1841,7 @@
           "hint": "Số tiền được giảm khi mua",
           "exampleEn": "The store offers a twenty percent discount on school stationery.",
           "exampleVi": "Cửa hàng đang giảm giá hai mươi phần trăm cho đồ dùng học tập.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u8_03",
@@ -1828,7 +1852,7 @@
           "hint": "Thẻ ghi giá tiền của món hàng",
           "exampleEn": "Check the price tag before taking items to the cashier counter.",
           "exampleVi": "Hãy kiểm tra nhãn giá trước khi mang đồ đến quầy thu ngân nhé.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u8_04",
@@ -1839,7 +1863,7 @@
           "hint": "Cửa hàng bách hóa tự chọn quy mô lớn",
           "exampleEn": "We buy groceries at the clean modern supermarket every Saturday.",
           "exampleVi": "Chúng mình mua đồ tạp hóa ở siêu thị hiện đại sạch sẽ vào mỗi thứ Bảy.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u8_05",
@@ -1850,7 +1874,7 @@
           "hint": "Phiếu chứng nhận đã thanh toán tiền",
           "exampleEn": "Keep your receipt in case you want to exchange the shirt.",
           "exampleVi": "Hãy giữ lại hóa đơn mua hàng phòng khi bạn muốn đổi chiếc áo sơ mi.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u8_06",
@@ -1861,7 +1885,7 @@
           "hint": "Gian hàng buôn bán trên mạng",
           "exampleEn": "Online stores offer convenient home delivery services.",
           "exampleVi": "Các cửa hàng trực tuyến cung cấp dịch vụ giao hàng tận nhà rất tiện lợi.",
-          "emoji": "✨"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2046,6 +2070,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: Natural Disasters",
       "unitNameVi": "Thiên tai",
+      "title": "Natural Disasters",
+      "titleEn": "Natural Disasters",
+      "titleVi": "Thiên tai",
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 88 – 97",
@@ -2060,7 +2087,7 @@
           "hint": "Sự rung chuyển dữ dội của vỏ trái đất",
           "exampleEn": "The strong earthquake shook buildings in the capital.",
           "exampleVi": "Trận động đất mạnh đã làm rung chuyển các tòa nhà ở thủ đô.",
-          "emoji": "✨"
+          "emoji": "🏚️"
         },
         {
           "id": "g8_u9_02",
@@ -2071,7 +2098,7 @@
           "hint": "Đợt sóng biển khổng lồ tràn vào bờ",
           "exampleEn": "A tsunami alert was issued after the offshore tremor.",
           "exampleVi": "Cảnh báo sóng thần đã được phát đi sau cơn chấn động ngoài khơi.",
-          "emoji": "✨"
+          "emoji": "🌊"
         },
         {
           "id": "g8_u9_03",
@@ -2082,7 +2109,7 @@
           "hint": "Cơn bão lốc xoáy trên biển nhiệt đới",
           "exampleEn": "The powerful typhoon brought heavy rain and severe flooding.",
           "exampleVi": "Cơn bão nhiệt đới dữ dội mang theo mưa lớn và ngập lụt nghiêm trọng.",
-          "emoji": "✨"
+          "emoji": "🌀"
         },
         {
           "id": "g8_u9_04",
@@ -2093,7 +2120,7 @@
           "hint": "Hiện tượng núi lửa phun dung nham",
           "exampleEn": "Ash covered the valley following the sudden volcanic eruption.",
           "exampleVi": "Tro bụi bao phủ cả thung lũng sau đợt phun trào núi lửa bất ngờ.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u9_05",
@@ -2104,7 +2131,7 @@
           "hint": "Nước dâng cao tràn ngập nhà cửa",
           "exampleEn": "Rescuers helped residents evacuate the flooded areas safely.",
           "exampleVi": "Lực lượng cứu hộ đã giúp người dân sơ tán khỏi vùng ngập lụt an toàn.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u9_06",
@@ -2115,7 +2142,7 @@
           "hint": "Nơi an toàn tránh bão lũ",
           "exampleEn": "Families took temporary shelter in the reinforced gymnasium.",
           "exampleVi": "Các gia đình đã vào trú ẩn tạm thời trong nhà thi đấu kiên cố.",
-          "emoji": "✨"
+          "emoji": "🏠"
         }
       ],
       "grammar": {
@@ -2300,6 +2327,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: Communication in the Future",
       "unitNameVi": "Giao tiếp trong tương lai",
+      "title": "Communication in the Future",
+      "titleEn": "Communication in the Future",
+      "titleVi": "Giao tiếp trong tương lai",
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 98 – 107",
@@ -2314,7 +2344,7 @@
           "hint": "Họp trực tuyến qua màn hình có hình ảnh",
           "exampleEn": "The global team held an interactive video conference this morning.",
           "exampleVi": "Đội ngũ toàn cầu đã tổ chức một cuộc hội nghị truyền hình trực tuyến sáng nay.",
-          "emoji": "✨"
+          "emoji": "📹"
         },
         {
           "id": "g8_u10_02",
@@ -2325,7 +2355,7 @@
           "hint": "Công nghệ chiếu hình 3D lơ lửng",
           "exampleEn": "Holographic calls will display 3D projections of your friends.",
           "exampleVi": "Các cuộc gọi hình ảnh ba chiều sẽ hiển thị hình ảnh 3D chân thực của bạn bè bạn.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u10_03",
@@ -2336,7 +2366,7 @@
           "hint": "Khả năng truyền ý nghĩ qua tâm trí",
           "exampleEn": "Telepathy would allow direct mind-to-mind messaging without words.",
           "exampleVi": "Thần giao cách cảm sẽ cho phép truyền suy nghĩ trực tiếp mà không cần dùng lời nói.",
-          "emoji": "✨"
+          "emoji": "🧠"
         },
         {
           "id": "g8_u10_04",
@@ -2347,7 +2377,7 @@
           "hint": "Camera gắn trên máy vi tính",
           "exampleEn": "Turn on your webcam so everyone in class can see you.",
           "exampleVi": "Hãy bật webcam lên để mọi người trong lớp có thể nhìn thấy em nhé.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u10_05",
@@ -2358,7 +2388,7 @@
           "hint": "Hình vẽ mặt cười, icon cảm xúc",
           "exampleEn": "Young people use emojis to express feelings humorously in text chats.",
           "exampleVi": "Các bạn trẻ dùng biểu tượng cảm xúc để thể hiện tâm trạng vui nhộn trong tin nhắn.",
-          "emoji": "✨"
+          "emoji": "😃"
         },
         {
           "id": "g8_u10_06",
@@ -2369,7 +2399,7 @@
           "hint": "Cuộc gọi chỉ truyền âm thanh",
           "exampleEn": "Grandpa still prefers a simple voice call over video messaging.",
           "exampleVi": "Ông nội vẫn thích một cuộc gọi thoại đơn giản hơn là nhắn tin có hình.",
-          "emoji": "✨"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2554,6 +2584,9 @@
       "unit": 11,
       "unitTitle": "Unit 11: Science and Technology",
       "unitNameVi": "Khoa học và công nghệ",
+      "title": "Science and Technology",
+      "titleEn": "Science and Technology",
+      "titleVi": "Khoa học và công nghệ",
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 108 – 117",
@@ -2568,7 +2601,7 @@
           "hint": "Sáng chế ra thứ chưa từng có",
           "exampleEn": "The invention of the internet revolutionized human communication.",
           "exampleVi": "Phát minh ra mạng internet đã cách mạng hóa nền giao tiếp của nhân loại.",
-          "emoji": "✨"
+          "emoji": "💡"
         },
         {
           "id": "g8_u11_02",
@@ -2579,7 +2612,7 @@
           "hint": "Điện thoại đa năng có kết nối internet",
           "exampleEn": "A modern smartphone works like a mini computer in your pocket.",
           "exampleVi": "Một chiếc điện thoại thông minh hiện đại hoạt động như chiếc máy tính mini trong túi bạn.",
-          "emoji": "✨"
+          "emoji": "📱"
         },
         {
           "id": "g8_u11_03",
@@ -2590,7 +2623,7 @@
           "hint": "Cỗ máy tự động làm việc thay người",
           "exampleEn": "Surgical robots assist doctors in performing delicate operations.",
           "exampleVi": "Người máy phẫu thuật hỗ trợ các bác sĩ thực hiện những ca mổ tinh vi.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u11_04",
@@ -2601,7 +2634,7 @@
           "hint": "Tìm ra điều mới mẻ trong tự nhiên",
           "exampleEn": "The discovery of penicillin saved millions of lives.",
           "exampleVi": "Phát hiện ra kháng sinh penicillin đã cứu sống hàng triệu sinh mạng.",
-          "emoji": "✨"
+          "emoji": "🧭"
         },
         {
           "id": "g8_u11_05",
@@ -2612,7 +2645,7 @@
           "hint": "Do con người tạo ra, không phải tự nhiên",
           "exampleEn": "Artificial intelligence helps analyze medical images accurately.",
           "exampleVi": "Trí tuệ nhân tạo giúp phân tích các hình ảnh y khoa một cách chuẩn xác.",
-          "emoji": "✨"
+          "emoji": "🤖"
         },
         {
           "id": "g8_u11_06",
@@ -2623,7 +2656,7 @@
           "hint": "Nơi tiến hành thí nghiệm khoa học",
           "exampleEn": "Students wear protective lab coats inside the chemistry laboratory.",
           "exampleVi": "Học sinh mặc áo khoác bảo hộ khi ở trong phòng thí nghiệm hóa học.",
-          "emoji": "✨"
+          "emoji": "🧪"
         }
       ],
       "grammar": {
@@ -2808,6 +2841,9 @@
       "unit": 12,
       "unitTitle": "Unit 12: Life on Other Planets",
       "unitNameVi": "Sự sống trên các hành tinh khác",
+      "title": "Life on Other Planets",
+      "titleEn": "Life on Other Planets",
+      "titleVi": "Sự sống trên các hành tinh khác",
       "theme": "Secondary Education & Global Citizen",
       "semester": 2,
       "bookPages": "Trang 118 – 127",
@@ -2822,7 +2858,7 @@
           "hint": "Sinh vật đến từ ngoài trái đất",
           "exampleEn": "Sci-fi books depict aliens with advanced interstellar technology.",
           "exampleVi": "Những cuốn sách viễn tưởng miêu tả người ngoài hành tinh với công nghệ du hành vũ trụ tiên tiến.",
-          "emoji": "✨"
+          "emoji": "👽"
         },
         {
           "id": "g8_u12_02",
@@ -2833,7 +2869,7 @@
           "hint": "Vật thể bay lạ trên bầu trời",
           "exampleEn": "Several pilots reported witnessing a mysterious glowing UFO.",
           "exampleVi": "Nhiều phi công đã báo cáo việc chứng kiến một vật thể bay phát sáng bí ẩn.",
-          "emoji": "✨"
+          "emoji": "📘"
         },
         {
           "id": "g8_u12_03",
@@ -2844,7 +2880,7 @@
           "hint": "Tập hợp khổng lồ các ngôi sao trong vũ trụ",
           "exampleEn": "The Milky Way is our home galaxy containing billions of stars.",
           "exampleVi": "Dải Ngân Hà là thiên hà quê hương của chúng ta chứa hàng tỷ ngôi sao.",
-          "emoji": "✨"
+          "emoji": "🌌"
         },
         {
           "id": "g8_u12_04",
@@ -2855,7 +2891,7 @@
           "hint": "Mặt Trời và các thiên thể quay quanh",
           "exampleEn": "Eight planets revolve around the central star in our solar system.",
           "exampleVi": "Tám hành tinh quay quanh ngôi sao trung tâm trong hệ Mặt Trời của chúng ta.",
-          "emoji": "✨"
+          "emoji": "🪐"
         },
         {
           "id": "g8_u12_05",
@@ -2866,7 +2902,7 @@
           "hint": "Thiết bị ngắm các vì sao xa xôi",
           "exampleEn": "Astronomers observe distant exoplanets through the space telescope.",
           "exampleVi": "Các nhà thiên văn học quan sát những ngoại hành tinh xa xôi qua kính viễn vọng không gian.",
-          "emoji": "✨"
+          "emoji": "🔭"
         },
         {
           "id": "g8_u12_06",
@@ -2877,7 +2913,7 @@
           "hint": "Người bay vào thám hiểm vũ trụ",
           "exampleEn": "Astronauts conduct biological experiments on the space station.",
           "exampleVi": "Các phi hành gia tiến hành các thí nghiệm sinh học trên trạm vũ trụ quốc tế.",
-          "emoji": "✨"
+          "emoji": "👨‍🚀"
         }
       ],
       "grammar": {

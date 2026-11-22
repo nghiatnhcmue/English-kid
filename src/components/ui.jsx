@@ -166,6 +166,121 @@ export function SlowSpeakerButton({ word, text, audio, size = 'sm', className = 
   );
 }
 
+const WORD_EMOJI_KEYWORDS = [
+  // Hobbies & Activities
+  [/garden/i, '🧑‍🌾'],
+  [/collect/i, '📮'],
+  [/flower/i, '💐'],
+  [/model/i, '✈️'],
+  [/horse|riding/i, '🏇'],
+  [/cycl|bike/i, '🚴'],
+  [/paint|draw/i, '🎨'],
+  [/music|sing/i, '🎵'],
+  [/dance/i, '💃'],
+  [/read|book/i, '📚'],
+  [/swim/i, '🏊'],
+  [/cook/i, '🍳'],
+  [/camp/i, '⛺'],
+  [/skat/i, '⛸️'],
+  // Health & Body
+  [/light/i, '💡'],
+  [/balm|lip/i, '💄'],
+  [/sun|burn/i, '☀️'],
+  [/acne|skin/i, '🧖'],
+  [/vegetar|salad/i, '🥗'],
+  [/fever|sick/i, '🤒'],
+  [/cough/i, '😷'],
+  [/fit|sport/i, '🏃'],
+  // Community & Society
+  [/volunteer/i, '🙋'],
+  [/donate/i, '🎁'],
+  [/community/i, '🏘️'],
+  [/nursing|elder/i, '👵'],
+  [/shelter|home/i, '🏠'],
+  [/tutor|teach/i, '🧑‍🏫'],
+  // Arts & Culture
+  [/composer/i, '🎼'],
+  [/exhibit|gallery/i, '🖼️'],
+  [/musician/i, '🎻'],
+  [/theatre|puppet/i, '🎭'],
+  [/anthem|song/i, '🎺'],
+  // Food & Drink
+  [/egg|omelette/i, '🍳'],
+  [/turmeric|root|spice/i, '🫚'],
+  [/noodle|broth|soup|pho/i, '🍜'],
+  [/ingredient|carrot/i, '🥕'],
+  [/meat|beef/i, '🥩'],
+  [/water|drink/i, '💧'],
+  [/rice/i, '🍚'],
+  [/bread/i, '🍞'],
+  // Heritage & School
+  [/academy|pagoda|temple/i, '🏯'],
+  [/courtyard|yard/i, '🪴'],
+  [/monument|statue/i, '🗽'],
+  [/scholar/i, '📜'],
+  [/school/i, '🏫'],
+  // Traffic & Vehicles
+  [/traffic|jam|car/i, '🚗'],
+  [/pedestrian|walk/i, '🚶'],
+  [/zebra|crossing/i, '🦓'],
+  [/helmet/i, '⛑️'],
+  [/seatbelt/i, '💺'],
+  [/roof/i, '🚘'],
+  [/bus/i, '🚌'],
+  [/train/i, '🚆'],
+  [/plane|flight/i, '✈️'],
+  // Films & Entertainment
+  [/animation|film|movie|cinema/i, '🎬'],
+  [/documentary/i, '📽️'],
+  [/laugh|hilarious/i, '😂'],
+  [/thrill|horror/i, '😱'],
+  [/critic|review/i, '✍️'],
+  // Festivals
+  [/carnival/i, '🎭'],
+  [/pumpkin/i, '🎃'],
+  [/feast|party/i, '🍖'],
+  [/lantern/i, '🏮'],
+  [/parade/i, '🥁'],
+  [/float/i, '🚛'],
+  [/festival/i, '🎉'],
+  // Energy & Environment
+  [/solar|sun/i, '☀️'],
+  [/wind/i, '💨'],
+  [/gas/i, '⛽'],
+  [/renew|recycle/i, '♻️'],
+  [/turbine/i, '🌪️'],
+  [/hydro|water/i, '💧'],
+  [/forest|tree/i, '🌲'],
+  // Future & Tech
+  [/hyperloop|train/i, '🚅'],
+  [/flying/i, '🛸'],
+  [/power|battery/i, '🔋'],
+  [/driverless|robot/i, '🤖'],
+  [/autopilot|nav/i, '🧭'],
+  [/teleport|electric/i, '⚡'],
+  [/computer|laptop/i, '💻'],
+  // Countries & Nature
+  [/speaker|talk/i, '🗣️'],
+  [/kangaroo/i, '🦘'],
+  [/leaf|maple/i, '🍁'],
+  [/landscape|park/i, '🏞️'],
+  [/landmark|tower/i, '🗼'],
+  [/official|flag/i, '📜'],
+];
+
+export function resolveWordEmoji(word) {
+  if (!word) return '📖';
+  const rawEmoji = word.emoji;
+  const isGeneric = !rawEmoji || ['🌟', '✨', '🎓', '📘', '🎈'].includes(rawEmoji);
+  if (!isGeneric) return rawEmoji;
+
+  const textToMatch = `${word.word || ''} ${word.meaning || ''}`;
+  for (const [regex, emoji] of WORD_EMOJI_KEYWORDS) {
+    if (regex.test(textToMatch)) return emoji;
+  }
+  return rawEmoji || '📖';
+}
+
 /** Hình minh họa: ảnh webp nếu có, nếu không thì emoji to, nổi bật. */
 export function WordImage({ word, size = 'lg', className = '' }) {
   const [broken, setBroken] = useState(false);
@@ -186,7 +301,8 @@ export function WordImage({ word, size = 'lg', className = '' }) {
       />
     );
   }
-  if (!word?.emoji) {
+  const emoji = resolveWordEmoji(word);
+  if (!emoji) {
     return null;
   }
   return (
@@ -195,7 +311,7 @@ export function WordImage({ word, size = 'lg', className = '' }) {
       aria-label={word?.word || 'hình'}
       className={`inline-flex items-center justify-center leading-none select-none drop-shadow-sm ${px} ${className}`}
     >
-      {word.emoji}
+      {emoji}
     </span>
   );
 }

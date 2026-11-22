@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: Family Life",
       "unitNameVi": "Đời sống gia đình",
+      "title": "Family Life",
+      "titleEn": "Family Life",
+      "titleVi": "Đời sống gia đình",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 8 – 19",
@@ -28,7 +31,7 @@
           "hint": "Công việc thường nhật trong nhà",
           "exampleEn": "Sharing household chores equally makes families happier.",
           "exampleVi": "Chia sẻ việc nhà bình đẳng giúp gia đình hạnh phúc hơn.",
-          "emoji": "🎓"
+          "emoji": "🧹"
         },
         {
           "id": "g10_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Người kiếm thu nhập chính nuôi sống gia đình",
           "exampleEn": "In many modern families, both parents act as breadwinners.",
           "exampleVi": "Trong nhiều gia đình hiện đại, cả cha và mẹ đều là trụ cột kinh tế.",
-          "emoji": "🎓"
+          "emoji": "💼"
         },
         {
           "id": "g10_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Người quán xuyến việc nhà và chăm sóc con cái",
           "exampleEn": "Being a homemaker requires immense dedication and organization.",
           "exampleVi": "Làm một người nội trợ đòi hỏi sự tận tâm và tài sắp xếp chu đáo.",
-          "emoji": "🎓"
+          "emoji": "🏠"
         },
         {
           "id": "g10_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Hàng hóa thực phẩm mua dùng hàng ngày",
           "exampleEn": "Mom bought fresh groceries at the supermarket this morning.",
           "exampleVi": "Mẹ đã mua thực phẩm tươi sống ở siêu thị sáng nay.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u1_05",
@@ -72,7 +75,7 @@
           "hint": "Việc đòi hỏi sức lực lớn",
           "exampleEn": "My elder brother usually does the heavy lifting around the house.",
           "exampleVi": "Anh trai mình thường làm những việc khuân vác nặng nhọc trong nhà.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u1_06",
@@ -83,7 +86,7 @@
           "hint": "Áp lực tiền bạc chi tiêu",
           "exampleEn": "Both parents working helps ease the family's financial burden.",
           "exampleVi": "Cả hai bố mẹ cùng đi làm giúp giảm bớt gánh nặng tài chính cho gia đình.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -252,6 +255,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: Humans and the Environment",
       "unitNameVi": "Con người và môi trường",
+      "title": "Humans and the Environment",
+      "titleEn": "Humans and the Environment",
+      "titleVi": "Con người và môi trường",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 20 – 31",
@@ -266,7 +272,7 @@
           "hint": "Lượng phát thải khí nhà kính tạo ra",
           "exampleEn": "Walking to school reduces your individual carbon footprint.",
           "exampleVi": "Đi bộ tới trường giúp giảm dấu chân carbon của cá nhân em.",
-          "emoji": "🎓"
+          "emoji": "👣"
         },
         {
           "id": "g10_u2_02",
@@ -277,7 +283,7 @@
           "hint": "Không gây ô nhiễm thiên nhiên",
           "exampleEn": "Our school encourages using eco-friendly bamboo straws.",
           "exampleVi": "Trường mình khuyến khích sử dụng ống hút tre thân thiện với môi trường.",
-          "emoji": "🎓"
+          "emoji": "🌱"
         },
         {
           "id": "g10_u2_03",
@@ -288,7 +294,7 @@
           "hint": "Nơi tập kết chôn rác",
           "exampleEn": "Plastic bags take hundreds of years to decompose in a landfill.",
           "exampleVi": "Túi nilon mất hàng trăm năm để phân hủy trong bãi chôn lấp rác.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u2_04",
@@ -299,7 +305,7 @@
           "hint": "Rác thải bị xả không đúng nơi quy định",
           "exampleEn": "Do not drop litter on public streets and pavements.",
           "exampleVi": "Đừng vứt rác bừa bãi trên đường phố công cộng và vỉa hè.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u2_05",
@@ -310,7 +316,7 @@
           "hint": "Đồ dùng điện trong nhà như tivi, tủ lạnh",
           "exampleEn": "Turn off household appliances when they are not in use.",
           "exampleVi": "Hãy tắt các thiết bị điện gia dụng khi không sử dụng nhé.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u2_06",
@@ -321,7 +327,7 @@
           "hint": "Giúp sử dụng ít điện năng",
           "exampleEn": "Energy-saving LED bulbs lower electrical consumption.",
           "exampleVi": "Bóng đèn LED tiết kiệm năng lượng giúp hạ thấp lượng điện tiêu thụ.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -490,6 +496,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: Music",
       "unitNameVi": "Âm nhạc",
+      "title": "Music",
+      "titleEn": "Music",
+      "titleVi": "Âm nhạc",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 32 – 43",
@@ -504,7 +513,7 @@
           "hint": "Dụng cụ dùng để tấu nhạc",
           "exampleEn": "The piano is a classical musical instrument loved worldwide.",
           "exampleVi": "Đàn piano là một loại nhạc cụ cổ điển được yêu thích trên toàn thế giới.",
-          "emoji": "🎓"
+          "emoji": "🎸"
         },
         {
           "id": "g10_u3_02",
@@ -515,7 +524,7 @@
           "hint": "Hiện tượng đặc biệt gây chú ý",
           "exampleEn": "The young boy band became an international pop phenomenon.",
           "exampleVi": "Nhóm nhạc nam trẻ tuổi đã trở thành một hiện tượng nhạc pop quốc tế.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u3_03",
@@ -526,7 +535,7 @@
           "hint": "Người được đông đảo công chúng ngưỡng mộ",
           "exampleEn": "Teenagers look up to talented music idols for inspiration.",
           "exampleVi": "Các bạn trẻ hướng về các thần tượng âm nhạc tài năng để tìm nguồn cảm hứng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u3_04",
@@ -537,7 +546,7 @@
           "hint": "Người xem và nghe biểu diễn",
           "exampleEn": "The stadium audience cheered passionately for the singer.",
           "exampleVi": "Khán giả trong sân vận động đã reo hò cuồng nhiệt cổ vũ cho ca sĩ.",
-          "emoji": "🎓"
+          "emoji": "👏"
         },
         {
           "id": "g10_u3_05",
@@ -548,7 +557,7 @@
           "hint": "Cuộc thi phát hiện tài năng",
           "exampleEn": "Viet Nam Idol is a widely watched television talent show.",
           "exampleVi": "Vietnam Idol là một chương trình tìm kiếm tài năng truyền hình được đón xem rộng rãi.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u3_06",
@@ -559,7 +568,7 @@
           "hint": "Tràn đầy nhiệt huyết và tình yêu",
           "exampleEn": "She is deeply passionate about playing the traditional violin.",
           "exampleVi": "Cô ấy vô cùng say mê chơi đàn vĩ cầm truyền thống.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -728,6 +737,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: For a Better Community",
       "unitNameVi": "Vì một cộng đồng tốt đẹp hơn",
+      "title": "For a Better Community",
+      "titleEn": "For a Better Community",
+      "titleVi": "Vì một cộng đồng tốt đẹp hơn",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 44 – 55",
@@ -742,7 +754,7 @@
           "hint": "Xã hội quần chúng cùng chung sống",
           "exampleEn": "Volunteering builds a stronger and more compassionate community.",
           "exampleVi": "Hoạt động tình nguyện xây dựng một cộng đồng vững mạnh và giàu lòng nhân ái hơn.",
-          "emoji": "🎓"
+          "emoji": "🏘️"
         },
         {
           "id": "g10_u4_02",
@@ -753,7 +765,7 @@
           "hint": "Tổ chức giúp đỡ người khó khăn",
           "exampleEn": "All proceeds from the marathon were donated to charity.",
           "exampleVi": "Toàn bộ số tiền thu được từ cuộc thi chạy marathon đã được trao tặng cho hội từ thiện.",
-          "emoji": "🎓"
+          "emoji": "❤️"
         },
         {
           "id": "g10_u4_03",
@@ -764,7 +776,7 @@
           "hint": "Tổ chức hoạt động độc lập không thuộc chính quyền",
           "exampleEn": "Non-governmental organizations fund clean water projects in villages.",
           "exampleVi": "Các tổ chức phi chính phủ tài trợ cho những dự án nước sạch tại các làng quê.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u4_04",
@@ -775,7 +787,7 @@
           "hint": "Người cống hiến vì xã hội",
           "exampleEn": "Youth volunteers teach disadvantaged children in the evening.",
           "exampleVi": "Các tình nguyện viên trẻ dạy học cho trẻ em có hoàn cảnh khó khăn vào buổi tối.",
-          "emoji": "🎓"
+          "emoji": "🙋"
         },
         {
           "id": "g10_u4_05",
@@ -786,7 +798,7 @@
           "hint": "Khu vực cách xa trung tâm",
           "exampleEn": "Doctors travelled to remote mountainous areas to provide free check-ups.",
           "exampleVi": "Các bác sĩ đã đến những vùng núi xa xôi hẻo lánh để khám bệnh miễn phí.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u4_06",
@@ -797,7 +809,7 @@
           "hint": "Tiền bạc đồ dùng ủng hộ",
           "exampleEn": "Generous donations helped rebuild the damaged school.",
           "exampleVi": "Những khoản quyên góp hào phóng đã giúp xây dựng lại ngôi trường bị hư hại.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -966,6 +978,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: Inventions",
       "unitNameVi": "Các phát minh",
+      "title": "Inventions",
+      "titleEn": "Inventions",
+      "titleVi": "Các phát minh",
       "theme": "High School Academic & Career Readiness",
       "semester": 1,
       "bookPages": "Trang 56 – 67",
@@ -980,7 +995,7 @@
           "hint": "Sáng chế công nghệ mới",
           "exampleEn": "The printing press was a groundbreaking historical invention.",
           "exampleVi": "Máy in là một phát minh mang tính bước ngoặt trong lịch sử.",
-          "emoji": "🎓"
+          "emoji": "💡"
         },
         {
           "id": "g10_u5_02",
@@ -991,7 +1006,7 @@
           "hint": "Do con người thiết kế chế tạo",
           "exampleEn": "Artificial intelligence enhances automated speech recognition.",
           "exampleVi": "Trí tuệ nhân tạo nâng cao năng lực nhận diện giọng nói tự động.",
-          "emoji": "🎓"
+          "emoji": "🤖"
         },
         {
           "id": "g10_u5_03",
@@ -1002,7 +1017,7 @@
           "hint": "Chứng nhận độc quyền phát minh",
           "exampleEn": "The university secured a global patent for its solar cell technology.",
           "exampleVi": "Trường đại học đã đăng ký thành công bằng sáng chế toàn cầu cho công nghệ pin mặt trời.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u5_04",
@@ -1013,7 +1028,7 @@
           "hint": "Tiện lợi bỏ túi mang đi",
           "exampleEn": "A portable charger keeps your devices powered during trips.",
           "exampleVi": "Một chiếc sạc dự phòng nhỏ gọn giúp sạc đầy các thiết bị trong suốt chuyến đi.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u5_05",
@@ -1024,7 +1039,7 @@
           "hint": "Nơi nghiên cứu thí nghiệm khoa học",
           "exampleEn": "Scientists test vaccine efficacy in high-tech laboratories.",
           "exampleVi": "Các nhà khoa học kiểm nghiệm hiệu quả của vắc-xin trong các phòng thí nghiệm công nghệ cao.",
-          "emoji": "🎓"
+          "emoji": "🧪"
         },
         {
           "id": "g10_u5_06",
@@ -1035,7 +1050,7 @@
           "hint": "Màn hình tương tác bằng ngón tay",
           "exampleEn": "Modern smartphones feature highly responsive touchscreens.",
           "exampleVi": "Điện thoại thông minh ngày nay sở hữu màn hình cảm ứng độ nhạy cao.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1204,6 +1219,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: Gender Equality",
       "unitNameVi": "Bình đẳng giới",
+      "title": "Gender Equality",
+      "titleEn": "Gender Equality",
+      "titleVi": "Bình đẳng giới",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 68 – 79",
@@ -1218,7 +1236,7 @@
           "hint": "Đặc tính nam nữ",
           "exampleEn": "Equal opportunities should be available regardless of gender.",
           "exampleVi": "Cơ hội bình đẳng cần được trao cho mọi người bất kể giới tính.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u6_02",
@@ -1229,7 +1247,7 @@
           "hint": "Quyền lợi và địa vị ngang nhau",
           "exampleEn": "Gender equality promotes sustainable social and economic progress.",
           "exampleVi": "Bình đẳng giới thúc đẩy sự tiến bộ xã hội và kinh tế bền vững.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u6_03",
@@ -1240,7 +1258,7 @@
           "hint": "Đối xử bất công",
           "exampleEn": "Laws strictly prohibit discrimination in employment recruitment.",
           "exampleVi": "Pháp luật nghiêm cấm mọi hành vi phân biệt đối xử trong tuyển dụng lao động.",
-          "emoji": "🎓"
+          "emoji": "🚫"
         },
         {
           "id": "g10_u6_04",
@@ -1251,7 +1269,7 @@
           "hint": "Trừ bỏ tận gốc",
           "exampleEn": "Society strives to eliminate harmful traditional stereotypes.",
           "exampleVi": "Xã hội nỗ lực loại bỏ những định kiến truyền thống có hại.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u6_05",
@@ -1262,7 +1280,7 @@
           "hint": "Thời cơ thuận lợi để phát triển",
           "exampleEn": "Education gives girls equal opportunity to pursue STEM careers.",
           "exampleVi": "Giáo dục mang lại cho các bạn nữ cơ hội bình đẳng để theo đuổi sự nghiệp khối ngành STEM.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u6_06",
@@ -1273,7 +1291,7 @@
           "hint": "Tổng số người làm việc",
           "exampleEn": "More women are joining the engineering and aviation workforce.",
           "exampleVi": "Ngày càng có nhiều phụ nữ gia nhập lực lượng lao động ngành kỹ thuật và hàng không.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1442,6 +1460,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: Viet Nam and International Organisations",
       "unitNameVi": "Việt Nam và các tổ chức quốc tế",
+      "title": "Viet Nam and International Organisations",
+      "titleEn": "Viet Nam and International Organisations",
+      "titleVi": "Việt Nam và các tổ chức quốc tế",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 80 – 91",
@@ -1456,7 +1477,7 @@
           "hint": "Tổ chức liên kết các quốc gia",
           "exampleEn": "The United Nations is the largest international organisation.",
           "exampleVi": "Liên Hợp Quốc là tổ chức quốc tế lớn nhất thế giới.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u7_02",
@@ -1467,7 +1488,7 @@
           "hint": "Hoạt động bảo vệ hòa bình quốc tế",
           "exampleEn": "Vietnamese military officers serve in UN peacekeeping missions in Africa.",
           "exampleVi": "Các sĩ quan quân đội Việt Nam tham gia các phái bộ gìn giữ hòa bình của Liên Hợp Quốc tại châu Phi.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u7_03",
@@ -1478,7 +1499,7 @@
           "hint": "Hòa nhập vào dòng chảy toàn cầu",
           "exampleEn": "Economic integration brings substantial trade benefits to Viet Nam.",
           "exampleVi": "Hội nhập kinh tế mang lại nhiều lợi ích thương mại to lớn cho Việt Nam.",
-          "emoji": "🎓"
+          "emoji": "🌐"
         },
         {
           "id": "g10_u7_04",
@@ -1489,7 +1510,7 @@
           "hint": "Đẩy mạnh và phát triển",
           "exampleEn": "UNESCO aids the promotion of Vietnamese cultural heritage globally.",
           "exampleVi": "UNESCO hỗ trợ quảng bá di sản văn hóa Việt Nam ra toàn cầu.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u7_05",
@@ -1500,7 +1521,7 @@
           "hint": "Cuộc họp cấp cao của các nguyên thủ",
           "exampleEn": "Leaders from twenty nations convened at the international climate summit.",
           "exampleVi": "Lãnh đạo hai mươi quốc gia đã tề tựu tại hội nghị thượng đỉnh quốc tế về khí hậu.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u7_06",
@@ -1511,7 +1532,7 @@
           "hint": "Văn bản thỏa thuận quốc tế",
           "exampleEn": "Member states signed a binding treaty on biodiversity preservation.",
           "exampleVi": "Các quốc gia thành viên đã ký kết một hiệp ước ràng buộc về bảo tồn đa dạng sinh học.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1680,6 +1701,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: New Ways to Learn",
       "unitNameVi": "Phương thức học tập mới",
+      "title": "New Ways to Learn",
+      "titleEn": "New Ways to Learn",
+      "titleVi": "Phương thức học tập mới",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 92 – 103",
@@ -1694,7 +1718,7 @@
           "hint": "Phương pháp kết hợp offline và online",
           "exampleEn": "Blended learning combines classroom lectures with digital modules.",
           "exampleVi": "Học tập kết hợp hòa quyện giữa bài giảng trên lớp với các học phần kỹ thuật số.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u8_02",
@@ -1705,7 +1729,7 @@
           "hint": "Thiết bị màn hình cảm ứng di động",
           "exampleEn": "Students use lightweight tablets to read e-textbooks in class.",
           "exampleVi": "Học sinh sử dụng máy tính bảng nhỏ gọn để đọc sách giáo khoa điện tử trên lớp.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u8_03",
@@ -1716,7 +1740,7 @@
           "hint": "Công nghệ trên nền tảng điện tử",
           "exampleEn": "Digital tools enhance collaborative group study immensely.",
           "exampleVi": "Các công cụ kỹ thuật số hỗ trợ việc học nhóm tương tác vô cùng đắc lực.",
-          "emoji": "🎓"
+          "emoji": "💻"
         },
         {
           "id": "g10_u8_04",
@@ -1727,7 +1751,7 @@
           "hint": "Tương tác trực diện ngoài đời",
           "exampleEn": "Face-to-face discussions build strong social empathy.",
           "exampleVi": "Các cuộc thảo luận trực tiếp giúp xây dựng sự thấu cảm xã hội sâu sắc.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u8_05",
@@ -1738,7 +1762,7 @@
           "hint": "Có sự phản hồi hai chiều",
           "exampleEn": "Interactive educational software keeps students engaged.",
           "exampleVi": "Phần mềm giáo dục có tính tương tác giúp học sinh luôn hứng thú học tập.",
-          "emoji": "🎓"
+          "emoji": "🖥️"
         },
         {
           "id": "g10_u8_06",
@@ -1749,7 +1773,7 @@
           "hint": "Phần mềm trên điện thoại phục vụ học tập",
           "exampleEn": "Educational apps enable personalised self-paced learning.",
           "exampleVi": "Các ứng dụng giáo dục tạo điều kiện cho việc tự học cá nhân hóa theo tốc độ riêng.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -1918,6 +1942,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: Protecting the Environment",
       "unitNameVi": "Bảo vệ môi trường sống",
+      "title": "Protecting the Environment",
+      "titleEn": "Protecting the Environment",
+      "titleVi": "Bảo vệ môi trường sống",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 104 – 115",
@@ -1932,7 +1959,7 @@
           "hint": "Môi trường sống của các sinh vật",
           "exampleEn": "Mangrove forests are vital marine ecosystems along our coastlines.",
           "exampleVi": "Rừng ngập mặn là những hệ sinh thái ven biển thiết yếu dọc bờ biển nước ta.",
-          "emoji": "🎓"
+          "emoji": "🌿"
         },
         {
           "id": "g10_u9_02",
@@ -1943,7 +1970,7 @@
           "hint": "Chặt phá rừng bừa bãi",
           "exampleEn": "Illegal deforestation causes destructive flash floods during rainy seasons.",
           "exampleVi": "Nạn chặt phá rừng trái phép gây ra những cơn lũ quét tàn phá trong mùa mưa.",
-          "emoji": "🎓"
+          "emoji": "🪓"
         },
         {
           "id": "g10_u9_03",
@@ -1954,7 +1981,7 @@
           "hint": "Nhiệt độ trái đất tăng cao",
           "exampleEn": "Global warming is causing polar ice caps to melt at alarming rates.",
           "exampleVi": "Hiện tượng nóng lên toàn cầu đang khiến các tảng băng ở địa cực tan chảy với tốc độ đáng báo động.",
-          "emoji": "🎓"
+          "emoji": "🌡️"
         },
         {
           "id": "g10_u9_04",
@@ -1965,7 +1992,7 @@
           "hint": "Than đá dầu mỏ tự nhiên",
           "exampleEn": "Burning fossil fuels releases massive amounts of carbon dioxide.",
           "exampleVi": "Đốt cháy nhiên liệu hóa thạch giải phóng lượng lớn khí carbon dioxide.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u9_05",
@@ -1976,7 +2003,7 @@
           "hint": "Bảo vệ và duy trì nguồn gen tự nhiên",
           "exampleEn": "Wildlife conservation centers nurse injured animals back to health.",
           "exampleVi": "Các trung tâm bảo tồn động vật hoang dã chăm sóc những cá thể bị thương phục hồi sức khỏe.",
-          "emoji": "🎓"
+          "emoji": "🛡️"
         },
         {
           "id": "g10_u9_06",
@@ -1987,7 +2014,7 @@
           "hint": "Liên quan đến biển cả",
           "exampleEn": "Marine life suffers greatly from plastic debris dumped into oceans.",
           "exampleVi": "Sinh vật biển chịu tổn thương nghiêm trọng bởi rác thải nhựa bị đổ ra đại dương.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {
@@ -2156,6 +2183,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: Ecotourism",
       "unitNameVi": "Du lịch sinh thái",
+      "title": "Ecotourism",
+      "titleEn": "Ecotourism",
+      "titleVi": "Du lịch sinh thái",
       "theme": "High School Academic & Career Readiness",
       "semester": 2,
       "bookPages": "Trang 116 – 127",
@@ -2170,7 +2200,7 @@
           "hint": "Chuyến đi hòa mình vào thiên nhiên hoang dã",
           "exampleEn": "Our class joined an educational ecotour to Cat Tien National Park.",
           "exampleVi": "Lớp chúng mình đã tham gia một chuyến du lịch sinh thái bổ ích tới Vườn quốc gia Cát Tiên.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u10_02",
@@ -2181,7 +2211,7 @@
           "hint": "Phát triển không làm tổn hại tương lai",
           "exampleEn": "Sustainable travel balances tourism growth with ecological preservation.",
           "exampleVi": "Du lịch bền vững cân bằng giữa phát triển du lịch với bảo tồn sinh thái.",
-          "emoji": "🎓"
+          "emoji": "♻️"
         },
         {
           "id": "g10_u10_03",
@@ -2192,7 +2222,7 @@
           "hint": "Địa danh đón du khách",
           "exampleEn": "Phong Nha - Ke Bang is a premier ecotourism destination in Viet Nam.",
           "exampleVi": "Phong Nha - Kẻ Bàng là điểm đến du lịch sinh thái hàng đầu tại Việt Nam.",
-          "emoji": "🎓"
+          "emoji": "🗺️"
         },
         {
           "id": "g10_u10_04",
@@ -2203,7 +2233,7 @@
           "hint": "Sự phong phú muôn loài",
           "exampleEn": "The tropical park boasts rich floral and faunal biodiversity.",
           "exampleVi": "Vườn quốc gia nhiệt đới sở hữu sự đa dạng sinh học động thực vật vô cùng phong phú.",
-          "emoji": "🎓"
+          "emoji": "🐾"
         },
         {
           "id": "g10_u10_05",
@@ -2214,7 +2244,7 @@
           "hint": "Bản sắc phong tục tập quán",
           "exampleEn": "Respecting local culture is a core tenet of responsible tourism.",
           "exampleVi": "Tôn trọng văn hóa địa phương là nguyên tắc cốt lõi của du lịch có trách nhiệm.",
-          "emoji": "🎓"
+          "emoji": "📘"
         },
         {
           "id": "g10_u10_06",
@@ -2225,7 +2255,7 @@
           "hint": "Sản phẩm thủ công truyền thống",
           "exampleEn": "Buying local crafts directly supports ethnic artisan communities.",
           "exampleVi": "Mua đồ thủ công địa phương trực tiếp hỗ trợ cho cộng đồng các nghệ nhân dân tộc.",
-          "emoji": "🎓"
+          "emoji": "📘"
         }
       ],
       "grammar": {

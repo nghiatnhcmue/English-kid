@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: Hello",
       "unitNameVi": "Xin chào",
+      "title": "Hello",
+      "titleEn": "Hello",
+      "titleVi": "Xin chào",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 6 – 11",
@@ -223,6 +226,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: Our names",
       "unitNameVi": "Tên của chúng mình",
+      "title": "Our names",
+      "titleEn": "Our names",
+      "titleVi": "Tên của chúng mình",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 12 – 17",
@@ -432,6 +438,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: Our friends",
       "unitNameVi": "Bạn bè của chúng mình",
+      "title": "Our friends",
+      "titleEn": "Our friends",
+      "titleVi": "Bạn bè của chúng mình",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 18 – 23",
@@ -446,7 +455,7 @@
           "hint": "Chủ đề: Bạn bè của chúng mình",
           "exampleEn": "This is friend.",
           "exampleVi": "Đây là friend.",
-          "emoji": "📘"
+          "emoji": "🧑‍🤝‍🧑"
         },
         {
           "id": "g3_u3_02",
@@ -652,6 +661,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: Our bodies",
       "unitNameVi": "Cơ thể của chúng mình",
+      "title": "Our bodies",
+      "titleEn": "Our bodies",
+      "titleVi": "Cơ thể của chúng mình",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 24 – 29",
@@ -883,6 +895,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: My hobbies",
       "unitNameVi": "Sở thích của mình",
+      "title": "My hobbies",
+      "titleEn": "My hobbies",
+      "titleVi": "Sở thích của mình",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 30 – 35",
@@ -908,7 +923,7 @@
           "hint": "Chủ đề: Sở thích của mình",
           "exampleEn": "This is dancing.",
           "exampleVi": "Đây là dancing.",
-          "emoji": "📘"
+          "emoji": "💃"
         },
         {
           "id": "g3_u5_03",
@@ -930,7 +945,7 @@
           "hint": "Chủ đề: Sở thích của mình",
           "exampleEn": "This is swimming.",
           "exampleVi": "Đây là swimming.",
-          "emoji": "📘"
+          "emoji": "🏊"
         }
       ],
       "grammar": {
@@ -1092,6 +1107,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: Our school",
       "unitNameVi": "Trường học của chúng mình",
+      "title": "Our school",
+      "titleEn": "Our school",
+      "titleVi": "Trường học của chúng mình",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 40 – 45",
@@ -1312,6 +1330,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: Classroom instructions",
       "unitNameVi": "Lời chỉ dẫn trong lớp học",
+      "title": "Classroom instructions",
+      "titleEn": "Classroom instructions",
+      "titleVi": "Lời chỉ dẫn trong lớp học",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 46 – 51",
@@ -1532,6 +1553,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: My school things",
       "unitNameVi": "Đồ dùng học tập của mình",
+      "title": "My school things",
+      "titleEn": "My school things",
+      "titleVi": "Đồ dùng học tập của mình",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 52 – 57",
@@ -1546,7 +1570,7 @@
           "hint": "Chủ đề: Đồ dùng học tập của mình",
           "exampleEn": "This is pen.",
           "exampleVi": "Đây là pen.",
-          "emoji": "📘"
+          "emoji": "✏️"
         },
         {
           "id": "g3_u8_02",
@@ -1557,7 +1581,7 @@
           "hint": "Chủ đề: Đồ dùng học tập của mình",
           "exampleEn": "This is pencil.",
           "exampleVi": "Đây là pencil.",
-          "emoji": "📘"
+          "emoji": "✏️"
         },
         {
           "id": "g3_u8_03",
@@ -1568,7 +1592,7 @@
           "hint": "Chủ đề: Đồ dùng học tập của mình",
           "exampleEn": "This is ruler.",
           "exampleVi": "Đây là ruler.",
-          "emoji": "📘"
+          "emoji": "📏"
         },
         {
           "id": "g3_u8_04",
@@ -1579,7 +1603,7 @@
           "hint": "Chủ đề: Đồ dùng học tập của mình",
           "exampleEn": "This is rubber.",
           "exampleVi": "Đây là rubber.",
-          "emoji": "📘"
+          "emoji": "🧽"
         },
         {
           "id": "g3_u8_05",
@@ -1590,7 +1614,7 @@
           "hint": "Chủ đề: Đồ dùng học tập của mình",
           "exampleEn": "This is pencil case.",
           "exampleVi": "Đây là pencil case.",
-          "emoji": "📘"
+          "emoji": "✏️"
         }
       ],
       "grammar": {
@@ -1752,6 +1776,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: Colours",
       "unitNameVi": "Màu sắc",
+      "title": "Colours",
+      "titleEn": "Colours",
+      "titleVi": "Màu sắc",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 58 – 63",
@@ -1983,6 +2010,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: Break time activities",
       "unitNameVi": "Hoạt động giờ ra chơi",
+      "title": "Break time activities",
+      "titleEn": "Break time activities",
+      "titleVi": "Hoạt động giờ ra chơi",
       "theme": "Me and My World",
       "semester": 1,
       "bookPages": "Trang 64 – 69",
@@ -2008,7 +2038,7 @@
           "hint": "Chủ đề: Hoạt động giờ ra chơi",
           "exampleEn": "This is football.",
           "exampleVi": "Đây là football.",
-          "emoji": "📘"
+          "emoji": "⚽"
         },
         {
           "id": "g3_u10_03",
@@ -2019,7 +2049,7 @@
           "hint": "Chủ đề: Hoạt động giờ ra chơi",
           "exampleEn": "This is basketball.",
           "exampleVi": "Đây là basketball.",
-          "emoji": "📘"
+          "emoji": "🏀"
         },
         {
           "id": "g3_u10_04",
@@ -2041,7 +2071,7 @@
           "hint": "Chủ đề: Hoạt động giờ ra chơi",
           "exampleEn": "This is badminton.",
           "exampleVi": "Đây là badminton.",
-          "emoji": "📘"
+          "emoji": "🏸"
         }
       ],
       "grammar": {
@@ -2203,6 +2233,9 @@
       "unit": 11,
       "unitTitle": "Unit 11: My family",
       "unitNameVi": "Gia đình của mình",
+      "title": "My family",
+      "titleEn": "My family",
+      "titleVi": "Gia đình của mình",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 6 – 11",
@@ -2217,7 +2250,7 @@
           "hint": "Chủ đề: Gia đình của mình",
           "exampleEn": "This is father.",
           "exampleVi": "Đây là father.",
-          "emoji": "📘"
+          "emoji": "👨"
         },
         {
           "id": "g3_u11_02",
@@ -2228,7 +2261,7 @@
           "hint": "Chủ đề: Gia đình của mình",
           "exampleEn": "This is mother.",
           "exampleVi": "Đây là mother.",
-          "emoji": "📘"
+          "emoji": "👩"
         },
         {
           "id": "g3_u11_03",
@@ -2239,7 +2272,7 @@
           "hint": "Chủ đề: Gia đình của mình",
           "exampleEn": "This is brother.",
           "exampleVi": "Đây là brother.",
-          "emoji": "📘"
+          "emoji": "👦"
         },
         {
           "id": "g3_u11_04",
@@ -2250,7 +2283,7 @@
           "hint": "Chủ đề: Gia đình của mình",
           "exampleEn": "This is sister.",
           "exampleVi": "Đây là sister.",
-          "emoji": "📘"
+          "emoji": "👧"
         },
         {
           "id": "g3_u11_05",
@@ -2423,6 +2456,9 @@
       "unit": 12,
       "unitTitle": "Unit 12: Jobs",
       "unitNameVi": "Nghề nghiệp",
+      "title": "Jobs",
+      "titleEn": "Jobs",
+      "titleVi": "Nghề nghiệp",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 12 – 17",
@@ -2437,7 +2473,7 @@
           "hint": "Chủ đề: Nghề nghiệp",
           "exampleEn": "This is teacher.",
           "exampleVi": "Đây là teacher.",
-          "emoji": "📘"
+          "emoji": "🧑‍🏫"
         },
         {
           "id": "g3_u12_02",
@@ -2448,7 +2484,7 @@
           "hint": "Chủ đề: Nghề nghiệp",
           "exampleEn": "This is doctor.",
           "exampleVi": "Đây là doctor.",
-          "emoji": "📘"
+          "emoji": "🧑‍⚕️"
         },
         {
           "id": "g3_u12_03",
@@ -2459,7 +2495,7 @@
           "hint": "Chủ đề: Nghề nghiệp",
           "exampleEn": "This is nurse.",
           "exampleVi": "Đây là nurse.",
-          "emoji": "📘"
+          "emoji": "🧑‍⚕️"
         },
         {
           "id": "g3_u12_04",
@@ -2643,6 +2679,9 @@
       "unit": 13,
       "unitTitle": "Unit 13: My house",
       "unitNameVi": "Ngôi nhà của mình",
+      "title": "My house",
+      "titleEn": "My house",
+      "titleVi": "Ngôi nhà của mình",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 18 – 23",
@@ -2863,6 +2902,9 @@
       "unit": 14,
       "unitTitle": "Unit 14: My bedroom",
       "unitNameVi": "Phòng ngủ của mình",
+      "title": "My bedroom",
+      "titleEn": "My bedroom",
+      "titleVi": "Phòng ngủ của mình",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 24 – 29",
@@ -2888,7 +2930,7 @@
           "hint": "Chủ đề: Phòng ngủ của mình",
           "exampleEn": "This is desk.",
           "exampleVi": "Đây là desk.",
-          "emoji": "📘"
+          "emoji": "🪑"
         },
         {
           "id": "g3_u14_03",
@@ -3083,6 +3125,9 @@
       "unit": 15,
       "unitTitle": "Unit 15: At the dining table",
       "unitNameVi": "Bên bàn ăn",
+      "title": "At the dining table",
+      "titleEn": "At the dining table",
+      "titleVi": "Bên bàn ăn",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 30 – 35",
@@ -3097,7 +3142,7 @@
           "hint": "Chủ đề: Bên bàn ăn",
           "exampleEn": "This is bread.",
           "exampleVi": "Đây là bread.",
-          "emoji": "📘"
+          "emoji": "🍞"
         },
         {
           "id": "g3_u15_02",
@@ -3108,7 +3153,7 @@
           "hint": "Chủ đề: Bên bàn ăn",
           "exampleEn": "This is egg.",
           "exampleVi": "Đây là egg.",
-          "emoji": "📘"
+          "emoji": "🍳"
         },
         {
           "id": "g3_u15_03",
@@ -3119,7 +3164,7 @@
           "hint": "Chủ đề: Bên bàn ăn",
           "exampleEn": "This is rice.",
           "exampleVi": "Đây là rice.",
-          "emoji": "📘"
+          "emoji": "🍚"
         },
         {
           "id": "g3_u15_04",
@@ -3130,7 +3175,7 @@
           "hint": "Chủ đề: Bên bàn ăn",
           "exampleEn": "This is fish.",
           "exampleVi": "Đây là fish.",
-          "emoji": "📘"
+          "emoji": "🐟"
         },
         {
           "id": "g3_u15_05",
@@ -3141,7 +3186,7 @@
           "hint": "Chủ đề: Bên bàn ăn",
           "exampleEn": "This is milk.",
           "exampleVi": "Đây là milk.",
-          "emoji": "📘"
+          "emoji": "🥛"
         },
         {
           "id": "g3_u15_06",
@@ -3152,7 +3197,7 @@
           "hint": "Chủ đề: Bên bàn ăn",
           "exampleEn": "This is water.",
           "exampleVi": "Đây là water.",
-          "emoji": "📘"
+          "emoji": "💧"
         }
       ],
       "grammar": {
@@ -3314,6 +3359,9 @@
       "unit": 16,
       "unitTitle": "Unit 16: My pets",
       "unitNameVi": "Thú cưng của mình",
+      "title": "My pets",
+      "titleEn": "My pets",
+      "titleVi": "Thú cưng của mình",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 40 – 45",
@@ -3328,7 +3376,7 @@
           "hint": "Chủ đề: Thú cưng của mình",
           "exampleEn": "This is dog.",
           "exampleVi": "Đây là dog.",
-          "emoji": "📘"
+          "emoji": "🐶"
         },
         {
           "id": "g3_u16_02",
@@ -3339,7 +3387,7 @@
           "hint": "Chủ đề: Thú cưng của mình",
           "exampleEn": "This is cat.",
           "exampleVi": "Đây là cat.",
-          "emoji": "📘"
+          "emoji": "🐱"
         },
         {
           "id": "g3_u16_03",
@@ -3350,7 +3398,7 @@
           "hint": "Chủ đề: Thú cưng của mình",
           "exampleEn": "This is bird.",
           "exampleVi": "Đây là bird.",
-          "emoji": "📘"
+          "emoji": "🐦"
         },
         {
           "id": "g3_u16_04",
@@ -3383,7 +3431,7 @@
           "hint": "Chủ đề: Thú cưng của mình",
           "exampleEn": "This is rabbit.",
           "exampleVi": "Đây là rabbit.",
-          "emoji": "📘"
+          "emoji": "🐰"
         }
       ],
       "grammar": {
@@ -3545,6 +3593,9 @@
       "unit": 17,
       "unitTitle": "Unit 17: Our toys",
       "unitNameVi": "Đồ chơi của chúng mình",
+      "title": "Our toys",
+      "titleEn": "Our toys",
+      "titleVi": "Đồ chơi của chúng mình",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 46 – 51",
@@ -3581,7 +3632,7 @@
           "hint": "Chủ đề: Đồ chơi của chúng mình",
           "exampleEn": "This is teddy bear.",
           "exampleVi": "Đây là teddy bear.",
-          "emoji": "📘"
+          "emoji": "🐻"
         },
         {
           "id": "g3_u17_04",
@@ -3592,7 +3643,7 @@
           "hint": "Chủ đề: Đồ chơi của chúng mình",
           "exampleEn": "This is car.",
           "exampleVi": "Đây là car.",
-          "emoji": "📘"
+          "emoji": "🚗"
         },
         {
           "id": "g3_u17_05",
@@ -3603,7 +3654,7 @@
           "hint": "Chủ đề: Đồ chơi của chúng mình",
           "exampleEn": "This is plane.",
           "exampleVi": "Đây là plane.",
-          "emoji": "📘"
+          "emoji": "✈️"
         },
         {
           "id": "g3_u17_06",
@@ -3614,7 +3665,7 @@
           "hint": "Chủ đề: Đồ chơi của chúng mình",
           "exampleEn": "This is kite.",
           "exampleVi": "Đây là kite.",
-          "emoji": "📘"
+          "emoji": "🪁"
         }
       ],
       "grammar": {
@@ -3776,6 +3827,9 @@
       "unit": 18,
       "unitTitle": "Unit 18: Playing and doing",
       "unitNameVi": "Đang chơi và đang làm",
+      "title": "Playing and doing",
+      "titleEn": "Playing and doing",
+      "titleVi": "Đang chơi và đang làm",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 52 – 57",
@@ -3996,6 +4050,9 @@
       "unit": 19,
       "unitTitle": "Unit 19: Outdoor activities",
       "unitNameVi": "Hoạt động ngoài trời",
+      "title": "Outdoor activities",
+      "titleEn": "Outdoor activities",
+      "titleVi": "Hoạt động ngoài trời",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 58 – 63",
@@ -4010,7 +4067,7 @@
           "hint": "Chủ đề: Hoạt động ngoài trời",
           "exampleEn": "This is cycling.",
           "exampleVi": "Đây là cycling.",
-          "emoji": "📘"
+          "emoji": "🚴"
         },
         {
           "id": "g3_u19_02",
@@ -4032,7 +4089,7 @@
           "hint": "Chủ đề: Hoạt động ngoài trời",
           "exampleEn": "This is running.",
           "exampleVi": "Đây là running.",
-          "emoji": "📘"
+          "emoji": "🏃"
         },
         {
           "id": "g3_u19_04",
@@ -4216,6 +4273,9 @@
       "unit": 20,
       "unitTitle": "Unit 20: At the zoo",
       "unitNameVi": "Ở sở thú",
+      "title": "At the zoo",
+      "titleEn": "At the zoo",
+      "titleVi": "Ở sở thú",
       "theme": "Me and My World",
       "semester": 2,
       "bookPages": "Trang 64 – 69",
@@ -4241,7 +4301,7 @@
           "hint": "Chủ đề: Ở sở thú",
           "exampleEn": "This is monkey.",
           "exampleVi": "Đây là monkey.",
-          "emoji": "📘"
+          "emoji": "🐵"
         },
         {
           "id": "g3_u20_03",
@@ -4252,7 +4312,7 @@
           "hint": "Chủ đề: Ở sở thú",
           "exampleEn": "This is elephant.",
           "exampleVi": "Đây là elephant.",
-          "emoji": "📘"
+          "emoji": "🐘"
         },
         {
           "id": "g3_u20_04",
@@ -4263,7 +4323,7 @@
           "hint": "Chủ đề: Ở sở thú",
           "exampleEn": "This is tiger.",
           "exampleVi": "Đây là tiger.",
-          "emoji": "📘"
+          "emoji": "🐯"
         },
         {
           "id": "g3_u20_05",
@@ -4274,7 +4334,7 @@
           "hint": "Chủ đề: Ở sở thú",
           "exampleEn": "This is horse.",
           "exampleVi": "Đây là horse.",
-          "emoji": "📘"
+          "emoji": "🐴"
         },
         {
           "id": "g3_u20_06",

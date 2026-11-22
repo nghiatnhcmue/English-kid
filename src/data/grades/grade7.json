@@ -14,6 +14,9 @@
       "unit": 1,
       "unitTitle": "Unit 1: Hobbies",
       "unitNameVi": "Sở thích",
+      "title": "Hobbies",
+      "titleEn": "Hobbies",
+      "titleVi": "Sở thích",
       "theme": "Community & Personal Life",
       "semester": 1,
       "bookPages": "Trang 8 – 17",
@@ -28,7 +31,7 @@
           "hint": "Hoạt động chăm sóc hoa và cây cảnh",
           "exampleEn": "My mother loves gardening on Sunday mornings.",
           "exampleVi": "Mẹ của mình rất thích làm vườn vào các buổi sáng Chủ nhật.",
-          "emoji": "🌟"
+          "emoji": "🧑‍🌾"
         },
         {
           "id": "g7_u1_02",
@@ -39,7 +42,7 @@
           "hint": "Thu thập các món đồ cùng loại",
           "exampleEn": "Collecting stamps is a popular hobby among teenagers.",
           "exampleVi": "Sưu tầm tem là một sở thích phổ biến trong giới thanh thiếu niên.",
-          "emoji": "🌟"
+          "emoji": "📮"
         },
         {
           "id": "g7_u1_03",
@@ -50,7 +53,7 @@
           "hint": "Sắp xếp hoa đẹp vào lọ",
           "exampleEn": "She is very good at arranging flowers for parties.",
           "exampleVi": "Chị ấy rất giỏi cắm hoa cho các bữa tiệc.",
-          "emoji": "🌟"
+          "emoji": "💐"
         },
         {
           "id": "g7_u1_04",
@@ -61,7 +64,7 @@
           "hint": "Lắp ráp mô hình thu nhỏ",
           "exampleEn": "My brother spends hours making models of airplanes.",
           "exampleVi": "Anh trai mình dành hàng giờ để làm mô hình máy bay.",
-          "emoji": "🌟"
+          "emoji": "✈️"
         },
         {
           "id": "g7_u1_05",
@@ -72,7 +75,7 @@
           "hint": "Môn thể thao ngồi trên lưng ngựa",
           "exampleEn": "Horse riding is an exciting outdoor activity.",
           "exampleVi": "Cưỡi ngựa là một hoạt động ngoài trời đầy thú vị.",
-          "emoji": "🌟"
+          "emoji": "🏇"
         },
         {
           "id": "g7_u1_06",
@@ -83,7 +86,7 @@
           "hint": "Hoạt động đạp xe rèn luyện sức khỏe",
           "exampleEn": "We go cycling around the lake every afternoon.",
           "exampleVi": "Chúng mình đạp xe quanh hồ vào mỗi buổi chiều.",
-          "emoji": "🌟"
+          "emoji": "🚴"
         }
       ],
       "grammar": {
@@ -295,6 +298,9 @@
       "unit": 2,
       "unitTitle": "Unit 2: Healthy Living",
       "unitNameVi": "Sống khỏe mạnh",
+      "title": "Healthy Living",
+      "titleEn": "Healthy Living",
+      "titleVi": "Sống khỏe mạnh",
       "theme": "Health & Daily Habits",
       "semester": 1,
       "bookPages": "Trang 18 – 27",
@@ -309,7 +315,7 @@
           "hint": "Ánh sáng yếu không đủ đọc sách",
           "exampleEn": "Reading in dim light can harm your eyes.",
           "exampleVi": "Đọc sách trong ánh sáng mờ có thể làm hại mắt của em.",
-          "emoji": "🌟"
+          "emoji": "🕯️"
         },
         {
           "id": "g7_u2_02",
@@ -320,7 +326,7 @@
           "hint": "Mỹ phẩm dưỡng môi chống khô",
           "exampleEn": "Use lip balm to keep your lips soft in winter.",
           "exampleVi": "Hãy dùng son dưỡng môi để giữ môi mềm mại vào mùa đông.",
-          "emoji": "🌟"
+          "emoji": "💄"
         },
         {
           "id": "g7_u2_03",
@@ -331,7 +337,7 @@
           "hint": "Tình trạng môi khô nứt do lạnh",
           "exampleEn": "Cold weather often causes dry and chapped lips.",
           "exampleVi": "Thời tiết lạnh thường gây khô và nứt nẻ môi.",
-          "emoji": "🌟"
+          "emoji": "👄"
         },
         {
           "id": "g7_u2_04",
@@ -342,7 +348,7 @@
           "hint": "Tổn thương da do ánh mặt trời",
           "exampleEn": "Wear a sun hat to avoid sunburn on sunny days.",
           "exampleVi": "Hãy đội mũ chống nắng để tránh bị cháy nắng vào những ngày nhiều nắng.",
-          "emoji": "🌟"
+          "emoji": "☀️"
         },
         {
           "id": "g7_u2_05",
@@ -353,7 +359,7 @@
           "hint": "Vấn đề về da thường gặp ở tuổi dậy thì",
           "exampleEn": "Washing your face daily helps prevent acne.",
           "exampleVi": "Rửa mặt hàng ngày giúp ngăn ngừa mụn trứng cá.",
-          "emoji": "🌟"
+          "emoji": "🧖"
         },
         {
           "id": "g7_u2_06",
@@ -364,7 +370,7 @@
           "hint": "Người chỉ ăn thực vật, không ăn thịt",
           "exampleEn": "She is a vegetarian and eats lots of vegetables.",
           "exampleVi": "Cô ấy là một người ăn chay và ăn rất nhiều rau củ.",
-          "emoji": "🌟"
+          "emoji": "🥗"
         }
       ],
       "grammar": {
@@ -553,6 +559,9 @@
       "unit": 3,
       "unitTitle": "Unit 3: Community Service",
       "unitNameVi": "Hoạt động vì cộng đồng",
+      "title": "Community Service",
+      "titleEn": "Community Service",
+      "titleVi": "Hoạt động vì cộng đồng",
       "theme": "Volunteering & Society",
       "semester": 1,
       "bookPages": "Trang 28 – 37",
@@ -567,7 +576,7 @@
           "hint": "Người làm việc có ích không vì tiền",
           "exampleEn": "Many students volunteer to clean up local parks.",
           "exampleVi": "Nhiều học sinh tình nguyện dọn dẹp các công viên địa phương.",
-          "emoji": "🌟"
+          "emoji": "🙋"
         },
         {
           "id": "g7_u3_02",
@@ -578,7 +587,7 @@
           "hint": "Tặng tiền bạc hoặc vật phẩm giúp người khác",
           "exampleEn": "We donate warm clothes and books to poor children.",
           "exampleVi": "Chúng mình quyên góp quần áo ấm và sách vở cho trẻ em nghèo.",
-          "emoji": "🌟"
+          "emoji": "🎁"
         },
         {
           "id": "g7_u3_03",
@@ -589,7 +598,7 @@
           "hint": "Tập thể những người cùng sống trong một khu vực",
           "exampleEn": "Helping the community makes our neighborhood safer.",
           "exampleVi": "Giúp đỡ cộng đồng làm cho khu dân cư của chúng ta an toàn hơn.",
-          "emoji": "🌟"
+          "emoji": "🏘️"
         },
         {
           "id": "g7_u3_04",
@@ -600,7 +609,7 @@
           "hint": "Nơi chăm sóc người cao tuổi",
           "exampleEn": "They often visit the elderly at the local nursing home.",
           "exampleVi": "Họ thường đến thăm các cụ già ở viện dưỡng lão địa phương.",
-          "emoji": "🌟"
+          "emoji": "👵"
         },
         {
           "id": "g7_u3_05",
@@ -611,7 +620,7 @@
           "hint": "Nơi che chở, nuôi dưỡng người có hoàn cảnh khó khăn",
           "exampleEn": "The charity provides food and shelter for homeless people.",
           "exampleVi": "Hội từ thiện cung cấp thức ăn và chỗ ở cho người vô gia cư.",
-          "emoji": "🌟"
+          "emoji": "🏠"
         },
         {
           "id": "g7_u3_06",
@@ -622,7 +631,7 @@
           "hint": "Dạy học bồi dưỡng cho từng nhóm nhỏ",
           "exampleEn": "Older students tutor younger kids in English and maths.",
           "exampleVi": "Các học sinh lớp lớn dạy kèm môn tiếng Anh và toán cho các em nhỏ.",
-          "emoji": "🌟"
+          "emoji": "🧑‍🏫"
         }
       ],
       "grammar": {
@@ -805,6 +814,9 @@
       "unit": 4,
       "unitTitle": "Unit 4: Music and Arts",
       "unitNameVi": "Âm nhạc và nghệ thuật",
+      "title": "Music and Arts",
+      "titleEn": "Music and Arts",
+      "titleVi": "Âm nhạc và nghệ thuật",
       "theme": "Culture & Society",
       "semester": 1,
       "bookPages": "Trang 38 – 47",
@@ -819,7 +831,7 @@
           "hint": "Người sáng tác bài hát hoặc bản nhạc",
           "exampleEn": "Trinh Cong Son is a famous Vietnamese composer.",
           "exampleVi": "Trịnh Công Sơn là một nhạc sĩ/nhà soạn nhạc nổi tiếng của Việt Nam.",
-          "emoji": "🌟"
+          "emoji": "🎼"
         },
         {
           "id": "g7_u4_02",
@@ -830,7 +842,7 @@
           "hint": "Nơi trưng bày tác phẩm nghệ thuật",
           "exampleEn": "We visited an impressive art exhibition yesterday.",
           "exampleVi": "Hôm qua chúng mình đã tham quan một cuộc triển lãm nghệ thuật ấn tượng.",
-          "emoji": "🌟"
+          "emoji": "🖼️"
         },
         {
           "id": "g7_u4_03",
@@ -841,7 +853,7 @@
           "hint": "Người chơi nhạc cụ hoặc sáng tác",
           "exampleEn": "Her brother is a talented jazz musician.",
           "exampleVi": "Anh trai cô ấy là một nghệ sĩ chơi nhạc jazz tài năng.",
-          "emoji": "🌟"
+          "emoji": "🎻"
         },
         {
           "id": "g7_u4_04",
@@ -852,7 +864,7 @@
           "hint": "Nơi biểu diễn các tiết mục múa rối",
           "exampleEn": "Foreign tourists love visiting the water puppet theatre in Ha Noi.",
           "exampleVi": "Khách du lịch nước ngoài rất thích đến xem nhà hát múa rối nước ở Hà Nội.",
-          "emoji": "🌟"
+          "emoji": "🎭"
         },
         {
           "id": "g7_u4_05",
@@ -863,7 +875,7 @@
           "hint": "Nơi trưng bày và thưởng lãm hội họa",
           "exampleEn": "The gallery displays many classical oil paintings.",
           "exampleVi": "Phòng tranh trưng bày nhiều bức tranh sơn dầu cổ điển.",
-          "emoji": "🌟"
+          "emoji": "🏛️"
         },
         {
           "id": "g7_u4_06",
@@ -874,7 +886,7 @@
           "hint": "Bài hát trang nghiêm đại diện cho một quốc gia",
           "exampleEn": "Tien Quan Ca is the national anthem of Viet Nam.",
           "exampleVi": "Tiến Quân Ca là bài quốc ca của nước Việt Nam.",
-          "emoji": "🌟"
+          "emoji": "🎺"
         }
       ],
       "grammar": {
@@ -1032,6 +1044,9 @@
       "unit": 5,
       "unitTitle": "Unit 5: Food and Drink",
       "unitNameVi": "Ẩm thực và đồ uống",
+      "title": "Food and Drink",
+      "titleEn": "Food and Drink",
+      "titleVi": "Ẩm thực và đồ uống",
       "theme": "Culture & Society",
       "semester": 1,
       "bookPages": "Trang 48 – 57",
@@ -1046,7 +1061,7 @@
           "hint": "Món trứng đánh đều rồi chiên vàng",
           "exampleEn": "Dad made a delicious cheese omelette for breakfast.",
           "exampleVi": "Bố đã làm món trứng tráng phô mai thơm ngon cho bữa sáng.",
-          "emoji": "🌟"
+          "emoji": "🍳"
         },
         {
           "id": "g7_u5_02",
@@ -1057,7 +1072,7 @@
           "hint": "Gia vị thảo mộc màu vàng",
           "exampleEn": "Turmeric gives dishes a distinctive yellow color.",
           "exampleVi": "Nghệ tạo cho các món ăn một màu vàng rất đặc trưng.",
-          "emoji": "🌟"
+          "emoji": "🫚"
         },
         {
           "id": "g7_u5_03",
@@ -1068,7 +1083,7 @@
           "hint": "Sợi làm từ bột gạo hoặc bột mì",
           "exampleEn": "Vietnamese beef noodles are famous around the world.",
           "exampleVi": "Món bún bò / phở bò Việt Nam nổi tiếng khắp thế giới.",
-          "emoji": "🌟"
+          "emoji": "🍜"
         },
         {
           "id": "g7_u5_04",
@@ -1079,7 +1094,7 @@
           "hint": "Nước hầm xương ngọt thanh",
           "exampleEn": "The soup broth has been simmered for ten hours.",
           "exampleVi": "Nước dùng của món súp đã được ninh kỹ trong suốt mười tiếng.",
-          "emoji": "🌟"
+          "emoji": "🍲"
         },
         {
           "id": "g7_u5_05",
@@ -1090,7 +1105,7 @@
           "hint": "Món phở truyền thống với thịt bò",
           "exampleEn": "Pho bo is a signature dish of Ha Noi.",
           "exampleVi": "Phở bò là món ăn đặc trưng nổi tiếng của Hà Nội.",
-          "emoji": "🌟"
+          "emoji": "🥩"
         },
         {
           "id": "g7_u5_06",
@@ -1101,7 +1116,7 @@
           "hint": "Các thành phần dùng để chế biến món ăn",
           "exampleEn": "Fresh herbs are essential ingredients in Vietnamese rolls.",
           "exampleVi": "Rau thơm tươi là nguyên liệu thiết yếu trong các món cuốn Việt Nam.",
-          "emoji": "🌟"
+          "emoji": "🥕"
         }
       ],
       "grammar": {
@@ -1259,6 +1274,9 @@
       "unit": 6,
       "unitTitle": "Unit 6: A Visit to a School",
       "unitNameVi": "Thăm một trường học",
+      "title": "A Visit to a School",
+      "titleEn": "A Visit to a School",
+      "titleVi": "Thăm một trường học",
       "theme": "Culture & Society",
       "semester": 1,
       "bookPages": "Trang 58 – 67",
@@ -1273,7 +1291,7 @@
           "hint": "Trường đại học hoàng gia thời xưa",
           "exampleEn": "Van Mieu - Quoc Tu Giam is Viet Nam's first university.",
           "exampleVi": "Văn Miếu - Quốc Tử Giám là trường đại học đầu tiên của Việt Nam.",
-          "emoji": "🌟"
+          "emoji": "🏯"
         },
         {
           "id": "g7_u6_02",
@@ -1284,7 +1302,7 @@
           "hint": "Khu sân có tường bao quanh",
           "exampleEn": "Students gathered in the green courtyard for morning exercise.",
           "exampleVi": "Các bạn học sinh tập trung ở sân trong rợp bóng mát để tập thể dục.",
-          "emoji": "🌟"
+          "emoji": "🪴"
         },
         {
           "id": "g7_u6_03",
@@ -1295,7 +1313,7 @@
           "hint": "Công trình tưởng nhớ danh nhân",
           "exampleEn": "The stone monument honors historical scholars.",
           "exampleVi": "Tấm bia kỷ niệm bằng đá tôn vinh các bậc học giả lịch sử.",
-          "emoji": "🌟"
+          "emoji": "🗿"
         },
         {
           "id": "g7_u6_04",
@@ -1306,7 +1324,7 @@
           "hint": "Tác phẩm điêu khắc hình người",
           "exampleEn": "A bronze statue of Chu Van An stands proudly in the temple.",
           "exampleVi": "Bức tượng đồng của thầy Chu Văn An đứng trang nghiêm trong đền.",
-          "emoji": "🌟"
+          "emoji": "🗽"
         },
         {
           "id": "g7_u6_05",
@@ -1317,7 +1335,7 @@
           "hint": "Nơi thờ phụng linh thiêng",
           "exampleEn": "People visit the temple to pray for peace and good fortune.",
           "exampleVi": "Mọi người đến đền để cầu mong bình an và may mắn.",
-          "emoji": "🌟"
+          "emoji": "⛩️"
         },
         {
           "id": "g7_u6_06",
@@ -1328,7 +1346,7 @@
           "hint": "Người có học vấn uyên thâm",
           "exampleEn": "Ancient scholars spent decades studying classical literature.",
           "exampleVi": "Các học giả thời xưa dành nhiều thập kỷ để nghiên cứu văn học cổ điển.",
-          "emoji": "🌟"
+          "emoji": "📜"
         }
       ],
       "grammar": {
@@ -1486,6 +1504,9 @@
       "unit": 7,
       "unitTitle": "Unit 7: Traffic",
       "unitNameVi": "Giao thông",
+      "title": "Traffic",
+      "titleEn": "Traffic",
+      "titleVi": "Giao thông",
       "theme": "Culture & Society",
       "semester": 2,
       "bookPages": "Trang 68 – 77",
@@ -1500,7 +1521,7 @@
           "hint": "Đoàn xe cộ bị ùn ứ trên đường",
           "exampleEn": "We were stuck in a heavy traffic jam for forty minutes.",
           "exampleVi": "Chúng mình đã bị kẹt trong một vụ tắc đường nghiêm trọng suốt 40 phút.",
-          "emoji": "🌟"
+          "emoji": "🚗"
         },
         {
           "id": "g7_u7_02",
@@ -1511,7 +1532,7 @@
           "hint": "Người di chuyển bằng chân trên đường",
           "exampleEn": "Drivers must always yield to pedestrians at zebra crossings.",
           "exampleVi": "Người lái xe phải luôn nhường đường cho người đi bộ ở vạch sang đường.",
-          "emoji": "🌟"
+          "emoji": "🚶"
         },
         {
           "id": "g7_u7_03",
@@ -1522,7 +1543,7 @@
           "hint": "Đường kẻ sọc trắng đen để sang đường",
           "exampleEn": "Children should always use the zebra crossing to cross the street.",
           "exampleVi": "Trẻ em nên luôn sử dụng vạch qua đường để sang đường an toàn.",
-          "emoji": "🌟"
+          "emoji": "🦓"
         },
         {
           "id": "g7_u7_04",
@@ -1533,7 +1554,7 @@
           "hint": "Mũ bảo vệ đầu khi đi xe",
           "exampleEn": "Wearing a helmet is mandatory when riding a motorbike in Viet Nam.",
           "exampleVi": "Đội mũ bảo hiểm là bắt buộc khi đi xe máy tại Việt Nam.",
-          "emoji": "🌟"
+          "emoji": "⛑️"
         },
         {
           "id": "g7_u7_05",
@@ -1544,7 +1565,7 @@
           "hint": "Dây giữ cố định người trên ghế xe",
           "exampleEn": "Fasten your seatbelt before the car starts moving.",
           "exampleVi": "Hãy thắt dây an toàn trước khi xe bắt đầu di chuyển.",
-          "emoji": "🌟"
+          "emoji": "💺"
         },
         {
           "id": "g7_u7_06",
@@ -1555,7 +1576,7 @@
           "hint": "Phần trên cùng che chở phương tiện",
           "exampleEn": "Do not carry luggage on the roof of small cars without safety ties.",
           "exampleVi": "Không được chở hành lý trên nóc xe ô tô nhỏ mà không buộc an toàn.",
-          "emoji": "🌟"
+          "emoji": "🚘"
         }
       ],
       "grammar": {
@@ -1713,6 +1734,9 @@
       "unit": 8,
       "unitTitle": "Unit 8: Films",
       "unitNameVi": "Phim ảnh",
+      "title": "Films",
+      "titleEn": "Films",
+      "titleVi": "Phim ảnh",
       "theme": "Culture & Society",
       "semester": 2,
       "bookPages": "Trang 78 – 87",
@@ -1727,7 +1751,7 @@
           "hint": "Thể loại phim bằng hình vẽ hoặc kỹ xảo số",
           "exampleEn": "The Lion King is one of the greatest animation films ever made.",
           "exampleVi": "Vua Sư Tử là một trong những bộ phim hoạt hình vĩ đại nhất từng được sản xuất.",
-          "emoji": "🌟"
+          "emoji": "🎬"
         },
         {
           "id": "g7_u8_02",
@@ -1738,7 +1762,7 @@
           "hint": "Phim về người thật, sự việc thật",
           "exampleEn": "Planet Earth is an award-winning nature documentary.",
           "exampleVi": "Planet Earth là một bộ phim tài liệu thiên nhiên từng đoạt nhiều giải thưởng.",
-          "emoji": "🌟"
+          "emoji": "📽️"
         },
         {
           "id": "g7_u8_03",
@@ -1749,7 +1773,7 @@
           "hint": "Thu hút sự chú ý mạnh mẽ",
           "exampleEn": "The mystery movie had a gripping plot that kept everyone guessing.",
           "exampleVi": "Bộ phim trinh thám có cốt truyện vô cùng hấp dẫn khiến ai cũng phải suy đoán.",
-          "emoji": "🌟"
+          "emoji": "🤩"
         },
         {
           "id": "g7_u8_04",
@@ -1760,7 +1784,7 @@
           "hint": "Rất buồn cười và hóm hỉnh",
           "exampleEn": "The comedy was so hilarious that the whole audience laughed non-stop.",
           "exampleVi": "Bộ phim hài hước đến mức cả khán phòng cười không dứt.",
-          "emoji": "🌟"
+          "emoji": "😂"
         },
         {
           "id": "g7_u8_05",
@@ -1771,7 +1795,7 @@
           "hint": "Thể loại phim hồi hộp, gay cấn",
           "exampleEn": "He loves watching psychological thrillers on weekend nights.",
           "exampleVi": "Cậu ấy rất thích xem những bộ phim tâm lý ly kỳ vào các tối cuối tuần.",
-          "emoji": "🌟"
+          "emoji": "😱"
         },
         {
           "id": "g7_u8_06",
@@ -1782,7 +1806,7 @@
           "hint": "Chuyên gia đánh giá tác phẩm nghệ thuật",
           "exampleEn": "Film critics praised the leading actor for his realistic performance.",
           "exampleVi": "Các nhà phê bình phim đã khen ngợi nam diễn viên chính vì diễn xuất rất chân thật.",
-          "emoji": "🌟"
+          "emoji": "✍️"
         }
       ],
       "grammar": {
@@ -1940,6 +1964,9 @@
       "unit": 9,
       "unitTitle": "Unit 9: Festivals around the World",
       "unitNameVi": "Lễ hội trên thế giới",
+      "title": "Festivals around the World",
+      "titleEn": "Festivals around the World",
+      "titleVi": "Lễ hội trên thế giới",
       "theme": "Culture & Society",
       "semester": 2,
       "bookPages": "Trang 88 – 97",
@@ -1954,7 +1981,7 @@
           "hint": "Lễ hội hóa trang đường phố lớn",
           "exampleEn": "The Rio Carnival in Brazil features spectacular samba parades.",
           "exampleVi": "Lễ hội Carnival ở Rio, Brazil nổi bật với những đoàn diễu hành samba hoành tráng.",
-          "emoji": "🌟"
+          "emoji": "🎭"
         },
         {
           "id": "g7_u9_02",
@@ -1965,7 +1992,7 @@
           "hint": "Loại quả màu cam biểu tượng mùa thu",
           "exampleEn": "Children carve glowing faces into pumpkins for Halloween.",
           "exampleVi": "Trẻ em khắc các khuôn mặt phát sáng lên quả bí ngô cho dịp lễ Halloween.",
-          "emoji": "🌟"
+          "emoji": "🎃"
         },
         {
           "id": "g7_u9_03",
@@ -1976,7 +2003,7 @@
           "hint": "Bữa ăn thịnh soạn nhiều món ngon",
           "exampleEn": "Families gather for a grand Thanksgiving feast every November.",
           "exampleVi": "Các gia đình quây quần bên bữa tiệc Lễ Tạ Ơn thịnh soạn vào mỗi tháng 11.",
-          "emoji": "🌟"
+          "emoji": "🍖"
         },
         {
           "id": "g7_u9_04",
@@ -1987,7 +2014,7 @@
           "hint": "Dụng cụ thắp sáng mang tính trang trí",
           "exampleEn": "Mid-Autumn Festival is famous for colorful star-shaped lanterns.",
           "exampleVi": "Tết Trung thu nổi tiếng với những chiếc đèn lồng hình ngôi sao rực rỡ sắc màu.",
-          "emoji": "🌟"
+          "emoji": "🏮"
         },
         {
           "id": "g7_u9_05",
@@ -1998,7 +2025,7 @@
           "hint": "Đoàn người rước cờ hoa trên phố",
           "exampleEn": "Thousands of dancers joined the festive parade in the city square.",
           "exampleVi": "Hàng ngàn vũ công đã tham gia cuộc diễu hành lễ hội tại quảng trường thành phố.",
-          "emoji": "🌟"
+          "emoji": "🥁"
         },
         {
           "id": "g7_u9_06",
@@ -2009,7 +2036,7 @@
           "hint": "Xe rước trang trí lộng lẫy trong lễ hội",
           "exampleEn": "The flower float was decorated with twenty thousand red roses.",
           "exampleVi": "Chiếc xe hoa diễu hành được trang trí bằng hai mươi ngàn bông hồng đỏ thắm.",
-          "emoji": "🌟"
+          "emoji": "🚛"
         }
       ],
       "grammar": {
@@ -2167,6 +2194,9 @@
       "unit": 10,
       "unitTitle": "Unit 10: Energy Sources",
       "unitNameVi": "Các nguồn năng lượng",
+      "title": "Energy Sources",
+      "titleEn": "Energy Sources",
+      "titleVi": "Các nguồn năng lượng",
       "theme": "Culture & Society",
       "semester": 2,
       "bookPages": "Trang 98 – 107",
@@ -2181,7 +2211,7 @@
           "hint": "Năng lượng khai thác từ ánh sáng mặt trời",
           "exampleEn": "Solar energy is completely clean and renewable.",
           "exampleVi": "Năng lượng mặt trời hoàn toàn sạch và có thể tái tạo được.",
-          "emoji": "🌟"
+          "emoji": "☀️"
         },
         {
           "id": "g7_u10_02",
@@ -2192,7 +2222,7 @@
           "hint": "Năng lượng tạo ra từ sức gió",
           "exampleEn": "Wind power turbines generate clean electricity on coastal hills.",
           "exampleVi": "Các tua bin gió sản sinh điện sạch trên những sườn đồi ven biển.",
-          "emoji": "🌟"
+          "emoji": "💨"
         },
         {
           "id": "g7_u10_03",
@@ -2203,7 +2233,7 @@
           "hint": "Nguồn nhiên liệu hóa thạch dạng khí",
           "exampleEn": "Natural gas produces less carbon dioxide than coal when burned.",
           "exampleVi": "Khí thiên nhiên sinh ra ít khí CO2 hơn than đá khi được đốt cháy.",
-          "emoji": "🌟"
+          "emoji": "⛽"
         },
         {
           "id": "g7_u10_04",
@@ -2214,7 +2244,7 @@
           "hint": "Nguồn tài nguyên vô tận",
           "exampleEn": "Renewable sources like sun and wind never run out.",
           "exampleVi": "Các nguồn năng lượng tái tạo như mặt trời và gió không bao giờ cạn kiệt.",
-          "emoji": "🌟"
+          "emoji": "♻️"
         },
         {
           "id": "g7_u10_05",
@@ -2225,7 +2255,7 @@
           "hint": "Cỗ máy quay nhờ dòng khí hoặc nước",
           "exampleEn": "Giant turbines convert wind energy into electrical power.",
           "exampleVi": "Các tua bin khổng lồ biến đổi năng lượng gió thành điện năng.",
-          "emoji": "🌟"
+          "emoji": "🌪️"
         },
         {
           "id": "g7_u10_06",
@@ -2236,7 +2266,7 @@
           "hint": "Năng lượng khai thác từ dòng nước chảy",
           "exampleEn": "Hydro power stations supply a major share of electricity in Viet Nam.",
           "exampleVi": "Các nhà máy thủy điện cung cấp một phần lớn sản lượng điện ở Việt Nam.",
-          "emoji": "🌟"
+          "emoji": "💧"
         }
       ],
       "grammar": {
@@ -2394,6 +2424,9 @@
       "unit": 11,
       "unitTitle": "Unit 11: Travelling in the Future",
       "unitNameVi": "Giao thông tương lai",
+      "title": "Travelling in the Future",
+      "titleEn": "Travelling in the Future",
+      "titleVi": "Giao thông tương lai",
       "theme": "Culture & Society",
       "semester": 2,
       "bookPages": "Trang 108 – 117",
@@ -2408,7 +2441,7 @@
           "hint": "Hệ thống tàu cao tốc di chuyển trong đường ống chân không",
           "exampleEn": "The hyperloop can travel at speeds of over a thousand kilometers per hour.",
           "exampleVi": "Tàu hyperloop có thể di chuyển ở vận tốc hơn một ngàn cây số một giờ.",
-          "emoji": "🌟"
+          "emoji": "🚅"
         },
         {
           "id": "g7_u11_02",
@@ -2419,7 +2452,7 @@
           "hint": "Phương tiện bay kết hợp ô tô",
           "exampleEn": "Flying cars could reduce traffic congestion in big cities completely.",
           "exampleVi": "Xe ô tô bay có thể giúp giảm thiểu hoàn toàn nạn ùn tắc giao thông ở các thành phố lớn.",
-          "emoji": "🌟"
+          "emoji": "🛸"
         },
         {
           "id": "g7_u11_03",
@@ -2430,7 +2463,7 @@
           "hint": "Được cấp điện từ pin mặt trời",
           "exampleEn": "Solar-powered buses run smoothly without needing gasoline.",
           "exampleVi": "Xe buýt chạy bằng năng lượng mặt trời vận hành êm ái mà không cần xăng dầu.",
-          "emoji": "🌟"
+          "emoji": "🔋"
         },
         {
           "id": "g7_u11_04",
@@ -2441,7 +2474,7 @@
           "hint": "Tự vận hành mà không cần tài xế",
           "exampleEn": "Driverless taxis use sensors and artificial intelligence to navigate safely.",
           "exampleVi": "Xe taxi không người lái sử dụng cảm biến và trí tuệ nhân tạo để dẫn đường an toàn.",
-          "emoji": "🌟"
+          "emoji": "🤖"
         },
         {
           "id": "g7_u11_05",
@@ -2452,7 +2485,7 @@
           "hint": "Hệ thống tự động điều khiển phương tiện",
           "exampleEn": "The modern airplane flew on autopilot across the Pacific Ocean.",
           "exampleVi": "Chiếc máy bay hiện đại đã bay ở chế độ lái tự động băng qua Thái Bình Dương.",
-          "emoji": "🌟"
+          "emoji": "🧭"
         },
         {
           "id": "g7_u11_06",
@@ -2463,7 +2496,7 @@
           "hint": "Di chuyển ngay lập tức giữa hai vị trí",
           "exampleEn": "Scientists wonder if humans will ever be able to teleport across planets.",
           "exampleVi": "Các nhà khoa học tự hỏi liệu loài người có bao giờ dịch chuyển tức thời qua các hành tinh được không.",
-          "emoji": "🌟"
+          "emoji": "⚡"
         }
       ],
       "grammar": {
@@ -2621,6 +2654,9 @@
       "unit": 12,
       "unitTitle": "Unit 12: English-Speaking Countries",
       "unitNameVi": "Các quốc gia nói tiếng Anh",
+      "title": "English-Speaking Countries",
+      "titleEn": "English-Speaking Countries",
+      "titleVi": "Các quốc gia nói tiếng Anh",
       "theme": "Culture & Society",
       "semester": 2,
       "bookPages": "Trang 118 – 127",
@@ -2635,7 +2671,7 @@
           "hint": "Người dùng ngôn ngữ đó từ lúc sinh ra",
           "exampleEn": "Practicing speaking with native speakers improves your accent quickly.",
           "exampleVi": "Luyện nói cùng người bản ngữ giúp cải thiện ngữ điệu của em rất nhanh chóng.",
-          "emoji": "🌟"
+          "emoji": "🗣️"
         },
         {
           "id": "g7_u12_02",
@@ -2646,7 +2682,7 @@
           "hint": "Loài thú có túi nhảy bằng hai chân sau",
           "exampleEn": "The kangaroo is the national symbol of Australia.",
           "exampleVi": "Chuột túi kangaroo là biểu tượng quốc gia của nước Úc.",
-          "emoji": "🌟"
+          "emoji": "🦘"
         },
         {
           "id": "g7_u12_03",
@@ -2657,7 +2693,7 @@
           "hint": "Chiếc lá phong đặc trưng của Canada",
           "exampleEn": "The red maple leaf appears proudly on the Canadian national flag.",
           "exampleVi": "Lá phong đỏ xuất hiện đầy kiêu hãnh trên quốc kỳ của Canada.",
-          "emoji": "🌟"
+          "emoji": "🍁"
         },
         {
           "id": "g7_u12_04",
@@ -2668,7 +2704,7 @@
           "hint": "Khung cảnh thiên nhiên bao quát",
           "exampleEn": "Scotland is famous for its dramatic mountain landscapes and ancient castles.",
           "exampleVi": "Xứ Scotland nổi tiếng với phong cảnh núi non hùng vĩ và những tòa lâu đài cổ kính.",
-          "emoji": "🌟"
+          "emoji": "🏞️"
         },
         {
           "id": "g7_u12_05",
@@ -2679,7 +2715,7 @@
           "hint": "Công trình kiến trúc hoặc địa danh nổi bật",
           "exampleEn": "The Statue of Liberty is a world-renowned landmark in New York.",
           "exampleVi": "Tượng Nữ thần Tự do là thắng cảnh biểu tượng trứ danh thế giới tại New York.",
-          "emoji": "🌟"
+          "emoji": "🗼"
         },
         {
           "id": "g7_u12_06",
@@ -2690,7 +2726,7 @@
           "hint": "Được nhà nước hoặc pháp luật công nhận",
           "exampleEn": "English is an official language in more than fifty nations around the globe.",
           "exampleVi": "Tiếng Anh là ngôn ngữ chính thức tại hơn năm mươi quốc gia trên toàn cầu.",
-          "emoji": "🌟"
+          "emoji": "📜"
         }
       ],
       "grammar": {
