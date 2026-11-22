@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { HashRouter, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { SettingsProvider, useSettings } from './settings.jsx';
 import { KEYS, onStoreWrite, store, totalStarsOf } from './utils/storage.js';
@@ -33,58 +33,160 @@ const NAV = [
 function GradeSwitcher({ compact = false }) {
   const { settings, update } = useSettings();
   const currentGrade = settings?.selectedGrade || 6;
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef(null);
 
-  const handleGradeChange = (e) => {
-    const newGrade = Number(e.target.value);
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsOpen(false);
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen]);
+
+  const selectGrade = (newGrade) => {
     update({ selectedGrade: newGrade });
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('grade-changed', { detail: { grade: newGrade } }));
     }
     playSfx('click');
+    setIsOpen(false);
   };
 
+  const levelIcon = currentGrade <= 5 ? '🎒' : currentGrade <= 9 ? '🎓' : '🏛️';
+
   return (
-    <div
-      className={`relative inline-flex items-center rounded-2xl bg-cream/90 border-2 border-banana-dark/40 shadow-xs hover:border-banana-dark transition-all select-none ${
-        compact ? 'px-2 py-1 text-xs' : 'px-3 py-1.5 text-xs lg:text-sm'
-      }`}
-      title="Đổi khối lớp học tập (Lớp 1 – 12)"
-    >
-      <span className="mr-1.5 text-sm lg:text-base leading-none" aria-hidden>🎓</span>
-      <label htmlFor={compact ? 'mobile-grade-select' : 'desktop-grade-select'} className="sr-only">
-        Chọn khối lớp
-      </label>
-      <select
-        id={compact ? 'mobile-grade-select' : 'desktop-grade-select'}
-        value={currentGrade}
-        onChange={handleGradeChange}
-        className="bg-transparent font-black text-ink cursor-pointer focus:outline-none appearance-none pr-3.5 py-0.5"
-        style={{
-          backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23432818' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'right center',
-          backgroundSize: '10px'
+    <div ref={containerRef} className="relative inline-block text-left">
+      <button
+        type="button"
+        onClick={() => {
+          playSfx('click');
+          setIsOpen((prev) => !prev);
         }}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        title="Đổi khối lớp học tập (Lớp 1 – 12)"
+        className={`group inline-flex items-center gap-1.5 rounded-2xl bg-cream border-2 transition-all cursor-pointer select-none ${
+          isOpen
+            ? 'border-banana-dark shadow-sm bg-white'
+            : 'border-banana-dark/40 shadow-xs hover:border-banana-dark hover:bg-white'
+        } ${compact ? 'px-2.5 py-1 text-xs' : 'px-3 py-1.5 text-xs lg:text-sm font-black text-ink'}`}
       >
-        <optgroup label="Tiểu học">
-          <option value={1} className="bg-white text-ink font-bold">Lớp 1</option>
-          <option value={2} className="bg-white text-ink font-bold">Lớp 2</option>
-          <option value={3} className="bg-white text-ink font-bold">Lớp 3</option>
-          <option value={4} className="bg-white text-ink font-bold">Lớp 4</option>
-          <option value={5} className="bg-white text-ink font-bold">Lớp 5</option>
-        </optgroup>
-        <optgroup label="THCS">
-          <option value={6} className="bg-white text-ink font-bold">Lớp 6 (★ 3D)</option>
-          <option value={7} className="bg-white text-ink font-bold">Lớp 7</option>
-          <option value={8} className="bg-white text-ink font-bold">Lớp 8</option>
-          <option value={9} className="bg-white text-ink font-bold">Lớp 9</option>
-        </optgroup>
-        <optgroup label="THPT">
-          <option value={10} className="bg-white text-ink font-bold">Lớp 10</option>
-          <option value={11} className="bg-white text-ink font-bold">Lớp 11</option>
-          <option value={12} className="bg-white text-ink font-bold">Lớp 12</option>
-        </optgroup>
-      </select>
+        <span className="text-sm lg:text-base leading-none" aria-hidden>{levelIcon}</span>
+        <span className="font-black text-ink whitespace-nowrap">
+          Lớp {currentGrade} {currentGrade === 6 ? '★' : ''}
+        </span>
+        <svg
+          className={`h-3.5 w-3.5 text-ink-soft transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden
+        >
+          <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div
+          role="dialog"
+          aria-label="Chọn khối lớp học"
+          className="absolute left-0 mt-2 z-50 w-72 sm:w-80 max-w-[calc(100vw-1.5rem)] rounded-3xl bg-white p-3.5 shadow-2xl border-2 border-banana-soft animate-pop divide-y divide-banana-soft/60"
+        >
+          <div className="pb-2.5 px-1 flex items-center justify-between">
+            <span className="text-xs font-black uppercase tracking-wider text-ink">
+              Khối lớp học tập
+            </span>
+            <span className="text-[10px] font-black text-sky-dark bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
+              Global Success
+            </span>
+          </div>
+
+          {/* Cấp 1: Tiểu học */}
+          <div className="py-2.5">
+            <div className="flex items-center justify-between text-[11px] font-black text-emerald-800 mb-1.5 px-1">
+              <span className="flex items-center gap-1">
+                <span>🎒</span> <span>Tiểu học (Lớp 1 – 5)</span>
+              </span>
+            </div>
+            <div className="grid grid-cols-5 gap-1.5">
+              {[1, 2, 3, 4, 5].map((g) => (
+                <button
+                  key={g}
+                  type="button"
+                  onClick={() => selectGrade(g)}
+                  className={`flex flex-col items-center justify-center rounded-xl py-1.5 text-xs font-black transition-all cursor-pointer ${
+                    currentGrade === g
+                      ? 'bg-emerald-600 text-white shadow-xs scale-105 ring-2 ring-emerald-400'
+                      : 'bg-cream text-ink hover:bg-emerald-50 hover:text-emerald-800 border border-emerald-100/80 active:scale-95'
+                  }`}
+                >
+                  <span>Lớp {g}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Cấp 2: THCS */}
+          <div className="py-2.5">
+            <div className="flex items-center justify-between text-[11px] font-black text-banana-dark mb-1.5 px-1">
+              <span className="flex items-center gap-1">
+                <span>🎓</span> <span>THCS (Lớp 6 – 9)</span>
+              </span>
+            </div>
+            <div className="grid grid-cols-4 gap-1.5">
+              {[6, 7, 8, 9].map((g) => (
+                <button
+                  key={g}
+                  type="button"
+                  onClick={() => selectGrade(g)}
+                  className={`flex flex-col items-center justify-center rounded-xl py-1.5 text-xs font-black transition-all cursor-pointer ${
+                    currentGrade === g
+                      ? 'bg-banana text-ink shadow-xs border-2 border-banana-dark scale-105 ring-2 ring-banana-dark/30'
+                      : 'bg-cream text-ink hover:bg-banana/30 border border-banana-soft active:scale-95'
+                  }`}
+                >
+                  <span>Lớp {g} {g === 6 ? '★' : ''}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Cấp 3: THPT */}
+          <div className="pt-2.5">
+            <div className="flex items-center justify-between text-[11px] font-black text-rose-800 mb-1.5 px-1">
+              <span className="flex items-center gap-1">
+                <span>🏛️</span> <span>THPT (Lớp 10 – 12)</span>
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-1.5">
+              {[10, 11, 12].map((g) => (
+                <button
+                  key={g}
+                  type="button"
+                  onClick={() => selectGrade(g)}
+                  className={`flex flex-col items-center justify-center rounded-xl py-1.5 text-xs font-black transition-all cursor-pointer ${
+                    currentGrade === g
+                      ? 'bg-rose-600 text-white shadow-xs scale-105 ring-2 ring-rose-400'
+                      : 'bg-cream text-ink hover:bg-rose-50 hover:text-rose-800 border border-rose-100/80 active:scale-95'
+                  }`}
+                >
+                  <span>Lớp {g}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -227,12 +329,19 @@ function TopNavBar({ currentStudent, onOpenAuthModal, totalStars, streak }) {
   );
 }
 
-function MobileTopBar({ currentStudent, onOpenAuthModal, totalStars }) {
+function MobileTopBar({ currentStudent, onOpenAuthModal, totalStars, streak = 0 }) {
+  const { settings, update } = useSettings();
+  const toggleSound = () => {
+    const next = !settings.sound;
+    update({ sound: next });
+    if (next) playSfx('click');
+  };
+
   return (
     <header className="no-print md:hidden sticky top-0 z-40 bg-white/95 border-b-2 border-banana-soft px-3 py-2 flex items-center justify-between shadow-xs backdrop-blur-md gap-2">
       <div className="flex items-center gap-2 min-w-0">
-        <NavLink to="/" className="flex items-center gap-1.5 shrink-0">
-          <span className="text-2xl leading-none">📚</span>
+        <NavLink to="/" className="flex items-center gap-1.5 shrink-0" aria-label="Trang chủ">
+          <span className="text-2xl leading-none" aria-hidden>📚</span>
         </NavLink>
         <GradeSwitcher compact />
       </div>
@@ -243,14 +352,30 @@ function MobileTopBar({ currentStudent, onOpenAuthModal, totalStars }) {
             playSfx('click');
             onOpenAuthModal();
           }}
-          className="flex items-center gap-1.5 rounded-xl bg-cream px-2 py-1 text-xs font-black text-ink border border-banana-soft max-w-[130px] truncate shadow-2xs"
+          className="flex items-center gap-1 rounded-xl bg-cream px-2 py-1 text-xs font-black text-ink border border-banana-soft max-w-[110px] truncate shadow-2xs active:scale-95"
         >
-          <span>{currentStudent ? (currentStudent.avatar || '🦁') : '👤'}</span>
+          <span aria-hidden>{currentStudent ? (currentStudent.avatar || '🦁') : '👤'}</span>
           <span className="truncate">{currentStudent ? currentStudent.name : 'Đăng nhập'}</span>
         </button>
-        <span className="flex items-center gap-1 rounded-xl bg-white px-2 py-1 text-xs font-black text-ink border border-banana-soft shadow-2xs">
-          ⭐ {totalStars}
-        </span>
+        <div className="flex items-center gap-1 rounded-xl bg-white px-2 py-1 text-xs font-black text-ink border border-banana-soft shadow-2xs">
+          <span aria-hidden>⭐</span>
+          <span>{totalStars}</span>
+        </div>
+        {streak > 0 && (
+          <div className="hidden xs:flex items-center gap-0.5 rounded-xl bg-white px-1.5 py-1 text-xs font-black text-peach-dark border border-banana-soft shadow-2xs">
+            <span aria-hidden>🔥</span>
+            <span>{streak}</span>
+          </div>
+        )}
+        <button
+          type="button"
+          onClick={toggleSound}
+          aria-label={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
+          title={settings.sound ? 'Tắt âm thanh' : 'Bật âm thanh'}
+          className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-white text-sm shadow-2xs border border-banana-soft active:scale-95 cursor-pointer"
+        >
+          {settings.sound ? '🔊' : '🔇'}
+        </button>
       </div>
     </header>
   );
@@ -371,8 +496,9 @@ function AppContent() {
         currentStudent={currentStudent}
         onOpenAuthModal={() => setShowAuthModal(true)}
         totalStars={totalStars}
+        streak={streak}
       />
-      <main className="mx-auto w-full max-w-4xl flex-1 px-4 pt-4 pb-28 md:pb-12 md:pt-6">
+      <main className="mx-auto w-full max-w-6xl xl:max-w-7xl flex-1 px-3.5 sm:px-6 lg:px-8 pt-3 pb-28 md:pb-12 md:pt-6">
         {currentStudent && pending > 0 && !getStudentToken() && !isTeacherPage && (
           <button
             type="button"

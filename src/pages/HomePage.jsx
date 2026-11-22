@@ -18,6 +18,12 @@ import { unitNumberOf } from '../utils/unitId.js';
 
 const ALL_GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
+const EDUCATION_LEVELS = [
+  { id: 'primary', label: 'Tiểu học', sub: 'Lớp 1 – 5', icon: '🎒', grades: [1, 2, 3, 4, 5] },
+  { id: 'secondary', label: 'THCS', sub: 'Lớp 6 – 9', icon: '🎓', grades: [6, 7, 8, 9] },
+  { id: 'high', label: 'THPT', sub: 'Lớp 10 – 12', icon: '🏛️', grades: [10, 11, 12] },
+];
+
 export const speakWord = async (word) => {
   if (!word) return;
   return speak(word, { lang: 'en-GB', rate: 0.85 });
@@ -186,41 +192,113 @@ export default function HomePage() {
       )}
 
       {/* Quick switcher buttons to easily jump between Lớp 1..12 */}
-      <section aria-label="Bộ chọn khối lớp nhanh" className="rounded-2xl bg-white p-3 border-2 border-banana-soft shadow-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-          <div className="flex items-center gap-2">
-            <span className="text-xl" aria-hidden>🎓</span>
-            <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-xs sm:text-sm font-black text-ink">
-                Chọn khối lớp:
-              </span>
-              <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white shadow-2xs">
-                Lớp {activeGrade} {activeGrade === 6 ? '(SGK Tương tác 3D)' : ''}
-              </span>
+      <section aria-label="Bộ chọn khối lớp" className="rounded-3xl bg-white p-3.5 sm:p-5 border-2 border-banana-soft shadow-[0_4px_0_#efe3cc]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-banana-soft/60">
+          <div className="flex items-center gap-2.5">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-banana text-xl shadow-2xs" aria-hidden>
+              {activeGrade <= 5 ? '🎒' : activeGrade <= 9 ? '🎓' : '🏛️'}
+            </span>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-xs sm:text-sm font-black text-ink">
+                  Chương trình 12 Khối Lớp
+                </span>
+                <span className="rounded-full bg-peach px-2.5 py-0.5 text-xs font-black text-white shadow-2xs">
+                  Đang học: Lớp {activeGrade} {activeGrade === 6 ? '★ 3D' : ''}
+                </span>
+              </div>
+              <p className="text-[11px] sm:text-xs font-bold text-ink-soft">
+                {activeGrade <= 5 ? '🎒 Cấp Tiểu học (Lớp 1 – 5)' : activeGrade <= 9 ? '🎓 Cấp THCS (Lớp 6 – 9)' : '🏛️ Cấp THPT (Lớp 10 – 12)'}
+                {activeGrade === 6 && ' • Giáo trình tương tác 3D chuẩn Bộ GD&ĐT'}
+              </p>
             </div>
           </div>
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-thin">
-            {ALL_GRADES.map((g) => (
-              <button
-                key={g}
-                type="button"
-                onClick={() => {
-                  update({ selectedGrade: g });
-                  if (typeof window !== 'undefined') {
-                    window.dispatchEvent(new CustomEvent('grade-changed', { detail: { grade: g } }));
-                  }
-                  playSfx('click');
-                }}
-                className={`rounded-xl px-2.5 sm:px-3 py-1 text-xs font-black whitespace-nowrap transition-all cursor-pointer ${
-                  activeGrade === g
-                    ? 'bg-banana text-ink shadow-[0_2px_0_var(--color-banana-dark)] border-2 border-banana-dark scale-105'
-                    : 'bg-cream text-ink-soft border border-banana-soft/70 hover:bg-banana/30 hover:text-ink'
+
+          <div className="flex items-center gap-1.5 self-start sm:self-auto">
+            <span className="text-[11px] sm:text-xs font-bold text-ink-soft hidden md:inline">Cấp:</span>
+            <div className="flex items-center gap-1 rounded-xl bg-cream p-1 border border-banana-soft">
+              {EDUCATION_LEVELS.map((lvl) => {
+                const isActive = lvl.grades.includes(activeGrade);
+                return (
+                  <button
+                    key={lvl.id}
+                    type="button"
+                    onClick={() => {
+                      if (!isActive) {
+                        const target = lvl.grades[0];
+                        update({ selectedGrade: target });
+                        if (typeof window !== 'undefined') {
+                          window.dispatchEvent(new CustomEvent('grade-changed', { detail: { grade: target } }));
+                        }
+                        playSfx('click');
+                      }
+                    }}
+                    className={`rounded-lg px-2.5 py-1 text-xs font-black transition-all cursor-pointer ${
+                      isActive
+                        ? 'bg-peach text-white shadow-2xs'
+                        : 'text-ink-soft hover:bg-banana/30 hover:text-ink'
+                    }`}
+                  >
+                    <span>{lvl.icon}</span> <span className="hidden sm:inline">{lvl.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* 3 Tier Groups with Grade Pills - Responsive grid filling 100% width with no overflow */}
+        <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2.5">
+          {EDUCATION_LEVELS.map((lvl) => {
+            const isLevelActive = lvl.grades.includes(activeGrade);
+            const gridColsClass = lvl.id === 'primary' ? 'grid-cols-5' : lvl.id === 'secondary' ? 'grid-cols-4' : 'grid-cols-3';
+            return (
+              <div
+                key={lvl.id}
+                className={`rounded-2xl p-2.5 transition-all ${
+                  isLevelActive
+                    ? 'bg-peach-soft/20 border-2 border-peach/50 shadow-xs'
+                    : 'bg-cream/40 border border-banana-soft/60'
                 }`}
               >
-                Lớp {g} {g === 6 ? '★' : ''}
-              </button>
-            ))}
-          </div>
+                <div className="flex items-center justify-between mb-1.5 px-0.5">
+                  <span className="text-xs font-black text-ink flex items-center gap-1">
+                    <span>{lvl.icon}</span> {lvl.label}
+                  </span>
+                  <span className="text-[10px] font-bold text-ink-soft">
+                    {lvl.sub}
+                  </span>
+                </div>
+                <div className={`grid ${gridColsClass} gap-1.5`}>
+                  {lvl.grades.map((g) => (
+                    <button
+                      key={g}
+                      type="button"
+                      onClick={() => {
+                        update({ selectedGrade: g });
+                        if (typeof window !== 'undefined') {
+                          window.dispatchEvent(new CustomEvent('grade-changed', { detail: { grade: g } }));
+                        }
+                        playSfx('click');
+                      }}
+                      className={`relative flex flex-col items-center justify-center rounded-xl py-1 text-xs font-black transition-all cursor-pointer ${
+                        activeGrade === g
+                          ? 'bg-peach text-white shadow-[0_2px_0_var(--color-peach-dark)] scale-105 z-10'
+                          : 'bg-white text-ink-soft hover:bg-banana/30 hover:text-ink border border-banana-soft/70'
+                      }`}
+                    >
+                      <span>Lớp {g}</span>
+                      {g === 6 && (
+                        <span className={`text-[9px] font-black -mt-0.5 ${activeGrade === g ? 'text-banana' : 'text-amber-500'}`}>
+                          ★ 3D
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -361,7 +439,7 @@ export default function HomePage() {
               <p className="text-sm sm:text-base font-bold text-ink-soft">{t.home.unitsSub}</p>
             </div>
 
-            <ul className="grid grid-cols-2 gap-3.5 sm:grid-cols-3">
+            <ul className="grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-4">
               {units.map((u) => {
                 const stars = Object.values(progress.units[u.unitId]?.modes ?? {}).reduce((a, b) => a + b, 0);
                 const content = (
@@ -667,43 +745,51 @@ export default function HomePage() {
                     </div>
 
                     {/* Nút hành động học tập & Mở SGK */}
-                    <div className="flex flex-col gap-2.5 pt-3 border-t border-banana-soft/60 mt-2">
-                      <div className="flex flex-wrap items-center gap-1.5">
-                        <Link
-                          to={`/unit/${targetUnitId}`}
-                          onClick={() => playSfx('click')}
-                          className="inline-flex flex-1 min-w-[120px] items-center justify-center gap-1.5 rounded-xl bg-peach px-3 py-2 text-xs font-black text-white shadow-[0_2px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all text-center"
-                        >
-                          <span>🚀 Vào bài học</span>
-                        </Link>
+                    <div className="flex flex-col gap-2.5 pt-3.5 border-t border-banana-soft/60 mt-3">
+                      {/* Nút chính: Toàn bộ 7 trạm học */}
+                      <Link
+                        to={`/unit/${targetUnitId}`}
+                        onClick={() => playSfx('click')}
+                        className="flex w-full items-center justify-center gap-2 rounded-2xl bg-peach px-4 py-2.5 text-xs sm:text-sm font-black text-white shadow-[0_3px_0_var(--color-peach-dark)] hover:-translate-y-0.5 active:translate-y-0.5 transition-all text-center cursor-pointer"
+                      >
+                        <span className="text-base" aria-hidden>🚀</span>
+                        <span>Vào bài học (Đầy đủ 7 Trạm)</span>
+                      </Link>
+
+                      {/* 3 Nút kỹ năng chuyên sâu: Luyện nói, Ngữ pháp, Đọc hiểu - Grid 3 cột đều đẹp */}
+                      <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
                         <Link
                           to={`/speaking?unit=${targetUnitId}`}
                           onClick={() => playSfx('click')}
-                          className="inline-flex items-center gap-1 rounded-xl bg-banana px-2.5 py-2 text-xs font-black text-ink shadow-[0_2px_0_var(--color-banana-dark)] hover:bg-banana-dark hover:text-white transition-all"
+                          className="flex items-center justify-center gap-1 rounded-xl bg-banana/80 border border-banana-dark/30 py-2 px-1 text-[11px] sm:text-xs font-black text-ink shadow-[0_2px_0_var(--color-banana-dark)] hover:bg-banana hover:-translate-y-0.5 transition-all text-center"
                           title="Luyện nói AI & Phân vai"
                         >
-                          <span>🎙️ Nói AI</span>
+                          <span>🎙️</span>
+                          <span className="truncate">Nói AI</span>
                         </Link>
                         <Link
                           to={`/grammar?unit=${targetUnitId}`}
                           onClick={() => playSfx('click')}
-                          className="inline-flex items-center gap-1 rounded-xl bg-sky-100 text-sky-900 border border-sky-300 px-2.5 py-2 text-xs font-black hover:bg-sky-200 transition-all"
+                          className="flex items-center justify-center gap-1 rounded-xl bg-sky-50 text-sky-900 border border-sky-300 py-2 px-1 text-[11px] sm:text-xs font-black shadow-[0_2px_0_#93c5fd] hover:bg-sky-100 hover:-translate-y-0.5 transition-all text-center"
                           title="Ngữ pháp & Trắc nghiệm"
                         >
-                          <span>📐 Ngữ pháp</span>
+                          <span>📐</span>
+                          <span className="truncate">Ngữ pháp</span>
                         </Link>
                         <Link
                           to={`/reading?unit=${targetUnitId}`}
                           onClick={() => playSfx('click')}
-                          className="inline-flex items-center gap-1 rounded-xl bg-emerald-100 text-emerald-900 border border-emerald-300 px-2.5 py-2 text-xs font-black hover:bg-emerald-200 transition-all"
+                          className="flex items-center justify-center gap-1 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-300 py-2 px-1 text-[11px] sm:text-xs font-black shadow-[0_2px_0_#86efac] hover:bg-emerald-100 hover:-translate-y-0.5 transition-all text-center"
                           title="Đọc hiểu & Dịch bài"
                         >
-                          <span>📖 Đọc hiểu</span>
+                          <span>📖</span>
+                          <span className="truncate">Đọc hiểu</span>
                         </Link>
                       </div>
 
+                      {/* Footer bài học: Tên bộ sách & Nút mở SGK */}
                       <div className="flex items-center justify-between pt-1">
-                        <span className="text-[11px] font-bold text-ink-soft">
+                        <span className="text-[11px] font-bold text-ink-soft truncate max-w-[50%]">
                           {gradeData.title.split('–')[0]}
                         </span>
                         <button
@@ -713,7 +799,7 @@ export default function HomePage() {
                             setShowPdfReaderModal(true);
                             playSfx('click');
                           }}
-                          className="inline-flex items-center gap-1 text-xs font-black text-peach-dark hover:underline cursor-pointer"
+                          className="inline-flex items-center gap-1 text-xs font-black text-peach-dark hover:underline cursor-pointer shrink-0"
                         >
                           <span>📖 Mở SGK điện tử →</span>
                         </button>
