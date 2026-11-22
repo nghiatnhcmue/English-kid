@@ -39,13 +39,16 @@ async function handleStudents(path, request, db, url) {
     const now = new Date().toISOString();
     const conflicts = [];
     const stmts = [];
+    const seen = new Set(); // 2 dòng trùng tên đăng nhập trong cùng một lần gửi → báo trùng (thay vì lỗi 500)
     for (const s of upsert) {
       const id = str(s.id, 60) || `stu_${randomHex(6)}`;
       const username = str(s.username, 60).toLowerCase();
       const name = str(s.name, 80);
       const cls = str(s.class, 20);
       if (!username || !name || !cls) throw new HttpError(400, `Thiếu tên đăng nhập / họ tên / lớp (${name || username || id}).`);
-      const clash = await db.prepare('SELECT id FROM students WHERE username = ? AND id != ?').bind(username, id).first();
+      const clash =
+        seen.has(username) || (await db.prepare('SELECT id FROM students WHERE username = ? AND id != ?').bind(username, id).first());
+      seen.add(username);
       if (clash) {
         conflicts.push(username);
         continue;
@@ -201,7 +204,11 @@ async function handleScores(path, request, db, url) {
     const correct = Math.max(0, Math.min(total, Math.floor(Number(b.correct) || 0)));
     const score = Math.max(0, Math.min(10, Number(b.score) || 0));
     const stars = Math.max(0, Math.min(3, Math.floor(Number(b.stars) || 0)));
-    const unitIds = (Array.isArray(b.unitIds) ? b.unitIds : []).map(Number).filter((n) => Number.isInteger(n) && n > 0).slice(0, 20);
+    // Lớp 6 / Unit tự tạo: số nguyên dương; các khối khác: 'g7_u1'
+    const unitIds = (Array.isArray(b.unitIds) ? b.unitIds : [])
+      .map((u) => (typeof u === 'string' && /^g\d{1,2}_u\d{1,2}$/.test(u) ? u : Number(u)))
+      .filter((n) => typeof n === 'string' || (Number.isInteger(n) && n > 0))
+      .slice(0, 20);
     const wrong = (Array.isArray(b.wrongWords) ? b.wrongWords : []).map((w) => str(w, 60)).slice(0, 100);
     const answers = JSON.stringify(Array.isArray(b.answers) ? b.answers.slice(0, 200) : []).slice(0, 50000);
     const kind = b.kind === 'station' ? 'station' : 'test';

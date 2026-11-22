@@ -12,8 +12,18 @@ import {
 // Tái xuất danh mục sách và các hàm trợ giúp
 export { OFFICIAL_BOOKS, SCHOOL_LEVELS, findOfficialBook, getBooksBySchoolLevel, getBooksByGrade };
 
-// Bản scan SGK: trang PDF = trang in trên sách + 1 (trang 1 của file là bìa).
+// Bản scan SGK: trang PDF = trang in trên sách + độ lệch (số trang bìa/trang lót trước trang 1).
+// Đo bằng OCR số trang in ở chân trang của từng file trong public/pdf/.
 export const PDF_PAGE_OFFSET = 1;
+const PDF_PAGE_OFFSETS = {
+  'sgk-4-tap1': 2,
+  'sgk-4-tap2': 2,
+  'sgk-5-tap1': 2,
+  'sgk-7': 2,
+  'sgk-11': 2,
+  'sgk-12': 2,
+};
+export const pdfOffsetFor = (bookId) => PDF_PAGE_OFFSETS[bookId] ?? PDF_PAGE_OFFSET;
 export const bookIdForUnit = (unit) => {
   if (unit?.bookId) return unit.bookId;
   const grade = Number(unit?.grade) || 6;
@@ -28,7 +38,7 @@ export const bookIdForUnit = (unit) => {
 };
 export const pdfPageForUnit = (unit) => {
   const start = Number(unit?.bookStartPage) || Number(String(unit?.bookPages || '').match(/\d+/)?.[0]) || 1;
-  return start + PDF_PAGE_OFFSET;
+  return start + pdfOffsetFor(bookIdForUnit(unit));
 };
 
 let pdfjsPromise;
@@ -52,7 +62,7 @@ const ZOOMS = [1, 1.25, 1.5, 2];
 /**
  * Trình đọc PDF vẽ từng trang ra canvas (pdf.js): chạy được trên Android/iOS (iframe PDF thì không),
  * chỉ tải phần trang đang xem nhờ range request, và mở thẳng tới trang của Unit.
- * initialPage = số trang PDF (đã cộng PDF_PAGE_OFFSET).
+ * initialPage = số trang PDF (đã cộng độ lệch của sách, xem pdfOffsetFor).
  */
 function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   const [activeBookId, setActiveBookId] = useState(initialBookId);
@@ -62,7 +72,7 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   const [doc, setDoc] = useState(null);
   const [numPages, setNumPages] = useState(0);
   const [page, setPage] = useState(initialPage);
-  const [pageInput, setPageInput] = useState(String(Math.max(1, initialPage - PDF_PAGE_OFFSET)));
+  const [pageInput, setPageInput] = useState(String(Math.max(1, initialPage - pdfOffsetFor(initialBookId))));
   const [zoomIdx, setZoomIdx] = useState(0);
   const [status, setStatus] = useState('loading'); // loading | ready | error
   const [containerWidth, setContainerWidth] = useState(0);
@@ -72,7 +82,8 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
 
   const currentBook = customPdf || findOfficialBook(activeBookId);
   const isOfficial = !customPdf;
-  const printedPage = isOfficial ? page - PDF_PAGE_OFFSET : page;
+  const offset = isOfficial ? pdfOffsetFor(currentBook?.id) : 0;
+  const printedPage = page - offset;
 
   // Đồng bộ activeBookId và levelFilter khi initialBookId thay đổi
   useEffect(() => {
@@ -143,8 +154,8 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   }, [currentBook.src]);
 
   useEffect(() => {
-    setPageInput(String(isOfficial ? page - PDF_PAGE_OFFSET : page));
-  }, [page, isOfficial]);
+    setPageInput(String(page - offset));
+  }, [page, offset]);
 
   // Vẽ trang hiện tại
   const renderPage = useCallback(async () => {
@@ -177,7 +188,7 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
   const goToPrinted = (value) => {
     const n = Number(value);
     if (!Number.isFinite(n)) return;
-    const target = isOfficial ? n + PDF_PAGE_OFFSET : n;
+    const target = n + offset;
     setPage(Math.min(Math.max(1, target), numPages || target));
   };
 
@@ -209,7 +220,7 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
     if (b?.schoolLevel && levelFilter !== 'all' && levelFilter !== b.schoolLevel) {
       setLevelFilter(b.schoolLevel);
     }
-    setPage(bookId === initialBookId ? initialPage : 1 + PDF_PAGE_OFFSET);
+    setPage(bookId === initialBookId ? initialPage : 1 + pdfOffsetFor(bookId));
   };
 
   const navBtn =
@@ -399,7 +410,7 @@ function PdfReaderBody({ onClose, initialBookId = 'tap1', initialPage = 1 }) {
                   className="h-10 w-12 rounded-xl border border-banana-soft bg-white text-center text-sm font-black text-ink shadow-2xs"
                 />
                 <span className="whitespace-nowrap">
-                  {printedPage < 1 && isOfficial ? '(bìa)' : `/ ${isOfficial ? Math.max(0, numPages - PDF_PAGE_OFFSET) : numPages}`}
+                  {printedPage < 1 && isOfficial ? '(bìa)' : `/ ${isOfficial ? Math.max(0, numPages - offset) : numPages}`}
                 </span>
               </form>
               <button

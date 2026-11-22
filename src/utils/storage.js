@@ -1,6 +1,7 @@
 import { updateMastery } from './mastery.js';
 import { isoWeek, localDay } from './dates.js';
 import { scoreTest } from './testGenerator.js';
+import { normUnitId } from './unitId.js';
 
 const PREFIX = 'app_tienganh_v1_';
 export const KEYS = {
@@ -385,7 +386,7 @@ export function createStore(storage = globalThis.localStorage) {
     /** Lưu số sao tốt nhất của một chế độ ôn trong Unit. */
     saveModeResult(unitId, mode, stars, now = new Date()) {
       const p = api.getProgress();
-      const numUnit = Number(unitId);
+      const numUnit = normUnitId(unitId);
       const unit = p.units[numUnit] ?? { modes: {} };
       unit.modes = { ...unit.modes, [mode]: Math.max(unit.modes?.[mode] ?? 0, stars) };
       p.units = { ...p.units, [numUnit]: unit };
@@ -444,7 +445,7 @@ export function createStore(storage = globalThis.localStorage) {
     recordStationProgress(unitId, stationKey, data = {}) {
       const student = api.getCurrentStudent();
       const now = new Date();
-      const numUnit = Number(unitId);
+      const numUnit = normUnitId(unitId);
       const stars = Number(data.stars ?? (data.correct ? 3 : 1));
 
       // 1. Cập nhật tiến độ
@@ -472,11 +473,11 @@ export function createStore(storage = globalThis.localStorage) {
     },
     getCustomUnit(unitId) {
       const all = api.getCustomUnits();
-      return all[Number(unitId)] || null;
+      return all[normUnitId(unitId)] || null;
     },
     saveCustomUnit(unitId, data) {
       const all = api.getCustomUnits();
-      const numId = Number(unitId);
+      const numId = normUnitId(unitId);
       all[numId] = { ...(all[numId] || {}), ...data };
       write(KEYS.CUSTOM_UNITS, all);
       if (typeof window !== 'undefined') {
@@ -486,7 +487,7 @@ export function createStore(storage = globalThis.localStorage) {
     },
     resetUnit(unitId) {
       const all = api.getCustomUnits();
-      const numId = Number(unitId);
+      const numId = normUnitId(unitId);
       delete all[numId];
       write(KEYS.CUSTOM_UNITS, all);
       if (typeof window !== 'undefined') {
@@ -908,7 +909,7 @@ export function createStore(storage = globalThis.localStorage) {
         week: Number(assignment.week) || 1,
         targetClass: assignment.targetClass || 'all',
         scopeType: assignment.scopeType || 'full_unit', // 'full_unit' | 'skill' | 'custom_words' | 'custom_questions' | 'external_quiz'
-        unitId: assignment.unitId !== undefined && assignment.unitId !== null ? Number(assignment.unitId) : 1,
+        unitId: assignment.unitId !== undefined && assignment.unitId !== null ? normUnitId(assignment.unitId) ?? 1 : 1,
         passage: assignment.passage || null,
         selectedSkill: assignment.selectedSkill || 'all', // 'vocab' | 'pronunciation' | 'grammar' | 'listening' | 'speaking' | 'reading' | 'writing' | 'mastery'
         selectedWordIds: Array.isArray(assignment.selectedWordIds)

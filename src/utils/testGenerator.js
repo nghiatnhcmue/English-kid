@@ -17,7 +17,8 @@ const KIND_TYPES = {
 };
 
 function blankSentence(sentence, word) {
-  const re = new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
+  // Chỉ đục lỗ đúng cả từ: 'cat' không được đục trong 'category'
+  const re = new RegExp(`(?<![A-Za-z])${word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![A-Za-z])`, 'i');
   return re.test(sentence) ? sentence.replace(re, '_____') : null;
 }
 

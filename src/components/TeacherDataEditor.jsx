@@ -27,6 +27,7 @@ import {
   Volume2, 
   Youtube 
 } from 'lucide-react';
+import { normUnitId, unitNumberOf } from '../utils/unitId.js';
 
 export default function TeacherDataEditor() {
   const units = listUnits();
@@ -868,14 +869,14 @@ export default function TeacherDataEditor() {
             <select
               value={selectedUnitId}
               onChange={(e) => {
-                setSelectedUnitId(Number(e.target.value));
+                setSelectedUnitId(normUnitId(e.target.value));
                 setJsonError(null);
               }}
               className="rounded-2xl bg-cream px-4 py-2.5 text-base font-black text-ink border border-banana-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-banana cursor-pointer"
             >
               {units.map((u) => (
                 <option key={u.unitId} value={u.unitId}>
-                  Unit {u.unitId}: {u.title || u.titleEn} ({u.titleVi}) {u.isCustomUnit ? '🌟 [Tự tạo]' : ''}
+                  Unit {unitNumberOf(u)}: {u.title || u.titleEn} ({u.titleVi}) {u.isCustomUnit ? '🌟 [Tự tạo]' : ''}
                 </option>
               ))}
             </select>

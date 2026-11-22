@@ -7,7 +7,7 @@
  * 4. Speech recognition controller (STT) lifecycle, interim results, and methods.
  * 5. Speech fallback scoring and word matching engine.
  * 6. Dialogue turn structure and multi-turn conversations.
- * 7. Teacher authentication (online flow + emergency offline fallback GV01/123456789).
+ * 7. Teacher authentication (online flow; no hard-coded offline fallback).
  * 8. Student login PIN validation (local storage + online flow).
  * 9. ErrorBoundary fallback navigation URLs and cache-buster logic.
  * 10. Offline outbox queue, deduplication, and sync resilience.
@@ -530,44 +530,29 @@ describe('System Audit Checklist (10-Point Verification)', () => {
       expect(emptyPass.success).toBe(false);
     });
 
-    it('offline emergency fallback activates for GV01 / 123456789 when network is offline', async () => {
-      // Mock network failure (offline)
+    it('GV01 / 123456789 KHÔNG còn là tài khoản khẩn cấp khi mất mạng', async () => {
       globalThis.fetch = vi.fn().mockRejectedValue(new TypeError('Failed to fetch'));
-
-      // Test with case-insensitive username 'gv01'
       const res = await loginTeacher('gv01', '123456789');
-      expect(res.success).toBe(true);
-      expect(res.offlineFallback).toBe(true);
-
-      expect(getTeacherToken()).toBe('local-gv01-session');
-      const session = store().getTeacherSession();
-      expect(session).toBeDefined();
-      expect(session.username).toBe('GV01');
-      expect(session.displayName).toBe('Giáo Viên (Chế độ Cục bộ)');
-
-      // Verify session survives in offline state
-      const verified = await verifyTeacherSession();
-      expect(verified).toBe(true);
+      expect(res.success).toBe(false);
+      expect(getTeacherToken()).toBeNull();
+      expect(store().getTeacherSession()).toBeFalsy();
     });
 
-    it('offline emergency fallback activates for GV01 when server returns 404 / 503', async () => {
-      // Mock server 404 (local dev without backend worker)
-      globalThis.fetch = vi.fn().mockResolvedValue(
-        new Response(JSON.stringify({ error: 'Not Found' }), { status: 404 })
-      );
+    it('GV01 KHÔNG đăng nhập được khi máy chủ trả 404 / 503', async () => {
+      for (const status of [404, 503]) {
+        globalThis.fetch = vi.fn().mockResolvedValue(new Response(JSON.stringify({ error: 'x' }), { status }));
+        const res = await loginTeacher('GV01', '123456789');
+        expect(res.success).toBe(false);
+        expect(getTeacherToken()).toBeNull();
+      }
+    });
 
-      const res404 = await loginTeacher('GV01', '123456789');
-      expect(res404.success).toBe(true);
-      expect(res404.offlineFallback).toBe(true);
-
-      // Mock server 503 (service unavailable)
-      globalThis.fetch = vi.fn().mockResolvedValue(
-        new Response(JSON.stringify({ error: 'Service Unavailable' }), { status: 503 })
-      );
-
-      const res503 = await loginTeacher('GV01', '123456789');
-      expect(res503.success).toBe(true);
-      expect(res503.offlineFallback).toBe(true);
+    it('phiên cục bộ "local-gv01-session" còn sót từ bản cũ bị xóa', async () => {
+      globalThis.localStorage.setItem('app_tienganh_v1_teacher_token', JSON.stringify('local-gv01-session'));
+      store().setTeacherSession({ id: 'gv01_local', username: 'GV01' });
+      globalThis.fetch = vi.fn().mockRejectedValue(new TypeError('Failed to fetch'));
+      expect(await verifyTeacherSession()).toBe(false);
+      expect(getTeacherToken()).toBeNull();
     });
 
     it('offline mode rejects incorrect credentials and does NOT authenticate', async () => {

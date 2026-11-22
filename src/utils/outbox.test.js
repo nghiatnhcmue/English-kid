@@ -71,4 +71,33 @@ describe('Hàng đợi gửi bài (offline-first)', () => {
     expect(calls).toHaveLength(0);
     expect(pendingCount()).toBe(1);
   });
+
+  it('máy dùng chung: bài của em A KHÔNG được gửi bằng token của em B', async () => {
+    delete mem.app_tienganh_v1_student_token;
+    // Em A đăng nhập trên máy (offline), làm bài → nằm trong hàng đợi, gắn với A
+    mem.app_tienganh_v1_students_list = JSON.stringify([
+      { id: 'stu_A', username: 'a', name: 'A', class: '6A1' },
+      { id: 'stu_B', username: 'b', name: 'B', class: '6A1' },
+    ]);
+    mem.app_tienganh_v1_current_student_id = JSON.stringify('stu_A');
+    enqueue('score', { kind: 'test', score: 10 }, 'score:A1');
+    expect(pendingCount()).toBe(1);
+    // Em B đăng nhập (có token của B)
+    mem.app_tienganh_v1_current_student_id = JSON.stringify('stu_B');
+    mem.app_tienganh_v1_student_token = JSON.stringify('b'.repeat(64));
+    mem.app_tienganh_v1_student_token_owner = JSON.stringify('stu_B');
+    await flushOutbox();
+    expect(calls).toHaveLength(0);
+    expect(pendingCount()).toBe(1);
+    // A đăng nhập lại → bài của A mới được gửi
+    mem.app_tienganh_v1_current_student_id = JSON.stringify('stu_A');
+    mem.app_tienganh_v1_student_token = JSON.stringify('a'.repeat(64));
+    mem.app_tienganh_v1_student_token_owner = JSON.stringify('stu_A');
+    const p = flushOutbox();
+    await until(() => calls.length === 1);
+    release();
+    await p;
+    expect(calls).toHaveLength(1);
+    expect(pendingCount()).toBe(0);
+  });
 });

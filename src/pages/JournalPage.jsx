@@ -9,6 +9,7 @@ import { sayWord } from '../utils/speech.js';
 import { useSettings } from '../settings.jsx';
 import { Button3D, PageHeader, ProgressBar, Stars } from '../components/ui.jsx';
 import { t } from '../i18n/vi.js';
+import { unitNumberOf } from '../utils/unitId.js';
 
 /** Biểu đồ đường điểm số (thang 10) theo thời gian. */
 function ScoreChart({ tests }) {
@@ -199,7 +200,7 @@ export default function JournalPage() {
           {unitRows.map((u) => (
             <li key={u.unitId} className="print-card rounded-3xl bg-white p-5 shadow-xs border-2 border-banana-soft">
               <p className="text-lg font-black text-ink">
-                {u.emoji} Unit {u.unitId}: {u.titleEn}
+                {u.emoji} Unit {unitNumberOf(u)}: {u.titleEn}
               </p>
               <div className="mt-3 grid gap-3 text-sm font-bold text-ink-soft sm:grid-cols-2">
                 <div>

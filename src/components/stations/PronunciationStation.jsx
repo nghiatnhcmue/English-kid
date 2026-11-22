@@ -15,7 +15,19 @@ import { useSettings } from '../../settings.jsx';
  */
 export default function PronunciationStation({ unit, onFinish }) {
   const { settings } = useSettings();
-  const pron = unit?.pronunciation;
+  // Chuẩn hóa: dữ liệu một số khối lớp lưu từ ví dụ dạng chuỗi và nghĩa ở trường meaningVi
+  const pron = useMemo(() => {
+    const p = unit?.pronunciation;
+    if (!p) return p;
+    const meaningOf = (w) => (unit?.vocabularies || []).find((v) => v.word?.toLowerCase() === String(w).toLowerCase())?.meaning || '';
+    const sound = (s) => s && { ...s, words: (s.words || []).map((w) => (typeof w === 'string' ? { word: w, meaning: meaningOf(w) } : w)) };
+    return {
+      ...p,
+      sound1: sound(p.sound1) || { symbol: '', name: '', words: [] },
+      sound2: sound(p.sound2) || { symbol: '', name: '', words: [] },
+      practiceQuiz: (p.practiceQuiz || []).map((q) => ({ ...q, meaning: q.meaning || q.meaningVi || meaningOf(q.word) })),
+    };
+  }, [unit]);
   // Từ nào trùng từ vựng của Unit thì dùng file mp3 thu sẵn (chạy offline), còn lại mới đọc online/TTS
   const audioFor = useMemo(() => {
     const map = new Map((unit?.vocabularies || []).map((v) => [v.word.toLowerCase(), v.audio]));
@@ -98,9 +110,11 @@ export default function PronunciationStation({ unit, onFinish }) {
               <span className="text-sm font-black text-ink-soft">{pron.sound1.name}</span>
             </div>
 
-            <p className="mt-3 text-sm font-bold text-ink bg-cream p-3 rounded-2xl border border-[#efe3cc]">
-              💡 <strong>Khẩu hình:</strong> {pron.sound1.guideVi}
-            </p>
+            {pron.sound1.guideVi && (
+              <p className="mt-3 text-sm font-bold text-ink bg-cream p-3 rounded-2xl border border-[#efe3cc]">
+                💡 <strong>Cách đọc:</strong> {pron.sound1.guideVi}
+              </p>
+            )}
 
             <div className="mt-4 flex flex-col gap-2">
               <span className="text-xs font-black uppercase text-ink-soft">Ví dụ (bấm để nghe):</span>
@@ -138,9 +152,11 @@ export default function PronunciationStation({ unit, onFinish }) {
               <span className="text-sm font-black text-peach-dark">{pron.sound2.name}</span>
             </div>
 
-            <p className="mt-3 text-sm font-bold text-ink bg-peach-soft/40 p-3 rounded-2xl border border-peach/20">
-              💡 <strong>Khẩu hình:</strong> {pron.sound2.guideVi}
-            </p>
+            {pron.sound2.guideVi && (
+              <p className="mt-3 text-sm font-bold text-ink bg-peach-soft/40 p-3 rounded-2xl border border-peach/20">
+                💡 <strong>Cách đọc:</strong> {pron.sound2.guideVi}
+              </p>
+            )}
 
             <div className="mt-4 flex flex-col gap-2">
               <span className="text-xs font-black uppercase text-peach-dark">Ví dụ (bấm để nghe):</span>
@@ -183,10 +199,14 @@ export default function PronunciationStation({ unit, onFinish }) {
           </span>
         </div>
 
-        {!isCompleted ? (
+        {quizList.length === 0 ? (
+          <p className="mt-6 text-center text-sm sm:text-base font-bold text-ink-soft">
+            Bài này chưa có câu luyện chọn âm. Em hãy bấm vào các từ ví dụ ở trên để nghe và đọc theo nhé!
+          </p>
+        ) : !isCompleted ? (
           <div className="mt-6 flex flex-col items-center justify-center gap-5 text-center">
             <p className="text-sm sm:text-base font-bold text-ink-soft">
-              Bấm vào chiếc loa to để nghe từ phát âm, sau đó chọn âm tương ứng nhé:
+              {pron.quizPrompt || 'Bấm vào chiếc loa to để nghe từ phát âm, sau đó chọn âm tương ứng nhé:'}
             </p>
 
             {/* Nút loa phát âm từ trắc nghiệm */}
@@ -201,7 +221,7 @@ export default function PronunciationStation({ unit, onFinish }) {
             </div>
 
             <div className="text-center">
-              <h4 className="text-3xl font-black text-ink">{currentQuiz.word}</h4>
+              <h4 className={`${currentQuiz.word.length > 16 ? 'text-xl sm:text-2xl' : 'text-3xl'} font-black text-ink`}>{currentQuiz.word}</h4>
               <p className="text-sm font-bold text-ink-soft mt-0.5">({currentQuiz.meaning})</p>
             </div>
 
@@ -218,7 +238,7 @@ export default function PronunciationStation({ unit, onFinish }) {
                     type="button"
                     disabled={selectedOpt !== null}
                     onClick={() => handleChoose(opt)}
-                    className={`min-h-20 rounded-3xl font-mono text-2xl sm:text-3xl font-black transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 ${
+                    className={`min-h-20 rounded-3xl px-2 ${opt.length > 8 ? 'text-base sm:text-xl' : 'font-mono text-2xl sm:text-3xl'} font-black transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 ${
                       isRight
                         ? 'bg-mint text-white ring-4 ring-mint-dark scale-105'
                         : isWrong

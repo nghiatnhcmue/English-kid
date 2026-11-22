@@ -10,6 +10,7 @@ import WeeklyTest from '../components/WeeklyTest.jsx';
 import VocabCard from '../components/VocabCard.jsx';
 import { playSfx } from '../utils/sfx.js';
 import { t } from '../i18n/vi.js';
+import { unitNumberOf } from '../utils/unitId.js';
 
 function UnitPicker({ onStart }) {
   const units = listUnits().filter((u) => u.available);
@@ -100,7 +101,7 @@ function UnitPicker({ onStart }) {
                 </span>
                 <span className="flex-1 min-w-0">
                   <span className="block text-lg sm:text-xl font-black truncate">
-                    Unit {u.unitId}: {u.titleEn}
+                    Unit {unitNumberOf(u)}: {u.titleEn}
                   </span>
                   <span className="block text-sm sm:text-base font-bold text-ink-soft truncate">{u.titleVi}</span>
                 </span>

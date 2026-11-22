@@ -38,6 +38,7 @@ import TeacherGuide from '../components/TeacherGuide.jsx';
 import TeacherStudentManager from '../components/TeacherStudentManager.jsx';
 import TeacherClassProgress from '../components/TeacherClassProgress.jsx';
 import PdfReaderModal from '../components/PdfReaderModal.jsx';
+import { unitNumberOf } from '../utils/unitId.js';
 import { OFFICIAL_BOOKS, SCHOOL_LEVELS, getBooksBySchoolLevel } from '../data/officialBooks.js';
 import multiGradeCurriculum from '../data/multiGradeCurriculum.json';
 
@@ -1107,7 +1108,7 @@ export default function TeacherPage() {
                           <div>
                             <div className="flex items-center gap-2">
                               <h4 className="text-base sm:text-lg font-black text-ink">
-                                Unit {u.unitId}: {u.titleEn}
+                                Unit {unitNumberOf(u)}: {u.titleEn}
                               </h4>
                               <span className="text-xs font-bold text-ink-soft">({u.titleVi})</span>
                             </div>

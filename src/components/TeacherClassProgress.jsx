@@ -5,6 +5,7 @@ import { store, totalStarsOf } from '../utils/storage.js';
 import { listUnits } from '../utils/data.js';
 import { fetchTeacherScores } from '../utils/syncService.js';
 import { playSfx } from '../utils/sfx.js';
+import { normUnitId, unitNumberOf } from '../utils/unitId.js';
 
 export default function TeacherClassProgress() {
   const allUnits = listUnits();
@@ -63,7 +64,7 @@ export default function TeacherClassProgress() {
 
   // Tính trạng thái hoàn thành Unit của 1 học sinh
   const getStudentUnitStatus = (student, unitId) => {
-    const numId = Number(unitId);
+    const numId = normUnitId(unitId);
     const stuProg = allProgress[student.id]?.units?.[numId] || {};
     const modes = { ...(stuProg.modes || {}) };
 
@@ -291,7 +292,7 @@ export default function TeacherClassProgress() {
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-black text-ink text-sm">
-                        {u.emoji} Unit {u.unitId}: {u.title}
+                        {u.emoji} Unit {unitNumberOf(u)}: {u.title}
                       </span>
                       <span
                         className={`rounded-full px-2 py-0.5 text-[10px] font-black ${

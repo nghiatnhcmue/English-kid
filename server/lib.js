@@ -184,9 +184,9 @@ export async function requireRole(db, request, role) {
 const WINDOW_MS = 15 * 60 * 1000;
 const MAX_ATTEMPTS = 5;
 
-export async function checkRateLimit(db, key) {
+export async function checkRateLimit(db, key, max = MAX_ATTEMPTS) {
   const row = await db.prepare('SELECT count, window_start FROM login_attempts WHERE key = ?').bind(key).first();
-  if (row && Date.now() - row.window_start < WINDOW_MS && row.count >= MAX_ATTEMPTS) {
+  if (row && Date.now() - row.window_start < WINDOW_MS && row.count >= max) {
     const wait = Math.ceil((WINDOW_MS - (Date.now() - row.window_start)) / 60000);
     throw new HttpError(429, `Nhập sai quá nhiều lần. Thử lại sau ${wait} phút.`);
   }
@@ -203,5 +203,14 @@ export async function recordFailure(db, key) {
 }
 
 export const clearFailures = (db, key) => db.prepare('DELETE FROM login_attempts WHERE key = ?').bind(key).run();
+
+/** Dọn bản ghi đăng nhập sai đã hết hạn và phiên hết hạn (gọi thỉnh thoảng, không chặn request). */
+export async function pruneExpired(db) {
+  const now = Date.now();
+  await db.batch([
+    db.prepare('DELETE FROM login_attempts WHERE window_start < ?').bind(now - WINDOW_MS),
+    db.prepare('DELETE FROM sessions WHERE expires_at < ?').bind(now),
+  ]);
+}
 
 export const clientIp = (request) => request.headers.get('cf-connecting-ip') || 'local';

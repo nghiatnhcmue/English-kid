@@ -46,7 +46,7 @@ describe('All 12 Grades Comprehensive Curriculum Suite', () => {
     expect(g1u1).toBeDefined();
     expect(g1u1.grade).toBe(1);
     expect(g1u1.unit).toBe(1);
-    expect(g1u1.vocabularies.length).toBeGreaterThanOrEqual(4);
+    expect(g1u1.vocabularies.length).toBeGreaterThanOrEqual(3); // SGK Lớp 1 Unit 1: ball, bike, book
     expect(g1u1.grammar.quiz.length).toBeGreaterThanOrEqual(1);
     expect(g1u1.pronunciation.pair).toBeDefined();
     expect(g1u1.speaking.dialogueLines.length).toBeGreaterThanOrEqual(4);

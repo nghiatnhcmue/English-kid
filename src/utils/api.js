@@ -1,10 +1,12 @@
 // Lớp gọi API máy chủ (Cloudflare Worker + D1): đăng nhập, đồng bộ nội dung giáo viên, hàng đợi nộp bài offline.
 import { KEYS, store, onStoreWrite } from './storage.js';
+import { normUnitId } from './unitId.js';
 
 const PREFIX = 'app_tienganh_v1_';
 const K = {
   TEACHER_TOKEN: `${PREFIX}teacher_token`,
   STUDENT_TOKEN: `${PREFIX}student_token`,
+  STUDENT_TOKEN_OWNER: `${PREFIX}student_token_owner`, // id học sinh sở hữu token (máy dùng chung nhiều em)
   CONTENT_VERSIONS: `${PREFIX}content_versions`,
   CONTENT_ETAG: `${PREFIX}content_etag`,
   OUTBOX: `${PREFIX}outbox`,
@@ -95,18 +97,10 @@ export async function loginTeacher(username, password) {
   const cleanPassword = String(password || '');
   if (!cleanUsername || !cleanPassword) return { success: false, error: 'Vui lòng nhập tên đăng nhập và mật khẩu.' };
 
-  const isEmergencyCreds = cleanUsername.toUpperCase() === 'GV01' && cleanPassword === '123456789';
-
+  // Không có tài khoản "khẩn cấp" trên máy: mật khẩu nằm trong JS thì ai cũng đọc được,
+  // chỉ cần tắt mạng là vào được trang giáo viên (và xem PIN học sinh lưu trên máy).
   const r = await apiFetch('/api/auth/teacher/login', { method: 'POST', body: { username: cleanUsername, password: cleanPassword } });
   if (!r.ok) {
-    const isServerUnavailable = r.offline || r.status === 0 || r.status === 404 || r.status === 503 || r.status === 502 || r.status === 504;
-    if (isEmergencyCreds && isServerUnavailable) {
-      startTeacherSession({
-        token: 'local-gv01-session',
-        teacher: { id: 'gv01_local', username: 'GV01', displayName: 'Giáo Viên (Chế độ Cục bộ)' },
-      });
-      return { success: true, offlineFallback: true };
-    }
     return { success: false, error: errorOf(r, 'Đăng nhập không thành công.') };
   }
   startTeacherSession(r.data);
@@ -131,12 +125,15 @@ export async function changeTeacherPassword(oldPassword, newPassword) {
 /** Kiểm tra phiên giáo viên còn hiệu lực trên máy chủ (gọi khi mở trang Giáo viên). */
 export async function verifyTeacherSession() {
   if (!getTeacherToken()) return false;
+  if (!/^[a-f0-9]{64}$/i.test(String(getTeacherToken()))) {
+    // Phiên "cục bộ" của bản cũ (GV01) – không phải phiên máy chủ cấp
+    set(K.TEACHER_TOKEN, null);
+    store().clearTeacherSession();
+    return false;
+  }
   const r = await apiFetch('/api/auth/me', { role: 'teacher' });
   if (r.offline) return !!store().getTeacherSession(); // mất mạng: tạm tin phiên cũ, mọi lệnh ghi vẫn do máy chủ kiểm tra
   if (r.ok && r.data?.role === 'teacher') return true;
-  if (getTeacherToken() === 'local-gv01-session' && (r.offline || r.status === 404 || r.status === 503 || r.status === 0)) {
-    return !!store().getTeacherSession();
-  }
   set(K.TEACHER_TOKEN, null);
   store().clearTeacherSession();
   return false;
@@ -154,6 +151,10 @@ export async function loginStudentOnline(id, pin) {
   const r = await apiFetch('/api/auth/student/login', { method: 'POST', body: { id, pin: String(pin || '') } });
   if (r.ok) {
     set(K.STUDENT_TOKEN, r.data.token);
+    set(K.STUDENT_TOKEN_OWNER, r.data.student.id);
+    // Bài làm lúc chưa đăng nhập (màn hình vừa nhắc "đăng nhập để gửi điểm") thuộc về em vừa đăng nhập
+    const box = get(K.OUTBOX, []) || [];
+    if (box.some((x) => x.sid === null)) set(K.OUTBOX, box.map((x) => (x.sid === null ? { ...x, sid: r.data.student.id } : x)));
     store().mergeRoster([r.data.student]);
     store().setCurrentStudent(r.data.student.id);
     flushOutbox();
@@ -165,6 +166,7 @@ export async function loginStudentOnline(id, pin) {
 export async function logoutStudentOnline() {
   if (getStudentToken()) await apiFetch('/api/auth/logout', { method: 'POST', role: 'student', body: {} });
   set(K.STUDENT_TOKEN, null);
+  set(K.STUDENT_TOKEN_OWNER, null);
 }
 
 /** Đồng bộ danh sách học sinh (giáo viên): upsert có pin (mới/đổi) và remove. */
@@ -274,7 +276,14 @@ export function enqueue(kind, payload, dedupeKey = null) {
     const sent = get(K.SENT, []) || [];
     if (sent.includes(dedupeKey) || box.some((x) => x.key === dedupeKey)) return;
   }
-  box.push({ kind, payload, key: dedupeKey, at: Date.now(), uid: `${Date.now()}_${Math.random().toString(36).slice(2, 10)}` });
+  // sid: bài của em nào – chỉ được gửi bằng token của chính em đó (không gửi nhầm sang bạn đăng nhập sau)
+  let sid = null;
+  try {
+    sid = store().getCurrentStudent()?.id ?? null;
+  } catch {
+    sid = null;
+  }
+  box.push({ kind, payload, key: dedupeKey, sid, at: Date.now(), uid: `${Date.now()}_${Math.random().toString(36).slice(2, 10)}` });
   set(K.OUTBOX, box.slice(-200));
   flushOutbox();
 }
@@ -296,8 +305,10 @@ export async function flushOutbox() {
       flushAgain = false;
       for (;;) {
         // Luôn đọc lại hàng đợi mới nhất (món mới có thể vừa được thêm) và chỉ gỡ đúng món đã gửi
+        const owner = get(K.STUDENT_TOKEN_OWNER) || store().getCurrentStudent()?.id || null;
         const box = get(K.OUTBOX, []) || [];
-        const item = box[0];
+        // Bản ghi cũ (chưa có trường sid) giữ cách cũ; còn lại chỉ gửi bài của đúng em đang giữ token
+        const item = box.find((x) => x.sid === undefined || x.sid === owner);
         if (!item) break;
         const path = item.kind === 'submission' ? '/api/submissions' : '/api/scores';
         const r = await apiFetch(path, { method: 'POST', role: 'student', body: item.payload });
@@ -323,8 +334,8 @@ if (typeof window !== 'undefined') {
       stars,
       correct: data.correct === false ? 0 : 1,
       total: 1,
-      unitIds: [Number(unitId)],
-      answers: [{ station: stationKey, unitId: Number(unitId) }],
+      unitIds: [normUnitId(unitId)],
+      answers: [{ station: stationKey, unitId: normUnitId(unitId) }],
     });
   });
 }

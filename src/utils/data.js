@@ -141,11 +141,19 @@ export function getUnitRaw(unitId) {
 
   // 1. Kiểm tra trực tiếp trong allUnitsMap (ví dụ 'g7_u1' hoặc 'g10_u2')
   if (allUnitsMap[strId]) {
-    const raw = allUnitsMap[strId];
-    const isGrade6 = raw.grade === 6 || !raw.grade;
+    const isGrade6 = allUnitsMap[strId].grade === 6 || !allUnitsMap[strId].grade;
+    const key = isGrade6 ? (allUnitsMap[strId].unit || (Number.isFinite(numId) ? numId : 1)) : (allUnitsMap[strId].unitId || strId);
+    // Gộp phần giáo viên đã sửa (lưu theo cùng ID) lên dữ liệu SGK
+    let custom = null;
+    try {
+      custom = store().getCustomUnit(key);
+    } catch {
+      custom = null;
+    }
+    const raw = mergeUnitData(allUnitsMap[strId], custom);
     return {
       ...raw,
-      unitId: isGrade6 ? (raw.unit || (Number.isFinite(numId) ? numId : 1)) : (raw.unitId || strId),
+      unitId: key,
       titleEn: raw.unitTitle?.replace(/^Unit \d+:\s*/, '') || raw.title || `Unit ${raw.unit}`,
       title: raw.unitTitle?.replace(/^Unit \d+:\s*/, '') || raw.title || `Unit ${raw.unit}`,
       titleVi: raw.unitNameVi || raw.titleVi || '',
@@ -164,7 +172,13 @@ export function getUnitRaw(unitId) {
 
   const gradeUnitKey = `g${currentGrade}_u${numId}`;
   if (currentGrade !== 6 && allUnitsMap[gradeUnitKey]) {
-    const raw = allUnitsMap[gradeUnitKey];
+    let custom = null;
+    try {
+      custom = store().getCustomUnit(gradeUnitKey);
+    } catch {
+      custom = null;
+    }
+    const raw = mergeUnitData(allUnitsMap[gradeUnitKey], custom);
     return {
       ...raw,
       unitId: raw.unitId || gradeUnitKey,

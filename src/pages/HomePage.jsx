@@ -14,6 +14,7 @@ import multiGradeCurriculum from '../data/multiGradeCurriculum.json';
 
 import StudentProfileModal from '../components/StudentProfileModal.jsx';
 import AssignmentQuizModal from '../components/AssignmentQuizModal.jsx';
+import { unitNumberOf } from '../utils/unitId.js';
 
 const ALL_GRADES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -369,7 +370,7 @@ export default function HomePage() {
                       {u.emoji}
                     </span>
                     <span className="rounded-full bg-white/70 px-3 py-0.5 text-xs font-black text-ink-soft">
-                      Unit {u.unitId}
+                      Unit {unitNumberOf(u)}
                     </span>
                     <span className="text-lg sm:text-xl font-black leading-snug text-ink">{u.titleEn}</span>
                     <span className="text-xs sm:text-sm font-bold text-ink-soft line-clamp-1">{u.titleVi}</span>

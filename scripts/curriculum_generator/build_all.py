@@ -56,6 +56,11 @@ def main():
     all_grades.update(high)
     print("✅ Đã tạo dữ liệu THPT (Lớp 10, 11, 12)")
 
+    # Kiểm định nội dung: dựng lại các trạm khuôn mẫu từ học liệu đã soạn chuẩn
+    from quality_pass import apply_quality_pass
+    stats = apply_quality_pass(all_grades)
+    print(f"✅ Đã kiểm định nội dung (số Unit được dựng lại bài ngữ pháp theo khối: {stats})")
+
     # 2. Ghi từng file grade{N}.json vào src/data/grades/
     total_units_count = 0
     total_vocab_count = 0

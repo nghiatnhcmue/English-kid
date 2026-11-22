@@ -1183,8 +1183,32 @@ PRIMARY_VOCAB_DB = {
     ]
 }
 
+try:
+    from .primary_vocab_extra import PRIMARY_VOCAB_EXTRA
+except ImportError:
+    from primary_vocab_extra import PRIMARY_VOCAB_EXTRA
+try:
+    from .primary_vocab_sgk import SGK_VOCAB
+except ImportError:
+    from primary_vocab_sgk import SGK_VOCAB
+# Từ vựng theo Book map SGK (đối chiếu PDF 11/2026) được ưu tiên trước các mục soạn cũ
+PRIMARY_VOCAB_EXTRA = {**PRIMARY_VOCAB_EXTRA, **SGK_VOCAB}
+
+
+def primary_pos(word, default="Danh từ"):
+    """Từ loại của từ Tiểu học (nếu đã soạn trong PRIMARY_VOCAB_EXTRA)."""
+    w = word.strip()
+    for k in (w, w.lower(), w.capitalize()):
+        if k in PRIMARY_VOCAB_EXTRA:
+            return PRIMARY_VOCAB_EXTRA[k][5]
+    return default
+
+
 def lookup_primary_word(word):
     w = word.strip()
+    for k in (w, w.lower()):
+        if k in SGK_VOCAB:
+            return SGK_VOCAB[k][:5]
     if w in PRIMARY_VOCAB_DB:
         return PRIMARY_VOCAB_DB[w]
     clean = w.capitalize()
@@ -1193,4 +1217,7 @@ def lookup_primary_word(word):
     lower = w.lower()
     if lower in PRIMARY_VOCAB_DB:
         return PRIMARY_VOCAB_DB[lower]
-    return (f'/{lower}/', f'{w}', f'Look at the {w}.', f'Hãy nhìn vào {w}.', f'Từ vựng tiếng Anh tiểu học')
+    for k in (w, lower, clean):
+        if k in PRIMARY_VOCAB_EXTRA:
+            return PRIMARY_VOCAB_EXTRA[k][:5]
+    raise KeyError(f'Thiếu từ "{w}" trong từ điển Tiểu học (primary_vocab_extra.py) – hãy soạn IPA và nghĩa thật.')

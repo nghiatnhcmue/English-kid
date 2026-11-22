@@ -19,6 +19,7 @@ import {
   BookOpen,
   Volume2
 } from 'lucide-react';
+import { normUnitId, isRealUnitId } from '../utils/unitId.js';
 
 export default function AssignmentQuizModal({ assignment, isOpen, onClose, onCompleted }) {
   if (!isOpen || !assignment) return null;
@@ -29,7 +30,7 @@ export default function AssignmentQuizModal({ assignment, isOpen, onClose, onCom
 function AssignmentQuizBody({ assignment, onClose, onCompleted }) {
 
   const student = store().getStudentInfo();
-  const hasUnit = Number(assignment.unitId) > 0;
+  const hasUnit = isRealUnitId(assignment.unitId);
   const unit = useMemo(() => (hasUnit ? getUnit(assignment.unitId) : null), [assignment.unitId, hasUnit]);
 
   // Lấy danh sách câu hỏi của bài tập. Câu thầy cô soạn thường để đáp án đúng ở ô A,
@@ -261,7 +262,7 @@ function AssignmentQuizBody({ assignment, onClose, onCompleted }) {
       stars,
       correct: correctCount,
       total: totalQuestions,
-      unitIds: Number(assignment.unitId) > 0 ? [Number(assignment.unitId)] : [], // bài ngoài SGK: không gắn Unit
+      unitIds: hasUnit ? [normUnitId(assignment.unitId)] : [], // bài ngoài SGK: không gắn Unit
       answers: details,
     });
 

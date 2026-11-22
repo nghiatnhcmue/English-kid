@@ -27,6 +27,7 @@ import {
   Users,
   X
 } from 'lucide-react';
+import { normUnitId, isRealUnitId, unitNumberOf } from '../utils/unitId.js';
 
 export default function TeacherAssignmentManager() {
   const units = listUnits();
@@ -115,7 +116,7 @@ export default function TeacherAssignmentManager() {
     return [...remote, ...store().getAssignmentSubmissions(assignmentId)];
   };
 
-  const activeUnit = useMemo(() => (unitId > 0 ? getUnitRaw(unitId) : null), [unitId]);
+  const activeUnit = useMemo(() => (isRealUnitId(unitId) ? getUnitRaw(unitId) : null), [unitId]);
   const bankUnit = useMemo(() => getUnitRaw(bankUnitId), [bankUnitId]);
 
   // Lấy câu hỏi hiện tại của Unit đang chọn trong form tạo bài
@@ -123,7 +124,7 @@ export default function TeacherAssignmentManager() {
   const [bankQuestions, setBankQuestions] = useState([]);
 
   const refreshUnitQuestions = (uId = unitId) => {
-    if (!uId || uId <= 0) {
+    if (!isRealUnitId(uId)) {
       setUnitQuestions([]);
       return;
     }
@@ -356,7 +357,7 @@ export default function TeacherAssignmentManager() {
       title: title.trim(),
       targetClass,
       scopeType,
-      unitId: scopeType === 'external_quiz' && unitId === 0 ? 0 : Number(unitId),
+      unitId: scopeType === 'external_quiz' && unitId === 0 ? 0 : normUnitId(unitId),
       selectedSkill,
       selectedWordIds,
       selectedQuestions: selectedQuestionIndices,
@@ -731,12 +732,12 @@ export default function TeacherAssignmentManager() {
               <label className="text-xs font-black text-ink">Chọn Unit:</label>
               <select
                 value={bankUnitId}
-                onChange={(e) => setBankUnitId(Number(e.target.value))}
+                onChange={(e) => setBankUnitId(normUnitId(e.target.value))}
                 className="rounded-xl bg-cream px-3 py-2 text-sm font-bold border border-banana-soft cursor-pointer"
               >
                 {units.map((u) => (
                   <option key={u.unitId} value={u.unitId}>
-                    Unit {u.unitId}: {u.title}
+                    Unit {unitNumberOf(u)}: {u.title}
                   </option>
                 ))}
               </select>
@@ -906,7 +907,7 @@ export default function TeacherAssignmentManager() {
                   <select
                     value={unitId}
                     onChange={(e) => {
-                      const newUId = Number(e.target.value);
+                      const newUId = normUnitId(e.target.value) ?? 0;
                       setUnitId(newUId);
                       setSelectedWordIds([]);
                       setSelectedQuestionIndices([]);
@@ -923,7 +924,7 @@ export default function TeacherAssignmentManager() {
                     <option value={0}>🌐 Đề tự do ngoài SGK (Không theo Unit)</option>
                     {units.map((u) => (
                       <option key={u.unitId} value={u.unitId}>
-                        Unit {u.unitId}: {u.title}
+                        Unit {unitNumberOf(u)}: {u.title}
                       </option>
                     ))}
                   </select>

@@ -15,9 +15,11 @@ import {
   clearFailures,
   clientIp,
   randomHex,
+  pruneExpired,
 } from './lib.js';
 
 const WRONG = 'Tên đăng nhập hoặc mật khẩu chưa đúng.';
+const STUDENT_ACCOUNT_MAX = 20; // lần sai / 15 phút cho một tài khoản học sinh, cộng dồn mọi IP
 
 async function teacherCount(db) {
   const r = await db.prepare('SELECT COUNT(*) AS n FROM teachers').first();
@@ -115,15 +117,24 @@ export async function handleAuth(path, request, env, db) {
   if (path === '/api/auth/student/login' && method === 'POST') {
     const body = await readJson(request);
     const ident = str(body.id || body.username, 80);
-    const key = `s:${ident}:${clientIp(request)}`;
-    await checkRateLimit(db, key);
     const row = await db.prepare('SELECT * FROM students WHERE id = ? OR username = ?').bind(ident, ident.toLowerCase()).first();
+    // Khóa theo TÀI KHOẢN (id thật), không theo chuỗi gõ vào: gõ 'An6a1' / 'AN6A1' / id
+    // không còn được tính là các tài khoản khác nhau. Thêm giới hạn chung cho tài khoản (mọi IP)
+    // vì PIN 4 số chỉ có 9000 khả năng.
+    const subject = row?.id || ident.toLowerCase();
+    const key = `s:${subject}:${clientIp(request)}`;
+    const accountKey = `s:${subject}`;
+    await checkRateLimit(db, key);
+    await checkRateLimit(db, accountKey, STUDENT_ACCOUNT_MAX);
     const ok = row?.pin_hash ? await verifySecret(String(body.pin || ''), row.pin_hash, row.salt) : false;
     if (!ok) {
       await recordFailure(db, key);
+      await recordFailure(db, accountKey);
       throw new HttpError(401, row && !row.pin_hash ? 'Em chưa có mã PIN, hãy hỏi thầy cô.' : 'Mã PIN chưa đúng, em thử lại nhé.');
     }
     await clearFailures(db, key);
+    await clearFailures(db, accountKey);
+    if (Math.random() < 0.05) await pruneExpired(db).catch(() => {});
     const token = await createSession(db, 'student', row.id);
     return json({ success: true, token, student: studentPublic(row) });
   }

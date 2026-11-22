@@ -1,3 +1,4 @@
+import { normUnitId } from './unitId.js';
 // Tải trước âm thanh + mô hình 3D của một Unit để học khi không có mạng.
 // Mỗi file được fetch đầy đủ (status 200) đi qua service worker → lưu vào cache runtime (audio-v2, models-3d).
 
@@ -22,7 +23,7 @@ const KEY = 'app_tienganh_v1_offline_units';
 
 export function isUnitOffline(unitId) {
   try {
-    return (JSON.parse(localStorage.getItem(KEY) || '[]') || []).includes(Number(unitId));
+    return (JSON.parse(localStorage.getItem(KEY) || '[]') || []).includes(normUnitId(unitId));
   } catch {
     return false;
   }
@@ -31,7 +32,7 @@ export function isUnitOffline(unitId) {
 function markOffline(unitId) {
   try {
     const list = new Set(JSON.parse(localStorage.getItem(KEY) || '[]') || []);
-    list.add(Number(unitId));
+    list.add(normUnitId(unitId));
     localStorage.setItem(KEY, JSON.stringify([...list]));
   } catch {
     /* bỏ qua */

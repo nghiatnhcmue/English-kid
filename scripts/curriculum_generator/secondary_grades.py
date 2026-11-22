@@ -336,7 +336,7 @@ def get_grade_7_data():
             ("anthem", "/ˈænθəm/", "Danh từ", "Bài quốc ca", "Tien Quan Ca is the national anthem of Viet Nam.", "Tiến Quân Ca là bài quốc ca của nước Việt Nam.", "Bài hát trang nghiêm đại diện cho một quốc gia"),
         ], "Water Puppetry in Viet Nam", "Water puppetry is a unique traditional art form of Viet Nam. It began in the 11th century in northern villages. The stage is a pool of water, and puppeteers stand behind a screen to control the wooden puppets with long bamboo poles.", "What makes Vietnamese water puppetry unique?", ["Puppets are performed on water using bamboo poles", "It is performed on high mountains", "Puppets are made of pure gold", "It began in France"], 0),
 
-        (5, "Food and Drink", "Ẩm thực và đồ uống", "Danh từ đếm được & không đếm được, some/any, How much/How many", "/ɒ/ và /ɔː/", [
+        (5, "Food and Drink", "Ẩm thực và đồ uống", "Lượng từ some, a lot of, lots of (với danh từ đếm được & không đếm được) – How much/How many", "/ɒ/ và /ɔː/", [
             ("omelette", "/ˈɒmlət/", "Danh từ", "Trứng rán, trứng tráng", "Dad made a delicious cheese omelette for breakfast.", "Bố đã làm món trứng tráng phô mai thơm ngon cho bữa sáng.", "Món trứng đánh đều rồi chiên vàng"),
             ("turmeric", "/ˈtɜːmərɪk/", "Danh từ", "Củ nghệ", "Turmeric gives dishes a distinctive yellow color.", "Nghệ tạo cho các món ăn một màu vàng rất đặc trưng.", "Gia vị thảo mộc màu vàng"),
             ("noodles", "/ˈnuːdlz/", "Danh từ", "Mì, bún, phở", "Vietnamese beef noodles are famous around the world.", "Món bún bò / phở bò Việt Nam nổi tiếng khắp thế giới.", "Sợi làm từ bột gạo hoặc bột mì"),
@@ -354,7 +354,7 @@ def get_grade_7_data():
             ("scholar", "/ˈskɒlə/", "Danh từ", "Học giả, bậc hiền tài", "Ancient scholars spent decades studying classical literature.", "Các học giả thời xưa dành nhiều thập kỷ để nghiên cứu văn học cổ điển.", "Người có học vấn uyên thâm"),
         ], "Van Mieu - The First University of Viet Nam", "Founded in 1070 by King Ly Thanh Tong, Van Mieu originally honored Confucius and great scholars. In 1076, Quoc Tu Giam, the first university of Viet Nam, was built within the complex to educate noble minds.", "When was Van Mieu founded?", ["In 1070", "In 1975", "In 2020", "In 1492"], 0),
 
-        (7, "Traffic", "Giao thông", "Đại từ It chỉ khoảng cách & Động từ khuyết thiếu Should/Shouldn't", "/e/ và /eɪ/", [
+        (7, "Traffic", "Giao thông", "Đại từ It chỉ khoảng cách & Động từ khuyết thiếu Should/Shouldn't", "/aɪ/ và /eɪ/", [
             ("traffic jam", "/ˈtræfɪk dʒæm/", "Cụm danh từ", "Tắc nghẽn giao thông", "We were stuck in a heavy traffic jam for forty minutes.", "Chúng mình đã bị kẹt trong một vụ tắc đường nghiêm trọng suốt 40 phút.", "Đoàn xe cộ bị ùn ứ trên đường"),
             ("pedestrian", "/pəˈdestriən/", "Danh từ", "Người đi bộ", "Drivers must always yield to pedestrians at zebra crossings.", "Người lái xe phải luôn nhường đường cho người đi bộ ở vạch sang đường.", "Người di chuyển bằng chân trên đường"),
             ("zebra crossing", "/ˌzebrə ˈkrɒsɪŋ/", "Cụm danh từ", "Vạch qua đường cho người đi bộ", "Children should always use the zebra crossing to cross the street.", "Trẻ em nên luôn sử dụng vạch qua đường để sang đường an toàn.", "Đường kẻ sọc trắng đen để sang đường"),
@@ -372,7 +372,7 @@ def get_grade_7_data():
             ("critic", "/ˈkrɪtɪk/", "Danh từ", "Nhà phê bình phim", "Film critics praised the leading actor for his realistic performance.", "Các nhà phê bình phim đã khen ngợi nam diễn viên chính vì diễn xuất rất chân thật.", "Chuyên gia đánh giá tác phẩm nghệ thuật"),
         ], "A Review of a Must-See Animated Movie", "Finding Nemo is an animated movie directed by Andrew Stanton. Although the movie was released years ago, it remains beloved worldwide. The story tells the journey of an overprotective clownfish father searching for his missing son across the ocean.", "Why is Finding Nemo so popular despite being released years ago?", ["Because of its touching story and colorful underwater world", "Because it is completely black and white", "Because it has no sound", "Because it is very scary"], 0),
 
-        (9, "Festivals around the World", "Lễ hội trên thế giới", "Câu hỏi Yes/No & Mệnh đề trạng ngữ chỉ thời gian", "Trọng âm từ có 2 âm tiết", [
+        (9, "Festivals around the World", "Lễ hội trên thế giới", "Câu hỏi Yes/No (Yes/No questions)", "Trọng âm từ có 2 âm tiết", [
             ("carnival", "/ˈkɑːnɪvl/", "Danh từ", "Lễ hội hóa trang Carnival", "The Rio Carnival in Brazil features spectacular samba parades.", "Lễ hội Carnival ở Rio, Brazil nổi bật với những đoàn diễu hành samba hoành tráng.", "Lễ hội hóa trang đường phố lớn"),
             ("pumpkin", "/ˈpʌmpkɪn/", "Danh từ", "Quả bí ngô", "Children carve glowing faces into pumpkins for Halloween.", "Trẻ em khắc các khuôn mặt phát sáng lên quả bí ngô cho dịp lễ Halloween.", "Loại quả màu cam biểu tượng mùa thu"),
             ("feast", "/fiːst/", "Danh từ", "Bữa tiệc thịnh soạn", "Families gather for a grand Thanksgiving feast every November.", "Các gia đình quây quần bên bữa tiệc Lễ Tạ Ơn thịnh soạn vào mỗi tháng 11.", "Bữa ăn thịnh soạn nhiều món ngon"),
@@ -390,7 +390,7 @@ def get_grade_7_data():
             ("hydro", "/ˈhaɪdrəʊ/", "Tiền tố/Danh từ", "Thủy điện (năng lượng nước)", "Hydro power stations supply a major share of electricity in Viet Nam.", "Các nhà máy thủy điện cung cấp một phần lớn sản lượng điện ở Việt Nam.", "Năng lượng khai thác từ dòng nước chảy"),
         ], "Clean Energy for Our Future", "Fossil fuels such as coal and oil are limited and harmful to our atmosphere. Therefore, scientists are urging countries to switch to renewable sources. Solar and wind energies produce zero emissions and help combat climate change.", "Why should we switch to solar and wind energy?", ["Because they produce zero emissions and are renewable", "Because they cause heavy pollution", "Because they run out quickly", "Because they are very dirty"], 0),
 
-        (11, "Travelling in the Future", "Giao thông tương lai", "Thì Tương lai đơn (will) & Đại từ sở hữu (mine, yours, his, hers)", "Ngữ điệu lên và xuống giọng trong câu", [
+        (11, "Travelling in the Future", "Giao thông tương lai", "Thì Tương lai đơn (will) & Đại từ sở hữu (mine, yours, his, hers)", "Trọng âm câu (Sentence stress)", [
             ("hyperloop", "/ˈhaɪpəluːp/", "Danh từ", "Tàu đệm từ siêu tốc Hyperloop", "The hyperloop can travel at speeds of over a thousand kilometers per hour.", "Tàu hyperloop có thể di chuyển ở vận tốc hơn một ngàn cây số một giờ.", "Hệ thống tàu cao tốc di chuyển trong đường ống chân không"),
             ("flying car", "/ˈflaɪɪŋ kɑː/", "Cụm danh từ", "Xe bay", "Flying cars could reduce traffic congestion in big cities completely.", "Xe ô tô bay có thể giúp giảm thiểu hoàn toàn nạn ùn tắc giao thông ở các thành phố lớn.", "Phương tiện bay kết hợp ô tô"),
             ("solar-powered", "/ˈsəʊlə ˈpaʊəd/", "Tính từ", "Chạy bằng năng lượng mặt trời", "Solar-powered buses run smoothly without needing gasoline.", "Xe buýt chạy bằng năng lượng mặt trời vận hành êm ái mà không cần xăng dầu.", "Được cấp điện từ pin mặt trời"),
@@ -399,7 +399,7 @@ def get_grade_7_data():
             ("teleport", "/ˈtelɪpɔːt/", "Động từ/Danh từ", "Dịch chuyển tức thời", "Scientists wonder if humans will ever be able to teleport across planets.", "Các nhà khoa học tự hỏi liệu loài người có bao giờ dịch chuyển tức thời qua các hành tinh được không.", "Di chuyển ngay lập tức giữa hai vị trí"),
         ], "How Will We Travel in 2050?", "Transportation in 2050 will be smarter, faster, and much greener. Hyperloop trains will connect distant cities in minutes. Flying cars and driverless pods will navigate the skies autonomously, leaving traffic jams as a memory of the past.", "What will characterize transportation in 2050?", ["Smarter, faster, and greener technology", "Slower horse carriages", "More smoke and coal engines", "No transportation at all"], 0),
 
-        (12, "English-Speaking Countries", "Các quốc gia nói tiếng Anh", "Mạo từ a/an/the và mạo từ zero (không dùng mạo từ)", "Ngữ điệu trong các loại câu hỏi", [
+        (12, "English-Speaking Countries", "Các quốc gia nói tiếng Anh", "Mạo từ a/an/the và mạo từ zero (không dùng mạo từ)", "Ngữ điệu lên, xuống trong câu hỏi", [
             ("native speaker", "/ˈneɪtɪv ˈspiːkə/", "Cụm danh từ", "Người bản ngữ", "Practicing speaking with native speakers improves your accent quickly.", "Luyện nói cùng người bản ngữ giúp cải thiện ngữ điệu của em rất nhanh chóng.", "Người dùng ngôn ngữ đó từ lúc sinh ra"),
             ("kangaroo", "/ˌkæŋɡəˈruː/", "Danh từ", "Chuột túi Kangaroo", "The kangaroo is the national symbol of Australia.", "Chuột túi kangaroo là biểu tượng quốc gia của nước Úc.", "Loài thú có túi nhảy bằng hai chân sau"),
             ("maple leaf", "/ˈmeɪpl liːf/", "Cụm danh từ", "Lá phong", "The red maple leaf appears proudly on the Canadian national flag.", "Lá phong đỏ xuất hiện đầy kiêu hãnh trên quốc kỳ của Canada.", "Chiếc lá phong đặc trưng của Canada"),
@@ -587,7 +587,7 @@ def generate_secondary_grades():
                 ("upload", "/ˌʌpˈləʊd/", "Động từ", "Đăng tải lên mạng", "He uploaded his musical performance to the school forum.", "Cậu ấy đã đăng tải tiết mục biểu diễn âm nhạc của mình lên diễn đàn trường.", "Đưa tệp dữ liệu lên internet"),
                 ("bully", "/ˈbʊli/", "Động từ/Danh từ", "Bắt nạt / Kẻ bắt nạt", "Schools have strict rules to prevent bullying.", "Các trường học có nội quy nghiêm khắc để ngăn chặn hành vi bắt nạt.", "Hành vi ức hiếp người khác"),
             ]),
-            (4, "Ethnic Groups of Viet Nam", "Các dân tộc Việt Nam", "Câu hỏi với từ để hỏi (Wh-questions) & Danh từ đếm được/không đếm được", "/k/ và /ɡ/", [
+            (4, "Ethnic Groups of Viet Nam", "Các dân tộc Việt Nam", "Câu hỏi Yes/No và câu hỏi có từ để hỏi (Wh-questions) & Danh từ đếm được/không đếm được", "/k/ và /ɡ/", [
                 ("communal house", "/kəˈmjuːnl haʊs/", "Cụm danh từ", "Nhà rông (nhà cộng đồng)", "The communal house is the cultural heart of the village.", "Nhà rông là trái tim văn hóa của cả buôn làng.", "Ngôi nhà chung lớn của đồng bào Tây Nguyên"),
                 ("terraced field", "/ˈterəst fiːld/", "Cụm danh từ", "Ruộng bậc thang", "Terraced fields in Mu Cang Chai attract many tourists.", "Những thửa ruộng bậc thang ở Mù Căng Chải thu hút rất nhiều du khách.", "Thửa ruộng xếp tầng trên sườn đồi"),
                 ("stilt house", "/stɪlt haʊs/", "Cụm danh từ", "Nhà sàn", "Many ethnic minorities live in wooden stilt houses.", "Nhiều đồng bào dân tộc thiểu số sinh sống trong những ngôi nhà sàn bằng gỗ.", "Nhà dựng trên các cây cột cao"),
@@ -603,7 +603,7 @@ def generate_secondary_grades():
                 ("worship", "/ˈwɜːʃɪp/", "Động từ/Danh từ", "Thờ phụng, cúng bái", "Families worship ancestors on special memorial days.", "Các gia đình thờ cúng tổ tiên vào những ngày giỗ chạp đặc biệt.", "Tỏ lòng thành kính với tổ tiên thần linh"),
                 ("heritage", "/ˈherɪtɪdʒ/", "Danh từ", "Di sản văn hóa", "Hoi An Ancient Town is a UNESCO World Cultural Heritage site.", "Phố cổ Hội An là một di sản văn hóa thế giới được UNESCO công nhận.", "Tài sản văn hóa vô giá"),
             ]),
-            (6, "Lifestyles", "Phong cách sống", "Thì Tương lai tiếp diễn & Câu điều kiện loại 1", "/tr/ và /br/", [
+            (6, "Lifestyles", "Phong cách sống", "Thì Tương lai đơn (Future simple) & Câu điều kiện loại 1 (First conditional)", "/br/ và /pr/", [
                 ("diet", "/ˈdaɪət/", "Danh từ", "Chế độ ăn uống", "A balanced diet rich in greens boosts physical endurance.", "Chế độ ăn cân bằng giàu rau xanh giúp tăng cường sức bền thể chất.", "Thực đơn dinh dưỡng hàng ngày"),
                 ("nomadic", "/nəʊˈmædɪk/", "Tính từ", "Du mục", "Nomadic tribes travel with their herds across wide grasslands.", "Các bộ tộc du mục di chuyển cùng đàn gia súc của họ qua những thảo nguyên bao la.", "Lối sống di chuyển không định cư"),
                 ("online learning", "/ˌɒnˈlaɪn ˈlɜːnɪŋ/", "Cụm danh từ", "Học trực tuyến", "Online learning allows students to access courses from home.", "Học trực tuyến cho phép học sinh tiếp cận các khóa học ngay tại nhà.", "Học qua mạng internet"),
@@ -611,7 +611,7 @@ def generate_secondary_grades():
                 ("artisan", "/ˌɑːtɪˈzæn/", "Danh từ", "Nghệ nhân", "Skilled artisans craft delicate pottery by hand.", "Các nghệ nhân tài hoa chế tác đồ gốm tinh xảo bằng đôi bàn tay.", "Thợ thủ công tay nghề bậc thầy"),
                 ("eco-friendly", "/ˌiːkəʊ ˈfrendli/", "Tính từ", "Thân thiện với môi trường", "Using canvas bags instead of plastic is an eco-friendly choice.", "Sử dụng túi vải thay vì túi nilon là một lựa chọn thân thiện với môi trường.", "Không gây hại cho thiên nhiên"),
             ]),
-            (7, "Environmental Protection", "Bảo vệ môi trường", "Câu phức với mệnh đề nguyên nhân và kết quả (because, since, so)", "/bl/ và /cl/", [
+            (7, "Environmental Protection", "Bảo vệ môi trường", "Câu phức với mệnh đề trạng ngữ chỉ thời gian (when, while, before, after, as soon as)", "/bl/ và /kl/", [
                 ("endangered species", "/ɪnˈdeɪndʒəd ˈspiːʃiːz/", "Cụm danh từ", "Các loài có nguy cơ tuyệt chủng", "The saola is one of the rarest endangered species in Viet Nam.", "Sao la là một trong những loài có nguy cơ tuyệt chủng hiếm nhất ở Việt Nam.", "Động vật quý hiếm sắp biến mất"),
                 ("habitat", "/ˈhæbɪtæt/", "Danh từ", "Môi trường sống tự nhiên", "Deforestation destroys the natural habitat of wild animals.", "Nạn phá rừng phá hủy môi trường sống tự nhiên của động vật hoang dã.", "Nơi sinh sống của muôn loài"),
                 ("pollution", "/pəˈluːʃn/", "Danh từ", "Sự ô nhiễm", "Air pollution in urban areas causes respiratory illnesses.", "Ô nhiễm không khí ở các đô thị gây ra các bệnh về đường hô hấp.", "Tình trạng môi trường bị nhiễm bẩn"),
@@ -627,7 +627,7 @@ def generate_secondary_grades():
                 ("receipt", "/rɪˈsiːt/", "Danh từ", "Biên lai, hóa đơn mua hàng", "Keep your receipt in case you want to exchange the shirt.", "Hãy giữ lại hóa đơn mua hàng phòng khi bạn muốn đổi chiếc áo sơ mi.", "Phiếu chứng nhận đã thanh toán tiền"),
                 ("online store", "/ˌɒnˈlaɪn stɔː/", "Cụm danh từ", "Cửa hàng trực tuyến", "Online stores offer convenient home delivery services.", "Các cửa hàng trực tuyến cung cấp dịch vụ giao hàng tận nhà rất tiện lợi.", "Gian hàng buôn bán trên mạng"),
             ]),
-            (9, "Natural Disasters", "Thiên tai", "Thì Quá khứ tiếp diễn (Past Continuous Tense)", "/pr/ và /pl/", [
+            (9, "Natural Disasters", "Thiên tai", "Thì Quá khứ tiếp diễn (Past Continuous Tense)", "Trọng âm từ tận cùng -al và -ous", [
                 ("earthquake", "/ˈɜːθkweɪk/", "Danh từ", "Trận động đất", "The strong earthquake shook buildings in the capital.", "Trận động đất mạnh đã làm rung chuyển các tòa nhà ở thủ đô.", "Sự rung chuyển dữ dội của vỏ trái đất"),
                 ("tsunami", "/tsuːˈnɑːmi/", "Danh từ", "Sóng thần", "A tsunami alert was issued after the offshore tremor.", "Cảnh báo sóng thần đã được phát đi sau cơn chấn động ngoài khơi.", "Đợt sóng biển khổng lồ tràn vào bờ"),
                 ("typhoon", "/taɪˈfuːn/", "Danh từ", "Cơn bão nhiệt đới", "The powerful typhoon brought heavy rain and severe flooding.", "Cơn bão nhiệt đới dữ dội mang theo mưa lớn và ngập lụt nghiêm trọng.", "Cơn bão lốc xoáy trên biển nhiệt đới"),
@@ -635,7 +635,7 @@ def generate_secondary_grades():
                 ("flood", "/flʌd/", "Danh từ/Động từ", "Lũ lụt / Làm ngập úng", "Rescuers helped residents evacuate the flooded areas safely.", "Lực lượng cứu hộ đã giúp người dân sơ tán khỏi vùng ngập lụt an toàn.", "Nước dâng cao tràn ngập nhà cửa"),
                 ("shelter", "/ˈʃeltə/", "Danh từ", "Nơi trú ẩn khẩn cấp", "Families took temporary shelter in the reinforced gymnasium.", "Các gia đình đã vào trú ẩn tạm thời trong nhà thi đấu kiên cố.", "Nơi an toàn tránh bão lũ"),
             ]),
-            (10, "Communication in the Future", "Giao tiếp trong tương lai", "Giới từ chỉ thời gian và nơi chốn & Trọng âm đuôi -ity và -itive", "Trọng âm đuôi -ity", [
+            (10, "Communication in the Future", "Giao tiếp trong tương lai", "Giới từ chỉ nơi chốn và thời gian & Đại từ sở hữu (mine, yours, ours, theirs…)", "Trọng âm từ tận cùng -ese và -ee", [
                 ("video conference", "/ˈvɪdiəʊ ˈkɒnfərəns/", "Cụm danh từ", "Hội nghị truyền hình trực tuyến", "The global team held an interactive video conference this morning.", "Đội ngũ toàn cầu đã tổ chức một cuộc hội nghị truyền hình trực tuyến sáng nay.", "Họp trực tuyến qua màn hình có hình ảnh"),
                 ("holographic", "/ˌhɒləˈɡræfɪk/", "Tính từ", "Ảnh nổi ba chiều (hologram)", "Holographic calls will display 3D projections of your friends.", "Các cuộc gọi hình ảnh ba chiều sẽ hiển thị hình ảnh 3D chân thực của bạn bè bạn.", "Công nghệ chiếu hình 3D lơ lửng"),
                 ("telepathy", "/təˈlepəθi/", "Danh từ", "Thần giao cách cảm", "Telepathy would allow direct mind-to-mind messaging without words.", "Thần giao cách cảm sẽ cho phép truyền suy nghĩ trực tiếp mà không cần dùng lời nói.", "Khả năng truyền ý nghĩ qua tâm trí"),
@@ -643,7 +643,7 @@ def generate_secondary_grades():
                 ("emoji", "/ɪˈməʊdʒi/", "Danh từ", "Biểu tượng cảm xúc", "Young people use emojis to express feelings humorously in text chats.", "Các bạn trẻ dùng biểu tượng cảm xúc để thể hiện tâm trạng vui nhộn trong tin nhắn.", "Hình vẽ mặt cười, icon cảm xúc"),
                 ("voice call", "/ˈvɔɪs kɔːl/", "Cụm danh từ", "Cuộc gọi thoại", "Grandpa still prefers a simple voice call over video messaging.", "Ông nội vẫn thích một cuộc gọi thoại đơn giản hơn là nhắn tin có hình.", "Cuộc gọi chỉ truyền âm thanh"),
             ]),
-            (11, "Science and Technology", "Khoa học và công nghệ", "Câu tường thuật dạng trần thuật (Reported Speech: Statements)", "Trọng âm đuôi -logy và -graphy", [
+            (11, "Science and Technology", "Khoa học và công nghệ", "Câu tường thuật dạng trần thuật (Reported Speech: Statements)", "Trọng âm câu (Sentence stress)", [
                 ("invention", "/ɪnˈvenʃn/", "Danh từ", "Phát minh", "The invention of the internet revolutionized human communication.", "Phát minh ra mạng internet đã cách mạng hóa nền giao tiếp của nhân loại.", "Sáng chế ra thứ chưa từng có"),
                 ("smartphone", "/ˈsmɑːtfəʊn/", "Danh từ", "Điện thoại thông minh", "A modern smartphone works like a mini computer in your pocket.", "Một chiếc điện thoại thông minh hiện đại hoạt động như chiếc máy tính mini trong túi bạn.", "Điện thoại đa năng có kết nối internet"),
                 ("robot", "/ˈrəʊbɒt/", "Danh từ", "Người máy, rô-bốt", "Surgical robots assist doctors in performing delicate operations.", "Người máy phẫu thuật hỗ trợ các bác sĩ thực hiện những ca mổ tinh vi.", "Cỗ máy tự động làm việc thay người"),
@@ -651,7 +651,7 @@ def generate_secondary_grades():
                 ("artificial", "/ˌɑːtɪˈfɪʃl/", "Tính từ", "Nhân tạo", "Artificial intelligence helps analyze medical images accurately.", "Trí tuệ nhân tạo giúp phân tích các hình ảnh y khoa một cách chuẩn xác.", "Do con người tạo ra, không phải tự nhiên"),
                 ("laboratory", "/ləˈbɒrətri/", "Danh từ", "Phòng thí nghiệm", "Students wear protective lab coats inside the chemistry laboratory.", "Học sinh mặc áo khoác bảo hộ khi ở trong phòng thí nghiệm hóa học.", "Nơi tiến hành thí nghiệm khoa học"),
             ]),
-            (12, "Life on Other Planets", "Sự sống trên các hành tinh khác", "Câu tường thuật dạng câu hỏi (Reported Speech: Questions)", "Tiền tố un- và im-", [
+            (12, "Life on Other Planets", "Sự sống trên các hành tinh khác", "Câu tường thuật dạng câu hỏi (Reported Speech: Questions)", "Ngữ điệu khi liệt kê (Intonation for making lists)", [
                 ("alien", "/ˈeɪliən/", "Danh từ", "Người ngoài hành tinh", "Sci-fi books depict aliens with advanced interstellar technology.", "Những cuốn sách viễn tưởng miêu tả người ngoài hành tinh với công nghệ du hành vũ trụ tiên tiến.", "Sinh vật đến từ ngoài trái đất"),
                 ("UFO", "/ˌjuː ef ˈəʊ/", "Danh từ viết tắt", "Vật thể bay không xác định (Đĩa bay)", "Several pilots reported witnessing a mysterious glowing UFO.", "Nhiều phi công đã báo cáo việc chứng kiến một vật thể bay phát sáng bí ẩn.", "Vật thể bay lạ trên bầu trời"),
                 ("galaxy", "/ˈɡæləksi/", "Danh từ", "Thiên hà", "The Milky Way is our home galaxy containing billions of stars.", "Dải Ngân Hà là thiên hà quê hương của chúng ta chứa hàng tỷ ngôi sao.", "Tập hợp khổng lồ các ngôi sao trong vũ trụ"),

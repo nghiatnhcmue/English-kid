@@ -10,8 +10,10 @@ Mỗi Unit có đầy đủ 7 trạm với IPA chuẩn quốc tế, dịch nghĩ
 
 try:
     from .emoji_lookup import lookup_emoji
+    from .high_meta import HIGH_META
 except ImportError:
     from emoji_lookup import lookup_emoji
+    from high_meta import HIGH_META
 
 def generate_high_grades():
     grades = {}
@@ -270,6 +272,8 @@ def generate_high_grades():
     for g_num, book_title, book_id, units_data in high_configs:
         units_list = []
         for u_num, title, title_vi, grammar_str, phonics_str, vocab_tuples in units_data:
+            # Chủ điểm ngữ pháp / phát âm / số trang theo Book map SGK (high_meta.py)
+            grammar_str, phonics_str, (p_start, p_end), gram_quiz, pron_custom = HIGH_META[g_num][u_num]
             vocab_items = []
             for idx, (w, ipa, w_type, mean, ex_en, ex_vi, hint) in enumerate(vocab_tuples):
                 vocab_items.append({
@@ -299,7 +303,7 @@ def generate_high_grades():
                 "titleVi": title_vi,
                 "theme": "High School Academic & Career Readiness",
                 "semester": 1 if u_num <= 5 else 2,
-                "bookPages": f"Trang {(u_num-1)*12 + 8} – {u_num*12 + 7}",
+                "bookPages": f"Trang {p_start} – {p_end}",
                 "bookId": book_id,
                 "vocabularies": vocab_items,
                 "grammar": {
@@ -307,30 +311,17 @@ def generate_high_grades():
                     "ruleVi": f"Ngữ pháp trọng tâm chuẩn SGK Tiếng Anh {g_num} Global Success: {grammar_str}.",
                     "formula": grammar_str,
                     "quickTip": "Nắm vững công thức và cấu trúc để giải các đề thi THPT Quốc gia và bài tập chuyên sâu.",
-                    "quiz": [
-                        {
-                            "question": f"Which vocabulary word from Unit {u_num} represents '{main_mean}'?",
-                            "options": [main_word, "banana", "refrigerator", "pencil"],
-                            "answerIndex": 0,
-                            "explain": f"Từ '{main_word}' có phiên âm {main_ipa} mang nghĩa là '{main_mean}'."
-                        },
-                        {
-                            "question": f"Choose the grammatically correct sentence for Unit {u_num}:",
-                            "options": [f"Students examine {main_word} thoroughly in their project.", "They does not study.", "She go to school.", "I are playing."],
-                            "answerIndex": 0,
-                            "explain": "Áp dụng cấu trúc ngữ pháp học thuật chuẩn xác của bài học."
-                        }
-                    ]
+                    "quiz": [{"question": q, "options": list(opts), "answerIndex": 0, "explain": ex} for q, opts, ex in gram_quiz],
                 },
+                # Trống → quality_pass dựng bài luyện từ ký hiệu âm / trọng âm; bài ngữ điệu, đồng âm… dùng bài soạn tay
                 "pronunciation": {
                     "pair": phonics_str,
-                    "title": f"Ngữ âm & Trọng âm: {phonics_str}",
-                    "sound1": {"symbol": phonics_str.split()[0], "name": f"Ngữ âm {phonics_str.split()[0]}", "words": [main_word]},
-                    "sound2": {"symbol": "/ə/", "name": "Nguyên âm trung tâm /ə/", "words": ["together", "standard"]},
-                    "practiceQuiz": [
-                        {"word": main_word, "correctSound": phonics_str.split()[0], "options": [phonics_str.split()[0], "/k/"], "meaningVi": main_mean, "phonetic": main_ipa, "answerIndex": 0}
-                    ],
-                    "tongueTwister": f"Scholars articulate {main_word} accurately and persuasively."
+                    "title": f"Phát âm: {phonics_str}",
+                    "sound1": pron_custom["sound1"] if pron_custom else {},
+                    "sound2": pron_custom["sound2"] if pron_custom else {},
+                    "practiceQuiz": pron_custom["quiz"] if pron_custom else [],
+                    **({"quizPrompt": pron_custom["prompt"], "custom": True} if pron_custom else {}),
+                    "tongueTwister": "",
                 },
                 "speaking": {
                     "targetSentence": f"In today's academic debate, we explore {title_vi.lower()} in modern society.",
