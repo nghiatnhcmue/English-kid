@@ -206,7 +206,7 @@ const WORD_EMOJI_KEYWORDS = [
   [/anthem|song/i, '🎺'],
   // Food & Drink
   [/egg|omelette/i, '🍳'],
-  [/turmeric|root|spice/i, '🫚'],
+  [/turmeric|root|spice/i, '🧂'],
   [/noodle|broth|soup|pho/i, '🍜'],
   [/ingredient|carrot/i, '🥕'],
   [/meat|beef/i, '🥩'],
@@ -215,7 +215,7 @@ const WORD_EMOJI_KEYWORDS = [
   [/bread/i, '🍞'],
   // Heritage & School
   [/academy|pagoda|temple/i, '🏯'],
-  [/courtyard|yard/i, '🪴'],
+  [/courtyard|yard/i, '🏡'],
   [/monument|statue/i, '🗽'],
   [/scholar/i, '📜'],
   [/school/i, '🏫'],

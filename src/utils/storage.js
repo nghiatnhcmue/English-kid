@@ -469,7 +469,11 @@ export function createStore(storage = globalThis.localStorage) {
     // ---- Dữ liệu bài học tùy biến của Giáo viên (Custom Units) ----
     getCustomUnits() {
       const units = read(KEYS.CUSTOM_UNITS, {});
-      return units && typeof units === 'object' && !Array.isArray(units) ? units : {};
+      if (!units || typeof units !== 'object' || Array.isArray(units)) return {};
+      // Bản cũ ghi mọi Unit Lớp 7–12 vào ô "NaN" (Number('g7_u1')) → dữ liệu lẫn lộn giữa các Unit: bỏ đi
+      const clean = {};
+      for (const [k, v] of Object.entries(units)) if (normUnitId(k) !== null && k !== 'NaN' && k !== 'null' && k !== 'undefined') clean[k] = v;
+      return clean;
     },
     getCustomUnit(unitId) {
       const all = api.getCustomUnits();

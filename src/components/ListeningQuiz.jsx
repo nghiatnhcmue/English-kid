@@ -8,10 +8,21 @@ import { t } from '../i18n/vi.js';
 const MAX_ROUNDS = 8;
 
 /** 1 đáp án đúng + 3 lựa chọn nhiễu lấy từ pool, đảm bảo luôn đủ 4 đáp án */
+const keyOf = (w) => String(w?.word || w?.id || '').trim().toLowerCase();
+
 export function makeOptions(word, pool) {
   if (!word) return [];
   const validPool = Array.isArray(pool) ? pool : [];
-  const candidateList = shuffle(validPool.filter((w) => w && w.id !== word.id));
+  // So theo chính chữ của từ (không chỉ id): từ thiếu id hoặc trùng id vẫn không bị lọc mất / lặp lại
+  const seenWords = new Set([keyOf(word)]);
+  const candidateList = shuffle(
+    validPool.filter((w) => {
+      const k = keyOf(w);
+      if (!w || !k || seenWords.has(k) || (word.id && w.id === word.id)) return false;
+      seenWords.add(k);
+      return true;
+    }),
+  );
   const others = [];
 
   // Pass 1: Ưu tiên các từ có hình ảnh/emoji khác biệt
@@ -26,10 +37,10 @@ export function makeOptions(word, pool) {
 
   // Pass 2: Nếu chưa đủ 3 từ nhiễu (do trùng emoji hoặc thiếu hình), bổ sung các từ khác trong pool theo id
   if (others.length < 3) {
-    const chosenIds = new Set([word.id, ...others.map((o) => o.id)]);
+    const chosen = new Set([word, ...others].map(keyOf));
     for (const w of candidateList) {
-      if (chosenIds.has(w.id)) continue;
-      chosenIds.add(w.id);
+      if (chosen.has(keyOf(w))) continue;
+      chosen.add(keyOf(w));
       others.push(w);
       if (others.length === 3) break;
     }
@@ -50,19 +61,19 @@ function Round({ word, pool, onDone }) {
 
   const choose = useCallback(
     (opt) => {
-      if (correct || wrongIds.has(opt.id)) return;
-      if (opt.id === word.id) {
+      if (correct || wrongIds.has(keyOf(opt))) return;
+      if (keyOf(opt) === keyOf(word)) {
         setCorrect(true);
         playSfx('correct');
         later(() => onDone(wrongIds.size > 0), 1200);
       } else {
         playSfx('wrong');
-        setWrongIds((prev) => new Set(prev).add(opt.id));
-        setShakeId(opt.id);
+        setWrongIds((prev) => new Set(prev).add(keyOf(opt)));
+        setShakeId(keyOf(opt));
         later(() => setShakeId(null), 450);
       }
     },
-    [correct, wrongIds, word.id, onDone],
+    [correct, wrongIds, word, onDone],
   );
 
   // Hỗ trợ phím số 1, 2, 3, 4 trên bàn phím máy tính
@@ -110,11 +121,11 @@ function Round({ word, pool, onDone }) {
       {/* 4 Lựa chọn hình vẽ kèm nghĩa tiếng Việt với số thứ tự 1, 2, 3, 4 */}
       <div className="grid w-full grid-cols-2 gap-3 sm:gap-5">
         {options.map((opt, idx) => {
-          const isRight = correct && opt.id === word.id;
-          const isWrong = wrongIds.has(opt.id);
+          const isRight = correct && keyOf(opt) === keyOf(word);
+          const isWrong = wrongIds.has(keyOf(opt));
           return (
             <button
-              key={opt.id}
+              key={keyOf(opt) || opt.id}
               type="button"
               onClick={() => choose(opt)}
               aria-label={`Lựa chọn ${idx + 1}: ${opt.meaning}`}
@@ -124,7 +135,7 @@ function Round({ word, pool, onDone }) {
                   : isWrong
                     ? 'bg-white opacity-35 cursor-not-allowed border-2 border-dashed border-rose-soft'
                     : 'bg-white shadow-[0_6px_0_#efe3cc] border-2 border-[#efe3cc] hover:-translate-y-1 hover:shadow-[0_8px_0_#efe3cc] active:translate-y-1 active:shadow-none'
-              } ${shakeId === opt.id ? 'animate-shake' : ''}`}
+              } ${shakeId === keyOf(opt) ? 'animate-shake' : ''}`}
             >
               <span className="absolute top-3 left-3 sm:top-3.5 sm:left-4 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-cream text-xs sm:text-sm font-black text-ink shadow-xs">
                 {idx + 1}
@@ -146,13 +157,12 @@ function Round({ word, pool, onDone }) {
 export default function ListeningQuiz({ words, pool, onFinish }) {
   const list = useMemo(() => shuffle(words).slice(0, MAX_ROUNDS), [words]);
   const optionPool = useMemo(() => {
-    const base = pool?.length >= 4 ? pool : (words?.length >= 4 ? words : pool || words || []);
-    if (base.length >= 4) return base;
+    const base = [...(pool || []), ...(words || [])];
+    const distinct = new Set(base.map(keyOf).filter(Boolean));
+    if (distinct.size >= 4) return base;
+    // Unit quá ít từ (hoặc dữ liệu sửa tay bị thiếu): mượn thêm từ của các Unit khác để luôn đủ 4 hình
     try {
-      const all = allWords() || [];
-      const baseIds = new Set(base.map((w) => w.id));
-      const extra = all.filter((w) => !baseIds.has(w.id));
-      return [...base, ...extra];
+      return [...base, ...(allWords() || []).filter((w) => !distinct.has(keyOf(w)))];
     } catch {
       return base;
     }
@@ -177,7 +187,7 @@ export default function ListeningQuiz({ words, pool, onFinish }) {
 
       <InstructionBanner text={t.listening.keyboardHint} />
 
-      <Round key={list[index].id} word={list[index]} pool={optionPool} onDone={done} />
+      <Round key={`${index}-${keyOf(list[index])}`} word={list[index]} pool={optionPool} onDone={done} />
     </div>
   );
 }

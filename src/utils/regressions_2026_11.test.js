@@ -146,3 +146,21 @@ describe('Đối chiếu SGK lớp 10–12 và trang PDF (11/2026)', () => {
     }
   });
 });
+
+describe('Lớp 7: Nghe chọn hình chỉ còn 1 đáp án / hình lỗi (11/2026)', () => {
+  it('bỏ qua ô "NaN" do bản cũ ghi chung mọi Unit Lớp 7–12', () => {
+    localStorage.setItem('app_tienganh_v1_custom_units', JSON.stringify({ NaN: { vocabularies: [{ word: 'robot', meaning: 'người máy' }] } }));
+    expect(store().getCustomUnit('g7_u1')).toBeNull();
+    expect(getUnitRaw('g7_u1').vocabularies.length).toBeGreaterThanOrEqual(4);
+    localStorage.removeItem('app_tienganh_v1_custom_units');
+  });
+
+  it('luôn đủ 4 phương án kể cả khi từ không có id', async () => {
+    const { makeOptions } = await import('../components/ListeningQuiz.jsx');
+    const pool = ['cat', 'dog', 'bird', 'fish', 'cow'].map((w) => ({ word: w, meaning: w, emoji: '🐾' }));
+    const opts = makeOptions(pool[0], pool);
+    expect(opts).toHaveLength(4);
+    expect(new Set(opts.map((o) => o.word)).size).toBe(4);
+    expect(opts.map((o) => o.word)).toContain('cat');
+  });
+});
